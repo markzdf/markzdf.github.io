@@ -9,13 +9,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Fechin,"> 
+    <meta name="keywords" content="Arson,"> 
     <meta name="description" content="原先用typecho搭建的matcha主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的diaspora主题，萌生了转站hexo的想法。
 准备工作官方文档给出,"> 
     <meta name="author" content="Mark Zhu"> 
     <link rel="alternative" href="atom.xml" title="Arson" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
     
     
     <meta name="twitter:card" content="summary"/>
@@ -173,7 +175,7 @@
         
         
     <div id="gitalk-container" class="comment link"
-		data-enable="false"
+		data-enable="true"
         data-ae="false"
         data-ci="1a2444168fdbcded45e3"
         data-cs="5b34ba9b67b691926fa2f64fc807ab75a70335b4"
@@ -186,12 +188,18 @@
 
     </div>
     
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="toc-number">1.1.</span> <span class="toc-text">测试是否安装成功</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E6%8C%87%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">Hexo指令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99%E5%88%B0Github"><span class="toc-number">3.</span> <span class="toc-text">部署网站到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0SSH-Key"><span class="toc-number">3.1.</span> <span class="toc-text">添加SSH Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">上传本地文件</span></a></li></ol></li></ol>
+        </div>
+    
 </div>
 
 
     </div>
 </div>
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
