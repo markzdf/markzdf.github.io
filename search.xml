@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>如何在macOS环境下配置hexo</title>
-    <url>/2023/07/29/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
+    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>官方文档给出的前置应用程序是</p>
 <ol>
@@ -85,6 +85,13 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>开发</tag>
+      </tags>
   </entry>
   <entry>
     <title>ucb暑假</title>
