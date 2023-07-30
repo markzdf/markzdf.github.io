@@ -5,32 +5,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>如何在macOS环境下配置hexo - Arson</title>
+    <title>如何在macOS环境下配置hexo - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Arson,"> 
     <meta name="description" content="原先用typecho搭建的matcha主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的diaspora主题，萌生了转站hexo的想法。
 准备工作官方文档给出,"> 
-    <meta name="author" content="Mark Zhu"> 
-    <link rel="alternative" href="atom.xml" title="Arson" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.jpg"> 
     
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="如何在macOS环境下配置hexo - Arson"/>
+    <meta name="twitter:title" content="如何在macOS环境下配置hexo - Hexo"/>
     <meta name="twitter:description" content="原先用typecho搭建的matcha主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的diaspora主题，萌生了转站hexo的想法。
 准备工作官方文档给出,"/>
     
     
     
     
-    <meta property="og:site_name" content="Arson"/>
+    <meta property="og:site_name" content="Hexo"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="如何在macOS环境下配置hexo - Arson"/>
+    <meta property="og:title" content="如何在macOS环境下配置hexo - Hexo"/>
     <meta property="og:description" content="原先用typecho搭建的matcha主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的diaspora主题，萌生了转站hexo的想法。
 准备工作官方文档给出,"/>
     
@@ -43,7 +43,7 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="loading">
-    <span id="config-title" style="display:none">Arson</span>
+    <span id="config-title" style="display:none">Hexo</span>
     <div id="loader"></div>
     <div id="single">
     <div id="top" style="display: block;">
@@ -113,7 +113,7 @@
 <p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置密码。</p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置<code>passphrase</code>。</p>
 <p>退出终端再重新打开（这时回到默认目录），输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure>
 
@@ -261,6 +261,25 @@
 </div>
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 

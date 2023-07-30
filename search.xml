@@ -62,7 +62,7 @@
 <p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置密码。</p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置<code>passphrase</code>。</p>
 <p>退出终端再重新打开（这时回到默认目录），输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure>
 
