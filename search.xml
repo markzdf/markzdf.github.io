@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/07/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>如何在macOS环境下配置hexo</title>
     <url>/2023/07/29/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
@@ -164,6 +146,12 @@
 </ol>
 <p>（出去玩的日子除外）</p>
 ]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>暑假, 美国</tag>
+      </tags>
   </entry>
   <entry>
     <title>不必再等</title>
@@ -180,6 +168,12 @@
 <p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
 <p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
 ]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>反思</tag>
+      </tags>
   </entry>
   <entry>
     <title>六月总结</title>
@@ -194,6 +188,12 @@
 <p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
 <p>考试周的总结已另成一篇，不再重复。$\Rightarrow$ <a href="">不必再等</a></p>
 ]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>反思</tag>
+      </tags>
   </entry>
   <entry>
     <title>回家前</title>
@@ -224,6 +224,12 @@
 <p>Reference:<br><a href="https://www.meilvtong.com/viewthread.php?tid=24">https://www.meilvtong.com/viewthread.php?tid=24</a><br><a href="https://www.meilvtong.com/viewthread.php?tid=11">https://www.meilvtong.com/viewthread.php?tid=11</a><br><a href="https://www.guruin.com/articles/855">https://www.guruin.com/articles/855</a></p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>旅游, 美国, 暑假</tag>
+      </tags>
   </entry>
   <entry>
     <title>常微分方程</title>
@@ -292,7 +298,11 @@
 <h2 id="Definition-6-4"><a href="#Definition-6-4" class="headerlink" title="Definition 6.4."></a><em>Definition 6.4.</em></h2><p>For $z&#x3D;f(x,y)$,<br>$$(dz)(x,y,\Delta x,\Delta y)&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.41}$$</p>
 <h2 id="Theorem-6-5"><a href="#Theorem-6-5" class="headerlink" title="Theorem 6.5."></a><em>Theorem 6.5.</em></h2><p>For $z&#x3D;f(x,y)$, $x&#x3D;x(r,s,\cdots)$,$y&#x3D;y(r,s,\cdots)$<br>$$dz&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}$$</p>
 <h2 id="Separable-Variables"><a href="#Separable-Variables" class="headerlink" title="Separable Variables"></a>Separable Variables</h2><p>$$<br>Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6}<br>$$<br>$$<br>P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61}<br>$$<br>$$<br>\Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62}<br>$$<br>$$<br>\Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\tag{6.63}<br>$$</p>
-<h2 id="Definition-7-1"><a href="#Definition-7-1" class="headerlink" title="Definition 7.1."></a><em>Definition 7.1.</em></h2><p>Let $z&#x3D;f(x,y)$ define $z$ as a function of $x$ and $y$ in a region $R$. The function $f(x,y)$ is said to be **homogeneous of order n$ if it can be written as<br>$$<br>f(x,y)&#x3D;x^ng(u)\tag{7.11}<br>$$<br>where $u&#x3D;y&#x2F;x$ and $g(u)$ is a function of $u$; or alternately if it can be written as<br>$$<br>f(x,y)&#x3D;y^nh(u)\tag{7.11}<br>$$<br>where $u&#x3D;x&#x2F;y$ and $h(u)$ is a function of $u$</p>
+<h2 id="Definition-7-1"><a href="#Definition-7-1" class="headerlink" title="Definition 7.1."></a><em>Definition 7.1.</em></h2><p>Let $z&#x3D;f(x,y)$ define $z$ as a function of $x$ and $y$ in a region $R$. The function $f(x,y)$ is said to be <strong>homogeneous of order n</strong> if it can be written as </p>
+<p>$$<br>f(x,y)&#x3D;x^ng(u)\tag{7.11}<br>$$</p>
+<p>where $u&#x3D;\dfrac yx$ and $g(u)$ is a function of $u$; or alternately if it can be written as</p>
+<p>$$<br>f(x,y)&#x3D;y^nh(u)\tag{7.11}<br>$$</p>
+<p>where $u&#x3D;\dfrac xy$ and $h(u)$ is a function of $u$</p>
 <p>也可定义为：A function $f(x,y)$ is said to be homogeneous of order n if $$f(tx,ty)&#x3D;t^nf(x,y)\tag{7.16}$$</p>
 <h2 id="Homogeneous-Coefficients"><a href="#Homogeneous-Coefficients" class="headerlink" title="Homogeneous Coefficients"></a>Homogeneous Coefficients</h2><p><em>Definition 7.2.</em> The differential equation<br>$$P(x,y)dx+Q(x,y)dy&#x3D;0\tag{7.3}$$<br>where $P(x,y)$ and $Q(x,y)$ are each homogeneous functions of order $n$ is called a <strong>first order differential equation with homogeneous coefficients</strong>.</p>
 <h2 id="Theorem-7-32"><a href="#Theorem-7-32" class="headerlink" title="Theorem 7.32."></a><em>Theorem 7.32.</em></h2><p>If the coefficients in $(7.3)$ are each homogeneous function of order $n$, then the substitution in it of $(7.31),(7.33)$ will lead to an equation in which the variables are separable.</p>
@@ -301,14 +311,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>积分</title>
-    <url>/2023/07/29/%E7%A7%AF%E5%88%86/</url>
-    <content><![CDATA[<p>$$\int \sqrt{1-x^2}dx \quad \Leftarrow (x&#x3D;\sin u) \tag{1}$$<br>$$\int \tan xdx\tag{2}$$<br>$$\int \frac{1}{\sqrt{1+y^2}}dx \quad \Leftarrow (y&#x3D;\tan x) \tag{3}$$<br>$$\int \frac{1}{\cos x}dx\tag{4} \quad \Leftarrow \left(\frac{1}{\cos x}&#x3D;\sec x\times \frac{\sec x+\tan x}{\sec x+\tan x}, u&#x3D;\sec x+\tan x\right)$$<br>$$\int \frac{1}{\tan x}dx&#x3D;\ln|\sin x|+C\tag{5}\quad \Leftarrow (u&#x3D;\sin x)$$<br>$$\int \frac{1}{\sin x}dx&#x3D;\ln\left|\tan \frac x2\right|+C\tag{6}\quad (x&#x3D;2u, \sin 2u&#x3D;2\sin u\cos u)$$</p>
-]]></content>
-  </entry>
-  <entry>
     <title>选课盲盒</title>
-    <url>/2023/07/29/%E9%80%89%E8%AF%BE%E8%AE%A1%E5%88%92/</url>
+    <url>/2023/07/29/%E9%80%89%E8%AF%BE%E7%9B%B2%E7%9B%92/</url>
     <content><![CDATA[<p>厦大选课就是开盲盒，完全不按培养方案来</p>
 <h2 id="大一上（21秋）"><a href="#大一上（21秋）" class="headerlink" title="大一上（21秋）"></a>大一上（21秋）</h2><table>
 <thead>
@@ -677,5 +681,11 @@
 </tbody></table>
 <h2 id="大三下（24春）"><a href="#大三下（24春）" class="headerlink" title="大三下（24春）"></a>大三下（24春）</h2><h2 id="大四上（24秋）"><a href="#大四上（24秋）" class="headerlink" title="大四上（24秋）"></a>大四上（24秋）</h2><hr>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+      </tags>
   </entry>
 </search>
