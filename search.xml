@@ -11,25 +11,17 @@
 </ol>
 <p>第一个直接点进去下载即可，第二个需要先安装<a href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-
 <p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>, 终端输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-
 <h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
 <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-
 <p>初始化博客</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
 <p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为 <code>blog</code> 的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
-
 <p>此时已经能生成并在本地预览你的博客雏形啦</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><p>这里介绍几种常用的Hexo指令，</p>
 <ol>
 <li><code>hexo generate</code> 网站生成</li>
@@ -38,21 +30,14 @@
 </ol>
 <p>以上三种都可以用首字母简写为</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <h1 id="部署网站到Github"><a href="#部署网站到Github" class="headerlink" title="部署网站到Github"></a>部署网站到Github</h1><p>首先登陆Github，</p>
 <h2 id="添加SSH-Key"><a href="#添加SSH-Key" class="headerlink" title="添加SSH Key"></a>添加SSH Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-
+<p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
 <p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
-<p>退出终端再重新打开（这时回到默认目录），输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure>
-
+<p>退出终端再重新打开（这时回到默认目录），输入<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
 <p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开 <code>id_rsa.pub</code> ，复制所有文字。</p>
 <p>接着打开<a href="https://github.com/settings/keys">SSH keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type 不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
-<p>完成后用以下命令测试是否配置成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
-
+<p>完成后用以下命令测试是否配置成功<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>如果出现</p>
 <blockquote>
 <p>Hi {Github用户名}! You’ve successfully suthenticated, but Github does not procide shell access.</p>
@@ -61,7 +46,6 @@
 <h2 id="上传本地文件"><a href="#上传本地文件" class="headerlink" title="上传本地文件"></a>上传本地文件</h2><p>在Github上新建一个仓库，Repository Name 填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create Repository 创建新的网站仓库。</p>
 <p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
 <p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm 缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个 bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：</p>
 <ol>
 <li>打开终端</li>
@@ -72,10 +56,8 @@
 <p>可以解决 EACCES 的问题，亲测有效</p>
 <p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
 <p>修改后保存，在终端上输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
 <p><strong>参考资料</strong></p>
 <ol>
@@ -96,13 +78,13 @@
   <entry>
     <title>ucb暑假</title>
     <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
-    <content><![CDATA[<h1 id="Websites"><a href="#Websites" class="headerlink" title="Websites"></a>Websites</h1><p><strong>Visa</strong><br><a href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a><br><a href="https://www.ustraveldocs.com/cn_zh/">Interview</a><br><a href="http://www.fmjfee.com/">I-901&amp;SEVIS</a></p>
-<p><strong>Campus</strong><br><a href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=/?wa=wsignin1.0&wtrealm=https%253a%252f%252fmy.safabroad.org%252f&wct=2023-04-17T01%253a11%253a04Z&wctx=rm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx&wreply=https%253a%252f%252fmy.safabroad.org%252f&AppType=Portal&Role=STUDENT&wa=wsignin1.0&wtrealm=https://my.safabroad.org/&wct=2023-04-17T01:11:04Z&wctx=rm=0&id=passive&ru=secure/student/stuportal.aspx&wreply=https://my.safabroad.org/&AppType=Portal&Role=STUDENT">SAF</a><br><a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a><br><a href="https://bcourses.berkeley.edu/">bcourse</a><br><a href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></p>
+    <content><![CDATA[<h1 id="Websites"><a href="#Websites" class="headerlink" title="Websites"></a>Websites</h1><p><strong>Visa</strong><br><a href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a><br><a href="https://www.ustraveldocs.com/cn_zh/">Interview</a><br><a href="http://www.fmjfee.com">I-901&amp;SEVIS</a></p>
+<p><strong>Campus</strong><br><a href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a><br><a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a><br><a href="https://bcourses.berkeley.edu/">bcourse</a><br><a href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></p>
 <h1 id="蹭课单"><a href="#蹭课单" class="headerlink" title="蹭课单"></a>蹭课单</h1><ul>
 <li>Foundation of Data Science(12345): <strong>10-11am</strong>, <a href="https://www.berkeley.edu/map/?dwinelle">Dwinelle 155</a></li>
 <li>Principles &amp; Techniques of Data Science(1234): <strong>5-6:30pm</strong>, <a href="https://www.berkeley.edu/map/?likashing">Li Ka Shing 245</a></li>
 <li>Classical Theories of Political Economy(234): <strong>1-3:30pm</strong>, Social Sciences Building 166</li>
-<li>Contemporary Theories of Political Economy(234): <strong>2-4:30pm</strong>, Anthro&#x2F;Art Practice Bldg 155</li>
+<li>Contemporary Theories of Political Economy(234): <strong>2-4:30pm</strong>, Anthro/Art Practice Bldg 155</li>
 <li>Introduction to Artificial Intelligence(1234): <strong>2-3:30pm</strong>, <a href="https://www.berkeley.edu/map/?lewis">Lewis 100</a></li>
 <li>Discrete Mathematics and Probability Theory(1234): <strong>12:30-2pm</strong>, <a href="https://www.berkeley.edu/map/?dwinelle">Dwinelle 155</a></li>
 <li>Data Structures and Programming Methodology(13): <strong>9-10am</strong>, <a href="https://www.berkeley.edu/map/?vlsb">Valley Life Sciences 2050</a></li>
@@ -110,9 +92,9 @@
 <h1 id="Diary"><a href="#Diary" class="headerlink" title="Diary"></a>Diary</h1><h2 id="7-3"><a href="#7-3" class="headerlink" title="7.3"></a>7.3</h2><p>听Magin的话把social network换成了financial derivatives。这门课在系统上显示是special topics in finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
 <p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
 <p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
-<p>躺在床上又想起些细节。早上去吃饭见人就说good morning。平时再会后说have a nice day&#x2F;you too。下公交要对司机大声说thank you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
+<p>躺在床上又想起些细节。早上去吃饭见人就说good morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
 <h2 id="7-4"><a href="#7-4" class="headerlink" title="7.4"></a>7.4</h2><p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank you! 一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman’s wharf，小龙虾很不喜欢就没久待。看了golden gate bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
-<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课&#x2F;每周有作业不说，还有discussion和project。</p>
+<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
 <p>好累，睡觉</p>
 <h2 id="7-5"><a href="#7-5" class="headerlink" title="7.5"></a>7.5</h2><p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.<br>回答被抢了，好烦。回去学衍生品。<br>买了件Berkeley的卫衣，好看<br>妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
 <h2 id="7-6"><a href="#7-6" class="headerlink" title="7.6"></a>7.6</h2><p>推着婴儿车晨跑的<br>回答问题声音不够大，随意点<br>看Charlie Puth的concert很精彩，最后本来谢幕了，观众喊着“One more song”把Charlie喊回来了，唱一首see you again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天</p>
@@ -138,10 +120,10 @@
 <h2 id="7-19"><a href="#7-19" class="headerlink" title="7.19"></a>7.19</h2><p>18,19颓废两天</p>
 <h2 id="7-20"><a href="#7-20" class="headerlink" title="7.20"></a>7.20</h2><p>好东西<a href="https://micromasters.mit.edu/dashboard">https://micromasters.mit.edu/dashboard</a></p>
 <h2 id="7-21"><a href="#7-21" class="headerlink" title="7.21"></a>7.21</h2><p>trust no one</p>
-<h2 id="7-24"><a href="#7-24" class="headerlink" title="7.24"></a>7.24</h2><p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game night，Catan真的好玩，差点赢了&#x2F; 跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never mind。感觉来summer session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
+<h2 id="7-24"><a href="#7-24" class="headerlink" title="7.24"></a>7.24</h2><p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game night，Catan真的好玩，差点赢了/ 跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never mind。感觉来summer session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
 <p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that’s all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot ask for more。</p>
 <p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but I still have to balance study time and play time, the most challenging thing for me. but I heard gym is opened very early, like 7am, check it tomorrow, and start to get up early. 早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student union自习。早上学ODE和complex analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
-<p>噢明天周二，很适合蹭课，先试试data science那个吧&#x2F;</p>
+<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
 <h2 id="7-25"><a href="#7-25" class="headerlink" title="7.25"></a>7.25</h2><p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。<br>又一个好东西<a href="https://olympus.mygreatlearning.com/dashboard">https://olympus.mygreatlearning.com/dashboard</a></p>
 <h2 id="7-27"><a href="#7-27" class="headerlink" title="7.27"></a>7.27</h2><p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：</p>
 <ol>
@@ -157,8 +139,8 @@
         <category>日记</category>
       </categories>
       <tags>
-        <tag>美国</tag>
         <tag>暑假</tag>
+        <tag>美国</tag>
       </tags>
   </entry>
   <entry>
@@ -166,7 +148,6 @@
     <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
     <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
 <span id="more"></span> 
-
 <p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
 <p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3 idiots说的</p>
 <blockquote>
@@ -188,7 +169,6 @@
     <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>早上八点，太平洋上空</p>
 <span id="more"></span>
-
 <p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
 <p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
 <p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
@@ -208,24 +188,24 @@
     <url>/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/</url>
     <content><![CDATA[<p>项目结束，8.12~8.17跟小龙虾穷游，洛杉矶和圣地亚哥，预算六百刀左右</p>
 <h2 id="Los-Angeles"><a href="#Los-Angeles" class="headerlink" title="Los Angeles"></a>Los Angeles</h2><p>行：Aug 12，OAK-LA，$35.4（2人）</p>
-<p><img src="/../images/oak-la_230729.png" alt="flight_for.png"></p>
-<p>住：<a href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&viralityEntryPoint=1&s=76&unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&_branch_match_id=1210426884662999117&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA=&_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>, 8.12-14（2晚），235🔪；<a href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&adults=2&check_in=2023-08-11&viralityEntryPoint=1&s=76&unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&_branch_match_id=1210582968084106601&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA=&_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪<br>玩：<a href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&entry=ttu">Griffith Observatory</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty Center</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty Villa</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa Monica</a>，<a href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice Beach</a></p>
-<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步&#x2F;巴士）。8.13去UCLA，Getty center，Getty villa(optional)。下午去Santa Monica海滩和Venice Beach。8.14退房。</p>
-<p>LACMA<a href="https://my.lacma.org/user/login-register?destination=/events/ticket-select">预约</a>，大学生门票$21<br>Griffith门票免费，不用预约，<a href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
+<p><img src="../images/oak-la_230729.png" alt="flight_for.png"></p>
+<p>住：<a href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>, 8.12-14（2晚），235🔪；<a href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪<br>玩：<a href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith Observatory</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty Center</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty Villa</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa Monica</a>，<a href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice Beach</a></p>
+<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty center，Getty villa(optional)。下午去Santa Monica海滩和Venice Beach。8.14退房。</p>
+<p>LACMA<a href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21<br>Griffith门票免费，不用预约，<a href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
 <p><a href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
 <p>Getty center和Getty villa免费但要<a href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
-<p><img src="/../images/laplay_230729.png" alt="LA.png"></p>
-<h2 id="San-Diego"><a href="#San-Diego" class="headerlink" title="San Diego"></a>San Diego</h2><p>行：坐火车到Santa Fe Depot，<a href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时<br>住：<a href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&adults=2&check_in=2023-08-13&viralityEntryPoint=1&s=76&unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&_branch_match_id=1210582968084106601&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR/NBsAAAA=&_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369<br>玩：<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp Quarter</a>，<a href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa Park</a>，<a href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission bay出发</a>，<a href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La Jolla Cove</a>，<a href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel library</a>，<a href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway Museum</a>，UCSD</p>
+<p><img src="../images/laplay_230729.png" alt="LA.png"></p>
+<h2 id="San-Diego"><a href="#San-Diego" class="headerlink" title="San Diego"></a>San Diego</h2><p>行：坐火车到Santa Fe Depot，<a href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时<br>住：<a href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369<br>玩：<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp Quarter</a>，<a href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa Park</a>，<a href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission bay出发</a>，<a href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La Jolla Cove</a>，<a href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel library</a>，<a href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway Museum</a>，UCSD</p>
 <p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La Jolla能看到一堆海豹。</p>
 <blockquote>
 <p>从 La Jolla Cove 向西走10分钟，有个叫 Children’s Pool 的小海湾，这里的海豹特别多</p>
 </blockquote>
 <p>观鲸出海，要<a href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看，门票31刀，要<a href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
-<p><img src="/../images/sdplay_230729.png" alt="SD.png"></p>
-<h2 id="回程"><a href="#回程" class="headerlink" title="回程"></a>回程</h2><p>8.17回，下午2:20pm，<a href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&adultsv2=2&cabinclass=economy&children=0&childrenv2=&destinationentityid=27538486&inboundaltsenabled=false&infants=0&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=0">机票</a>$63.8（2人）。</p>
-<p><img src="/../images/sd-oak_230729.png" alt="flight_back.png"></p>
-<h2 id="Budget"><a href="#Budget" class="headerlink" title="Budget"></a>Budget</h2><p>Trip：(35.4+72+63.8)&#x2F;2&#x3D;85.6<br>Live：(246+369)&#x2F;2&#x3D;308<br>T&amp;L: 86+308&#x3D;<strong>$394</strong></p>
-<p>Ticket：21+65+31&#x3D;117</p>
+<p><img src="../images/sdplay_230729.png" alt="SD.png"></p>
+<h2 id="回程"><a href="#回程" class="headerlink" title="回程"></a>回程</h2><p>8.17回，下午2:20pm，<a href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
+<p><img src="../images/sd-oak_230729.png" alt="flight_back.png"></p>
+<h2 id="Budget"><a href="#Budget" class="headerlink" title="Budget"></a>Budget</h2><p>Trip：(35.4+72+63.8)/2=85.6<br>Live：(246+369)/2=308<br>T&amp;L: 86+308=<strong>$394</strong></p>
+<p>Ticket：21+65+31=117</p>
 <blockquote>
 <p>Reference:<br><a href="https://www.meilvtong.com/viewthread.php?tid=24">https://www.meilvtong.com/viewthread.php?tid=24</a><br><a href="https://www.meilvtong.com/viewthread.php?tid=11">https://www.meilvtong.com/viewthread.php?tid=11</a><br><a href="https://www.guruin.com/articles/855">https://www.guruin.com/articles/855</a></p>
 </blockquote>
@@ -234,9 +214,9 @@
         <category>杂项</category>
       </categories>
       <tags>
-        <tag>旅游</tag>
-        <tag>美国</tag>
         <tag>暑假</tag>
+        <tag>美国</tag>
+        <tag>旅游</tag>
       </tags>
   </entry>
   <entry>
@@ -392,371 +372,404 @@ f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}</script><p>再由</p>
     <title>选课盲盒</title>
     <url>/2023/07/29/%E9%80%89%E8%AF%BE%E7%9B%B2%E7%9B%92/</url>
     <content><![CDATA[<p>厦大选课就是开盲盒，完全不按培养方案来</p>
-<h2 id="大一上（21秋）"><a href="#大一上（21秋）" class="headerlink" title="大一上（21秋）"></a>大一上（21秋）</h2><table>
+<h2 id="大一上（21秋）"><a href="#大一上（21秋）" class="headerlink" title="大一上（21秋）"></a>大一上（21秋）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">数学分析(I)</td>
-<td align="center">3</td>
-<td align="center">91</td>
-<td align="center">4.0</td>
+<tbody>
+<tr>
+<td style="text-align:center">数学分析(I)</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">经济学原理</td>
-<td align="center">3</td>
-<td align="center">89</td>
-<td align="center">3.7</td>
+<td style="text-align:center">经济学原理</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">89</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">会计学原理</td>
-<td align="center">3</td>
-<td align="center">81</td>
-<td align="center">3.3</td>
+<td style="text-align:center">会计学原理</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">81</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">学术英语阅读</td>
-<td align="center">2</td>
-<td align="center">90</td>
-<td align="center">4.0</td>
+<td style="text-align:center">学术英语阅读</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">近代史纲要</td>
-<td align="center">3</td>
-<td align="center">81</td>
-<td align="center">3.3</td>
+<td style="text-align:center">近代史纲要</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">81</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">政治经济学(I)</td>
-<td align="center">3</td>
-<td align="center">83</td>
-<td align="center">3.3</td>
+<td style="text-align:center">政治经济学(I)</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">商务英语(I)</td>
-<td align="center">1</td>
-<td align="center">98</td>
-<td align="center">4.0</td>
+<td style="text-align:center">商务英语(I)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">98</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">高尔夫</td>
-<td align="center">1</td>
-<td align="center">85</td>
-<td align="center">3.7</td>
+<td style="text-align:center">高尔夫</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">85</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">军事技能</td>
-<td align="center">2</td>
-<td align="center">85</td>
-<td align="center">3.7</td>
+<td style="text-align:center">军事技能</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">85</td>
+<td style="text-align:center">3.7</td>
 </tr>
-</tbody></table>
-<p>$$<br>GPA_1&#x3D;\frac{75.9}{21}&#x3D;3.614<br>$$</p>
-<p>$$<br>GPA&#x3D;GPA_1&#x3D;3.614<br>$$</p>
-<p>$$<br>\text{Rank: }12&#x2F;45<br>$$</p>
-<h2 id="大一下（22春）"><a href="#大一下（22春）" class="headerlink" title="大一下（22春）"></a>大一下（22春）</h2><table>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">
+GPA_1=\frac{75.9}{21}=3.614</script><script type="math/tex; mode=display">
+GPA=GPA_1=3.614</script><script type="math/tex; mode=display">
+\text{Rank: }12/45</script><h2 id="大一下（22春）"><a href="#大一下（22春）" class="headerlink" title="大一下（22春）"></a>大一下（22春）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">数学分析(II)</td>
-<td align="center">4</td>
-<td align="center">91</td>
-<td align="center">4.0</td>
+<tbody>
+<tr>
+<td style="text-align:center">数学分析(II)</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">微观经济学</td>
-<td align="center">3</td>
-<td align="center">92</td>
-<td align="center">4.0</td>
+<td style="text-align:center">微观经济学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">92</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">线性代数</td>
-<td align="center">3</td>
-<td align="center">77</td>
-<td align="center">2.7</td>
+<td style="text-align:center">线性代数</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">77</td>
+<td style="text-align:center">2.7</td>
 </tr>
 <tr>
-<td align="center">英语演讲</td>
-<td align="center">2</td>
-<td align="center">94</td>
-<td align="center">4.0</td>
+<td style="text-align:center">英语演讲</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">94</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">大学语文</td>
-<td align="center">2</td>
-<td align="center">85</td>
-<td align="center">3.7</td>
+<td style="text-align:center">大学语文</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">85</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">政治经济学(II)</td>
-<td align="center">3</td>
-<td align="center">78</td>
-<td align="center">3.0</td>
+<td style="text-align:center">政治经济学(II)</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">78</td>
+<td style="text-align:center">3.0</td>
 </tr>
 <tr>
-<td align="center">商务英语(II)</td>
-<td align="center">1</td>
-<td align="center">98</td>
-<td align="center">4.0</td>
+<td style="text-align:center">商务英语(II)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">98</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">思想道德与法治</td>
-<td align="center">3</td>
-<td align="center">83</td>
-<td align="center">3.3</td>
+<td style="text-align:center">思想道德与法治</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">计算社会科学</td>
-<td align="center">2</td>
-<td align="center">90</td>
-<td align="center">4.0</td>
+<td style="text-align:center">计算社会科学</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">4.0</td>
 </tr>
-</tbody></table>
-<p>$$<br>GPA_2&#x3D;\frac{82.4}{23}&#x3D;3.583<br>$$<br>$$<br>GPA&#x3D;\frac{75.9+82.4}{21+23}&#x3D;3.598<br>$$<br>$$<br>\text{Rank: }14&#x2F;40<br>$$</p>
-<h2 id="大一小学期（22暑）"><a href="#大一小学期（22暑）" class="headerlink" title="大一小学期（22暑）"></a>大一小学期（22暑）</h2><table>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">
+GPA_2=\frac{82.4}{23}=3.583</script><script type="math/tex; mode=display">
+GPA=\frac{75.9+82.4}{21+23}=3.598</script><script type="math/tex; mode=display">
+\text{Rank: }14/40</script><h2 id="大一小学期（22暑）"><a href="#大一小学期（22暑）" class="headerlink" title="大一小学期（22暑）"></a>大一小学期（22暑）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">LAMGO</td>
-<td align="center">1</td>
-<td align="center">100</td>
-<td align="center">4.0</td>
+<tbody>
+<tr>
+<td style="text-align:center">LAMGO</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">企业境内外上市实务</td>
-<td align="center">1</td>
-<td align="center">91</td>
-<td align="center">4.0</td>
+<td style="text-align:center">企业境内外上市实务</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">商务英语(III)</td>
-<td align="center">1</td>
-<td align="center">98</td>
-<td align="center">4.0</td>
+<td style="text-align:center">商务英语(III)</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">98</td>
+<td style="text-align:center">4.0</td>
 </tr>
-</tbody></table>
-<p>$$<br>GPA_3&#x3D;\frac{12}{3}&#x3D;4.0<br>$$<br>$$<br>GPA&#x3D;\frac{75.9+82.4+12.0}{21+23+3}&#x3D;3.623<br>$$<br>$$<br>\text{Rank: }14&#x2F;40<br>$$</p>
-<h2 id="大二上（22秋）"><a href="#大二上（22秋）" class="headerlink" title="大二上（22秋）"></a>大二上（22秋）</h2><table>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">
+GPA_3=\frac{12}{3}=4.0</script><script type="math/tex; mode=display">
+GPA=\frac{75.9+82.4+12.0}{21+23+3}=3.623</script><script type="math/tex; mode=display">
+\text{Rank: }14/40</script><h2 id="大二上（22秋）"><a href="#大二上（22秋）" class="headerlink" title="大二上（22秋）"></a>大二上（22秋）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">数学分析(III)</td>
-<td align="center">4</td>
-<td align="center">82</td>
-<td align="center">3.3</td>
+<tbody>
+<tr>
+<td style="text-align:center">数学分析(III)</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">82</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">习思想</td>
-<td align="center">3</td>
-<td align="center">87</td>
-<td align="center">3.7</td>
+<td style="text-align:center">习思想</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">87</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">毛概</td>
-<td align="center">3</td>
-<td align="center">80</td>
-<td align="center">3.0</td>
+<td style="text-align:center">毛概</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">3.0</td>
 </tr>
 <tr>
-<td align="center">概率导论</td>
-<td align="center">3</td>
-<td align="center">87</td>
-<td align="center">3.7</td>
+<td style="text-align:center">概率导论</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">87</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">管理会计</td>
-<td align="center">3</td>
-<td align="center">93</td>
-<td align="center">4.0</td>
+<td style="text-align:center">管理会计</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">93</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">军事理论</td>
-<td align="center">2</td>
-<td align="center">88</td>
-<td align="center">3.7</td>
+<td style="text-align:center">军事理论</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">宏观经济学</td>
-<td align="center">3</td>
-<td align="center">92</td>
-<td align="center">4.0</td>
+<td style="text-align:center">宏观经济学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">92</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">中财</td>
-<td align="center">3</td>
-<td align="center">91</td>
-<td align="center">4.0</td>
+<td style="text-align:center">中财</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">C语言</td>
-<td align="center">2</td>
-<td align="center">87</td>
-<td align="center">3.7</td>
+<td style="text-align:center">C语言</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">87</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">篮球</td>
-<td align="center">1</td>
-<td align="center">90</td>
-<td align="center">4.0</td>
+<td style="text-align:center">篮球</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">R语言</td>
-<td align="center">2</td>
-<td align="center">82</td>
-<td align="center">3.3</td>
+<td style="text-align:center">R语言</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">82</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">四史</td>
-<td align="center">2</td>
-<td align="center">93</td>
-<td align="center">4.0</td>
+<td style="text-align:center">四史</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">93</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">政治学原理</td>
-<td align="center">3</td>
-<td align="center">91</td>
-<td align="center">4.0</td>
+<td style="text-align:center">政治学原理</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">4.0</td>
 </tr>
-</tbody></table>
-<p>$$<br>GPA_4&#x3D;\frac{125.8}{34}&#x3D;3.7<br>$$<br>$$<br>GPA&#x3D;\frac{75.9+82.4+12.0+125.8}{21+23+3+34}&#x3D;3.656<br>$$<br>$$<br>\text{Rank: }11&#x2F;40<br>$$</p>
-<h2 id="大二下（23春）"><a href="#大二下（23春）" class="headerlink" title="大二下（23春）"></a>大二下（23春）</h2><table>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">
+GPA_4=\frac{125.8}{34}=3.7</script><script type="math/tex; mode=display">
+GPA=\frac{75.9+82.4+12.0+125.8}{21+23+3+34}=3.656</script><script type="math/tex; mode=display">
+\text{Rank: }11/40</script><h2 id="大二下（23春）"><a href="#大二下（23春）" class="headerlink" title="大二下（23春）"></a>大二下（23春）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">数理统计</td>
-<td align="center">3</td>
-<td align="center">79</td>
-<td align="center">3.0</td>
+<tbody>
+<tr>
+<td style="text-align:center">数理统计</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">3.0</td>
 </tr>
 <tr>
-<td align="center">数理经济学</td>
-<td align="center">3</td>
-<td align="center">86</td>
-<td align="center">3.7</td>
+<td style="text-align:center">数理经济学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">86</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">金融经济学</td>
-<td align="center">3</td>
-<td align="center">93</td>
-<td align="center">4.0</td>
+<td style="text-align:center">金融经济学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">93</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">投资学</td>
-<td align="center">3</td>
-<td align="center">86</td>
-<td align="center">3.7</td>
+<td style="text-align:center">投资学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">86</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">财报分析</td>
-<td align="center">3</td>
-<td align="center">88</td>
-<td align="center">3.7</td>
+<td style="text-align:center">财报分析</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">3.7</td>
 </tr>
 <tr>
-<td align="center">财政学</td>
-<td align="center">3</td>
-<td align="center">81</td>
-<td align="center">3.3</td>
+<td style="text-align:center">财政学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">81</td>
+<td style="text-align:center">3.3</td>
 </tr>
 <tr>
-<td align="center">高尔夫</td>
-<td align="center">1</td>
-<td align="center">90</td>
-<td align="center">4.0</td>
+<td style="text-align:center">高尔夫</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">谈判学</td>
-<td align="center">2</td>
-<td align="center">90</td>
-<td align="center">4.0</td>
+<td style="text-align:center">谈判学</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">4.0</td>
 </tr>
 <tr>
-<td align="center">博弈论</td>
-<td align="center">2</td>
-<td align="center">95</td>
-<td align="center">4.0</td>
+<td style="text-align:center">博弈论</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">95</td>
+<td style="text-align:center">4.0</td>
 </tr>
-</tbody></table>
-<p>$$<br>GPA_5&#x3D;\frac{84.2}{23}&#x3D;3.660<br>$$<br>$$<br>GPA&#x3D;\frac{75.9+82.4+12.0+125.8+84.2}{21+23+3+34+23}&#x3D;3.657<br>$$</p>
-<h2 id="大二ucb（23暑）"><a href="#大二ucb（23暑）" class="headerlink" title="大二ucb（23暑）"></a>大二ucb（23暑）</h2><table>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">
+GPA_5=\frac{84.2}{23}=3.660</script><script type="math/tex; mode=display">
+GPA=\frac{75.9+82.4+12.0+125.8+84.2}{21+23+3+34+23}=3.657</script><h2 id="大二ucb（23暑）"><a href="#大二ucb（23暑）" class="headerlink" title="大二ucb（23暑）"></a>大二ucb（23暑）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">Behavioral Finance</td>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
+<tbody>
+<tr>
+<td style="text-align:center">Behavioral Finance</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">Financial Derivatives</td>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">Financial Derivatives</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
 </tr>
-</tbody></table>
-<h2 id="大三上（23秋）"><a href="#大三上（23秋）" class="headerlink" title="大三上（23秋）"></a>大三上（23秋）</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="大三上（23秋）"><a href="#大三上（23秋）" class="headerlink" title="大三上（23秋）"></a>大三上（23秋）</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">课程</th>
-<th align="center">学分</th>
-<th align="center">总成绩</th>
-<th align="center">绩点</th>
+<th style="text-align:center">课程</th>
+<th style="text-align:center">学分</th>
+<th style="text-align:center">总成绩</th>
+<th style="text-align:center">绩点</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">计量经济学</td>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
+<tbody>
+<tr>
+<td style="text-align:center">计量经济学</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">公司金融</td>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">公司金融</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">金融工程</td>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">金融工程</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="大三下（24春）"><a href="#大三下（24春）" class="headerlink" title="大三下（24春）"></a>大三下（24春）</h2><h2 id="大四上（24秋）"><a href="#大四上（24秋）" class="headerlink" title="大四上（24秋）"></a>大四上（24秋）</h2><hr>
 ]]></content>
       <categories>

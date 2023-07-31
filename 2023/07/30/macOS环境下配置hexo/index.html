@@ -80,25 +80,17 @@
 </ol>
 <p>第一个直接点进去下载即可，第二个需要先安装<a target="_blank" rel="noopener" href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-
 <p>接下来可以安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/mac">Git</a>, 终端输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-
 <h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
 <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-
 <p>初始化博客</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
 <p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为 <code>blog</code> 的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
-
 <p>此时已经能生成并在本地预览你的博客雏形啦</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><p>这里介绍几种常用的Hexo指令，</p>
 <ol>
 <li><code>hexo generate</code> 网站生成</li>
@@ -107,21 +99,14 @@
 </ol>
 <p>以上三种都可以用首字母简写为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <h1 id="部署网站到Github"><a href="#部署网站到Github" class="headerlink" title="部署网站到Github"></a>部署网站到Github</h1><p>首先登陆Github，</p>
 <h2 id="添加SSH-Key"><a href="#添加SSH-Key" class="headerlink" title="添加SSH Key"></a>添加SSH Key</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-
+<p>其中 <code>username</code> 是你的用户名， <code>example@example.com</code> 是你的Github登录邮箱。然后通过终端命令生成 SSH Key：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
 <p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code> ，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
-<p>退出终端再重新打开（这时回到默认目录），输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure>
-
+<p>退出终端再重新打开（这时回到默认目录），输入<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
 <p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开 <code>id_rsa.pub</code> ，复制所有文字。</p>
 <p>接着打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type 不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
-<p>完成后用以下命令测试是否配置成功</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
-
+<p>完成后用以下命令测试是否配置成功<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>如果出现</p>
 <blockquote>
 <p>Hi {Github用户名}! You’ve successfully suthenticated, but Github does not procide shell access.</p>
@@ -130,7 +115,6 @@
 <h2 id="上传本地文件"><a href="#上传本地文件" class="headerlink" title="上传本地文件"></a>上传本地文件</h2><p>在Github上新建一个仓库，Repository Name 填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create Repository 创建新的网站仓库。</p>
 <p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
 <p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm 缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个 bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：</p>
 <ol>
 <li>打开终端</li>
@@ -141,10 +125,8 @@
 <p>可以解决 EACCES 的问题，亲测有效</p>
 <p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
 <p>修改后保存，在终端上输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
 <p><strong>参考资料</strong></p>
 <ol>
