@@ -245,16 +245,16 @@
     <content><![CDATA[<p>Textbook: Morris &amp; Harry；<a href="https://www.youtube.com/watch?v=p_di4Zn4wz4&list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6">3b1b</a>镇楼</p>
 <span id="more"></span>
 
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="Definition-2-68"><a href="#Definition-2-68" class="headerlink" title="Definition 2.68."></a><em>Definition 2.68.</em></h2><p>A set in the plane is called a <strong>region</strong> if it satisfies the following two conditions:</p>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><em><strong>Definition 2.68.</strong></em><br>A set in the plane is called a <strong>region</strong> if it satisfies the following two conditions:</p>
 <ol>
 <li>Each point of the set is the center of a circle whose entire interior consists of points of the set.</li>
 <li>Every two points of the set can be joined by a curve (not a line) which consists entirely of points of the set.</li>
 </ol>
-<h2 id="Definition-2-81"><a href="#Definition-2-81" class="headerlink" title="Definition 2.81."></a><em>Definition 2.81.</em></h2><p>The relation<br>$$<br>f(x,y)&#x3D;0\tag{2.82}<br>$$<br>defines $y$ as an <strong>implicit function</strong> of $x$ on an interval $I:a&lt;x&lt;b$, if there exists a function $g(x)$ defined on $I$ such that<br>$$<br>f[x,g(x)]&#x3D;0\tag{2.83}<br>$$<br>for <em>every</em> $x$ in $I$.</p>
-<h1 id="常微分方程和它的解"><a href="#常微分方程和它的解" class="headerlink" title="常微分方程和它的解"></a>常微分方程和它的解</h1><h2 id="Definition-3-4"><a href="#Definition-3-4" class="headerlink" title="Definition 3.4."></a><em>Definition 3.4.</em></h2><p>$f(x)$ is a solution of the differential equation<br>$$<br>F(x,y,y’,\cdots,y^{(n)})&#x3D;0\tag{3.41}<br>$$</p>
+<p><em><strong>Definition 2.81.</strong></em><br>The relation<br>$$<br>f(x,y)&#x3D;0\tag{2.82}<br>$$<br>defines $y$ as an <strong>implicit function</strong> of $x$ on an interval $I:a&lt;x&lt;b$, if there exists a function $g(x)$ defined on $I$ such that<br>$$<br>f[x,g(x)]&#x3D;0\tag{2.83}<br>$$<br>for <em>every</em> $x$ in $I$.</p>
+<p><em><strong>Definition 3.4.</strong></em><br>$f(x)$ is a solution of the differential equation<br>$$<br>F(x,y,y’,\cdots,y^{(n)})&#x3D;0\tag{3.41}<br>$$</p>
 <p>if </p>
 <p>$$<br>F[x,f(x),f’(x),\cdots,f^{(n)}(x)]&#x3D;0\tag{3.42}<br>$$</p>
-<h2 id="Definition-3-6"><a href="#Definition-3-6" class="headerlink" title="Definition 3.6."></a><em>Definition 3.6.</em></h2><p>A relation $f(x,y)&#x3D;0$ will be called an <strong>implicit solution</strong> of the differential equation</p>
+<p><em><strong>Definition 3.6.</strong></em><br>A relation $f(x,y)&#x3D;0$ will be called an <strong>implicit solution</strong> of the differential equation</p>
 <p>$$F(x,y,y’,\cdots,y^{(n)})&#x3D;0 \tag{3.61}$$</p>
 <p>on an interval $I:a&lt;x&lt;b$, if</p>
 <ol>
@@ -268,7 +268,7 @@
 <p><strong>Question:</strong></p>
 <p>$(e) xy’&#x3D;2y\leftarrow y&#x3D;x^2$, $(x\neq 0)$</p>
 <p>$(j)xy’+y&#x3D;y^2\leftarrow y&#x3D;\frac{2}{x+2}$, $(x\neq 0,-2)$</p>
-<h2 id="Definition-4-3"><a href="#Definition-4-3" class="headerlink" title="Definition 4.3."></a><em>Definition 4.3.</em></h2><p>The functions defined by</p>
+<p><em><strong>Definition 4.3.</strong></em><br>The functions defined by</p>
 <p>$$<br>y&#x3D;f(x,c_1,c_2,\cdots,c_n)\tag{4.31}<br>$$</p>
 <p>of the $n+1$ variables, $x,c_1,c_2,\cdots,c_n$ will be called an <strong>n-parameter family of solutions</strong> of the $n$th order differential equation</p>
 <p>$$F(x,y,y’,\cdots,y^{(n)})&#x3D;0\tag{4.32}$$</p>
@@ -277,16 +277,16 @@
 <p>$n$ order $\nLeftrightarrow$ $n$ parameter solutions</p>
 <p>$\nRightarrow$: $(y’’)^2+y^2&#x3D;0$</p>
 <p>$\nLeftarrow$: $(y’-y)(y’-2y)&#x3D;0\leftarrow (y-c_1e^x)(y-c_2e^{2x})&#x3D;0$</p>
-<h2 id="Definition-4-66"><a href="#Definition-4-66" class="headerlink" title="Definition 4.66."></a><em>Definition 4.66.</em></h2><p><em>particular solution</em>: does not contain arbitrary constants. </p>
-<h2 id="Definition-4-7"><a href="#Definition-4-7" class="headerlink" title="Definition 4.7."></a><em>Definition 4.7.</em></h2><p><em>general solution</em>: contains <em>every</em> particular solution</p>
-<h2 id="Definition-4-71"><a href="#Definition-4-71" class="headerlink" title="Definition 4.71."></a><em>Definition 4.71.</em></h2><p><em>initial conditions</em>:<br>the $n$ conditions that determine $c_1,\cdots,c_n$, and given in terms of one value of the independent variable (e.g.给定$t&#x3D;0$时，位置$x&#x3D;10$，速度$v&#x3D;20$)</p>
-<h2 id="Definition-5-12"><a href="#Definition-5-12" class="headerlink" title="Definition 5.12."></a><em>Definition 5.12.</em></h2><p>If $y&#x3D;f(x)$ or $f(x,y)&#x3D;0$ defines $y$ as a function of $x$ which satisfies<br>$$y’&#x3D;F(x,y), \quad a&lt;x&lt;b\tag{5.11}$$<br>then the graph of this function is called an <strong>integral curve</strong>, it is the graph of a function which is the solution of $(5.11)$.</p>
+<p><em><strong>Definition 4.66.</strong></em><br><em>particular solution</em>: does not contain arbitrary constants. </p>
+<p><em><strong>Definition 4.7.</strong></em><br><em>general solution</em>: contains <em>every</em> particular solution</p>
+<p><em><strong>Definition 4.71.</strong></em><br><em>initial conditions</em>:<br>the $n$ conditions that determine $c_1,\cdots,c_n$, and given in terms of one value of the independent variable (e.g.给定$t&#x3D;0$时，位置$x&#x3D;10$，速度$v&#x3D;20$)</p>
+<p><em><strong>Definition 5.12.</strong></em><br>If $y&#x3D;f(x)$ or $f(x,y)&#x3D;0$ defines $y$ as a function of $x$ which satisfies<br>$$y’&#x3D;F(x,y), \quad a&lt;x&lt;b\tag{5.11}$$<br>then the graph of this function is called an <strong>integral curve</strong>, it is the graph of a function which is the solution of $(5.11)$.</p>
 <p><strong>Remind</strong></p>
 <p>$$y’&#x3D;F(x,y)\Leftrightarrow \text{Direction field}\tag{ODE}$$</p>
 <p>$$y(x_0)&#x3D;y_0 \Leftrightarrow \text{Point}\ (x_0,y_0)\tag{I.C.}$$</p>
 <p>$$y(x) \Leftrightarrow \text{Integral curve}\tag{Solution}$$</p>
-<h2 id="Definition-5-4"><a href="#Definition-5-4" class="headerlink" title="Definition 5.4."></a><em>Definition 5.4.</em></h2><p>An <em>ordinary point</em> of (5.11) lies on one and only one of its integral curves.</p>
-<h2 id="Definition-5-41"><a href="#Definition-5-41" class="headerlink" title="Definition 5.41."></a><em>Definition 5.41.</em></h2><p>A <em>singular point</em> of (5.11) meets two requirements</p>
+<p><em><strong>Definition 5.4.</strong></em><br>An <em>ordinary point</em> of (5.11) lies on one and only one of its integral curves.</p>
+<p><em><strong>Definition 5.41.</strong></em><br>A <em>singular point</em> of (5.11) meets two requirements</p>
 <ol>
 <li>NOT ordinary point: <em>no&#x2F;more than one</em> integral curve</li>
 <li>at least one ordinary point $o_0\in \cup(s_0,\varepsilon),\forall \varepsilon$</li>
@@ -296,27 +296,49 @@
 <p><img src="/../images/fig_531.png" alt="531"></p>
 <p><strong>Trap</strong></p>
 <p>$$\sqrt{x^2+4x-3}&#x3D;1-2x$$</p>
-<h2 id="Definition-6-13"><a href="#Definition-6-13" class="headerlink" title="Definition 6.13."></a><em>Definition 6.13.</em></h2><p>Let $y&#x3D;f(x)$ define $y$ as a function of $x$ on an interval $I$. The <strong>differential of y</strong>, written as $dy$ (or $df$) is defined by<br>$$<br>(dy)(x,\Delta x)&#x3D;f’(x)\Delta x\tag{6.14}<br>$$</p>
-<h2 id="Theorem-6-2"><a href="#Theorem-6-2" class="headerlink" title="Theorem 6.2."></a><em>Theorem 6.2.</em></h2><p>If $y&#x3D;x$, then<br>$$(dy)(x,\Delta x)&#x3D;(dx)(x,\Delta x)&#x3D;\Delta x\tag{6.22}$$</p>
+<p><em><strong>Definition 6.13.</strong></em><br>Let $y&#x3D;f(x)$ define $y$ as a function of $x$ on an interval $I$. The <strong>differential of y</strong>, written as $dy$ (or $df$) is defined by<br>$$<br>(dy)(x,\Delta x)&#x3D;f’(x)\Delta x\tag{6.14}<br>$$</p>
+<p><em><strong>Theorem 6.2.</strong></em><br>If $y&#x3D;x$, then<br>$$(dy)(x,\Delta x)&#x3D;(dx)(x,\Delta x)&#x3D;\Delta x\tag{6.22}$$</p>
 <p>$dy$,$dx$ are differentials, not increment. $y,x$ after $d$ are functions, not independent variables</p>
-<h2 id="Theorem-6-3"><a href="#Theorem-6-3" class="headerlink" title="Theorem 6.3."></a><em>Theorem 6.3.</em></h2><p>If $y&#x3D;f(x)$ defines $y$ as a function of $x$ and $x&#x3D;g(t)$, $y&#x3D;f[g(t)]&#x3D;F(t)$, define $x$ and $y$ as functions of $t$, then<br>$$(dy)(t,\Delta t)&#x3D;f’[g(t)][g’(t)(dt)(t,\Delta t)]&#x3D;f’(x)(dx)(t,\Delta t)\tag{6.31}$$</p>
-<h2 id="Definition-6-4"><a href="#Definition-6-4" class="headerlink" title="Definition 6.4."></a><em>Definition 6.4.</em></h2><p>For $z&#x3D;f(x,y)$,<br>$$(dz)(x,y,\Delta x,\Delta y)&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.41}$$</p>
-<h2 id="Theorem-6-5"><a href="#Theorem-6-5" class="headerlink" title="Theorem 6.5."></a><em>Theorem 6.5.</em></h2><p>For $z&#x3D;f(x,y)$, $x&#x3D;x(r,s,\cdots)$,$y&#x3D;y(r,s,\cdots)$<br>$$dz&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}$$</p>
-<h1 id="Separable-Variables"><a href="#Separable-Variables" class="headerlink" title="Separable Variables"></a>Separable Variables</h1><p>$$<br>Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6}<br>$$<br>$$<br>P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61}<br>$$<br>$$<br>\Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62}<br>$$<br>$$<br>\Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\tag{6.63}<br>$$</p>
-<h2 id="Definition-7-1"><a href="#Definition-7-1" class="headerlink" title="Definition 7.1."></a><em>Definition 7.1.</em></h2><p>Let $z&#x3D;f(x,y)$ define $z$ as a function of $x$ and $y$ in a region $R$. The function $f(x,y)$ is said to be <strong>homogeneous of order n</strong> if it can be written as </p>
+<p><em><strong>Theorem 6.3.</strong></em><br>If $y&#x3D;f(x)$ defines $y$ as a function of $x$ and $x&#x3D;g(t)$, $y&#x3D;f[g(t)]&#x3D;F(t)$, define $x$ and $y$ as functions of $t$, then<br>$$(dy)(t,\Delta t)&#x3D;f’[g(t)][g’(t)(dt)(t,\Delta t)]&#x3D;f’(x)(dx)(t,\Delta t)\tag{6.31}$$</p>
+<p><em><strong>Definition 6.4.</strong></em><br>For $z&#x3D;f(x,y)$,<br>$$(dz)(x,y,\Delta x,\Delta y)&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.41}$$</p>
+<p><em><strong>Theorem 6.5.</strong></em><br>For $z&#x3D;f(x,y)$, $x&#x3D;x(r,s,\cdots)$,$y&#x3D;y(r,s,\cdots)$<br>$$dz&#x3D;\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}$$</p>
+<h1 id="解特殊微分方程"><a href="#解特殊微分方程" class="headerlink" title="解特殊微分方程"></a>解特殊微分方程</h1><h2 id="Separable-Variables"><a href="#Separable-Variables" class="headerlink" title="Separable Variables"></a>Separable Variables</h2><p>$$<br>Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6}<br>$$<br>$$<br>P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61}<br>$$<br>$$<br>\Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62}<br>$$<br>$$<br>\Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\tag{6.63}<br>$$</p>
+<p><em><strong>Definition 7.1.</strong></em><br>Let $z&#x3D;f(x,y)$ define $z$ as a function of $x$ and $y$ in a region $R$. The function $f(x,y)$ is said to be <strong>homogeneous of order n</strong> if it can be written as </p>
 <p>$$<br>f(x,y)&#x3D;x^ng(u)\tag{7.11}<br>$$</p>
 <p>where $u&#x3D;\dfrac yx$ and $g(u)$ is a function of $u$; or alternately if it can be written as</p>
 <p>$$<br>f(x,y)&#x3D;y^nh(u)\tag{7.11}<br>$$</p>
 <p>where $u&#x3D;\dfrac xy$ and $h(u)$ is a function of $u$</p>
 <p>也可定义为：A function $f(x,y)$ is said to be homogeneous of order n if $$f(tx,ty)&#x3D;t^nf(x,y)\tag{7.16}$$</p>
-<h1 id="Homogeneous-Coefficients"><a href="#Homogeneous-Coefficients" class="headerlink" title="Homogeneous Coefficients"></a>Homogeneous Coefficients</h1><p><em>Definition 7.2.</em> The differential equation<br>$$P(x,y)dx+Q(x,y)dy&#x3D;0\tag{7.3}$$<br>where $P(x,y)$ and $Q(x,y)$ are each homogeneous functions of order $n$ is called a <strong>first order differential equation with homogeneous coefficients</strong>.</p>
-<h2 id="Theorem-7-32"><a href="#Theorem-7-32" class="headerlink" title="Theorem 7.32."></a><em>Theorem 7.32.</em></h2><p>If the coefficients in $(7.3)$ are each homogeneous function of order $n$, then the substitution in it of $(7.31),(7.33)$ will lead to an equation in which the variables are separable.</p>
+<h2 id="Homogeneous-Coefficients"><a href="#Homogeneous-Coefficients" class="headerlink" title="Homogeneous Coefficients"></a>Homogeneous Coefficients</h2><p><em>Definition 7.2.</em> The differential equation<br>$$P(x,y)dx+Q(x,y)dy&#x3D;0\tag{7.3}$$<br>where $P(x,y)$ and $Q(x,y)$ are each homogeneous functions of order $n$ is called a <strong>first order differential equation with homogeneous coefficients</strong>.</p>
+<p><em><strong>Theorem 7.32.</strong></em><br>If the coefficients in $(7.3)$ are each homogeneous function of order $n$, then the substitution in it of $(7.31),(7.33)$ will lead to an equation in which the variables are separable.</p>
 <p>$$y&#x3D;ux\  \Leftarrow \ \left(u&#x3D;\frac{y}{x}\right),\quad dy&#x3D;udx+xdu,\quad \tag{7.31}$$</p>
 <p>$$x&#x3D;uy\  \Leftarrow \ \left(u&#x3D;\frac{x}{y}\right),\quad dx&#x3D;udy+ydu,\quad \tag{7.33}$$</p>
-<h1 id="Linear-Coefficients"><a href="#Linear-Coefficients" class="headerlink" title="Linear Coefficients"></a>Linear Coefficients</h1><p>$$<br>x&#x3D;\bar{x}+h,\quad y&#x3D;\bar{y}+k\tag{8.11}<br>$$<br>$$<br>\Rightarrow \bar{x}&#x3D;x-h,\quad \bar{y}&#x3D;y-k\tag{8.12}<br>$$<br>解线性系数的微分方程，<br>$$<br>(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy&#x3D;0\tag{8.2}<br>$$</p>
-<h2 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h2><p>假设两条直线不平行，因而相交，设交点为$(h,k)$，是新的原点$(h,k)&#x3D;(\bar{0},\bar{0})$。把$(8.11)$替换进$(8.2)$，由交点的性质，常数项可忽略。<br>$$<br>a_1h+b_1k+c_1&#x3D;0<br>$$<br>$$<br>a_2h+b_2k+c_2&#x3D;0<br>$$</p>
+<h2 id="Linear-Coefficients"><a href="#Linear-Coefficients" class="headerlink" title="Linear Coefficients"></a>Linear Coefficients</h2><p>$$<br>x&#x3D;\bar{x}+h,\quad y&#x3D;\bar{y}+k\tag{8.11}<br>$$<br>$$<br>\Rightarrow \bar{x}&#x3D;x-h,\quad \bar{y}&#x3D;y-k\tag{8.12}<br>$$<br>解线性系数的微分方程，<br>$$<br>(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy&#x3D;0\tag{8.2}<br>$$</p>
+<h3 id="两条直线不平行"><a href="#两条直线不平行" class="headerlink" title="两条直线不平行"></a>两条直线不平行</h3><h4 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h4><p>两条直线不平行，因而相交，设交点为$(h,k)$，是新的原点$(h,k)&#x3D;(\bar{0},\bar{0})$。把$(8.11)$替换进$(8.2)$，由交点的性质，常数项可忽略。<br>$$<br>a_1h+b_1k+c_1&#x3D;0<br>$$<br>$$<br>a_2h+b_2k+c_2&#x3D;0<br>$$</p>
 <p>转换成homogenous的形式<br>$$<br>(a_1\bar{x}+b_1\bar{y})d\bar{x}+(a_2\bar{x}+b_2\bar{y})d\bar{y}&#x3D;0\tag{8.24}<br>$$</p>
-<h2 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h2><p>换元<br>$$<br>u&#x3D;a_1x+b_1y+c_1\tag{8.3}<br>$$<br>$$<br>v&#x3D;a_2x+b_2y+c_2<br>$$<br>微分<br>$$<br>du&#x3D;a_1dx+b_1dy\tag{8.31}<br>$$<br>$$<br>dv&#x3D;a_2dx+b_2dy<br>$$<br>解方程，用$du,dv$表示$dx,dy$，代入$(8.2)$式，再用homogenous的方法。</p>
+<h4 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h4><p>换元<br>$$<br>u&#x3D;a_1x+b_1y+c_1\tag{8.3}<br>$$<br>$$<br>v&#x3D;a_2x+b_2y+c_2<br>$$<br>微分<br>$$<br>du&#x3D;a_1dx+b_1dy\tag{8.31}<br>$$<br>$$<br>dv&#x3D;a_2dx+b_2dy<br>$$<br>解方程，用$du,dv$表示$dx,dy$，代入$(8.2)$式，再用homogenous的方法。</p>
+<h3 id="两条直线平行"><a href="#两条直线平行" class="headerlink" title="两条直线平行"></a>两条直线平行</h3><p>Method 1失效。只能换元，都用$u$表示<br>$$<br>(2x+3y-1)dx+(4x+6y+2)dy&#x3D;0<br>$$<br>$$<br>u&#x3D;2x+3y-1, \quad \Rightarrow\quad 4x+6y+2&#x3D;2u+4<br>$$<br>然后就回到$u$和$x$或$y$组成的homogenous形式。</p>
+<h2 id="Exact-DE"><a href="#Exact-DE" class="headerlink" title="Exact DE"></a>Exact DE</h2><ol>
+<li>Riemann integral<br>$$<br>\lim_{n\rightarrow \infty}\sum_{k&#x3D;1}^nf(x_k)\Delta x_k&#x3D;\int_a^bf(x)dx<br>$$</li>
+<li>微积分基本定理<br>$$<br>F(x)&#x3D;\int_{x_0}^xf(u)du<br>\tag{9.13}<br>$$</li>
+</ol>
+<p>$$<br>\rightarrow F’(x)&#x3D;f(x), \quad a&lt;x&lt;b\tag{9.14}<br>$$<br>3. 要让<br>$$\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}$$<br>有定义，必须$[x_0,x]\times [y_0,y]\subset D$</p>
+<p><em><strong>Definition 9.19.</strong></em> A region is called a <strong>simply connected region</strong> if every simple closed curve lying entirely in the region encloses only points of the region. </p>
+<blockquote>
+<p><em>shrink</em> closed curve to a point without non-domain points getting on the way</p>
+</blockquote>
+<p>要让$(9.16)$有定义</p>
+<ol>
+<li>共同定义域是S.C. region $R$</li>
+<li>$(x_0,y_0)\in R$</li>
+<li>长方形$[x_0,x]\times [y_0,y]\subset R$</li>
+</ol>
+<p><em><strong>Definition 9.23.</strong></em><br>$$<br>P(x,y)dx+Q(x,y)dy\tag{9.24}<br>$$<br>is called an <strong>exact differential</strong> if it is the total differential of a function $f(x,y)$.<br>$$<br>P(x,y)&#x3D;\frac{\partial}{\partial x}f(x,y)\quad Q(x,y)&#x3D;\frac{\partial}{\partial y}f(x,y)\tag{9.241}<br>$$</p>
+<p><em><strong>Definition 9.27.</strong></em><br>$$<br>P(x,y)dx+Q(x,y)dy\tag{9.28}&#x3D;0<br>$$<br>is called <strong>exact differential equation</strong> if follows $(9.241)$.</p>
+<p><em><strong>Theorem 9.3.</strong></em> A necessary and sufficient condition that the differential equation<br>$$<br>P(x,y)dx+Q(x,y)dy\tag{9.31}&#x3D;0<br>$$<br>be exact is that<br>$$<br>\frac{\partial}{\partial y}P(x,y)&#x3D;\frac{\partial}{\partial x}Q(x,y\tag{9.32})<br>$$</p>
+<p>解法一：</p>
+<p>套公式$\displaystyle{f(x,y)&#x3D;\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x_0,y)dy}&#x3D;c$，或$\displaystyle{f(x,y)&#x3D;\int_{y_0}^yQ(x_0,y)dy+\int_{x_0}^xP(x,y_0)dx}&#x3D;c$</p>
+<p>解法二：<br>$$<br>P(x,y)dx+Q(x,y)dy&#x3D;0<br>$$<br>By $\displaystyle{\frac{\partial}{\partial x}f(x,y)&#x3D;P(x,y)}$,<br>$$<br>f(x,y)&#x3D;\int P(x,y)dx+R(y)\tag{$\star$}<br>$$<br>再由<br>$$<br>\frac{\partial}{\partial y}f(x,y)&#x3D;Q(x,y)<br>$$<br>$$<br>\underbrace{\frac{\partial}{\partial y} \int P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial y}P(x,y)dx}}+R’(y)&#x3D;Q(x,y)<br>$$<br>解出$R(y)$再代回$(\star)$式.</p>
 ]]></content>
       <categories>
         <category>学习</category>
