@@ -371,7 +371,7 @@ f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}</script><p>再由</p>
   <entry>
     <title>选课盲盒</title>
     <url>/2023/07/29/%E9%80%89%E8%AF%BE%E7%9B%B2%E7%9B%92/</url>
-    <content><![CDATA[<p>厦大选课就是开盲盒，完全不按培养方案来</p>
+    <content><![CDATA[<p>人家ucb每学期开什么课，什么教授都是固定的，你厦大开课怎么完全不按培养方案来？</p>
 <h2 id="大一上（21秋）"><a href="#大一上（21秋）" class="headerlink" title="大一上（21秋）"></a>大一上（21秋）</h2><div class="table-container">
 <table>
 <thead>
@@ -777,6 +777,32 @@ GPA=\frac{75.9+82.4+12.0+125.8+84.2}{21+23+3+34+23}=3.657</script><h2 id="大二
       </categories>
       <tags>
         <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决hexo本地和部署不一致问题</title>
+    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<p><img src="../images/branch_230731.png" alt="branch"></p>
+<p>点击分支，在框内输入新的分支名，比如说<code>test</code>。</p>
+<p><img src="../images/test_230731.png" alt="test"></p>
+<p>create 之后，记得在博客文件夹的 <code>_config.yml</code> 内将branch改为<code>test</code>。终端内输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
+<ol>
+<li><p><a href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
