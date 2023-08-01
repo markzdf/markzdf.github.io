@@ -74,25 +74,24 @@
         <div class="content markdown">
             <p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
 <p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img src="../images/branch_230731.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，在框内输入新的分支名，比如说<code>test</code>。</p>
-<figure>
-<img src="../images/test_230731.png" alt="test" />
-<figcaption aria-hidden="true">test</figcaption>
-</figure>
-<p>create 之后，记得在博客文件夹的 <code>_config.yml</code>
-内将branch改为<code>test</code>。终端内输入</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png" alt="branch"></p>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/new.png" alt="new"></p>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支 <code>main</code>。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/default.png" alt="default"></p>
+<p>接着在 Settings 的 Default branch 一栏点击$\rightleftarrows$，把默认分支改为 <code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/pages.png" alt="pages"></p>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为 main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code> 内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>即可实现部署和本地一致。</p>
 <p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-target="_blank" rel="noopener" href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p>
+</li>
 </ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -134,21 +133,6 @@ target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/an
 
     </div>
 </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 

@@ -3,178 +3,67 @@
   <entry>
     <title>ODE基本概念</title>
     <url>/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<p><strong><em>Definition 2.68.</em></strong> A set in the plane is
-called a <strong>region</strong> if it satisfies the following two
-conditions: 1. Each point of the set is the center of a circle whose
-entire interior consists of points of the set. 2. Every two points of
-the set can be joined by a curve (not a line) which consists entirely of
-points of the set.</p>
-<p><strong><em>Definition 2.81.</em></strong> The relation <span
-class="math display">\[
-f(x,y)=0\tag{2.82}
-\]</span> defines <span class="math inline">\(y\)</span> as an
-<strong>implicit function</strong> of <span
-class="math inline">\(x\)</span> on an interval <span
-class="math inline">\(I:a&lt;x&lt;b\)</span>, if there exists a function
-<span class="math inline">\(g(x)\)</span> defined on <span
-class="math inline">\(I\)</span> such that <span class="math display">\[
-f[x,g(x)]=0\tag{2.83}
-\]</span> for <em>every</em> <span class="math inline">\(x\)</span> in
-<span class="math inline">\(I\)</span>.</p>
-<p><strong><em>Definition 3.4.</em></strong> <span
-class="math inline">\(f(x)\)</span> is a solution of the differential
-equation <span class="math display">\[
-F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{3.41}
-\]</span></p>
-<p>if</p>
-<p><span class="math display">\[
-F[x,f(x),f&#39;(x),\cdots,f^{(n)}(x)]=0\tag{3.42}
-\]</span></p>
-<p><strong><em>Definition 3.6.</em></strong> A relation <span
-class="math inline">\(f(x,y)=0\)</span> will be called an
-<strong>implicit solution</strong> of the differential equation</p>
-<p><span class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0
-\tag{3.61}\]</span></p>
-<p>on an interval <span class="math inline">\(I:a&lt;x&lt;b\)</span>,
-if</p>
-<ol type="1">
-<li><p>it defines <span class="math inline">\(y\)</span> as an implicit
-function of <span class="math inline">\(x\)</span> on <span
-class="math inline">\(I\)</span>,i.e., if there exists a function <span
-class="math inline">\(g(x)\)</span> defined on <span
-class="math inline">\(I\)</span> such that <span
-class="math inline">\(f[x,g(x)]=0\)</span> for every <span
-class="math inline">\(x\)</span> in <span
-class="math inline">\(I\)</span>, and if</p></li>
-<li><p><span class="math inline">\(g(x)\)</span> satisfies 3.61, i.e.,
-if</p></li>
+    <content><![CDATA[<p><strong><em>Definition 2.68.</em></strong><br>A set in the plane is called a <strong>region</strong> if it satisfies the following two conditions:</p>
+<ol>
+<li>Each point of the set is the center of a circle whose entire interior consists of points of the set.</li>
+<li>Every two points of the set can be joined by a curve (not a line) which consists entirely of points of the set.</li>
 </ol>
-<p><span class="math display">\[
-F[x,g(x),g&#39;(x),\cdots,g^{(n)}(x)]=0 \tag{3.62}
-\]</span></p>
-<p>for every <span class="math inline">\(x\)</span> in <span
-class="math inline">\(I\)</span>.</p>
+<p><strong><em>Definition 2.81.</em></strong><br>The relation</p>
+<script type="math/tex; mode=display">
+f(x,y)=0\tag{2.82}</script><p>defines $y$ as an <strong>implicit function</strong> of $x$ on an interval $I:a&lt;x&lt;b$, if there exists a function $g(x)$ defined on $I$ such that</p>
+<script type="math/tex; mode=display">
+f[x,g(x)]=0\tag{2.83}</script><p>for <em>every</em> $x$ in $I$.</p>
+<p><strong><em>Definition 3.4.</em></strong><br>$f(x)$ is a solution of the differential equation</p>
+<script type="math/tex; mode=display">
+F(x,y,y',\cdots,y^{(n)})=0\tag{3.41}</script><p>if </p>
+<script type="math/tex; mode=display">
+F[x,f(x),f'(x),\cdots,f^{(n)}(x)]=0\tag{3.42}</script><p><strong><em>Definition 3.6.</em></strong><br>A relation $f(x,y)=0$ will be called an <strong>implicit solution</strong> of the differential equation</p>
+<script type="math/tex; mode=display">F(x,y,y',\cdots,y^{(n)})=0 \tag{3.61}</script><p>on an interval $I:a&lt;x&lt;b$, if</p>
+<ol>
+<li><p>it defines $y$ as an implicit function of $x$ on $I$,i.e., if there exists a function $g(x)$ defined on $I$ such that $f[x,g(x)]=0$ for every $x$ in $I$, and if </p>
+</li>
+<li><p>$g(x)$ satisfies 3.61, i.e., if</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+F[x,g(x),g'(x),\cdots,g^{(n)}(x)]=0 \tag{3.62}</script><p>for every $x$ in $I$.</p>
 <p><strong>Question:</strong></p>
-<p><span class="math inline">\((e) xy&#39;=2y\leftarrow y=x^2\)</span>,
-<span class="math inline">\((x\neq 0)\)</span></p>
-<p><span class="math inline">\((j)xy&#39;+y=y^2\leftarrow
-y=\frac{2}{x+2}\)</span>, <span class="math inline">\((x\neq
-0,-2)\)</span></p>
-<p><strong><em>Definition 4.3.</em></strong> The functions defined
-by</p>
-<p><span class="math display">\[
-y=f(x,c_1,c_2,\cdots,c_n)\tag{4.31}
-\]</span></p>
-<p>of the <span class="math inline">\(n+1\)</span> variables, <span
-class="math inline">\(x,c_1,c_2,\cdots,c_n\)</span> will be called an
-<strong>n-parameter family of solutions</strong> of the <span
-class="math inline">\(n\)</span>th order differential equation</p>
-<p><span
-class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{4.32}\]</span></p>
-<p>if <span class="math inline">\(\forall c_i(i=1,\cdots,n)\)</span>,
-the resulting function <span class="math inline">\(f(x)\)</span> defined
-by <span class="math inline">\((4.31)\)</span> satisfies <span
-class="math inline">\((4.32)\)</span>. That is</p>
-<p><span
-class="math display">\[F(x,f,f&#39;,\cdots,f^{(n)})=0\tag{4.33}\]</span></p>
-<p><span class="math inline">\(n\)</span> order <span
-class="math inline">\(\nLeftrightarrow\)</span> <span
-class="math inline">\(n\)</span> parameter solutions</p>
-<p><span class="math inline">\(\nRightarrow\)</span>: <span
-class="math inline">\((y&#39;&#39;)^2+y^2=0\)</span></p>
-<p><span class="math inline">\(\nLeftarrow\)</span>: <span
-class="math inline">\((y&#39;-y)(y&#39;-2y)=0\leftarrow
-(y-c_1e^x)(y-c_2e^{2x})=0\)</span></p>
-<p><strong><em>Definition 4.66.</em></strong> <em>particular
-solution</em>: does not contain arbitrary constants.</p>
-<p><strong><em>Definition 4.7.</em></strong> <em>general solution</em>:
-contains <em>every</em> particular solution</p>
-<p><strong><em>Definition 4.71.</em></strong> <em>initial
-conditions</em>: the <span class="math inline">\(n\)</span> conditions
-that determine <span class="math inline">\(c_1,\cdots,c_n\)</span>, and
-given in terms of one value of the independent variable (e.g.给定<span
-class="math inline">\(t=0\)</span>时，位置<span
-class="math inline">\(x=10\)</span>，速度<span
-class="math inline">\(v=20\)</span>)</p>
-<p><strong><em>Definition 5.12.</em></strong> If <span
-class="math inline">\(y=f(x)\)</span> or <span
-class="math inline">\(f(x,y)=0\)</span> defines <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> which satisfies <span
-class="math display">\[y&#39;=F(x,y), \quad
-a&lt;x&lt;b\tag{5.11}\]</span> then the graph of this function is called
-an <strong>integral curve</strong>, it is the graph of a function which
-is the solution of <span class="math inline">\((5.11)\)</span>.</p>
+<p>$(e) xy’=2y\leftarrow y=x^2$, $(x\neq 0)$</p>
+<p>$(j)xy’+y=y^2\leftarrow y=\frac{2}{x+2}$, $(x\neq 0,-2)$</p>
+<p><strong><em>Definition 4.3.</em></strong><br>The functions defined by</p>
+<script type="math/tex; mode=display">
+y=f(x,c_1,c_2,\cdots,c_n)\tag{4.31}</script><p>of the $n+1$ variables, $x,c_1,c_2,\cdots,c_n$ will be called an <strong>n-parameter family of solutions</strong> of the $n$th order differential equation</p>
+<script type="math/tex; mode=display">F(x,y,y',\cdots,y^{(n)})=0\tag{4.32}</script><p>if $\forall c_i(i=1,\cdots,n)$, the resulting function $f(x)$ defined by $(4.31)$ satisfies $(4.32)$. That is</p>
+<script type="math/tex; mode=display">F(x,f,f',\cdots,f^{(n)})=0\tag{4.33}</script><p>$n$ order $\nLeftrightarrow$ $n$ parameter solutions</p>
+<p>$\nRightarrow$: $(y’’)^2+y^2=0$</p>
+<p>$\nLeftarrow$: $(y’-y)(y’-2y)=0\leftarrow (y-c_1e^x)(y-c_2e^{2x})=0$</p>
+<p><strong><em>Definition 4.66.</em></strong><br><em>particular solution</em>: does not contain arbitrary constants. </p>
+<p><strong><em>Definition 4.7.</em></strong><br><em>general solution</em>: contains <em>every</em> particular solution</p>
+<p><strong><em>Definition 4.71.</em></strong><br><em>initial conditions</em>:<br>the $n$ conditions that determine $c_1,\cdots,c_n$, and given in terms of one value of the independent variable (e.g.给定$t=0$时，位置$x=10$，速度$v=20$)</p>
+<p><strong><em>Definition 5.12.</em></strong><br>If $y=f(x)$ or $f(x,y)=0$ defines $y$ as a function of $x$ which satisfies </p>
+<script type="math/tex; mode=display">y'=F(x,y), \quad a<x<b\tag{5.11}</script><p>then the graph of this function is called an <strong>integral curve</strong>, it is the graph of a function which is the solution of $(5.11)$.</p>
 <p><strong>Remind</strong></p>
-<p><span class="math display">\[y&#39;=F(x,y)\Leftrightarrow
-\text{Direction field}\tag{ODE}\]</span></p>
-<p><span class="math display">\[y(x_0)=y_0 \Leftrightarrow \text{Point}\
-(x_0,y_0)\tag{I.C.}\]</span></p>
-<p><span class="math display">\[y(x) \Leftrightarrow \text{Integral
-curve}\tag{Solution}\]</span></p>
-<p><strong><em>Definition 5.4.</em></strong> An <em>ordinary point</em>
-of (5.11) lies on one and only one of its integral curves.</p>
-<p><strong><em>Definition 5.41.</em></strong> A <em>singular point</em>
-of (5.11) meets two requirements 1. NOT ordinary point: <em>no/more than
-one</em> integral curve 2. at least one ordinary point <span
-class="math inline">\(o_0\in \cup(s_0,\varepsilon),\forall
-\varepsilon\)</span></p>
+<script type="math/tex; mode=display">y'=F(x,y)\Leftrightarrow \text{Direction field}\tag{ODE}</script><script type="math/tex; mode=display">y(x_0)=y_0 \Leftrightarrow \text{Point}\ (x_0,y_0)\tag{I.C.}</script><script type="math/tex; mode=display">y(x) \Leftrightarrow \text{Integral curve}\tag{Solution}</script><p><strong><em>Definition 5.4.</em></strong><br>An <em>ordinary point</em> of (5.11) lies on one and only one of its integral curves.</p>
+<p><strong><em>Definition 5.41.</em></strong><br>A <em>singular point</em> of (5.11) meets two requirements</p>
+<ol>
+<li>NOT ordinary point: <em>no/more than one</em> integral curve</li>
+<li>at least one ordinary point $o_0\in \cup(s_0,\varepsilon),\forall \varepsilon$</li>
+</ol>
 <p>条件2排除了定义域外的无关点</p>
-<p><span class="math display">\[
-y&#39;=\begin{cases}
-\frac{2(y-1)}{x},\quad &amp;x\neq 0\\
-0,&amp;x=0,y=1
-\end{cases}
-\]</span></p>
-<figure>
-<img src="../images/fig_531.png" alt="531" />
-<figcaption aria-hidden="true">531</figcaption>
-</figure>
+<script type="math/tex; mode=display">
+y'=\begin{cases}
+\frac{2(y-1)}{x},\quad &x\neq 0\\
+0,&x=0,y=1
+\end{cases}</script><p><img src="./ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/fig_531.png" alt="531"></p>
 <p><strong>Trap</strong></p>
-<p><span class="math display">\[\sqrt{x^2+4x-3}=1-2x\]</span></p>
-<p><strong><em>Definition 6.13.</em></strong> Let <span
-class="math inline">\(y=f(x)\)</span> define <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> on an interval <span
-class="math inline">\(I\)</span>. The <strong>differential of
-y</strong>, written as <span class="math inline">\(dy\)</span> (or <span
-class="math inline">\(df\)</span>) is defined by <span
-class="math display">\[
-(dy)(x,\Delta x)=f&#39;(x)\Delta x\tag{6.14}
-\]</span></p>
-<p><strong><em>Theorem 6.2.</em></strong> If <span
-class="math inline">\(y=x\)</span>, then <span
-class="math display">\[(dy)(x,\Delta x)=(dx)(x,\Delta x)=\Delta
-x\tag{6.22}\]</span></p>
-<p><span class="math inline">\(dy\)</span>,<span
-class="math inline">\(dx\)</span> are differentials, not increment.
-<span class="math inline">\(y,x\)</span> after <span
-class="math inline">\(d\)</span> are functions, not independent
-variables</p>
-<p><strong><em>Theorem 6.3.</em></strong> If <span
-class="math inline">\(y=f(x)\)</span> defines <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(x=g(t)\)</span>, <span
-class="math inline">\(y=f[g(t)]=F(t)\)</span>, define <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span> as functions of <span
-class="math inline">\(t\)</span>, then <span
-class="math display">\[(dy)(t,\Delta
-t)=f&#39;[g(t)][g&#39;(t)(dt)(t,\Delta t)]=f&#39;(x)(dx)(t,\Delta
-t)\tag{6.31}\]</span></p>
-<p><strong><em>Definition 6.4.</em></strong> For <span
-class="math inline">\(z=f(x,y)\)</span>, <span
-class="math display">\[(dz)(x,y,\Delta x,\Delta y)=\frac{\partial
-f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta
-y\tag{6.41}\]</span></p>
-<p><strong><em>Theorem 6.5.</em></strong> For <span
-class="math inline">\(z=f(x,y)\)</span>, <span
-class="math inline">\(x=x(r,s,\cdots)\)</span>,<span
-class="math inline">\(y=y(r,s,\cdots)\)</span> <span
-class="math display">\[dz=\frac{\partial f(x,y)}{\partial x}\Delta
-x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
-]]></content>
+<script type="math/tex; mode=display">\sqrt{x^2+4x-3}=1-2x</script><p><strong><em>Definition 6.13.</em></strong><br>Let $y=f(x)$ define $y$ as a function of $x$ on an interval $I$. The <strong>differential of y</strong>, written as $dy$ (or $df$) is defined by</p>
+<script type="math/tex; mode=display">
+(dy)(x,\Delta x)=f'(x)\Delta x\tag{6.14}</script><p><strong><em>Theorem 6.2.</em></strong><br>If $y=x$, then</p>
+<script type="math/tex; mode=display">(dy)(x,\Delta x)=(dx)(x,\Delta x)=\Delta x\tag{6.22}</script><p>$dy$,$dx$ are differentials, not increment. $y,x$ after $d$ are functions, not independent variables</p>
+<p><strong><em>Theorem 6.3.</em></strong><br>If $y=f(x)$ defines $y$ as a function of $x$ and $x=g(t)$, $y=f[g(t)]=F(t)$, define $x$ and $y$ as functions of $t$, then</p>
+<script type="math/tex; mode=display">(dy)(t,\Delta t)=f'[g(t)][g'(t)(dt)(t,\Delta t)]=f'(x)(dx)(t,\Delta t)\tag{6.31}</script><p><strong><em>Definition 6.4.</em></strong><br>For $z=f(x,y)$, </p>
+<script type="math/tex; mode=display">(dz)(x,y,\Delta x,\Delta y)=\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.41}</script><p><strong><em>Theorem 6.5.</em></strong><br>For $z=f(x,y)$, $x=x(r,s,\cdots)$,$y=y(r,s,\cdots)$</p>
+<script type="math/tex; mode=display">dz=\frac{\partial f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}</script>]]></content>
       <categories>
         <category>学习</category>
       </categories>
@@ -452,94 +341,27 @@ class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
     <title>回家前</title>
     <url>/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/</url>
     <content><![CDATA[<p>项目结束，8.12~8.17跟小龙虾穷游，洛杉矶和圣地亚哥，预算六百刀左右</p>
-<h2 id="los-angeles">Los Angeles</h2>
-<p>行：Aug 12，OAK-LA，$35.4（2人）</p>
-<figure>
-<img src="../images/oak-la_230729.png" alt="flight_for.png" />
-<figcaption aria-hidden="true">flight_for.png</figcaption>
-</figure>
-<p>住：<a
-href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a
-href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>,
-8.12-14（2晚），235🔪；<a
-href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a
-href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪
-玩：<a
-href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith
-Observatory</a>，<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a
-href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty
-Center</a>，<a
-href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a
-href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a
-href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty
-Villa</a>，<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa
-Monica</a>，<a
-href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice
-Beach</a></p>
-<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty
-center，Getty villa(optional)。下午去Santa Monica海滩和Venice
-Beach。8.14退房。</p>
-<p>LACMA<a
-href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21
-Griffith门票免费，不用预约，<a
-href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
-<p><a
-href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
-<p>Getty center和Getty villa免费但要<a
-href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
-<figure>
-<img src="../images/laplay_230729.png" alt="LA.png" />
-<figcaption aria-hidden="true">LA.png</figcaption>
-</figure>
-<h2 id="san-diego">San Diego</h2>
-<p>行：坐火车到Santa Fe Depot，<a
-href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时
-住：<a
-href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369
-玩：<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp
-Quarter</a>，<a
-href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa
-Park</a>，<a
-href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission
-bay出发</a>，<a
-href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a
-href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La
-Jolla Cove</a>，<a
-href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel
-library</a>，<a
-href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway
-Museum</a>，UCSD</p>
-<p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La
-Jolla能看到一堆海豹。</p>
+<h2 id="Los-Angeles"><a href="#Los-Angeles" class="headerlink" title="Los Angeles"></a>Los Angeles</h2><p>行：Aug 12，OAK-LA，$35.4（2人）</p>
+<p><img src="./%E5%9B%9E%E5%AE%B6%E5%89%8D/oak-la_230729.png" alt="flight_for.png"></p>
+<p>住：<a href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>, 8.12-14（2晚），235🔪；<a href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪<br>玩：<a href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith Observatory</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty Center</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty Villa</a>，<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa Monica</a>，<a href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice Beach</a></p>
+<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty center，Getty villa(optional)。下午去Santa Monica海滩和Venice Beach。8.14退房。</p>
+<p>LACMA<a href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21<br>Griffith门票免费，不用预约，<a href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
+<p><a href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
+<p>Getty center和Getty villa免费但要<a href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
+<p><img src="./%E5%9B%9E%E5%AE%B6%E5%89%8D/laplay_230729.png" alt="LA.png"></p>
+<h2 id="San-Diego"><a href="#San-Diego" class="headerlink" title="San Diego"></a>San Diego</h2><p>行：坐火车到Santa Fe Depot，<a href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时<br>住：<a href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369<br>玩：<a href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp Quarter</a>，<a href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa Park</a>，<a href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission bay出发</a>，<a href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La Jolla Cove</a>，<a href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel library</a>，<a href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway Museum</a>，UCSD</p>
+<p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La Jolla能看到一堆海豹。</p>
 <blockquote>
-<p>从 La Jolla Cove 向西走10分钟，有个叫 Children's Pool
-的小海湾，这里的海豹特别多</p>
+<p>从 La Jolla Cove 向西走10分钟，有个叫 Children’s Pool 的小海湾，这里的海豹特别多</p>
 </blockquote>
-<p>观鲸出海，要<a
-href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看，门票31刀，要<a
-href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
-<figure>
-<img src="../images/sdplay_230729.png" alt="SD.png" />
-<figcaption aria-hidden="true">SD.png</figcaption>
-</figure>
-<h2 id="回程">回程</h2>
-<p>8.17回，下午2:20pm，<a
-href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
-<figure>
-<img src="../images/sd-oak_230729.png" alt="flight_back.png" />
-<figcaption aria-hidden="true">flight_back.png</figcaption>
-</figure>
-<h2 id="budget">Budget</h2>
-<p>Trip：(35.4+72+63.8)/2=85.6 Live：(246+369)/2=308 T&amp;L:
-86+308=<strong>$394</strong></p>
+<p>观鲸出海，要<a href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看，门票31刀，要<a href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
+<p><img src="./%E5%9B%9E%E5%AE%B6%E5%89%8D/sdplay_230729.png" alt="SD.png"></p>
+<h2 id="回程"><a href="#回程" class="headerlink" title="回程"></a>回程</h2><p>8.17回，下午2:20pm，<a href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
+<p><img src="./%E5%9B%9E%E5%AE%B6%E5%89%8D/sd-oak_230729.png" alt="flight_back.png"></p>
+<h2 id="Budget"><a href="#Budget" class="headerlink" title="Budget"></a>Budget</h2><p>Trip：(35.4+72+63.8)/2=85.6<br>Live：(246+369)/2=308<br>T&amp;L: 86+308=<strong>$394</strong></p>
 <p>Ticket：21+65+31=117</p>
 <blockquote>
-<p>Reference: https://www.meilvtong.com/viewthread.php?tid=24
-https://www.meilvtong.com/viewthread.php?tid=11
-https://www.guruin.com/articles/855</p>
+<p>Reference:<br><a href="https://www.meilvtong.com/viewthread.php?tid=24">https://www.meilvtong.com/viewthread.php?tid=24</a><br><a href="https://www.meilvtong.com/viewthread.php?tid=11">https://www.meilvtong.com/viewthread.php?tid=11</a><br><a href="https://www.guruin.com/articles/855">https://www.guruin.com/articles/855</a></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -731,25 +553,24 @@ class="math inline">\((\star)\)</span>式.</p>
     <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
 <p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img src="../images/branch_230731.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，在框内输入新的分支名，比如说<code>test</code>。</p>
-<figure>
-<img src="../images/test_230731.png" alt="test" />
-<figcaption aria-hidden="true">test</figcaption>
-</figure>
-<p>create 之后，记得在博客文件夹的 <code>_config.yml</code>
-内将branch改为<code>test</code>。终端内输入</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png" alt="branch"></p>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/new.png" alt="new"></p>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支 <code>main</code>。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/default.png" alt="default"></p>
+<p>接着在 Settings 的 Default branch 一栏点击$\rightleftarrows$，把默认分支改为 <code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<p><img src="./%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/pages.png" alt="pages"></p>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为 main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code> 内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>即可实现部署和本地一致。</p>
 <p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+<ol>
+<li><p><a href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p>
+</li>
 </ol>
 ]]></content>
       <categories>
