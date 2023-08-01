@@ -1,97 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>如何在macOS环境下配置hexo</title>
-    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
-    <content><![CDATA[<p>原先用typecho搭建的<a
-href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
-href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
-<h1 id="准备工作">准备工作</h1>
-<p>官方文档给出的前置应用程序是 1. <a
-href="https://nodejs.org/en">Node.js</a> 2. Git</p>
-<p>第一个直接点进去下载即可，第二个需要先安装<a
-href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
-href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
-终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<h2 id="测试是否安装成功">测试是否安装成功</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h1 id="安装hexo">安装Hexo</h1>
-<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>初始化博客</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
-<code>blog</code>
-的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
-<p>此时已经能生成并在本地预览你的博客雏形啦</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="hexo指令">Hexo指令</h2>
-<p>这里介绍几种常用的Hexo指令，</p>
-<ol type="1">
-<li><code>hexo generate</code> 网站生成</li>
-<li><code>hexo server</code>
-启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
-<li><code>hexo deploy</code> 部署网站，在生成之后</li>
-</ol>
-<p>以上三种都可以用首字母简写为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1 id="部署网站到github">部署网站到Github</h1>
-<p>首先登陆Github，</p>
-<h2 id="添加ssh-key">添加SSH Key</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>其中 <code>username</code> 是你的用户名，
-<code>example@example.com</code>
-是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
-，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
-<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
-<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
-<code>id_rsa.pub</code> ，复制所有文字。</p>
-<p>接着打开<a href="https://github.com/settings/keys">SSH
-keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
-不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
-<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
-but Github does not procide shell access.</p>
-<p>则说明配置成功</p>
-<h2 id="上传本地文件">上传本地文件</h2>
-<p>在Github上新建一个仓库，Repository Name
-填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
-Repository 创建新的网站仓库。</p>
-<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
-缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
-bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
-1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
-3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
-等命令执行完后，运行<code>npm install</code></p>
-<p>可以解决 EACCES 的问题，亲测有效</p>
-<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<p>修改后保存，在终端上输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
-<p><strong>参考资料</strong> 1. <a
-href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
-OS环境下使用Hexo搭建个人博客</a></p>
-<ol start="2" type="1">
-<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ODE基本概念</title>
     <url>/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
     <content><![CDATA[<p><strong><em>Definition 2.68.</em></strong> A set in the plane is
@@ -275,6 +184,97 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
       </tags>
   </entry>
   <entry>
+    <title>如何在macOS环境下配置hexo</title>
+    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
+    <content><![CDATA[<p>原先用typecho搭建的<a
+href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
+href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
+<h1 id="准备工作">准备工作</h1>
+<p>官方文档给出的前置应用程序是 1. <a
+href="https://nodejs.org/en">Node.js</a> 2. Git</p>
+<p>第一个直接点进去下载即可，第二个需要先安装<a
+href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
+href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
+<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
+终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h2 id="测试是否安装成功">测试是否安装成功</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo">安装Hexo</h1>
+<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>初始化博客</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
+<code>blog</code>
+的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>此时已经能生成并在本地预览你的博客雏形啦</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="hexo指令">Hexo指令</h2>
+<p>这里介绍几种常用的Hexo指令，</p>
+<ol type="1">
+<li><code>hexo generate</code> 网站生成</li>
+<li><code>hexo server</code>
+启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
+<li><code>hexo deploy</code> 部署网站，在生成之后</li>
+</ol>
+<p>以上三种都可以用首字母简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="部署网站到github">部署网站到Github</h1>
+<p>首先登陆Github，</p>
+<h2 id="添加ssh-key">添加SSH Key</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>username</code> 是你的用户名，
+<code>example@example.com</code>
+是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
+，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
+<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
+<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
+<code>id_rsa.pub</code> ，复制所有文字。</p>
+<p>接着打开<a href="https://github.com/settings/keys">SSH
+keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
+不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
+<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
+but Github does not procide shell access.</p>
+<p>则说明配置成功</p>
+<h2 id="上传本地文件">上传本地文件</h2>
+<p>在Github上新建一个仓库，Repository Name
+填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
+Repository 创建新的网站仓库。</p>
+<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
+缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
+bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
+1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
+3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
+等命令执行完后，运行<code>npm install</code></p>
+<p>可以解决 EACCES 的问题，亲测有效</p>
+<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>修改后保存，在终端上输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
+<p><strong>参考资料</strong> 1. <a
+href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
+OS环境下使用Hexo搭建个人博客</a></p>
+<ol start="2" type="1">
+<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ucb暑假</title>
     <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
     <content><![CDATA[<h1 id="websites">Websites</h1>
@@ -407,26 +407,6 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
       </tags>
   </entry>
   <entry>
-    <title>六月总结</title>
-    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>早上八点，太平洋上空</p>
-<span id="more"></span>
-<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
-<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
-<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
-<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
-<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
-<p>考试周的总结已另成一篇，不再重复。<span
-class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>反思</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>不必再等</title>
     <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
     <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
@@ -443,6 +423,26 @@ idiots说的</p>
 ]]></content>
       <categories>
         <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>六月总结</title>
+    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>早上八点，太平洋上空</p>
+<span id="more"></span>
+<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
+<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
+<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
+<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
+<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
+<p>考试周的总结已另成一篇，不再重复。<span
+class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
+]]></content>
+      <categories>
+        <category>日记</category>
       </categories>
       <tags>
         <tag>反思</tag>
