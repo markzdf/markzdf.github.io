@@ -46,10 +46,6 @@
     <ul id="menu-menu" class="menu">
         
         <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/main/" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
             <a href="/transcript/" title="成绩" target="_blank" rel="noopener">成绩</a>
         </li>
         
@@ -123,8 +119,8 @@
         <p>七月 31, 2023</p>
         <h2><a href="/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/" title="特殊微分方程的解" class="posttitle">特殊微分方程的解</a></h2>
         <p class="summary">Separable Variables
-\[
-Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6...</p>
+当\(x,y\)可分离时， \[
+Q(x,y)\frac{dy}{dx}+...</p>
     </div>
     
 </div>
@@ -133,38 +129,13 @@ Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6...</p>
         
 <div class="post">
     <a href="/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="ODE基本概念">
-        <img src="/img/cover_6.jpeg" class="cover" width="680" height="440">
+        <img src="/img/cover_5.jpeg" class="cover" width="680" height="440">
     </a>
     <div class="else">
         <p>七月 31, 2023</p>
         <h3><a href="/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="ODE基本概念" class="posttitle">ODE基本概念</a></h3>
         <p>Definition 2.68. A set in the plane is
 called a region if it satisfies the fo...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2023/07/29/%E9%80%89%E8%AF%BE%E7%9B%B2%E7%9B%92/" title="选课盲盒">
-        <img src="/img/cover_2.jpeg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>七月 29, 2023</p>
-        <h3><a href="/2023/07/29/%E9%80%89%E8%AF%BE%E7%9B%B2%E7%9B%92/" title="选课盲盒" class="posttitle">选课盲盒</a></h3>
-        <p>人家ucb每学期开什么课，什么教授都是固定的，你厦大开课怎么完全不按培养方案来？
-大一上（21秋）
-
-
-
-课程
-学分
-总成绩
-绩点
-
-
-
-
-数学分析(I)...</p>
     </div>
 </div>
 
@@ -177,6 +148,21 @@ called a region if it satisfies the fo...</p>
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
