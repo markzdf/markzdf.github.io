@@ -184,20 +184,23 @@ class="math inline">\(x\)</span>或<span
 class="math inline">\(y\)</span>组成的homogenous形式。</p>
 <h1 id="exact-de">Exact DE</h1>
 <ol type="1">
-<li>Riemann integral <span class="math display">\[
+<li><p>Riemann integral <span class="math display">\[
 \lim_{n\rightarrow \infty}\sum_{k=1}^nf(x_k)\Delta x_k=\int_a^bf(x)dx
-\]</span></li>
-<li>微积分基本定理 <span class="math display">\[
+\]</span></p></li>
+<li><p>微积分基本定理 <span class="math display">\[
 F(x)=\int_{x_0}^xf(u)du
 \tag{9.13}
-\]</span></li>
+\]</span></p></li>
 </ol>
 <p><span class="math display">\[
 \rightarrow F&#39;(x)=f(x), \quad a&lt;x&lt;b\tag{9.14}
-\]</span> 3. 要让 <span
+\]</span></p>
+<ol start="3" type="1">
+<li>要让 <span
 class="math display">\[\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}\]</span>
 有定义，必须<span class="math inline">\([x_0,x]\times [y_0,y]\subset
-D\)</span></p>
+D\)</span></li>
+</ol>
 <p><strong><em>Definition 9.19.</em></strong> A region is called a
 <strong>simply connected region</strong> if every simple closed curve
 lying entirely in the region encloses only points of the region.</p>
@@ -205,10 +208,13 @@ lying entirely in the region encloses only points of the region.</p>
 <p><em>shrink</em> closed curve to a point without non-domain points
 getting on the way</p>
 </blockquote>
-<p>要让<span class="math inline">\((9.16)\)</span>有定义 1.
-共同定义域是S.C. region <span class="math inline">\(R\)</span> 2. <span
-class="math inline">\((x_0,y_0)\in R\)</span> 3. 长方形<span
-class="math inline">\([x_0,x]\times [y_0,y]\subset R\)</span></p>
+<p>要让<span class="math inline">\((9.16)\)</span>有定义</p>
+<ol type="1">
+<li>共同定义域是S.C. region <span class="math inline">\(R\)</span></li>
+<li><span class="math inline">\((x_0,y_0)\in R\)</span></li>
+<li>长方形<span class="math inline">\([x_0,x]\times [y_0,y]\subset
+R\)</span></li>
+</ol>
 <p><strong><em>Definition 9.23.</em></strong> <span
 class="math display">\[
 P(x,y)dx+Q(x,y)dy\tag{9.24}
@@ -289,21 +295,6 @@ class="math inline">\((\star)\)</span>式.</p>
 
     </div>
 </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
