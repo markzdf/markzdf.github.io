@@ -94,7 +94,7 @@ P(x,y)dx+Q(x,y)dy=0\tag{6.61}
 \]</span> <span class="math display">\[
 \Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}
 \]</span></p>
-<p><strong><em>Definition 7.1.</em></strong> Let <span
+<p><strong><em>Def 7.1</em></strong> Let <span
 class="math inline">\(z=f(x,y)\)</span> define <span
 class="math inline">\(z\)</span> as a function of <span
 class="math inline">\(x\)</span> and <span
@@ -213,8 +213,7 @@ getting on the way</p>
 <li>长方形<span class="math inline">\([x_0,x]\times [y_0,y]\subset
 R\)</span></li>
 </ol>
-<p><strong><em>Definition 9.23.</em></strong> <span
-class="math display">\[
+<p><strong><em>Def 9.23</em></strong> <span class="math display">\[
 P(x,y)dx+Q(x,y)dy\tag{9.24}
 \]</span> is called an <strong>exact differential</strong> if it is the
 total differential of a function <span
@@ -222,8 +221,7 @@ class="math inline">\(f(x,y)\)</span>. <span class="math display">\[
 P(x,y)=\frac{\partial}{\partial x}f(x,y)\quad
 Q(x,y)=\frac{\partial}{\partial y}f(x,y)\tag{9.241}
 \]</span></p>
-<p><strong><em>Definition 9.27.</em></strong> <span
-class="math display">\[
+<p><strong><em>Def 9.27</em></strong> <span class="math display">\[
 P(x,y)dx+Q(x,y)dy\tag{9.28}=0
 \]</span> is called <strong>exact differential equation</strong> if
 follows <span class="math inline">\((9.241)\)</span>.</p>
@@ -238,7 +236,7 @@ x}Q(x,y\tag{9.32})
 <p>套公式 <span class="math inline">\(\displaystyle{f(x,y)=\int_{x_0}^x
 P(x,y)dx+\int_{y_0}^y Q(x_0,y)dy}=c\)</span></p>
 <p>或<span
-class="math inline">\(\displaystyle{f(x,y)=\int_{y_0}^yQ(x_0,y)dy+\int_{x_0}^xP(x,y_0)dx}=c\)</span></p>
+class="math inline">\(\displaystyle{f(x,y)=\int_{y_0}^yQ(x,y)dy+\int_{x_0}^xP(x,y_0)dx}=c\)</span></p>
 <p>解法二： <span class="math display">\[
 P(x,y)dx+Q(x,y)dy=0
 \]</span> By <span
@@ -253,6 +251,87 @@ P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial
 y}P(x,y)dx}}+R&#39;(y)=Q(x,y)
 \]</span> 解出<span class="math inline">\(R(y)\)</span>再代回<span
 class="math inline">\((\star)\)</span>式.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Exact Diff Eq</th>
+<th style="text-align: center;">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(ydx+xdy\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(2xydx+x^2dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(y^2dx+2xydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy^2=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(2xy^2dx+2x^2ydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y^2=c\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Def 10.5</em></strong> A multiplying factor which
+converts an inexact diff eq into an exact one is called
+<strong>integrating factor</strong>.</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial y}[hP(x,y)]=\frac{\partial}{\partial
+x}[hQ(x,y)]\tag{10.62 $\star$}
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(h=h(x)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(x)}{h(x)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}dx\tag{10.64}
+\]</span></p>
+<p>更特殊地，<span
+class="math inline">\(F(x)=\displaystyle{\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}}\)</span>，所以<span
+class="math inline">\(\displaystyle{h(x)=e^{\int F(x)dx}}\)</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(h=h(y)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(y)}{h(y)}=\frac{\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)}{P(x,y)}dy\tag{10.68}
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(h=h(u), u=xy\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)}{yQ(x,y)-xP(x,y)}du\tag{10.72}
+\]</span></p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(h=h(u),u=\frac xy\)</span> <span
+class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{y^2\left[\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p></li>
+<li><p><span class="math inline">\(h=h(u),u=\frac yx\)</span></p></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial
+y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
