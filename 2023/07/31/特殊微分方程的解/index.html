@@ -332,6 +332,39 @@ x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 x}Q(x,y)-\frac{\partial}{\partial
 y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 \]</span></p>
+<p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
+order is <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
+\]</span></p>
+<p>Integrating factor is in the form <span
+class="math inline">\(\displaystyle{e^{\int P(x)dx}}\)</span>, by <span
+class="math inline">\((9.32)\)</span>.</p>
+<p><span class="math display">\[
+\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int
+P(x)dx}dy=0\tag{11.13}
+\]</span></p>
+<p><span class="math display">\[
+\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int
+P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}
+\]</span></p>
+<p><span class="math display">\[
+e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}
+\]</span></p>
+<p>This is a true general solution of <span
+class="math inline">\((11.11)\)</span>. <span class="math display">\[
+y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
+P(x)dx}\tag{11.191}
+\]</span></p>
+<p>Bernoulli Equation <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
+\]</span></p>
+<p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
+class="math display">\[
+(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}
+\]</span> <span class="math display">\[
+\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
+\underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
+\]</span></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -372,21 +405,6 @@ y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 
     </div>
 </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>

@@ -39,7 +39,7 @@ href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spri
 <tr class="even">
 <td style="text-align: center;">3-4节</td>
 <td style="text-align: center;">计量经济学</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">中国经济</td>
 <td style="text-align: center;">公司金融</td>
 <td style="text-align: center;">常微分方程</td>
 <td style="text-align: center;">公司金融</td>
@@ -49,7 +49,7 @@ href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spri
 <td style="text-align: center;">金融工程</td>
 <td style="text-align: center;"><em>线性代数II</em></td>
 <td style="text-align: center;">计量经济学</td>
-<td style="text-align: center;"><em>Python文本挖掘</em></td>
+<td style="text-align: center;">中国经济</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
@@ -58,7 +58,7 @@ href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spri
 <td style="text-align: center;"></td>
 <td style="text-align: center;">金融工程</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"><em>新能源</em></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">9-10节</td>
@@ -73,16 +73,20 @@ href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spri
 <p>看了篇文章 <a
 href="https://www.mastersprogramsguide.com/rankings/best-masters-statistics/">Statistics
 Masters</a>，很多学校统计department下也有金融的分支。选课上目前还差：</p>
-<p><span class="math inline">\(\star\star\star\star\star\)</span> -
-<strong>常微分方程</strong>（本学期） -
-<strong>机器学习</strong>（本学期） -
-<strong>偏微分方程</strong>（下学期跟数院） -
-<strong>实变函数</strong>（下学期跟经院） -
-<strong>随机过程</strong>（下学期跟数院） -
-<strong>数值分析</strong></p>
-<p><span class="math inline">\(\star\star\star\)</span> -
-<strong>非参数统计</strong>（大三下跟经院） -
-<strong>贝叶斯统计</strong>（大三小学期）</p>
+<p><span class="math inline">\(\star\star\star\star\star\)</span></p>
+<ul>
+<li><strong>常微分方程</strong>（本学期）</li>
+<li><strong>机器学习</strong>（本学期）</li>
+<li><strong>偏微分方程</strong>（下学期跟数院）</li>
+<li><strong>实变函数</strong>（下学期跟经院）</li>
+<li><strong>随机过程</strong>（下学期跟数院）</li>
+<li><strong>数值分析</strong></li>
+</ul>
+<p><span class="math inline">\(\star\star\star\)</span></p>
+<ul>
+<li><strong>非参数统计</strong>（大三下跟经院）</li>
+<li><strong>贝叶斯统计</strong>（大三小学期）</li>
+</ul>
 <p>复变函数不用再选因为已经选了多复变。《数据结构与算法》用算法比赛替代，蓝桥杯学C++。</p>
 <h2 id="统计硕基础">统计硕基础</h2>
 <blockquote>
@@ -94,8 +98,10 @@ etc.）这样的分析理论基础。还有一部分是基于像数理统计（�
 href="https://www.zhihu.com/question/416312693/answer/1428642430">作者：七灼</a></p>
 </blockquote>
 <ol type="1">
-<li><p>实变函数</p></li>
-<li><p>随机过程</p></li>
+<li><p>实变函数 <a
+href="http://home.ustc.edu.cn/~matchbox/real.html">中科大实分析</a></p></li>
+<li><p>随机过程 <a
+href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0747a479964faef65dc22d966c973b66">中科大网课</a></p></li>
 <li><p><a href="https://micromasters.mit.edu/dashboard/">mit
 micromaster</a></p></li>
 </ol>
@@ -382,6 +388,39 @@ x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 \frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial
 x}Q(x,y)-\frac{\partial}{\partial
 y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p>
+<p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
+order is <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
+\]</span></p>
+<p>Integrating factor is in the form <span
+class="math inline">\(\displaystyle{e^{\int P(x)dx}}\)</span>, by <span
+class="math inline">\((9.32)\)</span>.</p>
+<p><span class="math display">\[
+\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int
+P(x)dx}dy=0\tag{11.13}
+\]</span></p>
+<p><span class="math display">\[
+\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int
+P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}
+\]</span></p>
+<p><span class="math display">\[
+e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}
+\]</span></p>
+<p>This is a true general solution of <span
+class="math inline">\((11.11)\)</span>. <span class="math display">\[
+y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
+P(x)dx}\tag{11.191}
+\]</span></p>
+<p>Bernoulli Equation <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
+\]</span></p>
+<p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
+class="math display">\[
+(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}
+\]</span> <span class="math display">\[
+\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
+\underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
 \]</span></p>
 ]]></content>
       <categories>
