@@ -3,78 +3,66 @@
   <entry>
     <title>念念不忘，必有回响</title>
     <url>/2023/08/02/%E5%BF%B5%E5%BF%B5%E4%B8%8D%E5%BF%98%EF%BC%8C%E5%BF%85%E6%9C%89%E5%9B%9E%E5%93%8D/</url>
-    <content><![CDATA[<h3 id="section">23.8～9</h3>
-<p><a
-href="http://course.walnutenglish.cn/s/pc/#/home/index?redirectCount=1">托福</a></p>
-<p>数学：<a href="https://markzdf.github.io/tags/ODE/">ODE</a>，<a
-href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/">复变函数</a></p>
-<h3 id="section-1">23.9～24.2</h3>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 18%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 14%" />
-</colgroup>
+    <content><![CDATA[<h3 id="23-8～9"><a href="#23-8～9" class="headerlink" title="23.8～9"></a>23.8～9</h3><p><a href="http://course.walnutenglish.cn/s/pc/#/home/index?redirectCount=1">托福</a></p>
+<p>数学：<a href="https://markzdf.github.io/tags/ODE/">ODE</a>，<a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/">复变函数</a></p>
+<h3 id="23-9～24-2"><a href="#23-9～24-2" class="headerlink" title="23.9～24.2"></a>23.9～24.2</h3><div class="table-container">
+<table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">时间</th>
-<th style="text-align: center;">周一</th>
-<th style="text-align: center;">周二</th>
-<th style="text-align: center;">周三</th>
-<th style="text-align: center;">周四</th>
-<th style="text-align: center;">周五</th>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">周一</th>
+<th style="text-align:center">周二</th>
+<th style="text-align:center">周三</th>
+<th style="text-align:center">周四</th>
+<th style="text-align:center">周五</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">1-2节</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">常微分方程</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td style="text-align:center">1-2节</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">常微分方程</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">3-4节</td>
-<td style="text-align: center;">计量经济学</td>
-<td style="text-align: center;">中国经济</td>
-<td style="text-align: center;">公司金融</td>
-<td style="text-align: center;">常微分方程</td>
-<td style="text-align: center;">公司金融</td>
+<tr>
+<td style="text-align:center">3-4节</td>
+<td style="text-align:center">计量经济学</td>
+<td style="text-align:center">中国经济</td>
+<td style="text-align:center">公司金融</td>
+<td style="text-align:center">常微分方程</td>
+<td style="text-align:center">公司金融</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">5-6节</td>
-<td style="text-align: center;">金融工程</td>
-<td style="text-align: center;"><em>线性代数II</em></td>
-<td style="text-align: center;">计量经济学</td>
-<td style="text-align: center;">中国经济</td>
-<td style="text-align: center;"></td>
+<tr>
+<td style="text-align:center">5-6节</td>
+<td style="text-align:center">金融工程</td>
+<td style="text-align:center"><em>线性代数II</em></td>
+<td style="text-align:center">计量经济学</td>
+<td style="text-align:center">中国经济</td>
+<td style="text-align:center"></td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">7-8节</td>
-<td style="text-align: center;">(形策)</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">金融工程</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<tr>
+<td style="text-align:center">7-8节</td>
+<td style="text-align:center">(形策)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">金融工程</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">9-10节</td>
-<td style="text-align: center;"><em>机器学习</em></td>
-<td style="text-align: center;">多复变函数论</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><em>计算机史</em></td>
-<td style="text-align: center;">现代照明</td>
+<tr>
+<td style="text-align:center">9-10节</td>
+<td style="text-align:center"><em>机器学习</em></td>
+<td style="text-align:center">多复变函数论</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><em>计算机史</em></td>
+<td style="text-align:center">现代照明</td>
 </tr>
 </tbody>
 </table>
-<p>看了篇文章 <a
-href="https://www.mastersprogramsguide.com/rankings/best-masters-statistics/">Statistics
-Masters</a>，很多学校统计department下也有金融的分支。选课上目前还差：</p>
-<p><span class="math inline">\(\star\star\star\star\star\)</span></p>
+</div>
+<p>看了篇文章 <a href="https://www.mastersprogramsguide.com/rankings/best-masters-statistics/">Statistics Masters</a>，很多学校统计department下也有金融的分支。选课上目前还差：</p>
+<p>$\star\star\star\star\star$</p>
 <ul>
 <li><strong>常微分方程</strong>（本学期）</li>
 <li><strong>机器学习</strong>（本学期）</li>
@@ -83,27 +71,23 @@ Masters</a>，很多学校统计department下也有金融的分支。选课上�
 <li><strong>随机过程</strong>（下学期跟数院）</li>
 <li><strong>数值分析</strong></li>
 </ul>
-<p><span class="math inline">\(\star\star\star\)</span></p>
+<p>$\star\star\star$</p>
 <ul>
 <li><strong>非参数统计</strong>（大三下跟经院）</li>
 <li><strong>贝叶斯统计</strong>（大三小学期）</li>
 </ul>
 <p>复变函数不用再选因为已经选了多复变。《数据结构与算法》用算法比赛替代，蓝桥杯学C++。</p>
-<h2 id="统计硕基础">统计硕基础</h2>
-<blockquote>
-<p>统计学所用的‘数理基础’,一部分基于实变函数（像sigma代数
-测度论）和概率论（高维随机变量的收敛与否
-etc.）这样的分析理论基础。还有一部分是基于像数理统计（假设检验啊
-似然估计啊）、随机过程、pde（许多概率问题会被写成双曲pde的形式 <a
-href="https://www.zhihu.com/question/416312693/answer/1428642430">作者：七灼</a></p>
+<h2 id="统计硕基础"><a href="#统计硕基础" class="headerlink" title="统计硕基础"></a>统计硕基础</h2><blockquote>
+<p>统计学所用的‘数理基础’,一部分基于实变函数（像sigma代数 测度论）和概率论（高维随机变量的收敛与否 etc.）这样的分析理论基础。还有一部分是基于像数理统计（假设检验啊 似然估计啊）、随机过程、pde（许多概率问题会被写成双曲pde的形式  <a href="https://www.zhihu.com/question/416312693/answer/1428642430">作者：七灼</a></p>
 </blockquote>
-<ol type="1">
-<li><p>实变函数 <a
-href="http://home.ustc.edu.cn/~matchbox/real.html">中科大实分析</a></p></li>
-<li><p>随机过程 <a
-href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0747a479964faef65dc22d966c973b66">中科大网课</a></p></li>
-<li><p><a href="https://micromasters.mit.edu/dashboard/">mit
-micromaster</a></p></li>
+<ol>
+<li><p>实变函数<br><a href="http://home.ustc.edu.cn/~matchbox/real.html">中科大实分析</a></p>
+</li>
+<li><p>随机过程<br><a href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0747a479964faef65dc22d966c973b66">中科大网课</a></p>
+</li>
+</ol>
+<ol>
+<li><a href="https://micromasters.mit.edu/dashboard/">mit micromaster</a></li>
 </ol>
 ]]></content>
   </entry>
@@ -111,23 +95,12 @@ micromaster</a></p></li>
     <title>七月加州</title>
     <url>/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/</url>
     <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
-<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、<span
-class="math inline">\(t\)</span>分布、<span
-class="math inline">\(\chi^2\)</span>分布、拒真受假两种错误、ANOVA...这些才是我的收获，而不是这样一个方程</p>
-<p><span class="math display">\[
-f(GPA)=\begin{cases}1 &amp; GPA\geq 3.7\\0 &amp; GPA\leq 3.7\end{cases}
-\]</span></p>
-<p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
+<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、$t$分布、$\chi^2$分布、拒真受假两种错误、ANOVA…这些才是我的收获，而不是这样一个方程</p>
+<script type="math/tex; mode=display">
+f(GPA)=\begin{cases}1 & GPA\geq 3.7\\0 & GPA\leq 3.7\end{cases}</script><p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
 <p>7.31去了趟斯坦福，那边真是贵气：设施更全面，建筑有美感，有历史韵味，学生看起来很聪明，甚至还有高尔夫球场。在去球场的路上看到个精壮的白发老人穿运动装跑步，被这种不服老的<em>抗争精神</em>震撼到。中国圈养羊，美国全是狼。狼进羊圈牧羊人就有麻烦了，但狼进狼群只会壮大队伍。</p>
-<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC
-State，另外它的统计program有金融方向。我去问了ucb统计系的admission
-office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal
-history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working
-experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working
-experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
-<p>当天下午的 Graduate School Workshop
-也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working
-experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
+<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC State，另外它的统计program有金融方向。我去问了ucb统计系的admission office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
+<p>当天下午的 Graduate School Workshop 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
 ]]></content>
       <categories>
         <category>写点什么</category>
