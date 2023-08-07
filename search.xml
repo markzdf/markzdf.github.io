@@ -3,66 +3,78 @@
   <entry>
     <title>念念不忘，必有回响</title>
     <url>/2023/08/02/%E5%BF%B5%E5%BF%B5%E4%B8%8D%E5%BF%98%EF%BC%8C%E5%BF%85%E6%9C%89%E5%9B%9E%E5%93%8D/</url>
-    <content><![CDATA[<h3 id="23-8～9"><a href="#23-8～9" class="headerlink" title="23.8～9"></a>23.8～9</h3><p><a href="http://course.walnutenglish.cn/s/pc/#/home/index?redirectCount=1">托福</a></p>
-<p>数学：<a href="https://markzdf.github.io/tags/ODE/">ODE</a>，<a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/">复变函数</a></p>
-<h3 id="23-9～24-2"><a href="#23-9～24-2" class="headerlink" title="23.9～24.2"></a>23.9～24.2</h3><div class="table-container">
-<table>
+    <content><![CDATA[<h3 id="section">23.8～9</h3>
+<p><a
+href="http://course.walnutenglish.cn/s/pc/#/home/index?redirectCount=1">托福</a></p>
+<p>数学：<a href="https://markzdf.github.io/tags/ODE/">ODE</a>，<a
+href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/">复变函数</a></p>
+<h3 id="section-1">23.9～24.2</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 14%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">时间</th>
-<th style="text-align:center">周一</th>
-<th style="text-align:center">周二</th>
-<th style="text-align:center">周三</th>
-<th style="text-align:center">周四</th>
-<th style="text-align:center">周五</th>
+<tr class="header">
+<th style="text-align: center;">时间</th>
+<th style="text-align: center;">周一</th>
+<th style="text-align: center;">周二</th>
+<th style="text-align: center;">周三</th>
+<th style="text-align: center;">周四</th>
+<th style="text-align: center;">周五</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">1-2节</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">常微分方程</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">1-2节</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">常微分方程</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">3-4节</td>
-<td style="text-align:center">计量经济学</td>
-<td style="text-align:center">中国经济</td>
-<td style="text-align:center">公司金融</td>
-<td style="text-align:center">常微分方程</td>
-<td style="text-align:center">公司金融</td>
+<tr class="even">
+<td style="text-align: center;">3-4节</td>
+<td style="text-align: center;">计量经济学</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">公司金融</td>
+<td style="text-align: center;">常微分方程</td>
+<td style="text-align: center;">公司金融</td>
 </tr>
-<tr>
-<td style="text-align:center">5-6节</td>
-<td style="text-align:center">金融工程</td>
-<td style="text-align:center"><em>线性代数II</em></td>
-<td style="text-align:center">计量经济学</td>
-<td style="text-align:center">中国经济</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">5-6节</td>
+<td style="text-align: center;">金融工程</td>
+<td style="text-align: center;"><em>概统</em></td>
+<td style="text-align: center;">计量经济学</td>
+<td style="text-align: center;"><em>线性代数II</em></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">7-8节</td>
-<td style="text-align:center">(形策)</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">金融工程</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">7-8节</td>
+<td style="text-align: center;">形策</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">金融工程</td>
+<td style="text-align: center;"><em>概统</em></td>
+<td style="text-align: center;"><em>新能源</em></td>
 </tr>
-<tr>
-<td style="text-align:center">9-10节</td>
-<td style="text-align:center"><em>机器学习</em></td>
-<td style="text-align:center">多复变函数论</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"><em>计算机史</em></td>
-<td style="text-align:center">现代照明</td>
+<tr class="odd">
+<td style="text-align: center;">9-10节</td>
+<td style="text-align: center;"><em>机器学习</em></td>
+<td style="text-align: center;">多复变函数论</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><em>计算机史</em></td>
+<td style="text-align: center;">现代照明</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>看了篇文章 <a href="https://www.mastersprogramsguide.com/rankings/best-masters-statistics/">Statistics Masters</a>，很多学校统计department下也有金融的分支。选课上目前还差：</p>
-<p>$\star\star\star\star\star$</p>
+<p>看了篇文章 <a
+href="https://www.mastersprogramsguide.com/rankings/best-masters-statistics/">Statistics
+Masters</a>，很多学校统计department下也有金融的分支。选课上目前还差：</p>
+<p><span class="math inline">\(\star\star\star\star\star\)</span></p>
 <ul>
 <li><strong>常微分方程</strong>（本学期）</li>
 <li><strong>机器学习</strong>（本学期）</li>
@@ -71,23 +83,27 @@
 <li><strong>随机过程</strong>（下学期跟数院）</li>
 <li><strong>数值分析</strong></li>
 </ul>
-<p>$\star\star\star$</p>
+<p><span class="math inline">\(\star\star\star\)</span></p>
 <ul>
 <li><strong>非参数统计</strong>（大三下跟经院）</li>
 <li><strong>贝叶斯统计</strong>（大三小学期）</li>
 </ul>
 <p>复变函数不用再选因为已经选了多复变。《数据结构与算法》用算法比赛替代，蓝桥杯学C++。</p>
-<h2 id="统计硕基础"><a href="#统计硕基础" class="headerlink" title="统计硕基础"></a>统计硕基础</h2><blockquote>
-<p>统计学所用的‘数理基础’,一部分基于实变函数（像sigma代数 测度论）和概率论（高维随机变量的收敛与否 etc.）这样的分析理论基础。还有一部分是基于像数理统计（假设检验啊 似然估计啊）、随机过程、pde（许多概率问题会被写成双曲pde的形式  <a href="https://www.zhihu.com/question/416312693/answer/1428642430">作者：七灼</a></p>
+<h2 id="统计硕基础">统计硕基础</h2>
+<blockquote>
+<p>统计学所用的‘数理基础’,一部分基于实变函数（像sigma代数
+测度论）和概率论（高维随机变量的收敛与否
+etc.）这样的分析理论基础。还有一部分是基于像数理统计（假设检验啊
+似然估计啊）、随机过程、pde（许多概率问题会被写成双曲pde的形式 <a
+href="https://www.zhihu.com/question/416312693/answer/1428642430">作者：七灼</a></p>
 </blockquote>
-<ol>
-<li><p>实变函数<br><a href="http://home.ustc.edu.cn/~matchbox/real.html">中科大实分析</a></p>
-</li>
-<li><p>随机过程<br><a href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0747a479964faef65dc22d966c973b66">中科大网课</a></p>
-</li>
-</ol>
-<ol>
-<li><a href="https://micromasters.mit.edu/dashboard/">mit micromaster</a></li>
+<ol type="1">
+<li><p>实变函数 <a
+href="http://home.ustc.edu.cn/~matchbox/real.html">中科大实分析</a></p></li>
+<li><p>随机过程 <a
+href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0747a479964faef65dc22d966c973b66">中科大网课</a></p></li>
+<li><p><a href="https://micromasters.mit.edu/dashboard/">mit
+micromaster</a></p></li>
 </ol>
 ]]></content>
   </entry>
@@ -391,8 +407,67 @@ class="math inline">\(\displaystyle{-\frac{ydx-xdy}{x^2}=0}\)</span></td>
 <td style="text-align: center;"><span
 class="math inline">\(\displaystyle{\frac yx}=c\)</span></td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.32)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {y^2}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.33)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {x^2}{y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.34)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \frac
+{y}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.35)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{x+y}{x-y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.39)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{y^3}{3x^3}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.391)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\sqrt{x^2+y^2}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.392)\)</span></td>
+<td style="text-align: center;">$e<sup>{3x}dy+3e</sup>{3x}ydx=0 <span
+class="math inline">\(|\)</span>e^{3x}y=c$</td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
+<h2 id="integrating-factor">Integrating Factor</h2>
 <p><strong><em>Def 10.5</em></strong> A multiplying factor which
 converts an inexact diff eq into an exact one is called
 <strong>integrating factor</strong>.</p>
@@ -440,6 +515,7 @@ x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 x}Q(x,y)-\frac{\partial}{\partial
 y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 \]</span></p>
+<h1 id="linear-de">Linear DE</h1>
 <p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
 order is <span class="math display">\[
 \frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
@@ -463,7 +539,8 @@ class="math inline">\((11.11)\)</span>. <span class="math display">\[
 y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
 P(x)dx}\tag{11.191}
 \]</span></p>
-<p>Bernoulli Equation <span class="math display">\[
+<h2 id="bernoulli-equation">Bernoulli Equation</h2>
+<p><span class="math display">\[
 \frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
 \]</span></p>
 <p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
@@ -472,6 +549,10 @@ class="math display">\[
 \]</span> <span class="math display">\[
 \frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
 \underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
+\]</span> <span
+class="math inline">\(u=y^{1-n}\)</span>，转化为线性DE的形式 <span
+class="math display">\[
+u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
 \]</span></p>
 ]]></content>
       <categories>

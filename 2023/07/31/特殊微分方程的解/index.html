@@ -361,8 +361,67 @@ class="math inline">\(\displaystyle{-\frac{ydx-xdy}{x^2}=0}\)</span></td>
 <td style="text-align: center;"><span
 class="math inline">\(\displaystyle{\frac yx}=c\)</span></td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.32)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {y^2}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.33)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {x^2}{y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.34)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \frac
+{y}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.35)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{x+y}{x-y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.39)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{y^3}{3x^3}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.391)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\sqrt{x^2+y^2}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.392)\)</span></td>
+<td style="text-align: center;">$e<sup>{3x}dy+3e</sup>{3x}ydx=0 <span
+class="math inline">\(|\)</span>e^{3x}y=c$</td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
+<h2 id="integrating-factor">Integrating Factor</h2>
 <p><strong><em>Def 10.5</em></strong> A multiplying factor which
 converts an inexact diff eq into an exact one is called
 <strong>integrating factor</strong>.</p>
@@ -410,6 +469,7 @@ x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 x}Q(x,y)-\frac{\partial}{\partial
 y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
 \]</span></p>
+<h1 id="linear-de">Linear DE</h1>
 <p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
 order is <span class="math display">\[
 \frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
@@ -433,7 +493,8 @@ class="math inline">\((11.11)\)</span>. <span class="math display">\[
 y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
 P(x)dx}\tag{11.191}
 \]</span></p>
-<p>Bernoulli Equation <span class="math display">\[
+<h2 id="bernoulli-equation">Bernoulli Equation</h2>
+<p><span class="math display">\[
 \frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
 \]</span></p>
 <p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
@@ -442,6 +503,10 @@ class="math display">\[
 \]</span> <span class="math display">\[
 \frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
 \underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
+\]</span> <span
+class="math inline">\(u=y^{1-n}\)</span>，转化为线性DE的形式 <span
+class="math display">\[
+u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
 \]</span></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -483,21 +548,6 @@ class="math display">\[
 
     </div>
 </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
