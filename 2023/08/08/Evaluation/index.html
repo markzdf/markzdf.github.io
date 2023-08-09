@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MFE Evaluation - Arson</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Arson,"> 
+    <meta name="description" content="Introduction
+I&#39;m curious about the ranking of those popular graduate programs in
+the United States ,"> 
+    <meta name="author" content="Mark Zhu"> 
+    <link rel="alternative" href="atom.xml" title="Arson" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.jpg"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="MFE Evaluation - Arson"/>
+    <meta name="twitter:description" content="Introduction
+I&#39;m curious about the ranking of those popular graduate programs in
+the United States ,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Arson"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="MFE Evaluation - Arson"/>
+    <meta property="og:description" content="Introduction
+I&#39;m curious about the ranking of those popular graduate programs in
+the United States ,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Arson</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://markzdf.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">MFE Evaluation</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">MFE Evaluation</h1>
+        <div class="stuff">
+            <span>八月 08, 2023</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%95%99%E5%AD%A6/" rel="tag">留学</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="introduction">Introduction</h1>
+<p>I'm curious about the ranking of those popular graduate programs in
+the United States about quantitative finance. The data includes
+information of 16 quant master programs, which is collected from , and
+universities official websites. My criterion of judging a program is
+divided into two categories. 1. On-campus benefit - Class size <span
+class="math inline">\((-)\)</span> - International student rate <span
+class="math inline">\((-)\)</span> - Lecturer-to-student ratio -
+Industry lecturer percentage 2. Post-master achievement - Wage -
+Percentage in asset management</p>
+<p>To interpret, considering that information asymmetry is largely
+reduced for local residents, a low international student rate can be
+interpreted as the program's more welcomed by local residents, and thus
+higher probability to be satisfying.</p>
+<p>The difference in employment rate is not significant, so we ignore
+it. In deciding career in finance, investment banking stands for the
+sell side, and asset management/hedge fund for the buy side. Commonly
+buy side enjoys better treatment and working environment, and graduate
+students often need to work in sell side for several years before
+entering buy side market. Therefore the programs' student percentage
+employed in asset management directly after graduation is a nice
+indicator for evaluation.(It doesn't mean working in investment banks
+sucks, instead they're well paid and cool. But they're too busy and lack
+leisure, which fit me bad.)</p>
+<h1 id="methods-and-approach">Methods and Approach</h1>
+<p>We used the Technique for Order Preference by Similarity to Ideal
+Solution (TOPSIS) method to apply the indicators above. This method
+takes advantage of solid data and avoid mistakes by subjective
+judgements. The process is explained as follows.</p>
+<h2 id="topsis">TOPSIS</h2>
+<ol type="1">
+<li>Normalization We first normalized the minimization indicators to
+make them all positively oriented. In our case it's <span
+class="math inline">\(I_1\)</span> and <span
+class="math inline">\(I_2\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+\max -x
+\]</span></p>
+<ol start="2" type="1">
+<li>Construct an evaluation matrix Next, we construct a comprehensive
+evaluation matrix using the normalized data.</li>
+</ol>
+<p><span class="math display">\[
+X=\begin{bmatrix}
+x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1m}\\
+x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2m}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{nm}
+\end{bmatrix}
+\]</span></p>
+<ol start="3" type="1">
+<li>Standardization We standardize the matrix to eliminate the influence
+of dimensions.</li>
+</ol>
+<p><span class="math display">\[
+Z=\begin{bmatrix}
+z_{11} &amp; z_{12} &amp; \cdots &amp; z_{1m}\\
+z_{21} &amp; z_{22} &amp; \cdots &amp; z_{2m}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+z_{n1} &amp; z_{n2} &amp; \cdots &amp; z_{nm}
+\end{bmatrix}
+\]</span></p>
+<p>The values of each element are as follows:</p>
+<p><span class="math display">\[
+z_{ij}=\frac{x_{ij}}{\sqrt{\sum_{i=1}^nx_{ij}^2}}
+\]</span></p>
+<h2 id="entropy-weight-method">Entropy Weight Method</h2>
+<p>It's important to determine the weights of each element <span
+class="math inline">\(z_{ij}\)</span>. The traditional methods are often
+subjective, such as the Delphi method and the Analytic Hierarchy Process
+(AHP). Although these methods are mature in practice, they still cannot
+avoid the problem of subjectivity. Therefore, we considered Entropy
+Weight Method (EWM) for objective analysis.</p>
+<ol type="1">
+<li>Information Entropy Formula The intuition is, the greater
+information entropy, the smaller the probability of event occurring, and
+the less information is known. Therefore, a smaller weight should be
+assigned. Conversely, the smaller the information entropy, the less
+unknown information and the more known information, and a higher weight
+should be assigned.</li>
+</ol>
+<p><span class="math display">\[
+H(X)=\sum_{i=1}^np(x_i)I(x_i)=-\sum_{i=1}^np(x_i)\log(p(x_i))
+\]</span></p>
+<ol start="2" type="1">
+<li>Max-Min Standardization Since the probability is always
+non-negative, it is necessary to perform <span
+class="math inline">\(\max-\min\)</span> standardization on the original
+data so that the values are in the range of <span
+class="math inline">\([0,1]\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+z_{ij}=\frac{x_{ij}-\min\{x_{1j},\cdots,x_{nj}\}}{\max\{x_{1j},\cdots,x_{nj}\}-\min\{x_{1j},\cdots,x_{nj}\}}
+\]</span></p>
+<ol start="3" type="1">
+<li>Construction of Standardization Matrix</li>
+</ol>
+<p>Where <span class="math inline">\(z_{ij}\)</span> represents the
+value of the <span class="math inline">\(i-th\)</span> object after
+normalization and standardization under the <span
+class="math inline">\(j-th\)</span> indicator.</p>
+<p><span class="math display">\[
+Z=\begin{bmatrix}
+z_{11} &amp; z_{12} &amp; \cdots &amp; z_{1m}\\
+z_{21} &amp; z_{22} &amp; \cdots &amp; z_{2m}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+z_{n1} &amp; z_{n2} &amp; \cdots &amp; z_{nm}
+\end{bmatrix}
+\]</span></p>
+<ol start="4" type="1">
+<li>Information Entropy Determined</li>
+</ol>
+<p>The probability function <span class="math inline">\(p(x)\)</span> of
+the event is:</p>
+<p><span class="math display">\[
+p_{ij}=\frac{z_{ij}}{\sum_{i=1}^nz_{ij}}
+\]</span></p>
+<p>For the <span class="math inline">\(j-th\)</span> indicator, the
+information entropy expression is:</p>
+<p><span class="math display">\[
+e_j=-\frac{1}{\log n}\sum_{i=1}^np_{ij}\log (p_{ij})
+\]</span></p>
+<ol start="5" type="1">
+<li>Allocating Weights Since the larger the value of information
+entropy, the smaller the weight allocated, the information entropy needs
+to be positively oriented, and the weight <span
+class="math inline">\(W_j\)</span> is obtained through
+normalization.</li>
+</ol>
+<p><span class="math display">\[
+d_j=1-e_j
+\]</span></p>
+<p><span class="math display">\[
+W_j=\frac{d_j}{\sum_{j=1}^md_j}
+\]</span></p>
+<p>Using R code, the weight of LS rate and wage are</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(I_1\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(I_2\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(I_3\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(I_4\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(I_5\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(I_6\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.0850</td>
+<td style="text-align: center;">0.1689</td>
+<td style="text-align: center;">0.2758</td>
+<td style="text-align: center;">0.1609</td>
+<td style="text-align: center;">0.1508</td>
+<td style="text-align: center;">0.1585</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scores">Scores</h2>
+<p>After standardizing the indicators in the matrix <span
+class="math inline">\(Z\)</span>, we found the maximum and minimum
+values of each column vector and denoted them as <span
+class="math inline">\(Z^+\)</span> and <span
+class="math inline">\(Z^-\)</span>. The TOPSIS method determines the
+evaluation score of each object based on its relative and absolute score
+in the dataset, taking into account the weights assigned to each
+indicator. Consider a Euclidean space derived through evaluation set,
+the distance between object i and the upper/lower boundaries in the
+space are respectively as followed:</p>
+<p><span class="math display">\[
+D^{+}=\sqrt{\sum_{j=1}^mw_j(Z^{+}_j-z_{ij})^2}
+\]</span></p>
+<p><span class="math display">\[
+D^{-}=\sqrt{\sum_{j=1}^mw_j(Z^{-}_j-z_{ij})^2}
+\]</span></p>
+<p>The non-normalized comprehensive evaluation score of object <span
+class="math inline">\(i\)</span> is: After normalization, we obtained
+the comprehensive evaluation score of each object. Using R programming,
+we visualize the scores.</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Pton</th>
+<th style="text-align: center;">Baruch</th>
+<th style="text-align: center;">UCB</th>
+<th style="text-align: center;">NCState</th>
+<th style="text-align: center;">Cornell</th>
+<th style="text-align: center;">CMU</th>
+<th style="text-align: center;">UCLA</th>
+<th style="text-align: center;">Columbia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.1452</td>
+<td style="text-align: center;">0.0533</td>
+<td style="text-align: center;">0.1244</td>
+<td style="text-align: center;">0.0495</td>
+<td style="text-align: center;">0.0740</td>
+<td style="text-align: center;">0.0787</td>
+<td style="text-align: center;">0.0647</td>
+<td style="text-align: center;">0.0734</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">JHU</th>
+<th style="text-align: center;">NYU</th>
+<th style="text-align: center;">GIT</th>
+<th style="text-align: center;">Fordham</th>
+<th style="text-align: center;">UW</th>
+<th style="text-align: center;">Boston</th>
+<th style="text-align: center;">SBU</th>
+<th style="text-align: center;">RU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.0639</td>
+<td style="text-align: center;">0.0586</td>
+<td style="text-align: center;">0.0443</td>
+<td style="text-align: center;">0.0293</td>
+<td style="text-align: center;">0.0147</td>
+<td style="text-align: center;">0.0906</td>
+<td style="text-align: center;">0.0070</td>
+<td style="text-align: center;">0.0285</td>
+</tr>
+</tbody>
+</table>
+<p><a href="./Evaluation/score.png">score</a></p>
+<p>We can see that, Master in Finance of Princeton and Master of
+Financial Engineering of UC Berkeley, are both top programs for quant,
+which is a result similar with . From a geographic point of view, we
+discovered that most programs located in the northeast of US. Another
+thing that I questioned about is whether better school title provides
+better program. This diagram gives a absolute ``yes'', for the programs
+score above 0.05 are all from universities rank top 30 in USNews. So
+it's still necessary to earn a better school title, no matter where
+you're working at.</p>
+<h1 id="several-curious-questions">Several Curious Questions</h1>
+<p>We've finished the job of valuing whether a program is good or not.
+We used certain information such as class size, initial wages, etc.
+There're some other important information not used for evaluating the
+program, more like the property of the program itself. We draw several
+curious questions from the observed data, and we use linear regression
+model to find out why.</p>
+<ol type="1">
+<li>Does tuition fee worth it?</li>
+<li>Does lower acceptance rate make the program better?</li>
+<li>What makes student acceptance rate differs?</li>
+</ol>
+<h2 id="tuition-fee">Tuition Fee</h2>
+<p>We apply the simple linear regression here. <span
+class="math display">\[
+Y= \beta_0+\beta_1X+\varepsilon
+\]</span> In this case, <span class="math inline">\(X\)</span> denotes
+the and <span class="math inline">\(Y\)</span> denotes . We can regress
+on . <span class="math display">\[
+\texttt{Scores}\approx \beta_0+\beta_1\times \texttt{Fee}
+\]</span> We find out whether score and fee hold some kind of
+relationship by doing hypothesis testing, the null hypothesis and
+alternative hypothesis are as follow. <span class="math display">\[
+    H_0: X, Y \text{ have no relationship}
+\]</span> <span class="math display">\[
+    H_1: X, Y \text{ have some relationship}
+\]</span> Mathematically, this is equivalent to test</p>
+<p><span class="math display">\[
+    H_0:\beta_1=0\qquad H_1:\beta_1\neq 0
+\]</span></p>
+<p>In practice, we use t-statistic to test hypothesis, where <span
+class="math display">\[
+    t=\frac{\hat{\beta}_1-0}{SE(\hat{\beta}_1)}
+\]</span></p>
+<p>The p-value reflects the probability that t-statistic is more extreme
+comparing with the observed statistic, under <span
+class="math inline">\(H_0\)</span> is true. A small p-value shows that
+it's less possible that <span class="math inline">\(H_0\)</span> is
+true. In this case p-value is extremely close to <span
+class="math inline">\(0\)</span>, so we have much evidence to reject
+<span class="math inline">\(H_0\)</span>. Therefore there's positive
+relationship between tuition fee and program score.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">SE</th>
+<th style="text-align: center;">t value</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Intercept</td>
+<td style="text-align: center;">-2.614e-02</td>
+<td style="text-align: center;">8.180e-03</td>
+<td style="text-align: center;">-3.196</td>
+<td style="text-align: center;">0.0064</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fee</td>
+<td style="text-align: center;">1.152e-06</td>
+<td style="text-align: center;">9.936e-08</td>
+<td style="text-align: center;">11.599</td>
+<td style="text-align: center;"><span
+class="math inline">\(&lt;0.0001\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>To examine how well the model fits, we test <span
+class="math inline">\(RSE\)</span> and <span
+class="math inline">\(R^2\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">RSE</td>
+<td style="text-align: center;">0.01167</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(R^2\)</span></td>
+<td style="text-align: center;">0.9057</td>
+</tr>
+</tbody>
+</table>
+<p>Where RSE stands for residual standard error, which estimates the
+standard error of <span class="math inline">\(\varepsilon\)</span> in
+equation <span class="math inline">\((1)\)</span>.</p>
+<p><span class="math display">\[
+RSE=\sqrt{\frac{1}{n-2}RSS}=\sqrt{\frac{1}{n-2}
+\sum_{i=1}^n(y_i-\hat{y}_i)^2}
+\]</span></p>
+<p>While <span class="math inline">\(R^2\)</span> measures the
+proportion of variability in that can be explained by . In this case
+<span class="math inline">\(R^2 = 0.91\)</span>, which is significant.
+<span class="math display">\[
+R^2=1-\frac{TSS}{RSS}=1-\frac{\sum_{i=1}^n(y_i-\hat{y}_i)^2}{\sum_{i=1}^n(y_i-\bar{y})^2}
+\]</span></p>
+<p><a href="./Evaluation/fee.png">fee</a></p>
+<h2 id="acceptance">Acceptance</h2>
+<p>We do the same t-test on acceptance rate, and found it has negative
+relationship with score at the significance level <span
+class="math inline">\(\alpha=0.05\)</span>. But the <span
+class="math inline">\(R^2\)</span> is only 0.3902, not so significant
+for fitting, probably resulted in the small dataset.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">SE</th>
+<th style="text-align: center;">t value</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Intercept</td>
+<td style="text-align: center;">0.09478</td>
+<td style="text-align: center;">0.01309</td>
+<td style="text-align: center;">7.240</td>
+<td style="text-align: center;"><span
+class="math inline">\(&lt;0.0001\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acceptance</td>
+<td style="text-align: center;">-0.10330</td>
+<td style="text-align: center;">0.03451</td>
+<td style="text-align: center;">-2.993</td>
+<td style="text-align: center;">0.00958</td>
+</tr>
+</tbody>
+</table>
+<p><a href="./Evaluation/accept.png">accept</a></p>
+<p>The result is consistent with the intuition. Programs with lower
+acceptance rate tends to be strict and professional, and that's often a
+reason for high score rating.</p>
+<h2 id="student-acceptance">Student Acceptance</h2>
+<p>Program application is two-sided: when being choosed by universities,
+students also choose programs after getting lots of offers. We're
+interested how student acceptance rate is affected.</p>
+<p>Intuitively, students are willing to enroll in programs with high
+score. Besides, programs that give less offers will be scarce resource
+in the education market, and students might have larger burdens to turn
+them off.</p>
+<p><span class="math display">\[
+\texttt{Stu.accept}\approx\beta_0+\beta_1\times
+\texttt{Score}+\beta_2\times \texttt{Acceptance}
+\]</span></p>
+<p>We make hypothesis <span class="math display">\[
+H_0: \beta_1=\beta_2=0
+\]</span> <span class="math display">\[
+H_1: \text{At least one }\beta_i\neq 0, i=1,2
+\]</span> The hypothesis in this case is test by F-statistic: <span
+class="math display">\[
+F=\frac{(TSS-RSS)/p}{RSS/(n-p-1)}
+\]</span> If the linear regression is correct, we have <span
+class="math display">\[
+E \left[\frac{1}{n-p-1}RSS\right]=\sigma^2
+\]</span> If hypothesis <span class="math inline">\(H_0\)</span> is also
+true, we'll have <span class="math display">\[
+E \left[ \frac{1}{p}(TSS-RSS)\right]=\sigma^2
+\]</span> Therefore F-statistic will be close to 1 if is not related to
+and . On the other hand, as the F-statistic goes larger, we have more
+evidence to reject <span class="math inline">\(H_0\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">SE</th>
+<th style="text-align: center;">t value</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Intercept</td>
+<td style="text-align: center;">0.6866</td>
+<td style="text-align: center;">0.2042</td>
+<td style="text-align: center;">3.363</td>
+<td style="text-align: center;">0.00509</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Score</td>
+<td style="text-align: center;">-0.2169</td>
+<td style="text-align: center;">1.9135</td>
+<td style="text-align: center;">-0.113</td>
+<td style="text-align: center;">0.91148</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Acceptance</td>
+<td style="text-align: center;">-0.5218</td>
+<td style="text-align: center;">0.3164</td>
+<td style="text-align: center;">-1.649</td>
+<td style="text-align: center;">0.12309</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">RSE</td>
+<td style="text-align: center;">0.2125</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(R^2\)</span></td>
+<td style="text-align: center;">0.2396</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F-statistic</td>
+<td style="text-align: center;">2.049</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">p-value</td>
+<td style="text-align: center;">0.1685</td>
+</tr>
+</tbody>
+</table>
+<p>F-statistic under significance level <span
+class="math inline">\(\alpha=0.05\)</span> and degree of freedom 2,13 is
+<span class="math inline">\(F_{0.95,2,13}=3.81\)</span>, the critical
+region is: <span class="math display">\[
+    C=\{F:F\geqslant F_{0.95,2,13}\}
+\]</span></p>
+<p>Since <span class="math inline">\(F=2.049\notin \mathcal{C}\)</span>,
+we cannot reject null hypothesis. This result can also be derived by
+taking the advantage of p-value <span
+class="math inline">\(0.1685&gt;0.05=\alpha\)</span>.</p>
+<p>The curious thing that contradict with intuition is that both score
+and acceptance rate don't affect much on student's dicision in enroll in
+or not.</p>
+<p><a href="./Evaluation/3D.png">3D</a></p>
+<p>But it's interesting that if we consider the interaction part, the
+model will fit much better.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">SE</th>
+<th style="text-align: center;">t value</th>
+<th style="text-align: center;">P-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Intercept</td>
+<td style="text-align: center;">0.55442</td>
+<td style="text-align: center;">0.18075</td>
+<td style="text-align: center;">3.067</td>
+<td style="text-align: center;">0.00977</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acceptance</td>
+<td style="text-align: center;">0.05029</td>
+<td style="text-align: center;">0.35328</td>
+<td style="text-align: center;">0.142</td>
+<td style="text-align: center;">0.88916</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Score</td>
+<td style="text-align: center;">3.03355</td>
+<td style="text-align: center;">2.08236</td>
+<td style="text-align: center;">1.457</td>
+<td style="text-align: center;">0.17084</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acc.:Sc.</td>
+<td style="text-align: center;">-16.92481</td>
+<td style="text-align: center;">6.81917</td>
+<td style="text-align: center;">-2.482</td>
+<td style="text-align: center;">0.02885</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">RSE</td>
+<td style="text-align: center;">0.1798</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(R^2\)</span></td>
+<td style="text-align: center;">0.4976</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F-statistic</td>
+<td style="text-align: center;">3.961</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">p-value</td>
+<td style="text-align: center;">0.03555</td>
+</tr>
+</tbody>
+</table>
+<p>The null hypothesis is rejected under <span
+class="math inline">\(\alpha=0.05\)</span>, checked equivalently by
+critical region and p-value.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>We first ranked the 16 most popular master program about quant. The
+top two are Master of Finance from Pton and Master of Financial
+Engineering from UCB.</p>
+<p>Through linear regression model, we find out that the level of
+program is postively related to tuition fee, and negatively related to
+programs' acceptance rate. The result is backed by t-test on the
+significance level of 0.05. Next we use multi-variable linear regression
+and F-test, and find out that the students' acceptance rate is unrelated
+to the programs' score and acceptance rate, but weakly related if the
+interaction part is considered.</p>
+<p>Interactions occur when the effect of one independent variable on the
+dependent variable depends on the value of another independent variable.
+In other words, the relationship between the dependent variable and one
+independent variable changes depending on the value of another
+independent variable. This means that there still exist some unknown
+independent variables other than programs' score and acceptance rate
+that affect students' accepting rate. The work of finding the unknown
+variable is not done in this project, which can be improved by later
+studies.</p>
+<h1 id="reference">Reference</h1>
+<p>[1]James, Witten, Hastie, Tibshirani. An Introduction to Statistical
+Learning, 2015. [2]Paul Jozefek. https://rpubs.com/pjozefek/576206,
+2020. [3]risk.net. Quant Finance Master’s Guide 2022.</p>
+<h1 id="appendix-r-codes">Appendix: R codes</h1>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data <span class="operator">&lt;-</span> read.csv<span class="punctuation">(</span><span class="string">&quot;programs.csv&quot;</span><span class="punctuation">)</span></span><br><span class="line">View<span class="punctuation">(</span>data<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidyverse<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<h2 id="entropy-weight-method-1">Entropy Weight Method</h2>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>tibble<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>dplyr<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">min_max_norm <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">)</span> </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="punctuation">(</span>x <span class="operator">-</span> <span class="built_in">min</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">/</span> <span class="punctuation">(</span><span class="built_in">max</span><span class="punctuation">(</span>x<span class="punctuation">)</span> <span class="operator">-</span> <span class="built_in">min</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">p_value <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  x <span class="operator">/</span> <span class="built_in">sum</span><span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">entropy <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  n <span class="operator">&lt;-</span> <span class="built_in">length</span><span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">(</span><span class="operator">-</span><span class="number">1</span> <span class="operator">/</span> log2<span class="punctuation">(</span>n<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">*</span> <span class="punctuation">(</span><span class="built_in">sum</span><span class="punctuation">(</span> x <span class="operator">*</span> ifelse<span class="punctuation">(</span>log2<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">==</span><span class="operator">-</span><span class="literal">Inf</span><span class="punctuation">,</span> <span class="number">0</span><span class="punctuation">,</span> log2<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">)</span> <span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">weight <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="punctuation">(</span><span class="number">1</span><span class="operator">-</span>x<span class="punctuation">)</span> <span class="operator">/</span> <span class="punctuation">(</span><span class="built_in">length</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">-</span><span class="built_in">sum</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">fscore <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">,</span> y<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="built_in">sum</span><span class="punctuation">(</span>x<span class="operator">*</span>y<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">tb.data <span class="operator">&lt;-</span> as_tibble<span class="punctuation">(</span>data<span class="punctuation">)</span></span><br><span class="line">tb.data</span><br><span class="line"></span><br><span class="line">tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> replicate<span class="punctuation">(</span>nrow<span class="punctuation">(</span>tb.data<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">max</span><span class="punctuation">(</span>tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">-</span>tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">]</span></span><br><span class="line">tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> replicate<span class="punctuation">(</span>nrow<span class="punctuation">(</span>tb.data<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">max</span><span class="punctuation">(</span>tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">-</span>tb.data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">]</span></span><br><span class="line"></span><br><span class="line">tb.data <span class="operator">&lt;-</span> tb.data <span class="operator">%&gt;%</span> mutate<span class="punctuation">(</span>across<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">,</span> min_max_norm<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  mutate<span class="punctuation">(</span>across<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">,</span> p_value<span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span></span><br><span class="line">  summarise<span class="punctuation">(</span>across<span class="punctuation">(</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">,</span> entropy<span class="punctuation">)</span><span class="punctuation">)</span> </span><br><span class="line">tb.data</span><br><span class="line"></span><br><span class="line">w_data <span class="operator">&lt;-</span> weight<span class="punctuation">(</span>tb.data<span class="punctuation">)</span></span><br><span class="line">w_data</span><br></pre></td></tr></table></figure>
+<h2 id="topsis-1">TOPSIS</h2>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">pure_data <span class="operator">&lt;-</span> data<span class="punctuation">[</span><span class="punctuation">,</span><span class="built_in">c</span><span class="punctuation">(</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">,</span><span class="operator">-</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Functions</span></span><br><span class="line"></span><br><span class="line">Dist_max <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">  z_max <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;numeric&quot;</span><span class="punctuation">,</span> ncol<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  diff_max <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;numeric&quot;</span><span class="punctuation">,</span> ncol<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  <span class="keyword">for</span><span class="punctuation">(</span>i <span class="keyword">in</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">    z_max<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="built_in">max</span><span class="punctuation">(</span>x<span class="punctuation">[</span><span class="punctuation">,</span>i<span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="keyword">for</span><span class="punctuation">(</span>i <span class="keyword">in</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">    diff_max<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> z_max<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">-</span> x<span class="punctuation">[</span>num<span class="punctuation">,</span>i<span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">  diff_max <span class="operator">&lt;-</span> unlist<span class="punctuation">(</span>diff_max<span class="punctuation">)</span></span><br><span class="line">  <span class="built_in">sqrt</span><span class="punctuation">(</span><span class="built_in">sum</span><span class="punctuation">(</span>weight<span class="punctuation">(</span>x<span class="punctuation">)</span> <span class="operator">*</span> diff_max<span class="operator">^</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Dist_min <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">  z_min <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;numeric&quot;</span><span class="punctuation">,</span> ncol<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  diff_min <span class="operator">&lt;-</span> vector<span class="punctuation">(</span>mode <span class="operator">=</span> <span class="string">&quot;numeric&quot;</span><span class="punctuation">,</span> ncol<span class="punctuation">(</span>x<span class="punctuation">)</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">  <span class="keyword">for</span><span class="punctuation">(</span>i <span class="keyword">in</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">    z_min<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> <span class="built_in">min</span><span class="punctuation">(</span>x<span class="punctuation">[</span><span class="punctuation">,</span>i<span class="punctuation">]</span><span class="punctuation">)</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="keyword">for</span><span class="punctuation">(</span>i <span class="keyword">in</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">3</span><span class="operator">:</span><span class="number">8</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">    diff_min<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">&lt;-</span> z_min<span class="punctuation">[</span>i<span class="operator">-</span><span class="number">1</span><span class="punctuation">]</span> <span class="operator">-</span> x<span class="punctuation">[</span>num<span class="punctuation">,</span>i<span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line">  diff_min <span class="operator">&lt;-</span> unlist<span class="punctuation">(</span>diff_min<span class="punctuation">)</span></span><br><span class="line">  <span class="built_in">sqrt</span><span class="punctuation">(</span><span class="built_in">sum</span><span class="punctuation">(</span>weight<span class="punctuation">(</span>x<span class="punctuation">)</span> <span class="operator">*</span> diff_min<span class="operator">^</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Initial Score</span></span><br><span class="line"></span><br><span class="line">score <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">  Dist_min<span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span> <span class="operator">/</span> <span class="punctuation">(</span>Dist_min<span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span> <span class="operator">+</span> Dist_max<span class="punctuation">(</span>x<span class="punctuation">,</span>num<span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">all_score <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>set<span class="punctuation">)</span> <span class="punctuation">&#123;</span></span><br><span class="line">  scores <span class="operator">&lt;-</span> lapply<span class="punctuation">(</span><span class="number">1</span><span class="operator">:</span>nrow<span class="punctuation">(</span>set<span class="punctuation">)</span><span class="punctuation">,</span> <span class="keyword">function</span><span class="punctuation">(</span>x<span class="punctuation">)</span> score<span class="punctuation">(</span>set<span class="punctuation">,</span> x<span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">  all_score <span class="operator">&lt;-</span> do.call<span class="punctuation">(</span>rbind<span class="punctuation">,</span> scores<span class="punctuation">)</span></span><br><span class="line">  all_score</span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line">all_score<span class="punctuation">(</span>pure_data<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Normalized Score</span></span><br><span class="line"></span><br><span class="line">tb_data <span class="operator">&lt;-</span> as_tibble<span class="punctuation">(</span>read_csv<span class="punctuation">(</span><span class="string">&quot;programs.csv&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">norm <span class="operator">&lt;-</span> <span class="keyword">function</span><span class="punctuation">(</span>set<span class="punctuation">)</span><span class="punctuation">&#123;</span></span><br><span class="line">  set <span class="operator">/</span> colSums<span class="punctuation">(</span>set<span class="punctuation">)</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">sc <span class="operator">&lt;-</span> norm<span class="punctuation">(</span>all_score<span class="punctuation">(</span>pure_data<span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="linear-regression">Linear Regression</h2>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">data2 <span class="operator">&lt;-</span> <span class="built_in">list</span><span class="punctuation">(</span></span><br><span class="line">  score <span class="operator">=</span> sc<span class="punctuation">,</span></span><br><span class="line">  fee <span class="operator">=</span> data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">9</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  accept <span class="operator">=</span> data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">10</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  stu_a <span class="operator">=</span> data<span class="punctuation">[</span><span class="punctuation">,</span><span class="number">11</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">fit1 <span class="operator">=</span> lm<span class="punctuation">(</span>score<span class="operator">~</span>fee<span class="punctuation">,</span>data2<span class="punctuation">)</span></span><br><span class="line">summary<span class="punctuation">(</span>fit1<span class="punctuation">)</span></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>fit1<span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>fee<span class="punctuation">,</span>score<span class="punctuation">)</span></span><br><span class="line">abline<span class="punctuation">(</span>fit1<span class="punctuation">,</span>lwd<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span>col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">fit2 <span class="operator">=</span> lm<span class="punctuation">(</span>score<span class="operator">~</span>accept<span class="punctuation">,</span>data2<span class="punctuation">)</span></span><br><span class="line">summary<span class="punctuation">(</span>fit2<span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>fit2<span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>accept<span class="punctuation">,</span>score<span class="punctuation">)</span></span><br><span class="line">abline<span class="punctuation">(</span>fit2<span class="punctuation">,</span>lwd<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span>col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">fit3 <span class="operator">=</span> lm<span class="punctuation">(</span>score<span class="operator">~</span>.<span class="punctuation">,</span>data2<span class="punctuation">)</span></span><br><span class="line">summary<span class="punctuation">(</span>fit3<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<h2 id="d-plot">3D Plot</h2>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span><span class="string">&quot;plot3D&quot;</span><span class="punctuation">)</span></span><br><span class="line">Score <span class="operator">&lt;-</span> data3<span class="operator">$</span>score</span><br><span class="line">Acceptance <span class="operator">&lt;-</span> data3<span class="operator">$</span>accept</span><br><span class="line">z <span class="operator">&lt;-</span> data3<span class="operator">$</span>stu_a</span><br><span class="line"></span><br><span class="line"><span class="comment"># Compute the linear regression</span></span><br><span class="line">fit <span class="operator">=</span> lm<span class="punctuation">(</span>z <span class="operator">~</span> Score <span class="operator">+</span> Acceptance<span class="punctuation">)</span></span><br><span class="line">summary<span class="punctuation">(</span>fit<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a grid from the x and y values (min to max) </span></span><br><span class="line"><span class="comment"># and predict values for every point</span></span><br><span class="line"><span class="comment"># This will become the regression plane</span></span><br><span class="line">grid.lines <span class="operator">=</span> <span class="number">40</span></span><br><span class="line">x.pred <span class="operator">&lt;-</span> seq<span class="punctuation">(</span><span class="built_in">min</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">max</span><span class="punctuation">(</span>x<span class="punctuation">)</span><span class="punctuation">,</span> length.out <span class="operator">=</span> grid.lines<span class="punctuation">)</span></span><br><span class="line">y.pred <span class="operator">&lt;-</span> seq<span class="punctuation">(</span><span class="built_in">min</span><span class="punctuation">(</span>y<span class="punctuation">)</span><span class="punctuation">,</span> <span class="built_in">max</span><span class="punctuation">(</span>y<span class="punctuation">)</span><span class="punctuation">,</span> length.out <span class="operator">=</span> grid.lines<span class="punctuation">)</span></span><br><span class="line">xy <span class="operator">&lt;-</span> expand.grid<span class="punctuation">(</span>x <span class="operator">=</span> x.pred<span class="punctuation">,</span> y <span class="operator">=</span> y.pred<span class="punctuation">)</span></span><br><span class="line">z.pred <span class="operator">&lt;-</span> matrix<span class="punctuation">(</span>predict<span class="punctuation">(</span>fit<span class="punctuation">,</span> newdata <span class="operator">=</span> xy<span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                 nrow <span class="operator">=</span> grid.lines<span class="punctuation">,</span> ncol <span class="operator">=</span> grid.lines<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># create the fitted points for droplines to the surface</span></span><br><span class="line">fitpoints <span class="operator">&lt;-</span> predict<span class="punctuation">(</span>fit<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># scatter plot with regression plane</span></span><br><span class="line">scatter3D<span class="punctuation">(</span>x<span class="punctuation">,</span> y<span class="punctuation">,</span> z<span class="punctuation">,</span> pch <span class="operator">=</span> <span class="number">19</span><span class="punctuation">,</span> cex <span class="operator">=</span> <span class="number">1</span><span class="punctuation">,</span>colvar <span class="operator">=</span> <span class="literal">NULL</span><span class="punctuation">,</span> col<span class="operator">=</span><span class="string">&quot;red&quot;</span><span class="punctuation">,</span> </span><br><span class="line">          theta <span class="operator">=</span> <span class="number">60</span><span class="punctuation">,</span> phi <span class="operator">=</span> <span class="number">0</span><span class="punctuation">,</span> bty<span class="operator">=</span><span class="string">&quot;b&quot;</span><span class="punctuation">,</span></span><br><span class="line">          xlab <span class="operator">=</span> <span class="string">&quot;Score&quot;</span><span class="punctuation">,</span> ylab <span class="operator">=</span> <span class="string">&quot;Acceptance&quot;</span><span class="punctuation">,</span> zlab <span class="operator">=</span> <span class="string">&quot;Stu. Accept&quot;</span><span class="punctuation">,</span>  </span><br><span class="line">          surf <span class="operator">=</span> <span class="built_in">list</span><span class="punctuation">(</span>x <span class="operator">=</span> x.pred<span class="punctuation">,</span> y <span class="operator">=</span> y.pred<span class="punctuation">,</span> z <span class="operator">=</span> z.pred<span class="punctuation">,</span>  </span><br><span class="line">                      facets <span class="operator">=</span> <span class="literal">TRUE</span><span class="punctuation">,</span> fit <span class="operator">=</span> fitpoints<span class="punctuation">,</span> </span><br><span class="line">                      col<span class="operator">=</span>ramp.col <span class="punctuation">(</span>col <span class="operator">=</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;dodgerblue3&quot;</span><span class="punctuation">,</span><span class="string">&quot;seagreen2&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                      n <span class="operator">=</span> <span class="number">300</span><span class="punctuation">,</span> alpha<span class="operator">=</span><span class="number">0.9</span><span class="punctuation">)</span><span class="punctuation">,</span> border<span class="operator">=</span><span class="string">&quot;black&quot;</span><span class="punctuation">)</span><span class="punctuation">,</span> </span><br><span class="line">                      main <span class="operator">=</span> <span class="string">&quot;Student Accepting&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="b28125d8b427030a1c61"
+        data-cs="23d585488542ff39b94c5b1a4c6618cc1cbf3d5d"
+        data-r="markzdf.github.io"
+        data-o="markzdf"
+        data-a="markzdf"
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
