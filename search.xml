@@ -121,11 +121,21 @@ micromaster</a></p></li>
 the United States about quantitative finance. The data includes
 information of 16 quant master programs, which is collected from , and
 universities official websites. My criterion of judging a program is
-divided into two categories. 1. On-campus benefit - Class size <span
-class="math inline">\((-)\)</span> - International student rate <span
-class="math inline">\((-)\)</span> - Lecturer-to-student ratio -
-Industry lecturer percentage 2. Post-master achievement - Wage -
-Percentage in asset management</p>
+divided into two categories. 1. On-campus benefit</p>
+<ul>
+<li>Class size <span class="math inline">\((-)\)</span></li>
+<li>International student rate <span
+class="math inline">\((-)\)</span></li>
+<li>Lecturer-to-student ratio</li>
+<li>Industry lecturer percentage</li>
+</ul>
+<ol start="2" type="1">
+<li>Post-master achievement</li>
+</ol>
+<ul>
+<li>Wage</li>
+<li>Percentage in asset management</li>
+</ul>
 <p>To interpret, considering that information asymmetry is largely
 reduced for local residents, a low international student rate can be
 interpreted as the program's more welcomed by local residents, and thus
