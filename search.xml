@@ -374,7 +374,7 @@ we visualize the scores.</p>
 </tr>
 </tbody>
 </table>
-<p><a href="./Evaluation/score.png">score</a></p>
+<p><a href="/images/score.png">score</a></p>
 <p>We can see that, Master in Finance of Princeton and Master of
 Financial Engineering of UC Berkeley, are both top programs for quant,
 which is a result similar with . From a geographic point of view, we
@@ -489,7 +489,7 @@ proportion of variability in that can be explained by . In this case
 <span class="math display">\[
 R^2=1-\frac{TSS}{RSS}=1-\frac{\sum_{i=1}^n(y_i-\hat{y}_i)^2}{\sum_{i=1}^n(y_i-\bar{y})^2}
 \]</span></p>
-<p><a href="./Evaluation/fee.png">fee</a></p>
+<p><a href="/images/fee.png">fee</a></p>
 <h2 id="acceptance">Acceptance</h2>
 <p>We do the same t-test on acceptance rate, and found it has negative
 relationship with score at the significance level <span
@@ -524,7 +524,7 @@ class="math inline">\(&lt;0.0001\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><a href="./Evaluation/accept.png">accept</a></p>
+<p><a href="/images/accept.png">accept</a></p>
 <p>The result is consistent with the intuition. Programs with lower
 acceptance rate tends to be strict and professional, and that's often a
 reason for high score rating.</p>
@@ -630,7 +630,7 @@ class="math inline">\(0.1685&gt;0.05=\alpha\)</span>.</p>
 <p>The curious thing that contradict with intuition is that both score
 and acceptance rate don't affect much on student's dicision in enroll in
 or not.</p>
-<p><a href="./Evaluation/3D.png">3D</a></p>
+<p><a href="/images/3D.png">3D</a></p>
 <p>But it's interesting that if we consider the interaction part, the
 model will fit much better.</p>
 <table>
@@ -751,7 +751,7 @@ Learning, 2015. [2]Paul Jozefek. https://rpubs.com/pjozefek/576206,
     <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>网课：<a
 href="https://www.bilibili.com/video/BV1nt411p76Z/?p=2&amp;spm_id_from=pageDriver&amp;vd_source=0747a479964faef65dc22d966c973b66">西安交大</a></p>
-<p>教材：<a href="textbook.pdf">工程数学：复变函数</a></p>
+<p>教材：<a href="/download/textbook.pdf">工程数学：复变函数</a></p>
 <p>参考：<a
 href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/">MIT</a></p>
 ]]></content>
@@ -764,12 +764,11 @@ href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spri
       </tags>
   </entry>
   <entry>
-    <title>几何应用</title>
+    <title>ODE几何应用</title>
     <url>/2023/08/08/ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
 class="math inline">\(\beta\)</span>.</p>
-<p><a href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/1331.jpg">Fig
-13.31</a></p>
+<p><a href="/images/1331.jpg">Fig 13.31</a></p>
 <p><span class="math display">\[
 \tan \beta=r\frac{d\theta}{dr}
 \]</span></p>
@@ -778,8 +777,7 @@ href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/mids
 here</a></p>
 <h1 id="trajectories">Trajectories</h1>
 <p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><a href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/141.jpg">Isogonal
-Trajectories</a></p>
+<p><a href="/images/141.jpg">Isogonal Trajectories</a></p>
 <p><strong>Isogonal Trajectories</strong> <span class="math display">\[
 \tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
 \beta=\frac{m_1-m_2}{1+m_1m_2}
@@ -789,8 +787,7 @@ Trajectories</a></p>
 y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
 \]</span></p>
 <ol start="2" type="1">
-<li>Polar coordinates <a
-href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/143.jpg">polar</a> <span
+<li>Polar coordinates <a href="/images/143.jpg">polar</a> <span
 class="math display">\[
 \phi_1=\phi_2+\frac{\pi}{2}
 \]</span> <span class="math display">\[
@@ -849,20 +846,19 @@ href="https://www.youtube.com/watch?v=oxE3PMkzQZI">观看之道</a></li>
 <td style="text-align: center;">8.8</td>
 <td style="text-align: center;">神经网络<br>支持向量机</td>
 <td style="text-align: center;"><a
-href="/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">神经网络</a><br><a
-href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书)</a></td>
+href="/download/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">神经网络</a><br><a
+href="/download/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书)</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8.9</td>
 <td style="text-align: center;">初等代数<br>与几何方法</td>
 <td style="text-align: center;"><a
-href="/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/4.1%20%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0%E6%96%B9%E6%B3%95.pdf">4.1
+href="/download/4.1%20%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0%E6%96%B9%E6%B3%95.pdf">4.1
 代数方法</a><br><a
-href="/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/4.2%20%E5%88%9D%E7%AD%89%E5%87%A0%E4%BD%95%E6%96%B9%E6%B3%95.pdf">4.2
+href="/download/4.2%20%E5%88%9D%E7%AD%89%E5%87%A0%E4%BD%95%E6%96%B9%E6%B3%95.pdf">4.2
 几何方法</a><br><a
-href="/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/8.9%E4%BD%9C%E4%B8%9A.pdf">problems</a>
-<br><a
-href="/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0%E4%B8%8E%E5%87%A0%E4%BD%95%E6%96%B9%E6%B3%95%E4%BD%9C%E4%B8%9A.pdf">初等代数与几何方法作业</a></td>
+href="/download/8.9%E4%BD%9C%E4%B8%9A.pdf">problems</a> <br><a
+href="/download/%E5%88%9D%E7%AD%89%E4%BB%A3%E6%95%B0%E4%B8%8E%E5%87%A0%E4%BD%95%E6%96%B9%E6%B3%95%E4%BD%9C%E4%B8%9A.pdf">初等代数与几何方法作业</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8.10</td>
