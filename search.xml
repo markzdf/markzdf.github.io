@@ -1,14 +1,556 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ODE基本概念</title>
+    <url>/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<p><strong><em>Definition 2.68.</em></strong> A set in the plane is
+called a <strong>region</strong> if it satisfies the following two
+conditions: 1. Each point of the set is the center of a circle whose
+entire interior consists of points of the set. 2. Every two points of
+the set can be joined by a curve (not a line) which consists entirely of
+points of the set.</p>
+<p><strong><em>Definition 2.81.</em></strong> The relation <span
+class="math display">\[
+f(x,y)=0\tag{2.82}
+\]</span> defines <span class="math inline">\(y\)</span> as an
+<strong>implicit function</strong> of <span
+class="math inline">\(x\)</span> on an interval <span
+class="math inline">\(I:a&lt;x&lt;b\)</span>, if there exists a function
+<span class="math inline">\(g(x)\)</span> defined on <span
+class="math inline">\(I\)</span> such that <span class="math display">\[
+f[x,g(x)]=0\tag{2.83}
+\]</span> for <em>every</em> <span class="math inline">\(x\)</span> in
+<span class="math inline">\(I\)</span>.</p>
+<p><strong><em>Definition 3.4.</em></strong> <span
+class="math inline">\(f(x)\)</span> is a solution of the differential
+equation <span class="math display">\[
+F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{3.41}
+\]</span></p>
+<p>if</p>
+<p><span class="math display">\[
+F[x,f(x),f&#39;(x),\cdots,f^{(n)}(x)]=0\tag{3.42}
+\]</span></p>
+<p><strong><em>Definition 3.6.</em></strong> A relation <span
+class="math inline">\(f(x,y)=0\)</span> will be called an
+<strong>implicit solution</strong> of the differential equation</p>
+<p><span class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0
+\tag{3.61}\]</span></p>
+<p>on an interval <span class="math inline">\(I:a&lt;x&lt;b\)</span>,
+if</p>
+<ol type="1">
+<li><p>it defines <span class="math inline">\(y\)</span> as an implicit
+function of <span class="math inline">\(x\)</span> on <span
+class="math inline">\(I\)</span>,i.e., if there exists a function <span
+class="math inline">\(g(x)\)</span> defined on <span
+class="math inline">\(I\)</span> such that <span
+class="math inline">\(f[x,g(x)]=0\)</span> for every <span
+class="math inline">\(x\)</span> in <span
+class="math inline">\(I\)</span>, and if</p></li>
+<li><p><span class="math inline">\(g(x)\)</span> satisfies 3.61, i.e.,
+if</p></li>
+</ol>
+<p><span class="math display">\[
+F[x,g(x),g&#39;(x),\cdots,g^{(n)}(x)]=0 \tag{3.62}
+\]</span></p>
+<p>for every <span class="math inline">\(x\)</span> in <span
+class="math inline">\(I\)</span>.</p>
+<p><strong>Question:</strong></p>
+<p><span class="math inline">\((e) xy&#39;=2y\leftarrow y=x^2\)</span>,
+<span class="math inline">\((x\neq 0)\)</span></p>
+<p><span class="math inline">\((j)xy&#39;+y=y^2\leftarrow
+y=\frac{2}{x+2}\)</span>, <span class="math inline">\((x\neq
+0,-2)\)</span></p>
+<p><strong><em>Definition 4.3.</em></strong> The functions defined
+by</p>
+<p><span class="math display">\[
+y=f(x,c_1,c_2,\cdots,c_n)\tag{4.31}
+\]</span></p>
+<p>of the <span class="math inline">\(n+1\)</span> variables, <span
+class="math inline">\(x,c_1,c_2,\cdots,c_n\)</span> will be called an
+<strong>n-parameter family of solutions</strong> of the <span
+class="math inline">\(n\)</span>th order differential equation</p>
+<p><span
+class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{4.32}\]</span></p>
+<p>if <span class="math inline">\(\forall c_i(i=1,\cdots,n)\)</span>,
+the resulting function <span class="math inline">\(f(x)\)</span> defined
+by <span class="math inline">\((4.31)\)</span> satisfies <span
+class="math inline">\((4.32)\)</span>. That is</p>
+<p><span
+class="math display">\[F(x,f,f&#39;,\cdots,f^{(n)})=0\tag{4.33}\]</span></p>
+<p><span class="math inline">\(n\)</span> order <span
+class="math inline">\(\nLeftrightarrow\)</span> <span
+class="math inline">\(n\)</span> parameter solutions</p>
+<p><span class="math inline">\(\nRightarrow\)</span>: <span
+class="math inline">\((y&#39;&#39;)^2+y^2=0\)</span></p>
+<p><span class="math inline">\(\nLeftarrow\)</span>: <span
+class="math inline">\((y&#39;-y)(y&#39;-2y)=0\leftarrow
+(y-c_1e^x)(y-c_2e^{2x})=0\)</span></p>
+<p><strong><em>Definition 4.66.</em></strong> <em>particular
+solution</em>: does not contain arbitrary constants.</p>
+<p><strong><em>Definition 4.7.</em></strong> <em>general solution</em>:
+contains <em>every</em> particular solution</p>
+<p><strong><em>Definition 4.71.</em></strong> <em>initial
+conditions</em>: the <span class="math inline">\(n\)</span> conditions
+that determine <span class="math inline">\(c_1,\cdots,c_n\)</span>, and
+given in terms of one value of the independent variable (e.g.给定<span
+class="math inline">\(t=0\)</span>时，位置<span
+class="math inline">\(x=10\)</span>，速度<span
+class="math inline">\(v=20\)</span>)</p>
+<p><strong><em>Definition 5.12.</em></strong> If <span
+class="math inline">\(y=f(x)\)</span> or <span
+class="math inline">\(f(x,y)=0\)</span> defines <span
+class="math inline">\(y\)</span> as a function of <span
+class="math inline">\(x\)</span> which satisfies <span
+class="math display">\[y&#39;=F(x,y), \quad
+a&lt;x&lt;b\tag{5.11}\]</span> then the graph of this function is called
+an <strong>integral curve</strong>, it is the graph of a function which
+is the solution of <span class="math inline">\((5.11)\)</span>.</p>
+<p><strong>Remind</strong></p>
+<p><span class="math display">\[y&#39;=F(x,y)\Leftrightarrow
+\text{Direction field}\tag{ODE}\]</span></p>
+<p><span class="math display">\[y(x_0)=y_0 \Leftrightarrow \text{Point}\
+(x_0,y_0)\tag{I.C.}\]</span></p>
+<p><span class="math display">\[y(x) \Leftrightarrow \text{Integral
+curve}\tag{Solution}\]</span></p>
+<p><strong><em>Definition 5.4.</em></strong> An <em>ordinary point</em>
+of (5.11) lies on one and only one of its integral curves.</p>
+<p><strong><em>Definition 5.41.</em></strong> A <em>singular point</em>
+of (5.11) meets two requirements 1. NOT ordinary point: <em>no/more than
+one</em> integral curve 2. at least one ordinary point <span
+class="math inline">\(o_0\in \cup(s_0,\varepsilon),\forall
+\varepsilon\)</span></p>
+<p>条件2排除了定义域外的无关点</p>
+<p><span class="math display">\[
+y&#39;=\begin{cases}
+\frac{2(y-1)}{x},\quad &amp;x\neq 0\\
+0,&amp;x=0,y=1
+\end{cases}
+\]</span></p>
+<figure>
+<img src="fig_531.png" alt="531" />
+<figcaption aria-hidden="true">531</figcaption>
+</figure>
+<p><strong>Trap</strong></p>
+<p><span class="math display">\[\sqrt{x^2+4x-3}=1-2x\]</span></p>
+<p><strong><em>Definition 6.13.</em></strong> Let <span
+class="math inline">\(y=f(x)\)</span> define <span
+class="math inline">\(y\)</span> as a function of <span
+class="math inline">\(x\)</span> on an interval <span
+class="math inline">\(I\)</span>. The <strong>differential of
+y</strong>, written as <span class="math inline">\(dy\)</span> (or <span
+class="math inline">\(df\)</span>) is defined by <span
+class="math display">\[
+(dy)(x,\Delta x)=f&#39;(x)\Delta x\tag{6.14}
+\]</span></p>
+<p><strong><em>Theorem 6.2.</em></strong> If <span
+class="math inline">\(y=x\)</span>, then <span
+class="math display">\[(dy)(x,\Delta x)=(dx)(x,\Delta x)=\Delta
+x\tag{6.22}\]</span></p>
+<p><span class="math inline">\(dy\)</span>,<span
+class="math inline">\(dx\)</span> are differentials, not increment.
+<span class="math inline">\(y,x\)</span> after <span
+class="math inline">\(d\)</span> are functions, not independent
+variables</p>
+<p><strong><em>Theorem 6.3.</em></strong> If <span
+class="math inline">\(y=f(x)\)</span> defines <span
+class="math inline">\(y\)</span> as a function of <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(x=g(t)\)</span>, <span
+class="math inline">\(y=f[g(t)]=F(t)\)</span>, define <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> as functions of <span
+class="math inline">\(t\)</span>, then <span
+class="math display">\[(dy)(t,\Delta
+t)=f&#39;[g(t)][g&#39;(t)(dt)(t,\Delta t)]=f&#39;(x)(dx)(t,\Delta
+t)\tag{6.31}\]</span></p>
+<p><strong><em>Definition 6.4.</em></strong> For <span
+class="math inline">\(z=f(x,y)\)</span>, <span
+class="math display">\[(dz)(x,y,\Delta x,\Delta y)=\frac{\partial
+f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta
+y\tag{6.41}\]</span></p>
+<p><strong><em>Theorem 6.5.</em></strong> For <span
+class="math inline">\(z=f(x,y)\)</span>, <span
+class="math inline">\(x=x(r,s,\cdots)\)</span>,<span
+class="math inline">\(y=y(r,s,\cdots)\)</span> <span
+class="math display">\[dz=\frac{\partial f(x,y)}{\partial x}\Delta
+x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>ODE</tag>
+        <tag>Morris&amp;Harry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在macOS环境下配置hexo</title>
+    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
+    <content><![CDATA[<p>原先用typecho搭建的<a
+href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
+href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
+<h1 id="准备工作">准备工作</h1>
+<p>官方文档给出的前置应用程序是 1. <a
+href="https://nodejs.org/en">Node.js</a> 2. Git</p>
+<p>第一个直接点进去下载即可，第二个需要先安装<a
+href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
+href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
+<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
+终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h2 id="测试是否安装成功">测试是否安装成功</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo">安装Hexo</h1>
+<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>初始化博客</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
+<code>blog</code>
+的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>此时已经能生成并在本地预览你的博客雏形啦</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="hexo指令">Hexo指令</h2>
+<p>这里介绍几种常用的Hexo指令，</p>
+<ol type="1">
+<li><code>hexo generate</code> 网站生成</li>
+<li><code>hexo server</code>
+启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
+<li><code>hexo deploy</code> 部署网站，在生成之后</li>
+</ol>
+<p>以上三种都可以用首字母简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="部署网站到github">部署网站到Github</h1>
+<p>首先登陆Github，</p>
+<h2 id="添加ssh-key">添加SSH Key</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>username</code> 是你的用户名，
+<code>example@example.com</code>
+是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
+，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
+<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
+<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
+<code>id_rsa.pub</code> ，复制所有文字。</p>
+<p>接着打开<a href="https://github.com/settings/keys">SSH
+keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
+不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
+<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
+but Github does not procide shell access.</p>
+<p>则说明配置成功</p>
+<h2 id="上传本地文件">上传本地文件</h2>
+<p>在Github上新建一个仓库，Repository Name
+填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
+Repository 创建新的网站仓库。</p>
+<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
+缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
+bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
+1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
+3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
+等命令执行完后，运行<code>npm install</code></p>
+<p>可以解决 EACCES 的问题，亲测有效</p>
+<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>修改后保存，在终端上输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
+<p><strong>参考资料</strong> 1. <a
+href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
+OS环境下使用Hexo搭建个人博客</a></p>
+<ol start="2" type="1">
+<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ucb暑假</title>
+    <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
+    <content><![CDATA[<h1 id="websites">Websites</h1>
+<p><strong>Visa</strong> <a
+href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
+<a href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
+href="http://www.fmjfee.com">I-901&amp;SEVIS</a></p>
+<p><strong>Campus</strong> <a
+href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
+<a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
+href="https://bcourses.berkeley.edu/">bcourse</a> <a
+href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></p>
+<h1 id="diary">Diary</h1>
+<h2 id="section">7.3</h2>
+<p>听Magin的话把social network换成了financial
+derivatives。这门课在系统上显示是special topics in
+finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
+<p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired
+of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish
+girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
+<p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
+<p>躺在床上又想起些细节。早上去吃饭见人就说good
+morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank
+you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first
+hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
+<h2 id="section-1">7.4</h2>
+<p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank
+you!
+一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman's
+wharf，小龙虾很不喜欢就没久待。看了golden gate
+bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
+<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
+<p>好累，睡觉</p>
+<h2 id="section-2">7.5</h2>
+<p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a
+href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.
+回答被抢了，好烦。回去学衍生品。 买了件Berkeley的卫衣，好看
+妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
+<h2 id="section-3">7.6</h2>
+<p>推着婴儿车晨跑的 回答问题声音不够大，随意点 看Charlie
+Puth的concert很精彩，最后本来谢幕了，观众喊着“One more
+song”把Charlie喊回来了，唱一首see you
+again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天 1. 复习lec3 2.
+看handout，可以的话打印下来 3. 继续读课本，看完chap2</p>
+<h2 id="section-4">7.7</h2>
+<p>不出意外，计划没完成。早上睡到12点，醒来看到Carlo的消息说中午健身，但我一般学完后健身放松，就没去。吃饭后碰到小龙虾，去Moffit图书馆，没看到Carlo的消息，啧啧，又爽约了（我以为他不会去图书馆来着），难受。下午一直在敲latex，浪费时间，不过完成了复习。晚上和小龙虾看了场电影，蛮有意思，和国内影院很不一样。那边都是看老电影，有时有人来一段开场白，讲讲电影的背景之类，讲导演和演员，那些人名我都不认识，但老外很有共鸣。</p>
+<p>看完后去健身，有点自卑，因为菜。但其实没人注意我或怎么样的，所以挺好，自卑是自己脑补太多。谁不是从菜鸟上来的呢</p>
+<h2 id="section-5">7.9</h2>
+<p>Sausalito，muir woods，跟黄绿发色妹妹聊天，oha bbq超好吃，德州</p>
+<h2 id="section-6">7.10</h2>
+<p>中国学生确实拉。教授上课问一下各国股市情况，Sweden
+guy回答的全面又流畅，对答如流，让教授有兴趣不断地问，让课堂变得有意思。到中国学生，我了解太少不知道怎么说，后面一个人在那乱说，教授也不知道他在讲什么，我也不知道，课堂很尴尬。再到German
+guy也是回答很自然、从容，懂的很多。相比之下中国学生很异类，就像一群人围桌聊天我们加入不进去。本来以为尴尬是正常的，结果发现中国人是尴尬制造者。</p>
+<p>下午跟Carlo去健身房，没想到健身房也很适合社交。等器械的时候，别人等器械的时候，就有两个人过来跟Carlo聊天，一个还加上ins约去夜店浪。没有找我，因为我一看就是弱鸡。虽说夜店什么的还是算了，我没满21岁。但健身是个must。</p>
+<blockquote>
+<p>强势文化造就强者，弱势文化造就弱者</p>
+</blockquote>
+<p>儒家文化是弱势文化，是别人打你左脸叫你把右脸也给他打。美国文化是叫你彪悍强壮，开大车，练肌肉，体育竞技。</p>
+<h2 id="section-7">7.20</h2>
+<p>好东西https://micromasters.mit.edu/dashboard</p>
+<h2 id="section-8">7.21</h2>
+<p>trust no one</p>
+<h2 id="section-9">7.24</h2>
+<p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley
+student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game
+night，Catan真的好玩，差点赢了/
+跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never
+mind。感觉来summer
+session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
+<p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that's
+all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot
+ask for more。</p>
+<p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but
+I still have to balance study time and play time, the most challenging
+thing for me. but I heard gym is opened very early, like 7am, check it
+tomorrow, and start to get up early.
+早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student
+union自习。早上学ODE和complex
+analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study
+lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
+<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
+<h2 id="section-10">7.25</h2>
+<p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。</p>
+<h2 id="section-11">7.27</h2>
+<p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：
+1. 健身 2. kaggle 3. 托福 4. ODE 5. 复变</p>
+<p>（出去玩的日子除外）</p>
+<h2 id="section-12">8.8</h2>
+<p>第六周，想家。坐在图书馆抬起头看到天窗，第一个想起厦大的访客中心，也有个天窗，在演武场旁边的草丛里。这边是不是也把天窗藏草丛里呢？</p>
+<p><a href="./ucb%E6%9A%91%E5%81%87/1554.png">抬头</a></p>
+]]></content>
+      <categories>
+        <category>写点什么</category>
+      </categories>
+      <tags>
+        <tag>美国</tag>
+        <tag>暑假</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>七月加州</title>
+    <url>/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/</url>
+    <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
+<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、$t$分布、$\chi^2$分布、拒真受假两种错误、ANOVA…这些才是我的收获，而不是这样一个方程</p>
+<script type="math/tex; mode=display">
+f(GPA)=\begin{cases}1 & GPA\geq 3.7\\0 & GPA\leq 3.7\end{cases}</script><p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
+<p>7.31去了趟斯坦福，那边真是贵气：设施更全面，建筑有美感，有历史韵味，学生看起来很聪明，甚至还有高尔夫球场。在去球场的路上看到个精壮的白发老人穿运动装跑步，被这种不服老的<em>抗争精神</em>震撼到。中国圈养羊，美国全是狼。狼进羊圈牧羊人就有麻烦了，但狼进狼群只会壮大队伍。</p>
+<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC State，另外它的统计program有金融方向。我去问了ucb统计系的admission office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
+<p>当天下午的 Graduate School Workshop 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
+]]></content>
+      <categories>
+        <category>写点什么</category>
+      </categories>
+      <tags>
+        <tag>美国</tag>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不必再等</title>
+    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
+    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+<span id="more"></span>
+<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
+<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
+idiots说的</p>
+<blockquote>
+<p>不要追求成功，成功会在不经意间追上你</p>
+</blockquote>
+<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
+<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
+<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
+]]></content>
+      <categories>
+        <category>写点什么</category>
+      </categories>
+      <tags>
+        <tag>反思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>六月总结</title>
+    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>早上八点，太平洋上空</p>
+<span id="more"></span>
+<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
+<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
+<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
+<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
+<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
+<p>考试周的总结已另成一篇，不再重复。<span
+class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
+]]></content>
+      <categories>
+        <category>写点什么</category>
+      </categories>
+      <tags>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>回家前</title>
+    <url>/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/</url>
+    <content><![CDATA[<p>项目结束，8.12~8.17跟小龙虾穷游，洛杉矶和圣地亚哥，预算六百刀左右</p>
+<h2 id="los-angeles">Los Angeles</h2>
+<p>行：Aug 12，OAK-LA，$35.4（2人）</p>
+<figure>
+<img src="oak-la_230729.png" alt="oak-la_230729" />
+<figcaption aria-hidden="true">oak-la_230729</figcaption>
+</figure>
+<p>住：<a
+href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a
+href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>,
+8.12-14（2晚），235🔪；<a
+href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a
+href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪
+玩：<a
+href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith
+Observatory</a>，<a
+href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a
+href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty
+Center</a>，<a
+href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a
+href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a
+href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty
+Villa</a>，<a
+href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa
+Monica</a>，<a
+href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice
+Beach</a></p>
+<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty
+center，Getty villa(optional)。下午去Santa Monica海滩和Venice
+Beach。8.14退房。</p>
+<p>LACMA<a
+href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21
+Griffith门票免费，不用预约，<a
+href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
+<p><a
+href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
+<p>Getty center和Getty villa免费但要<a
+href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
+<figure>
+<img src="laplay_230729.png" alt="LA.png" />
+<figcaption aria-hidden="true">LA.png</figcaption>
+</figure>
+<h2 id="san-diego">San Diego</h2>
+<p>行：坐火车到Santa Fe Depot，<a
+href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时
+住：<a
+href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369
+玩：<a
+href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp
+Quarter</a>，<a
+href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa
+Park</a>，<a
+href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission
+bay出发</a>，<a
+href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a
+href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La
+Jolla Cove</a>，<a
+href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel
+library</a>，<a
+href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway
+Museum</a>，UCSD</p>
+<p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La
+Jolla能看到一堆海豹。</p>
+<blockquote>
+<p>从 La Jolla Cove 向西走10分钟，有个叫 Children's Pool
+的小海湾，这里的海豹特别多</p>
+</blockquote>
+<p>观鲸出海，要<a
+href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看，门票31刀，要<a
+href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
+<figure>
+<img src="sdplay_230729.png" alt="SD.png" />
+<figcaption aria-hidden="true">SD.png</figcaption>
+</figure>
+<h2 id="回程">回程</h2>
+<p>8.17回，下午2:20pm，<a
+href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
+<figure>
+<img src="sd-oak_230729.png" alt="flight_back.png" />
+<figcaption aria-hidden="true">flight_back.png</figcaption>
+</figure>
+<h2 id="budget">Budget</h2>
+<p>Trip：(35.4+72+63.8)/2=85.6 Live：(246+369)/2=308 T&amp;L:
+86+308=<strong>$394</strong></p>
+<p>Ticket：21+65+31=117</p>
+<blockquote>
+<p>Reference: https://www.meilvtong.com/viewthread.php?tid=24
+https://www.meilvtong.com/viewthread.php?tid=11
+https://www.guruin.com/articles/855</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>美国</tag>
+        <tag>暑假</tag>
+        <tag>旅游</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>念念不忘，必有回响</title>
     <url>/2050/08/08/%E5%BF%B5%E5%BF%B5%E4%B8%8D%E5%BF%98%EF%BC%8C%E5%BF%85%E6%9C%89%E5%9B%9E%E5%93%8D/</url>
     <content><![CDATA[<h3 id="section">23.8～9</h3>
 <p><a
 href="http://course.walnutenglish.cn/s/pc/#/home/index?redirectCount=1">托福</a>：转考10月，转考最后期限是<code>9.05</code>！！！</p>
-<p>数学： - <a href="https://markzdf.github.io/tags/ODE/">ODE</a> - <a
-href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/">复变函数</a>
-- 数学建模</p>
+<p>数学：</p>
+<ul>
+<li><a href="https://markzdf.github.io/tags/ODE/">ODE</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1nt411p76Z/?p=2&amp;spm_id_from=pageDriver&amp;vd_source=0747a479964faef65dc22d966c973b66">复变函数</a></li>
+<li>数学建模</li>
+</ul>
 <h3 id="section-1">23.9～24.2</h3>
 <table style="width:100%;">
 <colgroup>
@@ -107,120 +649,6 @@ href="https://www.bilibili.com/video/BV1FU4y1G7kK/?spm_id_from=333.337.search-ca
 micromaster</a></p></li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>四天藝術史</title>
-    <url>/2023/08/08/%E5%9B%9B%E5%A4%A9%E8%97%9D%E8%A1%93%E5%8F%B2/</url>
-    <content><![CDATA[<p><strong>纪录片</strong> - <a
-href="https://www.bilibili.com/video/BV1aW411q7M5/?spm_id_from=333.337.search-card.all.click">文明的轨迹</a>
-- <a
-href="https://www.youtube.com/playlist?list=PLHyxCxERp8m3Iy9Pfq9zeu-60eTZyN4pb">艺术的力量</a>
-- <a href="https://www.youtube.com/watch?v=oxE3PMkzQZI">观看之道</a></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>艺术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数模集训篇</title>
-    <url>/2023/08/08/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/</url>
-    <content><![CDATA[<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">时间</th>
-<th style="text-align: center;">专题</th>
-<th style="text-align: center;">课件</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">8.8</td>
-<td style="text-align: center;">神经网络<br>支持向量机</td>
-<td style="text-align: center;"><a
-href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">神经网络</a><br><a
-href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书)</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.9</td>
-<td style="text-align: center;">初等代数<br>几何方法</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8.10</td>
-<td style="text-align: center;">差分方程<br>常微分方程</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.11</td>
-<td style="text-align: center;">偏微分方程<br>变分方法</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8.12</td>
-<td style="text-align: center;">线性规划整数规划<br>非线性规划</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.13</td>
-<td style="text-align: center;">动态规划、图论</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8.14</td>
-<td style="text-align: center;">随机系统</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.15</td>
-<td style="text-align: center;">排队论、存储论</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8.16</td>
-<td style="text-align: center;">对策论、决策论</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8.17</td>
-<td style="text-align: center;">模糊分析<br>灰度分析</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>数模</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>七月加州</title>
-    <url>/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/</url>
-    <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
-<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、$t$分布、$\chi^2$分布、拒真受假两种错误、ANOVA…这些才是我的收获，而不是这样一个方程</p>
-<script type="math/tex; mode=display">
-f(GPA)=\begin{cases}1 & GPA\geq 3.7\\0 & GPA\leq 3.7\end{cases}</script><p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
-<p>7.31去了趟斯坦福，那边真是贵气：设施更全面，建筑有美感，有历史韵味，学生看起来很聪明，甚至还有高尔夫球场。在去球场的路上看到个精壮的白发老人穿运动装跑步，被这种不服老的<em>抗争精神</em>震撼到。中国圈养羊，美国全是狼。狼进羊圈牧羊人就有麻烦了，但狼进狼群只会壮大队伍。</p>
-<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC State，另外它的统计program有金融方向。我去问了ucb统计系的admission office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
-<p>当天下午的 Graduate School Workshop 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
-]]></content>
-      <categories>
-        <category>写点什么</category>
-      </categories>
-      <tags>
-        <tag>美国</tag>
-        <tag>思考</tag>
-      </tags>
   </entry>
   <entry>
     <title>特殊微分方程的解</title>
@@ -660,189 +1088,6 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
       </tags>
   </entry>
   <entry>
-    <title>ODE基本概念</title>
-    <url>/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<p><strong><em>Definition 2.68.</em></strong> A set in the plane is
-called a <strong>region</strong> if it satisfies the following two
-conditions: 1. Each point of the set is the center of a circle whose
-entire interior consists of points of the set. 2. Every two points of
-the set can be joined by a curve (not a line) which consists entirely of
-points of the set.</p>
-<p><strong><em>Definition 2.81.</em></strong> The relation <span
-class="math display">\[
-f(x,y)=0\tag{2.82}
-\]</span> defines <span class="math inline">\(y\)</span> as an
-<strong>implicit function</strong> of <span
-class="math inline">\(x\)</span> on an interval <span
-class="math inline">\(I:a&lt;x&lt;b\)</span>, if there exists a function
-<span class="math inline">\(g(x)\)</span> defined on <span
-class="math inline">\(I\)</span> such that <span class="math display">\[
-f[x,g(x)]=0\tag{2.83}
-\]</span> for <em>every</em> <span class="math inline">\(x\)</span> in
-<span class="math inline">\(I\)</span>.</p>
-<p><strong><em>Definition 3.4.</em></strong> <span
-class="math inline">\(f(x)\)</span> is a solution of the differential
-equation <span class="math display">\[
-F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{3.41}
-\]</span></p>
-<p>if</p>
-<p><span class="math display">\[
-F[x,f(x),f&#39;(x),\cdots,f^{(n)}(x)]=0\tag{3.42}
-\]</span></p>
-<p><strong><em>Definition 3.6.</em></strong> A relation <span
-class="math inline">\(f(x,y)=0\)</span> will be called an
-<strong>implicit solution</strong> of the differential equation</p>
-<p><span class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0
-\tag{3.61}\]</span></p>
-<p>on an interval <span class="math inline">\(I:a&lt;x&lt;b\)</span>,
-if</p>
-<ol type="1">
-<li><p>it defines <span class="math inline">\(y\)</span> as an implicit
-function of <span class="math inline">\(x\)</span> on <span
-class="math inline">\(I\)</span>,i.e., if there exists a function <span
-class="math inline">\(g(x)\)</span> defined on <span
-class="math inline">\(I\)</span> such that <span
-class="math inline">\(f[x,g(x)]=0\)</span> for every <span
-class="math inline">\(x\)</span> in <span
-class="math inline">\(I\)</span>, and if</p></li>
-<li><p><span class="math inline">\(g(x)\)</span> satisfies 3.61, i.e.,
-if</p></li>
-</ol>
-<p><span class="math display">\[
-F[x,g(x),g&#39;(x),\cdots,g^{(n)}(x)]=0 \tag{3.62}
-\]</span></p>
-<p>for every <span class="math inline">\(x\)</span> in <span
-class="math inline">\(I\)</span>.</p>
-<p><strong>Question:</strong></p>
-<p><span class="math inline">\((e) xy&#39;=2y\leftarrow y=x^2\)</span>,
-<span class="math inline">\((x\neq 0)\)</span></p>
-<p><span class="math inline">\((j)xy&#39;+y=y^2\leftarrow
-y=\frac{2}{x+2}\)</span>, <span class="math inline">\((x\neq
-0,-2)\)</span></p>
-<p><strong><em>Definition 4.3.</em></strong> The functions defined
-by</p>
-<p><span class="math display">\[
-y=f(x,c_1,c_2,\cdots,c_n)\tag{4.31}
-\]</span></p>
-<p>of the <span class="math inline">\(n+1\)</span> variables, <span
-class="math inline">\(x,c_1,c_2,\cdots,c_n\)</span> will be called an
-<strong>n-parameter family of solutions</strong> of the <span
-class="math inline">\(n\)</span>th order differential equation</p>
-<p><span
-class="math display">\[F(x,y,y&#39;,\cdots,y^{(n)})=0\tag{4.32}\]</span></p>
-<p>if <span class="math inline">\(\forall c_i(i=1,\cdots,n)\)</span>,
-the resulting function <span class="math inline">\(f(x)\)</span> defined
-by <span class="math inline">\((4.31)\)</span> satisfies <span
-class="math inline">\((4.32)\)</span>. That is</p>
-<p><span
-class="math display">\[F(x,f,f&#39;,\cdots,f^{(n)})=0\tag{4.33}\]</span></p>
-<p><span class="math inline">\(n\)</span> order <span
-class="math inline">\(\nLeftrightarrow\)</span> <span
-class="math inline">\(n\)</span> parameter solutions</p>
-<p><span class="math inline">\(\nRightarrow\)</span>: <span
-class="math inline">\((y&#39;&#39;)^2+y^2=0\)</span></p>
-<p><span class="math inline">\(\nLeftarrow\)</span>: <span
-class="math inline">\((y&#39;-y)(y&#39;-2y)=0\leftarrow
-(y-c_1e^x)(y-c_2e^{2x})=0\)</span></p>
-<p><strong><em>Definition 4.66.</em></strong> <em>particular
-solution</em>: does not contain arbitrary constants.</p>
-<p><strong><em>Definition 4.7.</em></strong> <em>general solution</em>:
-contains <em>every</em> particular solution</p>
-<p><strong><em>Definition 4.71.</em></strong> <em>initial
-conditions</em>: the <span class="math inline">\(n\)</span> conditions
-that determine <span class="math inline">\(c_1,\cdots,c_n\)</span>, and
-given in terms of one value of the independent variable (e.g.给定<span
-class="math inline">\(t=0\)</span>时，位置<span
-class="math inline">\(x=10\)</span>，速度<span
-class="math inline">\(v=20\)</span>)</p>
-<p><strong><em>Definition 5.12.</em></strong> If <span
-class="math inline">\(y=f(x)\)</span> or <span
-class="math inline">\(f(x,y)=0\)</span> defines <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> which satisfies <span
-class="math display">\[y&#39;=F(x,y), \quad
-a&lt;x&lt;b\tag{5.11}\]</span> then the graph of this function is called
-an <strong>integral curve</strong>, it is the graph of a function which
-is the solution of <span class="math inline">\((5.11)\)</span>.</p>
-<p><strong>Remind</strong></p>
-<p><span class="math display">\[y&#39;=F(x,y)\Leftrightarrow
-\text{Direction field}\tag{ODE}\]</span></p>
-<p><span class="math display">\[y(x_0)=y_0 \Leftrightarrow \text{Point}\
-(x_0,y_0)\tag{I.C.}\]</span></p>
-<p><span class="math display">\[y(x) \Leftrightarrow \text{Integral
-curve}\tag{Solution}\]</span></p>
-<p><strong><em>Definition 5.4.</em></strong> An <em>ordinary point</em>
-of (5.11) lies on one and only one of its integral curves.</p>
-<p><strong><em>Definition 5.41.</em></strong> A <em>singular point</em>
-of (5.11) meets two requirements 1. NOT ordinary point: <em>no/more than
-one</em> integral curve 2. at least one ordinary point <span
-class="math inline">\(o_0\in \cup(s_0,\varepsilon),\forall
-\varepsilon\)</span></p>
-<p>条件2排除了定义域外的无关点</p>
-<p><span class="math display">\[
-y&#39;=\begin{cases}
-\frac{2(y-1)}{x},\quad &amp;x\neq 0\\
-0,&amp;x=0,y=1
-\end{cases}
-\]</span></p>
-<figure>
-<img src="fig_531.png" alt="531" />
-<figcaption aria-hidden="true">531</figcaption>
-</figure>
-<p><strong>Trap</strong></p>
-<p><span class="math display">\[\sqrt{x^2+4x-3}=1-2x\]</span></p>
-<p><strong><em>Definition 6.13.</em></strong> Let <span
-class="math inline">\(y=f(x)\)</span> define <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> on an interval <span
-class="math inline">\(I\)</span>. The <strong>differential of
-y</strong>, written as <span class="math inline">\(dy\)</span> (or <span
-class="math inline">\(df\)</span>) is defined by <span
-class="math display">\[
-(dy)(x,\Delta x)=f&#39;(x)\Delta x\tag{6.14}
-\]</span></p>
-<p><strong><em>Theorem 6.2.</em></strong> If <span
-class="math inline">\(y=x\)</span>, then <span
-class="math display">\[(dy)(x,\Delta x)=(dx)(x,\Delta x)=\Delta
-x\tag{6.22}\]</span></p>
-<p><span class="math inline">\(dy\)</span>,<span
-class="math inline">\(dx\)</span> are differentials, not increment.
-<span class="math inline">\(y,x\)</span> after <span
-class="math inline">\(d\)</span> are functions, not independent
-variables</p>
-<p><strong><em>Theorem 6.3.</em></strong> If <span
-class="math inline">\(y=f(x)\)</span> defines <span
-class="math inline">\(y\)</span> as a function of <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(x=g(t)\)</span>, <span
-class="math inline">\(y=f[g(t)]=F(t)\)</span>, define <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span> as functions of <span
-class="math inline">\(t\)</span>, then <span
-class="math display">\[(dy)(t,\Delta
-t)=f&#39;[g(t)][g&#39;(t)(dt)(t,\Delta t)]=f&#39;(x)(dx)(t,\Delta
-t)\tag{6.31}\]</span></p>
-<p><strong><em>Definition 6.4.</em></strong> For <span
-class="math inline">\(z=f(x,y)\)</span>, <span
-class="math display">\[(dz)(x,y,\Delta x,\Delta y)=\frac{\partial
-f(x,y)}{\partial x}\Delta x+\frac{\partial f(x,y)}{\partial y}\Delta
-y\tag{6.41}\]</span></p>
-<p><strong><em>Theorem 6.5.</em></strong> For <span
-class="math inline">\(z=f(x,y)\)</span>, <span
-class="math inline">\(x=x(r,s,\cdots)\)</span>,<span
-class="math inline">\(y=y(r,s,\cdots)\)</span> <span
-class="math display">\[dz=\frac{\partial f(x,y)}{\partial x}\Delta
-x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>ODE</tag>
-        <tag>Morris&amp;Harry</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决hexo本地和部署不一致问题</title>
     <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
@@ -892,371 +1137,147 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
       </tags>
   </entry>
   <entry>
-    <title>如何在macOS环境下配置hexo</title>
-    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
-    <content><![CDATA[<p>原先用typecho搭建的<a
-href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
-href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
-<h1 id="准备工作">准备工作</h1>
-<p>官方文档给出的前置应用程序是 1. <a
-href="https://nodejs.org/en">Node.js</a> 2. Git</p>
-<p>第一个直接点进去下载即可，第二个需要先安装<a
-href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
-href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
-终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<h2 id="测试是否安装成功">测试是否安装成功</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h1 id="安装hexo">安装Hexo</h1>
-<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>初始化博客</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
-<code>blog</code>
-的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
-<p>此时已经能生成并在本地预览你的博客雏形啦</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="hexo指令">Hexo指令</h2>
-<p>这里介绍几种常用的Hexo指令，</p>
-<ol type="1">
-<li><code>hexo generate</code> 网站生成</li>
-<li><code>hexo server</code>
-启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
-<li><code>hexo deploy</code> 部署网站，在生成之后</li>
-</ol>
-<p>以上三种都可以用首字母简写为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1 id="部署网站到github">部署网站到Github</h1>
-<p>首先登陆Github，</p>
-<h2 id="添加ssh-key">添加SSH Key</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>其中 <code>username</code> 是你的用户名，
-<code>example@example.com</code>
-是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
-，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
-<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
-<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
-<code>id_rsa.pub</code> ，复制所有文字。</p>
-<p>接着打开<a href="https://github.com/settings/keys">SSH
-keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
-不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
-<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
-but Github does not procide shell access.</p>
-<p>则说明配置成功</p>
-<h2 id="上传本地文件">上传本地文件</h2>
-<p>在Github上新建一个仓库，Repository Name
-填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
-Repository 创建新的网站仓库。</p>
-<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
-缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
-bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
-1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
-3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
-等命令执行完后，运行<code>npm install</code></p>
-<p>可以解决 EACCES 的问题，亲测有效</p>
-<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<p>修改后保存，在终端上输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
-<p><strong>参考资料</strong> 1. <a
-href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
-OS环境下使用Hexo搭建个人博客</a></p>
-<ol start="2" type="1">
-<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
-</ol>
+    <title>数模集训篇</title>
+    <url>/2023/08/08/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/</url>
+    <content><![CDATA[<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">时间</th>
+<th style="text-align: center;">专题</th>
+<th style="text-align: center;">课件</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">8.8</td>
+<td style="text-align: center;">神经网络<br>支持向量机</td>
+<td style="text-align: center;"><a
+href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">神经网络</a><br><a
+href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书)</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8.9</td>
+<td style="text-align: center;">初等代数<br>几何方法</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8.10</td>
+<td style="text-align: center;">差分方程<br>常微分方程</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8.11</td>
+<td style="text-align: center;">偏微分方程<br>变分方法</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8.12</td>
+<td style="text-align: center;">线性规划整数规划<br>非线性规划</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8.13</td>
+<td style="text-align: center;">动态规划、图论</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8.14</td>
+<td style="text-align: center;">随机系统</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8.15</td>
+<td style="text-align: center;">排队论、存储论</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8.16</td>
+<td style="text-align: center;">对策论、决策论</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8.17</td>
+<td style="text-align: center;">模糊分析<br>灰度分析</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       <categories>
-        <category>杂项</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>开发</tag>
+        <tag>数模</tag>
       </tags>
   </entry>
   <entry>
-    <title>回家前</title>
-    <url>/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/</url>
-    <content><![CDATA[<p>项目结束，8.12~8.17跟小龙虾穷游，洛杉矶和圣地亚哥，预算六百刀左右</p>
-<h2 id="los-angeles">Los Angeles</h2>
-<p>行：Aug 12，OAK-LA，$35.4（2人）</p>
-<figure>
-<img src="oak-la_230729.png" alt="oak-la_230729" />
-<figcaption aria-hidden="true">oak-la_230729</figcaption>
-</figure>
-<p>住：<a
-href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a
-href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>,
-8.12-14（2晚），235🔪；<a
-href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a
-href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪
-玩：<a
-href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith
-Observatory</a>，<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a
-href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty
-Center</a>，<a
-href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a
-href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a
-href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty
-Villa</a>，<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa
-Monica</a>，<a
-href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice
-Beach</a></p>
-<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA，约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty
-center，Getty villa(optional)。下午去Santa Monica海滩和Venice
-Beach。8.14退房。</p>
-<p>LACMA<a
-href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21
-Griffith门票免费，不用预约，<a
-href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
-<p><a
-href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
-<p>Getty center和Getty villa免费但要<a
-href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
-<figure>
-<img src="laplay_230729.png" alt="LA.png" />
-<figcaption aria-hidden="true">LA.png</figcaption>
-</figure>
-<h2 id="san-diego">San Diego</h2>
-<p>行：坐火车到Santa Fe Depot，<a
-href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时
-住：<a
-href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369
-玩：<a
-href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp
-Quarter</a>，<a
-href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa
-Park</a>，<a
-href="https://www.google.com/maps/place/Mission+Bay/@35.2389479,-122.4431592,7z/data=!4m10!1m2!2m1!1smission+bay!3m6!1s0x80deaa76214d8b9b:0x7d7b08c967ffa67!8m2!3d32.7805494!4d-117.2426259!15sCgttaXNzaW9uIGJheZIBA2JheeABAA!16zL20vMGNmZDVi?entry=ttu">观鲸从mission
-bay出发</a>，<a
-href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a
-href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La
-Jolla Cove</a>，<a
-href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel
-library</a>，<a
-href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway
-Museum</a>，UCSD</p>
-<p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La
-Jolla能看到一堆海豹。</p>
-<blockquote>
-<p>从 La Jolla Cove 向西走10分钟，有个叫 Children's Pool
-的小海湾，这里的海豹特别多</p>
-</blockquote>
-<p>观鲸出海，要<a
-href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看，门票31刀，要<a
-href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
-<figure>
-<img src="sdplay_230729.png" alt="SD.png" />
-<figcaption aria-hidden="true">SD.png</figcaption>
-</figure>
-<h2 id="回程">回程</h2>
-<p>8.17回，下午2:20pm，<a
-href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
-<figure>
-<img src="sd-oak_230729.png" alt="flight_back.png" />
-<figcaption aria-hidden="true">flight_back.png</figcaption>
-</figure>
-<h2 id="budget">Budget</h2>
-<p>Trip：(35.4+72+63.8)/2=85.6 Live：(246+369)/2=308 T&amp;L:
-86+308=<strong>$394</strong></p>
-<p>Ticket：21+65+31=117</p>
-<blockquote>
-<p>Reference: https://www.meilvtong.com/viewthread.php?tid=24
-https://www.meilvtong.com/viewthread.php?tid=11
-https://www.guruin.com/articles/855</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>美国</tag>
-        <tag>暑假</tag>
-        <tag>旅游</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>六月总结</title>
-    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>早上八点，太平洋上空</p>
-<span id="more"></span>
-<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
-<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
-<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
-<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
-<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
-<p>考试周的总结已另成一篇，不再重复。<span
-class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
-]]></content>
-      <categories>
-        <category>写点什么</category>
-      </categories>
-      <tags>
-        <tag>思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不必再等</title>
-    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
-    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
-<span id="more"></span>
-<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
-<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
-idiots说的</p>
-<blockquote>
-<p>不要追求成功，成功会在不经意间追上你</p>
-</blockquote>
-<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
-<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
-<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
-]]></content>
-      <categories>
-        <category>写点什么</category>
-      </categories>
-      <tags>
-        <tag>反思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ucb暑假</title>
-    <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
-    <content><![CDATA[<h1 id="websites">Websites</h1>
-<p><strong>Visa</strong> <a
-href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
-<a href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
-href="http://www.fmjfee.com">I-901&amp;SEVIS</a></p>
-<p><strong>Campus</strong> <a
-href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
-<a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
-href="https://bcourses.berkeley.edu/">bcourse</a> <a
-href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></p>
-<h1 id="蹭课单">蹭课单</h1>
+    <title>四天藝術史</title>
+    <url>/2023/08/08/%E5%9B%9B%E5%A4%A9%E8%97%9D%E8%A1%93%E5%8F%B2/</url>
+    <content><![CDATA[<p><strong>纪录片</strong></p>
 <ul>
-<li>Foundation of Data Science(12345): <strong>10-11am</strong>, <a
-href="https://www.berkeley.edu/map/?dwinelle">Dwinelle 155</a></li>
-<li>Principles &amp; Techniques of Data Science(1234):
-<strong>5-6:30pm</strong>, <a
-href="https://www.berkeley.edu/map/?likashing">Li Ka Shing 245</a></li>
-<li>Classical Theories of Political Economy(234):
-<strong>1-3:30pm</strong>, Social Sciences Building 166</li>
-<li>Contemporary Theories of Political Economy(234):
-<strong>2-4:30pm</strong>, Anthro/Art Practice Bldg 155</li>
-<li>Introduction to Artificial Intelligence(1234):
-<strong>2-3:30pm</strong>, <a
-href="https://www.berkeley.edu/map/?lewis">Lewis 100</a></li>
-<li>Discrete Mathematics and Probability Theory(1234):
-<strong>12:30-2pm</strong>, <a
-href="https://www.berkeley.edu/map/?dwinelle">Dwinelle 155</a></li>
-<li>Data Structures and Programming Methodology(13):
-<strong>9-10am</strong>, <a
-href="https://www.berkeley.edu/map/?vlsb">Valley Life Sciences
-2050</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1aW411q7M5/?spm_id_from=333.337.search-card.all.click">文明的轨迹</a></li>
+<li><a
+href="https://www.youtube.com/playlist?list=PLHyxCxERp8m3Iy9Pfq9zeu-60eTZyN4pb">艺术的力量</a></li>
+<li><a
+href="https://www.youtube.com/watch?v=oxE3PMkzQZI">观看之道</a></li>
 </ul>
-<h1 id="diary">Diary</h1>
-<h2 id="section">7.3</h2>
-<p>听Magin的话把social network换成了financial
-derivatives。这门课在系统上显示是special topics in
-finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
-<p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired
-of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish
-girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
-<p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
-<p>躺在床上又想起些细节。早上去吃饭见人就说good
-morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank
-you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first
-hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
-<h2 id="section-1">7.4</h2>
-<p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank
-you!
-一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman's
-wharf，小龙虾很不喜欢就没久待。看了golden gate
-bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
-<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
-<p>好累，睡觉</p>
-<h2 id="section-2">7.5</h2>
-<p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a
-href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.
-回答被抢了，好烦。回去学衍生品。 买了件Berkeley的卫衣，好看
-妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
-<h2 id="section-3">7.6</h2>
-<p>推着婴儿车晨跑的 回答问题声音不够大，随意点 看Charlie
-Puth的concert很精彩，最后本来谢幕了，观众喊着“One more
-song”把Charlie喊回来了，唱一首see you
-again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天 1. 复习lec3 2.
-看handout，可以的话打印下来 3. 继续读课本，看完chap2</p>
-<h2 id="section-4">7.7</h2>
-<p>不出意外，计划没完成。早上睡到12点，醒来看到Carlo的消息说中午健身，但我一般学完后健身放松，就没去。吃饭后碰到小龙虾，去Moffit图书馆，没看到Carlo的消息，啧啧，又爽约了（我以为他不会去图书馆来着），难受。下午一直在敲latex，浪费时间，不过完成了复习。晚上和小龙虾看了场电影，蛮有意思，和国内影院很不一样。那边都是看老电影，有时有人来一段开场白，讲讲电影的背景之类，讲导演和演员，那些人名我都不认识，但老外很有共鸣。</p>
-<p>看完后去健身，有点自卑，因为菜。但其实没人注意我或怎么样的，所以挺好，自卑是自己脑补太多。谁不是从菜鸟上来的呢</p>
-<h2 id="section-5">7.8</h2>
-<p>学习，健身，学习</p>
-<h2 id="section-6">7.9</h2>
-<p>Sausalito，muir woods，黄绿发色妹妹聊天，oha bbq，德州</p>
-<h2 id="section-7">7.10</h2>
-<p>中国学生确实拉。教授上课问一下各国股市情况，Sweden
-guy回答的全面又流畅，对答如流，让教授有兴趣不断地问，让课堂变得有意思。到中国学生，我了解太少不知道怎么说，后面一个人在那乱说，教授也不知道他在讲什么，我也不知道，课堂很尴尬。再到German
-guy也是回答很自然、从容，懂的很多。相比之下中国学生很异类，就像一群人围桌聊天我们加入不进去。本来以为尴尬是正常的，结果发现中国人是尴尬制造者。</p>
-<p>下午跟Carlo去健身房，没想到健身房也很适合社交。等器械的时候，别人等器械的时候，就有两个人过来跟Carlo聊天，一个还加上ins约去夜店浪。没有找我，因为我一看就是弱鸡。虽说夜店什么的还是算了，我没满21岁。但健身是个must。</p>
-<blockquote>
-<p>强势文化造就强者，弱势文化造就弱者</p>
-</blockquote>
-<p>儒家文化是弱势文化，是别人打你左脸叫你把右脸也给他打。美国文化是叫你彪悍强壮，开大车，练肌肉，体育竞技。</p>
-<h2 id="section-8">7.11</h2>
-<p>scoop some pasta without mushrooms</p>
-<h2 id="section-9">7.15</h2>
-<p>Yosemite</p>
-<h2 id="section-10">7.16</h2>
-<p>回程，台球，期中考</p>
-<h2 id="section-11">7.17</h2>
-<p>basketball court, Jimmy, Ivan, Rahill, Tana</p>
-<h2 id="section-12">7.19</h2>
-<p>18,19颓废两天</p>
-<h2 id="section-13">7.20</h2>
-<p>好东西https://micromasters.mit.edu/dashboard</p>
-<h2 id="section-14">7.21</h2>
-<p>trust no one</p>
-<h2 id="section-15">7.24</h2>
-<p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley
-student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game
-night，Catan真的好玩，差点赢了/
-跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never
-mind。感觉来summer
-session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
-<p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that's
-all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot
-ask for more。</p>
-<p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but
-I still have to balance study time and play time, the most challenging
-thing for me. but I heard gym is opened very early, like 7am, check it
-tomorrow, and start to get up early.
-早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student
-union自习。早上学ODE和complex
-analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study
-lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
-<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
-<h2 id="section-16">7.25</h2>
-<p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。
-又一个好东西https://olympus.mygreatlearning.com/dashboard</p>
-<h2 id="section-17">7.27</h2>
-<p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：
-1. 健身 2. kaggle 3. 托福 4. ODE 5. 复变</p>
-<p>（出去玩的日子除外）</p>
 ]]></content>
       <categories>
-        <category>写点什么</category>
+        <category>杂项</category>
       </categories>
       <tags>
-        <tag>美国</tag>
-        <tag>暑假</tag>
+        <tag>艺术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>几何应用</title>
+    <url>/2023/08/08/ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
+class="math inline">\(\beta\)</span>.</p>
+<p><a href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/1331.jpg">Fig
+13.31</a></p>
+<p><span class="math display">\[
+\tan \beta=r\frac{d\theta}{dr}
+\]</span></p>
+<p><em>Proof</em>: <a
+href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
+here</a></p>
+<h1 id="trajectories">Trajectories</h1>
+<p>原则：<span class="math inline">\(末-初\)</span></p>
+<p><a href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/141.jpg">Isogonal
+Trajectories</a></p>
+<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
+\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
+\beta=\frac{m_1-m_2}{1+m_1m_2}
+\]</span></p>
+<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
+<span class="math display">\[
+y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+\]</span></p>
+<ol start="2" type="1">
+<li>Polar coordinates <a
+href="./ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/143.jpg">polar</a> <span
+class="math display">\[
+\phi_1=\phi_2+\frac{\pi}{2}
+\]</span> <span class="math display">\[
+\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
+\]</span> <span class="math display">\[
+\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+\]</span></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>ODE</tag>
+        <tag>Morris&amp;Harry</tag>
       </tags>
   </entry>
 </search>
