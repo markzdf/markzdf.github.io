@@ -114,6 +114,24 @@ micromaster</a></p></li>
 ]]></content>
   </entry>
   <entry>
+    <title>复变函数</title>
+    <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>网课：<a
+href="https://www.bilibili.com/video/BV1nt411p76Z/?p=2&amp;spm_id_from=pageDriver&amp;vd_source=0747a479964faef65dc22d966c973b66">西安交大</a>
+教材：<a
+href="./%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0.pdf">工程数学：复变函数</a>
+参考：<a
+href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/">MIT</a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>进阶</tag>
+        <tag>整理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>几何应用</title>
     <url>/2023/08/08/ODE%E5%87%A0%E4%BD%95%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
@@ -260,6 +278,7 @@ href="./%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/8.9%E4%BD%9C%E4%B8%9A.pdf"
       </categories>
       <tags>
         <tag>数模</tag>
+        <tag>整理</tag>
       </tags>
   </entry>
   <entry>
