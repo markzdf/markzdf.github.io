@@ -162,7 +162,9 @@ B(z;r)=\{w\in \mathbb{C}\big | |w-z|&lt;r\}
 <p><span class="math display">\[
 f: \Omega\rightarrow \mathbb{C}\quad \Omega\subset \mathbb{C}
 \]</span></p>
-<p>(connected open) domain</p>
+<p><span class="math inline">\(\Omega\)</span> 是 <span
+class="math inline">\(\mathbb{C}\)</span> 的一个(connected open)
+domain，现在在<span class="math inline">\(\Omega\)</span>上选一个点</p>
 <p><span class="math display">\[
 z_0\in \Omega
 \]</span></p>
@@ -178,15 +180,15 @@ class="math inline">\(f&#39;(z_0)\)</span></p>
 <hr />
 <p>If <span class="math inline">\(f\)</span> is diff. at every point of
 <span class="math inline">\(\Omega\)</span>, then we say <span
-class="math inline">\(f\)</span> is a helomorphic function
+class="math inline">\(f\)</span> is a holomorphic function
 （解析函数/全纯函数） on <span
 class="math inline">\(\Omega\)</span>.</p>
 <p><span class="math display">\[
-O(z)=\{\text{all of the helomorphic functions on }\Omega \}
+O(\Omega)=\{\text{all of the holomorphic functions on }\Omega \}
 \]</span></p>
 <p>有<span class="math inline">\(S\subset \mathbb{C}\)</span> set, <span
 class="math inline">\(f\in O(S)\)</span> means, <span
-class="math inline">\(f\)</span> is helomorphic on some open
+class="math inline">\(f\)</span> is holomorphic on some open
 neighborhood of <span class="math inline">\(S\)</span>.</p>
 <hr />
 <figure>
@@ -257,13 +259,14 @@ u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
 &amp;=0
 \end{aligned}
 \]</span></p>
+<p>在满足柯西黎曼方程的情况下</p>
 <p><span class="math display">\[
 \Leftrightarrow f\in O(\Omega)
 \]</span></p>
 <p>复变这门学问就是在研究这个方程式： <span class="math display">\[
 \frac{\partial u}{\partial \bar{z}}=g
 \]</span></p>
-<p><span class="math inline">\(g=0\)</span>，是解析函数</p>
+<p><span class="math inline">\(g=0\)</span>时，是解析函数</p>
 <hr />
 <p>讲点微积分。</p>
 <p><strong>Curve</strong></p>
@@ -273,14 +276,16 @@ u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
 <p><span class="math display">\[
 t\mapsto \gamma(t)=(x(t),y(t))
 \]</span></p>
+<p>应该是 <span class="math inline">\(t\in [a,b],\ \gamma(t)\in
+\mathbb{C}\)</span></p>
 <p><strong>Smooth curve</strong> <span class="math display">\[
-\gamma \in C^1([a,b]), r&#39;(t)\neq 0\ on\ (a,b)
+\gamma \in C^1([a,b]), \ and \ \ \gamma&#39;(t)\neq 0\ \ on\ \ (a,b)
 \]</span></p>
 <p><strong>Piecewise smooth</strong> <span class="math display">\[
 \gamma: [a,b]\rightarrow \mathbb{C}
 \]</span></p>
 <p><span class="math display">\[
-\exist P=\{a=t_0&lt;t_1&lt;\cdots &lt;t_{n-1}&lt;t_n=b\}
+\exists P=\{a=t_0&lt;t_1&lt;\cdots &lt;t_{n-1}&lt;t_n=b\}
 \]</span></p>
 <p><span class="math display">\[
 s.t. \quad \gamma \text{ is smooth on each }[t_{j-1},t_j], 1\leqslant
@@ -295,22 +300,65 @@ class="math inline">\(C^1\)</span> in some open neighborhood of <span
 class="math inline">\(\bar{D}\)</span>. Assume <span
 class="math inline">\(\partial D\)</span> is positively oriented.
 (沿边界走时domain在左边)</p>
+<p><span class="math inline">\(\bar{D}=cl (D)\)</span>, closure of <span
+class="math inline">\(D\)</span></p>
 <p>Then</p>
 <p><span class="math display">\[
 \oint_C Pdx+Qdy=\iint_D \left(\frac{\partial Q}{\partial
-x}-\frac{\partial p}{\partial y} \right)dxdy
+x}-\frac{\partial P}{\partial y} \right)dxdy
 \]</span></p>
 <hr />
 <p>Theo. Let <span class="math inline">\(D\)</span> be a <em>simply
 connected</em> domain in <span
 class="math inline">\(\mathbb{C}\)</span></p>
-<p>Suppose <span class="math inline">\(f\in C^1(\Omega)\)</span>, then
-<span class="math display">\[
-f\in O(\Omega)\Leftrightarrow \oint_{\tau} f(z)dz=0
+<p>Suppose <span class="math inline">\(f\in C^1(D)\)</span>, then <span
+class="math display">\[
+f\in O(D)\Leftrightarrow \oint_{\tau} f(z)dz=0
 \]</span></p>
-<p>for every piecewise smooth simply closed curve <span
-class="math inline">\(\tau\)</span> in <span
+<p>for every piecewise smooth <code>simple</code> <code>closed</code>
+curve <span class="math inline">\(\tau\)</span> in <span
 class="math inline">\(D\)</span></p>
+<p><code>simply connected</code> 说明两件事 1. arcwise connected：
+任何两个点都能用arc连起来 2. <span
+class="math inline">\(\pi_1(D)=0\)</span>：
+domain内每个封闭曲线都能缩成一个点（没有洞）</p>
+<p><code>simple</code>：曲线除了起点和终点都不会自我相交</p>
+<p><code>closed</code>：起点和终点是同一个点</p>
+<figure>
+<img src="gamma.png" alt="gamma" />
+<figcaption aria-hidden="true">gamma</figcaption>
+</figure>
+<p><span class="math inline">\(\Omega\)</span>: region surrounded by
+<span class="math inline">\(\Gamma\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\oint_{\Gamma} f(z)dz &amp; = \oint_{\Gamma}f(z)(dx+idy)  \\
+&amp; = \iint_{\Omega}\left(i\frac{\partial f}{\partial
+x}-\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = i\iint_{\Omega}\left(\frac{\partial f}{\partial
+x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = 2i\iint_{\Omega}\frac{\partial f}{\partial \bar{z}}dxdy  
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\oint_{\Gamma} f(z)dz=0\Leftrightarrow \frac{\partial f}{\partial
+\bar{z}}=0\  on\  D.\  \blacksquare
+\]</span></p>
+<p>Theo: (<code>Cauchy's integral formula</code>) Let <span
+class="math inline">\(D\)</span> be a bounded domain in <span
+class="math inline">\(\mathbb{C}\)</span> with piecewise smooth
+doundary. Suppose <span class="math inline">\(f\in
+C^1(\bar{D})\)</span>, Then <span class="math display">\[
+f(z)=\frac{1}{2\pi i}\oint_{\partial
+D}\frac{f(w)}{w-z}dw-\frac{1}{\pi}\iint_D
+\frac{\displaystyle{\frac{\partial f}{\partial
+\bar{w}}}(w)}{w-z}dxdy,\quad z\in D
+\]</span></p>
+<p>where <span class="math inline">\(w=x+iy\)</span>.</p>
+<figure>
+<img src="柯西积分.png" alt="z" />
+<figcaption aria-hidden="true">z</figcaption>
+</figure>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -343,21 +391,6 @@ class="math inline">\(D\)</span></p>
 
     </div>
 </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
