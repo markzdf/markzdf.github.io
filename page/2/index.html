@@ -1,300 +1,1102 @@
-
 <!DOCTYPE html>
-<html lang="en" class="loading">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Arson</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Arson,"> 
-    
-    <meta name="author" content="Mark Zhu"> 
-    <link rel="alternative" href="atom.xml" title="Arson" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.jpg"> 
-    
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-    
-    
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Arson"/>
-    
-    
-    
-    
-    
-    <meta property="og:site_name" content="Arson"/>
-    <meta property="og:type" content="object"/>
-    <meta property="og:title" content="Arson"/>
-    
-    
-<link rel="stylesheet" href="/css/diaspora.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <script>window.searchDbPath = "/search.xml";</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-<meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="/css/main.css">
 
-<body class="loading">
-    <span id="config-title" style="display:none">Arson</span>
-    <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/transcript/" title="成绩" target="_blank" rel="noopener">成绩</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="https://www.linkedin.com/in/mark-zhu-a1b139285" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="https://github.com/markzdf" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="https://www.instagram.com/markzzzdf" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="mailto:cabbagedafu@gmail.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2023 Mark Zhu.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-    </p>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Arson">
+<meta property="og:url" content="https://markzdf.github.io/page/2/index.html">
+<meta property="og:site_name" content="Arson">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Mark Zhu">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://markzdf.github.io/page/2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Arson</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Arson</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
 </div>
 
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/cover_17.jpeg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-    </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mark Zhu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
         </div>
+      </div>
     </div>
+
     
-    <div id="post0">
-        <p>七月 29, 2023</p>
-        <h2><a href="/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/" title="回家前" class="posttitle">回家前</a></h2>
-        <p class="summary">飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。
-Los Ange...</p>
+  </aside>
+
+
     </div>
+
+    <div class="main-inner index posts-expand">
+
     
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决hexo本地和部署不一致问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-31 00:00:36" itemprop="dateCreated datePublished" datetime="2023-07-31T00:00:36-07:00">2023-07-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:26:21" itemprop="dateModified" datetime="2023-08-17T13:26:21-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-    <div id="primary">
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<figure>
+<img src="branch.png" alt="branch" />
+<figcaption aria-hidden="true">branch</figcaption>
+</figure>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<figure>
+<img src="new.png" alt="new" />
+<figcaption aria-hidden="true">new</figcaption>
+</figure>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
+<code>main</code>。</p>
+<figure>
+<img src="default.png" alt="default" />
+<figcaption aria-hidden="true">default</figcaption>
+</figure>
+<p>接着在 Settings 的 Default branch 一栏点击<span
+class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
+<code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<figure>
+<img src="pages.png" alt="pages" />
+<figcaption aria-hidden="true">pages</figcaption>
+</figure>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
+main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code>
+内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
+<ol type="1">
+<li><p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/" class="post-title-link" itemprop="url">如何在macOS环境下配置hexo</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-30 09:26:08" itemprop="dateCreated datePublished" datetime="2023-07-30T09:26:08-07:00">2023-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:25:09" itemprop="dateModified" datetime="2023-08-17T13:25:09-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>原先用typecho搭建的<a
+target="_blank" rel="noopener" href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
+target="_blank" rel="noopener" href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
+<h1 id="准备工作">准备工作</h1>
+<p>官方文档给出的前置应用程序是 1. <a
+target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js</a> 2. Git</p>
+<p>第一个直接点进去下载即可，第二个需要先安装<a
+target="_blank" rel="noopener" href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
+<p>接下来可以安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/mac">Git</a>,
+终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h2 id="测试是否安装成功">测试是否安装成功</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo">安装Hexo</h1>
+<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>初始化博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
+<code>blog</code>
+的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>此时已经能生成并在本地预览你的博客雏形啦</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="hexo指令">Hexo指令</h2>
+<p>这里介绍几种常用的Hexo指令，</p>
+<ol type="1">
+<li><code>hexo generate</code> 网站生成</li>
+<li><code>hexo server</code>
+启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
+<li><code>hexo deploy</code> 部署网站，在生成之后</li>
+</ol>
+<p>以上三种都可以用首字母简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="部署网站到github">部署网站到Github</h1>
+<p>首先登陆Github，</p>
+<h2 id="添加ssh-key">添加SSH Key</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>username</code> 是你的用户名，
+<code>example@example.com</code>
+是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
+，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
+<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
+<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
+<code>id_rsa.pub</code> ，复制所有文字。</p>
+<p>接着打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH
+keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
+不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
+<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
+but Github does not procide shell access.</p>
+<p>则说明配置成功</p>
+<h2 id="上传本地文件">上传本地文件</h2>
+<p>在Github上新建一个仓库，Repository Name
+填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
+Repository 创建新的网站仓库。</p>
+<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
+缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
+bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
+1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
+3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
+等命令执行完后，运行<code>npm install</code></p>
+<p>可以解决 EACCES 的问题，亲测有效</p>
+<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>修改后保存，在终端上输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
+<p><strong>参考资料</strong> 1. <a
+target="_blank" rel="noopener" href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
+OS环境下使用Hexo搭建个人博客</a></p>
+<ol start="2" type="1">
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/" class="post-title-link" itemprop="url">回家前</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-29 18:36:59" itemprop="dateCreated datePublished" datetime="2023-07-29T18:36:59-07:00">2023-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:26:01" itemprop="dateModified" datetime="2023-08-17T13:26:01-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%85%E6%B8%B8/" itemprop="url" rel="index"><span itemprop="name">旅游</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。</p>
+<h2 id="los-angeles">Los Angeles</h2>
+<p>行：Aug 12，OAK-LA，$35.4（2人）</p>
+<figure>
+<img src="oak-la_230729.png" alt="oak-la_230729" />
+<figcaption aria-hidden="true">oak-la_230729</figcaption>
+</figure>
+<p>住：<a
+target="_blank" rel="noopener" href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>,
+8.12-14（2晚），235🔪</p>
+<p>玩：<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith
+Observatory</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%B0%8F%E4%B8%9C%E4%BA%AC/@34.0540611,-118.2515738,15z/data=!4m6!3m5!1s0x80c2c64f59427c77:0xf14f36b65ce4fe04!8m2!3d34.0523392!4d-118.2395052!16zL20vMDQ0MHFj?entry=ttu">小东京</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E4%B8%AD%E5%BF%83/@34.0667864,-118.5583605,13z/data=!4m10!1m2!2m1!1sGetty+Center!3m6!1s0x80c2bcd74227366f:0xda784a5a15aaaa25!8m2!3d34.0780358!4d-118.4740954!15sCgxHZXR0eSBDZW50ZXKSAQphcnRfbXVzZXVt4AEA!16zL20vMDFtdmw2?entry=ttu">Getty
+Center</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E9%83%A1%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0629639,-118.3302146,11.33z/data=!4m6!3m5!1s0x80c2b93cca9c7ab1:0x9b191d3aac3e37!8m2!3d34.0639323!4d-118.3592293!16zL20vMDIwczAw?entry=ttu">LACMA</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6/@34.0699025,-118.5309981,11z/data=!4m6!3m5!1s0x80c2bc85f05c0f65:0x25a993585c134837!8m2!3d34.0699182!4d-118.4438495!16zL20vMDlmMmo?entry=ttu">UCLA</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E7%9B%96%E8%92%82%E5%88%AB%E5%A2%85%E5%8D%9A%E7%89%A9%E9%A6%86/@34.0458857,-118.5674357,17z/data=!3m2!4b1!5s0x80c2a3e8eae80b0f:0xb825fcec44808770!4m6!3m5!1s0x80c2a3e91a700d07:0xe4f98965af6ca4b0!8m2!3d34.0458857!4d-118.5648608!16zL20vMDlndzEy?entry=ttu">Getty
+Villa</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%8E%AB%E5%B0%BC%E5%8D%A1/@34.0218536,-118.5220409,13z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cec2910019:0xb4170ab5ff23f5ab!8m2!3d34.0194543!4d-118.4911912!16zL20vMDZfa2g?entry=ttu">Santa
+Monica</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/Venice+Beach/@33.9799712,-118.508785,14z/data=!3m1!4b1!4m6!3m5!1s0x80c2baa4ba9b5de7:0x605f44ea42d6b278!8m2!3d33.9932584!4d-118.480598!16s%2Fg%2F11h1klws4?entry=ttu">Venice
+Beach</a></p>
+<p>环球影城无聊，不去。8.12早上到，先逛再入住。逛小东京，吃饭。下午逛LACMA。约5点，去天文台看日落（徒步/巴士）。8.13去UCLA，Getty
+center，Getty villa(optional)。下午去Santa Monica海滩和Venice
+Beach。8.14退房。</p>
+<p>LACMA<a
+target="_blank" rel="noopener" href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21</p>
+<p>Griffith门票免费，不用预约，<a
+target="_blank" rel="noopener" href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
+<p>[Griffith_Park_Map.pdf][2]</p>
+<p>Getty center和Getty villa免费但要<a
+target="_blank" rel="noopener" href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
+<figure>
+<img src="laplay_230729.png" alt="LA.png" />
+<figcaption aria-hidden="true">LA.png</figcaption>
+</figure>
+<h2 id="san-diego">San Diego</h2>
+<p>行：坐火车到Santa Fe Depot，<a
+target="_blank" rel="noopener" href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时。是中午12:10的那班，再早只有7点的了就太早。</p>
+<p>住：<a
+target="_blank" rel="noopener" href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$378</p>
+<p>玩：<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp
+Quarter</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E5%B7%B4%E5%B0%94%E6%B3%A2%E4%BA%9A%E5%85%AC%E5%9B%AD/@32.7341479,-117.1471279,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95496fa70cb03:0xedf30b3cb015f6c4!8m2!3d32.7341479!4d-117.144553!16zL20vMDMzem4w?entry=ttu">Balboa
+Park</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E8%80%81%E5%9F%8E%E5%9C%A3%E8%BF%AD%E6%88%88%E5%B7%9E%E7%AB%8B%E5%8E%86%E5%8F%B2%E5%85%AC%E5%9B%AD/@32.7549063,-117.2002156,17z/data=!3m1!4b1!4m6!3m5!1s0x80deaae75babd37b:0x5e830c04f3dd75b9!8m2!3d32.7549063!4d-117.1976407!16zL20vMDRjNmdq?entry=ttu">老城</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E6%8B%89%E9%9C%8D%E4%BA%9A%E6%B5%B7%E6%B9%BE/@32.8504816,-117.2774125,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu">La
+Jolla Cove</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/Geisel+Library/@32.8810919,-117.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc07853cb13045:0x2d2f19f483aaaace!8m2!3d32.881092!4d-117.2375659!16zL20vMGYyOXpw?entry=ttu">Geisel
+library</a>，<a
+target="_blank" rel="noopener" href="https://www.google.com/maps/place/%E4%B8%AD%E9%80%94%E5%B2%9B%E5%8F%B7%E5%8D%9A%E7%89%A9%E9%A6%86/@32.7136878,-117.1798484,17z/data=!4m14!1m7!3m6!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!2z5Lit6YCU5bKb5Y-35Y2a54mp6aaG!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38!3m5!1s0x80d954ab2a6e80c1:0xfbb78930404553b2!8m2!3d32.7137398!4d-117.1751265!16s%2Fm%2F027yb38?entry=ttu">Midway
+Museum</a>，UCSD</p>
+<p>市中心的煤气灯街区看起来有点意思。老城是拉美风格。Balboa是欧式建筑，不用门票，看风景。海洋世界很有名，但门票太贵不划算。La
+Jolla能看到一堆海豹。</p>
+<blockquote>
+<p>从 La Jolla Cove 向西走10分钟，有个叫 Children's Pool
+的小海湾，这里的海豹特别多</p>
+</blockquote>
+<p>观鲸出海，要<a
+target="_blank" rel="noopener" href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。系统一直无法支付，就算了。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看（不知道为什么必看），门票31刀，要<a
+target="_blank" rel="noopener" href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。（后来支付失败了，白嫖一张门票）</p>
+<figure>
+<img src="sdplay_230729.png" alt="SD.png" />
+<figcaption aria-hidden="true">SD.png</figcaption>
+</figure>
+<h2 id="回程">回程</h2>
+<p>8.17回，下午2:20pm，<a
+target="_blank" rel="noopener" href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
+<figure>
+<img src="sd-oak_230729.png" alt="flight_back.png" />
+<figcaption aria-hidden="true">flight_back.png</figcaption>
+</figure>
+<h2 id="budget">Budget</h2>
+<p>Trip：(35.4+72+63.8)/2=85.6</p>
+<p>Live：(246+378)/2=312</p>
+<p>T&amp;L: 86+312=<strong>$398</strong></p>
+<p>Ticket：21</p>
+<h1 id="出发">出发</h1>
+<p><strong>8.12</strong></p>
+<p>在奥克兰机场睡了一晚，本以为会很乱很危险，但因为机场在岛上远离市中心，环境还是很好的。做廉价spirit航班，体验比想象中好，至少没坠机且途中能让我睡着。到洛杉矶的时候还很早，先去了离机场很近的Santa
+Monica海滩，和Venice
+Beach，有点阴天，但海很开阔且人相对少，比大梅沙好多了。很多人在冲浪，充满活力，蛮喜欢的。</p>
+<figure>
+<img src="Santa_Monica.png" alt="Santa Monica" />
+<figcaption aria-hidden="true">Santa Monica</figcaption>
+</figure>
+<p>下午跟xlx去ucla闲逛，但他什么话也不说就一个劲的走，挺无语的，主要是我很累，就分头行动了。去了LACMA，司机说相对于艺术，它主要讲的是洛杉矶历史，诚哉斯言。花了$21门票，觉得东西有点少，还有有一部分在建。不过也有些喜欢的作品，毕加索不少画都在这边</p>
+<figure>
+<img src="picasso.png" alt="Picasso" />
+<figcaption aria-hidden="true">Picasso</figcaption>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="a.png" alt="图片A" /></td>
+<td style="text-align: center;"><img src="b.png" alt="图片B" /></td>
+</tr>
+</tbody>
+</table>
+<p>晚上本来想去Griffith看日落，但等公交浪费太久时间，来不及了，只好明天再看。但我想着出都出来了，索性去别处逛逛，就坐metro去小东京。地铁又脏又臭，大麻和汗水味纠缠在一起，让人作呕。下车后走了一段，沿途很多homeless，路上也脏的不行，一度很崩溃。当终于看到日文招牌时真的感觉像回到家一样。</p>
+<figure>
+<img src="小东京.png" alt="小东京" />
+<figcaption aria-hidden="true">小东京</figcaption>
+</figure>
+<p>我八月刚开始就一直homesick，想着国内的各种好。但这一刻我发觉，这是另一种形式的culture
+shock，只不过我一直没表现出来，自己也不知道。中日文化相近，同根同源，文化的亲和让我有种回家的感觉，国籍并不是边界，文化认同才是。随便找了个餐馆随便点了份おやこどん，非常幸福。</p>
+<figure>
+<img src="亲子.png" alt="親子丼" />
+<figcaption aria-hidden="true">親子丼</figcaption>
+</figure>
+<p><strong>8.13</strong></p>
+<p>起个大早去Getty
+Center，等公交花了好长时间，结果到的很晚。我下车后徒步过去，走到一半没路了，看到Getty内部人员的通道，就去问我该怎样走进去。结果那人说：你在这坐会，待会有人来接你；就把我载上去了，直接到艺术馆。emm有点无语但很感激～</p>
+<p>Getty里面超大，展品很密集，而每一幅都是能在画前欣赏很久的。我很喜欢painting，尤其19世纪以后的，但不喜欢sculpture。看画展有种读故事的感觉，读作者，读ta画的内容和现实背景，因此每幅画有至少三篇故事可读，非常有意思。看到了莫奈的日出印象和梵高的鸢尾花，后者实在是太popular了以致画前堆了两三圈人。逛了4小时，拍了很多照片。我打算回国后仔细研究下感兴趣的这些画，整理一下。</p>
+<p>晚上和atsushi在Griffith天文台见面，背着落日拍了张合照，这么短的时间里结识到这样的朋友有点感动。日本人很客气，相处起来很舒服。下山路上我们什么都聊，怪有意思的。去了uber司机大哥推荐的sushistop，还真不错，价格也不算贵。在地铁站和atsushi拥抱告别，下次见面不知道是几年后。他目送我坐上地铁，在我离开他视线时再次挥手，我也在挥手，然后地铁把我越拉越远，很从容很美妙的告别。</p>
+<p><strong>8.14</strong> 出发去San
+Diego。刚一来就喜欢上这个城市：街道比LA干净，流浪汉没见到几个，周边有工地和高楼大厦——感觉回国了。对美国的最高评价便是如此。整顿完后已经有点晚，5pm的样子，我决定去Coronado岛上看一看，正好那边有小红书推荐的餐厅，Lobster
+West，吃龙虾卷。沿路一直被amaze，干净准时的公交，well-designed的公交线路，大桥上的俯瞰海景，都太可爱。岛上全是别墅，典型白人富人区，以后来这边买套房养老。xlx说这里的感觉和Florida一模一样。我们就朝着餐厅的大致方向随便乱走，至于哪个block右拐过马路无所谓，在这边走路本身就是享受。</p>
+<p>龙虾卷超好吃，底下面包烤的很香，龙虾也是超多超新鲜。必须要在这边买房了，这样天天能吃到。</p>
+<figure>
+<img src="lobster.png" alt="龙虾卷" />
+<figcaption aria-hidden="true">龙虾卷</figcaption>
+</figure>
+<p><strong>8.15</strong></p>
+<p>中途岛号没什么好看的，都是些老旧的飞机，我也不是军迷。甲板上海风超大，对面港口停着三艘现役的航母：CVN70,CVN71,CVN72，分别是文森号、罗斯福号和林肯号。</p>
+<figure>
+<img src="航母.png" alt="航母" />
+<figcaption aria-hidden="true">航母</figcaption>
+</figure>
+<p>手机没电了，于是去UCSD找了个地方充。我问了个学生student
+union在哪，他不知道，我说没关系。结果往前走了几分钟他从后面追上来，给我介绍一些student
+union替代品，比如price center、geisel library啊，好热情哦。去price
+center充了会电，又去geisel学了一两个小时。图书馆超大，8层楼，除了顶层是学习区，其他楼层都有满满的书，<code>48排书架</code>，第四层甚至全都是关于
+East Asia 的书。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="library.png"
+alt="图片1" /></td>
+<td style="text-align: center;"><img src="street.png"
+alt="图片2" /></td>
+</tr>
+</tbody>
+</table>
+<p>讲真，如果是让我从ucb和ucsd里选，我会选uscd。</p>
+<p>晚上逛了逛煤气灯街区，灯红酒绿，美女很多，主题词
+<code>声色犬马</code>。全都是很嗨的bar，但我只想找个地方吃晚饭。小姐姐服务很周到，小费是自动按<code>5%</code>算的，我本来还以为会让我在机子上选15%,20%,25%，预估$60的餐实际上只有$51，surplus也赚麻了，不错。</p>
+<figure>
+<img src="rustic.png" alt="Rustic Root" />
+<figcaption aria-hidden="true">Rustic Root</figcaption>
+</figure>
+<blockquote>
+<p>Reference: https://www.meilvtong.com/viewthread.php?tid=24
+https://www.meilvtong.com/viewthread.php?tid=11
+https://www.guruin.com/articles/855</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">六月总结</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-29 18:30:25" itemprop="dateCreated datePublished" datetime="2023-07-29T18:30:25-07:00">2023-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:25:50" itemprop="dateModified" datetime="2023-08-17T13:25:50-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">随记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>早上八点，太平洋上空</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
-<div class="post">
-    <a href="/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/" title="回家前">
-        <img src="/img/cover_8.jpeg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>七月 29, 2023</p>
-        <h3><a href="/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/" title="回家前" class="posttitle">回家前</a></h3>
-        <p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。
-Los Angeles
-行：Aug 12，OAK-LA，...</p>
+      
     </div>
-</div>
 
-
-<div class="post">
-    <a href="/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/" title="六月总结">
-        <img src="/img/cover_5.jpeg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>七月 29, 2023</p>
-        <h3><a href="/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/" title="六月总结" class="posttitle">六月总结</a></h3>
-        <p>早上八点，太平洋上空
-
-六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/" title="不必再等">
-        <img src="/img/cover_4.jpeg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>七月 29, 2023</p>
-        <h3><a href="/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/" title="不必再等" class="posttitle">不必再等</a></h3>
-        <p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。
-
-平时学的少，总想着，还有明天，离考试还远。从时间价...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2023/07/29/ucb%E6%9A%91%E5%81%87/" title="ucb暑假">
-        <img src="/img/cover_3.jpeg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>七月 29, 2023</p>
-        <h3><a href="/2023/07/29/ucb%E6%9A%91%E5%81%87/" title="ucb暑假" class="posttitle">ucb暑假</a></h3>
-        <p>Websites
-Visa I-20
-Interview I-901&amp;SEVIS
-Campus SAF
-CalCentral bcourse DS...</p>
-    </div>
-</div>
-
-
-    </div>
     
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 </div>
-<div id="preview"></div>
 
 
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/" class="post-title-link" itemprop="url">不必再等</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-29 18:26:57" itemprop="dateCreated datePublished" datetime="2023-07-29T18:26:57-07:00">2023-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:25:43" itemprop="dateModified" datetime="2023-08-17T13:25:43-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">随记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/29/ucb%E6%9A%91%E5%81%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/29/ucb%E6%9A%91%E5%81%87/" class="post-title-link" itemprop="url">ucb暑假</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-07-29 18:23:39" itemprop="dateCreated datePublished" datetime="2023-07-29T18:23:39-07:00">2023-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-17 13:25:30" itemprop="dateModified" datetime="2023-08-17T13:25:30-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">随记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="websites">Websites</h1>
+<p><strong>Visa</strong> <a
+target="_blank" rel="noopener" href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
+<a target="_blank" rel="noopener" href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
+target="_blank" rel="noopener" href="http://www.fmjfee.com">I-901&amp;SEVIS</a></p>
+<p><strong>Campus</strong> <a
+target="_blank" rel="noopener" href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
+<a target="_blank" rel="noopener" href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
+target="_blank" rel="noopener" href="https://bcourses.berkeley.edu/">bcourse</a> <a
+target="_blank" rel="noopener" href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></p>
+<h1 id="diary">Diary</h1>
+<h2 id="section">7.3</h2>
+<p>听Magin的话把social network换成了financial
+derivatives。这门课在系统上显示是special topics in
+finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
+<p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired
+of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish
+girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
+<p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
+<p>躺在床上又想起些细节。早上去吃饭见人就说good
+morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank
+you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first
+hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
+<h2 id="section-1">7.4</h2>
+<p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank
+you!
+一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman's
+wharf，小龙虾很不喜欢就没久待。看了golden gate
+bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
+<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
+<p>好累，睡觉</p>
+<h2 id="section-2">7.5</h2>
+<p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a
+target="_blank" rel="noopener" href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.
+回答被抢了，好烦。回去学衍生品。 买了件Berkeley的卫衣，好看
+妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
+<h2 id="section-3">7.6</h2>
+<p>推着婴儿车晨跑的 回答问题声音不够大，随意点 看Charlie
+Puth的concert很精彩，最后本来谢幕了，观众喊着“One more
+song”把Charlie喊回来了，唱一首see you
+again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天 1. 复习lec3 2.
+看handout，可以的话打印下来 3. 继续读课本，看完chap2</p>
+<h2 id="section-4">7.7</h2>
+<p>不出意外，计划没完成。早上睡到12点，醒来看到Carlo的消息说中午健身，但我一般学完后健身放松，就没去。吃饭后碰到小龙虾，去Moffit图书馆，没看到Carlo的消息，啧啧，又爽约了（我以为他不会去图书馆来着），难受。下午一直在敲latex，浪费时间，不过完成了复习。晚上和小龙虾看了场电影，蛮有意思，和国内影院很不一样。那边都是看老电影，有时有人来一段开场白，讲讲电影的背景之类，讲导演和演员，那些人名我都不认识，但老外很有共鸣。</p>
+<p>看完后去健身，有点自卑，因为菜。但其实没人注意我或怎么样的，所以挺好，自卑是自己脑补太多。谁不是从菜鸟上来的呢</p>
+<h2 id="section-5">7.9</h2>
+<p>Sausalito，muir woods，跟黄绿发色妹妹聊天，oha bbq超好吃，德州</p>
+<h2 id="section-6">7.10</h2>
+<p>中国学生确实拉。教授上课问一下各国股市情况，Sweden
+guy回答的全面又流畅，对答如流，让教授有兴趣不断地问，让课堂变得有意思。到中国学生，我了解太少不知道怎么说，后面一个人在那乱说，教授也不知道他在讲什么，我也不知道，课堂很尴尬。再到German
+guy也是回答很自然、从容，懂的很多。相比之下中国学生很异类，就像一群人围桌聊天我们加入不进去。本来以为尴尬是正常的，结果发现中国人是尴尬制造者。</p>
+<p>下午跟Carlo去健身房，没想到健身房也很适合社交。等器械的时候，别人等器械的时候，就有两个人过来跟Carlo聊天，一个还加上ins约去夜店浪。没有找我，因为我一看就是弱鸡。虽说夜店什么的还是算了，我没满21岁。但健身是个must。</p>
+<blockquote>
+<p>强势文化造就强者，弱势文化造就弱者</p>
+</blockquote>
+<p>儒家文化是弱势文化，是别人打你左脸叫你把右脸也给他打。美国文化是叫你彪悍强壮，开大车，练肌肉，体育竞技。</p>
+<h2 id="section-7">7.20</h2>
+<p>好东西https://micromasters.mit.edu/dashboard</p>
+<h2 id="section-8">7.21</h2>
+<p>trust no one</p>
+<h2 id="section-9">7.24</h2>
+<p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley
+student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game
+night，Catan真的好玩，差点赢了/
+跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never
+mind。感觉来summer
+session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
+<p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that's
+all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot
+ask for more。</p>
+<p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but
+I still have to balance study time and play time, the most challenging
+thing for me. but I heard gym is opened very early, like 7am, check it
+tomorrow, and start to get up early.
+早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student
+union自习。早上学ODE和complex
+analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study
+lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
+<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
+<h2 id="section-10">7.25</h2>
+<p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。</p>
+<h2 id="section-11">7.27</h2>
+<p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：
+1. 健身 2. kaggle 3. 托福 4. ODE 5. 复变</p>
+<p>（出去玩的日子除外）</p>
+<h2 id="section-12">8.8</h2>
+<p>第六周，想家。坐在图书馆抬起头看到天窗，第一个想起厦大的访客中心，也有个天窗，在演武场旁边的草丛里。这边是不是也把天窗藏草丛里呢？</p>
+<p><a href="./ucb%E6%9A%91%E5%81%87/1554.png">抬头</a></p>
+<p>在宿舍大堂看别人弹琴，就想起高二的那个学期，吃完晚饭去练电子琴，琴声还没从脑海散去就迎来晚自习的铃声，在凤凰花树下甩着饮料瓶回教室，走到B栋回头看，钥匙妹还在举着双手，但天已经渐渐暗了。往自己座位一钻，沉浸在必刷题、王后雄中间，多么满足。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Mark Zhu</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
 </body>
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
-
-
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-
-
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    });
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-
-
-
 </html>
