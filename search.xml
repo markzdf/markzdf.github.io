@@ -1511,226 +1511,469 @@ https://www.guruin.com/articles/855</p>
   <entry>
     <title>复变函数</title>
     <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p>网课：<a href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
-<p>官网：<a href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
-<p>教材：<a href="/download/RP_Boas.pdf">Invitation to complex analysis</a></p>
+    <content><![CDATA[<p>网课：<a
+href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
+<p>官网：<a
+href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
+<p>教材：<a href="/download/RP_Boas.pdf">Invitation to complex
+analysis</a></p>
 <p>习题：<a href="/download/exercise.pdf">西交大-复变函数</a></p>
 <p><a href="https://excalidraw.com/">快速作图</a></p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>Complex numbers $\mathbb{C}$</p>
-<script type="math/tex; mode=display">
-(a,b)\quad a,b\in \mathbb{R}</script><p>Define operations $+,\cdot$</p>
-<ol>
-<li>$(a,b)+(c,d)=(a+c,b+d)$</li>
-<li>$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$</li>
+<h1 id="lecture-1">Lecture 1</h1>
+<p>Complex numbers <span class="math inline">\(\mathbb{C}\)</span></p>
+<p><span class="math display">\[
+(a,b)\quad a,b\in \mathbb{R}
+\]</span></p>
+<p>Define operations <span class="math inline">\(+,\cdot\)</span></p>
+<ol type="1">
+<li><span class="math inline">\((a,b)+(c,d)=(a+c,b+d)\)</span></li>
+<li><span class="math inline">\((a,b)\cdot
+(c,d)=(ac-bd,ad+bc)\)</span></li>
 </ol>
-<p>$\therefore \mathbb{C}$形成一个 <a href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B0%E5%AD%A6">field</a>)</p>
-<hr>
-<script type="math/tex; mode=display">
-\mathbb{R}\quad a\in \mathbb{R}</script><script type="math/tex; mode=display">
-a\mapsto (a,0)</script><script type="math/tex; mode=display">
-(a,0)\cdot (c,d)=(ac,ad)</script><script type="math/tex; mode=display">
-a(c,d)=(ac,ad)</script><script type="math/tex; mode=display">
-(0,1)\cdot (0,1)=(0-1,0)=(-1,0)</script><p>denote $(0,1)=i$, $i^2=-1$, $x^2+1=0$.</p>
-<hr>
-<script type="math/tex; mode=display">
-z\in \mathbb{C}\rightarrow z=a+ib</script><script type="math/tex; mode=display">
+<p><span class="math inline">\(\therefore \mathbb{C}\)</span>形成一个 <a
+href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B0%E5%AD%A6)">field</a></p>
+<hr />
+<p><span class="math display">\[
+\mathbb{R}\quad a\in \mathbb{R}
+\]</span></p>
+<p><span class="math display">\[
+a\mapsto (a,0)
+\]</span></p>
+<p><span class="math display">\[
+(a,0)\cdot (c,d)=(ac,ad)
+\]</span></p>
+<p><span class="math display">\[
+a(c,d)=(ac,ad)
+\]</span></p>
+<p><span class="math display">\[
+(0,1)\cdot (0,1)=(0-1,0)=(-1,0)
+\]</span></p>
+<p>denote <span class="math inline">\((0,1)=i\)</span>, <span
+class="math inline">\(i^2=-1\)</span>, <span
+class="math inline">\(x^2+1=0\)</span>.</p>
+<hr />
+<p><span class="math display">\[
+z\in \mathbb{C}\rightarrow z=a+ib
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-z&=(a,b)\\
-&=(a,0)+(0,b)\\
-&=a+b(0,1)\\
-&=a+ib
-\end{aligned}</script><p>$a=\Re z$, real part</p>
-<p>$b=\Im z$, imaginary part</p>
-<p>$|z|=\sqrt{a^2+b^2}$, modulus</p>
-<p>$\bar{z}=a-ib$, complex conjugate</p>
-<hr>
-<script type="math/tex; mode=display">
-z,w\in \mathbb{C}</script><p>Define</p>
-<script type="math/tex; mode=display">
-d(z,w)=|z-w|</script><p>Thus: $z,w\in \mathbb{C}$</p>
-<script type="math/tex; mode=display">
-|z+w|\leqslant |z|+|w|</script><p>$(\mathbb{C},d)$: <a href="https://en.wikipedia.org/wiki/Metric_space">metric space</a></p>
-<p>open ball centered at $z$ with radius $r$</p>
-<script type="math/tex; mode=display">
-B(z;r)=\{w\in \mathbb{C}\big | |w-z|<r\}</script><hr>
-<script type="math/tex; mode=display">
-f: \Omega\rightarrow \mathbb{C}\quad \Omega\subset \mathbb{C}</script><p>$\Omega$ 是 $\mathbb{C}$ 的一个(connected open) domain，现在在$\Omega$上选一个点</p>
-<script type="math/tex; mode=display">
-z_0\in \Omega</script><p>$f$ is said to be differentiable at $z<em>0$, if $\displaystyle{\lim</em>{z\rightarrow z_0}\frac{f(z)-f(z_0)}{z-z_0}}$ exists, denoted by $f’(z_0)$</p>
-<p><img src="1.1.png" alt="任何方式逼近"></p>
-<hr>
-<p>If $f$ is diff. at every point of $\Omega$, then we say $f$ is a holomorphic function （解析函数/全纯函数） on $\Omega$.</p>
-<script type="math/tex; mode=display">
-O(\Omega)=\{\text{all of the holomorphic functions on }\Omega \}</script><p>有$S\subset \mathbb{C}$ set, $f\in O(S)$ means, $f$ is holomorphic on some open neighborhood of $S$.</p>
-<hr>
-<p><img src="1.2.png" alt="x"></p>
-<p><img src="1.3.png" alt="y"></p>
-<script type="math/tex; mode=display">
-\frac{\partial u}{\partial x}(z_0)=\frac{\partial v}{\partial y}(z_0)</script><script type="math/tex; mode=display">
-\frac{\partial u}{\partial y}(z_0)=-\frac{\partial v}{\partial x}(z_0)</script><p><code>Cauchy-Riemann eq.</code></p>
-<hr>
-<p>可导 $\Rightarrow$ 柯西黎曼方程，但柯西黎曼方程 $\nRightarrow$ 可导</p>
-<p>例. </p>
-<script type="math/tex; mode=display">
+z&amp;=(a,b)\\
+&amp;=(a,0)+(0,b)\\
+&amp;=a+b(0,1)\\
+&amp;=a+ib
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(a=\Re z\)</span>, real part</p>
+<p><span class="math inline">\(b=\Im z\)</span>, imaginary part</p>
+<p><span class="math inline">\(|z|=\sqrt{a^2+b^2}\)</span>, modulus</p>
+<p><span class="math inline">\(\bar{z}=a-ib\)</span>, complex
+conjugate</p>
+<hr />
+<p><span class="math display">\[
+z,w\in \mathbb{C}
+\]</span></p>
+<p>Define <span class="math display">\[
+d(z,w)=|z-w|
+\]</span></p>
+<p>Thus: <span class="math inline">\(z,w\in \mathbb{C}\)</span></p>
+<p><span class="math display">\[
+|z+w|\leqslant |z|+|w|
+\]</span></p>
+<p><span class="math inline">\((\mathbb{C},d)\)</span>: <a
+href="https://en.wikipedia.org/wiki/Metric_space">metric space</a></p>
+<p>open ball centered at <span class="math inline">\(z\)</span> with
+radius <span class="math inline">\(r\)</span></p>
+<p><span class="math display">\[
+B(z;r)=\{w\in \mathbb{C}\big | |w-z|&lt;r\}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+f: \Omega\rightarrow \mathbb{C}\quad \Omega\subset \mathbb{C}
+\]</span></p>
+<p><span class="math inline">\(\Omega\)</span> 是 <span
+class="math inline">\(\mathbb{C}\)</span> 的一个(connected open)
+domain，现在在<span class="math inline">\(\Omega\)</span>上选一个点</p>
+<p><span class="math display">\[
+z_0\in \Omega
+\]</span></p>
+<p><span class="math inline">\(f\)</span> is said to be differentiable
+at <span class="math inline">\(z_0\)</span>, if <span
+class="math inline">\(\displaystyle{\lim_{z\rightarrow
+z_0}\frac{f(z)-f(z_0)}{z-z_0}}\)</span> exists, denoted by <span
+class="math inline">\(f&#39;(z_0)\)</span></p>
+<figure>
+<img src="1.1.png" alt="任何方式逼近" />
+<figcaption aria-hidden="true">任何方式逼近</figcaption>
+</figure>
+<hr />
+<p>If <span class="math inline">\(f\)</span> is diff. at every point of
+<span class="math inline">\(\Omega\)</span>, then we say <span
+class="math inline">\(f\)</span> is a holomorphic function
+（解析函数/全纯函数） on <span
+class="math inline">\(\Omega\)</span>.</p>
+<p><span class="math display">\[
+O(\Omega)=\{\text{all of the holomorphic functions on }\Omega \}
+\]</span></p>
+<p>有<span class="math inline">\(S\subset \mathbb{C}\)</span> set, <span
+class="math inline">\(f\in O(S)\)</span> means, <span
+class="math inline">\(f\)</span> is holomorphic on some open
+neighborhood of <span class="math inline">\(S\)</span>.</p>
+<hr />
+<figure>
+<img src="1.2.png" alt="x" />
+<figcaption aria-hidden="true">x</figcaption>
+</figure>
+<figure>
+<img src="1.3.png" alt="y" />
+<figcaption aria-hidden="true">y</figcaption>
+</figure>
+<p><span class="math display">\[
+\frac{\partial u}{\partial x}(z_0)=\frac{\partial v}{\partial y}(z_0)
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial u}{\partial y}(z_0)=-\frac{\partial v}{\partial x}(z_0)
+\]</span></p>
+<p><code>Cauchy-Riemann eq.</code></p>
+<hr />
+<p>可导 <span class="math inline">\(\Rightarrow\)</span>
+柯西黎曼方程，但柯西黎曼方程 <span
+class="math inline">\(\nRightarrow\)</span> 可导</p>
+<p>例.</p>
+<p><span class="math display">\[
 u(x,y)=\begin{cases}
-\displaystyle{\frac{x^3-y^3}{x^2+y^2}} & (x,y)\neq (0,0)\\
-0 & (x,y)= (0,0)
-\end{cases}</script><script type="math/tex; mode=display">
+\displaystyle{\frac{x^3-y^3}{x^2+y^2}} &amp; (x,y)\neq (0,0)\\
+0 &amp; (x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
 v(x,y)=\begin{cases}
-\displaystyle{\frac{x^3+y^3}{x^2+y^2}} & (x,y)\neq (0,0)\\
-0 & (x,y)= (0,0)
-\end{cases}</script><script type="math/tex; mode=display">
-\frac{\partial u}{\partial x}(0,0)=1, \frac{\partial u}{\partial y}(0,0)=-1</script><script type="math/tex; mode=display">
-\frac{\partial v}{\partial x}(0,0)=1, \frac{\partial v}{\partial y}(0,0)=1</script><p>满足柯西黎曼方程</p>
-<p>along $x$-axis</p>
-<script type="math/tex; mode=display">
-\lim \frac{f(x,0)-f(0,0)}{x}=\frac{x+ix-0}{x}=1+i</script><p>along $x=y$</p>
-<script type="math/tex; mode=display">
-\lim \frac{f(x,x)-f(0,0)}{x+ix}=\frac{ix}{x+ix}=\frac{i}{1+i}=\frac{1+i}{2}</script><hr>
-<p>If $f\in C^1(\Omega)$</p>
+\displaystyle{\frac{x^3+y^3}{x^2+y^2}} &amp; (x,y)\neq (0,0)\\
+0 &amp; (x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial u}{\partial x}(0,0)=1, \frac{\partial u}{\partial
+y}(0,0)=-1
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial v}{\partial x}(0,0)=1, \frac{\partial v}{\partial
+y}(0,0)=1
+\]</span></p>
+<p>满足柯西黎曼方程</p>
+<p>along <span class="math inline">\(x\)</span>-axis <span
+class="math display">\[
+\lim \frac{f(x,0)-f(0,0)}{x}=\frac{x+ix-0}{x}=1+i
+\]</span></p>
+<p>along <span class="math inline">\(x=y\)</span> <span
+class="math display">\[
+\lim
+\frac{f(x,x)-f(0,0)}{x+ix}=\frac{ix}{x+ix}=\frac{i}{1+i}=\frac{1+i}{2}
+\]</span></p>
+<hr />
+<p>If <span class="math inline">\(f\in C^1(\Omega)\)</span></p>
 <p>Set <a href="dbar.pdf">Cauchy-Riemann operator</a></p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial \bar{z}}=\frac 12\left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y} \right)</script><script type="math/tex; mode=display">
+<p><span class="math display">\[
+\frac{\partial}{\partial \bar{z}}=\frac 12\left(\frac{\partial}{\partial
+x}+i\frac{\partial}{\partial y} \right)
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-\frac{\partial f}{\partial \bar{z}} & = \frac 12  \left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y} \right)(u+iv)  \\
-&= \frac 12\left (\left (\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}\right)+i\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
-&=0
-\end{aligned}</script><p>在满足柯西黎曼方程的情况下</p>
-<script type="math/tex; mode=display">
-\Leftrightarrow f\in O(\Omega)</script><p>复变这门学问就是在研究这个方程式：</p>
-<script type="math/tex; mode=display">
-\frac{\partial u}{\partial \bar{z}}=g</script><p>$g=0$时，是解析函数</p>
-<hr>
+\frac{\partial f}{\partial \bar{z}} &amp; = \frac
+12  \left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}
+\right)(u+iv)  \\
+&amp;= \frac 12\left (\left (\frac{\partial u}{\partial
+x}-\frac{\partial v}{\partial y}\right)+i\left(\frac{\partial
+u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
+&amp;=0
+\end{aligned}
+\]</span></p>
+<p>在满足柯西黎曼方程的情况下</p>
+<p><span class="math display">\[
+\Leftrightarrow f\in O(\Omega)
+\]</span></p>
+<p>复变这门学问就是在研究这个方程式： <span class="math display">\[
+\frac{\partial u}{\partial \bar{z}}=g
+\]</span></p>
+<p><span class="math inline">\(g=0\)</span>时，是解析函数</p>
+<hr />
 <p>讲点微积分。</p>
 <p><strong>Curve</strong></p>
-<script type="math/tex; mode=display">
-\gamma: [a,b]\rightarrow \mathbb{C}</script><script type="math/tex; mode=display">
-t\mapsto \gamma(t)=(x(t),y(t))</script><p>应该是 $t\in [a,b],\ \gamma(t)\in \mathbb{C}$</p>
-<p><strong>Smooth curve</strong></p>
-<script type="math/tex; mode=display">
-\gamma \in C^1([a,b]), \ and \ \ \gamma'(t)\neq 0\ \ on\ \ (a,b)</script><p><strong>Piecewise smooth</strong></p>
-<script type="math/tex; mode=display">
-\gamma: [a,b]\rightarrow \mathbb{C}</script><script type="math/tex; mode=display">
-\exists P=\{a=t_0<t_1<\cdots <t_{n-1}<t_n=b\}</script><script type="math/tex; mode=display">
-s.t. \quad \gamma \text{ is smooth on each }[t_{j-1},t_j], 1\leqslant j\leqslant n</script><p><strong>Theo (Green)</strong></p>
-<p>$D$ is a bounded domain in $\mathbb{R}^2$ with piecewise smooth boundary $\partial D$, let $P,Q$ be two functions which is $C^1$ in some open neighborhood of $\bar{D}$. Assume $\partial D$ is positively oriented. (沿边界走时domain在左边)</p>
-<p>$\bar{D}=cl (D)$, closure of $D$</p>
+<p><span class="math display">\[
+\gamma: [a,b]\rightarrow \mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+t\mapsto \gamma(t)=(x(t),y(t))
+\]</span></p>
+<p>应该是 <span class="math inline">\(t\in [a,b],\ \gamma(t)\in
+\mathbb{C}\)</span></p>
+<p><strong>Smooth curve</strong> <span class="math display">\[
+\gamma \in C^1([a,b]), \ and \ \ \gamma&#39;(t)\neq 0\ \ on\ \ (a,b)
+\]</span></p>
+<p><strong>Piecewise smooth</strong> <span class="math display">\[
+\gamma: [a,b]\rightarrow \mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+\exists P=\{a=t_0&lt;t_1&lt;\cdots &lt;t_{n-1}&lt;t_n=b\}
+\]</span></p>
+<p><span class="math display">\[
+s.t. \quad \gamma \text{ is smooth on each }[t_{j-1},t_j], 1\leqslant
+j\leqslant n
+\]</span></p>
+<p><strong>Theo (Green)</strong></p>
+<p><span class="math inline">\(D\)</span> is a bounded domain in <span
+class="math inline">\(\mathbb{R}^2\)</span> with piecewise smooth
+boundary <span class="math inline">\(\partial D\)</span>, let <span
+class="math inline">\(P,Q\)</span> be two functions which is <span
+class="math inline">\(C^1\)</span> in some open neighborhood of <span
+class="math inline">\(\bar{D}\)</span>. Assume <span
+class="math inline">\(\partial D\)</span> is positively oriented.
+(沿边界走时domain在左边)</p>
+<p><span class="math inline">\(\bar{D}=cl (D)\)</span>, closure of <span
+class="math inline">\(D\)</span></p>
 <p>Then</p>
-<script type="math/tex; mode=display">
-\oint_C Pdx+Qdy=\iint_D \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right)dxdy</script><hr>
-<p><u> <strong>Theo</strong></u>. Let $D$ be a <em>simply connected</em> domain in $\mathbb{C}$</p>
-<p>Suppose $f\in C^1(D)$, then</p>
-<script type="math/tex; mode=display">
-f\in O(D)\Leftrightarrow \oint_{\tau} f(z)dz=0</script><p>for every piecewise smooth <code>simple</code> <code>closed</code> curve $\tau$ in $D$</p>
-<p><code>simply connected</code> 说明两件事</p>
-<ol>
-<li>arcwise connected： 任何两个点都能用arc连起来</li>
-<li>$\pi_1(D)=0$： domain内每个封闭曲线都能缩成一个点（没有洞）</li>
-</ol>
+<p><span class="math display">\[
+\oint_C Pdx+Qdy=\iint_D \left(\frac{\partial Q}{\partial
+x}-\frac{\partial P}{\partial y} \right)dxdy
+\]</span></p>
+<hr />
+<p><u> <strong>Theo</strong></u>. Let <span
+class="math inline">\(D\)</span> be a <em>simply connected</em> domain
+in <span class="math inline">\(\mathbb{C}\)</span></p>
+<p>Suppose <span class="math inline">\(f\in C^1(D)\)</span>, then <span
+class="math display">\[
+f\in O(D)\Leftrightarrow \oint_{\tau} f(z)dz=0
+\]</span></p>
+<p>for every piecewise smooth <code>simple</code> <code>closed</code>
+curve <span class="math inline">\(\tau\)</span> in <span
+class="math inline">\(D\)</span></p>
+<p><code>simply connected</code> 说明两件事 1. arcwise connected：
+任何两个点都能用arc连起来 2. <span
+class="math inline">\(\pi_1(D)=0\)</span>：
+domain内每个封闭曲线都能缩成一个点（没有洞）</p>
 <p><code>simple</code>：曲线除了起点和终点都不会自我相交</p>
 <p><code>closed</code>：起点和终点是同一个点</p>
-<p><img src="gamma.png" alt="gamma"></p>
-<p>$\Omega$: region surrounded by $\Gamma$.</p>
-<script type="math/tex; mode=display">
+<figure>
+<img src="gamma.png" alt="gamma" />
+<figcaption aria-hidden="true">gamma</figcaption>
+</figure>
+<p><span class="math inline">\(\Omega\)</span>: region surrounded by
+<span class="math inline">\(\Gamma\)</span>.</p>
+<p><span class="math display">\[
 \begin{aligned}
-\oint_{\Gamma} f(z)dz & = \oint_{\Gamma}f(z)(dx+idy)  \\
-& = \iint_{\Omega}\left(i\frac{\partial f}{\partial x}-\frac{\partial f}{\partial y}\right)dxdy  \\
-& = i\iint_{\Omega}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
-& = 2i\iint_{\Omega}\frac{\partial f}{\partial \bar{z}}dxdy  
-\end{aligned}</script><script type="math/tex; mode=display">
-\oint_{\Gamma} f(z)dz=0\Leftrightarrow \frac{\partial f}{\partial \bar{z}}=0\  on\  D.\  \blacksquare</script><h1 id="Lecture-2"><a href="#Lecture-2" class="headerlink" title="Lecture 2"></a>Lecture 2</h1><p><u> <strong>Theo</strong></u> : (<code>Cauchy&#39;s integral formula</code>)<br>Let $D$ be a bounded domain in $\mathbb{C}$ with piecewise smooth doundary. Suppose $f\in C^1(\bar{D})$, Then </p>
-<script type="math/tex; mode=display">
-f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D \frac{\displaystyle{\frac{\partial f}{\partial \bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D</script><p>where $z=x+iy$.</p>
+\oint_{\Gamma} f(z)dz &amp; = \oint_{\Gamma}f(z)(dx+idy)  \\
+&amp; = \iint_{\Omega}\left(i\frac{\partial f}{\partial
+x}-\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = i\iint_{\Omega}\left(\frac{\partial f}{\partial
+x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = 2i\iint_{\Omega}\frac{\partial f}{\partial \bar{z}}dxdy  
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\oint_{\Gamma} f(z)dz=0\Leftrightarrow \frac{\partial f}{\partial
+\bar{z}}=0\  on\  D.\  \blacksquare
+\]</span></p>
+<h1 id="lecture-2">Lecture 2</h1>
+<p><u> <strong>Theo</strong></u> :
+(<code>Cauchy's integral formula</code>) Let <span
+class="math inline">\(D\)</span> be a bounded domain in <span
+class="math inline">\(\mathbb{C}\)</span> with piecewise smooth
+doundary. Suppose <span class="math inline">\(f\in
+C^1(\bar{D})\)</span>, Then <span class="math display">\[
+f(w)=\frac{1}{2\pi i}\oint_{\partial
+D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
+\frac{\displaystyle{\frac{\partial f}{\partial
+\bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D
+\]</span></p>
+<p>where <span class="math inline">\(z=x+iy\)</span>.</p>
 <p><img src="2A_1.png" width=200px></p>
-<p>consider $D<em>{\varepsilon}=D/\bar{B</em>{\varepsilon}}$, $B_{\epsilon}=B(w;\epsilon)$</p>
+<p>consider <span
+class="math inline">\(D_{\varepsilon}=D/\bar{B_{\varepsilon}}\)</span>,
+<span class="math inline">\(B_{\epsilon}=B(w;\epsilon)\)</span></p>
 <p>挖掉圆盘后有内外两个边界，曲线积分等于外围的减内围的</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
 \begin{aligned}
-   \oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz&=2i\iint_{D_{\epsilon}}\frac{\partial}{\partial \bar{z}}\left(\frac{f(z)}{z-w}\right)dxdy \\
-   &=2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy \quad \star
-\end{aligned}</script><script type="math/tex; mode=display">
-\oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz=\oint_{\partial D}\frac{f(z)}{z-w}dz-\oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz \quad \star</script><p>set $z=w+\epsilon e^{i\theta}$, $z-w=\epsilon e^{i\theta}$</p>
-<script type="math/tex; mode=display">
+   \oint_{\partial
+D_{\epsilon}}\frac{f(z)}{z-w}dz&amp;=2i\iint_{D_{\epsilon}}\frac{\partial}{\partial
+\bar{z}}\left(\frac{f(z)}{z-w}\right)dxdy \\
+   &amp;=2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
+\bar{z}}(z)}{z-w}dxdy \quad \star
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz=\oint_{\partial
+D}\frac{f(z)}{z-w}dz-\oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz
+\quad \star
+\]</span></p>
+<p>set <span class="math inline">\(z=w+\epsilon e^{i\theta}\)</span>,
+<span class="math inline">\(z-w=\epsilon e^{i\theta}\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-    \oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz&=\oint_{\partial B_{\epsilon}}\frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}dz\\
-    &=\int_0^{2\pi} \frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}i\epsilon e^{i\theta}d\theta\\
-    &=i\int_0^{2\pi}f(w+\epsilon e^{i\theta})d\theta\\
-    &\xrightarrow{\epsilon\rightarrow0} i\int_0^{2\pi}f(w)d\theta\\
-    &=2\pi if(w)
-\end{aligned}</script><p>下面考虑这个积分</p>
-<script type="math/tex; mode=display">
-2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><p>因为$f$是$C^1$函数，$\frac{\partial f}{\partial \bar{z}}(z)\in C(\bar{D})$</p>
-<p><a href="/download/2250cauchys-kernel.pdf"><strong>Cauchy Kernel</strong></a></p>
-<script type="math/tex; mode=display">
-\iint_K \bigg| \frac{1}{z-w} \bigg| dxdy<\infty</script><p>K: compact</p>
+    \oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz&amp;=\oint_{\partial
+B_{\epsilon}}\frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}dz\\
+    &amp;=\int_0^{2\pi} \frac{f(w+\epsilon e^{i\theta})}{\epsilon
+e^{i\theta}}i\epsilon e^{i\theta}d\theta\\
+    &amp;=i\int_0^{2\pi}f(w+\epsilon e^{i\theta})d\theta\\
+    &amp;\xrightarrow{\epsilon\rightarrow0} i\int_0^{2\pi}f(w)d\theta\\
+    &amp;=2\pi if(w)
+\end{aligned}
+\]</span></p>
+<p>下面考虑这个积分</p>
+<p><span class="math display">\[
+2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
+\bar{z}}(z)}{z-w}dxdy
+\]</span></p>
+<p>因为<span class="math inline">\(f\)</span>是<span
+class="math inline">\(C^1\)</span>函数，<span
+class="math inline">\(\frac{\partial f}{\partial \bar{z}}(z)\in
+C(\bar{D})\)</span></p>
+<p><a href="/download/2250cauchys-kernel.pdf"><strong>Cauchy
+Kernel</strong></a></p>
+<p><span class="math display">\[
+\iint_K \bigg| \frac{1}{z-w} \bigg| dxdy&lt;\infty
+\]</span></p>
+<p>K: compact</p>
 <p>因为会收敛(用极坐标)</p>
-<script type="math/tex; mode=display">
-\iint_B\frac{1}{|z|}dxdy=\int_{0}^{2\pi}\int_0^R\frac 1r rdrd\theta</script><p>let $\epsilon\rightarrow 0$</p>
-<script type="math/tex; mode=display">
-2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy\rightarrow 2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><p>所以$\epsilon\rightarrow 0$时</p>
-<script type="math/tex; mode=display">
-\oint_{\partial D}\frac{f(z)}{z-w}dz-2\pi if(w)=2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><script type="math/tex; mode=display">
-\therefore f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D \frac{\displaystyle{\frac{\partial f}{\partial \bar{z}}}(z)}{z-w}dxdy\quad  \blacksquare</script><hr>
-<p><u> <strong>Theo</strong></u> Let $D\subset \mathbb{C}$ be a simply-connected domain, suppose $f\in C^1(D)\cap O(D)$. Then</p>
-<script type="math/tex; mode=display">
-f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw\quad w\in \Omega</script><p>$\Omega$: region surrounded by the simple closed curve $C$</p>
-<p>simply connected 是为了保证$C$围出来的还在$D$里面，避免下面这种情况</p>
+<p><span class="math display">\[
+\iint_B\frac{1}{|z|}dxdy=\int_{0}^{2\pi}\int_0^R\frac 1r rdrd\theta
+\]</span></p>
+<p>let <span class="math inline">\(\epsilon\rightarrow 0\)</span></p>
+<p><span class="math display">\[
+2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
+\bar{z}}(z)}{z-w}dxdy\rightarrow 2i\iint_{D}\frac{\frac{\partial
+f}{\partial \bar{z}}(z)}{z-w}dxdy
+\]</span></p>
+<p>所以<span class="math inline">\(\epsilon\rightarrow 0\)</span>时</p>
+<p><span class="math display">\[
+\oint_{\partial D}\frac{f(z)}{z-w}dz-2\pi
+if(w)=2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy
+\]</span></p>
+<p><span class="math display">\[
+\therefore f(w)=\frac{1}{2\pi i}\oint_{\partial
+D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
+\frac{\displaystyle{\frac{\partial f}{\partial
+\bar{z}}}(z)}{z-w}dxdy\quad  \blacksquare
+\]</span></p>
+<hr />
+<p><u> <strong>Theo</strong></u> Let <span
+class="math inline">\(D\subset \mathbb{C}\)</span> be a simply-connected
+domain, suppose <span class="math inline">\(f\in C^1(D)\cap
+O(D)\)</span>. Then <span class="math display">\[
+f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw\quad w\in
+\Omega
+\]</span></p>
+<p><span class="math inline">\(\Omega\)</span>: region surrounded by the
+simple closed curve <span class="math inline">\(C\)</span></p>
+<p>simply connected 是为了保证<span
+class="math inline">\(C\)</span>围出来的还在<span
+class="math inline">\(D\)</span>里面，避免下面这种情况</p>
 <p><img src="2A_2.png" width=200px></p>
-<hr>
+<hr />
 <p><u> <strong>Theo</strong></u> (Cauchys)</p>
-<p>Let $D$ be a simply connected domain in $\mathbb{C}$, </p>
-<p>$C$: simple closed curve in $D$</p>
-<p>If $f\in O(D)$. Then</p>
-<script type="math/tex; mode=display">
-\oint_C f(z)dz=0</script><p>之前有$C^1$是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
+<p>Let <span class="math inline">\(D\)</span> be a simply connected
+domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
+<p><span class="math inline">\(C\)</span>: simple closed curve in <span
+class="math inline">\(D\)</span></p>
+<p>If <span class="math inline">\(f\in O(D)\)</span>. Then</p>
+<p><span class="math display">\[
+\oint_C f(z)dz=0
+\]</span></p>
+<p>之前有<span
+class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
 <p><img src="2B_1.png" width=200px></p>
-<p>$R$: rectangle</p>
-<p>$L$: length of $\partial R$</p>
-<p>Claim: $\oint_{\partial R}f(z)dz=0$</p>
+<p><span class="math inline">\(R\)</span>: rectangle</p>
+<p><span class="math inline">\(L\)</span>: length of <span
+class="math inline">\(\partial R\)</span></p>
+<p>Claim: <span class="math inline">\(\oint_{\partial
+R}f(z)dz=0\)</span></p>
 <p>反证法</p>
-<p>Assume $\exists R$ s.t.</p>
-<script type="math/tex; mode=display">
-\oint_{\partial R}f(z)dz=A\neq 0</script><p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
+<p>Assume <span class="math inline">\(\exists R\)</span> s.t. <span
+class="math display">\[
+\oint_{\partial R}f(z)dz=A\neq 0
+\]</span></p>
+<p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
 <p><img src="2B_2.png" width=300px></p>
-<script type="math/tex; mode=display">
-\oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz</script><script type="math/tex; mode=display">
-\therefore \exists R_1=R^{(j)} \ \text{some }j, \quad s.t. \bigg|\oint_{\partial R_1}f(z)dz \bigg|\geq \frac{A}{4}</script><script type="math/tex; mode=display">
-\bigg|\oint_{\partial R_2}f(z)dz \bigg|\geq \frac{A}{4^2}</script><p>obtain a seq. of rectangle ${R_n}$</p>
-<script type="math/tex; mode=display">
-\bigg|\oint_{\partial R_n}f(z)dz \bigg|\geq \frac{A}{4^n}</script><p>By <a href="/download/cantor.pdf">Cantor intersection theorem</a></p>
-<script type="math/tex; mode=display">
-\exists P_0\in R_n, \ \forall n\quad P_0\in D</script><p>Write near $P_0$</p>
-<script type="math/tex; mode=display">
-f(z)=f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)</script><p>$\epsilon\rightarrow 0$ as $z\rightarrow P_0$</p>
-<p>n 很大时，$f(z)$可以用$f(P_0)+f’(P_0)(z-P_0)+\epsilon (z)(z-P_0)$替换</p>
-<script type="math/tex; mode=display">
-\oint_{\partial R_n}\left[f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)\right]dz</script><p>多项式一定是某个函数的微分，</p>
-<script type="math/tex; mode=display">
-\therefore f(P_0)+f'(P_0)(z-P_0)=Q'(z)</script><p>$Q(z)$: polynomial of degree at most 2</p>
-<p><img src="映射.png" width=200px></p>
-<p>$z=\gamma(t)$</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
+\oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz
+\]</span></p>
+<p><span class="math display">\[
+\therefore \exists R_1=R^{(j)} \ \text{some }j, \quad s.t.
+\bigg|\oint_{\partial R_1}f(z)dz \bigg|\geq \frac{A}{4}
+\]</span></p>
+<p><span class="math display">\[
+\bigg|\oint_{\partial R_2}f(z)dz \bigg|\geq \frac{A}{4^2}
+\]</span></p>
+<p>obtain a seq. of rectangle <span
+class="math inline">\(\{R_n\}\)</span></p>
+<p><span class="math display">\[
+\bigg|\oint_{\partial R_n}f(z)dz \bigg|\geq \frac{A}{4^n}
+\]</span></p>
+<p>By <a href="/download/cantor.pdf">Cantor intersection theorem</a>
+<span class="math display">\[
+\exists P_0\in R_n, \ \forall n\quad P_0\in D
+\]</span></p>
+<p>Write near <span class="math inline">\(P_0\)</span></p>
+<p><span class="math display">\[
+f(z)=f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon (z)(z-P_0)
+\]</span></p>
+<p><span class="math inline">\(\epsilon\rightarrow 0\)</span> as <span
+class="math inline">\(z\rightarrow P_0\)</span></p>
+<p>n 很大时，<span class="math inline">\(f(z)\)</span>可以用<span
+class="math inline">\(f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
+(z)(z-P_0)\)</span>替换</p>
+<p><span class="math display">\[
+\oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
+(z)(z-P_0)\right]dz
+\]</span></p>
+<p>多项式一定是某个函数的微分， <span class="math display">\[
+\therefore f(P_0)+f&#39;(P_0)(z-P_0)=Q&#39;(z)
+\]</span></p>
+<p><span class="math inline">\(Q(z)\)</span>: polynomial of degree at
+most 2</p>
+<p><img src="映射.png" width=350px></p>
+<p><span class="math inline">\(z=\gamma(t)\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-    &\oint_{\partial R_n}[f(P_0)+f'(P_0)(z-P_0)]dz\\
-    =&\oint_{\partial R_n}Q'(z)dz\\
-    =&\int_a^bQ'(z)\gamma'(t)dt\\
-    =&\int_a^bd(Q(z))\\
-    =& Q(\gamma(b))-Q(\gamma(a))=0\quad \text{首尾相连}
-\end{aligned}</script><p>因为</p>
-<script type="math/tex; mode=display">
-|\oint_{\partial R_n}dz|=|\int_a^b\gamma'(t)dt|\leq \int_a^b|\gamma'(t)|dt=Ln</script><p>$(z-P_0)$小于等于$Ln$（弦长小于等于直径），$dz$积分也小于$Ln$，所以两次。$\epsilon$用最大值提出来</p>
-<script type="math/tex; mode=display">
+    &amp;\oint_{\partial R_n}[f(P_0)+f&#39;(P_0)(z-P_0)]dz\\
+    =&amp;\oint_{\partial R_n}Q&#39;(z)dz\\
+    =&amp;\int_a^bQ&#39;(z)\gamma&#39;(t)dt\\
+    =&amp;\int_a^bd(Q(z))\\
+    =&amp; Q(\gamma(b))-Q(\gamma(a))=0\quad \text{首尾相连}
+\end{aligned}
+\]</span></p>
+<p>因为 <span class="math display">\[
+|\oint_{\partial R_n}dz|=|\int_a^b\gamma&#39;(t)dt|\leq
+\int_a^b|\gamma&#39;(t)|dt=Ln
+\]</span> <span class="math inline">\((z-P_0)\)</span>小于等于<span
+class="math inline">\(Ln\)</span>（弦长小于等于直径），<span
+class="math inline">\(dz\)</span>积分也小于<span
+class="math inline">\(Ln\)</span>，所以两次。<span
+class="math inline">\(\epsilon\)</span>用最大值提出来 <span
+class="math display">\[
 \begin{aligned}
-    &|\oint_{\partial R_n}\left[f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)\right]dz|\\
-    =&|\oint_{\partial R_n}\epsilon (z)(z-P_0)dz|\\
-    \leq &\max_{z\in \partial R_n}|\epsilon(z)|\cdot L_n^2
-\end{aligned}</script><p>由于 $\displaystyle{L_n=\frac{L}{2^n}}$</p>
-<script type="math/tex; mode=display">
-\max_{z\in \partial R_n}|\epsilon(z)|\cdot \left(\frac{L}{2^n}\right)^2\geq \frac{|A|}{4^n}</script><p>当$n\rightarrow \infty$时，$\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow 0$</p>
-<script type="math/tex; mode=display">
-\therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq \frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.\ \square</script><p>目前证得在所有的长方形上</p>
-<script type="math/tex; mode=display">
-\oint_{\partial R}f(z)dz=0</script><p><img src="cut.jpg" width=400px></p>
+    &amp;|\oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
+(z)(z-P_0)\right]dz|\\
+    =&amp;|\oint_{\partial R_n}\epsilon (z)(z-P_0)dz|\\
+    \leq &amp;\max_{z\in \partial R_n}|\epsilon(z)|\cdot L_n^2
+\end{aligned}
+\]</span></p>
+<p>由于 <span
+class="math inline">\(\displaystyle{L_n=\frac{L}{2^n}}\)</span></p>
+<p><span class="math display">\[
+\max_{z\in \partial R_n}|\epsilon(z)|\cdot
+\left(\frac{L}{2^n}\right)^2\geq \frac{|A|}{4^n}
+\]</span></p>
+<p>当<span class="math inline">\(n\rightarrow \infty\)</span>时，<span
+class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
+0\)</span></p>
+<p><span class="math display">\[
+\therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq
+\frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.\
+\square
+\]</span></p>
+<p>目前证得在所有的长方形上 <span class="math display">\[
+\oint_{\partial R}f(z)dz=0
+\]</span></p>
+<p><img src="cut.jpg" width=400px></p>
 ]]></content>
       <categories>
         <category>学习</category>
