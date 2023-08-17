@@ -1973,7 +1973,7 @@ class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 <p>目前证得在所有的长方形上 <span class="math display">\[
 \oint_{\partial R}f(z)dz=0
 \]</span></p>
-<p><img src="cut.jpg" width=400px></p>
+<p><img src="cut.jpg"></p>
 ]]></content>
       <categories>
         <category>学习</category>
