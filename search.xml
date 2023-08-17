@@ -1290,12 +1290,23 @@ href="差分和常微分作业.pdf">我的</a></td>
     <title>七月加州</title>
     <url>/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/</url>
     <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
-<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、$t$分布、$\chi^2$分布、拒真受假两种错误、ANOVA…这些才是我的收获，而不是这样一个方程</p>
-<script type="math/tex; mode=display">
-f(GPA)=\begin{cases}1 & GPA\geq 3.7\\0 & GPA\leq 3.7\end{cases}</script><p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
+<p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、<span
+class="math inline">\(t\)</span>分布、<span
+class="math inline">\(\chi^2\)</span>分布、拒真受假两种错误、ANOVA...这些才是我的收获，而不是这样一个方程</p>
+<p><span class="math display">\[
+f(GPA)=\begin{cases}1 &amp; GPA\geq 3.7\\0 &amp; GPA\leq 3.7\end{cases}
+\]</span></p>
+<p>我会接着学数学，并不是为了刷高数学课绩点来<em>证明</em>自己的水平（教育并不只为区分智商存在），而是这些东西对金融工程有用。</p>
 <p>7.31去了趟斯坦福，那边真是贵气：设施更全面，建筑有美感，有历史韵味，学生看起来很聪明，甚至还有高尔夫球场。在去球场的路上看到个精壮的白发老人穿运动装跑步，被这种不服老的<em>抗争精神</em>震撼到。中国圈养羊，美国全是狼。狼进羊圈牧羊人就有麻烦了，但狼进狼群只会壮大队伍。</p>
-<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC State，另外它的统计program有金融方向。我去问了ucb统计系的admission office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
-<p>当天下午的 Graduate School Workshop 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
+<p>呃呃，到月底我打算转统计硕了，现在Dream school 是 NC
+State，另外它的统计program有金融方向。我去问了ucb统计系的admission
+office，主要是担心我数统只有3.0怎么办。他说你可以在statement of personal
+history里说明为什么这门课考的差，比如上学期因为有work，耽误了，但下学期又修了一遍，考的好。会看重working
+experience，因为ucb这个是就业导向。Finance也可以申，但这个方向人少，占8%。平均绩点3.2的也有申请成功案例，非常好的statement和working
+experience。平均绩点在3.8。每年收到600多份，录80多人，最后50多人接受。竞争激烈，每科都要分数高。</p>
+<p>当天下午的 Graduate School Workshop
+也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working
+experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
 ]]></content>
       <categories>
         <category>写点什么</category>
@@ -2081,9 +2092,7 @@ OS环境下使用Hexo搭建个人博客</a></p>
 <p>住：<a
 href="https://zh.airbnb.com/rooms/804329851624096759?adults=1&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=43DC2EBC-82BF-42CC-9CA2-2FD74DD3A6F1&amp;_branch_match_id=1210426884662999117&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPSg0zKsv3CatySgIAjQxLSBsAAAA%3D&amp;_set_bev_on_new_domain=1689826060_ZWE2NTJmOTEzMTQy&amp;source_impression_id=p3_1689826485_t1z8qxl5w2JpijUO">KC</a>，<a
 href="https://www.google.com/maps/place/138+S+Catalina+St,+Los+Angeles,+CA+90004/@34.0715685,-118.2977057,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c7616a6698bb:0xcb5fb9bc6927f0a3!8m2!3d34.0715685!4d-118.2951308!16s%2Fg%2F11c4ml7h2x?entry=ttu">位置</a>,
-8.12-14（2晚），235🔪；<a
-href="https://zh.airbnb.com/rooms/803787844830552774?check_out=2023-08-13&amp;adults=2&amp;check_in=2023-08-11&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=100B7957-4420-422D-BC10-C8852748BEDE&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3yE4OdcwydXF0SgIA5trclxsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689863698_SA8gwyG7zjbxwaD4">CG</a>，<a
-href="https://www.google.com/maps/place/9747+W+Olympic+Blvd,+Beverly+Hills,+CA+90212/@34.0599848,-118.4107826,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2bbf1a86d78d3:0xebc60c86deeba69e!8m2!3d34.0599848!4d-118.4082077!16s%2Fg%2F11cncpk41v?entry=ttu">位置</a>，246🔪</p>
+8.12-14（2晚），235🔪</p>
 <p>玩：<a
 href="https://www.google.com/maps/place/Griffith+Observatory/@34.1262663,-118.3217207,11.71z/data=!4m6!3m5!1s0x80c2bf61e9d408cb:0x73ff07b1c2d6dadc!8m2!3d34.1184341!4d-118.3003935!16zL20vMDJfNG1s?hl=en&amp;entry=ttu">Griffith
 Observatory</a>，<a
@@ -2105,8 +2114,7 @@ Beach。8.14退房。</p>
 href="https://my.lacma.org/user/login-register?destination=%2Fevents%2Fticket-select">预约</a>，大学生门票$21</p>
 <p>Griffith门票免费，不用预约，<a
 href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm日落</p>
-<p><a
-href="https://sigma909.com/usr/uploads/2023/07/3740388301.pdf">Griffith_Park_Map.pdf</a></p>
+<p>[Griffith_Park_Map.pdf][2]</p>
 <p>Getty center和Getty villa免费但要<a
 href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
 <figure>
@@ -2117,7 +2125,7 @@ href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
 <p>行：坐火车到Santa Fe Depot，<a
 href="https://www.amtrak.com/regions/california.html">购票</a>人均$36，约三小时。是中午12:10的那班，再早只有7点的了就太早。</p>
 <p>住：<a
-href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$369</p>
+href="https://zh.airbnb.com/rooms/52673388?check_out=2023-08-16&amp;adults=2&amp;check_in=2023-08-13&amp;viralityEntryPoint=1&amp;s=76&amp;unique_share_id=64CA4CB8-A6B3-4DE7-9337-EE0A985ADD8B&amp;_branch_match_id=1210582968084106601&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3DohyTTZ09nZ0SgIAhOR%2FNBsAAAA%3D&amp;_set_bev_on_new_domain=1689863697_OWQ2OTNmOTBmZmRl&amp;source_impression_id=p3_1689869194_RrRqIcCxgLN6oHHY">John&amp;Don</a>，8.14-17（3晚），$378</p>
 <p>玩：<a
 href="https://www.google.com/maps/place/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%9C%A3%E8%BF%AD%E6%88%88%E7%85%A4%E6%B0%94%E7%81%AF%E8%A1%97%E5%8C%BA%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+92101/@32.7109068,-117.1716221,16z/data=!4m15!1m8!3m7!1s0x80d95359b85576cd:0x8707ade908cda6ea!2z5Yqg5Yip56aP5bC85Lqa5Zyj6L-t5oiI54Wk5rCU54Gv6KGX5Yy66YKu5pS_57yW56CBOiA5MjEwMQ!3b1!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3!3m5!1s0x80d95359b85576cd:0x8707ade908cda6ea!8m2!3d32.7114267!4d-117.1599305!16zL20vMDMzdHA3?entry=ttu">Gaslamp
 Quarter</a>，<a
@@ -2138,7 +2146,7 @@ Jolla能看到一堆海豹。</p>
 </blockquote>
 <p>观鲸出海，要<a
 href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。系统一直无法支付，就算了。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看（不知道为什么必看），门票31刀，要<a
-href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。</p>
+href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。（后来支付失败了，白嫖一张门票）</p>
 <figure>
 <img src="sdplay_230729.png" alt="SD.png" />
 <figcaption aria-hidden="true">SD.png</figcaption>
@@ -2151,9 +2159,10 @@ href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp
 <figcaption aria-hidden="true">flight_back.png</figcaption>
 </figure>
 <h2 id="budget">Budget</h2>
-<p>Trip：(35.4+72+63.8)/2=85.6 Live：(246+369)/2=308 T&amp;L:
-86+308=<strong>$394</strong></p>
-<p>Ticket：21+65+31=117</p>
+<p>Trip：(35.4+72+63.8)/2=85.6</p>
+<p>Live：(246+378)/2=312</p>
+<p>T&amp;L: 86+312=<strong>$398</strong></p>
+<p>Ticket：21</p>
 <h1 id="出发">出发</h1>
 <p><strong>8.12</strong></p>
 <p>在奥克兰机场睡了一晚，本以为会很乱很危险，但因为机场在岛上远离市中心，环境还是很好的。做廉价spirit航班，体验比想象中好，至少没坠机且途中能让我睡着。到洛杉矶的时候还很早，先去了离机场很近的Santa
