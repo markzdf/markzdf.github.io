@@ -164,6 +164,53 @@ micromaster</a></p></li>
 ]]></content>
   </entry>
   <entry>
+    <title>解析函数的幂级数展开</title>
+    <url>/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/</url>
+    <content><![CDATA[<p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
+<span class="math inline">\(\mathbb{C}\)</span>. If <span
+class="math inline">\(f\in O(D)\)</span>, then <span
+class="math inline">\(f\in C^{\omega}(D)\)</span></p>
+<p><span class="math inline">\(C^{\omega}(D)\)</span> means locally
+function can be represented by a power series</p>
+<p><img src="3A_1.png" width=400px></p>
+<p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
+<p><span class="math inline">\(f\in O(D)\)</span> <span
+class="math display">\[
+\therefore \exists R&gt;0, s.t. \bar{B}(z_0;R)\subset D
+\]</span></p>
+<p>If <span class="math inline">\(z\in B(z_0;R)\)</span>. Then <span
+class="math display">\[
+\begin{aligned}
+    f(z)&amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw\\
+    &amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z_0-(z-z_0)}dw
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\exists r&gt;0\)</span>， <span
+class="math inline">\(s.t. \ |z-z_0|\leq r&lt;R\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\frac{f(w)}{1-\frac{z-z_0}{w-z_0}}dw\\
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\left(\sum_{k=0}^{\infty}\left(\frac{z-z_0}{w-z_0}
+\right)^k \right)f(w)dw\quad \ast\\
+    &amp;=\sum_{k=0}^{\infty}\left(\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
+\ast\ast\\
+    &amp;=\sum_{k=0}^{\infty}a_k(z-z_0)^k
+\end{aligned}
+\]</span></p>
+<p>i.e. <span class="math inline">\(\displaystyle a_k=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
+<p>From <span class="math inline">\(\ast\)</span> to <span
+class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
+<p><img src="interchange.png"></p>
+]]></content>
+      <categories>
+        <category>复变</category>
+      </categories>
+  </entry>
+  <entry>
     <title>柯西积分公式</title>
     <url>/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<p>复变最重要的两个定理都在这了！！！</p>
@@ -431,7 +478,11 @@ class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
 <p><span class="math display">\[
 \int_{\partial \Omega_{\epsilon}}\frac{f(w)}{w-z}dw=0
 \]</span></p>
-<p>等于</p>
+<p>上一个定理证得：解析函数在它的边界积分等于0，因为<span
+class="math inline">\(w=z\)</span>被挖掉了，而且<span
+class="math inline">\(\displaystyle \frac{1}{w-z}\)</span>有极限
+，所以<span class="math inline">\(\displaystyle
+\frac{f(w)}{w-z}\)</span>是解析函数</p>
 <p><span class="math display">\[
 \int_{\partial \Omega=C}\frac{f(w)}{w-z}dw-\int_{\partial
 B_{\epsilon}}\frac{f(w)}{w-z}dw=0
