@@ -19,21 +19,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_{\partial D}\frac{">
+    <meta name="description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="柯西积分公式">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Arson">
-<meta property="og:description" content="Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_{\partial D}\frac{">
+<meta property="og:description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_2.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2B_1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2B_2.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/%E6%98%A0%E5%B0%84.png">
-<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/cut.jpg">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/cut.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_1.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_2.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_3.png">
 <meta property="article:published_time" content="2023-08-17T20:05:57.000Z">
-<meta property="article:modified_time" content="2023-08-17T20:38:46.102Z">
+<meta property="article:modified_time" content="2023-08-18T09:18:41.959Z">
 <meta property="article:author" content="Mark Zhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_1.png">
@@ -184,9 +187,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-08-17 13:05:57 / Modified: 13:38:46" itemprop="dateCreated datePublished" datetime="2023-08-17T13:05:57-07:00">2023-08-17</time>
+      <time title="Created: 2023-08-17 13:05:57" itemprop="dateCreated datePublished" datetime="2023-08-17T13:05:57-07:00">2023-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-08-18 02:18:41" itemprop="dateModified" datetime="2023-08-18T02:18:41-07:00">2023-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -207,7 +216,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><u> <strong>Theo</strong></u> :
+    <div class="post-body" itemprop="articleBody"><p>复变最重要的两个定理都在这了！！！</p>
+<p><u> <strong>Theo</strong></u> :
 (<code>Cauchy's integral formula</code>) Let <span
 class="math inline">\(D\)</span> be a bounded domain in <span
 class="math inline">\(\mathbb{C}\)</span> with piecewise smooth
@@ -219,7 +229,7 @@ D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
 \bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D
 \]</span></p>
 <p>where <span class="math inline">\(z=x+iy\)</span>.</p>
-<p><img src="2A_1.png" width=300px></p>
+<p><img src="2A_1.png" width=400px></p>
 <p>consider <span
 class="math inline">\(D_{\varepsilon}=D/\bar{B_{\varepsilon}}\)</span>,
 <span class="math inline">\(B_{\epsilon}=B(w;\epsilon)\)</span></p>
@@ -302,7 +312,7 @@ class="math inline">\(C\)</span>围出来的还在<span
 class="math inline">\(D\)</span>里面，避免下面这种情况</p>
 <p><img src="2A_2.png" width=300px></p>
 <hr />
-<p><u> <strong>Theo</strong></u> (Cauchys)</p>
+<p><u> <strong>Theo</strong></u> (Cauchy)</p>
 <p>Let <span class="math inline">\(D\)</span> be a simply connected
 domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
 <p><span class="math inline">\(C\)</span>: simple closed curve in <span
@@ -317,7 +327,7 @@ class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这�
 <p><span class="math inline">\(R\)</span>: rectangle</p>
 <p><span class="math inline">\(L\)</span>: length of <span
 class="math inline">\(\partial R\)</span></p>
-<p>Claim: <span class="math inline">\(\oint_{\partial
+<p><strong>Claim</strong>: <span class="math inline">\(\oint_{\partial
 R}f(z)dz=0\)</span></p>
 <p>反证法</p>
 <p>Assume <span class="math inline">\(\exists R\)</span> s.t. <span
@@ -407,7 +417,83 @@ class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 <p>目前证得在所有的长方形上 <span class="math display">\[
 \oint_{\partial R}f(z)dz=0
 \]</span></p>
-<p><img src="cut.jpg"></p>
+<p><img src="cut.png"></p>
+<p>这个函数<span
+class="math inline">\(F(z)\)</span>必须well-defined：不管路径怎么选，积出来都一样</p>
+<p>要证明它well-defined</p>
+<p><span class="math display">\[
+\Leftrightarrow F(z)=\int_{\Gamma_1}f(z)dz=\int_{\Gamma_2}f(z)dz
+\]</span></p>
+<p>因为每段路径平行于<span class="math inline">\(x\)</span>或<span
+class="math inline">\(y\)</span>轴，可以视作长方形的一部分。借助刚才的准备工作，</p>
+<p><span class="math display">\[
+\int_{\Gamma_1-\Gamma_2}f(z)dz=\int_{\Gamma_1}f(z)dz-\int_{\Gamma_2}f(z)dz=0\quad
+\square
+\]</span></p>
+<p>所以它是well-defined</p>
+<p><strong>Claim</strong> <span class="math display">\[
+F&#39;(z)=f(z)
+\]</span></p>
+<p><img src="2D_1.png" width=500px></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \lim_{z\rightarrow w}\frac{F(z)-F(w)}{z-w}&amp;=\lim_{z\rightarrow
+w}\frac{\int_{\Gamma+C}f(\eta)d\eta-\int_{\Gamma}f(\eta)d\eta}{z-w}\\
+    &amp;=\lim_{z\rightarrow w}\frac{\int_Cf(\eta)d\eta}{z-w}\\
+    &amp;=\lim_{z\rightarrow
+w}\frac{\int_Cf(w)d\eta+[\int_Cf(\eta)d\eta-\int_Cf(w)d\eta]}{z-w}\\
+    &amp;=f(w)\quad \square
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(f(w)\)</span>是常数，<span
+class="math inline">\(\int_Cf(w)d\eta=f(w)(z-w)\)</span>，后一项趋于0</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \oint_Cf(z)dz&amp;=\oint_CF&#39;(z)dz\\
+    &amp;=\int_a^bF&#39;(\gamma(t))\gamma&#39;(t)dt\\
+    &amp;=\int_a^b dF(\gamma(t))\\
+    &amp;=F(\gamma(b))-F(\gamma(a))=0. \quad \blacksquare
+\end{aligned}
+\]</span></p>
+<p><u><strong>Theo</strong></u>(Cauchy's integral formula)</p>
+<p>Let <span class="math inline">\(D\)</span> be a simply-connected
+domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
+<p><span class="math inline">\(C\)</span>: simple closed curve</p>
+<p><span class="math inline">\(f\in O(D)\)</span>, let <span
+class="math inline">\(\Omega\)</span> be the region surrounded by <span
+class="math inline">\(C\)</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega
+\]</span></p>
+<p><img src="2D_2.png" width=400px></p>
+<p>区域内的点的函数值完完全全受边界点函数值的影响，可以又边界生成</p>
+<blockquote>
+<p>卷积 convolution <span class="math display">\[
+f\rightarrow g(z)=\int f(w)g(z-w)dw
+\]</span></p>
+</blockquote>
+<p><span class="math inline">\(\displaystyle{\frac{1}{w-z}}\)</span>:
+Cauchy kernel (reproducing kernel)</p>
+<p><img src="2D_3.png" width=400px></p>
+<p><span
+class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
+<p><span class="math display">\[
+\int_{\partial \Omega_{\epsilon}}\frac{f(w)}{w-z}dw=0
+\]</span></p>
+<p>等于</p>
+<p><span class="math display">\[
+\int_{\partial \Omega=C}\frac{f(w)}{w-z}dw-\int_{\partial
+B_{\epsilon}}\frac{f(w)}{w-z}dw=0
+\]</span></p>
+<p>因为<span class="math inline">\(\epsilon\rightarrow 0\)</span>时，
+<span class="math display">\[
+\int_{\partial B_{\epsilon}}\frac{f(w)}{w-z}dw\rightarrow 2\pi if(z)
+\]</span></p>
+<p><span class="math display">\[
+\int_{C}\frac{f(w)}{w-z}dw=2\pi if(z)\Rightarrow f(z)=\frac{1}{2\pi
+i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
+\]</span></p>
 
     </div>
 
