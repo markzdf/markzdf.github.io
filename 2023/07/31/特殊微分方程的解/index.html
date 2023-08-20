@@ -24,12 +24,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Separable Variables当$x,y$可分离时，  Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62} \Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\tag{6.63}Def 7.1Let $z&#x3D;f">
+    <meta name="description" content="Separable Variables 当\(x,y\)可分离时， \[ Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} \] \[ P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \] \[ \Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62} \] \[ \Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="特殊微分方程的解">
 <meta property="og:url" content="https://markzdf.github.io/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/index.html">
 <meta property="og:site_name" content="檔案助手">
-<meta property="og:description" content="Separable Variables当$x,y$可分离时，  Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62} \Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\tag{6.63}Def 7.1Let $z&#x3D;f">
+<meta property="og:description" content="Separable Variables 当\(x,y\)可分离时， \[ Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} \] \[ P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \] \[ \Rightarrow f(x)dx+g(y)dy&#x3D;0\tag{6.62} \] \[ \Rightarrow \int f(x)dx+\int g(y)dy&#x3D;C\t">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-07-30T17:03:16.000Z">
 <meta property="article:modified_time" content="2023-08-20T01:28:03.992Z">
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Separable-Variables"><span class="nav-number">1.</span> <span class="nav-text">Separable Variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homogeneous-Coefficients"><span class="nav-number">2.</span> <span class="nav-text">Homogeneous Coefficients</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linear-Coefficients"><span class="nav-number">3.</span> <span class="nav-text">Linear Coefficients</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E6%9D%A1%E7%9B%B4%E7%BA%BF%E4%B8%8D%E5%B9%B3%E8%A1%8C"><span class="nav-number">3.1.</span> <span class="nav-text">两条直线不平行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">Method 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-2"><span class="nav-number">3.1.2.</span> <span class="nav-text">Method 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E6%9D%A1%E7%9B%B4%E7%BA%BF%E5%B9%B3%E8%A1%8C"><span class="nav-number">3.2.</span> <span class="nav-text">两条直线平行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exact-DE"><span class="nav-number">4.</span> <span class="nav-text">Exact DE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Integrating-Factor"><span class="nav-number">4.1.</span> <span class="nav-text">Integrating Factor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linear-DE"><span class="nav-number">5.</span> <span class="nav-text">Linear DE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bernoulli-Equation"><span class="nav-number">5.1.</span> <span class="nav-text">Bernoulli Equation</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#separable-variables"><span class="nav-number">1.</span> <span class="nav-text">Separable Variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#homogeneous-coefficients"><span class="nav-number">2.</span> <span class="nav-text">Homogeneous Coefficients</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-coefficients"><span class="nav-number">3.</span> <span class="nav-text">Linear Coefficients</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E6%9D%A1%E7%9B%B4%E7%BA%BF%E4%B8%8D%E5%B9%B3%E8%A1%8C"><span class="nav-number">3.1.</span> <span class="nav-text">两条直线不平行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#method-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">Method 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#method-2"><span class="nav-number">3.1.2.</span> <span class="nav-text">Method 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E6%9D%A1%E7%9B%B4%E7%BA%BF%E5%B9%B3%E8%A1%8C"><span class="nav-number">3.2.</span> <span class="nav-text">两条直线平行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#exact-de"><span class="nav-number">4.</span> <span class="nav-text">Exact DE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#integrating-factor"><span class="nav-number">4.1.</span> <span class="nav-text">Integrating Factor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-de"><span class="nav-number">5.</span> <span class="nav-text">Linear DE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bernoulli-equation"><span class="nav-number">5.1.</span> <span class="nav-text">Bernoulli Equation</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -221,232 +221,435 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Separable-Variables"><a href="#Separable-Variables" class="headerlink" title="Separable Variables"></a>Separable Variables</h1><p>当$x,y$可分离时，</p>
-<script type="math/tex; mode=display">
-Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6.6}</script><script type="math/tex; mode=display">
-P(x,y)dx+Q(x,y)dy=0\tag{6.61}</script><script type="math/tex; mode=display">
-\Rightarrow f(x)dx+g(y)dy=0\tag{6.62}</script><script type="math/tex; mode=display">
-\Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}</script><p><strong><em>Def 7.1</em></strong><br>Let $z=f(x,y)$ define $z$ as a function of $x$ and $y$ in a region $R$. The function $f(x,y)$ is said to be <strong>homogeneous of order n</strong> if it can be written as </p>
-<script type="math/tex; mode=display">
-f(x,y)=x^ng(u)\tag{7.11}</script><p>where $u=\dfrac yx$ and $g(u)$ is a function of $u$; or alternately if it can be written as</p>
-<script type="math/tex; mode=display">
-f(x,y)=y^nh(u)\tag{7.11}</script><p>where $u=\dfrac xy$ and $h(u)$ is a function of $u$</p>
-<p>也可定义为：A function $f(x,y)$ is said to be homogeneous of order n if <script type="math/tex">f(tx,ty)=t^nf(x,y)\tag{7.16}</script></p>
-<h1 id="Homogeneous-Coefficients"><a href="#Homogeneous-Coefficients" class="headerlink" title="Homogeneous Coefficients"></a>Homogeneous Coefficients</h1><p><em>Definition 7.2.</em> The differential equation</p>
-<script type="math/tex; mode=display">P(x,y)dx+Q(x,y)dy=0\tag{7.3}</script><p>where $P(x,y)$ and $Q(x,y)$ are each homogeneous functions of order $n$ is called a <strong>first order differential equation with homogeneous coefficients</strong>.</p>
-<p><strong><em>Theorem 7.32.</em></strong><br>If the coefficients in $(7.3)$ are each homogeneous function of order $n$, then the substitution in it of $(7.31),(7.33)$ will lead to an equation in which the variables are separable.</p>
-<script type="math/tex; mode=display">y=ux\  \Leftarrow \ \left(u=\frac{y}{x}\right),\quad dy=udx+xdu,\quad \tag{7.31}</script><script type="math/tex; mode=display">x=uy\  \Leftarrow \ \left(u=\frac{x}{y}\right),\quad dx=udy+ydu,\quad \tag{7.33}</script><h1 id="Linear-Coefficients"><a href="#Linear-Coefficients" class="headerlink" title="Linear Coefficients"></a>Linear Coefficients</h1><script type="math/tex; mode=display">
-x=\bar{x}+h,\quad y=\bar{y}+k\tag{8.11}</script><script type="math/tex; mode=display">
-\Rightarrow \bar{x}=x-h,\quad \bar{y}=y-k\tag{8.12}</script><p>解线性系数的微分方程，</p>
-<script type="math/tex; mode=display">
-(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy=0\tag{8.2}</script><h2 id="两条直线不平行"><a href="#两条直线不平行" class="headerlink" title="两条直线不平行"></a>两条直线不平行</h2><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h3><p>两条直线不平行，因而相交，设交点为$(h,k)$，是新的原点$(h,k)=(\bar{0},\bar{0})$。把$(8.11)$替换进$(8.2)$，由交点的性质，常数项可忽略。</p>
-<script type="math/tex; mode=display">
-a_1h+b_1k+c_1=0</script><script type="math/tex; mode=display">
-a_2h+b_2k+c_2=0</script><p>转换成homogenous的形式</p>
-<script type="math/tex; mode=display">
-(a_1\bar{x}+b_1\bar{y})d\bar{x}+(a_2\bar{x}+b_2\bar{y})d\bar{y}=0\tag{8.24}</script><h3 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h3><p>换元</p>
-<script type="math/tex; mode=display">
-u=a_1x+b_1y+c_1\tag{8.3}</script><script type="math/tex; mode=display">
-v=a_2x+b_2y+c_2</script><p>微分</p>
-<script type="math/tex; mode=display">
-du=a_1dx+b_1dy\tag{8.31}</script><script type="math/tex; mode=display">
-dv=a_2dx+b_2dy</script><p>解方程，用$du,dv$表示$dx,dy$，代入$(8.2)$式，再用homogenous的方法。</p>
-<h2 id="两条直线平行"><a href="#两条直线平行" class="headerlink" title="两条直线平行"></a>两条直线平行</h2><p>Method 1失效。只能换元，都用$u$表示</p>
-<script type="math/tex; mode=display">
-(2x+3y-1)dx+(4x+6y+2)dy=0</script><script type="math/tex; mode=display">
-u=2x+3y-1, \quad \Rightarrow\quad 4x+6y+2=2u+4</script><p>然后就回到$u$和$x$或$y$组成的homogenous形式。</p>
-<h1 id="Exact-DE"><a href="#Exact-DE" class="headerlink" title="Exact DE"></a>Exact DE</h1><ol>
-<li><p>Riemann integral</p>
-<script type="math/tex; mode=display">
-\lim_{n\rightarrow \infty}\sum_{k=1}^nf(x_k)\Delta x_k=\int_a^bf(x)dx</script></li>
-<li><p>微积分基本定理</p>
-<script type="math/tex; mode=display">
+    <div class="post-body" itemprop="articleBody"><h1 id="separable-variables">Separable Variables</h1>
+<p>当<span class="math inline">\(x,y\)</span>可分离时， <span
+class="math display">\[
+Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6.6}
+\]</span> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy=0\tag{6.61}
+\]</span> <span class="math display">\[
+\Rightarrow f(x)dx+g(y)dy=0\tag{6.62}
+\]</span> <span class="math display">\[
+\Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}
+\]</span></p>
+<p><strong><em>Def 7.1</em></strong> Let <span
+class="math inline">\(z=f(x,y)\)</span> define <span
+class="math inline">\(z\)</span> as a function of <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> in a region <span
+class="math inline">\(R\)</span>. The function <span
+class="math inline">\(f(x,y)\)</span> is said to be <strong>homogeneous
+of order n</strong> if it can be written as</p>
+<p><span class="math display">\[
+f(x,y)=x^ng(u)\tag{7.11}
+\]</span></p>
+<p>where <span class="math inline">\(u=\dfrac yx\)</span> and <span
+class="math inline">\(g(u)\)</span> is a function of <span
+class="math inline">\(u\)</span>; or alternately if it can be written
+as</p>
+<p><span class="math display">\[
+f(x,y)=y^nh(u)\tag{7.11}
+\]</span></p>
+<p>where <span class="math inline">\(u=\dfrac xy\)</span> and <span
+class="math inline">\(h(u)\)</span> is a function of <span
+class="math inline">\(u\)</span></p>
+<p>也可定义为：A function <span class="math inline">\(f(x,y)\)</span> is
+said to be homogeneous of order n if <span
+class="math display">\[f(tx,ty)=t^nf(x,y)\tag{7.16}\]</span></p>
+<h1 id="homogeneous-coefficients">Homogeneous Coefficients</h1>
+<p><em>Definition 7.2.</em> The differential equation <span
+class="math display">\[P(x,y)dx+Q(x,y)dy=0\tag{7.3}\]</span> where <span
+class="math inline">\(P(x,y)\)</span> and <span
+class="math inline">\(Q(x,y)\)</span> are each homogeneous functions of
+order <span class="math inline">\(n\)</span> is called a <strong>first
+order differential equation with homogeneous coefficients</strong>.</p>
+<p><strong><em>Theorem 7.32.</em></strong> If the coefficients in <span
+class="math inline">\((7.3)\)</span> are each homogeneous function of
+order <span class="math inline">\(n\)</span>, then the substitution in
+it of <span class="math inline">\((7.31),(7.33)\)</span> will lead to an
+equation in which the variables are separable.</p>
+<p><span class="math display">\[y=ux\  \Leftarrow \
+\left(u=\frac{y}{x}\right),\quad dy=udx+xdu,\quad
+\tag{7.31}\]</span></p>
+<p><span class="math display">\[x=uy\  \Leftarrow \
+\left(u=\frac{x}{y}\right),\quad dx=udy+ydu,\quad
+\tag{7.33}\]</span></p>
+<h1 id="linear-coefficients">Linear Coefficients</h1>
+<p><span class="math display">\[
+x=\bar{x}+h,\quad y=\bar{y}+k\tag{8.11}
+\]</span> <span class="math display">\[
+\Rightarrow \bar{x}=x-h,\quad \bar{y}=y-k\tag{8.12}
+\]</span> 解线性系数的微分方程， <span class="math display">\[
+(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy=0\tag{8.2}
+\]</span></p>
+<h2 id="两条直线不平行">两条直线不平行</h2>
+<h3 id="method-1">Method 1</h3>
+<p>两条直线不平行，因而相交，设交点为<span
+class="math inline">\((h,k)\)</span>，是新的原点<span
+class="math inline">\((h,k)=(\bar{0},\bar{0})\)</span>。把<span
+class="math inline">\((8.11)\)</span>替换进<span
+class="math inline">\((8.2)\)</span>，由交点的性质，常数项可忽略。 <span
+class="math display">\[
+a_1h+b_1k+c_1=0
+\]</span> <span class="math display">\[
+a_2h+b_2k+c_2=0
+\]</span></p>
+<p>转换成homogenous的形式 <span class="math display">\[
+(a_1\bar{x}+b_1\bar{y})d\bar{x}+(a_2\bar{x}+b_2\bar{y})d\bar{y}=0\tag{8.24}
+\]</span></p>
+<h3 id="method-2">Method 2</h3>
+<p>换元 <span class="math display">\[
+u=a_1x+b_1y+c_1\tag{8.3}
+\]</span> <span class="math display">\[
+v=a_2x+b_2y+c_2
+\]</span> 微分 <span class="math display">\[
+du=a_1dx+b_1dy\tag{8.31}
+\]</span> <span class="math display">\[
+dv=a_2dx+b_2dy
+\]</span> 解方程，用<span class="math inline">\(du,dv\)</span>表示<span
+class="math inline">\(dx,dy\)</span>，代入<span
+class="math inline">\((8.2)\)</span>式，再用homogenous的方法。</p>
+<h2 id="两条直线平行">两条直线平行</h2>
+<p>Method 1失效。只能换元，都用<span
+class="math inline">\(u\)</span>表示 <span class="math display">\[
+(2x+3y-1)dx+(4x+6y+2)dy=0
+\]</span> <span class="math display">\[
+u=2x+3y-1, \quad \Rightarrow\quad 4x+6y+2=2u+4
+\]</span> 然后就回到<span class="math inline">\(u\)</span>和<span
+class="math inline">\(x\)</span>或<span
+class="math inline">\(y\)</span>组成的homogenous形式。</p>
+<h1 id="exact-de">Exact DE</h1>
+<ol type="1">
+<li><p>Riemann integral <span class="math display">\[
+\lim_{n\rightarrow \infty}\sum_{k=1}^nf(x_k)\Delta x_k=\int_a^bf(x)dx
+\]</span></p></li>
+<li><p>微积分基本定理 <span class="math display">\[
 F(x)=\int_{x_0}^xf(u)du
-\tag{9.13}</script></li>
+\tag{9.13}
+\]</span></p></li>
 </ol>
-<script type="math/tex; mode=display">
-\rightarrow F'(x)=f(x), \quad a<x<b\tag{9.14}</script><ol>
-<li>要让<script type="math/tex; mode=display">\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}</script>有定义，必须$[x_0,x]\times [y_0,y]\subset D$</li>
+<p><span class="math display">\[
+\rightarrow F&#39;(x)=f(x), \quad a&lt;x&lt;b\tag{9.14}
+\]</span></p>
+<ol start="3" type="1">
+<li>要让 <span
+class="math display">\[\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}\]</span>
+有定义，必须<span class="math inline">\([x_0,x]\times [y_0,y]\subset
+D\)</span></li>
 </ol>
-<p><strong><em>Definition 9.19.</em></strong> A region is called a <strong>simply connected region</strong> if every simple closed curve lying entirely in the region encloses only points of the region. </p>
+<p><strong><em>Definition 9.19.</em></strong> A region is called a
+<strong>simply connected region</strong> if every simple closed curve
+lying entirely in the region encloses only points of the region.</p>
 <blockquote>
-<p><em>shrink</em> closed curve to a point without non-domain points getting on the way</p>
+<p><em>shrink</em> closed curve to a point without non-domain points
+getting on the way</p>
+</blockquote>
+<blockquote>
 <p>其实就是<strong>单连通域</strong>，对应的是<em>多连通域</em></p>
 </blockquote>
-<p>要让$(9.16)$有定义</p>
-<ol>
-<li>共同定义域是S.C. region $R$</li>
-<li>$(x_0,y_0)\in R$</li>
-<li>长方形$[x_0,x]\times [y_0,y]\subset R$</li>
+<p>要让<span class="math inline">\((9.16)\)</span>有定义</p>
+<ol type="1">
+<li>共同定义域是S.C. region <span class="math inline">\(R\)</span></li>
+<li><span class="math inline">\((x_0,y_0)\in R\)</span></li>
+<li>长方形<span class="math inline">\([x_0,x]\times [y_0,y]\subset
+R\)</span></li>
 </ol>
-<p><strong><em>Def 9.23</em></strong> </p>
-<script type="math/tex; mode=display">
-P(x,y)dx+Q(x,y)dy\tag{9.24}</script><p>is called an <strong>exact differential</strong> if it is the total differential of a function $f(x,y)$.</p>
-<script type="math/tex; mode=display">
-P(x,y)=\frac{\partial}{\partial x}f(x,y)\quad Q(x,y)=\frac{\partial}{\partial y}f(x,y)\tag{9.241}</script><p><strong><em>Def 9.27</em></strong> </p>
-<script type="math/tex; mode=display">
-P(x,y)dx+Q(x,y)dy\tag{9.28}=0</script><p>is called <strong>exact differential equation</strong> if follows $(9.241)$.</p>
-<p><strong><em>Theorem 9.3.</em></strong> A necessary and sufficient condition that the differential equation </p>
-<script type="math/tex; mode=display">
-P(x,y)dx+Q(x,y)dy\tag{9.31}=0</script><p>be exact is that</p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial y}P(x,y)=\frac{\partial}{\partial x}Q(x,y\tag{9.32})</script><p>解法一：</p>
-<p>套公式 $\displaystyle{f(x,y)=\int<em>{x_0}^x P(x,y)dx+\int</em>{y_0}^y Q(x_0,y)dy}=c$</p>
-<p>或$\displaystyle{f(x,y)=\int<em>{y_0}^yQ(x,y)dy+\int</em>{x_0}^xP(x,y_0)dx}=c$</p>
-<p>解法二：</p>
-<script type="math/tex; mode=display">
-P(x,y)dx+Q(x,y)dy=0</script><p>By $\displaystyle{\frac{\partial}{\partial x}f(x,y)=P(x,y)}$,</p>
-<script type="math/tex; mode=display">
-f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}</script><p>再由</p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial y}f(x,y)=Q(x,y)</script><script type="math/tex; mode=display">
-\underbrace{\frac{\partial}{\partial y} \int P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial y}P(x,y)dx}}+R'(y)=Q(x,y)</script><p>解出$R(y)$再代回$(\star)$式.</p>
-<div class="table-container">
+<p><strong><em>Def 9.23</em></strong> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.24}
+\]</span> is called an <strong>exact differential</strong> if it is the
+total differential of a function <span
+class="math inline">\(f(x,y)\)</span>. <span class="math display">\[
+P(x,y)=\frac{\partial}{\partial x}f(x,y)\quad
+Q(x,y)=\frac{\partial}{\partial y}f(x,y)\tag{9.241}
+\]</span></p>
+<p><strong><em>Def 9.27</em></strong> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.28}=0
+\]</span> is called <strong>exact differential equation</strong> if
+follows <span class="math inline">\((9.241)\)</span>.</p>
+<p><strong><em>Theorem 9.3.</em></strong> A necessary and sufficient
+condition that the differential equation <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.31}=0
+\]</span> be exact is that <span class="math display">\[
+\frac{\partial}{\partial y}P(x,y)=\frac{\partial}{\partial
+x}Q(x,y\tag{9.32})
+\]</span></p>
+<p>解法一：</p>
+<p>套公式 <span class="math inline">\(\displaystyle{f(x,y)=\int_{x_0}^x
+P(x,y)dx+\int_{y_0}^y Q(x_0,y)dy}=c\)</span></p>
+<p>或<span
+class="math inline">\(\displaystyle{f(x,y)=\int_{y_0}^yQ(x,y)dy+\int_{x_0}^xP(x,y_0)dx}=c\)</span></p>
+<p>解法二： <span class="math display">\[
+P(x,y)dx+Q(x,y)dy=0
+\]</span> By <span
+class="math inline">\(\displaystyle{\frac{\partial}{\partial
+x}f(x,y)=P(x,y)}\)</span>, <span class="math display">\[
+f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}
+\]</span> 再由 <span class="math display">\[
+\frac{\partial}{\partial y}f(x,y)=Q(x,y)
+\]</span> <span class="math display">\[
+\underbrace{\frac{\partial}{\partial y} \int
+P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial
+y}P(x,y)dx}}+R&#39;(y)=Q(x,y)
+\]</span> 解出<span class="math inline">\(R(y)\)</span>再代回<span
+class="math inline">\((\star)\)</span>式.</p>
 <table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">Number</th>
-<th style="text-align:center">Exact Diff Eq</th>
-<th style="text-align:center">Solution</th>
+<tr class="header">
+<th style="text-align: center;">Number</th>
+<th style="text-align: center;">Exact Diff Eq</th>
+<th style="text-align: center;">Solution</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">$(10.2)$</td>
-<td style="text-align:center">$ydx+xdy$</td>
-<td style="text-align:center">$xy=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.2)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(ydx+xdy\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.21)$</td>
-<td style="text-align:center">$2xydx+x^2dy=0$</td>
-<td style="text-align:center">$x^2y=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.21)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2xydx+x^2dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.22)$</td>
-<td style="text-align:center">$y^2dx+2xydy=0$</td>
-<td style="text-align:center">$xy^2=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.22)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y^2dx+2xydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy^2=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.23)$</td>
-<td style="text-align:center">$2xy^2dx+2x^2ydy=0$</td>
-<td style="text-align:center">$x^2y^2=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.23)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2xy^2dx+2x^2ydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y^2=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.24)$</td>
-<td style="text-align:center">$3x^2y^3dx+3x^3y^2dy=0$</td>
-<td style="text-align:center">$x^2y^2=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.24)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3x^2y^3dx+3x^3y^2dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y^2=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.25)$</td>
-<td style="text-align:center">$3x^2ydx+x^3dy=0$</td>
-<td style="text-align:center">$x^3y=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.25)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3x^2ydx+x^3dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^3y=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.26)$</td>
-<td style="text-align:center">$y\cos xdx+\sin xdy=0$</td>
-<td style="text-align:center">$y\sin x=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.26)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\cos
+xdx+\sin xdy=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\sin
+x=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.27)$</td>
-<td style="text-align:center">$\sin ydx+x\cos ydy=0$</td>
-<td style="text-align:center">$x\sin y=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.27)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin
+ydx+x\cos ydy=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x\sin
+y=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.28)$</td>
-<td style="text-align:center">$ye^{xy}dx+xe^{xy}dy=0$</td>
-<td style="text-align:center">$e^{xy}=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.28)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(ye^{xy}dx+xe^{xy}dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(e^{xy}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.29)$</td>
-<td style="text-align:center">$\displaystyle{\frac{dx}{x}+\frac{dy}{y}=0}$</td>
-<td style="text-align:center">$\log (xy)=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.29)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{dx}{x}+\frac{dy}{y}=0}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\log
+(xy)=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.3)$</td>
-<td style="text-align:center">$\displaystyle{\frac{ydx-xdy}{y^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\frac xy}=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.3)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{ydx-xdy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac xy}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.31)$</td>
-<td style="text-align:center">$\displaystyle{-\frac{ydx-xdy}{x^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\frac yx}=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.31)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{ydx-xdy}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac yx}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.32)$</td>
-<td style="text-align:center">$\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\frac {y^2}{x}}=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.32)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {y^2}{x}}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.33)$</td>
-<td style="text-align:center">$\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\frac {x^2}{y}}=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.33)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {x^2}{y}}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.34)$</td>
-<td style="text-align:center">$\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\arctan \frac {y}{x}}=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.34)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \frac
+{y}{x}}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.35)$</td>
-<td style="text-align:center">$\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}$</td>
-<td style="text-align:center">$\displaystyle{\arctan \log \frac {x+y}{x-y}}=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.35)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{x+y}{x-y}}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.39)$</td>
-<td style="text-align:center">$\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}$</td>
-<td style="text-align:center">$\displaystyle{\arctan \log \frac {y^3}{3x^3}}=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.39)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{y^3}{3x^3}}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.391)$</td>
-<td style="text-align:center">$\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}$</td>
-<td style="text-align:center">$\sqrt{x^2+y^2}=c$</td>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.391)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\sqrt{x^2+y^2}=c\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">$(10.392)$</td>
-<td style="text-align:center">$e^{3x}dy+3e^{3x}ydx=0 $</td>
-<td style="text-align:center">$e^{3x}y=c$</td>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.392)\)</span></td>
+<td style="text-align: center;">$e<sup>{3x}dy+3e</sup>{3x}ydx=0 <span
+class="math inline">\(|\)</span>e^{3x}y=c$</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="Integrating-Factor"><a href="#Integrating-Factor" class="headerlink" title="Integrating Factor"></a>Integrating Factor</h2><p><strong><em>Def 10.5</em></strong> A multiplying factor which converts an inexact diff eq into an exact one is called <strong>integrating factor</strong>.</p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial y}[hP(x,y)]=\frac{\partial}{\partial x}[hQ(x,y)]\tag{10.62 $\star$}</script><ol>
-<li>$h=h(x)$</li>
+<h2 id="integrating-factor">Integrating Factor</h2>
+<p><strong><em>Def 10.5</em></strong> A multiplying factor which
+converts an inexact diff eq into an exact one is called
+<strong>integrating factor</strong>.</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial y}[hP(x,y)]=\frac{\partial}{\partial
+x}[hQ(x,y)]\tag{10.62 $\star$}
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(h=h(x)\)</span></li>
 </ol>
-<script type="math/tex; mode=display">
-\frac{dh(x)}{h(x)}=\frac{\frac{\partial}{\partial y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}dx\tag{10.64}</script><p>更特殊地，$F(x)=\displaystyle{\frac{\frac{\partial}{\partial y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}}$，所以$\displaystyle{h(x)=e^{\int F(x)dx}}$</p>
-<ol>
-<li>$h=h(y)$</li>
+<p><span class="math display">\[
+\frac{dh(x)}{h(x)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}dx\tag{10.64}
+\]</span></p>
+<p>更特殊地，<span
+class="math inline">\(F(x)=\displaystyle{\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}}\)</span>，所以<span
+class="math inline">\(\displaystyle{h(x)=e^{\int F(x)dx}}\)</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(h=h(y)\)</span></li>
 </ol>
-<script type="math/tex; mode=display">
-\frac{dh(y)}{h(y)}=\frac{\frac{\partial}{\partial x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)}{P(x,y)}dy\tag{10.68}</script><ol>
-<li>$h=h(u), u=xy$</li>
+<p><span class="math display">\[
+\frac{dh(y)}{h(y)}=\frac{\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)}{P(x,y)}dy\tag{10.68}
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(h=h(u), u=xy\)</span></li>
 </ol>
-<script type="math/tex; mode=display">
-\frac{dh(u)}{h(u)}=\frac{\frac{\partial}{\partial y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{yQ(x,y)-xP(x,y)}du\tag{10.72}</script><ol>
-<li><p>$h=h(u),u=\frac xy$</p>
-<script type="math/tex; mode=display">
-\frac{dh(u)}{h(u)}=\frac{y^2\left[\frac{\partial}{\partial y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}</script></li>
-<li><p>$h=h(u),u=\frac yx$</p>
-</li>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)}{yQ(x,y)-xP(x,y)}du\tag{10.72}
+\]</span></p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(h=h(u),u=\frac xy\)</span> <span
+class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{y^2\left[\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p></li>
+<li><p><span class="math inline">\(h=h(u),u=\frac yx\)</span></p></li>
 </ol>
-<script type="math/tex; mode=display">
-\frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}</script><h1 id="Linear-DE"><a href="#Linear-DE" class="headerlink" title="Linear DE"></a>Linear DE</h1><p><strong><em>Def 11.1</em></strong> A linear diff eq of the first order is </p>
-<script type="math/tex; mode=display">
-\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}</script><p>Integrating factor is in the form $\displaystyle{e^{\int P(x)dx}}$, by $(9.32)$. </p>
-<script type="math/tex; mode=display">
-\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int P(x)dx}dy=0\tag{11.13}</script><script type="math/tex; mode=display">
-\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}</script><script type="math/tex; mode=display">
-e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}</script><p>This is a true general solution of $(11.11)$.</p>
-<script type="math/tex; mode=display">
-y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int P(x)dx}\tag{11.191}</script><h2 id="Bernoulli-Equation"><a href="#Bernoulli-Equation" class="headerlink" title="Bernoulli Equation"></a>Bernoulli Equation</h2><script type="math/tex; mode=display">
-\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}</script><p>两边同时乘以$(1-n)y^{-n}$</p>
-<script type="math/tex; mode=display">
-(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}</script><script type="math/tex; mode=display">
-\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot \underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}</script><p>$u=y^{1-n}$，转化为线性DE的形式</p>
-<script type="math/tex; mode=display">
-u'+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}</script>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial
+y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p>
+<h1 id="linear-de">Linear DE</h1>
+<p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
+order is <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
+\]</span></p>
+<p>Integrating factor is in the form <span
+class="math inline">\(\displaystyle{e^{\int P(x)dx}}\)</span>, by <span
+class="math inline">\((9.32)\)</span>.</p>
+<p><span class="math display">\[
+\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int
+P(x)dx}dy=0\tag{11.13}
+\]</span></p>
+<p><span class="math display">\[
+\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int
+P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}
+\]</span></p>
+<p><span class="math display">\[
+e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}
+\]</span></p>
+<p>This is a true general solution of <span
+class="math inline">\((11.11)\)</span>. <span class="math display">\[
+y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
+P(x)dx}\tag{11.191}
+\]</span></p>
+<h2 id="bernoulli-equation">Bernoulli Equation</h2>
+<p><span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
+\]</span></p>
+<p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
+class="math display">\[
+(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}
+\]</span> <span class="math display">\[
+\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
+\underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
+\]</span> <span
+class="math inline">\(u=y^{1-n}\)</span>，转化为线性DE的形式 <span
+class="math display">\[
+u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
+\]</span></p>
+
     </div>
 
     

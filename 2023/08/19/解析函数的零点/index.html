@@ -24,16 +24,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="实函数的零点存在聚点（limit point）  Theo Let $D$ be a domain in $\mathbb{C}$. $f\in O(D)$, let $Z_f&#x3D;{z\in D|f(z)&#x3D;0}$ If $Z_f$ has a limit point in $D$, then $f\equiv 0$ on $D$ pf. Set $A&#x3D;{w\in D|w \text{ is a li">
+    <meta name="description" content="實函數的零点存在聚點（limit point）  Theo Let \(D\) be a domain in \(\mathbb{C}\). \(f\in O(D)\), let \(Z_f&#x3D;\{z\in D|f(z)&#x3D;0\}\) If \(Z_f\) has a limit point in \(D\), then \(f\equiv 0\) on \(D\) pf. Set \(A&#x3D;\{w\i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析函數的零點">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/index.html">
 <meta property="og:site_name" content="檔案助手">
-<meta property="og:description" content="实函数的零点存在聚点（limit point）  Theo Let $D$ be a domain in $\mathbb{C}$. $f\in O(D)$, let $Z_f&#x3D;{z\in D|f(z)&#x3D;0}$ If $Z_f$ has a limit point in $D$, then $f\equiv 0$ on $D$ pf. Set $A&#x3D;{w\in D|w \text{ is a li">
+<meta property="og:description" content="實函數的零点存在聚點（limit point）  Theo Let \(D\) be a domain in \(\mathbb{C}\). \(f\in O(D)\), let \(Z_f&#x3D;\{z\in D|f(z)&#x3D;0\}\) If \(Z_f\) has a limit point in \(D\), then \(f\equiv 0\) on \(D\) pf. Set \(A&#x3D;\{w\i">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/3D_1.png">
 <meta property="article:published_time" content="2023-08-19T15:34:20.000Z">
-<meta property="article:modified_time" content="2023-08-20T01:25:09.101Z">
+<meta property="article:modified_time" content="2023-08-20T16:33:53.882Z">
 <meta property="article:author" content="隨便誰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/3D_1.png">
@@ -201,7 +201,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-20 09:25:09" itemprop="dateModified" datetime="2023-08-20T09:25:09+08:00">2023-08-20</time>
+      <time title="修改時間：2023-08-21 00:33:53" itemprop="dateModified" datetime="2023-08-21T00:33:53+08:00">2023-08-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -222,31 +222,60 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>实函数的零点存在聚点（limit point）</p>
+    <div class="post-body" itemprop="articleBody"><p>實函數的零点存在聚點（limit point）</p>
 <p><img src="3D_1.png" width=350px></p>
-<p><u><strong>Theo</strong></u> Let $D$ be a domain in $\mathbb{C}$.</p>
-<p>$f\in O(D)$, let $Z_f={z\in D|f(z)=0}$</p>
-<p>If $Z_f$ has a limit point in $D$, then $f\equiv 0$ on $D$</p>
-<p><strong>pf.</strong> Set $A={w\in D|w \text{ is a limit point of }Z_f}$</p>
-<p>By assumption, $A\neq \varnothing$</p>
+<p><u><strong>Theo</strong></u> Let <span
+class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>.</p>
+<p><span class="math inline">\(f\in O(D)\)</span>, let <span
+class="math inline">\(Z_f=\{z\in D|f(z)=0\}\)</span></p>
+<p>If <span class="math inline">\(Z_f\)</span> has a limit point in
+<span class="math inline">\(D\)</span>, then <span
+class="math inline">\(f\equiv 0\)</span> on <span
+class="math inline">\(D\)</span></p>
+<p><strong>pf.</strong> Set <span class="math inline">\(A=\{w\in D|w
+\text{ is a limit point of }Z_f\}\)</span></p>
+<p>By assumption, <span class="math inline">\(A\neq
+\varnothing\)</span></p>
 <blockquote>
-<p>The only two subsets of $A$ that are both closed and open is $\varnothing$ and $A$ itself.</p>
+<p>The only two subsets of <span class="math inline">\(A\)</span> that
+are both closed and open is <span
+class="math inline">\(\varnothing\)</span> and <span
+class="math inline">\(A\)</span> itself.</p>
 <p><a href="/download/intro_analysis_ch1.pdf">intro_analysis_ch1</a></p>
 </blockquote>
-<p>$A$ is closed. (obvious)</p>
-<p>let $p\in A\subset D$, $f(p)=0$</p>
+<p><span class="math inline">\(A\)</span> is closed. (obvious)</p>
+<p>let <span class="math inline">\(p\in A\subset D\)</span>, <span
+class="math inline">\(f(p)=0\)</span></p>
 <p>write</p>
-<script type="math/tex; mode=display">
-f(z)=\sum_{k=0}^{\infty}a_k(z-p)^k=\sum_{k=1}^{\infty}a_k(z-p)^k</script><p><strong>Claim</strong>: $a_k=0,\forall k\in \mathbb{N}$</p>
-<p>If not, then $\exists a_{k_0}\neq 0$</p>
-<script type="math/tex; mode=display">
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}a_k(z-p)^k=\sum_{k=1}^{\infty}a_k(z-p)^k
+\]</span></p>
+<p><strong>Claim</strong>: <span class="math inline">\(a_k=0,\forall
+k\in \mathbb{N}\)</span></p>
+<p>If not, then <span class="math inline">\(\exists a_{k_0}\neq
+0\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-    \therefore f(z)&=a_{k_0}(z-p)^{k_0}+a_{k_0+1}(z-p)^{k_0+1}+\cdots\\
-    &=(z-p)^{k_0}(a_{k_0}+a_{k_0+1}(z-p)+\cdots)
-\end{aligned}</script><p>Set $g(z)=a<em>{k_0}+a</em>{k_0+1}(z-p)+\cdots$, then</p>
-<script type="math/tex; mode=display">
-g(p)=a_{k_0}\neq 0</script><p>在$p$点周围$f$均不等于0，只有$f(p)=0$，所以$p$不是聚点，不在$A$内，矛盾. $\square$</p>
-<p>$\therefore$ $A$ is open $\Rightarrow A=D$</p>
+    \therefore
+f(z)&amp;=a_{k_0}(z-p)^{k_0}+a_{k_0+1}(z-p)^{k_0+1}+\cdots\\
+    &amp;=(z-p)^{k_0}(a_{k_0}+a_{k_0+1}(z-p)+\cdots)
+\end{aligned}
+\]</span></p>
+<p>Set <span
+class="math inline">\(g(z)=a_{k_0}+a_{k_0+1}(z-p)+\cdots\)</span>, then
+<span class="math display">\[
+g(p)=a_{k_0}\neq 0
+\]</span></p>
+<p>在<span class="math inline">\(p\)</span>点周圍<span
+class="math inline">\(f\)</span>均不等於0，只有<span
+class="math inline">\(f(p)=0\)</span>，所以<span
+class="math inline">\(p\)</span>不是聚点，不在<span
+class="math inline">\(A\)</span>内，矛盾. <span
+class="math inline">\(\square\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> <span
+class="math inline">\(A\)</span> is open <span
+class="math inline">\(\Rightarrow A=D\)</span></p>
 
     </div>
 
