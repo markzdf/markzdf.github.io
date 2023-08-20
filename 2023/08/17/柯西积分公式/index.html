@@ -24,12 +24,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_">
+    <meta name="description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula)Let $D$ be a bounded domain in $\mathbb{C}$ with piecewise smooth doundary. Suppose $f\in C^1(\bar{D})$, Then   f(w)&#x3D;\frac{1}{2\pi i}\oint_{\pa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="柯西積分公式">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="檔案助手">
-<meta property="og:description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula) Let \(D\) be a bounded domain in \(\mathbb{C}\) with piecewise smooth doundary. Suppose \(f\in C^1(\bar{D})\), Then \[ f(w)&#x3D;\frac{1}{2\pi i}\oint_">
+<meta property="og:description" content="复变最重要的两个定理都在这了！！！  Theo : (Cauchy&#39;s integral formula)Let $D$ be a bounded domain in $\mathbb{C}$ with piecewise smooth doundary. Suppose $f\in C^1(\bar{D})$, Then   f(w)&#x3D;\frac{1}{2\pi i}\oint_{\pa">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_2.png">
@@ -231,288 +231,143 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>复变最重要的两个定理都在这了！！！</p>
-<p><u> <strong>Theo</strong></u> :
-(<code>Cauchy's integral formula</code>) Let <span
-class="math inline">\(D\)</span> be a bounded domain in <span
-class="math inline">\(\mathbb{C}\)</span> with piecewise smooth
-doundary. Suppose <span class="math inline">\(f\in
-C^1(\bar{D})\)</span>, Then <span class="math display">\[
-f(w)=\frac{1}{2\pi i}\oint_{\partial
-D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
-\frac{\displaystyle{\frac{\partial f}{\partial
-\bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D
-\]</span></p>
-<p>where <span class="math inline">\(z=x+iy\)</span>.</p>
+<p><u> <strong>Theo</strong></u> : (<code>Cauchy&#39;s integral formula</code>)<br>Let $D$ be a bounded domain in $\mathbb{C}$ with piecewise smooth doundary. Suppose $f\in C^1(\bar{D})$, Then </p>
+<script type="math/tex; mode=display">
+f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D \frac{\displaystyle{\frac{\partial f}{\partial \bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D</script><p>where $z=x+iy$.</p>
 <p><img src="2A_1.png" width=400px></p>
-<p>consider <span
-class="math inline">\(D_{\varepsilon}=D/\bar{B_{\varepsilon}}\)</span>,
-<span class="math inline">\(B_{\epsilon}=B(w;\epsilon)\)</span></p>
+<p>consider $D<em>{\varepsilon}=D/\bar{B</em>{\varepsilon}}$, $B_{\epsilon}=B(w;\epsilon)$</p>
 <p>挖掉圆盘后有内外两个边界，曲线积分等于外围的减内围的</p>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \begin{aligned}
-   \oint_{\partial
-D_{\epsilon}}\frac{f(z)}{z-w}dz&amp;=2i\iint_{D_{\epsilon}}\frac{\partial}{\partial
-\bar{z}}\left(\frac{f(z)}{z-w}\right)dxdy \\
-   &amp;=2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
-\bar{z}}(z)}{z-w}dxdy \quad \star
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz=\oint_{\partial
-D}\frac{f(z)}{z-w}dz-\oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz
-\quad \star
-\]</span></p>
-<p>set <span class="math inline">\(z=w+\epsilon e^{i\theta}\)</span>,
-<span class="math inline">\(z-w=\epsilon e^{i\theta}\)</span></p>
-<p><span class="math display">\[
+   \oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz&=2i\iint_{D_{\epsilon}}\frac{\partial}{\partial \bar{z}}\left(\frac{f(z)}{z-w}\right)dxdy \\
+   &=2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy \quad \star
+\end{aligned}</script><script type="math/tex; mode=display">
+\oint_{\partial D_{\epsilon}}\frac{f(z)}{z-w}dz=\oint_{\partial D}\frac{f(z)}{z-w}dz-\oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz \quad \star</script><p>set $z=w+\epsilon e^{i\theta}$, $z-w=\epsilon e^{i\theta}$</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-    \oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz&amp;=\oint_{\partial
-B_{\epsilon}}\frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}dz\\
-    &amp;=\int_0^{2\pi} \frac{f(w+\epsilon e^{i\theta})}{\epsilon
-e^{i\theta}}i\epsilon e^{i\theta}d\theta\\
-    &amp;=i\int_0^{2\pi}f(w+\epsilon e^{i\theta})d\theta\\
-    &amp;\xrightarrow{\epsilon\rightarrow0} i\int_0^{2\pi}f(w)d\theta\\
-    &amp;=2\pi if(w)
-\end{aligned}
-\]</span></p>
-<p>下面考虑这个积分</p>
-<p><span class="math display">\[
-2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
-\bar{z}}(z)}{z-w}dxdy
-\]</span></p>
-<p>因为<span class="math inline">\(f\)</span>是<span
-class="math inline">\(C^1\)</span>函数，<span
-class="math inline">\(\frac{\partial f}{\partial \bar{z}}(z)\in
-C(\bar{D})\)</span></p>
-<p><a href="/download/2250cauchys-kernel.pdf"><strong>Cauchy
-Kernel</strong></a></p>
-<p><span class="math display">\[
-\iint_K \bigg| \frac{1}{z-w} \bigg| dxdy&lt;\infty
-\]</span></p>
-<p>K: compact</p>
+    \oint_{\partial B_{\epsilon}}\frac{f(z)}{z-w}dz&=\oint_{\partial B_{\epsilon}}\frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}dz\\
+    &=\int_0^{2\pi} \frac{f(w+\epsilon e^{i\theta})}{\epsilon e^{i\theta}}i\epsilon e^{i\theta}d\theta\\
+    &=i\int_0^{2\pi}f(w+\epsilon e^{i\theta})d\theta\\
+    &\xrightarrow{\epsilon\rightarrow0} i\int_0^{2\pi}f(w)d\theta\\
+    &=2\pi if(w)
+\end{aligned}</script><p>下面考虑这个积分</p>
+<script type="math/tex; mode=display">
+2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><p>因为$f$是$C^1$函数，$\frac{\partial f}{\partial \bar{z}}(z)\in C(\bar{D})$</p>
+<p><a href="/download/2250cauchys-kernel.pdf"><strong>Cauchy Kernel</strong></a></p>
+<script type="math/tex; mode=display">
+\iint_K \bigg| \frac{1}{z-w} \bigg| dxdy<\infty</script><p>K: compact</p>
 <p>因为会收敛(用极坐标)</p>
-<p><span class="math display">\[
-\iint_B\frac{1}{|z|}dxdy=\int_{0}^{2\pi}\int_0^R\frac 1r rdrd\theta
-\]</span></p>
-<p>let <span class="math inline">\(\epsilon\rightarrow 0\)</span></p>
-<p><span class="math display">\[
-2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
-\bar{z}}(z)}{z-w}dxdy\rightarrow 2i\iint_{D}\frac{\frac{\partial
-f}{\partial \bar{z}}(z)}{z-w}dxdy
-\]</span></p>
-<p>所以<span class="math inline">\(\epsilon\rightarrow 0\)</span>时</p>
-<p><span class="math display">\[
-\oint_{\partial D}\frac{f(z)}{z-w}dz-2\pi
-if(w)=2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy
-\]</span></p>
-<p><span class="math display">\[
-\therefore f(w)=\frac{1}{2\pi i}\oint_{\partial
-D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
-\frac{\displaystyle{\frac{\partial f}{\partial
-\bar{z}}}(z)}{z-w}dxdy\quad  \blacksquare
-\]</span></p>
-<hr />
-<p><u> <strong>Theo</strong></u> Let <span
-class="math inline">\(D\subset \mathbb{C}\)</span> be a simply-connected
-domain, suppose <span class="math inline">\(f\in C^1(D)\cap
-O(D)\)</span>. Then <span class="math display">\[
-f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw\quad w\in
-\Omega
-\]</span></p>
-<p><span class="math inline">\(\Omega\)</span>: region surrounded by the
-simple closed curve <span class="math inline">\(C\)</span></p>
-<p>simply connected 是为了保证<span
-class="math inline">\(C\)</span>围出来的还在<span
-class="math inline">\(D\)</span>里面，避免下面这种情况</p>
+<script type="math/tex; mode=display">
+\iint_B\frac{1}{|z|}dxdy=\int_{0}^{2\pi}\int_0^R\frac 1r rdrd\theta</script><p>let $\epsilon\rightarrow 0$</p>
+<script type="math/tex; mode=display">
+2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy\rightarrow 2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><p>所以$\epsilon\rightarrow 0$时</p>
+<script type="math/tex; mode=display">
+\oint_{\partial D}\frac{f(z)}{z-w}dz-2\pi if(w)=2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy</script><script type="math/tex; mode=display">
+\therefore f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D \frac{\displaystyle{\frac{\partial f}{\partial \bar{z}}}(z)}{z-w}dxdy\quad  \blacksquare</script><hr>
+<p><u> <strong>Theo</strong></u> Let $D\subset \mathbb{C}$ be a simply-connected domain, suppose $f\in C^1(D)\cap O(D)$. Then</p>
+<script type="math/tex; mode=display">
+f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw\quad w\in \Omega</script><p>$\Omega$: region surrounded by the simple closed curve $C$</p>
+<p>simply connected 是为了保证$C$围出来的还在$D$里面，避免下面这种情况</p>
 <p><img src="2A_2.png" width=300px></p>
-<hr />
+<hr>
 <p><u> <strong>Theo</strong></u> (Cauchy)</p>
-<p>Let <span class="math inline">\(D\)</span> be a simply connected
-domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
-<p><span class="math inline">\(C\)</span>: simple closed curve in <span
-class="math inline">\(D\)</span></p>
-<p>If <span class="math inline">\(f\in O(D)\)</span>. Then</p>
-<p><span class="math display">\[
-\oint_C f(z)dz=0
-\]</span></p>
-<p>之前有<span
-class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
+<p>Let $D$ be a simply connected domain in $\mathbb{C}$, </p>
+<p>$C$: simple closed curve in $D$</p>
+<p>If $f\in O(D)$. Then</p>
+<script type="math/tex; mode=display">
+\oint_C f(z)dz=0</script><p>之前有$C^1$是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
 <p><img src="2B_1.png" width=300px></p>
-<p><span class="math inline">\(R\)</span>: rectangle</p>
-<p><span class="math inline">\(L\)</span>: length of <span
-class="math inline">\(\partial R\)</span></p>
-<p><strong>Claim</strong>: <span class="math inline">\(\oint_{\partial
-R}f(z)dz=0\)</span></p>
+<p>$R$: rectangle</p>
+<p>$L$: length of $\partial R$</p>
+<p><strong>Claim</strong>: $\oint_{\partial R}f(z)dz=0$</p>
 <p>反证法</p>
-<p>Assume <span class="math inline">\(\exists R\)</span> s.t. <span
-class="math display">\[
-\oint_{\partial R}f(z)dz=A\neq 0
-\]</span></p>
-<p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
+<p>Assume $\exists R$ s.t.</p>
+<script type="math/tex; mode=display">
+\oint_{\partial R}f(z)dz=A\neq 0</script><p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
 <p><img src="2B_2.png" width=300px></p>
-<p><span class="math display">\[
-\oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz
-\]</span></p>
-<p><span class="math display">\[
-\therefore \exists R_1=R^{(j)} \ \text{some }j, \quad s.t.
-\bigg|\oint_{\partial R_1}f(z)dz \bigg|\geq \frac{A}{4}
-\]</span></p>
-<p><span class="math display">\[
-\bigg|\oint_{\partial R_2}f(z)dz \bigg|\geq \frac{A}{4^2}
-\]</span></p>
-<p>obtain a seq. of rectangle <span
-class="math inline">\(\{R_n\}\)</span></p>
-<p><span class="math display">\[
-\bigg|\oint_{\partial R_n}f(z)dz \bigg|\geq \frac{A}{4^n}
-\]</span></p>
-<p>By <a href="/download/cantor.pdf">Cantor intersection theorem</a>
-<span class="math display">\[
-\exists P_0\in R_n, \ \forall n\quad P_0\in D
-\]</span></p>
-<p>Write near <span class="math inline">\(P_0\)</span></p>
-<p><span class="math display">\[
-f(z)=f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon (z)(z-P_0)
-\]</span></p>
-<p><span class="math inline">\(\epsilon\rightarrow 0\)</span> as <span
-class="math inline">\(z\rightarrow P_0\)</span></p>
-<p>n 很大时，<span class="math inline">\(f(z)\)</span>可以用<span
-class="math inline">\(f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
-(z)(z-P_0)\)</span>替换</p>
-<p><span class="math display">\[
-\oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
-(z)(z-P_0)\right]dz
-\]</span></p>
-<p>多项式一定是某个函数的微分， <span class="math display">\[
-\therefore f(P_0)+f&#39;(P_0)(z-P_0)=Q&#39;(z)
-\]</span></p>
-<p><span class="math inline">\(Q(z)\)</span>: polynomial of degree at
-most 2</p>
+<script type="math/tex; mode=display">
+\oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz</script><script type="math/tex; mode=display">
+\therefore \exists R_1=R^{(j)} \ \text{some }j, \quad s.t. \bigg|\oint_{\partial R_1}f(z)dz \bigg|\geq \frac{A}{4}</script><script type="math/tex; mode=display">
+\bigg|\oint_{\partial R_2}f(z)dz \bigg|\geq \frac{A}{4^2}</script><p>obtain a seq. of rectangle ${R_n}$</p>
+<script type="math/tex; mode=display">
+\bigg|\oint_{\partial R_n}f(z)dz \bigg|\geq \frac{A}{4^n}</script><p>By <a href="/download/cantor.pdf">Cantor intersection theorem</a></p>
+<script type="math/tex; mode=display">
+\exists P_0\in R_n, \ \forall n\quad P_0\in D</script><p>Write near $P_0$</p>
+<script type="math/tex; mode=display">
+f(z)=f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)</script><p>$\epsilon\rightarrow 0$ as $z\rightarrow P_0$</p>
+<p>n 很大时，$f(z)$可以用$f(P_0)+f’(P_0)(z-P_0)+\epsilon (z)(z-P_0)$替换</p>
+<script type="math/tex; mode=display">
+\oint_{\partial R_n}\left[f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)\right]dz</script><p>多项式一定是某个函数的微分，</p>
+<script type="math/tex; mode=display">
+\therefore f(P_0)+f'(P_0)(z-P_0)=Q'(z)</script><p>$Q(z)$: polynomial of degree at most 2</p>
 <p><img src="映射.png" width=350px></p>
-<p><span class="math inline">\(z=\gamma(t)\)</span></p>
-<p><span class="math display">\[
+<p>$z=\gamma(t)$</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-    &amp;\oint_{\partial R_n}[f(P_0)+f&#39;(P_0)(z-P_0)]dz\\
-    =&amp;\oint_{\partial R_n}Q&#39;(z)dz\\
-    =&amp;\int_a^bQ&#39;(z)\gamma&#39;(t)dt\\
-    =&amp;\int_a^bd(Q(z))\\
-    =&amp; Q(\gamma(b))-Q(\gamma(a))=0\quad \text{首尾相连}
-\end{aligned}
-\]</span></p>
-<p>因为 <span class="math display">\[
-|\oint_{\partial R_n}dz|=|\int_a^b\gamma&#39;(t)dt|\leq
-\int_a^b|\gamma&#39;(t)|dt=Ln
-\]</span> <span class="math inline">\((z-P_0)\)</span>小于等于<span
-class="math inline">\(Ln\)</span>（弦长小于等于直径），<span
-class="math inline">\(dz\)</span>积分也小于<span
-class="math inline">\(Ln\)</span>，所以两次。<span
-class="math inline">\(\epsilon\)</span>用最大值提出来 <span
-class="math display">\[
+    &\oint_{\partial R_n}[f(P_0)+f'(P_0)(z-P_0)]dz\\
+    =&\oint_{\partial R_n}Q'(z)dz\\
+    =&\int_a^bQ'(z)\gamma'(t)dt\\
+    =&\int_a^bd(Q(z))\\
+    =& Q(\gamma(b))-Q(\gamma(a))=0\quad \text{首尾相连}
+\end{aligned}</script><p>因为</p>
+<script type="math/tex; mode=display">
+|\oint_{\partial R_n}dz|=|\int_a^b\gamma'(t)dt|\leq \int_a^b|\gamma'(t)|dt=Ln</script><p>$(z-P_0)$小于等于$Ln$（弦长小于等于直径），$dz$积分也小于$Ln$，所以两次。$\epsilon$用最大值提出来</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-    &amp;|\oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
-(z)(z-P_0)\right]dz|\\
-    =&amp;|\oint_{\partial R_n}\epsilon (z)(z-P_0)dz|\\
-    \leq &amp;\max_{z\in \partial R_n}|\epsilon(z)|\cdot L_n^2
-\end{aligned}
-\]</span></p>
-<p>由于 <span
-class="math inline">\(\displaystyle{L_n=\frac{L}{2^n}}\)</span></p>
-<p><span class="math display">\[
-\max_{z\in \partial R_n}|\epsilon(z)|\cdot
-\left(\frac{L}{2^n}\right)^2\geq \frac{|A|}{4^n}
-\]</span></p>
-<p>当<span class="math inline">\(n\rightarrow \infty\)</span>时，<span
-class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
-0\)</span></p>
-<p><span class="math display">\[
-\therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq
-\frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.\
-\square
-\]</span></p>
-<p>目前证得在所有的长方形上 <span class="math display">\[
-\oint_{\partial R}f(z)dz=0
-\]</span></p>
-<p><img src="cut.png"></p>
-<p>这个函数<span
-class="math inline">\(F(z)\)</span>必须well-defined：不管路径怎么选，积出来都一样</p>
+    &|\oint_{\partial R_n}\left[f(P_0)+f'(P_0)(z-P_0)+\epsilon (z)(z-P_0)\right]dz|\\
+    =&|\oint_{\partial R_n}\epsilon (z)(z-P_0)dz|\\
+    \leq &\max_{z\in \partial R_n}|\epsilon(z)|\cdot L_n^2
+\end{aligned}</script><p>由于 $\displaystyle{L_n=\frac{L}{2^n}}$</p>
+<script type="math/tex; mode=display">
+\max_{z\in \partial R_n}|\epsilon(z)|\cdot \left(\frac{L}{2^n}\right)^2\geq \frac{|A|}{4^n}</script><p>当$n\rightarrow \infty$时，$\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow 0$</p>
+<script type="math/tex; mode=display">
+\therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq \frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.\ \square</script><p>目前证得在所有的长方形上</p>
+<script type="math/tex; mode=display">
+\oint_{\partial R}f(z)dz=0</script><p><img src="cut.png"></p>
+<p>这个函数$F(z)$必须well-defined：不管路径怎么选，积出来都一样</p>
 <p>要证明它well-defined</p>
-<p><span class="math display">\[
-\Leftrightarrow F(z)=\int_{\Gamma_1}f(z)dz=\int_{\Gamma_2}f(z)dz
-\]</span></p>
-<p>因为每段路径平行于<span class="math inline">\(x\)</span>或<span
-class="math inline">\(y\)</span>轴，可以视作长方形的一部分。借助刚才的准备工作，</p>
-<p><span class="math display">\[
-\int_{\Gamma_1-\Gamma_2}f(z)dz=\int_{\Gamma_1}f(z)dz-\int_{\Gamma_2}f(z)dz=0\quad
-\square
-\]</span></p>
-<p>所以它是well-defined</p>
-<p><strong>Claim</strong> <span class="math display">\[
-F&#39;(z)=f(z)
-\]</span></p>
-<p><img src="2D_1.png" width=500px></p>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
+\Leftrightarrow F(z)=\int_{\Gamma_1}f(z)dz=\int_{\Gamma_2}f(z)dz</script><p>因为每段路径平行于$x$或$y$轴，可以视作长方形的一部分。借助刚才的准备工作，</p>
+<script type="math/tex; mode=display">
+\int_{\Gamma_1-\Gamma_2}f(z)dz=\int_{\Gamma_1}f(z)dz-\int_{\Gamma_2}f(z)dz=0\quad \square</script><p>所以它是well-defined</p>
+<p><strong>Claim</strong></p>
+<script type="math/tex; mode=display">
+F'(z)=f(z)</script><p><img src="2D_1.png" width=500px></p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-    \lim_{z\rightarrow w}\frac{F(z)-F(w)}{z-w}&amp;=\lim_{z\rightarrow
-w}\frac{\int_{\Gamma+C}f(\eta)d\eta-\int_{\Gamma}f(\eta)d\eta}{z-w}\\
-    &amp;=\lim_{z\rightarrow w}\frac{\int_Cf(\eta)d\eta}{z-w}\\
-    &amp;=\lim_{z\rightarrow
-w}\frac{\int_Cf(w)d\eta+[\int_Cf(\eta)d\eta-\int_Cf(w)d\eta]}{z-w}\\
-    &amp;=f(w)\quad \square
-\end{aligned}
-\]</span></p>
-<p><span class="math inline">\(f(w)\)</span>是常数，<span
-class="math inline">\(\int_Cf(w)d\eta=f(w)(z-w)\)</span>，后一项趋于0</p>
-<p><span class="math display">\[
+    \lim_{z\rightarrow w}\frac{F(z)-F(w)}{z-w}&=\lim_{z\rightarrow w}\frac{\int_{\Gamma+C}f(\eta)d\eta-\int_{\Gamma}f(\eta)d\eta}{z-w}\\
+    &=\lim_{z\rightarrow w}\frac{\int_Cf(\eta)d\eta}{z-w}\\
+    &=\lim_{z\rightarrow w}\frac{\int_Cf(w)d\eta+[\int_Cf(\eta)d\eta-\int_Cf(w)d\eta]}{z-w}\\
+    &=f(w)\quad \square
+\end{aligned}</script><p>$f(w)$是常数，$\int_Cf(w)d\eta=f(w)(z-w)$，后一项趋于0</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-    \oint_Cf(z)dz&amp;=\oint_CF&#39;(z)dz\\
-    &amp;=\int_a^bF&#39;(\gamma(t))\gamma&#39;(t)dt\\
-    &amp;=\int_a^b dF(\gamma(t))\\
-    &amp;=F(\gamma(b))-F(\gamma(a))=0. \quad \blacksquare
-\end{aligned}
-\]</span></p>
-<p><u><strong>Theo</strong></u>(Cauchy's integral formula)</p>
-<p>Let <span class="math inline">\(D\)</span> be a simply-connected
-domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
-<p><span class="math inline">\(C\)</span>: simple closed curve</p>
-<p><span class="math inline">\(f\in O(D)\)</span>, let <span
-class="math inline">\(\Omega\)</span> be the region surrounded by <span
-class="math inline">\(C\)</span></p>
+    \oint_Cf(z)dz&=\oint_CF'(z)dz\\
+    &=\int_a^bF'(\gamma(t))\gamma'(t)dt\\
+    &=\int_a^b dF(\gamma(t))\\
+    &=F(\gamma(b))-F(\gamma(a))=0. \quad \blacksquare
+\end{aligned}</script><p><u><strong>Theo</strong></u>(Cauchy’s integral formula)</p>
+<p>Let $D$ be a simply-connected domain in $\mathbb{C}$, </p>
+<p>$C$: simple closed curve</p>
+<p>$f\in O(D)$, let $\Omega$ be the region surrounded by $C$</p>
 <p>Then</p>
-<p><span class="math display">\[
-f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega
-\]</span></p>
-<p><img src="2D_2.png" width=400px></p>
+<script type="math/tex; mode=display">
+f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega</script><p><img src="2D_2.png" width=400px></p>
 <p>区域内的点的函数值完完全全受边界点函数值的影响，可以又边界生成</p>
 <blockquote>
-<p>卷积 convolution <span class="math display">\[
-f\rightarrow g(z)=\int f(w)g(z-w)dw
-\]</span></p>
-</blockquote>
-<p><span class="math inline">\(\displaystyle{\frac{1}{w-z}}\)</span>:
-Cauchy kernel (reproducing kernel)</p>
+<p>卷积 convolution</p>
+<script type="math/tex; mode=display">
+f\rightarrow g(z)=\int f(w)g(z-w)dw</script></blockquote>
+<p>$\displaystyle{\frac{1}{w-z}}$: Cauchy kernel (reproducing kernel)</p>
 <p><img src="2D_3.png" width=400px></p>
-<p><span
-class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
-<p><span class="math display">\[
-\int_{\partial \Omega_{\epsilon}}\frac{f(w)}{w-z}dw=0
-\]</span></p>
-<p>上一个定理证得：解析函数在它的边界积分等于0，因为<span
-class="math inline">\(w=z\)</span>被挖掉了，而且<span
-class="math inline">\(\displaystyle \frac{1}{w-z}\)</span>有极限
-，所以<span class="math inline">\(\displaystyle
-\frac{f(w)}{w-z}\)</span>是解析函数</p>
-<p><span class="math display">\[
-\int_{\partial \Omega=C}\frac{f(w)}{w-z}dw-\int_{\partial
-B_{\epsilon}}\frac{f(w)}{w-z}dw=0
-\]</span></p>
-<p>因为<span class="math inline">\(\epsilon\rightarrow 0\)</span>时，
-<span class="math display">\[
-\int_{\partial B_{\epsilon}}\frac{f(w)}{w-z}dw\rightarrow 2\pi if(z)
-\]</span></p>
-<p><span class="math display">\[
-\int_{C}\frac{f(w)}{w-z}dw=2\pi if(z)\Rightarrow f(z)=\frac{1}{2\pi
-i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
-\]</span></p>
-
+<p>$\Omega/\bar{B<em>{\epsilon}}=\Omega</em>{\epsilon}$</p>
+<script type="math/tex; mode=display">
+\int_{\partial \Omega_{\epsilon}}\frac{f(w)}{w-z}dw=0</script><p>上一个定理证得：解析函数在它的边界积分等于0，因为$w=z$被挖掉了，而且$\displaystyle \frac{1}{w-z}$有极限<br>，所以$\displaystyle \frac{f(w)}{w-z}$是解析函数</p>
+<script type="math/tex; mode=display">
+\int_{\partial \Omega=C}\frac{f(w)}{w-z}dw-\int_{\partial B_{\epsilon}}\frac{f(w)}{w-z}dw=0</script><p>因为$\epsilon\rightarrow 0$时，</p>
+<script type="math/tex; mode=display">
+\int_{\partial B_{\epsilon}}\frac{f(w)}{w-z}dw\rightarrow 2\pi if(z)</script><script type="math/tex; mode=display">
+\int_{C}\frac{f(w)}{w-z}dw=2\pi if(z)\Rightarrow f(z)=\frac{1}{2\pi i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare</script>
     </div>
 
     

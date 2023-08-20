@@ -216,13 +216,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Hexo的 <code>_config.yml</code> 文件裡找到
-<code>index_generator</code> ，修改path值</p>
+    <div class="post-body" itemprop="articleBody"><p>Hexo的 <code>_config.yml</code> 文件裡找到 <code>index_generator</code> ，修改path值</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#x27;archives&#x27;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
 <p>再用終端添加名為 <code>archives</code> 的文件夾和index文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page archives</span><br></pre></td></tr></table></figure>
-<p>我用的是next主題，所以還要打開next的 <code>_config.yml</code>
-啟用歸檔（這一步是必要的）</p>
+<p>我用的是next主題，所以還要打開next的 <code>_config.yml</code> 啟用歸檔（這一步是必要的）</p>
 <p><img src="archives.png" width=500px></p>
 <p>然後就會發現博客主頁變成歸檔啦</p>
 
