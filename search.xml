@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>解析函数的零点</title>
+    <title>解析函數的零點</title>
     <url>/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/</url>
     <content><![CDATA[<p>实函数的零点存在聚点（limit point）</p>
 <p><img src="3D_1.png" width=350px></p>
@@ -59,11 +59,11 @@ class="math inline">\(A\)</span> is open <span
 class="math inline">\(\Rightarrow A=D\)</span></p>
 ]]></content>
       <categories>
-        <category>复变</category>
+        <category>複變</category>
       </categories>
   </entry>
   <entry>
-    <title>解析函数的幂级数展开</title>
+    <title>解析函數的冪級數展開</title>
     <url>//index.html</url>
     <content><![CDATA[<h1 id="power-series">Power series</h1>
 <p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
@@ -306,11 +306,11 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
 <p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
 ]]></content>
       <categories>
-        <category>复变</category>
+        <category>複變</category>
       </categories>
   </entry>
   <entry>
-    <title>柯西积分公式</title>
+    <title>柯西積分公式</title>
     <url>/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<p>复变最重要的两个定理都在这了！！！</p>
 <p><u> <strong>Theo</strong></u> :
@@ -596,11 +596,11 @@ i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
 \]</span></p>
 ]]></content>
       <categories>
-        <category>复变</category>
+        <category>複變</category>
       </categories>
   </entry>
   <entry>
-    <title>解析函数</title>
+    <title>解析函數</title>
     <url>/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>Complex numbers <span class="math inline">\(\mathbb{C}\)</span></p>
 <p><span class="math display">\[
@@ -856,7 +856,7 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
 \]</span></p>
 ]]></content>
       <categories>
-        <category>复变</category>
+        <category>複變</category>
       </categories>
   </entry>
   <entry>
@@ -1512,7 +1512,7 @@ Learning, 2015. [2]Paul Jozefek. https://rpubs.com/pjozefek/576206,
       </categories>
   </entry>
   <entry>
-    <title>复变函数</title>
+    <title>複變函數</title>
     <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>网课：<a
 href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
@@ -1534,11 +1534,11 @@ href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%
 href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函数的零点</a></p>
 ]]></content>
       <categories>
-        <category>复变</category>
+        <category>複變</category>
       </categories>
   </entry>
   <entry>
-    <title>ODE应用</title>
+    <title>ODE應用</title>
     <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<h1 id="几何应用">几何应用</h1>
 <p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
@@ -1608,7 +1608,7 @@ class="math display">\[
       </categories>
   </entry>
   <entry>
-    <title>数模集训篇</title>
+    <title>數模集訓篇</title>
     <url>/2023/08/08/%E6%95%B0%E6%A8%A1%E9%9B%86%E8%AE%AD%E7%AF%87/</url>
     <content><![CDATA[<table>
 <colgroup>
@@ -1702,7 +1702,7 @@ href="差分和常微分作业.pdf">我的</a></td>
 </table>
 ]]></content>
       <categories>
-        <category>数模</category>
+        <category>數模</category>
       </categories>
   </entry>
   <entry>
@@ -1728,7 +1728,7 @@ experience。平均绩点在3.8。每年收到600多份，录80多人，最后50
 experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>隨記</category>
       </categories>
   </entry>
   <entry>
@@ -2389,7 +2389,7 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
 </ol>
 ]]></content>
       <categories>
-        <category>开发</category>
+        <category>開發</category>
       </categories>
   </entry>
   <entry>
@@ -2476,7 +2476,7 @@ OS环境下使用Hexo搭建个人博客</a></p>
 </ol>
 ]]></content>
       <categories>
-        <category>开发</category>
+        <category>開發</category>
       </categories>
   </entry>
   <entry>
@@ -2660,7 +2660,7 @@ https://www.guruin.com/articles/855</p>
       </categories>
   </entry>
   <entry>
-    <title>六月总结</title>
+    <title>六月總結</title>
     <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>早上八点，太平洋上空</p>
 <span id="more"></span>
@@ -2673,7 +2673,7 @@ https://www.guruin.com/articles/855</p>
 class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>隨記</category>
       </categories>
   </entry>
   <entry>
@@ -2692,7 +2692,7 @@ idiots说的</p>
 <p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>隨記</category>
       </categories>
   </entry>
   <entry>
@@ -2789,7 +2789,7 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
 <p>在宿舍大堂看别人弹琴，就想起高二的那个学期，吃完晚饭去练电子琴，琴声还没从脑海散去就迎来晚自习的铃声，在凤凰花树下甩着饮料瓶回教室，走到B栋回头看，钥匙妹还在举着双手，但天已经渐渐暗了。往自己座位一钻，沉浸在必刷题、王后雄中间，多么满足。</p>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>隨記</category>
       </categories>
   </entry>
 </search>
