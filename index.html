@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
   </ul>
 </nav>
 
@@ -149,6 +149,93 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/20/%E4%BD%BF%E7%94%A8archives%E4%BD%9C%E7%82%BA%E8%87%AA%E5%AE%9A%E7%BE%A9%E4%B8%BB%E9%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arson">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Arson">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/08/20/%E4%BD%BF%E7%94%A8archives%E4%BD%9C%E7%82%BA%E8%87%AA%E5%AE%9A%E7%BE%A9%E4%B8%BB%E9%A0%81/" class="post-title-link" itemprop="url">使用archives作為自定義主頁</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-08-20 16:41:18 / 修改時間：16:47:28" itemprop="dateCreated datePublished" datetime="2023-08-20T16:41:18+08:00">2023-08-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%96%8B%E7%99%BC/" itemprop="url" rel="index"><span itemprop="name">開發</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Hexo的 <code>_config.yml</code> 文件裡找到
+<code>index_generator</code> ，修改path值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  path: &#x27;archives&#x27;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+<p>再用終端添加名為 <code>archives</code> 的文件夾和index文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page archives</span><br></pre></td></tr></table></figure>
+<p>我用的是next主題，所以還要打開next的 <code>_config.yml</code>
+啟用歸檔（這一步是必要的）</p>
+<p><img src="archives.png" width=500px></p>
+<p>然後就會發現博客主頁變成歸檔啦</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -2547,518 +2634,6 @@ experience。平均绩点在3.8。每年收到600多份，录80多人，最后50
 <p>当天下午的 Graduate School Workshop
 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working
 experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mark Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Arson">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Arson">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/" class="post-title-link" itemprop="url">特殊微分方程的解</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2023-07-31 01:03:16" itemprop="dateCreated datePublished" datetime="2023-07-31T01:03:16+08:00">2023-07-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-20 09:28:03" itemprop="dateModified" datetime="2023-08-20T09:28:03+08:00">2023-08-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ODE/" itemprop="url" rel="index"><span itemprop="name">ODE</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="separable-variables">Separable Variables</h1>
-<p>当<span class="math inline">\(x,y\)</span>可分离时， <span
-class="math display">\[
-Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6.6}
-\]</span> <span class="math display">\[
-P(x,y)dx+Q(x,y)dy=0\tag{6.61}
-\]</span> <span class="math display">\[
-\Rightarrow f(x)dx+g(y)dy=0\tag{6.62}
-\]</span> <span class="math display">\[
-\Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}
-\]</span></p>
-<p><strong><em>Def 7.1</em></strong> Let <span
-class="math inline">\(z=f(x,y)\)</span> define <span
-class="math inline">\(z\)</span> as a function of <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span> in a region <span
-class="math inline">\(R\)</span>. The function <span
-class="math inline">\(f(x,y)\)</span> is said to be <strong>homogeneous
-of order n</strong> if it can be written as</p>
-<p><span class="math display">\[
-f(x,y)=x^ng(u)\tag{7.11}
-\]</span></p>
-<p>where <span class="math inline">\(u=\dfrac yx\)</span> and <span
-class="math inline">\(g(u)\)</span> is a function of <span
-class="math inline">\(u\)</span>; or alternately if it can be written
-as</p>
-<p><span class="math display">\[
-f(x,y)=y^nh(u)\tag{7.11}
-\]</span></p>
-<p>where <span class="math inline">\(u=\dfrac xy\)</span> and <span
-class="math inline">\(h(u)\)</span> is a function of <span
-class="math inline">\(u\)</span></p>
-<p>也可定义为：A function <span class="math inline">\(f(x,y)\)</span> is
-said to be homogeneous of order n if <span
-class="math display">\[f(tx,ty)=t^nf(x,y)\tag{7.16}\]</span></p>
-<h1 id="homogeneous-coefficients">Homogeneous Coefficients</h1>
-<p><em>Definition 7.2.</em> The differential equation <span
-class="math display">\[P(x,y)dx+Q(x,y)dy=0\tag{7.3}\]</span> where <span
-class="math inline">\(P(x,y)\)</span> and <span
-class="math inline">\(Q(x,y)\)</span> are each homogeneous functions of
-order <span class="math inline">\(n\)</span> is called a <strong>first
-order differential equation with homogeneous coefficients</strong>.</p>
-<p><strong><em>Theorem 7.32.</em></strong> If the coefficients in <span
-class="math inline">\((7.3)\)</span> are each homogeneous function of
-order <span class="math inline">\(n\)</span>, then the substitution in
-it of <span class="math inline">\((7.31),(7.33)\)</span> will lead to an
-equation in which the variables are separable.</p>
-<p><span class="math display">\[y=ux\  \Leftarrow \
-\left(u=\frac{y}{x}\right),\quad dy=udx+xdu,\quad
-\tag{7.31}\]</span></p>
-<p><span class="math display">\[x=uy\  \Leftarrow \
-\left(u=\frac{x}{y}\right),\quad dx=udy+ydu,\quad
-\tag{7.33}\]</span></p>
-<h1 id="linear-coefficients">Linear Coefficients</h1>
-<p><span class="math display">\[
-x=\bar{x}+h,\quad y=\bar{y}+k\tag{8.11}
-\]</span> <span class="math display">\[
-\Rightarrow \bar{x}=x-h,\quad \bar{y}=y-k\tag{8.12}
-\]</span> 解线性系数的微分方程， <span class="math display">\[
-(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy=0\tag{8.2}
-\]</span></p>
-<h2 id="两条直线不平行">两条直线不平行</h2>
-<h3 id="method-1">Method 1</h3>
-<p>两条直线不平行，因而相交，设交点为<span
-class="math inline">\((h,k)\)</span>，是新的原点<span
-class="math inline">\((h,k)=(\bar{0},\bar{0})\)</span>。把<span
-class="math inline">\((8.11)\)</span>替换进<span
-class="math inline">\((8.2)\)</span>，由交点的性质，常数项可忽略。 <span
-class="math display">\[
-a_1h+b_1k+c_1=0
-\]</span> <span class="math display">\[
-a_2h+b_2k+c_2=0
-\]</span></p>
-<p>转换成homogenous的形式 <span class="math display">\[
-(a_1\bar{x}+b_1\bar{y})d\bar{x}+(a_2\bar{x}+b_2\bar{y})d\bar{y}=0\tag{8.24}
-\]</span></p>
-<h3 id="method-2">Method 2</h3>
-<p>换元 <span class="math display">\[
-u=a_1x+b_1y+c_1\tag{8.3}
-\]</span> <span class="math display">\[
-v=a_2x+b_2y+c_2
-\]</span> 微分 <span class="math display">\[
-du=a_1dx+b_1dy\tag{8.31}
-\]</span> <span class="math display">\[
-dv=a_2dx+b_2dy
-\]</span> 解方程，用<span class="math inline">\(du,dv\)</span>表示<span
-class="math inline">\(dx,dy\)</span>，代入<span
-class="math inline">\((8.2)\)</span>式，再用homogenous的方法。</p>
-<h2 id="两条直线平行">两条直线平行</h2>
-<p>Method 1失效。只能换元，都用<span
-class="math inline">\(u\)</span>表示 <span class="math display">\[
-(2x+3y-1)dx+(4x+6y+2)dy=0
-\]</span> <span class="math display">\[
-u=2x+3y-1, \quad \Rightarrow\quad 4x+6y+2=2u+4
-\]</span> 然后就回到<span class="math inline">\(u\)</span>和<span
-class="math inline">\(x\)</span>或<span
-class="math inline">\(y\)</span>组成的homogenous形式。</p>
-<h1 id="exact-de">Exact DE</h1>
-<ol type="1">
-<li><p>Riemann integral <span class="math display">\[
-\lim_{n\rightarrow \infty}\sum_{k=1}^nf(x_k)\Delta x_k=\int_a^bf(x)dx
-\]</span></p></li>
-<li><p>微积分基本定理 <span class="math display">\[
-F(x)=\int_{x_0}^xf(u)du
-\tag{9.13}
-\]</span></p></li>
-</ol>
-<p><span class="math display">\[
-\rightarrow F&#39;(x)=f(x), \quad a&lt;x&lt;b\tag{9.14}
-\]</span></p>
-<ol start="3" type="1">
-<li>要让 <span
-class="math display">\[\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}\]</span>
-有定义，必须<span class="math inline">\([x_0,x]\times [y_0,y]\subset
-D\)</span></li>
-</ol>
-<p><strong><em>Definition 9.19.</em></strong> A region is called a
-<strong>simply connected region</strong> if every simple closed curve
-lying entirely in the region encloses only points of the region.</p>
-<blockquote>
-<p><em>shrink</em> closed curve to a point without non-domain points
-getting on the way</p>
-</blockquote>
-<blockquote>
-<p>其实就是<strong>单连通域</strong>，对应的是<em>多连通域</em></p>
-</blockquote>
-<p>要让<span class="math inline">\((9.16)\)</span>有定义</p>
-<ol type="1">
-<li>共同定义域是S.C. region <span class="math inline">\(R\)</span></li>
-<li><span class="math inline">\((x_0,y_0)\in R\)</span></li>
-<li>长方形<span class="math inline">\([x_0,x]\times [y_0,y]\subset
-R\)</span></li>
-</ol>
-<p><strong><em>Def 9.23</em></strong> <span class="math display">\[
-P(x,y)dx+Q(x,y)dy\tag{9.24}
-\]</span> is called an <strong>exact differential</strong> if it is the
-total differential of a function <span
-class="math inline">\(f(x,y)\)</span>. <span class="math display">\[
-P(x,y)=\frac{\partial}{\partial x}f(x,y)\quad
-Q(x,y)=\frac{\partial}{\partial y}f(x,y)\tag{9.241}
-\]</span></p>
-<p><strong><em>Def 9.27</em></strong> <span class="math display">\[
-P(x,y)dx+Q(x,y)dy\tag{9.28}=0
-\]</span> is called <strong>exact differential equation</strong> if
-follows <span class="math inline">\((9.241)\)</span>.</p>
-<p><strong><em>Theorem 9.3.</em></strong> A necessary and sufficient
-condition that the differential equation <span class="math display">\[
-P(x,y)dx+Q(x,y)dy\tag{9.31}=0
-\]</span> be exact is that <span class="math display">\[
-\frac{\partial}{\partial y}P(x,y)=\frac{\partial}{\partial
-x}Q(x,y\tag{9.32})
-\]</span></p>
-<p>解法一：</p>
-<p>套公式 <span class="math inline">\(\displaystyle{f(x,y)=\int_{x_0}^x
-P(x,y)dx+\int_{y_0}^y Q(x_0,y)dy}=c\)</span></p>
-<p>或<span
-class="math inline">\(\displaystyle{f(x,y)=\int_{y_0}^yQ(x,y)dy+\int_{x_0}^xP(x,y_0)dx}=c\)</span></p>
-<p>解法二： <span class="math display">\[
-P(x,y)dx+Q(x,y)dy=0
-\]</span> By <span
-class="math inline">\(\displaystyle{\frac{\partial}{\partial
-x}f(x,y)=P(x,y)}\)</span>, <span class="math display">\[
-f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}
-\]</span> 再由 <span class="math display">\[
-\frac{\partial}{\partial y}f(x,y)=Q(x,y)
-\]</span> <span class="math display">\[
-\underbrace{\frac{\partial}{\partial y} \int
-P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial
-y}P(x,y)dx}}+R&#39;(y)=Q(x,y)
-\]</span> 解出<span class="math inline">\(R(y)\)</span>再代回<span
-class="math inline">\((\star)\)</span>式.</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Number</th>
-<th style="text-align: center;">Exact Diff Eq</th>
-<th style="text-align: center;">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.2)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(ydx+xdy\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(xy=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.21)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(2xydx+x^2dy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(x^2y=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.22)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(y^2dx+2xydy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(xy^2=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.23)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(2xy^2dx+2x^2ydy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(x^2y^2=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.24)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(3x^2y^3dx+3x^3y^2dy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(x^2y^2=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.25)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(3x^2ydx+x^3dy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(x^3y=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.26)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(y\cos
-xdx+\sin xdy=0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(y\sin
-x=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.27)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\sin
-ydx+x\cos ydy=0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(x\sin
-y=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.28)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(ye^{xy}dx+xe^{xy}dy=0\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(e^{xy}=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.29)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{dx}{x}+\frac{dy}{y}=0}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\log
-(xy)=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.3)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{ydx-xdy}{y^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac xy}=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.31)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{-\frac{ydx-xdy}{x^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac yx}=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.32)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac {y^2}{x}}=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.33)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac {x^2}{y}}=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.34)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\arctan \frac
-{y}{x}}=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.35)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\arctan \log \frac
-{x+y}{x-y}}=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.39)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\arctan \log \frac
-{y^3}{3x^3}}=c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((10.391)\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\sqrt{x^2+y^2}=c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((10.392)\)</span></td>
-<td style="text-align: center;">$e<sup>{3x}dy+3e</sup>{3x}ydx=0 <span
-class="math inline">\(|\)</span>e^{3x}y=c$</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<h2 id="integrating-factor">Integrating Factor</h2>
-<p><strong><em>Def 10.5</em></strong> A multiplying factor which
-converts an inexact diff eq into an exact one is called
-<strong>integrating factor</strong>.</p>
-<p><span class="math display">\[
-\frac{\partial}{\partial y}[hP(x,y)]=\frac{\partial}{\partial
-x}[hQ(x,y)]\tag{10.62 $\star$}
-\]</span></p>
-<ol type="1">
-<li><span class="math inline">\(h=h(x)\)</span></li>
-</ol>
-<p><span class="math display">\[
-\frac{dh(x)}{h(x)}=\frac{\frac{\partial}{\partial
-y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}dx\tag{10.64}
-\]</span></p>
-<p>更特殊地，<span
-class="math inline">\(F(x)=\displaystyle{\frac{\frac{\partial}{\partial
-y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}}\)</span>，所以<span
-class="math inline">\(\displaystyle{h(x)=e^{\int F(x)dx}}\)</span></p>
-<ol start="2" type="1">
-<li><span class="math inline">\(h=h(y)\)</span></li>
-</ol>
-<p><span class="math display">\[
-\frac{dh(y)}{h(y)}=\frac{\frac{\partial}{\partial
-x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)}{P(x,y)}dy\tag{10.68}
-\]</span></p>
-<ol start="3" type="1">
-<li><span class="math inline">\(h=h(u), u=xy\)</span></li>
-</ol>
-<p><span class="math display">\[
-\frac{dh(u)}{h(u)}=\frac{\frac{\partial}{\partial
-y}P(x,y)-\frac{\partial}{\partial
-x}Q(x,y)}{yQ(x,y)-xP(x,y)}du\tag{10.72}
-\]</span></p>
-<ol start="4" type="1">
-<li><p><span class="math inline">\(h=h(u),u=\frac xy\)</span> <span
-class="math display">\[
-\frac{dh(u)}{h(u)}=\frac{y^2\left[\frac{\partial}{\partial
-y}P(x,y)-\frac{\partial}{\partial
-x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
-\]</span></p></li>
-<li><p><span class="math inline">\(h=h(u),u=\frac yx\)</span></p></li>
-</ol>
-<p><span class="math display">\[
-\frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial
-x}Q(x,y)-\frac{\partial}{\partial
-y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
-\]</span></p>
-<h1 id="linear-de">Linear DE</h1>
-<p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
-order is <span class="math display">\[
-\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
-\]</span></p>
-<p>Integrating factor is in the form <span
-class="math inline">\(\displaystyle{e^{\int P(x)dx}}\)</span>, by <span
-class="math inline">\((9.32)\)</span>.</p>
-<p><span class="math display">\[
-\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int
-P(x)dx}dy=0\tag{11.13}
-\]</span></p>
-<p><span class="math display">\[
-\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int
-P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}
-\]</span></p>
-<p><span class="math display">\[
-e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}
-\]</span></p>
-<p>This is a true general solution of <span
-class="math inline">\((11.11)\)</span>. <span class="math display">\[
-y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
-P(x)dx}\tag{11.191}
-\]</span></p>
-<h2 id="bernoulli-equation">Bernoulli Equation</h2>
-<p><span class="math display">\[
-\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
-\]</span></p>
-<p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
-class="math display">\[
-(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}
-\]</span> <span class="math display">\[
-\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
-\underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
-\]</span> <span
-class="math inline">\(u=y^{1-n}\)</span>，转化为线性DE的形式 <span
-class="math display">\[
-u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
-\]</span></p>
 
       
     </div>
