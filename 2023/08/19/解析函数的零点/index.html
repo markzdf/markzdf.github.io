@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg">
@@ -24,16 +24,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="實函數的零点存在聚點（limit point）  Theo Let \(D\) be a domain in \(\mathbb{C}\). \(f\in O(D)\), let \(Z_f&#x3D;\{z\in D|f(z)&#x3D;0\}\) If \(Z_f\) has a limit point in \(D\), then \(f\equiv 0\) on \(D\) pf. Set \(A&#x3D;\{w\i">
+    <meta name="description" content="實函數的零点存在聚點（limit point）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析函數的零點">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/index.html">
 <meta property="og:site_name" content="檔案助手">
-<meta property="og:description" content="實函數的零点存在聚點（limit point）  Theo Let \(D\) be a domain in \(\mathbb{C}\). \(f\in O(D)\), let \(Z_f&#x3D;\{z\in D|f(z)&#x3D;0\}\) If \(Z_f\) has a limit point in \(D\), then \(f\equiv 0\) on \(D\) pf. Set \(A&#x3D;\{w\i">
+<meta property="og:description" content="實函數的零点存在聚點（limit point）">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/3D_1.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/4B_1.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/4B_2.png">
 <meta property="article:published_time" content="2023-08-19T15:34:20.000Z">
-<meta property="article:modified_time" content="2023-08-20T16:33:53.882Z">
+<meta property="article:modified_time" content="2023-08-22T05:20:29.560Z">
 <meta property="article:author" content="隨便誰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/3D_1.png">
@@ -130,7 +132,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
   </nav>
@@ -201,7 +203,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-21 00:33:53" itemprop="dateModified" datetime="2023-08-21T00:33:53+08:00">2023-08-21</time>
+      <time title="修改時間：2023-08-22 13:20:29" itemprop="dateModified" datetime="2023-08-22T13:20:29+08:00">2023-08-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -223,6 +225,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>實函數的零点存在聚點（limit point）</p>
+<span id="more"></span>
 <p><img src="3D_1.png" width=350px></p>
 <p><u><strong>Theo</strong></u> Let <span
 class="math inline">\(D\)</span> be a domain in <span
@@ -232,29 +235,43 @@ class="math inline">\(Z_f=\{z\in D|f(z)=0\}\)</span></p>
 <p>If <span class="math inline">\(Z_f\)</span> has a limit point in
 <span class="math inline">\(D\)</span>, then <span
 class="math inline">\(f\equiv 0\)</span> on <span
-class="math inline">\(D\)</span></p>
+class="math inline">\(D\)</span> <span
+class="math inline">\(\spades\)</span></p>
+<p>只要不恆等於0，就必須全部零點都是孤點</p>
+<p>只要零點中存在聚點，則<span
+class="math inline">\(f\)</span>恆等於0</p>
 <p><strong>pf.</strong> Set <span class="math inline">\(A=\{w\in D|w
 \text{ is a limit point of }Z_f\}\)</span></p>
 <p>By assumption, <span class="math inline">\(A\neq
-\varnothing\)</span></p>
+\varnothing\)</span>. 要證明<span
+class="math inline">\(A=D\)</span>：既然domain即<span
+class="math inline">\(D\)</span>上全是零點的聚點，那<span
+class="math inline">\(D\)</span>上當然也全是零點</p>
 <blockquote>
-<p>The only two subsets of <span class="math inline">\(A\)</span> that
-are both closed and open is <span
-class="math inline">\(\varnothing\)</span> and <span
-class="math inline">\(A\)</span> itself.</p>
-<p><a href="/download/intro_analysis_ch1.pdf">intro_analysis_ch1</a></p>
+<p>The only two subsets of a <em>connected open set</em> that are both
+closed and open is <span class="math inline">\(\varnothing\)</span> and
+the set itself. 參考：<a
+href="/download/intro_analysis_ch1.pdf">intro_analysis_ch1</a></p>
 </blockquote>
 <p><span class="math inline">\(A\)</span> is closed. (obvious)</p>
 <p>let <span class="math inline">\(p\in A\subset D\)</span>, <span
 class="math inline">\(f(p)=0\)</span></p>
+<p>要證<span class="math inline">\(p\)</span>是<span
+class="math inline">\(A\)</span>的內點，則證得<span
+class="math inline">\(A\)</span>是open的</p>
 <p>write</p>
 <p><span class="math display">\[
 f(z)=\sum_{k=0}^{\infty}a_k(z-p)^k=\sum_{k=1}^{\infty}a_k(z-p)^k
 \]</span></p>
+<p>因為<span class="math inline">\(0^0=1\)</span>，所以<span
+class="math inline">\(f(p)=a_0+\sum_{k=1}^{\infty}a_k\cdot
+0^k=a_0=0\)</span>，自然想到是不是<span class="math inline">\(k\neq
+0\)</span>的係數也為0</p>
 <p><strong>Claim</strong>: <span class="math inline">\(a_k=0,\forall
 k\in \mathbb{N}\)</span></p>
 <p>If not, then <span class="math inline">\(\exists a_{k_0}\neq
-0\)</span></p>
+0\)</span>，其中<span class="math inline">\(k_0:\)</span>
+最小的index</p>
 <p><span class="math display">\[
 \begin{aligned}
     \therefore
@@ -270,12 +287,132 @@ g(p)=a_{k_0}\neq 0
 <p>在<span class="math inline">\(p\)</span>点周圍<span
 class="math inline">\(f\)</span>均不等於0，只有<span
 class="math inline">\(f(p)=0\)</span>，所以<span
-class="math inline">\(p\)</span>不是聚点，不在<span
+class="math inline">\(p\)</span>是孤點，不在<span
 class="math inline">\(A\)</span>内，矛盾. <span
 class="math inline">\(\square\)</span></p>
 <p><span class="math inline">\(\therefore\)</span> <span
 class="math inline">\(A\)</span> is open <span
-class="math inline">\(\Rightarrow A=D\)</span></p>
+class="math inline">\(\Rightarrow A=D\)</span> <span
+class="math inline">\(\blacksquare\)</span></p>
+<hr />
+<p><u><strong>Def.</strong></u> Let <span
+class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, <span
+class="math inline">\(E\subset D\)</span>, we say <span
+class="math inline">\(E\)</span> is a set of uniqueness if, for <span
+class="math inline">\(f\in O(D)\)</span>, <span
+class="math inline">\([f(z)=0, z\in E]\)</span> implies <span
+class="math inline">\([f(z)\equiv 0, \forall z\in D]\)</span></p>
+<p><span class="math display">\[
+\forall z\in E\xrightarrow{f(z)=0}E\xrightarrow{\forall z\in
+D}f(z)\equiv 0
+\]</span></p>
+<p>Any point sequence with an <strong>accumulation point</strong> in
+<span class="math inline">\(D\)</span> is a set of uniqueness
+聚點必須在domain裡，不能往邊界上走</p>
+<p>Any <strong>open subset</strong> of <span
+class="math inline">\(D\)</span> is a set of uniqueness</p>
+<hr />
+<p><u><strong>Theo</strong></u> (identity theorem) 恆等定理</p>
+<p>Let <span class="math inline">\(f,g\in O(D)\)</span>, If <span
+class="math inline">\(f=g\)</span> on open subset of <span
+class="math inline">\(D\)</span>, then <span
+class="math inline">\(f\equiv g\)</span> on <span
+class="math inline">\(D\)</span></p>
+<p>pf. 考慮<span class="math inline">\(h=f-g\)</span>即可，<span
+class="math inline">\(h\)</span>也是解析函數</p>
+<hr />
+<p>反問題</p>
+<p><u>Theo</u> (Weierstrass)</p>
+<p>Let <span class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, let <span
+class="math inline">\(\{z_k\}\)</span> be a sequence with no limit point
+in <span class="math inline">\(D\)</span>, for each <span
+class="math inline">\(k\)</span> associate <span
+class="math inline">\(z_k\)</span> with a positive integer <span
+class="math inline">\(m(k)\)</span></p>
+<p>Then there exists a <span class="math inline">\(f\in O(D)\)</span>
+such that the zeros of <span class="math inline">\(f\)</span> are
+exactly <span class="math inline">\(z_k\)</span>'s with multiplicity
+<span class="math inline">\(m(k)\)</span> at <span
+class="math inline">\(z_k\)</span> <span
+class="math inline">\(\spades\)</span></p>
+<p>證明太複雜，不涉及</p>
+<p><span class="math inline">\(f\)</span>不唯一，sequence沒有聚點不是set
+of uniqueness</p>
+<hr />
+<p>由上面的定理：有一個domain，都能找到一個解析函數，不能從domain中延拓出去</p>
+<p><u>Theo</u> Let D be a domain in C, then there exists a <span
+class="math inline">\(f\in O(D)\)</span>, such that <span
+class="math inline">\(f\)</span> cannot be holomorphically extended
+across any boundary point. （但這個定理在多複變是錯的）<span
+class="math inline">\(\spades\)</span></p>
+<p><strong>pf.</strong> 思路：找任意的<span class="math inline">\(f\in
+O(D)\)</span>假設它們都可以延拓，推出矛盾</p>
+<p>choose a seq of points <span class="math inline">\(\{z_k\}\)</span>
+with no limit in <span class="math inline">\(D\)</span>, such that every
+boundary point is a limit point of this sequence</p>
+<p><img src="4B_1.png" width=500px></p>
+<p>照這樣分下去到<span class="math inline">\(1-\frac
+1k\)</span>，最後無數的點會全堆在邊界</p>
+<p>由Weierstrass</p>
+<p><span class="math display">\[
+\exists f\in O(D), \ s.t.\\
+Z_f=\{z_k\}_{k=1}^{\infty},\quad m(k)=1
+\]</span></p>
+<p>如果能延拓出去，會發現矛盾</p>
+<p><img src="4B_2.png" width=400px></p>
+<p><span class="math display">\[
+g\in O(D),\quad f\in O(D)
+\]</span></p>
+<p><span class="math inline">\(g=f\)</span> on <span
+class="math inline">\(D\cap U\)</span></p>
+<p>因為<span
+class="math inline">\(f(z_k)=0\)</span>，所以在這些點上<span
+class="math inline">\(g(z_k)=0\)</span></p>
+<p><span class="math display">\[
+\therefore g(p)=0\quad p\text{\ in an interior point}
+\]</span></p>
+<p>注意到 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(U\)</span> 的內點（不是<span
+class="math inline">\(D\)</span>的內點），歐式空間中內點一定是聚點</p>
+<blockquote>
+<p>內點：<span class="math inline">\(\exists \delta_0&gt;0, s.t.\
+U(p,\delta_0)\subset U\)</span>，</p>
+<p>聚點：<span class="math inline">\(\forall \delta&gt;0, \exists s\in
+\mathring{U}(p,\delta),且 s\in U\)</span></p>
+<p>考慮<span class="math inline">\(\forall \delta\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(\delta&lt;\delta_0\)</span>: <span
+class="math inline">\(\mathring{U}(p,\delta)\subset U(p,\delta)\subset
+U(p,\delta_0)\subset U\)</span>，所以<span
+class="math inline">\(p\)</span>的去心鄰域內有屬於<span
+class="math inline">\(U\)</span>的點</li>
+<li><span class="math inline">\(\delta &gt;\delta_0\)</span>: 顯然<span
+class="math inline">\(\mathring{U}(p,\delta)\)</span>內存在點屬於<span
+class="math inline">\(U\)</span></li>
+</ol>
+<p>所以：內點一定是聚點，聚點不一定是內點（聚點也可以是邊界點）</p>
+</blockquote>
+<p>這個條件會強迫</p>
+<p><span class="math inline">\(\Rightarrow g\equiv 0\)</span> on <span
+class="math inline">\(U\)</span> （set of uniqueness）</p>
+<p><span class="math inline">\(\Rightarrow f\equiv 0\)</span> on <span
+class="math inline">\(U\cap D\)</span></p>
+<p>因為 <span class="math inline">\(0\)</span>
+本身也是解析函數，所以現在 <span class="math inline">\(D\)</span>
+上有兩個解析函數：<span class="math inline">\(f\)</span>和<span
+class="math inline">\(0\)</span></p>
+<p><span class="math inline">\(U\cap D\)</span> 是 <span
+class="math inline">\(D\)</span> 的open subset，由恆等定理，</p>
+<p><span class="math inline">\(f\equiv 0\)</span> on <span
+class="math inline">\(D\)</span></p>
+<p>可是原來的<span class="math inline">\(f\in
+O(D)\)</span>是任意的，不恆等於0，矛盾. <span
+class="math inline">\(\blacksquare\)</span></p>
+<p>多複變中，這種domain叫<a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Domain_of_holomorphy">domain of
+holomorphy</a></p>
 
     </div>
 
@@ -294,6 +431,9 @@ class="math inline">\(\Rightarrow A=D\)</span></p>
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/" rel="next" title="找實習">
+                  找實習 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

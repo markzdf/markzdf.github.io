@@ -5,10 +5,14 @@
     <url>/2023/08/08/Evaluation/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>I'm curious about the ranking of those popular graduate programs in
-the United States about quantitative finance. The data includes
-information of 16 quant master programs, which is collected from , and
-universities official websites. My criterion of judging a program is
-divided into two categories. 1. On-campus benefit</p>
+the United States about quantitative finance.</p>
+<span id="more"></span>
+<p>The data includes information of 16 quant master programs, which is
+collected from , and universities official websites. My criterion of
+judging a program is divided into two categories.</p>
+<ol type="1">
+<li>On-campus benefit</li>
+</ol>
 <ul>
 <li>Class size <span class="math inline">\((-)\)</span></li>
 <li>International student rate <span
@@ -661,6 +665,7 @@ conditions: 1. Each point of the set is the center of a circle whose
 entire interior consists of points of the set. 2. Every two points of
 the set can be joined by a curve (not a line) which consists entirely of
 points of the set.</p>
+<span id="more"></span>
 <p><strong><em>Definition 2.81.</em></strong> The relation <span
 class="math display">\[
 f(x,y)=0\tag{2.82}
@@ -832,11 +837,83 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
       </categories>
   </entry>
   <entry>
+    <title>ODE應用</title>
+    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="几何应用">几何应用</h1>
+<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
+class="math inline">\(\beta\)</span>.</p>
+<span id="more"></span>
+<p><img src="1331.png" width=300px></p>
+<p><span class="math display">\[
+\tan \beta=r\frac{d\theta}{dr}
+\]</span></p>
+<p><em>Proof</em>: <a
+href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
+here</a></p>
+<h2 id="trajectories">Trajectories</h2>
+<p>原则：<span class="math inline">\(末-初\)</span></p>
+<p><img src="/download/141.jpg" width=300px></p>
+<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
+\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
+\beta=\frac{m_1-m_2}{1+m_1m_2}
+\]</span></p>
+<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
+<span class="math display">\[
+y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+\]</span></p>
+<ol start="2" type="1">
+<li>Polar coordinates</li>
+</ol>
+<p><img src="/download/143.jpg" width=300px></p>
+<p><span class="math display">\[
+\phi_1=\phi_2+\frac{\pi}{2}
+\]</span> <span class="math display">\[
+\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
+\]</span> <span class="math display">\[
+\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+\]</span></p>
+<h1 id="实际问题">实际问题</h1>
+<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
+<p><strong>1. Dilution and Accretion</strong></p>
+<p>稀释和浓缩盐水，关键是设<span
+class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
+class="math inline">\(\Delta x\)</span></p>
+<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
+<p><span class="math display">\[
+\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
+x}{\Delta t}\approx 6-0.03x
+\]</span></p>
+<p>当流入流出速度不一致时，溶液体积变成<span
+class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
+<p><strong>2. Interest</strong></p>
+<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
+P=Ae^{rt}
+\]</span>
+跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
+<span class="math display">\[
+\frac{dP}{dt}=rAe^{rt}=rP
+\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
+\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
+\]</span></p>
+<p><strong>3. Temperature</strong> <span class="math display">\[
+\frac{dT_B}{dt}=-k(T_B-T_M)
+\]</span></p>
+<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
+class="math display">\[
+\frac{dx}{dt}=kx
+\]</span></p>
+]]></content>
+      <categories>
+        <category>ODE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何在macOS环境下配置hexo</title>
     <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a
 href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
 href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
+<span id="more"></span>
 <h1 id="准备工作">准备工作</h1>
 <p>官方文档给出的前置应用程序是 1. <a
 href="https://nodejs.org/en">Node.js</a> 2. Git</p>
@@ -919,76 +996,6 @@ OS环境下使用Hexo搭建个人博客</a></p>
       </categories>
   </entry>
   <entry>
-    <title>ODE應用</title>
-    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="几何应用">几何应用</h1>
-<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
-class="math inline">\(\beta\)</span>.</p>
-<p><img src="1331.png" width=300px></p>
-<p><span class="math display">\[
-\tan \beta=r\frac{d\theta}{dr}
-\]</span></p>
-<p><em>Proof</em>: <a
-href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
-here</a></p>
-<h2 id="trajectories">Trajectories</h2>
-<p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><img src="/download/141.jpg" width=300px></p>
-<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
-\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
-\beta=\frac{m_1-m_2}{1+m_1m_2}
-\]</span></p>
-<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
-<span class="math display">\[
-y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
-\]</span></p>
-<ol start="2" type="1">
-<li>Polar coordinates</li>
-</ol>
-<p><img src="/download/143.jpg" width=300px></p>
-<p><span class="math display">\[
-\phi_1=\phi_2+\frac{\pi}{2}
-\]</span> <span class="math display">\[
-\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
-\]</span> <span class="math display">\[
-\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
-\]</span></p>
-<h1 id="实际问题">实际问题</h1>
-<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
-<p><strong>1. Dilution and Accretion</strong></p>
-<p>稀释和浓缩盐水，关键是设<span
-class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
-class="math inline">\(\Delta x\)</span></p>
-<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
-<p><span class="math display">\[
-\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
-x}{\Delta t}\approx 6-0.03x
-\]</span></p>
-<p>当流入流出速度不一致时，溶液体积变成<span
-class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
-<p><strong>2. Interest</strong></p>
-<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
-P=Ae^{rt}
-\]</span>
-跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
-<span class="math display">\[
-\frac{dP}{dt}=rAe^{rt}=rP
-\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
-\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
-\]</span></p>
-<p><strong>3. Temperature</strong> <span class="math display">\[
-\frac{dT_B}{dt}=-k(T_B-T_M)
-\]</span></p>
-<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
-class="math display">\[
-\frac{dx}{dt}=kx
-\]</span></p>
-]]></content>
-      <categories>
-        <category>ODE</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ucb暑假</title>
     <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
     <content><![CDATA[<h1 id="websites">Websites</h1>
@@ -996,6 +1003,7 @@ class="math display">\[
 href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
 <a href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
 href="http://www.fmjfee.com">I-901&amp;SEVIS</a></p>
+<span id="more"></span>
 <p><strong>Campus</strong> <a
 href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
 <a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
@@ -1088,7 +1096,9 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
   <entry>
     <title>七月加州</title>
     <url>/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/</url>
-    <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
+    <content><![CDATA[<p>很多人说做量化要读统计phd，我也思考了很久。</p>
+<span id="more"></span>
+<p>这种说法是从结果倒退过程，首先所有读统计phd的只有少部分进入quant，其次他们选择读统计phd并不为了进quant。phd本身难度很大，不是对专业有极大研究兴趣的人没法读下来。出来以后quant才成为一个选项，从最早就计划做quant而读phd的少之又少。就美国的体系而言，想做学术的读phd，以在美国找工作为目的的读master，我不想读phd。</p>
 <p>7.17统计出成绩，比我预想的最低分还低。想到处找人倾诉，但身边是数学远不如我的意大利人和无所谓绩点的家伙。心情一直很差，甚至看到食物都反胃，饭也没吃。跟小龙虾随便找了个披萨店，去逛Moe书店。在书店里我想通了。看绩点就像股票盯盘，一直看它没有意义，只不过是个数字罢了。难道我3.0就代表我学了跟没学一样吗？我只是考试不高而已，并不否认在理解程度上跟高分有差距，但我终究是学了，知道假设检验是什么、<span
 class="math inline">\(t\)</span>分布、<span
 class="math inline">\(\chi^2\)</span>分布、拒真受假两种错误、ANOVA...这些才是我的收获，而不是这样一个方程</p>
@@ -1106,6 +1116,25 @@ experience。平均绩点在3.8。每年收到600多份，录80多人，最后50
 <p>当天下午的 Graduate School Workshop
 也强调一点：GPA和GRE是baseline。所以说美国申请要求比港英只高不低，不仅同样要求高绩点等硬件，还要有丰富的extra-curriculum活动和working
 experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>不必再等</title>
+    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
+    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+<span id="more"></span>
+<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
+<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
+idiots说的</p>
+<blockquote>
+<p>不要追求成功，成功会在不经意间追上你</p>
+</blockquote>
+<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
+<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
+<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
 ]]></content>
       <categories>
         <category>隨記</category>
@@ -1132,6 +1161,7 @@ class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
     <title>回家前</title>
     <url>/2023/07/29/%E5%9B%9E%E5%AE%B6%E5%89%8D/</url>
     <content><![CDATA[<p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。</p>
+<span id="more"></span>
 <h2 id="los-angeles">Los Angeles</h2>
 <p>行：Aug 12，OAK-LA，$35.4（2人）</p>
 <figure>
@@ -1309,31 +1339,13 @@ https://www.guruin.com/articles/855</p>
       </categories>
   </entry>
   <entry>
-    <title>不必再等</title>
-    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
-    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
-<span id="more"></span>
-<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
-<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
-idiots说的</p>
-<blockquote>
-<p>不要追求成功，成功会在不经意间追上你</p>
-</blockquote>
-<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
-<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
-<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
-]]></content>
-      <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
     <title>複變函數</title>
     <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>网课：<a
 href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
 <p>官网：<a
 href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
+<span id="more"></span>
 <p>教材：<a
 href="/download/Invitation%20to%20Complex%20Analysis.pdf">Invitation to
 complex analysis</a></p>
@@ -1341,13 +1353,13 @@ complex analysis</a></p>
 <p><a href="https://excalidraw.com/">快速作图</a></p>
 <p><strong>课程大纲</strong></p>
 <p>第1节：<a
-href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函数</a></p>
+href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函數</a></p>
 <p>第2节：<a
-href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西积分公式</a></p>
+href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西積分公式</a></p>
 <p>第3节：<a
-href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函数的幂级数展开</a></p>
+href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
 <p>第4讲：<a
-href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函数的零点</a></p>
+href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a></p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -1374,7 +1386,7 @@ href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">8.8</td>
-<td style="text-align: center;">神经网络<br>支持向量机</td>
+<td style="text-align: center;">神經網路<br>支持向量機</td>
 <td style="text-align: center;"><a
 href="/download/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">神经网络</a><br><a
 href="/download/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书)</a></td>
@@ -1382,14 +1394,14 @@ href="/download/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.pdf">支持向量机(板书
 </tr>
 <tr class="even">
 <td style="text-align: center;">8.9</td>
-<td style="text-align: center;">初等代数<br>与几何方法</td>
+<td style="text-align: center;">初等代數<br>與幾何方法</td>
 <td style="text-align: center;"><a
-href="/download/4.1初等代数方法.pdf">4.1 代数方法</a><br><a
-href="/download/4.2初等几何方法.pdf">4.2 几何方法</a><br><a
+href="/download/4.1初等代数方法.pdf">4.1 代數方法</a><br><a
+href="/download/4.2初等几何方法.pdf">4.2 幾何方法</a><br><a
 href="/download/problems.pdf">problems</a></td>
 <td style="text-align: center;"><a
-href="/download/初等代数与几何方法作业.pdf">初等代数与几何方法作业</a><br><a
-href="/download/初等代数与几何方法作业解答.pdf">作业解答</a></td>
+href="/download/初等代数与几何方法作业.pdf">初等代數與幾何作業</a><br><a
+href="/download/初等代数与几何方法作业解答.pdf">作業解答</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8.10</td>
@@ -1398,43 +1410,43 @@ href="/download/初等代数与几何方法作业解答.pdf">作业解答</a></t
 href="/download/差分方程.pdf">差分方程</a><br><a
 href="/download/常微分方程.pdf">常微分方程</a></td>
 <td style="text-align: center;"><a
-href="/download/差分作业.pdf">差分作业</a><br><a
-href="\download/常微分方程作业.pdf">常微分作业</a><br><a
+href="/download/差分作业.pdf">差分作業</a><br><a
+href="\download/常微分方程作业.pdf">常微分作業</a><br><a
 href="差分和常微分作业.pdf">我的</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8.11</td>
-<td style="text-align: center;">偏微分方程<br>变分方法</td>
+<td style="text-align: center;">偏微分方程<br>變分方法</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8.12</td>
-<td style="text-align: center;">线性规划整数规划<br>非线性规划</td>
+<td style="text-align: center;">線性規劃整數規劃<br>非線性規劃</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8.13</td>
-<td style="text-align: center;">动态规划、图论</td>
+<td style="text-align: center;">動態規劃、圖論</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8.14</td>
-<td style="text-align: center;">随机系统</td>
+<td style="text-align: center;">隨機系統</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8.15</td>
-<td style="text-align: center;">排队论、存储论</td>
+<td style="text-align: center;">排隊論、存儲論</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">8.16</td>
-<td style="text-align: center;">对策论、决策论</td>
+<td style="text-align: center;">對策論、決策論</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
@@ -1446,6 +1458,7 @@ href="差分和常微分作业.pdf">我的</a></td>
 </tr>
 </tbody>
 </table>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>數模</category>
@@ -1455,6 +1468,7 @@ href="差分和常微分作业.pdf">我的</a></td>
     <title>柯西積分公式</title>
     <url>/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<p>复变最重要的两个定理都在这了！！！</p>
+<span id="more"></span>
 <p><u> <strong>Theo</strong></u> :
 (<code>Cauchy's integral formula</code>) Let <span
 class="math inline">\(D\)</span> be a bounded domain in <span
@@ -1750,7 +1764,9 @@ class="math display">\[
 Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6.6}
 \]</span> <span class="math display">\[
 P(x,y)dx+Q(x,y)dy=0\tag{6.61}
-\]</span> <span class="math display">\[
+\]</span></p>
+<span id="more"></span>
+<p><span class="math display">\[
 \Rightarrow f(x)dx+g(y)dy=0\tag{6.62}
 \]</span> <span class="math display">\[
 \Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}
@@ -2181,6 +2197,7 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
     <title>解决hexo本地和部署不一致问题</title>
     <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<span id="more"></span>
 <p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
 <figure>
 <img src="branch.png" alt="branch" />
@@ -2224,321 +2241,13 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
       </categories>
   </entry>
   <entry>
-    <title>解析函數的冪級數展開</title>
-    <url>//index.html</url>
-    <content><![CDATA[<h1 id="power-series">Power series</h1>
-<p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
-<span class="math inline">\(\mathbb{C}\)</span>. If <span
-class="math inline">\(f\in O(D)\)</span>, then <span
-class="math inline">\(f\in C^{\omega}(D)\)</span></p>
-<p><span class="math inline">\(C^{\omega}(D)\)</span> means locally
-function can be represented by a power series</p>
-<p><img src="3A_1.png" width=400px></p>
-<p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
-<p><span class="math inline">\(f\in O(D)\)</span> <span
-class="math display">\[
-\therefore \exists R&gt;0, s.t. \bar{B}(z_0;R)\subset D
-\]</span></p>
-<p>If <span class="math inline">\(z\in B(z_0;R)\)</span>, <span
-class="math inline">\(w\in \Gamma\)</span>. Then <span
-class="math display">\[
-\begin{aligned}
-    f(z)&amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw\\
-    &amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z_0-(z-z_0)}dw
-\end{aligned}
-\]</span></p>
-<p>If <span class="math inline">\(\exists r&gt;0\)</span>， <span
-class="math inline">\(s.t. \ |z-z_0|\leq r&lt;R\)</span>. Then</p>
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{1}{w-z_0}\frac{f(w)}{1-\frac{z-z_0}{w-z_0}}dw\\
-    &amp;=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{1}{w-z_0}\left(\sum_{k=0}^{\infty}\left(\frac{z-z_0}{w-z_0}
-\right)^k \right)f(w)dw\quad \ast\\
-    &amp;=\sum_{k=0}^{\infty}\left(\frac{1}{2\pi
-i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
-\ast\ast\\
-    &amp;=\sum_{k=0}^{\infty}a_k(z-z_0)^k
-\end{aligned}
-\]</span></p>
-<p>i.e. <span class="math inline">\(\displaystyle a_k=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
-<p>From <span class="math inline">\(\ast\)</span> to <span
-class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
-<p><img src="interchange.png"></p>
-<p><span class="math display">\[
-f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
-\]</span></p>
-<p><span class="math display">\[
-f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^2}dw
-\]</span></p>
-<p><span class="math display">\[
-f&#39;&#39;(z)=\frac{2}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^3}dw
-\]</span> <span class="math display">\[
-\vdots
-\]</span></p>
-<p><span class="math display">\[
-f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
-\]</span></p>
-<p><span class="math display">\[
-\therefore a_k=\frac{f^{(k)}(z_0)}{k!}
-\]</span></p>
-<p><span class="math display">\[
-\Rightarrow f(z)=\frac{f^{(k)}(z_0)}{k!}(z-z_0)^k
-\]</span></p>
-<hr />
-<h2 id="解析延拓">解析延拓</h2>
-<p><span class="math inline">\(a_k\)</span>的值跟<span
-class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<strong>解析延拓</strong>（holomorphic
-continuation）</p>
-<p><img src="3A_2.png" width=300px></p>
-<p>Ex.</p>
-<p><span class="math display">\[
-f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
-\]</span></p>
-<p><span class="math inline">\(z&lt;1\)</span>时收敛，<span
-class="math inline">\(z\geq 1\)</span>时发散</p>
-<p>在<span class="math inline">\(z=-\frac 12\)</span>展开， <span
-class="math display">\[
-f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
-\]</span></p>
-<p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
-32\)</span>上统统收敛</p>
-<p><img src="3B_1.png" width=300px></p>
-<hr />
-<h2 id="cauchy-estimate">Cauchy Estimate</h2>
-<p><u>Theo</u> Cauchy's estimate</p>
-<p>let <span class="math inline">\(M=\max_{|z-z_0|\leq R}
-|f|\)</span></p>
-<p>Then <span class="math display">\[
-|a_k|\leq \frac{M}{R^k}
-\]</span></p>
-<p><span class="math display">\[
-|a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
-|\leq\frac{1}{2\pi}\cdot M\cdot \frac{2\pi R}{R^{k+1}}=\frac{M}{R^k}
-\]</span></p>
-<p>控制了函数值就能控制系数<span class="math inline">\(a_k\)</span></p>
-<hr />
-<h1 id="liouville定理">Liouville定理</h1>
-<p>f: entire function if <span class="math inline">\(f\in
-O(\mathbb{C})\)</span></p>
-<p>e.g. <span class="math inline">\(e^x,\sin x, p(x)\)</span>
-polynomial</p>
-<p><span class="math display">\[
-e^z=\sum_{k=0}^{\infty}\frac{z^k}{k!}
-\]</span></p>
-<p><span class="math display">\[
-\sin x=\frac{e^{iz}-e^{-iz}}{2i},\quad \cos z=\frac{e^{iz}+e^{-iz}}{2}
-\]</span></p>
-<p><u><strong>Theo</strong></u> <strong>(Liouville)</strong></p>
-<p>Any bounded entire functions is constant</p>
-<p><strong>pf. 1</strong></p>
-<p><span class="math display">\[
-f(z)=\sum_{k=0}^{\infty}a_kz^k,\quad |f(z)|\leq M, \forall
-z\in\mathbb{C}
-\]</span></p>
-<p><span class="math display">\[
-\therefore |a_k|\leq \frac{M}{R^k}
-\]</span></p>
-<p>当<span class="math inline">\(k\geqslant 1\)</span>时,</p>
-<p><span class="math display">\[
-|a_k|\leqslant \lim_{R\rightarrow \infty}\frac{M}{R^k}=0
-\]</span></p>
-<p><span class="math display">\[
-\therefore f(z)=f(0)\ \blacksquare
-\]</span></p>
-<p><strong>pf. 2</strong></p>
-<p><span class="math inline">\(z\in \mathbb{C}\)</span>, choose <span
-class="math inline">\(R&gt;|z|\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    |f(z)-f(0)|&amp;=\bigg|\frac{1}{2\pi
-i}\int_{|w|=R}\frac{f(w)}{w-z}dw-\frac{1}{2\pi
-i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
-    &amp;=\bigg|\frac{1}{2\pi i}\int_{|w|=R}(\frac{1}{w-z}-\frac
-1w)f(w)dw \bigg|\\
-    &amp;\leqslant \frac{1}{2\pi i}\int_{|w|=R}|\frac{z}{w(w-z)}|\cdot
-|f(w)|\cdot |dw|\\
-    &amp;\leqslant \frac{1}{2\pi}\cdot M\cdot \frac{|z|}{R(R-|z|)}\cdot
-2\pi R\\
-    &amp;=\frac{M|z|}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
-\blacksquare
-\end{aligned}
-\]</span></p>
-<p><span
-class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
-class="math inline">\(\geqslant R-|z|\)</span></p>
-<p><img src="3B_2.png" width=300px></p>
-<hr />
-<h1 id="代数基本定理">代数基本定理</h1>
-<p><u>Theo</u> (Fundamental theorem of algebra)</p>
-<p>let <span class="math inline">\(p(z)\)</span> be a complex-valued
-polynomial of <span class="math inline">\(\deg P\geqslant
-1\)</span>.</p>
-<p>Then <span class="math inline">\(\exists w\in \mathbb{C}, \ s.t.\
-p(w)=0\)</span></p>
-<p>pf. <span class="math inline">\(p(z)=az+b\quad a\neq 0\)</span>,
-<span class="math inline">\(w=-\frac{b}{a}\)</span></p>
-<p>Assume <span class="math inline">\(\deg P=k\geqslant 2\)</span></p>
-<p><strong>pf. 1</strong></p>
-<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
-\mathbb{C}\)</span></p>
-<p><span class="math display">\[
-\therefore q(z)=\frac{1}{p(z)}\in O(\mathbb{C})
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    |q(z)|&amp;=\frac{1}{|a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0|}\\
-    &amp;=\frac{1}{|z|^k\cdot
-|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|}\\
-    &amp;\leqslant \frac{2}{|a_k|\cdot |z|^k}
-\end{aligned}
-\]</span></p>
-<p>最后一步是因为 <span class="math display">\[
-\frac{|a_k|}{2}\leqslant
-|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|
-\]</span></p>
-<p>当<span class="math inline">\(z\rightarrow \infty\)</span>时，<span
-class="math inline">\(|q(z)|\rightarrow 0\)</span></p>
-<p><span class="math inline">\(\therefore q\)</span> is bounded,
-entire</p>
-<p>By Liouville, <span class="math inline">\(q\equiv c\)</span>,
-const</p>
-<p><span class="math display">\[
-\therefore p(z) \text{ is a constant function}
-\]</span></p>
-<p>矛盾 <span class="math inline">\(\blacksquare\)</span>.</p>
-<p><strong>pf. 2</strong> 用最根本的Cauchy定理证</p>
-<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
-\mathbb{C}\)</span> and <span class="math inline">\(\big[\)</span><span
-class="math inline">\(p(x)\)</span> is real if <span
-class="math inline">\(z=x\in \mathbb{R}\)</span><span
-class="math inline">\(\big]\)</span>.</p>
-<p>If <span class="math inline">\([ \ ]\)</span> does not hold, then
-consider <span class="math inline">\(p(z)\bar{p}(z)=Q(z)\)</span>, <span
-class="math display">\[
-\bar{p}(z)=\bar{a_k}z^k+\bar{a_{k-1}}z^{k-1}+\cdots
-+\bar{a_1}z+\bar{a_0}
-\]</span></p>
-<blockquote>
-<p>Set <span class="math inline">\(a_1=x_1+iy_1,
-a_2=x_2+iy_2\)</span></p>
-<p><span class="math display">\[
-a_1\bar{a_2}+a_2\bar{a_1}=x_1x_2+y_1y_2\in \mathbb{R}
-\]</span></p>
-</blockquote>
-<p>Set</p>
-<p><span class="math display">\[
-I=\int_0^{2\pi}\frac{d\theta}{p(2\cos \theta)}\neq 0
-\]</span></p>
-<p>在<span class="math inline">\(\theta\in[0,2\pi]\)</span>上，<span
-class="math inline">\(2\cos \theta\in [-1,1]\)</span>，<span
-class="math inline">\(I\neq 0\)</span>没有问题</p>
-<p><span class="math display">\[
-p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
-\]</span></p>
-<p><span class="math inline">\(z=e^{i\theta}=\cos
-\theta+i\sin\theta\)</span></p>
-<p>所以<span class="math inline">\(\displaystyle
-\cos\theta=\frac{z+\bar{z}}{2}=\frac{1}{2}(z+\frac{1}{z})\Rightarrow2\cos\theta
-=z+\frac{1}{z}\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    p(2\cos\theta)&amp;=a_k(z+\frac{1}{z})^k+a_{k-1}(z+\frac{1}{z})^{k-1}+\cdots+a_1(z+\frac{1}{z})+a_0\\
-    &amp;=\frac{1}{z^k}Q(z)
-\end{aligned}
-\]</span></p>
-<p>If <span class="math inline">\(z=0\)</span>, <span
-class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次系数不为0</p>
-<p>If <span class="math inline">\(z\neq 0\)</span>, <span
-class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
-class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
-class="math inline">\(Q(z)\neq 0\)</span></p>
-<p>既然<span
-class="math inline">\(Q(z)\)</span>总是不为0，把它放在分母上仍是解析函数</p>
-<p><span class="math display">\[
-I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
-\xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz
-\]</span></p>
-<p>由Cauchy定理 <span class="math display">\[
-I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
-\]</span></p>
-<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解析函數的零點</title>
-    <url>/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/</url>
-    <content><![CDATA[<p>實函數的零点存在聚點（limit point）</p>
-<p><img src="3D_1.png" width=350px></p>
-<p><u><strong>Theo</strong></u> Let <span
-class="math inline">\(D\)</span> be a domain in <span
-class="math inline">\(\mathbb{C}\)</span>.</p>
-<p><span class="math inline">\(f\in O(D)\)</span>, let <span
-class="math inline">\(Z_f=\{z\in D|f(z)=0\}\)</span></p>
-<p>If <span class="math inline">\(Z_f\)</span> has a limit point in
-<span class="math inline">\(D\)</span>, then <span
-class="math inline">\(f\equiv 0\)</span> on <span
-class="math inline">\(D\)</span></p>
-<p><strong>pf.</strong> Set <span class="math inline">\(A=\{w\in D|w
-\text{ is a limit point of }Z_f\}\)</span></p>
-<p>By assumption, <span class="math inline">\(A\neq
-\varnothing\)</span></p>
-<blockquote>
-<p>The only two subsets of <span class="math inline">\(A\)</span> that
-are both closed and open is <span
-class="math inline">\(\varnothing\)</span> and <span
-class="math inline">\(A\)</span> itself.</p>
-<p><a href="/download/intro_analysis_ch1.pdf">intro_analysis_ch1</a></p>
-</blockquote>
-<p><span class="math inline">\(A\)</span> is closed. (obvious)</p>
-<p>let <span class="math inline">\(p\in A\subset D\)</span>, <span
-class="math inline">\(f(p)=0\)</span></p>
-<p>write</p>
-<p><span class="math display">\[
-f(z)=\sum_{k=0}^{\infty}a_k(z-p)^k=\sum_{k=1}^{\infty}a_k(z-p)^k
-\]</span></p>
-<p><strong>Claim</strong>: <span class="math inline">\(a_k=0,\forall
-k\in \mathbb{N}\)</span></p>
-<p>If not, then <span class="math inline">\(\exists a_{k_0}\neq
-0\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    \therefore
-f(z)&amp;=a_{k_0}(z-p)^{k_0}+a_{k_0+1}(z-p)^{k_0+1}+\cdots\\
-    &amp;=(z-p)^{k_0}(a_{k_0}+a_{k_0+1}(z-p)+\cdots)
-\end{aligned}
-\]</span></p>
-<p>Set <span
-class="math inline">\(g(z)=a_{k_0}+a_{k_0+1}(z-p)+\cdots\)</span>, then
-<span class="math display">\[
-g(p)=a_{k_0}\neq 0
-\]</span></p>
-<p>在<span class="math inline">\(p\)</span>点周圍<span
-class="math inline">\(f\)</span>均不等於0，只有<span
-class="math inline">\(f(p)=0\)</span>，所以<span
-class="math inline">\(p\)</span>不是聚点，不在<span
-class="math inline">\(A\)</span>内，矛盾. <span
-class="math inline">\(\square\)</span></p>
-<p><span class="math inline">\(\therefore\)</span> <span
-class="math inline">\(A\)</span> is open <span
-class="math inline">\(\Rightarrow A=D\)</span></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-  </entry>
-  <entry>
     <title>解析函數</title>
     <url>/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>Complex numbers <span class="math inline">\(\mathbb{C}\)</span></p>
 <p><span class="math display">\[
 (a,b)\quad a,b\in \mathbb{R}
 \]</span></p>
+<span id="more"></span>
 <p>Define operations <span class="math inline">\(+,\cdot\)</span></p>
 <ol type="1">
 <li><span class="math inline">\((a,b)+(c,d)=(a+c,b+d)\)</span></li>
@@ -2790,6 +2499,670 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
 ]]></content>
       <categories>
         <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解析函數的冪級數展開</title>
+    <url>//index.html</url>
+    <content><![CDATA[<h1 id="power-series">Power series</h1>
+<p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
+<span class="math inline">\(\mathbb{C}\)</span>. If <span
+class="math inline">\(f\in O(D)\)</span>, then <span
+class="math inline">\(f\in C^{\omega}(D)\)</span></p>
+<p><span class="math inline">\(C^{\omega}(D)\)</span> means locally
+function can be represented by a power series</p>
+<span id="more"></span>
+<p><img src="3A_1.png" width=400px></p>
+<p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
+<p><span class="math inline">\(f\in O(D)\)</span> <span
+class="math display">\[
+\therefore \exists R&gt;0, s.t. \bar{B}(z_0;R)\subset D
+\]</span></p>
+<p>If <span class="math inline">\(z\in B(z_0;R)\)</span>, <span
+class="math inline">\(w\in \Gamma\)</span>. Then <span
+class="math display">\[
+\begin{aligned}
+    f(z)&amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw\\
+    &amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z_0-(z-z_0)}dw
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\exists r&gt;0\)</span>， <span
+class="math inline">\(s.t. \ |z-z_0|\leq r&lt;R\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\frac{f(w)}{1-\frac{z-z_0}{w-z_0}}dw\\
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\left(\sum_{k=0}^{\infty}\left(\frac{z-z_0}{w-z_0}
+\right)^k \right)f(w)dw\quad \ast\\
+    &amp;=\sum_{k=0}^{\infty}\left(\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
+\ast\ast\\
+    &amp;=\sum_{k=0}^{\infty}a_k(z-z_0)^k
+\end{aligned}
+\]</span></p>
+<p>i.e. <span class="math inline">\(\displaystyle a_k=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
+<p>From <span class="math inline">\(\ast\)</span> to <span
+class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
+<p><img src="interchange.png"></p>
+<p><span class="math display">\[
+f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
+\]</span></p>
+<p><span class="math display">\[
+f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^2}dw
+\]</span></p>
+<p><span class="math display">\[
+f&#39;&#39;(z)=\frac{2}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^3}dw
+\]</span> <span class="math display">\[
+\vdots
+\]</span></p>
+<p><span class="math display">\[
+f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
+\]</span></p>
+<p><span class="math display">\[
+\therefore a_k=\frac{f^{(k)}(z_0)}{k!}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow f(z)=\frac{f^{(k)}(z_0)}{k!}(z-z_0)^k
+\]</span></p>
+<hr />
+<h2 id="解析延拓">解析延拓</h2>
+<p><span class="math inline">\(a_k\)</span>的值跟<span
+class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
+href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
+continuation）</p>
+<p><img src="3A_2.png" width=300px></p>
+<p>Ex.</p>
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
+\]</span></p>
+<p><span class="math inline">\(z&lt;1\)</span>时收敛，<span
+class="math inline">\(z\geq 1\)</span>时发散</p>
+<p>在<span class="math inline">\(z=-\frac 12\)</span>展开， <span
+class="math display">\[
+f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
+\]</span></p>
+<p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
+32\)</span>上统统收敛</p>
+<p><img src="3B_1.png" width=300px></p>
+<hr />
+<h2 id="cauchy-estimate">Cauchy Estimate</h2>
+<p><u>Theo</u> Cauchy's estimate</p>
+<p>let <span class="math inline">\(M=\max_{|z-z_0|\leq R}
+|f|\)</span></p>
+<p>Then <span class="math display">\[
+|a_k|\leq \frac{M}{R^k}
+\]</span></p>
+<p><span class="math display">\[
+|a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
+|\leq\frac{1}{2\pi}\cdot M\cdot \frac{2\pi R}{R^{k+1}}=\frac{M}{R^k}
+\]</span></p>
+<p>控制了函数值就能控制系数<span class="math inline">\(a_k\)</span></p>
+<hr />
+<h1 id="liouville定理">Liouville定理</h1>
+<p>f: entire function if <span class="math inline">\(f\in
+O(\mathbb{C})\)</span></p>
+<p>e.g. <span class="math inline">\(e^x,\sin x, p(x)\)</span>
+polynomial</p>
+<p><span class="math display">\[
+e^z=\sum_{k=0}^{\infty}\frac{z^k}{k!}
+\]</span></p>
+<p><span class="math display">\[
+\sin x=\frac{e^{iz}-e^{-iz}}{2i},\quad \cos z=\frac{e^{iz}+e^{-iz}}{2}
+\]</span></p>
+<p><u><strong>Theo</strong></u> <strong>(Liouville)</strong></p>
+<p>Any bounded entire functions is constant</p>
+<p><strong>pf. 1</strong></p>
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}a_kz^k,\quad |f(z)|\leq M, \forall
+z\in\mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+\therefore |a_k|\leq \frac{M}{R^k}
+\]</span></p>
+<p>当<span class="math inline">\(k\geqslant 1\)</span>时,</p>
+<p><span class="math display">\[
+|a_k|\leqslant \lim_{R\rightarrow \infty}\frac{M}{R^k}=0
+\]</span></p>
+<p><span class="math display">\[
+\therefore f(z)=f(0)\ \blacksquare
+\]</span></p>
+<p><strong>pf. 2</strong></p>
+<p><span class="math inline">\(z\in \mathbb{C}\)</span>, choose <span
+class="math inline">\(R&gt;|z|\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    |f(z)-f(0)|&amp;=\bigg|\frac{1}{2\pi
+i}\int_{|w|=R}\frac{f(w)}{w-z}dw-\frac{1}{2\pi
+i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
+    &amp;=\bigg|\frac{1}{2\pi i}\int_{|w|=R}(\frac{1}{w-z}-\frac
+1w)f(w)dw \bigg|\\
+    &amp;\leqslant \frac{1}{2\pi i}\int_{|w|=R}|\frac{z}{w(w-z)}|\cdot
+|f(w)|\cdot |dw|\\
+    &amp;\leqslant \frac{1}{2\pi}\cdot M\cdot \frac{|z|}{R(R-|z|)}\cdot
+2\pi R\\
+    &amp;=\frac{M|z|}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
+\blacksquare
+\end{aligned}
+\]</span></p>
+<p><span
+class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
+class="math inline">\(\geqslant R-|z|\)</span></p>
+<p><img src="3B_2.png" width=300px></p>
+<hr />
+<h1 id="代数基本定理">代数基本定理</h1>
+<p><u>Theo</u> (Fundamental theorem of algebra)</p>
+<p>let <span class="math inline">\(p(z)\)</span> be a complex-valued
+polynomial of <span class="math inline">\(\deg P\geqslant
+1\)</span>.</p>
+<p>Then <span class="math inline">\(\exists w\in \mathbb{C}, \ s.t.\
+p(w)=0\)</span></p>
+<p>pf. <span class="math inline">\(p(z)=az+b\quad a\neq 0\)</span>,
+<span class="math inline">\(w=-\frac{b}{a}\)</span></p>
+<p>Assume <span class="math inline">\(\deg P=k\geqslant 2\)</span></p>
+<p><strong>pf. 1</strong></p>
+<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
+\mathbb{C}\)</span></p>
+<p><span class="math display">\[
+\therefore q(z)=\frac{1}{p(z)}\in O(\mathbb{C})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    |q(z)|&amp;=\frac{1}{|a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0|}\\
+    &amp;=\frac{1}{|z|^k\cdot
+|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|}\\
+    &amp;\leqslant \frac{2}{|a_k|\cdot |z|^k}
+\end{aligned}
+\]</span></p>
+<p>最后一步是因为 <span class="math display">\[
+\frac{|a_k|}{2}\leqslant
+|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|
+\]</span></p>
+<p>当<span class="math inline">\(z\rightarrow \infty\)</span>时，<span
+class="math inline">\(|q(z)|\rightarrow 0\)</span></p>
+<p><span class="math inline">\(\therefore q\)</span> is bounded,
+entire</p>
+<p>By Liouville, <span class="math inline">\(q\equiv c\)</span>,
+const</p>
+<p><span class="math display">\[
+\therefore p(z) \text{ is a constant function}
+\]</span></p>
+<p>矛盾 <span class="math inline">\(\blacksquare\)</span>.</p>
+<p><strong>pf. 2</strong> 用最根本的Cauchy定理证</p>
+<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
+\mathbb{C}\)</span> and <span class="math inline">\(\big[\)</span><span
+class="math inline">\(p(x)\)</span> is real if <span
+class="math inline">\(z=x\in \mathbb{R}\)</span><span
+class="math inline">\(\big]\)</span>.</p>
+<p>If <span class="math inline">\([ \ ]\)</span> does not hold, then
+consider <span class="math inline">\(p(z)\bar{p}(z)=Q(z)\)</span>, <span
+class="math display">\[
+\bar{p}(z)=\bar{a_k}z^k+\bar{a_{k-1}}z^{k-1}+\cdots
++\bar{a_1}z+\bar{a_0}
+\]</span></p>
+<blockquote>
+<p>Set <span class="math inline">\(a_1=x_1+iy_1,
+a_2=x_2+iy_2\)</span></p>
+<p><span class="math display">\[
+a_1\bar{a_2}+a_2\bar{a_1}=x_1x_2+y_1y_2\in \mathbb{R}
+\]</span></p>
+</blockquote>
+<p>Set</p>
+<p><span class="math display">\[
+I=\int_0^{2\pi}\frac{d\theta}{p(2\cos \theta)}\neq 0
+\]</span></p>
+<p>在<span class="math inline">\(\theta\in[0,2\pi]\)</span>上，<span
+class="math inline">\(2\cos \theta\in [-1,1]\)</span>，<span
+class="math inline">\(I\neq 0\)</span>没有问题</p>
+<p><span class="math display">\[
+p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
+\]</span></p>
+<p><span class="math inline">\(z=e^{i\theta}=\cos
+\theta+i\sin\theta\)</span></p>
+<p>所以<span class="math inline">\(\displaystyle
+\cos\theta=\frac{z+\bar{z}}{2}=\frac{1}{2}(z+\frac{1}{z})\Rightarrow2\cos\theta
+=z+\frac{1}{z}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    p(2\cos\theta)&amp;=a_k(z+\frac{1}{z})^k+a_{k-1}(z+\frac{1}{z})^{k-1}+\cdots+a_1(z+\frac{1}{z})+a_0\\
+    &amp;=\frac{1}{z^k}Q(z)
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(z=0\)</span>, <span
+class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次系数不为0</p>
+<p>If <span class="math inline">\(z\neq 0\)</span>, <span
+class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
+class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
+class="math inline">\(Q(z)\neq 0\)</span></p>
+<p>既然<span
+class="math inline">\(Q(z)\)</span>总是不为0，把它放在分母上仍是解析函数</p>
+<p><span class="math display">\[
+I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
+\xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz
+\]</span></p>
+<p>由Cauchy定理 <span class="math display">\[
+I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
+\]</span></p>
+<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解析函數的零點</title>
+    <url>/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/</url>
+    <content><![CDATA[<p>實函數的零点存在聚點（limit point）</p>
+<span id="more"></span>
+<p><img src="3D_1.png" width=350px></p>
+<p><u><strong>Theo</strong></u> Let <span
+class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>.</p>
+<p><span class="math inline">\(f\in O(D)\)</span>, let <span
+class="math inline">\(Z_f=\{z\in D|f(z)=0\}\)</span></p>
+<p>If <span class="math inline">\(Z_f\)</span> has a limit point in
+<span class="math inline">\(D\)</span>, then <span
+class="math inline">\(f\equiv 0\)</span> on <span
+class="math inline">\(D\)</span> <span
+class="math inline">\(\spades\)</span></p>
+<p>只要不恆等於0，就必須全部零點都是孤點</p>
+<p>只要零點中存在聚點，則<span
+class="math inline">\(f\)</span>恆等於0</p>
+<p><strong>pf.</strong> Set <span class="math inline">\(A=\{w\in D|w
+\text{ is a limit point of }Z_f\}\)</span></p>
+<p>By assumption, <span class="math inline">\(A\neq
+\varnothing\)</span>. 要證明<span
+class="math inline">\(A=D\)</span>：既然domain即<span
+class="math inline">\(D\)</span>上全是零點的聚點，那<span
+class="math inline">\(D\)</span>上當然也全是零點</p>
+<blockquote>
+<p>The only two subsets of a <em>connected open set</em> that are both
+closed and open is <span class="math inline">\(\varnothing\)</span> and
+the set itself. 參考：<a
+href="/download/intro_analysis_ch1.pdf">intro_analysis_ch1</a></p>
+</blockquote>
+<p><span class="math inline">\(A\)</span> is closed. (obvious)</p>
+<p>let <span class="math inline">\(p\in A\subset D\)</span>, <span
+class="math inline">\(f(p)=0\)</span></p>
+<p>要證<span class="math inline">\(p\)</span>是<span
+class="math inline">\(A\)</span>的內點，則證得<span
+class="math inline">\(A\)</span>是open的</p>
+<p>write</p>
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}a_k(z-p)^k=\sum_{k=1}^{\infty}a_k(z-p)^k
+\]</span></p>
+<p>因為<span class="math inline">\(0^0=1\)</span>，所以<span
+class="math inline">\(f(p)=a_0+\sum_{k=1}^{\infty}a_k\cdot
+0^k=a_0=0\)</span>，自然想到是不是<span class="math inline">\(k\neq
+0\)</span>的係數也為0</p>
+<p><strong>Claim</strong>: <span class="math inline">\(a_k=0,\forall
+k\in \mathbb{N}\)</span></p>
+<p>If not, then <span class="math inline">\(\exists a_{k_0}\neq
+0\)</span>，其中<span class="math inline">\(k_0:\)</span>
+最小的index</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \therefore
+f(z)&amp;=a_{k_0}(z-p)^{k_0}+a_{k_0+1}(z-p)^{k_0+1}+\cdots\\
+    &amp;=(z-p)^{k_0}(a_{k_0}+a_{k_0+1}(z-p)+\cdots)
+\end{aligned}
+\]</span></p>
+<p>Set <span
+class="math inline">\(g(z)=a_{k_0}+a_{k_0+1}(z-p)+\cdots\)</span>, then
+<span class="math display">\[
+g(p)=a_{k_0}\neq 0
+\]</span></p>
+<p>在<span class="math inline">\(p\)</span>点周圍<span
+class="math inline">\(f\)</span>均不等於0，只有<span
+class="math inline">\(f(p)=0\)</span>，所以<span
+class="math inline">\(p\)</span>是孤點，不在<span
+class="math inline">\(A\)</span>内，矛盾. <span
+class="math inline">\(\square\)</span></p>
+<p><span class="math inline">\(\therefore\)</span> <span
+class="math inline">\(A\)</span> is open <span
+class="math inline">\(\Rightarrow A=D\)</span> <span
+class="math inline">\(\blacksquare\)</span></p>
+<hr />
+<p><u><strong>Def.</strong></u> Let <span
+class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, <span
+class="math inline">\(E\subset D\)</span>, we say <span
+class="math inline">\(E\)</span> is a set of uniqueness if, for <span
+class="math inline">\(f\in O(D)\)</span>, <span
+class="math inline">\([f(z)=0, z\in E]\)</span> implies <span
+class="math inline">\([f(z)\equiv 0, \forall z\in D]\)</span></p>
+<p><span class="math display">\[
+\forall z\in E\xrightarrow{f(z)=0}E\xrightarrow{\forall z\in
+D}f(z)\equiv 0
+\]</span></p>
+<p>Any point sequence with an <strong>accumulation point</strong> in
+<span class="math inline">\(D\)</span> is a set of uniqueness
+聚點必須在domain裡，不能往邊界上走</p>
+<p>Any <strong>open subset</strong> of <span
+class="math inline">\(D\)</span> is a set of uniqueness</p>
+<hr />
+<p><u><strong>Theo</strong></u> (identity theorem) 恆等定理</p>
+<p>Let <span class="math inline">\(f,g\in O(D)\)</span>, If <span
+class="math inline">\(f=g\)</span> on open subset of <span
+class="math inline">\(D\)</span>, then <span
+class="math inline">\(f\equiv g\)</span> on <span
+class="math inline">\(D\)</span></p>
+<p>pf. 考慮<span class="math inline">\(h=f-g\)</span>即可，<span
+class="math inline">\(h\)</span>也是解析函數</p>
+<hr />
+<p>反問題</p>
+<p><u>Theo</u> (Weierstrass)</p>
+<p>Let <span class="math inline">\(D\)</span> be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, let <span
+class="math inline">\(\{z_k\}\)</span> be a sequence with no limit point
+in <span class="math inline">\(D\)</span>, for each <span
+class="math inline">\(k\)</span> associate <span
+class="math inline">\(z_k\)</span> with a positive integer <span
+class="math inline">\(m(k)\)</span></p>
+<p>Then there exists a <span class="math inline">\(f\in O(D)\)</span>
+such that the zeros of <span class="math inline">\(f\)</span> are
+exactly <span class="math inline">\(z_k\)</span>'s with multiplicity
+<span class="math inline">\(m(k)\)</span> at <span
+class="math inline">\(z_k\)</span> <span
+class="math inline">\(\spades\)</span></p>
+<p>證明太複雜，不涉及</p>
+<p><span class="math inline">\(f\)</span>不唯一，sequence沒有聚點不是set
+of uniqueness</p>
+<hr />
+<p>由上面的定理：有一個domain，都能找到一個解析函數，不能從domain中延拓出去</p>
+<p><u>Theo</u> Let D be a domain in C, then there exists a <span
+class="math inline">\(f\in O(D)\)</span>, such that <span
+class="math inline">\(f\)</span> cannot be holomorphically extended
+across any boundary point. （但這個定理在多複變是錯的）<span
+class="math inline">\(\spades\)</span></p>
+<p><strong>pf.</strong> 思路：找任意的<span class="math inline">\(f\in
+O(D)\)</span>假設它們都可以延拓，推出矛盾</p>
+<p>choose a seq of points <span class="math inline">\(\{z_k\}\)</span>
+with no limit in <span class="math inline">\(D\)</span>, such that every
+boundary point is a limit point of this sequence</p>
+<p><img src="4B_1.png" width=500px></p>
+<p>照這樣分下去到<span class="math inline">\(1-\frac
+1k\)</span>，最後無數的點會全堆在邊界</p>
+<p>由Weierstrass</p>
+<p><span class="math display">\[
+\exists f\in O(D), \ s.t.\\
+Z_f=\{z_k\}_{k=1}^{\infty},\quad m(k)=1
+\]</span></p>
+<p>如果能延拓出去，會發現矛盾</p>
+<p><img src="4B_2.png" width=400px></p>
+<p><span class="math display">\[
+g\in O(D),\quad f\in O(D)
+\]</span></p>
+<p><span class="math inline">\(g=f\)</span> on <span
+class="math inline">\(D\cap U\)</span></p>
+<p>因為<span
+class="math inline">\(f(z_k)=0\)</span>，所以在這些點上<span
+class="math inline">\(g(z_k)=0\)</span></p>
+<p><span class="math display">\[
+\therefore g(p)=0\quad p\text{\ in an interior point}
+\]</span></p>
+<p>注意到 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(U\)</span> 的內點（不是<span
+class="math inline">\(D\)</span>的內點），歐式空間中內點一定是聚點</p>
+<blockquote>
+<p>內點：<span class="math inline">\(\exists \delta_0&gt;0, s.t.\
+U(p,\delta_0)\subset U\)</span>，</p>
+<p>聚點：<span class="math inline">\(\forall \delta&gt;0, \exists s\in
+\mathring{U}(p,\delta),且 s\in U\)</span></p>
+<p>考慮<span class="math inline">\(\forall \delta\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(\delta&lt;\delta_0\)</span>: <span
+class="math inline">\(\mathring{U}(p,\delta)\subset U(p,\delta)\subset
+U(p,\delta_0)\subset U\)</span>，所以<span
+class="math inline">\(p\)</span>的去心鄰域內有屬於<span
+class="math inline">\(U\)</span>的點</li>
+<li><span class="math inline">\(\delta &gt;\delta_0\)</span>: 顯然<span
+class="math inline">\(\mathring{U}(p,\delta)\)</span>內存在點屬於<span
+class="math inline">\(U\)</span></li>
+</ol>
+<p>所以：內點一定是聚點，聚點不一定是內點（聚點也可以是邊界點）</p>
+</blockquote>
+<p>這個條件會強迫</p>
+<p><span class="math inline">\(\Rightarrow g\equiv 0\)</span> on <span
+class="math inline">\(U\)</span> （set of uniqueness）</p>
+<p><span class="math inline">\(\Rightarrow f\equiv 0\)</span> on <span
+class="math inline">\(U\cap D\)</span></p>
+<p>因為 <span class="math inline">\(0\)</span>
+本身也是解析函數，所以現在 <span class="math inline">\(D\)</span>
+上有兩個解析函數：<span class="math inline">\(f\)</span>和<span
+class="math inline">\(0\)</span></p>
+<p><span class="math inline">\(U\cap D\)</span> 是 <span
+class="math inline">\(D\)</span> 的open subset，由恆等定理，</p>
+<p><span class="math inline">\(f\equiv 0\)</span> on <span
+class="math inline">\(D\)</span></p>
+<p>可是原來的<span class="math inline">\(f\in
+O(D)\)</span>是任意的，不恆等於0，矛盾. <span
+class="math inline">\(\blacksquare\)</span></p>
+<p>多複變中，這種domain叫<a
+href="https://en.wikipedia.org/wiki/Domain_of_holomorphy">domain of
+holomorphy</a></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Morera定理</title>
+    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>柯西定理的逆敘述</p>
+<span id="more"></span>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\spades\)</span></p>
+<p><span class="math display">\[
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
+\]</span></p>
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
+\]</span></p>
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
+\]</span></p>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">例題 <span class="math inline">\(D\subset
+\mathbb{C}\)</span>, <span class="math inline">\(I\subset D\)</span>
+(closed interval). <span class="math inline">\(f\in C(D)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Assume <span class="math inline">\(f\in
+O(D/I)\)</span>, 挖掉I後D還是開集</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Is <span class="math inline">\(f\in
+O(D)\)</span>?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">手上只有Morera</td>
+</tr>
+<tr class="odd">
+<td
+style="text-align: left;"><img src="4C_2.png" alt="逼近" width=500px></td>
+</tr>
+</tbody>
+</table>
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img src="4D_1.png" width=300px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\spades\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
+</ol>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
+<p><span class="math display">\[
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
+\]</span></p>
+<p><span class="math display">\[
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
+\]</span></p>
+<p><img src="4D_2.jpeg"></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>奇異點</title>
+    <url>/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/</url>
+    <content><![CDATA[<p>Singular point 奇異點</p>
+<ol type="1">
+<li><span class="math inline">\(\exists M&gt;0, |f(z)|\leqslant M,
+\forall z\in D/\{z_0\}\)</span> （removeable singularity）</li>
+<li><span class="math inline">\(\displaystyle \lim_{z\rightarrow
+z_0}|f(z)|=+\infty\)</span> （pole 極點）</li>
+<li><span class="math inline">\(f\)</span> is not bounded on <span
+class="math inline">\(D/\{z_0\}\)</span> and <span
+class="math inline">\(\displaystyle \lim_{z\rightarrow z_0}|f(z)|\neq
++\infty\)</span> （esential singularity 本質奇異點）最複雜</li>
+</ol>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>找實習</title>
+    <url>/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/</url>
+    <content><![CDATA[<p>招牌對象為：金融、統計等專業優先</p>
+<span id="more"></span>
+<p>德邦证券：金工组实习生</p>
+<p>【岗位详情】 工作内容： 1）海外文献精译以及 2）论文思路复现
+3）编辑公众号 4）选股策略研究</p>
+<p>【岗位要求】 1）每周3天以上（可远程） 2）工作仔细、负责 3）薪酬120/天
+4）擅长python编程者优先</p>
+<p>【简历投递】 联系邮箱：wangcy3@tebon.com.cn</p>
+<hr />
+<p>方正证券研究所 上海、远程 金融工程组基金研究方向日常实习</p>
+<p>【工作地点】上海/远程</p>
+<p>【岗位职责】 1. 协助完成金融产品分析、基金标签等课题研究； 2.
+负责基金数据、会议纪要等资料整理工作； 3.
+完成带教老师的其他研究需求；</p>
+<p>【任职要求】 1. 211/985高校或海外知名高校全日制在读； 2.
+具备金融、统计等专业背景优先，有相关行研实习经验优先； 3.
+认真负责、注重细节、善于沟通，能熟练使用python等编程优先； 4.
+能够保证每周至少3天工作时间，连续实习3个月，可长期实习者优先。</p>
+<p>【联系方式】 有意向请发简历至：729814353@qq.com
+邮件标题及简历命名格式：【实习】姓名-拟毕业年份-在读学校-专业-可实习时长"</p>
+<hr />
+<p>兴业证券 上海、远程 金融工程团队实习生
+"【上海or远程】兴业证券金融工程团队-实习生招聘（FOF与基金研究方向）
+要求： 1 大三大四 或者 在读硕士及以上学历，本/硕/博士院校均为重点高校 2
+2025年及以后毕业 3 硬性要求：熟练使用Python 4 具有较强的英文文献阅读能力
+5 沟通、学习能力强，逻辑性强，踏实负责 6 实习至少3个月以上，每周至少3天
+【简历投递】 简历发送至：quantintern2021@163.com"</p>
+<hr />
+<p>申万宏源研究所 上海、远程 金融工程部基金研究员实习生
+"地点：上海市黄浦区南京东路99号嘉陵大厦3楼 工作内容：
+1、基金定量研究：对基金经理能力圈、投资风格等进行定量研究
+2、基金定性研究：对基金、基金公司、基金投资者以及基金经理等进行定性研究；
+3、完成团队老师交办的其他研究任务； 要求：
+1、海内外名校计量经济学、统计、金融、经济等相关数理专业硕士及以上在读生；
+2、具有基金、量化、FOF研究等相关实习经验者优先；
+3、必须会使用至少一种数据分析语言（Python最佳），prefer熟练使用wind、sql、彭博；
+4、具有较强的沟通能力和文字表达能力，工作责任感强，细致严谨，有耐心。具有良好的团队合作意识和一定的抗压能力；
+5、每周实习四天及以上，可持续至少3个月者优先； 6、2024届毕业生优先。
+【简历投递】
+邮件主题及简历文件名：姓名_硕士学校_硕士专业_本科学校_本科专业_到岗时间_一周可实习天数_可持续月数
+简历发送至： shxijiacheng@hotmail.com"</p>
+<hr />
+<p>国泰君安 上海、远程 金融工程日常实习生 "【工作内容】
+1.协助分析师开发量化策略，包括但不限于高频交易策略、人工智能选股、行业基本面量化策略等，；
+2.协助分析师整理数据底稿、文献，协助撰写深度专题报告；
+3.协助分析师完成其他日常事务。 【基本要求】
+1.国内985高校或重点财经院校在读研究生或准研究生，大四/研一优先，财经类/理工科/复合背景优先；
+2.熟练使用Wind数据库，熟悉Python、R等编程语言，熟悉各种统计模型；
+3.工作细心认真，态度主动积极，学习能力强，每周实习4天以上，连续实习3个月以上。
+【工作地点】 上海市静安区，远程实习优先。 【实习福利】
+1.系统性学习金融工程研究体系，培养独立从事量化研究、撰写研究报告的能力；
+2.不定期参与证券研究培训、内部交流研讨会；
+3.表现优秀者优先推荐参加寒假、暑期实习。 【申请方式】
+有意向请发简历至rs_quant@163.com，邮件标题：“姓名-学校-专业-实习时长-开始实习时间”"</p>
+<hr />
+<p>方正证券 上海、远程 金融工程组基金研究方向 "【岗位职责】 1.
+协助完成金融产品分析、基金标签等课题研究； 2.
+负责基金数据、会议纪要等资料整理工作； 3. 完成带教老师的其他研究需求；
+【任职要求】 1. 211/985高校或海外知名高校全日制在读； 2.
+具备金融、统计等专业背景优先，有相关行研实习经验优先； 3.
+认真负责、注重细节、善于沟通，能熟练使用python等编程优先； 4.
+能够保证每周至少3天工作时间，连续实习3个月，可长期实习者优先。
+【联系方式】 有意向请发简历至：denglu@foundersc.com
+邮件标题及简历命名格式：【实习】姓名-拟毕业年份-在读学校-专业-可实习时长"</p>
+<hr />
+<p>西南证券 远程 金融工程团队实习生
+"【研究方向】FOF及公私募基金评价、因子选股/选基、大类资产配置与行业轮动
+【工作职责】
+1、提供研究支持，包括宏观经济和资本市场信息的收集及分析，数据清理和处理，协助搭建基金评价体系、量化建模与策略开发；
+2、独立/协助完成深度报告、参与量化课题研究、前沿文献阅读与实证；
+3、参与公募与私募等机构的专业交流； 4、其他日常相关工作 【任职要求】 1.
+国内外重点大学全日制统招大四保研及硕士以上学历，统计学、计算机、数学、数量经济、金融学等相关专业优先；
+2.工作勤勉，擅于撰写研究报告，具有较好的沟通能力，实习时间不短于3个月，可长期实习优先，可远程考核；
+4.
+较强的数理统计知识和数据处理分析能力，熟悉使用办公软件，可应用Python等编程者优先。
+【简历投送】邮箱：xnquant@163.com。邮件题目：“研究方向+姓名+学校+毕业年份”本帖长期有效。"</p>
+<hr />
+<p>国盛证券 上海、远程 金融工程组 "研究方向：基金研究与资产配置
+主要职责：
+1、协助完成基金评价相关研究，包含数据搜集整理分析，模型构建研究，量化系统搭建，专题报告撰写等；
+2、协助团队完成其他日常课题。 岗位要求：
+1、重点高校硕士(特别优秀者本科亦可)，金融、数理等相关专业；
+2、熟悉Word、Excel、PPT等软件，有较强的英文文献阅读能力；
+3、熟练运用Python进行数据分析；
+4、勤奋靠谱，有责任心，对量化研究、基金研究感兴趣；
+5、有充足的时间，实习3个月以上，能长期实习的优先；
+6、加分项：具有相关实习或科研经历、熟悉VBA，SQL等工具； 【简历投递】
+投递方式：gs_fund_research@163.com
+邮件主题及命名：本科学校+本科专业+硕士学校+硕士专业+姓名+毕业年月+可实习时长"</p>
+<hr />
+]]></content>
+      <categories>
+        <category>實習</category>
       </categories>
   </entry>
 </search>

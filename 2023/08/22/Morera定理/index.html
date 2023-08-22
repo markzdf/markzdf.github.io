@@ -24,23 +24,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="檔案助手">
-<meta property="og:url" content="https://markzdf.github.io/categories/%E9%9A%A8%E8%A8%98/index.html">
+    <meta name="description" content="柯西定理的逆敘述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Morera定理">
+<meta property="og:url" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/index.html">
 <meta property="og:site_name" content="檔案助手">
+<meta property="og:description" content="柯西定理的逆敘述">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/4C_1.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/4C_2.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/4D_1.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/4D_2.jpeg">
+<meta property="article:published_time" content="2023-08-22T05:19:32.000Z">
+<meta property="article:modified_time" content="2023-08-22T06:04:28.140Z">
 <meta property="article:author" content="隨便誰">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/4C_1.png">
 
 
-<link rel="canonical" href="https://markzdf.github.io/categories/%E9%9A%A8%E8%A8%98/">
+<link rel="canonical" href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"categories/隨記/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/","path":"2023/08/22/Morera定理/","title":"Morera定理"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分類: 隨記 | 檔案助手</title>
+<title>Morera定理 | 檔案助手</title>
   
 
 
@@ -148,110 +157,191 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">隨記
-          <small>分類</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="隨便誰">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="檔案助手">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Morera定理 | 檔案助手">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Morera定理
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="創建時間：2023-08-22 13:19:32 / 修改時間：14:04:28" itemprop="dateCreated datePublished" datetime="2023-08-22T13:19:32+08:00">2023-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%A4%87%E8%AE%8A/" itemprop="url" rel="index"><span itemprop="name">複變</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>柯西定理的逆敘述</p>
+<span id="more"></span>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\spades\)</span></p>
+<p><span class="math display">\[
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
+\]</span></p>
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
+\]</span></p>
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
+\]</span></p>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">例題 <span class="math inline">\(D\subset
+\mathbb{C}\)</span>, <span class="math inline">\(I\subset D\)</span>
+(closed interval). <span class="math inline">\(f\in C(D)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Assume <span class="math inline">\(f\in
+O(D/I)\)</span>, 挖掉I後D還是開集</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Is <span class="math inline">\(f\in
+O(D)\)</span>?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">手上只有Morera</td>
+</tr>
+<tr class="odd">
+<td
+style="text-align: left;"><img src="4C_2.png" alt="逼近" width=500px></td>
+</tr>
+</tbody>
+</table>
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img src="4D_1.png" width=300px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\spades\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
+</ol>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
+<p><span class="math display">\[
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
+\]</span></p>
+<p><span class="math display">\[
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
+\]</span></p>
+<p><img src="4D_2.jpeg"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-08-02T22:36:09+08:00"
-              content="2023-08-02">
-          08-02
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/" itemprop="url">
-          <span itemprop="name">七月加州</span>
-        </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/" rel="prev" title="找實習">
+                  <i class="fa fa-angle-left"></i> 找實習
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/" rel="next" title="奇異點">
+                  奇異點 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-07-29T18:30:25+08:00"
-              content="2023-07-29">
-          07-29
-        </time>
-      </div>
 
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/" itemprop="url">
-          <span itemprop="name">六月總結</span>
-        </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-07-29T18:26:57+08:00"
-              content="2023-07-29">
-          07-29
-        </time>
-      </div>
 
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/" itemprop="url">
-          <span itemprop="name">不必再等</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-07-29T18:23:39+08:00"
-              content="2023-07-29">
-          07-29
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/07/29/ucb%E6%9A%91%E5%81%87/" itemprop="url">
-          <span itemprop="name">ucb暑假</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
 
 </div>
   </main>
