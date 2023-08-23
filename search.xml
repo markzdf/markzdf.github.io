@@ -102,6 +102,9 @@ f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
       <categories>
         <category>複變</category>
       </categories>
+      <tags>
+        <tag>Morera定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>找實習</title>
@@ -397,6 +400,11 @@ holomorphy</a></p>
       <categories>
         <category>複變</category>
       </categories>
+      <tags>
+        <tag>解析延拓</tag>
+        <tag>恆等定理</tag>
+        <tag>Weierstrass定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>解析函數的冪級數展開</title>
@@ -489,8 +497,9 @@ f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
 <p><u>Theo</u> Cauchy's estimate</p>
 <p>let <span class="math inline">\(M=\max_{|z-z_0|\leq R}
 |f|\)</span></p>
-<p>Then <span class="math display">\[
-|a_k|\leq \frac{M}{R^k} $\blacklozenge$
+<p>Then</p>
+<p><span class="math display">\[
+|a_k|\leq \frac{M}{R^k}. \ \blacklozenge
 \]</span></p>
 <p><span class="math display">\[
 |a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
@@ -550,7 +559,7 @@ class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
 class="math inline">\(\geqslant R-|z|\)</span></p>
 <p><img src="3B_2.png" width=300px></p>
 <hr />
-<h1 id="代数基本定理">代数基本定理</h1>
+<h1 id="代數基本定理">代數基本定理</h1>
 <p><u>Theo</u> (Fundamental theorem of algebra)</p>
 <p>let <span class="math inline">\(p(z)\)</span> be a complex-valued
 polynomial of <span class="math inline">\(\deg P\geqslant
@@ -648,6 +657,12 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
       <categories>
         <category>複變</category>
       </categories>
+      <tags>
+        <tag>解析延拓</tag>
+        <tag>Cauchy estimate</tag>
+        <tag>Liouville定理</tag>
+        <tag>代數基本定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>柯西積分公式</title>
@@ -939,6 +954,11 @@ i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
       <categories>
         <category>複變</category>
       </categories>
+      <tags>
+        <tag>Cauchy定理</tag>
+        <tag>Cauchy Kernel</tag>
+        <tag>Cantor交集定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>解析函數</title>
@@ -1200,6 +1220,10 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
       <categories>
         <category>複變</category>
       </categories>
+      <tags>
+        <tag>柯西黎曼方程</tag>
+        <tag>Green定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>MFE Evaluation</title>
@@ -1878,7 +1902,9 @@ href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%
 href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
 <p>第4講：<a
 href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a>、<a
-href="">Morera定理</a></p>
+href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">Morera定理</a></p>
+<p>第5講：<a
+href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異點</a></p>
 ]]></content>
       <categories>
         <category>複變</category>
