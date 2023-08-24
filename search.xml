@@ -3152,12 +3152,14 @@ holomorphy</a></p>
   <entry>
     <title>有趣的複變題</title>
     <url>/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/</url>
-    <content><![CDATA[<p><span class="math inline">\([ICA-1.17]\)</span> Show that the sum of
+    <content><![CDATA[<p>vu老師說，條件反射啦：<span class="math inline">\(\displaystyle
+\frac{1}{i}=-i\)</span></p>
+<span id="more"></span>
+<p><span class="math inline">\([ICA-1.17]\)</span> Show that the sum of
 the <span class="math inline">\(n\)</span> n-th roots of every nonzero
 complex number <span class="math inline">\(w\)</span> is zero. (The n
 nth roots of <span class="math inline">\(w\)</span> are the roots of the
 equation <span class="math inline">\(z^n-w=0\)</span>.)</p>
-<span id="more"></span>
 <p>The sum of the roots of a polynomial equation <span
 class="math inline">\(z^n+a_{n-1}z^{n-1}+\cdots +a_0\)</span> is <span
 class="math inline">\(-a_{n-1}\)</span> (<a
@@ -3173,6 +3175,60 @@ Cauchy-Riemann equations can also be written as</p>
 \]</span></p>
 <p><img src="2.1_1.png" width=550px></p>
 <p><img src="2.1_2.png" width=550px></p>
+<p><span class="math inline">\([ICA-2.3]\)</span> <span
+class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span>, show that if <span
+class="math inline">\(U(z_0,\delta)\in C^1\)</span>, and satisfies
+Cauchy-Riemann equation, then has derivatives at <span
+class="math inline">\(z_0\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    f(z)-f(z_0)&amp;=(x-x_0)u_1+(y-y_0)u_2+i[(x-x_0)v_1+(y-y_0)v_2]+o(z-z_0)\\
+    &amp;=(x-x_0)(u_1-iu_2)+(y-y_0)(u_2+iu_1)+o(z-z_0)\\
+    &amp;=(z-z_0)(u_1-iu_2)+o(z-z_0)
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow f&#39;(z_0)=\lim_{z\rightarrow
+z_0}\frac{f(z)-f(z_0)}{z-z_0}=u_1-iu_2\overset{also}{=}v_2+iv_1
+\]</span></p>
+<p><span class="math inline">\([ICA-2.4]\)</span></p>
+<p><img src="2.4.jpg" width=600px></p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\frac{\partial f}{\partial r}=U_r+iV_r\\
+    &amp;\frac{\partial f}{\partial r}=\frac{\partial f}{\partial
+z}\cdot \frac{\partial z}{\partial r}=f&#39;(z)\cdot e^{i\theta}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\frac{\partial f}{\partial \theta}=U_{\theta}+iV_{\theta}\\
+    &amp;\frac{\partial f}{\partial \theta}=\frac{\partial f}{\partial
+z}\cdot \frac{\partial z}{\partial \theta}=f&#39;(z)\cdot ire^{i\theta}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow U_r+iV_r=\frac{1}{ir}(U_{\theta}+iV_{\theta})
+\]</span></p>
+<p>整理後，記得<span class="math inline">\(\Re=\Re,\Im=\Im\)</span></p>
+<p><span class="math inline">\([ICA-2.5]\)</span></p>
+<p><img src="2.5q.jpg" width=600px></p>
+<p><img src="2.5a.png" width=600px></p>
+<p>note: <span class="math inline">\(z=(x,y)\in \bar{D}\)</span>,
+therefore <span class="math inline">\((x,-y)\in D\)</span> satisfies
+Cauchy-Riemann as given</p>
+<p><span class="math inline">\([ICA-2.6]\)</span></p>
+<p><img src="2.6q.jpg" width=600px></p>
+<p><img src="2.6a.png" width=600px></p>
+<p>note: replace <span class="math inline">\(r\rightarrow
+R^2/r\)</span></p>
+<p><span class="math display">\[
+U_1(\frac{R^2}{r},\theta)=\frac{r}{R^2}V_2(\frac{R^2}{r},\theta)
+\]</span></p>
+<p><span class="math inline">\([ICA-2.8,2.9]\)</span></p>
+<p><img src="2.8q.png" width=600px></p>
+<p><img src="2.81.png" width=600px></p>
+<p><img src="2.82.png" width=600px></p>
 ]]></content>
       <categories>
         <category>複變</category>
