@@ -41,8 +41,9 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/2.8q.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/2.81.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/2.82.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/limsup.png">
 <meta property="article:published_time" content="2023-08-23T13:49:20.000Z">
-<meta property="article:modified_time" content="2023-08-24T14:15:31.307Z">
+<meta property="article:modified_time" content="2023-08-25T05:40:27.349Z">
 <meta property="article:author" content="麵包騎士">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/2.1_1.png">
@@ -215,7 +216,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-24 22:15:31" itemprop="dateModified" datetime="2023-08-24T22:15:31+08:00">2023-08-24</time>
+      <time title="修改時間：2023-08-25 13:40:27" itemprop="dateModified" datetime="2023-08-25T13:40:27+08:00">2023-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,7 +284,7 @@ class="math inline">\(z_0\)</span></p>
 z_0}\frac{f(z)-f(z_0)}{z-z_0}=u_1-iu_2\overset{also}{=}v_2+iv_1
 \]</span></p>
 <p><span class="math inline">\([ICA-2.4]\)</span></p>
-<p><img src="2.4.jpg" width=600px></p>
+<p><img src="2.4.jpg" width=700px></p>
 <p><span class="math display">\[
 \begin{aligned}
     &amp;\frac{\partial f}{\partial r}=U_r+iV_r\\
@@ -303,23 +304,97 @@ z}\cdot \frac{\partial z}{\partial \theta}=f&#39;(z)\cdot ire^{i\theta}
 \]</span></p>
 <p>整理後，記得<span class="math inline">\(\Re=\Re,\Im=\Im\)</span></p>
 <p><span class="math inline">\([ICA-2.5]\)</span></p>
-<p><img src="2.5q.jpg" width=600px></p>
-<p><img src="2.5a.png" width=600px></p>
+<p><img src="2.5q.jpg" width=700px></p>
+<p><img src="2.5a.png" width=700px></p>
 <p>note: <span class="math inline">\(z=(x,y)\in \bar{D}\)</span>,
 therefore <span class="math inline">\((x,-y)\in D\)</span> satisfies
 Cauchy-Riemann as given</p>
 <p><span class="math inline">\([ICA-2.6]\)</span></p>
-<p><img src="2.6q.jpg" width=600px></p>
-<p><img src="2.6a.png" width=600px></p>
+<p><img src="2.6q.jpg" width=700px></p>
+<p><img src="2.6a.png" width=700px></p>
 <p>note: replace <span class="math inline">\(r\rightarrow
 R^2/r\)</span></p>
 <p><span class="math display">\[
 U_1(\frac{R^2}{r},\theta)=\frac{r}{R^2}V_2(\frac{R^2}{r},\theta)
 \]</span></p>
 <p><span class="math inline">\([ICA-2.8,2.9]\)</span></p>
-<p><img src="2.8q.png" width=600px></p>
-<p><img src="2.81.png" width=600px></p>
-<p><img src="2.82.png" width=600px></p>
+<p><img src="2.8q.png" width=700px></p>
+<p><img src="2.81.png" width=700px></p>
+<p><img src="2.82.png" width=700px></p>
+<hr />
+<p><img src="limsup.png" width=700px></p>
+<p><span class="math inline">\([ICA-3.9]\)</span> Prove: for <span
+class="math inline">\(\displaystyle
+\sum_{k=0}^{\infty}a_k(z-z_0)^k\)</span>, the formula of <em>radius of
+convergence</em> <span class="math inline">\(R\)</span> is</p>
+<p><span class="math display">\[
+\frac{1}{R}=\limsup_{n\rightarrow \infty}|a_n|^{\frac{1}{n}}
+\]</span></p>
+<p>pf. 思路：湊<span
+class="math inline">\(|a_nz^n|\)</span>，跟1比較</p>
+<ol type="1">
+<li><span class="math inline">\(0&lt;R&lt;\infty\)</span></li>
+</ol>
+<p>By <span class="math inline">\(\displaystyle
+\frac{1}{R}=\limsup_{n\rightarrow
+\infty}|a_n|^{\frac{1}{n}}\)</span></p>
+<p>For <em>all</em> <span class="math inline">\(n\)</span> large
+enough</p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&lt;\frac{1}{R}+\varepsilon =\frac{1}{R-\varepsilon}
+\]</span></p>
+<p><span class="math display">\[
+|a_n|&lt;\frac{1}{(R-\varepsilon)^n}
+\]</span></p>
+<p>For <span class="math inline">\(z&lt;R\)</span>, therefore <span
+class="math inline">\(z&lt;R-\varepsilon\)</span></p>
+<p><span class="math display">\[
+|a_nz^n|&lt;(\frac{z}{R-\varepsilon})^n&lt;1 \ \square
+\]</span></p>
+<p>For <em>infinite</em> <span class="math inline">\(n\)</span></p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&gt;\frac{1}{R}-\varepsilon=\frac{1}{R+\varepsilon}
+\]</span></p>
+<p><span class="math display">\[
+|a_n|&gt;\frac{1}{R+\varepsilon}^n
+\]</span></p>
+<p>For <span class="math inline">\(|z|&gt;R\)</span>, also <span
+class="math inline">\(|z|&gt;R+\varepsilon\)</span></p>
+<p><span class="math display">\[
+|a_nz^n|&gt;(\frac{z}{R+\varepsilon})^n&gt;1 \ \square
+\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(R=0\)</span></li>
+</ol>
+<p><span class="math inline">\(\Rightarrow
+\frac{1}{R}=\infty\)</span></p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&gt;K,\ \forall K
+\]</span></p>
+<p>choose</p>
+<p><span class="math display">\[
+|z|&gt;\frac{1}{K}
+\]</span></p>
+<p>In order to let</p>
+<p><span class="math display">\[
+|a_nz^n|&gt;(Kz)^n&gt;1 \ \square
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(R=\infty\)</span></li>
+</ol>
+<p><span class="math inline">\(\Rightarrow \frac{1}{R}=0\)</span></p>
+<p><span class="math display">\[
+\therefore |a_n|^{\frac{1}{n}}&lt;\varepsilon \Rightarrow
+|a_n|&lt;\varepsilon^n
+\]</span></p>
+<p>choose</p>
+<p><span class="math display">\[
+z&lt;\frac{1}{\varepsilon}
+\]</span></p>
+<p>Inorder to let</p>
+<p><span class="math display">\[
+|a_nz^n|&lt;(z\varepsilon)^n&lt;1 \ \square
+\]</span></p>
 
     </div>
 
