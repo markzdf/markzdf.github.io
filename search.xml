@@ -1685,7 +1685,7 @@ class="math inline">\(\displaystyle \lim_{z\rightarrow z_0}|f(z)|\neq
 +\infty\)</span> （esential singularity 本質奇異點）最複雜</li>
 </ol>
 <span id="more"></span>
-<p>Theo (Mean value theorem)</p>
+<h1 id="theo-mean-value-theorem">Theo (Mean value theorem)</h1>
 <p><span class="math inline">\(D\subset \mathbb{C}\)</span> domain,
 <span class="math inline">\(f\in O(D)\)</span>, let <span
 class="math inline">\(p\in D\)</span>, then provided that <span
@@ -1698,17 +1698,19 @@ f(p)=\frac{1}{2\pi}\int_0^{2\pi}f(p+re^{i\theta})d\theta
 <p>write <span class="math inline">\(w=p+re^{i\theta}\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-    f(p)&amp;=\frac{1}{2\pi} \int_{C_r}\frac{f(w)}{w-p}dw\\
+    f(p)&amp;=\frac{1}{2\pi i} \int_{C_r}\frac{f(w)}{w-p}dw\\
     &amp;=\frac{1}{2\pi
 i}\int_0^{2\pi}\frac{f(p+re^{i\theta})}{re^{i\theta}}ire^{i\theta}d\theta\\
     &amp;=\frac{1}{2\pi}\int_0^{2\pi}f(p+re^{i\theta})d\theta
 \end{aligned}
 \]</span></p>
-<p>Theo (maximum modulus principle) <span class="math inline">\(D\subset
-\mathbb{C}\)</span> domain, <span class="math inline">\(f\in
-O(D)\)</span>, Then <span class="math inline">\(|f|\)</span> cannot
-attain local maximum in <span class="math inline">\(D\)</span>, unless
-<span class="math inline">\(f\)</span> is a constant</p>
+<h1 id="theo-maximum-modulus-principle">Theo (Maximum modulus
+principle)</h1>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span> domain,
+<span class="math inline">\(f\in O(D)\)</span>, Then <span
+class="math inline">\(|f|\)</span> cannot attain local maximum in <span
+class="math inline">\(D\)</span>, unless <span
+class="math inline">\(f\)</span> is a constant</p>
 <p>pf. 如果modulus取到了local maxim，要證明是常數</p>
 <p><span class="math inline">\(z_0\in D\)</span>, i.e. <span
 class="math inline">\(\exists R&gt;0, s.t.\ B(z_0;R)\subset D\)</span>
@@ -1723,10 +1725,10 @@ and <span class="math display">\[
     &amp;\leqslant \frac{1}{2\pi}\int_0^{2\pi}|f(z_0)|d\theta=|f(z_0)|
 \end{aligned}
 \]</span></p>
-<p>不等號全部變成等號</p>
+<p>因為<span
+class="math inline">\(|f(z_0)|=|f(z_0)|\)</span>，不等號全部變成等號，於是強迫</p>
 <p><span class="math display">\[
-\therefore |f(z_0+re^{i\theta})|=|f(z_0)| \quad \forall \theta, \
-0&lt;r&lt;R
+|f(z_0+re^{i\theta})|=|f(z_0)| \quad \forall \theta, \ 0&lt;r&lt;R
 \]</span></p>
 <p><span class="math display">\[
 |f(z)|=const\quad z\in B(z_0;R)
@@ -1740,6 +1742,7 @@ and <span class="math display">\[
 \bar{z}}(f(z)\bar{f}(z))\overset{?}{=}|\frac{\partial f}{\partial
 z}|^2=0
 \]</span></p>
+<p><span class="math inline">\(?\)</span> 處，</p>
 <p><span class="math display">\[
 \therefore f&#39;(z)=0\quad on \ B(z_0;R)
 \]</span></p>
@@ -1749,6 +1752,162 @@ f(z)=const\quad on \ B(z_0;R)
 <p><span class="math display">\[
 \therefore f(z)=const\quad on \ D \ (唯一集)
 \]</span></p>
+<h2 id="theo">Theo</h2>
+<p>Let <span class="math inline">\(D\subset\mathbb{C}\)</span> be a
+bounded domain and <span class="math inline">\(f\in O(D)\cap
+C(\bar{D})\)</span> (連續到邊界)</p>
+<p>If f is not a constant, then the max of <span
+class="math inline">\(|f|\)</span> on <span
+class="math inline">\(\bar{D}\)</span> must occur at some boundary
+point</p>
+<p>最大值不可能在裡面，否則就由最大模定理變成常數函數。</p>
+<h1 id="extended-complex-plane">Extended complex plane</h1>
+<p>對<span class="math inline">\(\mathbb{C}\)</span>進行one point
+compactification（一點緊緻化）</p>
+<p><span class="math inline">\(\mathbb{C}_{\infty}=\mathbb{C}\cup
+\{\infty\}\)</span></p>
+<p>先給它一個拓撲</p>
+<p>open sets:</p>
+<ol type="1">
+<li>contains all of the open sets of <span
+class="math inline">\(\mathbb{C}\)</span></li>
+<li>加一個open set <span class="math inline">\(U\)</span> s.t. <span
+class="math inline">\(\infty\in U\)</span> and <span
+class="math inline">\(\mathbb{C}\verb|\| U\)</span> is a compact subset
+of <span class="math inline">\(\mathbb{C}\)</span></li>
+</ol>
+<p><span class="math inline">\(\mathbb{C}_{\infty}:\)</span> compact
+complex manifold（複流型），是一維的</p>
+<p>其實就是<span class="math inline">\(\mathbb{CP}^1\)</span>，Complex
+dim=1 complex projective space（一維的複投影空間）</p>
+<p>Riemann sphere <span class="math inline">\(S^2\)</span></p>
+<p><img src="5B_1.jpg" width=500px></p>
+<p>steoreographic projection 立體投影</p>
+<p><span class="math display">\[
+解析同構：\mathbb{C}_{\infty}\simeq \mathbb{CP}^1\simeq S^2
+\]</span></p>
+<h1 id="處理奇異點">處理奇異點</h1>
+<h2 id="第一類">第一類</h2>
+<p>removable singularity可以重新定義，讓它變成解析函數</p>
+<h3 id="riemanns-theorem-on-removable-singularity">Riemann's theorem on
+removable singularity</h3>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>, domain,
+<span class="math inline">\(z_0\in D\)</span>, <span
+class="math inline">\(f\in O(D)\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(|f|\)</span> is bounded on <span
+class="math inline">\(D\verb|\|\{z_0\}\)</span></p>
+<p>Then <span class="math inline">\(f\)</span> can be redefined at <span
+class="math inline">\(z_0\)</span> s.t, the function still denoted by
+<span class="math inline">\(f\)</span> is holoporphic in <span
+class="math inline">\(D\)</span> i.e. <span class="math inline">\(f\in
+O(D)\)</span></p>
+<p>pf. Consider</p>
+<p><span class="math display">\[
+g(z)=(z-z_0)^2f(z)\quad z\in D\verb|\| \{z_0\}\quad \star
+\]</span></p>
+<p><span class="math display">\[
+g(z_0)=0\quad \therefore g\in C(D)
+\]</span></p>
+<p><span class="math display">\[
+\lim_{z\rightarrow z_0}
+=\frac{g(z)-g(z_0)}{z-z_0}
+=\lim_{z\rightarrow z_0}\frac{(z-z_0)^2f(z)}{z-z_0}
+=\lim_{z\rightarrow z_0}(z-z_0)f(z)=0
+\]</span></p>
+<p><span class="math inline">\(g\)</span>每個點都可以微分</p>
+<p><span class="math display">\[
+\therefore g\in O(D)
+\]</span></p>
+<p><span class="math display">\[
+\therefore g(z)
+=\sum_{k=2}^{\infty}a_k(z-z_0)^k
+=(z-z_0)^2\cdot \sum_{m=0}^{\infty} a_{m+2}(z-z_0)^m=(z-z_0)^2\varphi
+(z)\quad \star
+\]</span></p>
+<p>還是解析函數</p>
+<p><span class="math inline">\(\varphi\in O(D)\)</span></p>
+<p>兩個星號，<span class="math inline">\(f(z)=\varphi(z)\)</span></p>
+<p><span class="math display">\[
+\lim_{z\rightarrow z_0}f(z)=\lim_{z\rightarrow
+z_0}\varphi(z)=\varphi(z_0)
+\]</span></p>
+<p>If we redefine f at <span class="math inline">\(z_0\)</span> to be
+<span class="math inline">\(\varphi(z_0)\)</span>, then <span
+class="math inline">\(f=\varphi\in O(D)\)</span></p>
+<h3 id="再證明-liouville">再證明 Liouville</h3>
+<p>Bounded entire function must be constant</p>
+<p>除了北極之外有一個有界的解析函數，北極是第一類奇異點（因為周圍都有界），用Riemann的方法處理完</p>
+<p>一個連續函數在緊緻的集合上一定有極大值，相對於附近的open
+set是內點，所以<span
+class="math inline">\(|f|\)</span>在一個內點取到極大值。可是由最大模定理，強迫<span
+class="math inline">\(f\)</span>在neighborhood上變成常數，再由恆等定理，它在<span
+class="math inline">\(\mathbb{C}\)</span>上就是常數函數。</p>
+<h2 id="第二類">第二類</h2>
+<p><span class="math inline">\(|f(z)|\rightarrow \infty\)</span> as
+<span class="math inline">\(z\rightarrow z_0\)</span></p>
+<p>i.e. <span class="math inline">\(\forall M&gt;0, \ |f(z)|\geqslant
+M&gt;0,\ when \ z\in B(z_0;\varepsilon)\verb|\| \{z_0\}\)</span></p>
+<p>Consider</p>
+<p><span class="math display">\[
+g(z)=\frac{1}{f(z)}\quad \therefore g(z)\leqslant \frac{1}{M}
+\]</span></p>
+<p>表示<span class="math inline">\(g(z)\)</span>在disk上有界，<span
+class="math inline">\(\{z_0\}\)</span>變成<span
+class="math inline">\(g(z)\)</span>的第一類奇異點</p>
+<p><span class="math display">\[
+\lim_{z\rightarrow z_0}g(z)=0
+\]</span></p>
+<p>由Riemann把<span
+class="math inline">\(g(z_0)\)</span>定義為0，變成解析函數</p>
+<p><span class="math display">\[
+\therefore g(z)=\sum_{k=k_0}^{\infty}a_k(z-z_0)^k
+=(z-z_0)^{k_0}\cdot
+\underbrace{\sum_{m=0}^{\infty}a_{k_0+m}(z-z_0)^m}_{\varphi(z)}
+\]</span></p>
+<p><span class="math inline">\(k_0:\)</span> smallest index s.t. <span
+class="math inline">\(a_{k_0}\neq 0\)</span>；由定義的，<span
+class="math inline">\(常數項=0\)</span></p>
+<p><span class="math inline">\(\varphi\in
+O(B(z_0;\delta))\)</span>，<span
+class="math inline">\(\varphi(z_0)=a_{k_0}\neq 0\)</span></p>
+<p><span class="math display">\[
+g(z)=\frac{1}{f(z)}=(z-z_0)^{k_0}\varphi(z)\quad \varphi(z_0)\neq 0
+\]</span></p>
+<p>On <span class="math inline">\(z\in
+B(z_0;\delta)\verb|\|\{z_0\}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    f(z)&amp;=\frac{1}{(z-z_0)^{k_0}\varphi(z)}=\frac{1}{(z-z_0)^k}h(z)\\
+&amp;=\frac{1}{(z-z_0)^k}\underbrace{\left(c_0+c_1(z-z_0)+c_2(z-z_0)^2+\cdots
+\right)}_{h(z)}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \therefore
+f(z)=&amp;\overbrace{\frac{c_0}{(z-z_0)^{k_0}}+\frac{c_1}{(z-z_0)^{k_0-1}}+\cdots+\frac{c_{k_0-1}}{z-z_0}}^{I_{z_0}}\\
+    &amp;\qquad
++\underbrace{c_{k_0}+c_{k_0+1}(z-z_0)+\cdots+c_{k_0+m}(z-z_0)^m+\cdots}_{h_{z_0}}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+f(z)=I_{z_0}+h_{z_0}
+\]</span></p>
+<p><span class="math inline">\(I_{z_0}:\)</span> singular part</p>
+<p><span class="math inline">\(h_{z_0}:\)</span> holomorphic part</p>
+<p><span class="math inline">\(k_0\)</span> is called the order of the
+pole, <span class="math inline">\(k_0=1\)</span> we call it simple
+pole</p>
+<p>亞純函數：A function is called a <em>meromorphic</em> function if
+<span class="math inline">\(f\)</span> is holomorphic except for
+poles.</p>
+<h2 id="第三類">第三類</h2>
+<p>Essential singular point 本質奇異點</p>
+<p><strong>Picard's little theorem</strong></p>
+<p>對於不是常數的entire function，值域最多只能miss一個點</p>
+<p>e.g. <span class="math inline">\(f(z)=e^z\)</span> misses <span
+class="math inline">\(0\)</span> only e.g. <span
+class="math inline">\(f(z)=z\)</span> doesn't miss</p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -1957,11 +2116,10 @@ class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 0\)</span></p>
 <p><span class="math display">\[
 \therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq
-\frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.\
-\square
+\frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.
 \]</span></p>
 <p>目前证得在所有的长方形上 <span class="math display">\[
-\oint_{\partial R}f(z)dz=0
+\oint_{\partial R}f(z)dz=0 \ \square
 \]</span></p>
 <p><img src="cut.png"></p>
 <p>这个函数<span
@@ -2001,6 +2159,7 @@ class="math inline">\(\int_Cf(w)d\eta=f(w)(z-w)\)</span>，后一项趋于0</p>
     &amp;=F(\gamma(b))-F(\gamma(a))=0. \quad \blacksquare
 \end{aligned}
 \]</span></p>
+<hr />
 <p><u><strong>Theo</strong></u>(Cauchy's integral formula)</p>
 <p>Let <span class="math inline">\(D\)</span> be a simply-connected
 domain in <span class="math inline">\(\mathbb{C}\)</span>,</p>
@@ -3044,9 +3203,9 @@ i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
 1w)f(w)dw \bigg|\\
     &amp;\leqslant \frac{1}{2\pi i}\int_{|w|=R}|\frac{z}{w(w-z)}|\cdot
 |f(w)|\cdot |dw|\\
-    &amp;\leqslant \frac{1}{2\pi}\cdot M\cdot \frac{|z|}{R(R-|z|)}\cdot
-2\pi R\\
-    &amp;=\frac{M|z|}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
+    &amp;\leqslant \frac{1}{2\pi i}\cdot M\cdot
+\frac{|z|}{R(R-|z|)}\cdot 2\pi R\\
+    &amp;=\frac{M|z|i}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
 \blacksquare
 \end{aligned}
 \]</span></p>
@@ -3093,7 +3252,7 @@ const</p>
 \therefore p(z) \text{ is a constant function}
 \]</span></p>
 <p>矛盾 <span class="math inline">\(\blacksquare\)</span>.</p>
-<p><strong>pf. 2</strong> 用最根本的Cauchy定理证</p>
+<p><strong>pf. 2</strong> 用最根本的Cauchy定理證</p>
 <p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
 \mathbb{C}\)</span> and <span class="math inline">\(\big[\)</span><span
 class="math inline">\(p(x)\)</span> is real if <span
@@ -3118,7 +3277,7 @@ I=\int_0^{2\pi}\frac{d\theta}{p(2\cos \theta)}\neq 0
 \]</span></p>
 <p>在<span class="math inline">\(\theta\in[0,2\pi]\)</span>上，<span
 class="math inline">\(2\cos \theta\in [-1,1]\)</span>，<span
-class="math inline">\(I\neq 0\)</span>没有问题</p>
+class="math inline">\(I\neq 0\)</span>沒有問題</p>
 <p><span class="math display">\[
 p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
 \]</span></p>
@@ -3134,13 +3293,13 @@ p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
 \end{aligned}
 \]</span></p>
 <p>If <span class="math inline">\(z=0\)</span>, <span
-class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次系数不为0</p>
+class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次係數不為0</p>
 <p>If <span class="math inline">\(z\neq 0\)</span>, <span
 class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
 class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
 class="math inline">\(Q(z)\neq 0\)</span></p>
 <p>既然<span
-class="math inline">\(Q(z)\)</span>总是不为0，把它放在分母上仍是解析函数</p>
+class="math inline">\(Q(z)\)</span>总是不為0，把它放在分母上仍是解析函数</p>
 <p><span class="math display">\[
 I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
 \xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz
@@ -3492,7 +3651,8 @@ class="math inline">\(w^c\)</span>為三者綜合。四捨五入，權重為</p>
 w=[0.15,0.5,0.06,0.29]
 \]</span></p>
 <p>保命比較重要，莊周最合適，因為場上最怕被控，一旦被控就可能被秒。莊周被動和大招都是解控，保命能力一流。為了照顧同樣比較重要的“噁心隊友”，我必須多k頭或把對面放跑。如果對面被殺了，必須是我殺的，否則寧願讓對面逃掉，所以帶斬殺。</p>
-<p><img src="莊周.jpg" width=700px></p>
+<p><img src="1.jpg" width=700px></p>
+<p><img src="2.jpg" width=700px></p>
 <p>我對王者最本質的理解就是：它是款遊戲。不管再怎麼刺激，僅僅是個遊戲，手機一關，跟現實生活一點關聯也沒有。再問一句，為什麼玩遊戲？就是放鬆、開心呀。如果為了贏而贏，為了上分把自己弄的精疲力盡、氣急敗壞，何必玩呢？所以輸贏無所謂，自己開心最重要。即便隊伍輸了，我也可以贏了。而且這個遊戲上我見太多白痴，就龐大的基數和小樣本抽樣可以近似估計和我一起玩的都是白痴。那就不用客氣了，反正我不噁心他們就會被他們噁心，這也是個博弈。</p>
 ]]></content>
   </entry>
