@@ -593,6 +593,7 @@ class="math inline">\(f(z)=z\)</span> doesn't miss</p>
       <tags>
         <tag>平均值定理</tag>
         <tag>最大模型原理</tag>
+        <tag>Liouville定理</tag>
       </tags>
   </entry>
   <entry>
@@ -1233,9 +1234,9 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
         <category>複變</category>
       </categories>
       <tags>
+        <tag>Liouville定理</tag>
         <tag>解析延拓</tag>
         <tag>Cauchy estimate</tag>
-        <tag>Liouville定理</tag>
         <tag>代數基本定理</tag>
       </tags>
   </entry>
