@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo-next修改文字選中顏色</title>
+    <url>/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/</url>
+    <content><![CDATA[<p>最新的hexo取消了 <code>source/_custom/_custom.styl</code>
+文件，但在next主題的 <code>_config.yml</code> 裡保留了<a
+href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義功能</a>。</p>
+<span id="more"></span>
+<p>首先在hexo的根目錄下（注意不是next主題的根目錄）打開
+<code>source</code> 文件夾，新建 <code>_data</code> 文件夾並放入
+<code>styles.styl</code> 文件。複制下面這段代碼粘貼到
+<code>source/_data/styles.styl</code> 中（<a
+href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line">.post-body p a&#123; </span><br><span class="line">    color: #0593d3; </span><br><span class="line">    border-bottom: none; </span><br><span class="line">    border-bottom: 1px solid #0593d3; </span><br><span class="line">    &amp;:hover &#123; </span><br><span class="line">        color: #fc6423; </span><br><span class="line">        border-bottom: none; </span><br><span class="line">        border-bottom: 1px solid #fc6423; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line">/* webkit, opera, IE9 */</span><br><span class="line">::selection &#123; </span><br><span class="line">    background: #DAD5F4;</span><br><span class="line">    color: #4B0082; </span><br><span class="line">&#125;</span><br><span class="line">/* firefox */</span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    background: #DAD5F4;</span><br><span class="line">    color: #4B0082;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>開發</category>
+      </categories>
+  </entry>
+  <entry>
     <title>半夜的AI焦慮</title>
     <url>/2023/08/26/%E5%81%B6%E7%88%BEAI%E6%86%82%E6%85%AE/</url>
     <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
 <span id="more"></span>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="1.jpg" width="260" alt="x1">
+<img data-src="1.jpg" width="260" alt="x1">
 </div>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="2.jpg" width="260" alt="x2">
+<img data-src="2.jpg" width="260" alt="x2">
 </div>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="3.jpg" width="260" alt="x3">
+<img data-src="3.jpg" width="260" alt="x3">
 </div>
 <div style="float:none;clear:both;">
 <p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
 </div>
 <p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
-<img src="4.jpg" width=650px">
+<img data-src="4.jpg" width=650px">
 <center>
 我的話，會選右邊囉
 </center>
@@ -64,13 +82,13 @@ i=1,\cdots,5\)</span></p>
 \end{aligned}
 \]</span></p>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="x1.png" width="260" alt="x1">
+<img data-src="x1.png" width="260" alt="x1">
 </div>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="x2.png" width="260" alt="x2">
+<img data-src="x2.png" width="260" alt="x2">
 </div>
 <div style="float:left;border:solid 1px 000;margin:2px;">
-<img src="x3.png" width="260" alt="x3">
+<img data-src="x3.png" width="260" alt="x3">
 </div>
 <div style="float:none;clear:both;">
 <p>自己給五個指標的重要性打分</p>
@@ -157,8 +175,8 @@ class="math inline">\(w^c\)</span>為三者綜合。四捨五入，權重為</p>
 w=[0.15,0.5,0.06,0.29]
 \]</span></p>
 <p>保命比較重要，莊周最合適，因為場上最怕被控，一旦被控就可能被秒。莊周被動和大招都是解控，保命能力一流。為了照顧同樣比較重要的“噁心隊友”，我必須多k頭或把對面放跑。如果對面被殺了，必須是我殺的，否則寧願讓對面逃掉，所以帶斬殺。</p>
-<p><img src="1.jpg" width=700px></p>
-<p><img src="2.jpg" width=700px></p>
+<p><img data-src="1.jpg" width=700px></p>
+<p><img data-src="2.jpg" width=700px></p>
 <p>我對王者最本質的理解就是：它是款遊戲。不管再怎麼刺激，僅僅是個遊戲，手機一關，跟現實生活一點關聯也沒有。再問一句，為什麼玩遊戲？就是放鬆、開心呀。如果為了贏而贏，為了上分把自己弄的精疲力盡、氣急敗壞，何必玩呢？所以輸贏無所謂，自己開心最重要。即便隊伍輸了，我也可以贏了。而且這個遊戲上我見太多白痴，就龐大的基數和小樣本抽樣可以近似估計和我一起玩的都是白痴。那就不用客氣了，反正我不噁心他們就會被他們噁心，這也是個博弈。</p>
 ]]></content>
   </entry>
@@ -186,8 +204,8 @@ Cauchy-Riemann equations can also be written as</p>
 \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x} \Rightarrow
 \frac{\partial f}{\partial x}=-i\frac{\partial f}{\partial y}
 \]</span></p>
-<p><img src="2.1_1.png" width=550px></p>
-<p><img src="2.1_2.png" width=550px></p>
+<p><img data-src="2.1_1.png" width=550px></p>
+<p><img data-src="2.1_2.png" width=550px></p>
 <p><span class="math inline">\([ICA-2.3]\)</span> <span
 class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span>, show that if <span
 class="math inline">\(U(z_0,\delta)\in C^1\)</span>, and satisfies
@@ -205,7 +223,7 @@ class="math inline">\(z_0\)</span></p>
 z_0}\frac{f(z)-f(z_0)}{z-z_0}=u_1-iu_2\overset{also}{=}v_2+iv_1
 \]</span></p>
 <p><span class="math inline">\([ICA-2.4]\)</span></p>
-<p><img src="2.4.jpg" width=700px></p>
+<p><img data-src="2.4.jpg" width=700px></p>
 <p><span class="math display">\[
 \begin{aligned}
     &amp;\frac{\partial f}{\partial r}=U_r+iV_r\\
@@ -225,25 +243,25 @@ z}\cdot \frac{\partial z}{\partial \theta}=f&#39;(z)\cdot ire^{i\theta}
 \]</span></p>
 <p>整理後，記得<span class="math inline">\(\Re=\Re,\Im=\Im\)</span></p>
 <p><span class="math inline">\([ICA-2.5]\)</span></p>
-<p><img src="2.5q.jpg" width=700px></p>
-<p><img src="2.5a.png" width=700px></p>
+<p><img data-src="2.5q.jpg" width=700px></p>
+<p><img data-src="2.5a.png" width=700px></p>
 <p>note: <span class="math inline">\(z=(x,y)\in \bar{D}\)</span>,
 therefore <span class="math inline">\((x,-y)\in D\)</span> satisfies
 Cauchy-Riemann as given</p>
 <p><span class="math inline">\([ICA-2.6]\)</span></p>
-<p><img src="2.6q.jpg" width=700px></p>
-<p><img src="2.6a.png" width=700px></p>
+<p><img data-src="2.6q.jpg" width=700px></p>
+<p><img data-src="2.6a.png" width=700px></p>
 <p>note: replace <span class="math inline">\(r\rightarrow
 R^2/r\)</span></p>
 <p><span class="math display">\[
 U_1(\frac{R^2}{r},\theta)=\frac{r}{R^2}V_2(\frac{R^2}{r},\theta)
 \]</span></p>
 <p><span class="math inline">\([ICA-2.8,2.9]\)</span></p>
-<p><img src="2.8q.png" width=700px></p>
-<p><img src="2.81.png" width=700px></p>
-<p><img src="2.82.png" width=700px></p>
+<p><img data-src="2.8q.png" width=700px></p>
+<p><img data-src="2.81.png" width=700px></p>
+<p><img data-src="2.82.png" width=700px></p>
 <hr />
-<p><img src="limsup.png" width=700px></p>
+<p><img data-src="limsup.png" width=700px></p>
 <p><span class="math inline">\([ICA-3.9]\)</span> Prove: for <span
 class="math inline">\(\displaystyle
 \sum_{k=0}^{\infty}a_k(z-z_0)^k\)</span>, the formula of <em>radius of
@@ -339,7 +357,7 @@ series</p>
 \]</span></p>
 <p>both have radius of convergence <span
 class="math inline">\(R\)</span></p>
-<p><img src="3.11.png" width=700px></p>
+<p><img data-src="3.11.png" width=700px></p>
 <p>Note: (2)不能用comparison
 test，因為是要求R，而不是判斷是否收斂，條件更嚴格。從(2)也能得到結論：對一個power
 series無論求導多少次，也有相同的radius of convergence</p>
@@ -372,7 +390,7 @@ class="math inline">\(\bar{B}(p;r)\subset D\)</span>, we have</p>
 f(p)=\frac{1}{2\pi}\int_0^{2\pi}f(p+re^{i\theta})d\theta
 \]</span></p>
 <p>pf.</p>
-<p><img src="5A_1.jpg" width=350px></p>
+<p><img data-src="5A_1.jpg" width=350px></p>
 <p>write <span class="math inline">\(w=p+re^{i\theta}\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -459,7 +477,7 @@ complex manifold（複流型），是一維的</p>
 <p>其實就是<span class="math inline">\(\mathbb{CP}^1\)</span>，Complex
 dim=1 complex projective space（一維的複投影空間）</p>
 <p>Riemann sphere <span class="math inline">\(S^2\)</span></p>
-<p><img src="5B_1.jpg" width=500px></p>
+<p><img data-src="5B_1.jpg" width=500px></p>
 <p>steoreographic projection 立體投影</p>
 <p><span class="math display">\[
 解析同構：\mathbb{C}_{\infty}\simeq \mathbb{CP}^1\simeq S^2
@@ -620,7 +638,7 @@ F(z)=\int_{\Gamma} f(z)dz
 \]</span></p>
 <p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
 \Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
-<p><img src="4C_1.png" width=400px></p>
+<p><img data-src="4C_1.png" width=400px></p>
 <p><span class="math display">\[
 F&#39;(z)=f(z), \therefore F\in O(D)
 \]</span></p>
@@ -636,7 +654,7 @@ class="math inline">\(f\in C(D)\)</span></p>
 挖掉I後D還是開集</p>
 <p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
 <p>手上只有Morera</p>
-<p><img src="4C_2.png" alt="逼近" width=500px></p>
+<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
 <hr />
 <p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
 <p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
@@ -651,7 +669,7 @@ D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
 class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
 <p>set <span class="math inline">\(g=\Omega\rightarrow
 \mathbb{C}\)</span></p>
-<p><img src="4D_1.png" width=400px></p>
+<p><img data-src="4D_1.png" width=400px></p>
 <p><span class="math display">\[
 g(z)=\begin{cases}
     f(z) &amp;z\in D\\
@@ -673,7 +691,7 @@ f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
 f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
 \Rightarrow f(x)=u(x)
 \]</span></p>
-<p><img src="4D_2.jpeg"></p>
+<p><img data-src="4D_2.jpeg"></p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -785,7 +803,7 @@ f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
     <url>/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/</url>
     <content><![CDATA[<p>實函數的零点存在聚點（limit point）</p>
 <span id="more"></span>
-<p><img src="3D_1.png" width=350px></p>
+<p><img data-src="3D_1.png" width=350px></p>
 <p><u><strong>Theo</strong></u> Let <span
 class="math inline">\(D\)</span> be a domain in <span
 class="math inline">\(\mathbb{C}\)</span>.</p>
@@ -911,7 +929,7 @@ O(D)\)</span>假設它們都可以延拓，推出矛盾</p>
 <p>choose a seq of points <span class="math inline">\(\{z_k\}\)</span>
 with no limit in <span class="math inline">\(D\)</span>, such that every
 boundary point is a limit point of this sequence</p>
-<p><img src="4B_1.png" width=500px></p>
+<p><img data-src="4B_1.png" width=500px></p>
 <p>照這樣分下去到<span class="math inline">\(1-\frac
 1k\)</span>，最後無數的點會全堆在邊界</p>
 <p>由Weierstrass</p>
@@ -920,7 +938,7 @@ boundary point is a limit point of this sequence</p>
 Z_f=\{z_k\}_{k=1}^{\infty},\quad m(k)=1
 \]</span></p>
 <p>如果能延拓出去，會發現矛盾</p>
-<p><img src="4B_2.png" width=400px></p>
+<p><img data-src="4B_2.png" width=400px></p>
 <p><span class="math display">\[
 g\in O(D),\quad f\in O(D)
 \]</span></p>
@@ -994,7 +1012,7 @@ class="math inline">\(f\in C^{\omega}(D)\)</span></p>
 function can be represented by a power series <span
 class="math inline">\(\blacklozenge\)</span></p>
 <span id="more"></span>
-<p><img src="3A_1.png" width=400px></p>
+<p><img data-src="3A_1.png" width=400px></p>
 <p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
 <p><span class="math inline">\(f\in O(D)\)</span> <span
 class="math display">\[
@@ -1027,7 +1045,7 @@ i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
 i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
 <p>From <span class="math inline">\(\ast\)</span> to <span
 class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
-<p><img src="interchange.png"></p>
+<p><img data-src="interchange.png"></p>
 <p><span class="math display">\[
 f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
 \]</span></p>
@@ -1054,7 +1072,7 @@ f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
 class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
 href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
 continuation）</p>
-<p><img src="3A_2.png" width=300px></p>
+<p><img data-src="3A_2.png" width=300px></p>
 <p>Ex.</p>
 <p><span class="math display">\[
 f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
@@ -1067,7 +1085,7 @@ f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
 \]</span></p>
 <p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
 32\)</span>上统统收敛</p>
-<p><img src="3B_1.png" width=300px></p>
+<p><img data-src="3B_1.png" width=300px></p>
 <hr />
 <h2 id="cauchy-estimate">Cauchy Estimate</h2>
 <p><u>Theo</u> Cauchy's estimate</p>
@@ -1133,7 +1151,7 @@ i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
 <p><span
 class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
 class="math inline">\(\geqslant R-|z|\)</span></p>
-<p><img src="3B_2.png" width=300px></p>
+<p><img data-src="3B_2.png" width=300px></p>
 <hr />
 <h1 id="代數基本定理">代數基本定理</h1>
 <p><u>Theo</u> (Fundamental theorem of algebra)</p>
@@ -1257,7 +1275,7 @@ D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
 \bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D
 \]</span></p>
 <p>where <span class="math inline">\(z=x+iy\)</span>.</p>
-<p><img src="2A_1.png" width=400px></p>
+<p><img data-src="2A_1.png" width=400px></p>
 <p>consider <span
 class="math inline">\(D_{\varepsilon}=D/\bar{B_{\varepsilon}}\)</span>,
 <span class="math inline">\(B_{\epsilon}=B(w;\epsilon)\)</span></p>
@@ -1338,7 +1356,7 @@ simple closed curve <span class="math inline">\(C\)</span></p>
 <p>simply connected 是为了保证<span
 class="math inline">\(C\)</span>围出来的还在<span
 class="math inline">\(D\)</span>里面，避免下面这种情况</p>
-<p><img src="2A_2.png" width=300px></p>
+<p><img data-src="2A_2.png" width=300px></p>
 <hr />
 <p><u> <strong>Theo</strong></u> (Cauchy)</p>
 <p>Let <span class="math inline">\(D\)</span> be a simply connected
@@ -1351,7 +1369,7 @@ class="math inline">\(D\)</span></p>
 \]</span></p>
 <p>之前有<span
 class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
-<p><img src="2B_1.png" width=300px></p>
+<p><img data-src="2B_1.png" width=300px></p>
 <p><span class="math inline">\(R\)</span>: rectangle</p>
 <p><span class="math inline">\(L\)</span>: length of <span
 class="math inline">\(\partial R\)</span></p>
@@ -1363,7 +1381,7 @@ class="math display">\[
 \oint_{\partial R}f(z)dz=A\neq 0
 \]</span></p>
 <p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
-<p><img src="2B_2.png" width=300px></p>
+<p><img data-src="2B_2.png" width=300px></p>
 <p><span class="math display">\[
 \oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz
 \]</span></p>
@@ -1401,7 +1419,7 @@ class="math inline">\(f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
 \]</span></p>
 <p><span class="math inline">\(Q(z)\)</span>: polynomial of degree at
 most 2</p>
-<p><img src="映射.png" width=350px></p>
+<p><img data-src="映射.png" width=350px></p>
 <p><span class="math inline">\(z=\gamma(t)\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1444,7 +1462,7 @@ class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 <p>目前证得在所有的长方形上 <span class="math display">\[
 \oint_{\partial R}f(z)dz=0 \ \square
 \]</span></p>
-<p><img src="cut.png"></p>
+<p><img data-src="cut.png"></p>
 <p>这个函数<span
 class="math inline">\(F(z)\)</span>必须well-defined：不管路径怎么选，积出来都一样</p>
 <p>要证明它well-defined</p>
@@ -1461,7 +1479,7 @@ class="math inline">\(y\)</span>轴，可以视作长方形的一部分。借助
 <p><strong>Claim</strong> <span class="math display">\[
 F&#39;(z)=f(z)
 \]</span></p>
-<p><img src="2D_1.png" width=500px></p>
+<p><img data-src="2D_1.png" width=500px></p>
 <p><span class="math display">\[
 \begin{aligned}
     \lim_{z\rightarrow w}\frac{F(z)-F(w)}{z-w}&amp;=\lim_{z\rightarrow
@@ -1494,7 +1512,7 @@ class="math inline">\(C\)</span></p>
 <p><span class="math display">\[
 f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega
 \]</span></p>
-<p><img src="2D_2.png" width=400px></p>
+<p><img data-src="2D_2.png" width=400px></p>
 <p>区域内的点的函数值完完全全受边界点函数值的影响，可以又边界生成</p>
 <blockquote>
 <p>卷积 convolution <span class="math display">\[
@@ -1503,7 +1521,7 @@ f\rightarrow g(z)=\int f(w)g(z-w)dw
 </blockquote>
 <p><span class="math inline">\(\displaystyle{\frac{1}{w-z}}\)</span>:
 Cauchy kernel (reproducing kernel)</p>
-<p><img src="2D_3.png" width=400px></p>
+<p><img data-src="2D_3.png" width=400px></p>
 <p><span
 class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
 <p><span class="math display">\[
@@ -1622,7 +1640,7 @@ class="math inline">\(\displaystyle{\lim_{z\rightarrow
 z_0}\frac{f(z)-f(z_0)}{z-z_0}}\)</span> exists, denoted by <span
 class="math inline">\(f&#39;(z_0)\)</span></p>
 <figure>
-<img src="1.1.png" alt="任何方式逼近" />
+<img data-src="1.1.png" alt="任何方式逼近" />
 <figcaption aria-hidden="true">任何方式逼近</figcaption>
 </figure>
 <hr />
@@ -1640,11 +1658,11 @@ class="math inline">\(f\)</span> is holomorphic on some open
 neighborhood of <span class="math inline">\(S\)</span>.</p>
 <hr />
 <figure>
-<img src="1.2.png" alt="x" />
+<img data-src="1.2.png" alt="x" />
 <figcaption aria-hidden="true">x</figcaption>
 </figure>
 <figure>
-<img src="1.3.png" alt="y" />
+<img data-src="1.3.png" alt="y" />
 <figcaption aria-hidden="true">y</figcaption>
 </figure>
 <p><span class="math display">\[
@@ -1773,7 +1791,7 @@ domain内每个封闭曲线都能缩成一个点（没有洞）</p>
 <p><code>simple</code>：曲线除了起点和终点都不会自我相交</p>
 <p><code>closed</code>：起点和终点是同一个点</p>
 <figure>
-<img src="gamma.png" alt="gamma" />
+<img data-src="gamma.png" alt="gamma" />
 <figcaption aria-hidden="true">gamma</figcaption>
 </figure>
 <p><span class="math inline">\(\Omega\)</span>: region surrounded by
@@ -2077,7 +2095,7 @@ we visualize the scores.</p>
 </tbody>
 </table>
 <figure>
-<img src="/download/score.png" alt="score" />
+<img data-src="/download/score.png" alt="score" />
 <figcaption aria-hidden="true">score</figcaption>
 </figure>
 <p>We can see that, Master in Finance of Princeton and Master of
@@ -2195,7 +2213,7 @@ proportion of variability in that can be explained by . In this case
 R^2=1-\frac{TSS}{RSS}=1-\frac{\sum_{i=1}^n(y_i-\hat{y}_i)^2}{\sum_{i=1}^n(y_i-\bar{y})^2}
 \]</span></p>
 <figure>
-<img src="/download/fee.png" alt="fee" />
+<img data-src="/download/fee.png" alt="fee" />
 <figcaption aria-hidden="true">fee</figcaption>
 </figure>
 <h2 id="acceptance">Acceptance</h2>
@@ -2233,7 +2251,7 @@ class="math inline">\(&lt;0.0001\)</span></td>
 </tbody>
 </table>
 <figure>
-<img src="/download/accept.png" alt="accept" />
+<img data-src="/download/accept.png" alt="accept" />
 <figcaption aria-hidden="true">accept</figcaption>
 </figure>
 <p>The result is consistent with the intuition. Programs with lower
@@ -2342,7 +2360,7 @@ class="math inline">\(0.1685&gt;0.05=\alpha\)</span>.</p>
 and acceptance rate don't affect much on student's dicision in enroll in
 or not.</p>
 <figure>
-<img src="/download/3D.png" alt="3D" />
+<img data-src="/download/3D.png" alt="3D" />
 <figcaption aria-hidden="true">3D</figcaption>
 </figure>
 <p>But it's interesting that if we consider the interaction part, the
@@ -2493,7 +2511,7 @@ href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異�
 <p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
 class="math inline">\(\beta\)</span>.</p>
 <span id="more"></span>
-<p><img src="1331.png" width=300px></p>
+<p><img data-src="1331.png" width=300px></p>
 <p><span class="math display">\[
 \tan \beta=r\frac{d\theta}{dr}
 \]</span></p>
@@ -2502,7 +2520,7 @@ href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/mids
 here</a></p>
 <h2 id="trajectories">Trajectories</h2>
 <p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><img src="/download/141.jpg" width=300px></p>
+<p><img data-src="/download/141.jpg" width=300px></p>
 <p><strong>Isogonal Trajectories</strong> <span class="math display">\[
 \tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
 \beta=\frac{m_1-m_2}{1+m_1m_2}
@@ -2514,7 +2532,7 @@ y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
 <ol start="2" type="1">
 <li>Polar coordinates</li>
 </ol>
-<p><img src="/download/143.jpg" width=300px></p>
+<p><img data-src="/download/143.jpg" width=300px></p>
 <p><span class="math display">\[
 \phi_1=\phi_2+\frac{\pi}{2}
 \]</span> <span class="math display">\[
@@ -3151,7 +3169,7 @@ y&#39;=\begin{cases}
 \end{cases}
 \]</span></p>
 <figure>
-<img src="fig_531.png" alt="531" />
+<img data-src="fig_531.png" alt="531" />
 <figcaption aria-hidden="true">531</figcaption>
 </figure>
 <p><strong>Trap</strong></p>
@@ -3210,25 +3228,25 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
 <span id="more"></span>
 <p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
 <figure>
-<img src="branch.png" alt="branch" />
+<img data-src="branch.png" alt="branch" />
 <figcaption aria-hidden="true">branch</figcaption>
 </figure>
 <p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
 <figure>
-<img src="new.png" alt="new" />
+<img data-src="new.png" alt="new" />
 <figcaption aria-hidden="true">new</figcaption>
 </figure>
 <p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
 <code>main</code>。</p>
 <figure>
-<img src="default.png" alt="default" />
+<img data-src="default.png" alt="default" />
 <figcaption aria-hidden="true">default</figcaption>
 </figure>
 <p>接着在 Settings 的 Default branch 一栏点击<span
 class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
 <code>main</code>，点击 Update ，点击红色的 I understand。</p>
 <figure>
-<img src="pages.png" alt="pages" />
+<img data-src="pages.png" alt="pages" />
 <figcaption aria-hidden="true">pages</figcaption>
 </figure>
 <p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
@@ -3346,7 +3364,7 @@ OS环境下使用Hexo搭建个人博客</a></p>
 <h2 id="los-angeles">Los Angeles</h2>
 <p>行：Aug 12，OAK-LA，$35.4（2人）</p>
 <figure>
-<img src="oak-la_230729.png" alt="oak-la_230729" />
+<img data-src="oak-la_230729.png" alt="oak-la_230729" />
 <figcaption aria-hidden="true">oak-la_230729</figcaption>
 </figure>
 <p>住：<a
@@ -3378,7 +3396,7 @@ href="https://griffithobservatory.org/visit/getting-here/">官网</a>。7:30~8pm
 <p>Getty center和Getty villa免费但要<a
 href="https://tickets.getty.edu/Online/default.asp">预约</a></p>
 <figure>
-<img src="laplay_230729.png" alt="LA.png" />
+<img data-src="laplay_230729.png" alt="LA.png" />
 <figcaption aria-hidden="true">LA.png</figcaption>
 </figure>
 <h2 id="san-diego">San Diego</h2>
@@ -3408,14 +3426,14 @@ Jolla能看到一堆海豹。</p>
 href="https://www.viator.com/tours/San-Diego/3-Hour-Whale-Watching/d736-69764P1">预约</a>，65刀。系统一直无法支付，就算了。Geisel图书馆是地标建筑，旁边的UCSD也顺便看一下。中途岛航母必看（不知道为什么必看），门票31刀，要<a
 href="https://www.viator.com/tours/San-Diego/USS-Midway-Museum/d736-5160USS">预订</a>。（后来支付失败了，白嫖一张门票）</p>
 <figure>
-<img src="sdplay_230729.png" alt="SD.png" />
+<img data-src="sdplay_230729.png" alt="SD.png" />
 <figcaption aria-hidden="true">SD.png</figcaption>
 </figure>
 <h2 id="回程">回程</h2>
 <p>8.17回，下午2:20pm，<a
 href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp;adultsv2=2&amp;cabinclass=economy&amp;children=0&amp;childrenv2=&amp;destinationentityid=27538486&amp;inboundaltsenabled=false&amp;infants=0&amp;outboundaltsenabled=false&amp;preferdirects=false&amp;ref=home&amp;rtn=0">机票</a>$63.8（2人）。</p>
 <figure>
-<img src="sd-oak_230729.png" alt="flight_back.png" />
+<img data-src="sd-oak_230729.png" alt="flight_back.png" />
 <figcaption aria-hidden="true">flight_back.png</figcaption>
 </figure>
 <h2 id="budget">Budget</h2>
@@ -3429,12 +3447,12 @@ href="https://www.skyscanner.com/transport/flights/sana/oak/230817/?adults=2&amp
 Monica海滩，和Venice
 Beach，有点阴天，但海很开阔且人相对少，比大梅沙好多了。很多人在冲浪，充满活力，蛮喜欢的。</p>
 <figure>
-<img src="Santa_Monica.png" alt="Santa Monica" />
+<img data-src="Santa_Monica.png" alt="Santa Monica" />
 <figcaption aria-hidden="true">Santa Monica</figcaption>
 </figure>
 <p>下午跟xlx去ucla闲逛，但他什么话也不说就一个劲的走，挺无语的，主要是我很累，就分头行动了。去了LACMA，司机说相对于艺术，它主要讲的是洛杉矶历史，诚哉斯言。花了$21门票，觉得东西有点少，还有有一部分在建。不过也有些喜欢的作品，毕加索不少画都在这边</p>
 <figure>
-<img src="picasso.png" alt="Picasso" />
+<img data-src="picasso.png" alt="Picasso" />
 <figcaption aria-hidden="true">Picasso</figcaption>
 </figure>
 <table>
@@ -3446,20 +3464,20 @@ Beach，有点阴天，但海很开阔且人相对少，比大梅沙好多了。
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="a.png" alt="图片A" /></td>
-<td style="text-align: center;"><img src="b.png" alt="图片B" /></td>
+<td style="text-align: center;"><img data-src="a.png" alt="图片A" /></td>
+<td style="text-align: center;"><img data-src="b.png" alt="图片B" /></td>
 </tr>
 </tbody>
 </table>
 <p>晚上本来想去Griffith看日落，但等公交浪费太久时间，来不及了，只好明天再看。但我想着出都出来了，索性去别处逛逛，就坐metro去小东京。地铁又脏又臭，大麻和汗水味纠缠在一起，让人作呕。下车后走了一段，沿途很多homeless，路上也脏的不行，一度很崩溃。当终于看到日文招牌时真的感觉像回到家一样。</p>
 <figure>
-<img src="小东京.png" alt="小东京" />
+<img data-src="小东京.png" alt="小东京" />
 <figcaption aria-hidden="true">小东京</figcaption>
 </figure>
 <p>我八月刚开始就一直homesick，想着国内的各种好。但这一刻我发觉，这是另一种形式的culture
 shock，只不过我一直没表现出来，自己也不知道。中日文化相近，同根同源，文化的亲和让我有种回家的感觉，国籍并不是边界，文化认同才是。随便找了个餐馆随便点了份おやこどん，非常幸福。</p>
 <figure>
-<img src="亲子.png" alt="親子丼" />
+<img data-src="亲子.png" alt="親子丼" />
 <figcaption aria-hidden="true">親子丼</figcaption>
 </figure>
 <p><strong>8.13</strong></p>
@@ -3472,13 +3490,13 @@ Diego。刚一来就喜欢上这个城市：街道比LA干净，流浪汉没见�
 West，吃龙虾卷。沿路一直被amaze，干净准时的公交，well-designed的公交线路，大桥上的俯瞰海景，都太可爱。岛上全是别墅，典型白人富人区，以后来这边买套房养老。xlx说这里的感觉和Florida一模一样。我们就朝着餐厅的大致方向随便乱走，至于哪个block右拐过马路无所谓，在这边走路本身就是享受。</p>
 <p>龙虾卷超好吃，底下面包烤的很香，龙虾也是超多超新鲜。必须要在这边买房了，这样天天能吃到。</p>
 <figure>
-<img src="lobster.png" alt="龙虾卷" />
+<img data-src="lobster.png" alt="龙虾卷" />
 <figcaption aria-hidden="true">龙虾卷</figcaption>
 </figure>
 <p><strong>8.15</strong></p>
 <p>中途岛号没什么好看的，都是些老旧的飞机，我也不是军迷。甲板上海风超大，对面港口停着三艘现役的航母：CVN70,CVN71,CVN72，分别是文森号、罗斯福号和林肯号。</p>
 <figure>
-<img src="航母.png" alt="航母" />
+<img data-src="航母.png" alt="航母" />
 <figcaption aria-hidden="true">航母</figcaption>
 </figure>
 <p>手机没电了，于是去UCSD找了个地方充。我问了个学生student
@@ -3495,9 +3513,9 @@ East Asia 的书。</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="library.png"
+<td style="text-align: center;"><img data-src="library.png"
 alt="图片1" /></td>
-<td style="text-align: center;"><img src="street.png"
+<td style="text-align: center;"><img data-src="street.png"
 alt="图片2" /></td>
 </tr>
 </tbody>
@@ -3506,7 +3524,7 @@ alt="图片2" /></td>
 <p>晚上逛了逛煤气灯街区，灯红酒绿，美女很多，主题词
 <code>声色犬马</code>。全都是很嗨的bar，但我只想找个地方吃晚饭。小姐姐服务很周到，小费是自动按<code>5%</code>算的，我本来还以为会让我在机子上选15%,20%,25%，预估$60的餐实际上只有$51，surplus也赚麻了，不错。</p>
 <figure>
-<img src="rustic.png" alt="Rustic Root" />
+<img data-src="rustic.png" alt="Rustic Root" />
 <figcaption aria-hidden="true">Rustic Root</figcaption>
 </figure>
 <blockquote>

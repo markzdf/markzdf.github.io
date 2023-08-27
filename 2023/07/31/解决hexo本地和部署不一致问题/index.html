@@ -29,7 +29,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="解決hexo本地和部署不一致問題">
 <meta property="og:url" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
-<meta property="og:site_name" content="MADLAB">
+<meta property="og:site_name" content="MyNotes">
 <meta property="og:description" content="这个问题困扰我很久，为什么hexo s跟hexo d结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/pages.png">
 <meta property="article:published_time" content="2023-07-30T16:00:36.000Z">
 <meta property="article:modified_time" content="2023-08-23T13:43:28.324Z">
-<meta property="article:author" content="麵包騎士">
+<meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png">
 
@@ -50,7 +50,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/","path":"2023/07/31/解决hexo本地和部署不一致问题/","title":"解決hexo本地和部署不一致問題"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>解決hexo本地和部署不一致問題 | MADLAB</title>
+<title>解決hexo本地和部署不一致問題 | MyNotes</title>
   
 
 
@@ -83,7 +83,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">MADLAB</p>
+      <p class="site-title">MyNotes</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -122,16 +122,16 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="麵包騎士">
+      <meta itemprop="name" content="佛說Naga">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MADLAB">
+      <meta itemprop="name" content="MyNotes">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="解決hexo本地和部署不一致問題 | MADLAB">
+      <meta itemprop="name" content="解決hexo本地和部署不一致問題 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -186,25 +186,25 @@
 <span id="more"></span>
 <p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
 <figure>
-<img src="branch.png" alt="branch" />
+<img data-src="branch.png" alt="branch" />
 <figcaption aria-hidden="true">branch</figcaption>
 </figure>
 <p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
 <figure>
-<img src="new.png" alt="new" />
+<img data-src="new.png" alt="new" />
 <figcaption aria-hidden="true">new</figcaption>
 </figure>
 <p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
 <code>main</code>。</p>
 <figure>
-<img src="default.png" alt="default" />
+<img data-src="default.png" alt="default" />
 <figcaption aria-hidden="true">default</figcaption>
 </figure>
 <p>接着在 Settings 的 Default branch 一栏点击<span
 class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
 <code>main</code>，点击 Update ，点击红色的 I understand。</p>
 <figure>
-<img src="pages.png" alt="pages" />
+<img data-src="pages.png" alt="pages" />
 <figcaption aria-hidden="true">pages</figcaption>
 </figure>
 <p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
@@ -266,7 +266,7 @@ target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/an
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">麵包騎士</span>
+    <span class="author" itemprop="copyrightHolder">佛說Naga</span>
   </div>
 <div class="busuanzi-count">
     <span class="post-meta-item" id="busuanzi_container_site_uv">

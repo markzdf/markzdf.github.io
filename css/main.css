@@ -1,3 +1,13 @@
+/* webkit, opera, IE9 */
+::selection {
+  background: #00c4b6;
+  color: #f7f7f7;
+}
+/* firefox */
+::-moz-selection {
+  background: #00c4b6;
+  color: #f7f7f7;
+}
 :root {
   --body-bg-color: #fff;
   --content-bg-color: #f5f5f5;
@@ -11,7 +21,7 @@
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
   --menu-item-bg-color: #ddd;
-  --theme-color: #222;
+  --theme-color: #909;
   --btn-default-bg: transparent;
   --btn-default-color: var(--link-color);
   --btn-default-border-color: var(--link-color);
@@ -1446,7 +1456,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #f00;
+  color: #909;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2200,6 +2210,15 @@ mjx-container[display='true'] + br {
 .use-motion .sidebar .animated {
   animation-fill-mode: both;
 }
+:root {
+  --menu-item-bg-color: #dad5f4;
+  --btn-default-border-color: #fff;
+  --btn-default-hover-border-color: #fff;
+  --content-bg-color: #fff;
+  --text-color: #4b0082;
+  --brand-color: #4b0082;
+  --badge-color: #fff;
+}
 hr {
   height: 2px;
   margin: 20px 0;
@@ -2311,9 +2330,9 @@ header.header {
 .menu .menu-item .badge {
   background: #fff;
   border-radius: 10px;
-  color: #555;
+  color: --badge-color;
   padding: 1px 4px;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 0 #dad5f4;
 }
 .posts-expand.index .post-header {
   text-align: left;
@@ -2465,7 +2484,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #506230;
+  background: #a6ff63;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

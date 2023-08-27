@@ -29,7 +29,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析函數的冪級數展開">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">
-<meta property="og:site_name" content="MADLAB">
+<meta property="og:site_name" content="MyNotes">
 <meta property="og:description" content="Power series Theo Let \(D\) be a domain in \(\mathbb{C}\). If \(f\in O(D)\), then \(f\in C^{\omega}(D)\) \(C^{\omega}(D)\) means locally function can be represented by a power series \(\blacklozenge\)">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/3A_1.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/3B_2.png">
 <meta property="article:published_time" content="2023-08-18T03:33:59.000Z">
 <meta property="article:modified_time" content="2023-08-26T04:12:04.810Z">
-<meta property="article:author" content="麵包騎士">
+<meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="Liouville定理">
 <meta property="article:tag" content="解析延拓">
 <meta property="article:tag" content="Cauchy estimate">
@@ -55,7 +55,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/","path":"2023/08/18/解析函数的幂级数展开/","title":"解析函數的冪級數展開"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>解析函數的冪級數展開 | MADLAB</title>
+<title>解析函數的冪級數展開 | MyNotes</title>
   
 
 
@@ -88,7 +88,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">MADLAB</p>
+      <p class="site-title">MyNotes</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -127,16 +127,16 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="麵包騎士">
+      <meta itemprop="name" content="佛說Naga">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MADLAB">
+      <meta itemprop="name" content="MyNotes">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="解析函數的冪級數展開 | MADLAB">
+      <meta itemprop="name" content="解析函數的冪級數展開 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -196,7 +196,7 @@ class="math inline">\(f\in C^{\omega}(D)\)</span></p>
 function can be represented by a power series <span
 class="math inline">\(\blacklozenge\)</span></p>
 <span id="more"></span>
-<p><img src="3A_1.png" width=400px></p>
+<p><img data-src="3A_1.png" width=400px></p>
 <p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
 <p><span class="math inline">\(f\in O(D)\)</span> <span
 class="math display">\[
@@ -229,7 +229,7 @@ i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
 i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
 <p>From <span class="math inline">\(\ast\)</span> to <span
 class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
-<p><img src="interchange.png"></p>
+<p><img data-src="interchange.png"></p>
 <p><span class="math display">\[
 f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
 \]</span></p>
@@ -256,7 +256,7 @@ f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
 class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
 href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
 continuation）</p>
-<p><img src="3A_2.png" width=300px></p>
+<p><img data-src="3A_2.png" width=300px></p>
 <p>Ex.</p>
 <p><span class="math display">\[
 f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
@@ -269,7 +269,7 @@ f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
 \]</span></p>
 <p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
 32\)</span>上统统收敛</p>
-<p><img src="3B_1.png" width=300px></p>
+<p><img data-src="3B_1.png" width=300px></p>
 <hr />
 <h2 id="cauchy-estimate">Cauchy Estimate</h2>
 <p><u>Theo</u> Cauchy's estimate</p>
@@ -335,7 +335,7 @@ i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
 <p><span
 class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
 class="math inline">\(\geqslant R-|z|\)</span></p>
-<p><img src="3B_2.png" width=300px></p>
+<p><img data-src="3B_2.png" width=300px></p>
 <hr />
 <h1 id="代數基本定理">代數基本定理</h1>
 <p><u>Theo</u> (Fundamental theorem of algebra)</p>
@@ -482,7 +482,7 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">麵包騎士</span>
+    <span class="author" itemprop="copyrightHolder">佛說Naga</span>
   </div>
 <div class="busuanzi-count">
     <span class="post-meta-item" id="busuanzi_container_site_uv">

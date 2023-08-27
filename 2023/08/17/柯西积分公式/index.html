@@ -29,7 +29,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="柯西積分公式">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">
-<meta property="og:site_name" content="MADLAB">
+<meta property="og:site_name" content="MyNotes">
 <meta property="og:description" content="复变最重要的两个定理都在这了！！！">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2A_1.png">
@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_3.png">
 <meta property="article:published_time" content="2023-08-17T05:05:57.000Z">
 <meta property="article:modified_time" content="2023-08-26T07:47:30.387Z">
-<meta property="article:author" content="麵包騎士">
+<meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="Cauchy定理">
 <meta property="article:tag" content="Cauchy Kernel">
 <meta property="article:tag" content="Cantor交集定理">
@@ -58,7 +58,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/","path":"2023/08/17/柯西积分公式/","title":"柯西積分公式"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>柯西積分公式 | MADLAB</title>
+<title>柯西積分公式 | MyNotes</title>
   
 
 
@@ -91,7 +91,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">MADLAB</p>
+      <p class="site-title">MyNotes</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -130,16 +130,16 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="麵包騎士">
+      <meta itemprop="name" content="佛說Naga">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MADLAB">
+      <meta itemprop="name" content="MyNotes">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="柯西積分公式 | MADLAB">
+      <meta itemprop="name" content="柯西積分公式 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -204,7 +204,7 @@ D}\frac{f(z)}{z-w}dw-\frac{1}{\pi}\iint_D
 \bar{z}}}(z)}{z-w}dxdy,\quad \forall w\in D
 \]</span></p>
 <p>where <span class="math inline">\(z=x+iy\)</span>.</p>
-<p><img src="2A_1.png" width=400px></p>
+<p><img data-src="2A_1.png" width=400px></p>
 <p>consider <span
 class="math inline">\(D_{\varepsilon}=D/\bar{B_{\varepsilon}}\)</span>,
 <span class="math inline">\(B_{\epsilon}=B(w;\epsilon)\)</span></p>
@@ -285,7 +285,7 @@ simple closed curve <span class="math inline">\(C\)</span></p>
 <p>simply connected 是为了保证<span
 class="math inline">\(C\)</span>围出来的还在<span
 class="math inline">\(D\)</span>里面，避免下面这种情况</p>
-<p><img src="2A_2.png" width=300px></p>
+<p><img data-src="2A_2.png" width=300px></p>
 <hr />
 <p><u> <strong>Theo</strong></u> (Cauchy)</p>
 <p>Let <span class="math inline">\(D\)</span> be a simply connected
@@ -298,7 +298,7 @@ class="math inline">\(D\)</span></p>
 \]</span></p>
 <p>之前有<span
 class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
-<p><img src="2B_1.png" width=300px></p>
+<p><img data-src="2B_1.png" width=300px></p>
 <p><span class="math inline">\(R\)</span>: rectangle</p>
 <p><span class="math inline">\(L\)</span>: length of <span
 class="math inline">\(\partial R\)</span></p>
@@ -310,7 +310,7 @@ class="math display">\[
 \oint_{\partial R}f(z)dz=A\neq 0
 \]</span></p>
 <p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
-<p><img src="2B_2.png" width=300px></p>
+<p><img data-src="2B_2.png" width=300px></p>
 <p><span class="math display">\[
 \oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz
 \]</span></p>
@@ -348,7 +348,7 @@ class="math inline">\(f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
 \]</span></p>
 <p><span class="math inline">\(Q(z)\)</span>: polynomial of degree at
 most 2</p>
-<p><img src="映射.png" width=350px></p>
+<p><img data-src="映射.png" width=350px></p>
 <p><span class="math inline">\(z=\gamma(t)\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -391,7 +391,7 @@ class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 <p>目前证得在所有的长方形上 <span class="math display">\[
 \oint_{\partial R}f(z)dz=0 \ \square
 \]</span></p>
-<p><img src="cut.png"></p>
+<p><img data-src="cut.png"></p>
 <p>这个函数<span
 class="math inline">\(F(z)\)</span>必须well-defined：不管路径怎么选，积出来都一样</p>
 <p>要证明它well-defined</p>
@@ -408,7 +408,7 @@ class="math inline">\(y\)</span>轴，可以视作长方形的一部分。借助
 <p><strong>Claim</strong> <span class="math display">\[
 F&#39;(z)=f(z)
 \]</span></p>
-<p><img src="2D_1.png" width=500px></p>
+<p><img data-src="2D_1.png" width=500px></p>
 <p><span class="math display">\[
 \begin{aligned}
     \lim_{z\rightarrow w}\frac{F(z)-F(w)}{z-w}&amp;=\lim_{z\rightarrow
@@ -441,7 +441,7 @@ class="math inline">\(C\)</span></p>
 <p><span class="math display">\[
 f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega
 \]</span></p>
-<p><img src="2D_2.png" width=400px></p>
+<p><img data-src="2D_2.png" width=400px></p>
 <p>区域内的点的函数值完完全全受边界点函数值的影响，可以又边界生成</p>
 <blockquote>
 <p>卷积 convolution <span class="math display">\[
@@ -450,7 +450,7 @@ f\rightarrow g(z)=\int f(w)g(z-w)dw
 </blockquote>
 <p><span class="math inline">\(\displaystyle{\frac{1}{w-z}}\)</span>:
 Cauchy kernel (reproducing kernel)</p>
-<p><img src="2D_3.png" width=400px></p>
+<p><img data-src="2D_3.png" width=400px></p>
 <p><span
 class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
 <p><span class="math display">\[
@@ -523,7 +523,7 @@ i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">麵包騎士</span>
+    <span class="author" itemprop="copyrightHolder">佛說Naga</span>
   </div>
 <div class="busuanzi-count">
     <span class="post-meta-item" id="busuanzi_container_site_uv">
