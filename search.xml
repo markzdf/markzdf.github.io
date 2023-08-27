@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Morera定理</title>
+    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>柯西定理的逆敘述</p>
+<span id="more"></span>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
+<p><span class="math display">\[
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
+\]</span></p>
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
+\]</span></p>
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img data-src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
+\]</span></p>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<hr />
+<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
+class="math inline">\(I\subset D\)</span> (closed interval). <span
+class="math inline">\(f\in C(D)\)</span></p>
+<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
+挖掉I後D還是開集</p>
+<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
+<p>手上只有Morera</p>
+<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
+<hr />
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img data-src="4D_1.png" width=400px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\blacklozenge\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
+</ol>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
+<p><span class="math display">\[
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
+\]</span></p>
+<p><span class="math display">\[
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
+\]</span></p>
+<p><img data-src="4D_2.jpeg"></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+      <tags>
+        <tag>Morera定理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MFE Evaluation</title>
     <url>/2023/08/08/Evaluation/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -837,92 +923,6 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
       </categories>
   </entry>
   <entry>
-    <title>Morera定理</title>
-    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<p>柯西定理的逆敘述</p>
-<span id="more"></span>
-<p><u><strong>Theo</strong></u> (Morera)</p>
-<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
-simply-connected domain. Let <span class="math inline">\(f\in
-C(D)\)</span>, if <span class="math inline">\(\int_{\partial
-\triangle}f(z)dz=0\)</span>, for any triangle <span
-class="math inline">\(\triangle\)</span> in <span
-class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
-O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
-<p><span class="math display">\[
-連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
-\]</span></p>
-<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
-curve</p>
-<p>pf.</p>
-<p>Define <span class="math display">\[
-F(z)=\int_{\Gamma} f(z)dz
-\]</span></p>
-<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
-\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
-<p><img data-src="4C_1.png" width=400px></p>
-<p><span class="math display">\[
-F&#39;(z)=f(z), \therefore F\in O(D)
-\]</span></p>
-<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
-<p><span class="math display">\[
-\therefore f\in O(D) \ \blacksquare.
-\]</span></p>
-<hr />
-<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
-class="math inline">\(I\subset D\)</span> (closed interval). <span
-class="math inline">\(f\in C(D)\)</span></p>
-<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
-挖掉I後D還是開集</p>
-<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
-<p>手上只有Morera</p>
-<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
-<hr />
-<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
-<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
-half space), s.t. <span class="math inline">\(\partial D\cap
-\{x-axis\}=I\)</span> closed interval.</p>
-<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
-<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
-D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
-的interior</p>
-<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
-\mathring{I})\)</span>, and <span
-class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
-<p>set <span class="math inline">\(g=\Omega\rightarrow
-\mathbb{C}\)</span></p>
-<p><img data-src="4D_1.png" width=400px></p>
-<p><span class="math display">\[
-g(z)=\begin{cases}
-    f(z) &amp;z\in D\\
-    f(z) &amp;z\in \mathring{I}\\
-    \bar{f}(\bar{z})&amp; z\in D^*
-\end{cases}
-\]</span></p>
-<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
-class="math inline">\(\blacklozenge\)</span></p>
-<ol type="1">
-<li>考慮連續性</li>
-</ol>
-<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
-class="math inline">\(I\)</span>上</p>
-<p><span class="math display">\[
-f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
-\]</span></p>
-<p><span class="math display">\[
-f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
-\Rightarrow f(x)=u(x)
-\]</span></p>
-<p><img data-src="4D_2.jpeg"></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-      <tags>
-        <tag>Morera定理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ODE應用</title>
     <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<h1 id="几何应用">几何应用</h1>
@@ -1014,6 +1014,108 @@ href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
 ]]></content>
       <categories>
         <category>開發</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ucb暑假</title>
+    <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
+    <content><![CDATA[<p><strong>Websites</strong></p>
+<ol type="1">
+<li>Visa： <a
+href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
+<a href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
+href="http://www.fmjfee.com">I-901&amp;SEVIS</a></li>
+</ol>
+<span id="more"></span>
+<ol start="2" type="1">
+<li>Campus： <a
+href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
+<a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
+href="https://bcourses.berkeley.edu/">bcourse</a> <a
+href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></li>
+</ol>
+<h1 id="diary">Diary</h1>
+<h2 id="section">7.3</h2>
+<p>听Magin的话把social network换成了financial
+derivatives。这门课在系统上显示是special topics in
+finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
+<p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired
+of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish
+girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
+<p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
+<p>躺在床上又想起些细节。早上去吃饭见人就说good
+morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank
+you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first
+hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
+<h2 id="section-1">7.4</h2>
+<p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank
+you!
+一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman's
+wharf，小龙虾很不喜欢就没久待。看了golden gate
+bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
+<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
+<p>好累，睡觉</p>
+<h2 id="section-2">7.5</h2>
+<p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a
+href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.
+回答被抢了，好烦。回去学衍生品。 买了件Berkeley的卫衣，好看
+妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
+<h2 id="section-3">7.6</h2>
+<p>推着婴儿车晨跑的 回答问题声音不够大，随意点 看Charlie
+Puth的concert很精彩，最后本来谢幕了，观众喊着“One more
+song”把Charlie喊回来了，唱一首see you
+again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天 1. 复习lec3 2.
+看handout，可以的话打印下来 3. 继续读课本，看完chap2</p>
+<h2 id="section-4">7.7</h2>
+<p>不出意外，计划没完成。早上睡到12点，醒来看到Carlo的消息说中午健身，但我一般学完后健身放松，就没去。吃饭后碰到小龙虾，去Moffit图书馆，没看到Carlo的消息，啧啧，又爽约了（我以为他不会去图书馆来着），难受。下午一直在敲latex，浪费时间，不过完成了复习。晚上和小龙虾看了场电影，蛮有意思，和国内影院很不一样。那边都是看老电影，有时有人来一段开场白，讲讲电影的背景之类，讲导演和演员，那些人名我都不认识，但老外很有共鸣。</p>
+<p>看完后去健身，有点自卑，因为菜。但其实没人注意我或怎么样的，所以挺好，自卑是自己脑补太多。谁不是从菜鸟上来的呢</p>
+<h2 id="section-5">7.9</h2>
+<p>Sausalito，muir woods，跟黄绿发色妹妹聊天，oha bbq超好吃，德州</p>
+<h2 id="section-6">7.10</h2>
+<p>中国学生确实拉。教授上课问一下各国股市情况，Sweden
+guy回答的全面又流畅，对答如流，让教授有兴趣不断地问，让课堂变得有意思。到中国学生，我了解太少不知道怎么说，后面一个人在那乱说，教授也不知道他在讲什么，我也不知道，课堂很尴尬。再到German
+guy也是回答很自然、从容，懂的很多。相比之下中国学生很异类，就像一群人围桌聊天我们加入不进去。本来以为尴尬是正常的，结果发现中国人是尴尬制造者。</p>
+<p>下午跟Carlo去健身房，没想到健身房也很适合社交。等器械的时候，别人等器械的时候，就有两个人过来跟Carlo聊天，一个还加上ins约去夜店浪。没有找我，因为我一看就是弱鸡。虽说夜店什么的还是算了，我没满21岁。但健身是个must。</p>
+<blockquote>
+<p>强势文化造就强者，弱势文化造就弱者</p>
+</blockquote>
+<p>儒家文化是弱势文化，是别人打你左脸叫你把右脸也给他打。美国文化是叫你彪悍强壮，开大车，练肌肉，体育竞技。</p>
+<h2 id="section-7">7.20</h2>
+<p>好东西https://micromasters.mit.edu/dashboard</p>
+<h2 id="section-8">7.21</h2>
+<p>trust no one</p>
+<h2 id="section-9">7.24</h2>
+<p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley
+student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game
+night，Catan真的好玩，差点赢了/
+跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never
+mind。感觉来summer
+session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
+<p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that's
+all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot
+ask for more。</p>
+<p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but
+I still have to balance study time and play time, the most challenging
+thing for me. but I heard gym is opened very early, like 7am, check it
+tomorrow, and start to get up early.
+早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student
+union自习。早上学ODE和complex
+analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study
+lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
+<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
+<h2 id="section-10">7.25</h2>
+<p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。</p>
+<h2 id="section-11">7.27</h2>
+<p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：
+1. 健身 2. kaggle 3. 托福 4. ODE 5. 复变</p>
+<p>（出去玩的日子除外）</p>
+<h2 id="section-12">8.8</h2>
+<p>第六周，想家。坐在图书馆抬起头看到天窗，第一个想起厦大的访客中心，也有个天窗，在演武场旁边的草丛里。这边是不是也把天窗藏草丛里呢？</p>
+<p><a href="./ucb%E6%9A%91%E5%81%87/1554.png">抬头</a></p>
+<p>在宿舍大堂看别人弹琴，就想起高二的那个学期，吃完晚饭去练电子琴，琴声还没从脑海散去就迎来晚自习的铃声，在凤凰花树下甩着饮料瓶回教室，走到B栋回头看，钥匙妹还在举着双手，但天已经渐渐暗了。往自己座位一钻，沉浸在必刷题、王后雄中间，多么满足。</p>
+]]></content>
+      <categories>
+        <category>隨記</category>
       </categories>
   </entry>
   <entry>
@@ -1133,102 +1235,19 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
       </categories>
   </entry>
   <entry>
-    <title>ucb暑假</title>
-    <url>/2023/07/29/ucb%E6%9A%91%E5%81%87/</url>
-    <content><![CDATA[<p><strong>Websites</strong></p>
-<ol type="1">
-<li>Visa： <a
-href="https://iss-portal.berkeley.edu/index.cfm?FuseAction=scholarPortal.department#/student/welcome-wizard">I-20</a>
-<a href="https://www.ustraveldocs.com/cn_zh/">Interview</a> <a
-href="http://www.fmjfee.com">I-901&amp;SEVIS</a></li>
-</ol>
+    <title>不必再等</title>
+    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
+    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
 <span id="more"></span>
-<ol start="2" type="1">
-<li>Campus： <a
-href="https://sisstudentsts-100287.campusnet.net/Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fmy.safabroad.org%252f%26wct%3d2023-04-17T01%253a11%253a04Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fmy.safabroad.org%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fmy.safabroad.org%2f&amp;wct=2023-04-17T01%3a11%3a04Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fmy.safabroad.org%2f&amp;AppType=Portal&amp;Role=STUDENT">SAF</a>
-<a href="https://calcentral.berkeley.edu/dashboard">CalCentral</a> <a
-href="https://bcourses.berkeley.edu/">bcourse</a> <a
-href="https://bachelor.accessiblelearning.com/Berkeley/">DSP</a></li>
-</ol>
-<h1 id="diary">Diary</h1>
-<h2 id="section">7.3</h2>
-<p>听Magin的话把social network换成了financial
-derivatives。这门课在系统上显示是special topics in
-finance，还以为是水课就没选，讲衍生品就太好了，正好下学期学金融工程会用到很多。这老师目前看上去还不错，他说拿到A就能拿他的推荐信，他要么不写、要么就写优质的那种，还挺不错。第一天上课很轻松，虽说有的同学看起来不轻松，看来这两年还是学了点东西的。</p>
-<p>每个班都有大约一半中国人，处境比较尴尬。一方面现在已经tired
-of跟中国人打交道，但欧洲人又没办法融入进去。今早先是认识了俩Italian，聊的还好，后面又来一个German，他融入Italians毫无困难，话题多很能聊。从足球到Vegas赌博，再到clubbing和Spanish
-girl，再到玩射击，推荐这推荐那，真的很会玩。反思一点就是，不要站那什么都不说，想点话说（虽然这不容易）。还有说的前提是听懂，我听不懂，说的好也没用。需要练听力（平时对话就在练）和<strong>熟悉地理</strong>（欧洲+美国）。</p>
-<p>下午去gym健身+打了会篮球，晚上回Cheney又跟隔壁打了会桌球，现在有点纠结的是怎样平衡学习和玩的时间。学习又包括学金融、数学、托福、kaggle，玩包括社交、健身、还有没探索到的玩法，真是太忙。可以周一到周四努力学，玩只包括健身，周五到周日去周边城市逛。</p>
-<p>躺在床上又想起些细节。早上去吃饭见人就说good
-morning。平时再会后说have a nice day/you too。下公交要对司机大声说thank
-you。多说thanks没坏处。一老板娘说sorry I haven’t heard you in first
-hand超快。早上behavior课有个Berkeley的cs学生很自信、很会聊、很聪明，真的优秀。下午和一个学ds的老美打球，各有胜负。这边老黑对中国人的态度会比白人好点，但也看场合。</p>
-<h2 id="section-1">7.4</h2>
-<p>今天独立日，去三藩玩。美国人都长的挺好看。玩了scooter，贵，爽，傻逼。三小孩骑自行车唱着什么东西，一个朝消防车司机喊thank
-you!
-一个脱手骑车，一个前轮起飞。喝了个tripology，恶心，像蘸蟹脚的酱料。去了fisherman's
-wharf，小龙虾很不喜欢就没久待。看了golden gate
-bridge，没电影里好看。晚上六七点快给冻死，打了个uber送到地铁站回来。七点多地铁站就准备开始百鬼夜行了。</p>
-<p>本来去三藩是想看firework，结果等不及他太晚，但也玩到了。听小龙虾描述他们的课很高强度，每节课/每周有作业不说，还有discussion和project。</p>
-<p>好累，睡觉</p>
-<h2 id="section-2">7.5</h2>
-<p>揽了个活，上传每节课笔记，学期末给我张$75的礼品卡，能用的地方有<a
-href="https://www.tangocard.com/reward-catalog?rewardcategory=gift+card">Tango</a>.
-回答被抢了，好烦。回去学衍生品。 买了件Berkeley的卫衣，好看
-妈的，事好多。衍生品、python、托福。一个月后kaggle。</p>
-<h2 id="section-3">7.6</h2>
-<p>推着婴儿车晨跑的 回答问题声音不够大，随意点 看Charlie
-Puth的concert很精彩，最后本来谢幕了，观众喊着“One more
-song”把Charlie喊回来了，唱一首see you
-again。约了Carlo明天泡图书馆和gym。这两门课选的真好，明天 1. 复习lec3 2.
-看handout，可以的话打印下来 3. 继续读课本，看完chap2</p>
-<h2 id="section-4">7.7</h2>
-<p>不出意外，计划没完成。早上睡到12点，醒来看到Carlo的消息说中午健身，但我一般学完后健身放松，就没去。吃饭后碰到小龙虾，去Moffit图书馆，没看到Carlo的消息，啧啧，又爽约了（我以为他不会去图书馆来着），难受。下午一直在敲latex，浪费时间，不过完成了复习。晚上和小龙虾看了场电影，蛮有意思，和国内影院很不一样。那边都是看老电影，有时有人来一段开场白，讲讲电影的背景之类，讲导演和演员，那些人名我都不认识，但老外很有共鸣。</p>
-<p>看完后去健身，有点自卑，因为菜。但其实没人注意我或怎么样的，所以挺好，自卑是自己脑补太多。谁不是从菜鸟上来的呢</p>
-<h2 id="section-5">7.9</h2>
-<p>Sausalito，muir woods，跟黄绿发色妹妹聊天，oha bbq超好吃，德州</p>
-<h2 id="section-6">7.10</h2>
-<p>中国学生确实拉。教授上课问一下各国股市情况，Sweden
-guy回答的全面又流畅，对答如流，让教授有兴趣不断地问，让课堂变得有意思。到中国学生，我了解太少不知道怎么说，后面一个人在那乱说，教授也不知道他在讲什么，我也不知道，课堂很尴尬。再到German
-guy也是回答很自然、从容，懂的很多。相比之下中国学生很异类，就像一群人围桌聊天我们加入不进去。本来以为尴尬是正常的，结果发现中国人是尴尬制造者。</p>
-<p>下午跟Carlo去健身房，没想到健身房也很适合社交。等器械的时候，别人等器械的时候，就有两个人过来跟Carlo聊天，一个还加上ins约去夜店浪。没有找我，因为我一看就是弱鸡。虽说夜店什么的还是算了，我没满21岁。但健身是个must。</p>
+<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
+<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
+idiots说的</p>
 <blockquote>
-<p>强势文化造就强者，弱势文化造就弱者</p>
+<p>不要追求成功，成功会在不经意间追上你</p>
 </blockquote>
-<p>儒家文化是弱势文化，是别人打你左脸叫你把右脸也给他打。美国文化是叫你彪悍强壮，开大车，练肌肉，体育竞技。</p>
-<h2 id="section-7">7.20</h2>
-<p>好东西https://micromasters.mit.edu/dashboard</p>
-<h2 id="section-8">7.21</h2>
-<p>trust no one</p>
-<h2 id="section-9">7.24</h2>
-<p>社交够够的。下午打球遇到个台湾+香港人，土生土长Berkeley
-student，蛮聊得来。虽然被俩黑哥暴虐但之后抢板+防守做的不错很过瘾。之后去Ethan的game
-night，Catan真的好玩，差点赢了/
-跟Ethan混熟互关了ins，之后行李可以放他那（晚点再问）。这周来了蛮多日本人，挺有意思，他们比我们还拘束，但never
-mind。感觉来summer
-session而非长学期交换挺正确的，暑假这边回来世界各地的人，更有意思；长学期只是跟当地学生打交道更深，只能说各有优劣吧。晚上高中生在hall开party，去凑了下热闹，有个很性感的小妹妹，边打桌球边聊天。老美真是很会玩，NSLC就是让高中生联谊的，要是我高中时有这种项目就好了。之后他们开party再进去凑凑热闹，因为音乐开很大声所以说话必须吼，蛮过瘾。</p>
-<p>我真的很不喜欢这个老师，但any way，我只要成绩和推荐信，that's
-all。其他的，在这边社交，感受人情，到处旅游，已经远远超出预期了，cannot
-ask for more。</p>
-<p>btw深刻认识到机会都是争取来的，争取的第一步是开口。多说话，更精彩。but
-I still have to balance study time and play time, the most challenging
-thing for me. but I heard gym is opened very early, like 7am, check it
-tomorrow, and start to get up early.
-早上应该人少，去晨练，试试zing。然后回来洗个澡，再去吃早饭。再去student
-union自习。早上学ODE和complex
-analysis比较合适，下午不适合学习，去打球。晚上回来洗个澡去study
-lounge学，再晚点去打打台球。我社交的两个主要地点就是球场和宿舍，以后可能会包括gym，但现在还太弱鸡。</p>
-<p>噢明天周二，很适合蹭课，先试试data science那个吧/</p>
-<h2 id="section-10">7.25</h2>
-<p>拉倒吧，12点才起。手机不能带上床，健身还是放到下午。</p>
-<h2 id="section-11">7.27</h2>
-<p>弄完两份考试，感觉还不错。不知不觉已经来快四周了，有了自己的社交圈，时间过的快又不快。基本没怎么学习，kaggle和托福是一样没弄，数学就是半落子，一会搞一会不搞。台球倒是进步不小，力量也是，还有篮球更有感觉了。也许之后该做个todo，每天要做：
-1. 健身 2. kaggle 3. 托福 4. ODE 5. 复变</p>
-<p>（出去玩的日子除外）</p>
-<h2 id="section-12">8.8</h2>
-<p>第六周，想家。坐在图书馆抬起头看到天窗，第一个想起厦大的访客中心，也有个天窗，在演武场旁边的草丛里。这边是不是也把天窗藏草丛里呢？</p>
-<p><a href="./ucb%E6%9A%91%E5%81%87/1554.png">抬头</a></p>
-<p>在宿舍大堂看别人弹琴，就想起高二的那个学期，吃完晚饭去练电子琴，琴声还没从脑海散去就迎来晚自习的铃声，在凤凰花树下甩着饮料瓶回教室，走到B栋回头看，钥匙妹还在举着双手，但天已经渐渐暗了。往自己座位一钻，沉浸在必刷题、王后雄中间，多么满足。</p>
+<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
+<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
+<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
 ]]></content>
       <categories>
         <category>隨記</category>
@@ -1256,23 +1275,6 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
 <center>
 我的話，會選右邊囉
 </center>
-]]></content>
-      <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>六月總結</title>
-    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>早上八点，太平洋上空</p>
-<span id="more"></span>
-<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
-<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
-<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
-<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
-<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
-<p>考试周的总结已另成一篇，不再重复。<span
-class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
 ]]></content>
       <categories>
         <category>隨記</category>
@@ -1460,32 +1462,20 @@ https://www.guruin.com/articles/855</p>
       </categories>
   </entry>
   <entry>
-    <title>複變函數</title>
-    <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p>网课：<a
-href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
-<p>官网：<a
-href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
+    <title>六月總結</title>
+    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>早上八点，太平洋上空</p>
 <span id="more"></span>
-<p>教材：<a
-href="/download/Invitation%20to%20Complex%20Analysis.pdf">Invitation to
-complex analysis</a></p>
-<p><a href="https://excalidraw.com/">快速作圖</a></p>
-<p><strong>課程大綱</strong></p>
-<p>第1講：<a
-href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函數</a></p>
-<p>第2講：<a
-href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西積分公式</a></p>
-<p>第3講：<a
-href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
-<p>第4講：<a
-href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a>、<a
-href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">Morera定理</a></p>
-<p>第5講：<a
-href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異點</a></p>
+<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
+<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
+<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
+<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
+<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
+<p>考试周的总结已另成一篇，不再重复。<span
+class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>隨記</category>
       </categories>
   </entry>
   <entry>
@@ -1737,6 +1727,35 @@ class="math inline">\(f(z)=z\)</span> doesn't miss</p>
       </tags>
   </entry>
   <entry>
+    <title>複變函數</title>
+    <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>网课：<a
+href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a></p>
+<p>官网：<a
+href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
+<span id="more"></span>
+<p>教材：<a
+href="/download/Invitation%20to%20Complex%20Analysis.pdf">Invitation to
+complex analysis</a></p>
+<p><a href="https://excalidraw.com/">快速作圖</a></p>
+<p><strong>課程大綱</strong></p>
+<p>第1講：<a
+href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函數</a></p>
+<p>第2講：<a
+href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西積分公式</a></p>
+<p>第3講：<a
+href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
+<p>第4講：<a
+href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a>、<a
+href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">Morera定理</a></p>
+<p>第5講：<a
+href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異點</a></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
     <title>找實習</title>
     <url>/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/</url>
     <content><![CDATA[<p>招牌對象為：金融、統計等專業優先</p>
@@ -1835,9 +1854,195 @@ class="math inline">\(f(z)=z\)</span> doesn't miss</p>
       </categories>
   </entry>
   <entry>
+    <title>有趣的複變題</title>
+    <url>/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/</url>
+    <content><![CDATA[<p>vu老師說，條件反射啦：<span class="math inline">\(\displaystyle
+\frac{1}{i}=-i\)</span></p>
+<span id="more"></span>
+<p><span class="math inline">\([ICA-1.17]\)</span> Show that the sum of
+the <span class="math inline">\(n\)</span> n-th roots of every nonzero
+complex number <span class="math inline">\(w\)</span> is zero. (The n
+nth roots of <span class="math inline">\(w\)</span> are the roots of the
+equation <span class="math inline">\(z^n-w=0\)</span>.)</p>
+<p>The sum of the roots of a polynomial equation <span
+class="math inline">\(z^n+a_{n-1}z^{n-1}+\cdots +a_0\)</span> is <span
+class="math inline">\(-a_{n-1}\)</span> (<a
+href="https://proofwiki.org/wiki/Sum_of_Roots_of_Polynomial">Proof</a>),
+in <span class="math inline">\(z^n-w=0\)</span>, <span
+class="math inline">\(a_{n-1}=0\)</span>, therefore proved.</p>
+<p><span class="math inline">\([ICA-2.1]\)</span> Show that
+Cauchy-Riemann equations can also be written as</p>
+<p><span class="math display">\[
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\quad
+\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x} \Rightarrow
+\frac{\partial f}{\partial x}=-i\frac{\partial f}{\partial y}
+\]</span></p>
+<p><img data-src="2.1_1.png" width=550px></p>
+<p><img data-src="2.1_2.png" width=550px></p>
+<p><span class="math inline">\([ICA-2.3]\)</span> <span
+class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span>, show that if <span
+class="math inline">\(U(z_0,\delta)\in C^1\)</span>, and satisfies
+Cauchy-Riemann equation, then has derivatives at <span
+class="math inline">\(z_0\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    f(z)-f(z_0)&amp;=(x-x_0)u_1+(y-y_0)u_2+i[(x-x_0)v_1+(y-y_0)v_2]+o(z-z_0)\\
+    &amp;=(x-x_0)(u_1-iu_2)+(y-y_0)(u_2+iu_1)+o(z-z_0)\\
+    &amp;=(z-z_0)(u_1-iu_2)+o(z-z_0)
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow f&#39;(z_0)=\lim_{z\rightarrow
+z_0}\frac{f(z)-f(z_0)}{z-z_0}=u_1-iu_2\overset{also}{=}v_2+iv_1
+\]</span></p>
+<p><span class="math inline">\([ICA-2.4]\)</span></p>
+<p><img data-src="2.4.jpg" width=700px></p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\frac{\partial f}{\partial r}=U_r+iV_r\\
+    &amp;\frac{\partial f}{\partial r}=\frac{\partial f}{\partial
+z}\cdot \frac{\partial z}{\partial r}=f&#39;(z)\cdot e^{i\theta}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\frac{\partial f}{\partial \theta}=U_{\theta}+iV_{\theta}\\
+    &amp;\frac{\partial f}{\partial \theta}=\frac{\partial f}{\partial
+z}\cdot \frac{\partial z}{\partial \theta}=f&#39;(z)\cdot ire^{i\theta}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow U_r+iV_r=\frac{1}{ir}(U_{\theta}+iV_{\theta})
+\]</span></p>
+<p>整理後，記得<span class="math inline">\(\Re=\Re,\Im=\Im\)</span></p>
+<p><span class="math inline">\([ICA-2.5]\)</span></p>
+<p><img data-src="2.5q.jpg" width=700px></p>
+<p><img data-src="2.5a.png" width=700px></p>
+<p>note: <span class="math inline">\(z=(x,y)\in \bar{D}\)</span>,
+therefore <span class="math inline">\((x,-y)\in D\)</span> satisfies
+Cauchy-Riemann as given</p>
+<p><span class="math inline">\([ICA-2.6]\)</span></p>
+<p><img data-src="2.6q.jpg" width=700px></p>
+<p><img data-src="2.6a.png" width=700px></p>
+<p>note: replace <span class="math inline">\(r\rightarrow
+R^2/r\)</span></p>
+<p><span class="math display">\[
+U_1(\frac{R^2}{r},\theta)=\frac{r}{R^2}V_2(\frac{R^2}{r},\theta)
+\]</span></p>
+<p><span class="math inline">\([ICA-2.8,2.9]\)</span></p>
+<p><img data-src="2.8q.png" width=700px></p>
+<p><img data-src="2.81.png" width=700px></p>
+<p><img data-src="2.82.png" width=700px></p>
+<hr />
+<p><img data-src="limsup.png" width=700px></p>
+<p><span class="math inline">\([ICA-3.9]\)</span> Prove: for <span
+class="math inline">\(\displaystyle
+\sum_{k=0}^{\infty}a_k(z-z_0)^k\)</span>, the formula of <em>radius of
+convergence</em> <span class="math inline">\(R\)</span> is</p>
+<p><span class="math display">\[
+\frac{1}{R}=\limsup_{n\rightarrow \infty}|a_n|^{\frac{1}{n}}
+\]</span></p>
+<p>pf. 思路：湊<span
+class="math inline">\(|a_nz^n|\)</span>，跟1比較</p>
+<ol type="1">
+<li><span class="math inline">\(0&lt;R&lt;\infty\)</span></li>
+</ol>
+<p>By <span class="math inline">\(\displaystyle
+\frac{1}{R}=\limsup_{n\rightarrow
+\infty}|a_n|^{\frac{1}{n}}\)</span></p>
+<p>For <em>all</em> <span class="math inline">\(n\)</span> large
+enough</p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&lt;\frac{1}{R}+\varepsilon =\frac{1}{R-\varepsilon}
+\]</span></p>
+<p><span class="math display">\[
+|a_n|&lt;\frac{1}{(R-\varepsilon)^n}
+\]</span></p>
+<p>For <span class="math inline">\(z&lt;R\)</span>, therefore <span
+class="math inline">\(z&lt;R-\varepsilon\)</span></p>
+<p><span class="math display">\[
+|a_nz^n|&lt;(\frac{z}{R-\varepsilon})^n&lt;1 \ \square
+\]</span></p>
+<p>For <em>infinite</em> <span class="math inline">\(n\)</span></p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&gt;\frac{1}{R}-\varepsilon=\frac{1}{R+\varepsilon}
+\]</span></p>
+<p><span class="math display">\[
+|a_n|&gt;\frac{1}{R+\varepsilon}^n
+\]</span></p>
+<p>For <span class="math inline">\(|z|&gt;R\)</span>, also <span
+class="math inline">\(|z|&gt;R+\varepsilon\)</span></p>
+<p><span class="math display">\[
+|a_nz^n|&gt;(\frac{z}{R+\varepsilon})^n&gt;1 \ \square
+\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(R=0\)</span></li>
+</ol>
+<p><span class="math inline">\(\Rightarrow
+\frac{1}{R}=\infty\)</span></p>
+<p><span class="math display">\[
+|a_n|^{\frac{1}{n}}&gt;K,\ \forall K
+\]</span></p>
+<p>choose</p>
+<p><span class="math display">\[
+|z|&gt;\frac{1}{K}
+\]</span></p>
+<p>In order to let</p>
+<p><span class="math display">\[
+|a_nz^n|&gt;(Kz)^n&gt;1 \ \square
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(R=\infty\)</span></li>
+</ol>
+<p><span class="math inline">\(\Rightarrow \frac{1}{R}=0\)</span></p>
+<p><span class="math display">\[
+\therefore |a_n|^{\frac{1}{n}}&lt;\varepsilon \Rightarrow
+|a_n|&lt;\varepsilon^n
+\]</span></p>
+<p>choose</p>
+<p><span class="math display">\[
+z&lt;\frac{1}{\varepsilon}
+\]</span></p>
+<p>Inorder to let</p>
+<p><span class="math display">\[
+|a_nz^n|&lt;(z\varepsilon)^n&lt;1 \ \square
+\]</span></p>
+<hr />
+<p><span class="math inline">\([ICA-3.10(c)]\)</span> Find convergence
+<span class="math inline">\(R\)</span> for</p>
+<p><span class="math display">\[
+1+3z+2z^2+9z^3+\cdots+2^nz^{2n}+3^{n+1}z^{2n+1}+\cdots
+\]</span></p>
+<p>the formula for <span class="math inline">\(1/R\)</span> yields <span
+class="math inline">\(R = 3^{-1/2}\)</span> (the terms of even index
+don't have any influence), why?</p>
+<p><span class="math inline">\([ICA-3.11]\)</span> Let <span
+class="math inline">\(\sum_{k=0}^{\infty}a_kz^k\)</span> have radius of
+convergence <span class="math inline">\(R\)</span> and let <span
+class="math inline">\(m\)</span> be a positive integer. Show that
+series</p>
+<p><span class="math display">\[
+\sum_{k=0}^{\infty}k^ma_kz^k
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\sum_{k=0}^{\infty}k(k-1)\cdots(k-m) a_kz^k
+\]</span></p>
+<p>both have radius of convergence <span
+class="math inline">\(R\)</span></p>
+<p><img data-src="3.11.png" width=700px></p>
+<p>Note: (2)不能用comparison
+test，因為是要求R，而不是判斷是否收斂，條件更嚴格。從(2)也能得到結論：對一個power
+series無論求導多少次，也有相同的radius of convergence</p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
     <title>柯西積分公式</title>
     <url>/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<p>复变最重要的两个定理都在这了！！！</p>
+    <content><![CDATA[<p>複變最重要的兩個定理！</p>
 <span id="more"></span>
 <p><u> <strong>Theo</strong></u> :
 (<code>Cauchy's integral formula</code>) Let <span
@@ -2569,516 +2774,6 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
       </categories>
   </entry>
   <entry>
-    <title>不必再等</title>
-    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
-    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
-<span id="more"></span>
-<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
-<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
-idiots说的</p>
-<blockquote>
-<p>不要追求成功，成功会在不经意间追上你</p>
-</blockquote>
-<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
-<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
-<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
-]]></content>
-      <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解析函數的冪級數展開</title>
-    <url>/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/</url>
-    <content><![CDATA[<h1 id="power-series">Power series</h1>
-<p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
-<span class="math inline">\(\mathbb{C}\)</span>. If <span
-class="math inline">\(f\in O(D)\)</span>, then <span
-class="math inline">\(f\in C^{\omega}(D)\)</span></p>
-<p><span class="math inline">\(C^{\omega}(D)\)</span> means locally
-function can be represented by a power series <span
-class="math inline">\(\blacklozenge\)</span></p>
-<span id="more"></span>
-<p><img data-src="3A_1.png" width=400px></p>
-<p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
-<p><span class="math inline">\(f\in O(D)\)</span> <span
-class="math display">\[
-\therefore \exists R&gt;0, s.t. \bar{B}(z_0;R)\subset D
-\]</span></p>
-<p>If <span class="math inline">\(z\in B(z_0;R)\)</span>, <span
-class="math inline">\(w\in \Gamma\)</span>. Then <span
-class="math display">\[
-\begin{aligned}
-    f(z)&amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw\\
-    &amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z_0-(z-z_0)}dw
-\end{aligned}
-\]</span></p>
-<p>If <span class="math inline">\(\exists r&gt;0\)</span>， <span
-class="math inline">\(s.t. \ |z-z_0|\leq r&lt;R\)</span>. Then</p>
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{1}{w-z_0}\frac{f(w)}{1-\frac{z-z_0}{w-z_0}}dw\\
-    &amp;=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{1}{w-z_0}\left(\sum_{k=0}^{\infty}\left(\frac{z-z_0}{w-z_0}
-\right)^k \right)f(w)dw\quad \ast\\
-    &amp;=\sum_{k=0}^{\infty}\left(\frac{1}{2\pi
-i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
-\ast\ast\\
-    &amp;=\sum_{k=0}^{\infty}a_k(z-z_0)^k
-\end{aligned}
-\]</span></p>
-<p>i.e. <span class="math inline">\(\displaystyle a_k=\frac{1}{2\pi
-i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
-<p>From <span class="math inline">\(\ast\)</span> to <span
-class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
-<p><img data-src="interchange.png"></p>
-<p><span class="math display">\[
-f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
-\]</span></p>
-<p><span class="math display">\[
-f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^2}dw
-\]</span></p>
-<p><span class="math display">\[
-f&#39;&#39;(z)=\frac{2}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^3}dw
-\]</span> <span class="math display">\[
-\vdots
-\]</span></p>
-<p><span class="math display">\[
-f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
-\]</span></p>
-<p><span class="math display">\[
-\therefore a_k=\frac{f^{(k)}(z_0)}{k!}
-\]</span></p>
-<p><span class="math display">\[
-\Rightarrow f(z)=\frac{f^{(k)}(z_0)}{k!}(z-z_0)^k
-\]</span></p>
-<hr />
-<h2 id="解析延拓">解析延拓</h2>
-<p><span class="math inline">\(a_k\)</span>的值跟<span
-class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
-href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
-continuation）</p>
-<p><img data-src="3A_2.png" width=300px></p>
-<p>Ex.</p>
-<p><span class="math display">\[
-f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
-\]</span></p>
-<p><span class="math inline">\(z&lt;1\)</span>时收敛，<span
-class="math inline">\(z\geq 1\)</span>时发散</p>
-<p>在<span class="math inline">\(z=-\frac 12\)</span>展开， <span
-class="math display">\[
-f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
-\]</span></p>
-<p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
-32\)</span>上统统收敛</p>
-<p><img data-src="3B_1.png" width=300px></p>
-<hr />
-<h2 id="cauchy-estimate">Cauchy Estimate</h2>
-<p><u>Theo</u> Cauchy's estimate</p>
-<p>let <span class="math inline">\(M=\max_{|z-z_0|\leq R}
-|f|\)</span></p>
-<p>Then</p>
-<p><span class="math display">\[
-|a_k|\leq \frac{M}{R^k}. \ \blacklozenge
-\]</span></p>
-<p><span class="math display">\[
-|a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
-|\leq\frac{1}{2\pi}\cdot M\cdot \frac{2\pi R}{R^{k+1}}=\frac{M}{R^k}
-\]</span></p>
-<p>控制了函数值就能控制系数<span class="math inline">\(a_k\)</span></p>
-<hr />
-<h1 id="liouville定理">Liouville定理</h1>
-<p>f: entire function if <span class="math inline">\(f\in
-O(\mathbb{C})\)</span></p>
-<p>e.g. <span class="math inline">\(e^x,\sin x, p(x)\)</span>
-polynomial</p>
-<p><span class="math display">\[
-e^z=\sum_{k=0}^{\infty}\frac{z^k}{k!}
-\]</span></p>
-<p><span class="math display">\[
-\sin x=\frac{e^{iz}-e^{-iz}}{2i},\quad \cos z=\frac{e^{iz}+e^{-iz}}{2}
-\]</span></p>
-<p><u><strong>Theo</strong></u> <strong>(Liouville)</strong></p>
-<p>Any bounded entire functions is constant <span
-class="math inline">\(\blacklozenge\)</span></p>
-<p><strong>pf. 1</strong></p>
-<p><span class="math display">\[
-f(z)=\sum_{k=0}^{\infty}a_kz^k,\quad |f(z)|\leq M, \forall
-z\in\mathbb{C}
-\]</span></p>
-<p><span class="math display">\[
-\therefore |a_k|\leq \frac{M}{R^k}
-\]</span></p>
-<p>当<span class="math inline">\(k\geqslant 1\)</span>时,</p>
-<p><span class="math display">\[
-|a_k|\leqslant \lim_{R\rightarrow \infty}\frac{M}{R^k}=0
-\]</span></p>
-<p><span class="math display">\[
-\therefore f(z)=f(0)\ \blacksquare
-\]</span></p>
-<p><strong>pf. 2</strong></p>
-<p><span class="math inline">\(z\in \mathbb{C}\)</span>, choose <span
-class="math inline">\(R&gt;|z|\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    |f(z)-f(0)|&amp;=\bigg|\frac{1}{2\pi
-i}\int_{|w|=R}\frac{f(w)}{w-z}dw-\frac{1}{2\pi
-i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
-    &amp;=\bigg|\frac{1}{2\pi i}\int_{|w|=R}(\frac{1}{w-z}-\frac
-1w)f(w)dw \bigg|\\
-    &amp;\leqslant \frac{1}{2\pi i}\int_{|w|=R}|\frac{z}{w(w-z)}|\cdot
-|f(w)|\cdot |dw|\\
-    &amp;\leqslant \frac{1}{2\pi i}\cdot M\cdot
-\frac{|z|}{R(R-|z|)}\cdot 2\pi R\\
-    &amp;=\frac{M|z|i}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
-\blacksquare
-\end{aligned}
-\]</span></p>
-<p><span
-class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
-class="math inline">\(\geqslant R-|z|\)</span></p>
-<p><img data-src="3B_2.png" width=300px></p>
-<hr />
-<h1 id="代數基本定理">代數基本定理</h1>
-<p><u>Theo</u> (Fundamental theorem of algebra)</p>
-<p>let <span class="math inline">\(p(z)\)</span> be a complex-valued
-polynomial of <span class="math inline">\(\deg P\geqslant
-1\)</span>.</p>
-<p>Then <span class="math inline">\(\exists w\in \mathbb{C}, \ s.t.\
-p(w)=0\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
-<p>pf. <span class="math inline">\(p(z)=az+b\quad a\neq 0\)</span>,
-<span class="math inline">\(w=-\frac{b}{a}\)</span></p>
-<p>Assume <span class="math inline">\(\deg P=k\geqslant 2\)</span></p>
-<p><strong>pf. 1</strong></p>
-<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
-\mathbb{C}\)</span></p>
-<p><span class="math display">\[
-\therefore q(z)=\frac{1}{p(z)}\in O(\mathbb{C})
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    |q(z)|&amp;=\frac{1}{|a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0|}\\
-    &amp;=\frac{1}{|z|^k\cdot
-|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|}\\
-    &amp;\leqslant \frac{2}{|a_k|\cdot |z|^k}
-\end{aligned}
-\]</span></p>
-<p>最后一步是因为 <span class="math display">\[
-\frac{|a_k|}{2}\leqslant
-|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|
-\]</span></p>
-<p>当<span class="math inline">\(z\rightarrow \infty\)</span>时，<span
-class="math inline">\(|q(z)|\rightarrow 0\)</span></p>
-<p><span class="math inline">\(\therefore q\)</span> is bounded,
-entire</p>
-<p>By Liouville, <span class="math inline">\(q\equiv c\)</span>,
-const</p>
-<p><span class="math display">\[
-\therefore p(z) \text{ is a constant function}
-\]</span></p>
-<p>矛盾 <span class="math inline">\(\blacksquare\)</span>.</p>
-<p><strong>pf. 2</strong> 用最根本的Cauchy定理證</p>
-<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
-\mathbb{C}\)</span> and <span class="math inline">\(\big[\)</span><span
-class="math inline">\(p(x)\)</span> is real if <span
-class="math inline">\(z=x\in \mathbb{R}\)</span><span
-class="math inline">\(\big]\)</span>.</p>
-<p>If <span class="math inline">\([ \ ]\)</span> does not hold, then
-consider <span class="math inline">\(p(z)\bar{p}(z)=Q(z)\)</span>, <span
-class="math display">\[
-\bar{p}(z)=\bar{a_k}z^k+\bar{a_{k-1}}z^{k-1}+\cdots
-+\bar{a_1}z+\bar{a_0}
-\]</span></p>
-<blockquote>
-<p>Set <span class="math inline">\(a_1=x_1+iy_1,
-a_2=x_2+iy_2\)</span></p>
-<p><span class="math display">\[
-a_1\bar{a_2}+a_2\bar{a_1}=x_1x_2+y_1y_2\in \mathbb{R}
-\]</span></p>
-</blockquote>
-<p>Set</p>
-<p><span class="math display">\[
-I=\int_0^{2\pi}\frac{d\theta}{p(2\cos \theta)}\neq 0
-\]</span></p>
-<p>在<span class="math inline">\(\theta\in[0,2\pi]\)</span>上，<span
-class="math inline">\(2\cos \theta\in [-1,1]\)</span>，<span
-class="math inline">\(I\neq 0\)</span>沒有問題</p>
-<p><span class="math display">\[
-p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
-\]</span></p>
-<p><span class="math inline">\(z=e^{i\theta}=\cos
-\theta+i\sin\theta\)</span></p>
-<p>所以<span class="math inline">\(\displaystyle
-\cos\theta=\frac{z+\bar{z}}{2}=\frac{1}{2}(z+\frac{1}{z})\Rightarrow2\cos\theta
-=z+\frac{1}{z}\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    p(2\cos\theta)&amp;=a_k(z+\frac{1}{z})^k+a_{k-1}(z+\frac{1}{z})^{k-1}+\cdots+a_1(z+\frac{1}{z})+a_0\\
-    &amp;=\frac{1}{z^k}Q(z)
-\end{aligned}
-\]</span></p>
-<p>If <span class="math inline">\(z=0\)</span>, <span
-class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次係數不為0</p>
-<p>If <span class="math inline">\(z\neq 0\)</span>, <span
-class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
-class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
-class="math inline">\(Q(z)\neq 0\)</span></p>
-<p>既然<span
-class="math inline">\(Q(z)\)</span>总是不為0，把它放在分母上仍是解析函数</p>
-<p><span class="math display">\[
-I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
-\xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz
-\]</span></p>
-<p>由Cauchy定理 <span class="math display">\[
-I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
-\]</span></p>
-<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-      <tags>
-        <tag>Liouville定理</tag>
-        <tag>解析延拓</tag>
-        <tag>Cauchy estimate</tag>
-        <tag>代數基本定理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解決hexo本地和部署不一致問題</title>
-    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
-<span id="more"></span>
-<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img data-src="branch.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
-<figure>
-<img data-src="new.png" alt="new" />
-<figcaption aria-hidden="true">new</figcaption>
-</figure>
-<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
-<code>main</code>。</p>
-<figure>
-<img data-src="default.png" alt="default" />
-<figcaption aria-hidden="true">default</figcaption>
-</figure>
-<p>接着在 Settings 的 Default branch 一栏点击<span
-class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
-<code>main</code>，点击 Update ，点击红色的 I understand。</p>
-<figure>
-<img data-src="pages.png" alt="pages" />
-<figcaption aria-hidden="true">pages</figcaption>
-</figure>
-<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
-main，保存。</p>
-<p>最后记得在博客文件夹的 <code>_config.yml</code>
-内将deploy部分的branch改为<code>main</code>。</p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可实现部署和本地一致。</p>
-<p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>開發</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>有趣的複變題</title>
-    <url>/2023/08/23/%E6%9C%89%E8%B6%A3%E7%9A%84%E8%A4%87%E8%AE%8A%E9%A1%8C/</url>
-    <content><![CDATA[<p>vu老師說，條件反射啦：<span class="math inline">\(\displaystyle
-\frac{1}{i}=-i\)</span></p>
-<span id="more"></span>
-<p><span class="math inline">\([ICA-1.17]\)</span> Show that the sum of
-the <span class="math inline">\(n\)</span> n-th roots of every nonzero
-complex number <span class="math inline">\(w\)</span> is zero. (The n
-nth roots of <span class="math inline">\(w\)</span> are the roots of the
-equation <span class="math inline">\(z^n-w=0\)</span>.)</p>
-<p>The sum of the roots of a polynomial equation <span
-class="math inline">\(z^n+a_{n-1}z^{n-1}+\cdots +a_0\)</span> is <span
-class="math inline">\(-a_{n-1}\)</span> (<a
-href="https://proofwiki.org/wiki/Sum_of_Roots_of_Polynomial">Proof</a>),
-in <span class="math inline">\(z^n-w=0\)</span>, <span
-class="math inline">\(a_{n-1}=0\)</span>, therefore proved.</p>
-<p><span class="math inline">\([ICA-2.1]\)</span> Show that
-Cauchy-Riemann equations can also be written as</p>
-<p><span class="math display">\[
-\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\quad
-\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x} \Rightarrow
-\frac{\partial f}{\partial x}=-i\frac{\partial f}{\partial y}
-\]</span></p>
-<p><img data-src="2.1_1.png" width=550px></p>
-<p><img data-src="2.1_2.png" width=550px></p>
-<p><span class="math inline">\([ICA-2.3]\)</span> <span
-class="math inline">\(f(z)=u(x,y)+iv(x,y)\)</span>, show that if <span
-class="math inline">\(U(z_0,\delta)\in C^1\)</span>, and satisfies
-Cauchy-Riemann equation, then has derivatives at <span
-class="math inline">\(z_0\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    f(z)-f(z_0)&amp;=(x-x_0)u_1+(y-y_0)u_2+i[(x-x_0)v_1+(y-y_0)v_2]+o(z-z_0)\\
-    &amp;=(x-x_0)(u_1-iu_2)+(y-y_0)(u_2+iu_1)+o(z-z_0)\\
-    &amp;=(z-z_0)(u_1-iu_2)+o(z-z_0)
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\Rightarrow f&#39;(z_0)=\lim_{z\rightarrow
-z_0}\frac{f(z)-f(z_0)}{z-z_0}=u_1-iu_2\overset{also}{=}v_2+iv_1
-\]</span></p>
-<p><span class="math inline">\([ICA-2.4]\)</span></p>
-<p><img data-src="2.4.jpg" width=700px></p>
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;\frac{\partial f}{\partial r}=U_r+iV_r\\
-    &amp;\frac{\partial f}{\partial r}=\frac{\partial f}{\partial
-z}\cdot \frac{\partial z}{\partial r}=f&#39;(z)\cdot e^{i\theta}
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;\frac{\partial f}{\partial \theta}=U_{\theta}+iV_{\theta}\\
-    &amp;\frac{\partial f}{\partial \theta}=\frac{\partial f}{\partial
-z}\cdot \frac{\partial z}{\partial \theta}=f&#39;(z)\cdot ire^{i\theta}
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\Rightarrow U_r+iV_r=\frac{1}{ir}(U_{\theta}+iV_{\theta})
-\]</span></p>
-<p>整理後，記得<span class="math inline">\(\Re=\Re,\Im=\Im\)</span></p>
-<p><span class="math inline">\([ICA-2.5]\)</span></p>
-<p><img data-src="2.5q.jpg" width=700px></p>
-<p><img data-src="2.5a.png" width=700px></p>
-<p>note: <span class="math inline">\(z=(x,y)\in \bar{D}\)</span>,
-therefore <span class="math inline">\((x,-y)\in D\)</span> satisfies
-Cauchy-Riemann as given</p>
-<p><span class="math inline">\([ICA-2.6]\)</span></p>
-<p><img data-src="2.6q.jpg" width=700px></p>
-<p><img data-src="2.6a.png" width=700px></p>
-<p>note: replace <span class="math inline">\(r\rightarrow
-R^2/r\)</span></p>
-<p><span class="math display">\[
-U_1(\frac{R^2}{r},\theta)=\frac{r}{R^2}V_2(\frac{R^2}{r},\theta)
-\]</span></p>
-<p><span class="math inline">\([ICA-2.8,2.9]\)</span></p>
-<p><img data-src="2.8q.png" width=700px></p>
-<p><img data-src="2.81.png" width=700px></p>
-<p><img data-src="2.82.png" width=700px></p>
-<hr />
-<p><img data-src="limsup.png" width=700px></p>
-<p><span class="math inline">\([ICA-3.9]\)</span> Prove: for <span
-class="math inline">\(\displaystyle
-\sum_{k=0}^{\infty}a_k(z-z_0)^k\)</span>, the formula of <em>radius of
-convergence</em> <span class="math inline">\(R\)</span> is</p>
-<p><span class="math display">\[
-\frac{1}{R}=\limsup_{n\rightarrow \infty}|a_n|^{\frac{1}{n}}
-\]</span></p>
-<p>pf. 思路：湊<span
-class="math inline">\(|a_nz^n|\)</span>，跟1比較</p>
-<ol type="1">
-<li><span class="math inline">\(0&lt;R&lt;\infty\)</span></li>
-</ol>
-<p>By <span class="math inline">\(\displaystyle
-\frac{1}{R}=\limsup_{n\rightarrow
-\infty}|a_n|^{\frac{1}{n}}\)</span></p>
-<p>For <em>all</em> <span class="math inline">\(n\)</span> large
-enough</p>
-<p><span class="math display">\[
-|a_n|^{\frac{1}{n}}&lt;\frac{1}{R}+\varepsilon =\frac{1}{R-\varepsilon}
-\]</span></p>
-<p><span class="math display">\[
-|a_n|&lt;\frac{1}{(R-\varepsilon)^n}
-\]</span></p>
-<p>For <span class="math inline">\(z&lt;R\)</span>, therefore <span
-class="math inline">\(z&lt;R-\varepsilon\)</span></p>
-<p><span class="math display">\[
-|a_nz^n|&lt;(\frac{z}{R-\varepsilon})^n&lt;1 \ \square
-\]</span></p>
-<p>For <em>infinite</em> <span class="math inline">\(n\)</span></p>
-<p><span class="math display">\[
-|a_n|^{\frac{1}{n}}&gt;\frac{1}{R}-\varepsilon=\frac{1}{R+\varepsilon}
-\]</span></p>
-<p><span class="math display">\[
-|a_n|&gt;\frac{1}{R+\varepsilon}^n
-\]</span></p>
-<p>For <span class="math inline">\(|z|&gt;R\)</span>, also <span
-class="math inline">\(|z|&gt;R+\varepsilon\)</span></p>
-<p><span class="math display">\[
-|a_nz^n|&gt;(\frac{z}{R+\varepsilon})^n&gt;1 \ \square
-\]</span></p>
-<ol start="2" type="1">
-<li><span class="math inline">\(R=0\)</span></li>
-</ol>
-<p><span class="math inline">\(\Rightarrow
-\frac{1}{R}=\infty\)</span></p>
-<p><span class="math display">\[
-|a_n|^{\frac{1}{n}}&gt;K,\ \forall K
-\]</span></p>
-<p>choose</p>
-<p><span class="math display">\[
-|z|&gt;\frac{1}{K}
-\]</span></p>
-<p>In order to let</p>
-<p><span class="math display">\[
-|a_nz^n|&gt;(Kz)^n&gt;1 \ \square
-\]</span></p>
-<ol start="3" type="1">
-<li><span class="math inline">\(R=\infty\)</span></li>
-</ol>
-<p><span class="math inline">\(\Rightarrow \frac{1}{R}=0\)</span></p>
-<p><span class="math display">\[
-\therefore |a_n|^{\frac{1}{n}}&lt;\varepsilon \Rightarrow
-|a_n|&lt;\varepsilon^n
-\]</span></p>
-<p>choose</p>
-<p><span class="math display">\[
-z&lt;\frac{1}{\varepsilon}
-\]</span></p>
-<p>Inorder to let</p>
-<p><span class="math display">\[
-|a_nz^n|&lt;(z\varepsilon)^n&lt;1 \ \square
-\]</span></p>
-<hr />
-<p><span class="math inline">\([ICA-3.10(c)]\)</span> Find convergence
-<span class="math inline">\(R\)</span> for</p>
-<p><span class="math display">\[
-1+3z+2z^2+9z^3+\cdots+2^nz^{2n}+3^{n+1}z^{2n+1}+\cdots
-\]</span></p>
-<p>the formula for <span class="math inline">\(1/R\)</span> yields <span
-class="math inline">\(R = 3^{-1/2}\)</span> (the terms of even index
-don't have any influence), why?</p>
-<p><span class="math inline">\([ICA-3.11]\)</span> Let <span
-class="math inline">\(\sum_{k=0}^{\infty}a_kz^k\)</span> have radius of
-convergence <span class="math inline">\(R\)</span> and let <span
-class="math inline">\(m\)</span> be a positive integer. Show that
-series</p>
-<p><span class="math display">\[
-\sum_{k=0}^{\infty}k^ma_kz^k
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-\sum_{k=0}^{\infty}k(k-1)\cdots(k-m) a_kz^k
-\]</span></p>
-<p>both have radius of convergence <span
-class="math inline">\(R\)</span></p>
-<p><img data-src="3.11.png" width=700px></p>
-<p>Note: (2)不能用comparison
-test，因為是要求R，而不是判斷是否收斂，條件更嚴格。從(2)也能得到結論：對一個power
-series無論求導多少次，也有相同的radius of convergence</p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-  </entry>
-  <entry>
     <title>解析函數</title>
     <url>/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>Complex numbers <span class="math inline">\(\mathbb{C}\)</span></p>
@@ -3341,6 +3036,311 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
       <tags>
         <tag>柯西黎曼方程</tag>
         <tag>Green定理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解決hexo本地和部署不一致問題</title>
+    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<span id="more"></span>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<figure>
+<img data-src="branch.png" alt="branch" />
+<figcaption aria-hidden="true">branch</figcaption>
+</figure>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<figure>
+<img data-src="new.png" alt="new" />
+<figcaption aria-hidden="true">new</figcaption>
+</figure>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
+<code>main</code>。</p>
+<figure>
+<img data-src="default.png" alt="default" />
+<figcaption aria-hidden="true">default</figcaption>
+</figure>
+<p>接着在 Settings 的 Default branch 一栏点击<span
+class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
+<code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<figure>
+<img data-src="pages.png" alt="pages" />
+<figcaption aria-hidden="true">pages</figcaption>
+</figure>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
+main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code>
+内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
+<ol type="1">
+<li><p><a
+href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
+<li><p><a
+href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>開發</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解析函數的冪級數展開</title>
+    <url>/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/</url>
+    <content><![CDATA[<h1 id="power-series">Power series</h1>
+<p><u>Theo</u> Let <span class="math inline">\(D\)</span> be a domain in
+<span class="math inline">\(\mathbb{C}\)</span>. If <span
+class="math inline">\(f\in O(D)\)</span>, then <span
+class="math inline">\(f\in C^{\omega}(D)\)</span></p>
+<p><span class="math inline">\(C^{\omega}(D)\)</span> means locally
+function can be represented by a power series <span
+class="math inline">\(\blacklozenge\)</span></p>
+<span id="more"></span>
+<p><img data-src="3A_1.png" width=400px></p>
+<p><span class="math inline">\(\Gamma=\partial B(z_0;R)\)</span></p>
+<p><span class="math inline">\(f\in O(D)\)</span> <span
+class="math display">\[
+\therefore \exists R&gt;0, s.t. \bar{B}(z_0;R)\subset D
+\]</span></p>
+<p>If <span class="math inline">\(z\in B(z_0;R)\)</span>, <span
+class="math inline">\(w\in \Gamma\)</span>. Then <span
+class="math display">\[
+\begin{aligned}
+    f(z)&amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw\\
+    &amp;=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z_0-(z-z_0)}dw
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\exists r&gt;0\)</span>， <span
+class="math inline">\(s.t. \ |z-z_0|\leq r&lt;R\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\frac{f(w)}{1-\frac{z-z_0}{w-z_0}}dw\\
+    &amp;=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{1}{w-z_0}\left(\sum_{k=0}^{\infty}\left(\frac{z-z_0}{w-z_0}
+\right)^k \right)f(w)dw\quad \ast\\
+    &amp;=\sum_{k=0}^{\infty}\left(\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw \right)(z-z_0)^k\quad
+\ast\ast\\
+    &amp;=\sum_{k=0}^{\infty}a_k(z-z_0)^k
+\end{aligned}
+\]</span></p>
+<p>i.e. <span class="math inline">\(\displaystyle a_k=\frac{1}{2\pi
+i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw\)</span></p>
+<p>From <span class="math inline">\(\ast\)</span> to <span
+class="math inline">\(\ast\ast\)</span>，use Math Analysi (II)</p>
+<p><img data-src="interchange.png"></p>
+<p><span class="math display">\[
+f(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{w-z}dw
+\]</span></p>
+<p><span class="math display">\[
+f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^2}dw
+\]</span></p>
+<p><span class="math display">\[
+f&#39;&#39;(z)=\frac{2}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^3}dw
+\]</span> <span class="math display">\[
+\vdots
+\]</span></p>
+<p><span class="math display">\[
+f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
+\]</span></p>
+<p><span class="math display">\[
+\therefore a_k=\frac{f^{(k)}(z_0)}{k!}
+\]</span></p>
+<p><span class="math display">\[
+\Rightarrow f(z)=\frac{f^{(k)}(z_0)}{k!}(z-z_0)^k
+\]</span></p>
+<hr />
+<h2 id="解析延拓">解析延拓</h2>
+<p><span class="math inline">\(a_k\)</span>的值跟<span
+class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
+href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
+continuation）</p>
+<p><img data-src="3A_2.png" width=300px></p>
+<p>Ex.</p>
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
+\]</span></p>
+<p><span class="math inline">\(z&lt;1\)</span>时收敛，<span
+class="math inline">\(z\geq 1\)</span>时发散</p>
+<p>在<span class="math inline">\(z=-\frac 12\)</span>展开， <span
+class="math display">\[
+f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
+\]</span></p>
+<p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
+32\)</span>上统统收敛</p>
+<p><img data-src="3B_1.png" width=300px></p>
+<hr />
+<h2 id="cauchy-estimate">Cauchy Estimate</h2>
+<p><u>Theo</u> Cauchy's estimate</p>
+<p>let <span class="math inline">\(M=\max_{|z-z_0|\leq R}
+|f|\)</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+|a_k|\leq \frac{M}{R^k}. \ \blacklozenge
+\]</span></p>
+<p><span class="math display">\[
+|a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
+|\leq\frac{1}{2\pi}\cdot M\cdot \frac{2\pi R}{R^{k+1}}=\frac{M}{R^k}
+\]</span></p>
+<p>控制了函数值就能控制系数<span class="math inline">\(a_k\)</span></p>
+<hr />
+<h1 id="liouville定理">Liouville定理</h1>
+<p>f: entire function if <span class="math inline">\(f\in
+O(\mathbb{C})\)</span></p>
+<p>e.g. <span class="math inline">\(e^x,\sin x, p(x)\)</span>
+polynomial</p>
+<p><span class="math display">\[
+e^z=\sum_{k=0}^{\infty}\frac{z^k}{k!}
+\]</span></p>
+<p><span class="math display">\[
+\sin x=\frac{e^{iz}-e^{-iz}}{2i},\quad \cos z=\frac{e^{iz}+e^{-iz}}{2}
+\]</span></p>
+<p><u><strong>Theo</strong></u> <strong>(Liouville)</strong></p>
+<p>Any bounded entire functions is constant <span
+class="math inline">\(\blacklozenge\)</span></p>
+<p><strong>pf. 1</strong></p>
+<p><span class="math display">\[
+f(z)=\sum_{k=0}^{\infty}a_kz^k,\quad |f(z)|\leq M, \forall
+z\in\mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+\therefore |a_k|\leq \frac{M}{R^k}
+\]</span></p>
+<p>当<span class="math inline">\(k\geqslant 1\)</span>时,</p>
+<p><span class="math display">\[
+|a_k|\leqslant \lim_{R\rightarrow \infty}\frac{M}{R^k}=0
+\]</span></p>
+<p><span class="math display">\[
+\therefore f(z)=f(0)\ \blacksquare
+\]</span></p>
+<p><strong>pf. 2</strong></p>
+<p><span class="math inline">\(z\in \mathbb{C}\)</span>, choose <span
+class="math inline">\(R&gt;|z|\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    |f(z)-f(0)|&amp;=\bigg|\frac{1}{2\pi
+i}\int_{|w|=R}\frac{f(w)}{w-z}dw-\frac{1}{2\pi
+i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
+    &amp;=\bigg|\frac{1}{2\pi i}\int_{|w|=R}(\frac{1}{w-z}-\frac
+1w)f(w)dw \bigg|\\
+    &amp;\leqslant \frac{1}{2\pi i}\int_{|w|=R}|\frac{z}{w(w-z)}|\cdot
+|f(w)|\cdot |dw|\\
+    &amp;\leqslant \frac{1}{2\pi i}\cdot M\cdot
+\frac{|z|}{R(R-|z|)}\cdot 2\pi R\\
+    &amp;=\frac{M|z|i}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
+\blacksquare
+\end{aligned}
+\]</span></p>
+<p><span
+class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
+class="math inline">\(\geqslant R-|z|\)</span></p>
+<p><img data-src="3B_2.png" width=300px></p>
+<hr />
+<h1 id="代數基本定理">代數基本定理</h1>
+<p><u>Theo</u> (Fundamental theorem of algebra)</p>
+<p>let <span class="math inline">\(p(z)\)</span> be a complex-valued
+polynomial of <span class="math inline">\(\deg P\geqslant
+1\)</span>.</p>
+<p>Then <span class="math inline">\(\exists w\in \mathbb{C}, \ s.t.\
+p(w)=0\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
+<p>pf. <span class="math inline">\(p(z)=az+b\quad a\neq 0\)</span>,
+<span class="math inline">\(w=-\frac{b}{a}\)</span></p>
+<p>Assume <span class="math inline">\(\deg P=k\geqslant 2\)</span></p>
+<p><strong>pf. 1</strong></p>
+<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
+\mathbb{C}\)</span></p>
+<p><span class="math display">\[
+\therefore q(z)=\frac{1}{p(z)}\in O(\mathbb{C})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    |q(z)|&amp;=\frac{1}{|a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0|}\\
+    &amp;=\frac{1}{|z|^k\cdot
+|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|}\\
+    &amp;\leqslant \frac{2}{|a_k|\cdot |z|^k}
+\end{aligned}
+\]</span></p>
+<p>最后一步是因为 <span class="math display">\[
+\frac{|a_k|}{2}\leqslant
+|a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|
+\]</span></p>
+<p>当<span class="math inline">\(z\rightarrow \infty\)</span>时，<span
+class="math inline">\(|q(z)|\rightarrow 0\)</span></p>
+<p><span class="math inline">\(\therefore q\)</span> is bounded,
+entire</p>
+<p>By Liouville, <span class="math inline">\(q\equiv c\)</span>,
+const</p>
+<p><span class="math display">\[
+\therefore p(z) \text{ is a constant function}
+\]</span></p>
+<p>矛盾 <span class="math inline">\(\blacksquare\)</span>.</p>
+<p><strong>pf. 2</strong> 用最根本的Cauchy定理證</p>
+<p>Assume <span class="math inline">\(p(z)\neq 0, \forall z\in
+\mathbb{C}\)</span> and <span class="math inline">\(\big[\)</span><span
+class="math inline">\(p(x)\)</span> is real if <span
+class="math inline">\(z=x\in \mathbb{R}\)</span><span
+class="math inline">\(\big]\)</span>.</p>
+<p>If <span class="math inline">\([ \ ]\)</span> does not hold, then
+consider <span class="math inline">\(p(z)\bar{p}(z)=Q(z)\)</span>, <span
+class="math display">\[
+\bar{p}(z)=\bar{a_k}z^k+\bar{a_{k-1}}z^{k-1}+\cdots
++\bar{a_1}z+\bar{a_0}
+\]</span></p>
+<blockquote>
+<p>Set <span class="math inline">\(a_1=x_1+iy_1,
+a_2=x_2+iy_2\)</span></p>
+<p><span class="math display">\[
+a_1\bar{a_2}+a_2\bar{a_1}=x_1x_2+y_1y_2\in \mathbb{R}
+\]</span></p>
+</blockquote>
+<p>Set</p>
+<p><span class="math display">\[
+I=\int_0^{2\pi}\frac{d\theta}{p(2\cos \theta)}\neq 0
+\]</span></p>
+<p>在<span class="math inline">\(\theta\in[0,2\pi]\)</span>上，<span
+class="math inline">\(2\cos \theta\in [-1,1]\)</span>，<span
+class="math inline">\(I\neq 0\)</span>沒有問題</p>
+<p><span class="math display">\[
+p(z)=a_kz^k+a_{k-1}z^{k-1}+\cdots+a_1z+a_0
+\]</span></p>
+<p><span class="math inline">\(z=e^{i\theta}=\cos
+\theta+i\sin\theta\)</span></p>
+<p>所以<span class="math inline">\(\displaystyle
+\cos\theta=\frac{z+\bar{z}}{2}=\frac{1}{2}(z+\frac{1}{z})\Rightarrow2\cos\theta
+=z+\frac{1}{z}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    p(2\cos\theta)&amp;=a_k(z+\frac{1}{z})^k+a_{k-1}(z+\frac{1}{z})^{k-1}+\cdots+a_1(z+\frac{1}{z})+a_0\\
+    &amp;=\frac{1}{z^k}Q(z)
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(z=0\)</span>, <span
+class="math inline">\(Q(0)=a_k\neq 0\)</span>，最高次係數不為0</p>
+<p>If <span class="math inline">\(z\neq 0\)</span>, <span
+class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
+class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
+class="math inline">\(Q(z)\neq 0\)</span></p>
+<p>既然<span
+class="math inline">\(Q(z)\)</span>总是不為0，把它放在分母上仍是解析函数</p>
+<p><span class="math display">\[
+I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
+\xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz
+\]</span></p>
+<p>由Cauchy定理 <span class="math display">\[
+I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
+\]</span></p>
+<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+      <tags>
+        <tag>Liouville定理</tag>
+        <tag>解析延拓</tag>
+        <tag>Cauchy estimate</tag>
+        <tag>代數基本定理</tag>
       </tags>
   </entry>
   <entry>
