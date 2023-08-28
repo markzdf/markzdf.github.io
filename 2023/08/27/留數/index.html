@@ -25,32 +25,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这个问题困扰我很久，为什么hexo s跟hexo d结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。">
+    <meta name="description" content="Residue（留數） Let \(z_0\) be a singularity of \(f\), let \(C\) be a simple closed curve (positively oriented), s.t. \(z_0\) is surrounded by \(C\) and \(f\) is holomorphic on \(U\verb|\|\{z_0\}\) and \(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解決hexo本地和部署不一致問題">
-<meta property="og:url" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
+<meta property="og:title" content="留數">
+<meta property="og:url" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="这个问题困扰我很久，为什么hexo s跟hexo d结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。">
+<meta property="og:description" content="Residue（留數） Let \(z_0\) be a singularity of \(f\), let \(C\) be a simple closed curve (positively oriented), s.t. \(z_0\) is surrounded by \(C\) and \(f\) is holomorphic on \(U\verb|\|\{z_0\}\) and \(">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png">
-<meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/new.png">
-<meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/default.png">
-<meta property="og:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/pages.png">
-<meta property="article:published_time" content="2023-07-30T16:00:36.000Z">
-<meta property="article:modified_time" content="2023-08-27T12:58:45.131Z">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6C_1.jpg">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6D_1.jpg">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6D_2.jpg">
+<meta property="article:published_time" content="2023-08-27T14:14:42.000Z">
+<meta property="article:modified_time" content="2023-08-28T05:55:11.682Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/branch.png">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6C_1.jpg">
 
 
-<link rel="canonical" href="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/","path":"2023/07/31/解决hexo本地和部署不一致问题/","title":"解決hexo本地和部署不一致問題"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/","path":"2023/08/27/留數/","title":"留數"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>解決hexo本地和部署不一致問題 | MyNotes</title>
+<title>留數 | MyNotes</title>
   
 
 
@@ -144,7 +143,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -157,12 +156,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="解決hexo本地和部署不一致問題 | MyNotes">
+      <meta itemprop="name" content="留數 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          解決hexo本地和部署不一致問題
+          留數
         </h1>
 
         <div class="post-meta-container">
@@ -173,14 +172,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2023-07-31 00:00:36" itemprop="dateCreated datePublished" datetime="2023-07-31T00:00:36+08:00">2023-07-31</time>
+      <time title="創建時間：2023-08-27 22:14:42" itemprop="dateCreated datePublished" datetime="2023-08-27T22:14:42+08:00">2023-08-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-27 20:58:45" itemprop="dateModified" datetime="2023-08-27T20:58:45+08:00">2023-08-27</time>
+      <time title="修改時間：2023-08-28 13:55:11" itemprop="dateModified" datetime="2023-08-28T13:55:11+08:00">2023-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -188,7 +187,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+          <a href="/categories/%E8%A4%87%E8%AE%8A/" itemprop="url" rel="index"><span itemprop="name">複變</span></a>
         </span>
     </span>
 
@@ -208,45 +207,125 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+    <div class="post-body" itemprop="articleBody"><p>Residue（留數）</p>
+<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
+<span class="math inline">\(f\)</span>, let <span
+class="math inline">\(C\)</span> be a simple closed curve (positively
+oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
+by <span class="math inline">\(C\)</span> and <span
+class="math inline">\(f\)</span> is holomorphic on <span
+class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
 <span id="more"></span>
-<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img data-src="branch.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
-<figure>
-<img data-src="new.png" alt="new" />
-<figcaption aria-hidden="true">new</figcaption>
-</figure>
-<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
-<code>main</code>。</p>
-<figure>
-<img data-src="default.png" alt="default" />
-<figcaption aria-hidden="true">default</figcaption>
-</figure>
-<p>接着在 Settings 的 Default branch 一栏点击<span
-class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
-<code>main</code>，点击 Update ，点击红色的 I understand。</p>
-<figure>
-<img data-src="pages.png" alt="pages" />
-<figcaption aria-hidden="true">pages</figcaption>
-</figure>
-<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
-main，保存。</p>
-<p>最后记得在博客文件夹的 <code>_config.yml</code>
-内将deploy部分的branch改为<code>main</code>。</p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可实现部署和本地一致。</p>
-<p><strong>参考资料</strong></p>
+<p><img data-src="6C_1.jpg" width=600px></p>
+<h1 id="theo-residue">Theo (residue)</h1>
+<p><span class="math inline">\(C\)</span> surrounds <span
+class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
+i}\int_{C_j}f(z)dz
+\]</span></p>
+<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
+    &amp;=\frac{1}{2\pi
+i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
++\frac{C_{-1}}{z-z_0}\right)dz\\
+    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
+e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
+    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
+e^{i\theta}}+C_{-1}\right)d\theta
+\end{aligned}
+\]</span></p>
 <ol type="1">
-<li><p><a
-target="_blank" rel="noopener" href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
+f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
 </ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
+\]</span></p>
+<ol start="2" type="1">
+<li>如果是order of the pole m&gt;1</li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow
+z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
++C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
+\]</span></p>
+<h1 id="infty上的留數"><span
+class="math inline">\(\infty\)</span>上的留數</h1>
+<p>如果在<span
+class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
+<ol type="1">
+<li>removable: <span class="math inline">\(Res=0\)</span></li>
+<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
+<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
+</ol>
+<h2 id="判斷infty是哪類奇異點">判斷<span
+class="math inline">\(\infty\)</span>是哪類奇異點</h2>
+<p><span class="math display">\[
+f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi
+i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
+i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
+\]</span></p>
+<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
+class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
+<p>因此</p>
+<p><span class="math display">\[
+Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
+\]</span></p>
+<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
+class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
+<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
+<p><span class="math display">\[
+w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
+\]</span></p>
+<p><img data-src="6D_1.jpg" width=650px></p>
+<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
+<p>e.g.</p>
+<p><span class="math display">\[
+f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
+\]</span></p>
+<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
+\]</span></p>
+<p>右邊變成<span
+class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
+residue at 0</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
+\]</span></p>
+<h2 id="mathbbc_infty上的留數"><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
+<p><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
+singularity，把它們的留數全部加起來一定等於0</p>
+<p><img data-src="6D_2.jpg" width=700px></p>
+<p>若<span
+class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
+<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
+sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
 
     </div>
 
@@ -260,14 +339,11 @@ target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/an
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/" rel="prev" title="如何在macOS環境下配置hexo">
-                  <i class="fa fa-angle-left"></i> 如何在macOS環境下配置hexo
+                <a href="/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/" rel="prev" title="hexo-next修改文字選中顏色">
+                  <i class="fa fa-angle-left"></i> hexo-next修改文字選中顏色
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="next" title="ODE基本概念">
-                  ODE基本概念 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -360,11 +436,11 @@ target="_blank" rel="noopener" href="https://www.zhihu.com/question/319817323/an
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"657a7a390d9d7226ae82c4594314c4fe"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"922914686313e9ba9a4637c37e8311ed"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

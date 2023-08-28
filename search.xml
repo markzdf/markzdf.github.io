@@ -84,6 +84,7 @@ f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
       </categories>
       <tags>
         <tag>Morera定理</tag>
+        <tag>Schwarz反射定理</tag>
       </tags>
   </entry>
   <entry>
@@ -1013,7 +1014,7 @@ href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
 <p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
 ]]></content>
       <categories>
-        <category>開發</category>
+        <category>Hexo</category>
       </categories>
   </entry>
   <entry>
@@ -1203,7 +1204,7 @@ OS环境下使用Hexo搭建个人博客</a></p>
 </ol>
 ]]></content>
       <categories>
-        <category>開發</category>
+        <category>Hexo</category>
       </categories>
   </entry>
   <entry>
@@ -1711,11 +1712,66 @@ pole</p>
 poles.</p>
 <h2 id="第三類">第三類</h2>
 <p>Essential singular point 本質奇異點</p>
-<p><strong>Picard's little theorem</strong></p>
-<p>對於不是常數的entire function，值域最多只能miss一個點</p>
 <p>e.g. <span class="math inline">\(f(z)=e^z\)</span> misses <span
 class="math inline">\(0\)</span> only e.g. <span
 class="math inline">\(f(z)=z\)</span> doesn't miss</p>
+<p><img data-src="wiki" width=650px></p>
+<h3 id="theo-casorati-weierstrass">Theo (Casorati-Weierstrass)</h3>
+<p>Let <span class="math inline">\(z_0\)</span> be an essential
+singularity of <span class="math inline">\(f\)</span>. Let <span
+class="math inline">\(U\)</span> be an open neighborhood of <span
+class="math inline">\(z_0\)</span>, s.t. <span
+class="math inline">\(f\in O(U\verb|\|\{z_0\})\)</span></p>
+<p>Then <span class="math inline">\(f(U\verb|\|\{z_0\})\)</span> is
+dense in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p>pf.</p>
+<p>If not. i.e. <span
+class="math inline">\(\overline{f(U\verb|\|\{z_0\})}\neq
+\mathbb{C}\)</span></p>
+<p><span
+class="math inline">\(\mathbb{C}\verb|\|f(U\verb|\|\{z_0\})\)</span>
+contains <span class="math inline">\(B(p;\delta),
+\delta&gt;0\)</span></p>
+<p>Consider</p>
+<p><span class="math display">\[
+g(z)=\frac{1}{f(z)-p}\quad z\in U\verb|\|\{z_0\}
+\]</span></p>
+<p><span class="math display">\[
+|g(z)|=\frac{1}{|f(z)-p|}\leqslant \frac{1}{\delta}
+\]</span></p>
+<p><span class="math inline">\(\therefore z_0\)</span> is a removable
+singularity of <span class="math inline">\(g\)</span></p>
+<p><span class="math display">\[
+\therefore \lim_{z\rightarrow z_0}g(z)=L \quad \exists L
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(L=0\)</span></li>
+</ol>
+<p><span class="math display">\[
+\therefore \lim_{z\rightarrow z_0}|f(z)|=\infty \Rightarrow z_0\text{ is
+a pole}
+\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(L\neq 0\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{1}{\displaystyle\lim_{z\rightarrow z_0}f(z)-p}=L\neq 0\Rightarrow
+\lim_{z\rightarrow z_0}=p+\frac{1}{L}\quad \text{removable}
+\]</span></p>
+<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
+<hr />
+<p><strong>Picard's great thoerem</strong></p>
+<p>Same hypothesis as Casorati-Weierstrass</p>
+<p>Then <span class="math inline">\(f(U\verb|\|\{z_0\})\)</span> misses
+at most one point</p>
+<p>e.g. <span class="math inline">\(f(z)=e^{1/z}\)</span> misses only
+0</p>
+<p><strong>Picard's little theorem</strong></p>
+<p>Let <span class="math inline">\(f\in O(\mathbb{C})\)</span>. If <span
+class="math inline">\(f(\mathbb{C})\)</span> misses two points then
+<span class="math inline">\(f\)</span> is a constant function</p>
+<p>回想Liouville，說有界的entire
+function是常數函數。皮卡小定理則證明出只要整函數miss兩個點就變成常數函數，厲害很多</p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -1724,6 +1780,7 @@ class="math inline">\(f(z)=z\)</span> doesn't miss</p>
         <tag>平均值定理</tag>
         <tag>最大模型原理</tag>
         <tag>Liouville定理</tag>
+        <tag>Casorati-Weierstrass定理</tag>
       </tags>
   </entry>
   <entry>
@@ -2215,7 +2272,8 @@ most 2</p>
 |\oint_{\partial R_n}dz|=|\int_a^b\gamma&#39;(t)dt|\leq
 \int_a^b|\gamma&#39;(t)|dt=Ln
 \]</span> <span class="math inline">\((z-P_0)\)</span>小于等于<span
-class="math inline">\(Ln\)</span>（弦长小于等于直径），<span
+class="math inline">\(Ln\)</span>（圓心到邊界的連線<span
+class="math inline">\(\leqslant\)</span>周長），<span
 class="math inline">\(dz\)</span>积分也小于<span
 class="math inline">\(Ln\)</span>，所以两次。<span
 class="math inline">\(\epsilon\)</span>用最大值提出来 <span
@@ -2325,6 +2383,53 @@ B_{\epsilon}}\frac{f(w)}{w-z}dw=0
 \int_{C}\frac{f(w)}{w-z}dw=2\pi if(z)\Rightarrow f(z)=\frac{1}{2\pi
 i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
 \]</span></p>
+<hr />
+<p>(Theo) Let D be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, let <span
+class="math inline">\(f_n\in O(D), n\in \mathbb{N}\)</span>, If <span
+class="math inline">\(f_n\)</span> <em>uniformly converges on compact
+subsets</em> (u.c.c.) of <span class="math inline">\(D\)</span> to <span
+class="math inline">\(f\)</span>, then</p>
+<p><span class="math display">\[
+f\in O(D) \ 且\ f_n&#39;\rightarrow f&#39;\quad u.c.c.\ on \ D
+\]</span></p>
+<blockquote>
+<p>在real上考慮<span class="math inline">\(\displaystyle
+f_n(x)=\frac{\sin nx}{\sqrt{n}}\)</span>，<span
+class="math inline">\(f_n\rightarrow f\equiv 0\)</span> uniformly on
+<span class="math inline">\(\mathbb{R}\)</span>. 但<span
+class="math inline">\(f_n&#39;(x)=\sqrt{n}\cos nx\)</span>, <span
+class="math inline">\(f&#39;_n(0)=\sqrt{n}\)</span>，不收斂於<span
+class="math inline">\(f\equiv 0\)</span></p>
+</blockquote>
+<p>複變的表現很不一樣</p>
+<p>pf.</p>
+<p><span class="math inline">\(f\in C(D)\)</span>, choose <span
+class="math inline">\(\bar{B}(z_0;\delta)\subset D\)</span>, <span
+class="math inline">\(z\in B(z_0;\delta)\)</span></p>
+<p><img data-src="6A_1.jpg" width=600px></p>
+<p><span class="math display">\[
+f_n(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f_n(w)}{w-z}dw
+\]</span></p>
+<p>對等式兩邊求極限<span class="math inline">\(\displaystyle
+\lim_{n\rightarrow \infty}\)</span></p>
+<p><span class="math display">\[
+f(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f(w)}{w-z}dw
+\]</span></p>
+<p>求導</p>
+<p><span class="math display">\[
+f_n&#39;(z)=\frac{1}{2\pi
+i}\int_{\Gamma_{\delta}}\frac{f_n(w)}{(w-z)^2}dw
+\]</span></p>
+<p><span class="math display">\[
+n\rightarrow\infty\quad \Downarrow \quad \text{uniformly on a smaller
+disc}
+\]</span></p>
+<p><span class="math display">\[
+f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f(w)}{(w-z)^2}dw
+\]</span></p>
+<p>相當於收斂函數從原來的<span class="math inline">\(f\)</span>變成<span
+class="math inline">\(f/(w-z)\)</span></p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -3082,7 +3187,7 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
 </ol>
 ]]></content>
       <categories>
-        <category>開發</category>
+        <category>Hexo</category>
       </categories>
   </entry>
   <entry>
@@ -3229,7 +3334,7 @@ i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
 |f(w)|\cdot |dw|\\
     &amp;\leqslant \frac{1}{2\pi i}\cdot M\cdot
 \frac{|z|}{R(R-|z|)}\cdot 2\pi R\\
-    &amp;=\frac{M|z|i}{R-|z|}\rightarrow 0\quad (R\rightarrow \infty)\
+    &amp;=\frac{M|z|}{i(R-|z|)}\rightarrow 0\quad (R\rightarrow \infty)\
 \blacksquare
 \end{aligned}
 \]</span></p>
@@ -3679,5 +3784,132 @@ w=[0.15,0.5,0.06,0.29]
 <p><img data-src="2.jpg" width=700px></p>
 <p>我對王者最本質的理解就是：它是款遊戲。不管再怎麼刺激，僅僅是個遊戲，手機一關，跟現實生活一點關聯也沒有。再問一句，為什麼玩遊戲？就是放鬆、開心呀。如果為了贏而贏，為了上分把自己弄的精疲力盡、氣急敗壞，何必玩呢？所以輸贏無所謂，自己開心最重要。即便隊伍輸了，我也可以贏了。而且這個遊戲上我見太多白痴，就龐大的基數和小樣本抽樣可以近似估計和我一起玩的都是白痴。那就不用客氣了，反正我不噁心他們就會被他們噁心，這也是個博弈。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>留數</title>
+    <url>/2023/08/27/%E7%95%99%E6%95%B8/</url>
+    <content><![CDATA[<p>Residue（留數）</p>
+<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
+<span class="math inline">\(f\)</span>, let <span
+class="math inline">\(C\)</span> be a simple closed curve (positively
+oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
+by <span class="math inline">\(C\)</span> and <span
+class="math inline">\(f\)</span> is holomorphic on <span
+class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
+<span id="more"></span>
+<p><img data-src="6C_1.jpg" width=600px></p>
+<h1 id="theo-residue">Theo (residue)</h1>
+<p><span class="math inline">\(C\)</span> surrounds <span
+class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
+i}\int_{C_j}f(z)dz
+\]</span></p>
+<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
+    &amp;=\frac{1}{2\pi
+i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
++\frac{C_{-1}}{z-z_0}\right)dz\\
+    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
+e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
+    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
+e^{i\theta}}+C_{-1}\right)d\theta
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
+f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
+\]</span></p>
+<ol start="2" type="1">
+<li>如果是order of the pole m&gt;1</li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow
+z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
++C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
+\]</span></p>
+<h1 id="infty上的留數"><span
+class="math inline">\(\infty\)</span>上的留數</h1>
+<p>如果在<span
+class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
+<ol type="1">
+<li>removable: <span class="math inline">\(Res=0\)</span></li>
+<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
+<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
+</ol>
+<h2 id="判斷infty是哪類奇異點">判斷<span
+class="math inline">\(\infty\)</span>是哪類奇異點</h2>
+<p><span class="math display">\[
+f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi
+i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
+i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
+\]</span></p>
+<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
+class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
+<p>因此</p>
+<p><span class="math display">\[
+Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
+\]</span></p>
+<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
+class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
+<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
+<p><span class="math display">\[
+w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
+\]</span></p>
+<p><img data-src="6D_1.jpg" width=650px></p>
+<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
+<p>e.g.</p>
+<p><span class="math display">\[
+f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
+\]</span></p>
+<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
+\]</span></p>
+<p>右邊變成<span
+class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
+residue at 0</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
+\]</span></p>
+<h2 id="mathbbc_infty上的留數"><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
+<p><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
+singularity，把它們的留數全部加起來一定等於0</p>
+<p><img data-src="6D_2.jpg" width=700px></p>
+<p>若<span
+class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
+<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
+sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
   </entry>
 </search>

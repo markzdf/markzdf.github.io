@@ -34,12 +34,14 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/5A_1.jpg">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/5B_1.jpg">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/wiki">
 <meta property="article:published_time" content="2023-08-22T06:04:18.000Z">
-<meta property="article:modified_time" content="2023-08-26T15:02:30.992Z">
+<meta property="article:modified_time" content="2023-08-27T16:36:38.984Z">
 <meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="平均值定理">
 <meta property="article:tag" content="最大模型原理">
 <meta property="article:tag" content="Liouville定理">
+<meta property="article:tag" content="Casorati-Weierstrass定理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/5A_1.jpg">
 
@@ -181,7 +183,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-26 23:02:30" itemprop="dateModified" datetime="2023-08-26T23:02:30+08:00">2023-08-26</time>
+      <time title="修改時間：2023-08-28 00:36:38" itemprop="dateModified" datetime="2023-08-28T00:36:38+08:00">2023-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -439,11 +441,66 @@ pole</p>
 poles.</p>
 <h2 id="第三類">第三類</h2>
 <p>Essential singular point 本質奇異點</p>
-<p><strong>Picard's little theorem</strong></p>
-<p>對於不是常數的entire function，值域最多只能miss一個點</p>
 <p>e.g. <span class="math inline">\(f(z)=e^z\)</span> misses <span
 class="math inline">\(0\)</span> only e.g. <span
 class="math inline">\(f(z)=z\)</span> doesn't miss</p>
+<p><img data-src="wiki" width=650px></p>
+<h3 id="theo-casorati-weierstrass">Theo (Casorati-Weierstrass)</h3>
+<p>Let <span class="math inline">\(z_0\)</span> be an essential
+singularity of <span class="math inline">\(f\)</span>. Let <span
+class="math inline">\(U\)</span> be an open neighborhood of <span
+class="math inline">\(z_0\)</span>, s.t. <span
+class="math inline">\(f\in O(U\verb|\|\{z_0\})\)</span></p>
+<p>Then <span class="math inline">\(f(U\verb|\|\{z_0\})\)</span> is
+dense in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p>pf.</p>
+<p>If not. i.e. <span
+class="math inline">\(\overline{f(U\verb|\|\{z_0\})}\neq
+\mathbb{C}\)</span></p>
+<p><span
+class="math inline">\(\mathbb{C}\verb|\|f(U\verb|\|\{z_0\})\)</span>
+contains <span class="math inline">\(B(p;\delta),
+\delta&gt;0\)</span></p>
+<p>Consider</p>
+<p><span class="math display">\[
+g(z)=\frac{1}{f(z)-p}\quad z\in U\verb|\|\{z_0\}
+\]</span></p>
+<p><span class="math display">\[
+|g(z)|=\frac{1}{|f(z)-p|}\leqslant \frac{1}{\delta}
+\]</span></p>
+<p><span class="math inline">\(\therefore z_0\)</span> is a removable
+singularity of <span class="math inline">\(g\)</span></p>
+<p><span class="math display">\[
+\therefore \lim_{z\rightarrow z_0}g(z)=L \quad \exists L
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(L=0\)</span></li>
+</ol>
+<p><span class="math display">\[
+\therefore \lim_{z\rightarrow z_0}|f(z)|=\infty \Rightarrow z_0\text{ is
+a pole}
+\]</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(L\neq 0\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{1}{\displaystyle\lim_{z\rightarrow z_0}f(z)-p}=L\neq 0\Rightarrow
+\lim_{z\rightarrow z_0}=p+\frac{1}{L}\quad \text{removable}
+\]</span></p>
+<p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
+<hr />
+<p><strong>Picard's great thoerem</strong></p>
+<p>Same hypothesis as Casorati-Weierstrass</p>
+<p>Then <span class="math inline">\(f(U\verb|\|\{z_0\})\)</span> misses
+at most one point</p>
+<p>e.g. <span class="math inline">\(f(z)=e^{1/z}\)</span> misses only
+0</p>
+<p><strong>Picard's little theorem</strong></p>
+<p>Let <span class="math inline">\(f\in O(\mathbb{C})\)</span>. If <span
+class="math inline">\(f(\mathbb{C})\)</span> misses two points then
+<span class="math inline">\(f\)</span> is a constant function</p>
+<p>回想Liouville，說有界的entire
+function是常數函數。皮卡小定理則證明出只要整函數miss兩個點就變成常數函數，厲害很多</p>
 
     </div>
 
@@ -456,6 +513,7 @@ class="math inline">\(f(z)=z\)</span> doesn't miss</p>
               <a href="/tags/%E5%B9%B3%E5%9D%87%E5%80%BC%E5%AE%9A%E7%90%86/" rel="tag"># 平均值定理</a>
               <a href="/tags/%E6%9C%80%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/" rel="tag"># 最大模型原理</a>
               <a href="/tags/Liouville%E5%AE%9A%E7%90%86/" rel="tag"># Liouville定理</a>
+              <a href="/tags/Casorati-Weierstrass%E5%AE%9A%E7%90%86/" rel="tag"># Casorati-Weierstrass定理</a>
           </div>
 
         

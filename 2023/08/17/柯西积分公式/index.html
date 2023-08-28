@@ -41,8 +41,9 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_2.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_3.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/6A_1.jpg">
 <meta property="article:published_time" content="2023-08-17T05:05:57.000Z">
-<meta property="article:modified_time" content="2023-08-27T12:15:53.316Z">
+<meta property="article:modified_time" content="2023-08-27T16:30:37.826Z">
 <meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="Cauchy定理">
 <meta property="article:tag" content="Cauchy Kernel">
@@ -188,7 +189,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-27 20:15:53" itemprop="dateModified" datetime="2023-08-27T20:15:53+08:00">2023-08-27</time>
+      <time title="修改時間：2023-08-28 00:30:37" itemprop="dateModified" datetime="2023-08-28T00:30:37+08:00">2023-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +390,8 @@ most 2</p>
 |\oint_{\partial R_n}dz|=|\int_a^b\gamma&#39;(t)dt|\leq
 \int_a^b|\gamma&#39;(t)|dt=Ln
 \]</span> <span class="math inline">\((z-P_0)\)</span>小于等于<span
-class="math inline">\(Ln\)</span>（弦长小于等于直径），<span
+class="math inline">\(Ln\)</span>（圓心到邊界的連線<span
+class="math inline">\(\leqslant\)</span>周長），<span
 class="math inline">\(dz\)</span>积分也小于<span
 class="math inline">\(Ln\)</span>，所以两次。<span
 class="math inline">\(\epsilon\)</span>用最大值提出来 <span
@@ -499,6 +501,53 @@ B_{\epsilon}}\frac{f(w)}{w-z}dw=0
 \int_{C}\frac{f(w)}{w-z}dw=2\pi if(z)\Rightarrow f(z)=\frac{1}{2\pi
 i}\int_{C}\frac{f(w)}{w-z}dw \quad \blacksquare
 \]</span></p>
+<hr />
+<p>(Theo) Let D be a domain in <span
+class="math inline">\(\mathbb{C}\)</span>, let <span
+class="math inline">\(f_n\in O(D), n\in \mathbb{N}\)</span>, If <span
+class="math inline">\(f_n\)</span> <em>uniformly converges on compact
+subsets</em> (u.c.c.) of <span class="math inline">\(D\)</span> to <span
+class="math inline">\(f\)</span>, then</p>
+<p><span class="math display">\[
+f\in O(D) \ 且\ f_n&#39;\rightarrow f&#39;\quad u.c.c.\ on \ D
+\]</span></p>
+<blockquote>
+<p>在real上考慮<span class="math inline">\(\displaystyle
+f_n(x)=\frac{\sin nx}{\sqrt{n}}\)</span>，<span
+class="math inline">\(f_n\rightarrow f\equiv 0\)</span> uniformly on
+<span class="math inline">\(\mathbb{R}\)</span>. 但<span
+class="math inline">\(f_n&#39;(x)=\sqrt{n}\cos nx\)</span>, <span
+class="math inline">\(f&#39;_n(0)=\sqrt{n}\)</span>，不收斂於<span
+class="math inline">\(f\equiv 0\)</span></p>
+</blockquote>
+<p>複變的表現很不一樣</p>
+<p>pf.</p>
+<p><span class="math inline">\(f\in C(D)\)</span>, choose <span
+class="math inline">\(\bar{B}(z_0;\delta)\subset D\)</span>, <span
+class="math inline">\(z\in B(z_0;\delta)\)</span></p>
+<p><img data-src="6A_1.jpg" width=600px></p>
+<p><span class="math display">\[
+f_n(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f_n(w)}{w-z}dw
+\]</span></p>
+<p>對等式兩邊求極限<span class="math inline">\(\displaystyle
+\lim_{n\rightarrow \infty}\)</span></p>
+<p><span class="math display">\[
+f(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f(w)}{w-z}dw
+\]</span></p>
+<p>求導</p>
+<p><span class="math display">\[
+f_n&#39;(z)=\frac{1}{2\pi
+i}\int_{\Gamma_{\delta}}\frac{f_n(w)}{(w-z)^2}dw
+\]</span></p>
+<p><span class="math display">\[
+n\rightarrow\infty\quad \Downarrow \quad \text{uniformly on a smaller
+disc}
+\]</span></p>
+<p><span class="math display">\[
+f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f(w)}{(w-z)^2}dw
+\]</span></p>
+<p>相當於收斂函數從原來的<span class="math inline">\(f\)</span>變成<span
+class="math inline">\(f/(w-z)\)</span></p>
 
     </div>
 
