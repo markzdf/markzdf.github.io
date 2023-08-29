@@ -23,18 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/purple/pace-theme-loading-bar.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-
-<script> 
-   (function(){
-          if(''){
-              if (prompt('快說快說') !== ''){
-                  alert('錯啦！');
-                  history.back();
-              }
-          }
-      })();
-</script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Singular point 奇異點  \(\exists M&gt;0, |f(z)|\leqslant M, \forall z\in D&#x2F;\{z_0\}\) （removeable singularity） \(\displaystyle \lim_{z\rightarrow z_0}|f(z)|&#x3D;+\infty\) （pole 極點） \(f\) is not bounded on \(D">
 <meta property="og:type" content="article">
@@ -145,6 +134,65 @@
   </div>
 
 </header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#theo-mean-value-theorem"><span class="nav-number">1.</span> <span class="nav-text">Theo (Mean value theorem)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#theo-maximum-modulus-principle"><span class="nav-number">2.</span> <span class="nav-text">Theo (Maximum modulus
+principle)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#theo"><span class="nav-number">2.1.</span> <span class="nav-text">Theo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#extended-complex-plane"><span class="nav-number">3.</span> <span class="nav-text">Extended complex plane</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%95%E7%90%86%E5%A5%87%E7%95%B0%E9%BB%9E"><span class="nav-number">4.</span> <span class="nav-text">處理奇異點</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%A1%9E"><span class="nav-number">4.1.</span> <span class="nav-text">第一類</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#riemanns-theorem-on-removable-singularity"><span class="nav-number">4.1.1.</span> <span class="nav-text">Riemann&#39;s theorem on
+removable singularity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%8D%E8%AD%89%E6%98%8E-liouville"><span class="nav-number">4.1.2.</span> <span class="nav-text">再證明 Liouville</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%A1%9E"><span class="nav-number">4.2.</span> <span class="nav-text">第二類</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%A1%9E"><span class="nav-number">4.3.</span> <span class="nav-text">第三類</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#theo-casorati-weierstrass"><span class="nav-number">4.3.1.</span> <span class="nav-text">Theo (Casorati-Weierstrass)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">佛說Naga</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/markzdf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;markzdf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cabbagedafu@gmail.com" title="E-Mail → mailto:cabbagedafu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
     </div>
 
     <div class="main-inner post posts-expand">
@@ -586,28 +634,16 @@ function是常數函數。皮卡小定理則證明出只要整函數miss兩個�
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 強力驅動
   </div>
 
-
-
-<script>
-      var now = new Date(); 
-      function createtime() { 
-          var grt= new Date("07/29/2023 12:00:00");//此处修改你的建站时间或者网站上线时间 
-          now.setTime(now.getTime()+250); 
-          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-          document.getElementById("timeDate").innerHTML = "佛腳已經抱了 "+dnum+" 天 "; 
-          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-      } 
-  setInterval("createtime()",250);
-  </script>
     </div>
   </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="回到頂端">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
