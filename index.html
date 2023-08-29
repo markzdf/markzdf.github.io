@@ -134,6 +134,229 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="佛說Naga">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/" class="post-title-link" itemprop="url">留數例題</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2023-08-29 12:49:01 / 修改時間：16:18:07" itemprop="dateCreated datePublished" datetime="2023-08-29T12:49:01+08:00">2023-08-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%A4%87%E8%AE%8A/" itemprop="url" rel="index"><span itemprop="name">複變</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Contour integral（路徑積分）</p>
+<h1 id="計算int_-pipifracdtheta53cos-theta">計算<span
+class="math inline">\(\int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos
+\theta}\)</span></h1>
+<p><a
+target="_blank" rel="noopener" href="https://socratic.org/questions/594cf2bfb72cff192abb7f86">微積分做法</a>：let
+<span class="math inline">\(u=\tan \frac{\theta}{2}\cdots\)</span></p>
+<p>留數做法</p>
+<p><span class="math display">\[
+z=e^{i\theta}=\cos\theta+i\sin\theta
+\]</span></p>
+<p><span class="math display">\[
+\bar{z}=e^{-i\theta}=\cos\theta-i\sin\theta
+\]</span></p>
+<p><span class="math inline">\(|z|=1\)</span>, <span
+class="math inline">\(\bar{z}=\frac{1}{z}\)</span></p>
+<p><span class="math display">\[
+\cos\theta=\frac{1}{2}(z+\bar{z})=\frac{1}{2}(z+\frac{1}{z})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos \theta}&amp;=\int_C
+\frac{dz}{iz(5+\frac{3}{2}(z+\frac{1}{z}))}\\
+    &amp;=\frac{1}{i}\int_C\frac{dz}{\frac{3}{2}z^2+5z+\frac{3}{2}}\\
+    &amp;=\frac{2}{i}\int_C \frac{dz}{3z^2+10z+3}\\
+    &amp;=\frac{2}{i}\int_C\frac{dz}{(3z+1)(z+3)}\\
+    &amp;=4\pi \cdot \underbrace{\frac{1}{2\pi
+i}\int_C\frac{dz}{(3z+1)(z+3)}}_{Res\left(\frac{1}{(3z+1)(z+3)};-\frac{1}{3}\right)}
+\end{aligned}
+\]</span></p>
+<p><span
+class="math inline">\(\frac{1}{(3z+1)(z+3)}\)</span>有兩個simple
+pole，分別在<span
+class="math inline">\(z=-3,-\frac{1}{3}\)</span>，因為單位圓半徑是1，<span
+class="math inline">\(z=-3\)</span>在積分範圍外，只剩下<span
+class="math inline">\(-\frac{1}{3}\)</span></p>
+<p><span class="math display">\[
+Res=\lim_{z\rightarrow
+-\frac{1}{3}}(z+\frac{1}{3})\frac{1}{(3z+1)(z+3)}=\lim_{z\rightarrow
+-\frac{1}{3}}\frac{1}{3z+9}=\frac{1}{8}
+\]</span></p>
+<p><span class="math display">\[
+\therefore \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos
+\theta}=\frac{4\pi}{8}=\frac{\pi}{2}
+\]</span></p>
+<h1 id="計算int_-inftyinftyfracpxqxdx">計算<span
+class="math inline">\(\int_{-\infty}^{\infty}\frac{P(x)}{Q(x)}dx\)</span></h1>
+<p>條件：<span class="math inline">\(P,Q\)</span> real-valued
+polynomials, s.t.</p>
+<ol type="1">
+<li><span class="math inline">\(Q(x)\neq 0, x\in
+\mathbb{R}\)</span></li>
+<li><span class="math inline">\(\deg Q\geqslant 2+\deg P\)</span></li>
+</ol>
+<h2 id="例1.-int_-inftyinftyfracdx1x4">例1. <span
+class="math inline">\(\int_{-\infty}^{\infty}\frac{dx}{1+x^4}\)</span></h2>
+<p><a
+target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/333611/evaluating-int-frac1x41-dx">微積分方法</a>：</p>
+<p><span class="math display">\[
+x^4+1=x^4+2x^2+1-2x^2=(x^2+1)^2-2x^2=(x^2+\sqrt{2}x+1)(x^2-\sqrt{2}x+1)
+\]</span></p>
+<p>留數方法：</p>
+<h3 id="半圓">半圓</h3>
+<p>先算奇異點<span class="math inline">\(z^4+1=0\Rightarrow
+z^4=-1=e^{\pi i}\)</span></p>
+<p><span class="math display">\[
+z=e^{\frac{\pi}{4}i}, e^{\frac{3}{4}\pi i}, e^{\frac{5}{4}\pi i},
+e^{\frac{7}{4}\pi i}
+\]</span></p>
+<p><img data-src="1.jpg" width=500px></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i
+Res\left(\frac{1}{1+z^4};e^{\frac{\pi}{4}i},e^{\frac{3}{4}\pi i}\right)
+\]</span></p>
+<p><span class="math display">\[
+Res\ at\ e^{\frac{\pi}{4}i}
+=\lim_{z\rightarrow
+e^{\frac{\pi}{4}i}}(z-e^{\frac{\pi}{4}i})\frac{1}{z^4+1}
+=\lim_{z\rightarrow
+e^{\frac{\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{\pi}{4}i}}}
+=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{\pi}{4}i}}}
+=\frac{1}{4e^{\frac{3}{4}\pi i}}
+=\frac{1}{4}e^{-\frac{3}{4}\pi i}
+=\frac{1}{4}(\cos \frac{3}{4}\pi-i\sin \frac{3}{4}\pi)
+\]</span></p>
+<p><span class="math display">\[
+Res\ at\ e^{\frac{3\pi}{4}i}
+=\lim_{z\rightarrow
+e^{\frac{3\pi}{4}i}}(z-e^{\frac{3\pi}{4}i})\frac{1}{z^4+1}
+=\lim_{z\rightarrow
+e^{\frac{3\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{3\pi}{4}i}}}
+=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{3\pi}{4}i}}}
+=\frac{1}{4e^{\frac{9}{4}\pi i}}
+=\frac{1}{4}e^{-\frac{9}{4}\pi i}
+=\frac{1}{4}e^{-\frac{\pi}{4} i}
+=\frac{1}{4}(\cos \frac{1}{4}\pi-i\sin \frac{1}{4}\pi)
+\]</span></p>
+<p><span class="math inline">\(e^{-\frac{9}{4}\pi i}=e^{-\frac{\pi}{4}
+i}\)</span>是因為<span class="math inline">\(e^{2\pi
+i}=1\)</span>，把兩個點的留數相加</p>
+<p><span class="math display">\[
+\therefore \int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\times
+\frac{1}{4}(-2i\frac{\sqrt{2}}{2})=\frac{\sqrt{2}}{2}\pi
+\]</span></p>
+<p><span class="math display">\[
+\int_{-R}^R\frac{dx}{1+x^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}=\frac{\sqrt{2}}{2}\pi
+\]</span></p>
+<p>下面證明<span class="math inline">\(R\rightarrow
+\infty\)</span>時，第二項趨近於0</p>
+<p><span class="math display">\[
+\lim_{R\rightarrow\infty}\left|\int_{\Gamma_R}\frac{dz}{1+z^4}\right|\leqslant
+\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{Rd\theta}{|1+z^4|}\leqslant
+\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{2Rd\theta}{R^4}=\lim_{R\rightarrow\infty}\frac{2\pi
+}{R}=0
+\]</span></p>
+<p>where <span class="math inline">\(|1+z^4|\geqslant
+\frac{|z^4|}{2}=\frac{R^4}{2}\)</span></p>
+<h3 id="四分之一圓">四分之一圓</h3>
+<p><img align="left" data-src="2.jpg" width=180px></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\cdot
+Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
+\frac{1}{4}e^{-\frac{3}{4}\pi i}=\frac{2\pi i}{4}(\cos
+\frac{3}{4}\pi-i\sin \frac{3}{4}\pi)=\frac{\sqrt{2}}{4}\pi (1-i)
+\]</span></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=\int_{\Gamma_1}\frac{dz}{1+z^4}+\int_{\Gamma_3}\frac{dz}{1+z^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}
+\]</span></p>
+<p><span class="math display">\[
+\Downarrow
+\]</span></p>
+<p><span class="math display">\[
+\int_0^R\frac{dx}{1+x^4}+\int_R^0\frac{idy}{1+y^4}+\underbrace{\int_{\Gamma_R}\frac{dz}{1+z^4}}_{\xrightarrow{R\rightarrow
+\infty}0}=(1-i)\int_0^R\frac{dx}{1+x^4}\xrightarrow{R\rightarrow
+\infty}(1-i)\int_0^{\infty}\frac{dx}{1+x^4}
+\]</span></p>
+<p><span class="math display">\[
+\because (1-i)\int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
+(1-i)
+\]</span></p>
+<p><span class="math display">\[
+\therefore \int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
+\]</span></p>
+<h2 id="例2.-int_gammafracdzz22z2">例2. <span
+class="math inline">\(\int_{\Gamma}\frac{dz}{z^2+2z+2}\)</span></h2>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/28/ODE%E8%87%AA%E5%AD%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -164,7 +387,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-08-28 16:10:12 / 修改時間：16:44:03" itemprop="dateCreated datePublished" datetime="2023-08-28T16:10:12+08:00">2023-08-28</time>
+      <time title="創建時間：2023-08-28 16:10:12 / 修改時間：17:23:11" itemprop="dateCreated datePublished" datetime="2023-08-28T16:10:12+08:00">2023-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -186,19 +409,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img align="left" data-src="Morris.png" width=67px></p>
-<pre><code>    教材:
-    Ordinary Differential Equations
-    Morris Tenenbaum, Harry Pollard</code></pre>
-<ul>
-<li><a
-href="https://markzdf.github.io/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">ODE基本概念</a></li>
-<li><a
-href="https://markzdf.github.io/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">特殊微分方程的解</a></li>
-<li><a
-href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a></li>
-</ul>
-
+          <p>數院常微分跟數值線性代數衝突，下學期跟統計國際班一起修</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/08/28/ODE%E8%87%AA%E5%AD%B8/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -252,9 +471,15 @@ href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2023-08-28 15:51:14 / 修改時間：16:21:07" itemprop="dateCreated datePublished" datetime="2023-08-28T15:51:14+08:00">2023-08-28</time>
+      <time title="創建時間：2023-08-28 15:51:14" itemprop="dateCreated datePublished" datetime="2023-08-28T15:51:14+08:00">2023-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-08-29 00:18:11" itemprop="dateModified" datetime="2023-08-29T00:18:11+08:00">2023-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -491,7 +716,7 @@ target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-set
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/26/%E5%81%B6%E7%88%BEAI%E6%86%82%E6%85%AE/">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -509,7 +734,7 @@ target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-set
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/26/%E5%81%B6%E7%88%BEAI%E6%86%82%E6%85%AE/" class="post-title-link" itemprop="url">半夜的AI焦慮</a>
+          <a href="/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/" class="post-title-link" itemprop="url">半夜的AI焦慮</a>
         </h2>
 
         <div class="post-meta-container">
@@ -546,7 +771,7 @@ target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-set
           <p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2023/08/26/%E5%81%B6%E7%88%BEAI%E6%86%82%E6%85%AE/#more" rel="contents">
+              <a class="btn" href="/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -917,92 +1142,6 @@ class="math inline">\(\displaystyle \lim_{z\rightarrow z_0}|f(z)|\neq
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/08/22/Morera%E5%AE%9A%E7%90%86/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="佛說Naga">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MyNotes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MyNotes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/" class="post-title-link" itemprop="url">找實習</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-      
-
-      <time title="創建時間：2023-08-21 09:09:09 / 修改時間：09:29:40" itemprop="dateCreated datePublished" datetime="2023-08-21T09:09:09+08:00">2023-08-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AF%A6%E7%BF%92/" itemprop="url" rel="index"><span itemprop="name">實習</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>招牌對象為：金融、統計等專業優先</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
