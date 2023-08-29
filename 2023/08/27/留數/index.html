@@ -25,12 +25,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Residue（留數） Let $z_0$ be a singularity of $f$, let $C$ be a simple closed curve (positively oriented), s.t. $z_0$ is surrounded by $C$ and $f$ is holomorphic on $U\verb||{z_0}$ and $C\subset U\verb||{">
+    <meta name="description" content="Residue（留數） Let \(z_0\) be a singularity of \(f\), let \(C\) be a simple closed curve (positively oriented), s.t. \(z_0\) is surrounded by \(C\) and \(f\) is holomorphic on \(U\verb|\|\{z_0\}\) and \(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="留數">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="Residue（留數） Let $z_0$ be a singularity of $f$, let $C$ be a simple closed curve (positively oriented), s.t. $z_0$ is surrounded by $C$ and $f$ is holomorphic on $U\verb||{z_0}$ and $C\subset U\verb||{">
+<meta property="og:description" content="Residue（留數） Let \(z_0\) be a singularity of \(f\), let \(C\) be a simple closed curve (positively oriented), s.t. \(z_0\) is surrounded by \(C\) and \(f\) is holomorphic on \(U\verb|\|\{z_0\}\) and \(">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6C_1.jpg">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/6D_1.jpg">
@@ -208,58 +208,124 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>Residue（留數）</p>
-<p>Let $z_0$ be a singularity of $f$, let $C$ be a simple closed curve (positively oriented), s.t. $z_0$ is surrounded by $C$ and $f$ is holomorphic on $U\verb||{z_0}$ and $C\subset U\verb||{z_0}$</p>
+<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
+<span class="math inline">\(f\)</span>, let <span
+class="math inline">\(C\)</span> be a simple closed curve (positively
+oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
+by <span class="math inline">\(C\)</span> and <span
+class="math inline">\(f\)</span> is holomorphic on <span
+class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
 <span id="more"></span>
 <p><img data-src="6C_1.jpg" width=290px></p>
-<h1 id="Theo-residue"><a href="#Theo-residue" class="headerlink" title="Theo (residue)"></a>Theo (residue)</h1><p>$C$ surrounds $z_1,\cdots,z_k$, Then</p>
-<script type="math/tex; mode=display">
-\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi i}\int_{C_j}f(z)dz</script><p>$z_0$: pole, 則</p>
-<script type="math/tex; mode=display">
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)</script><script type="math/tex; mode=display">
+<h1 id="theo-residue">Theo (residue)</h1>
+<p><span class="math inline">\(C\)</span> surrounds <span
+class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
+i}\int_{C_j}f(z)dz
+\]</span></p>
+<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-    residue&=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
-    &=\frac{1}{2\pi i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots +\frac{C_{-1}}{z-z_0}\right)dz\\
-    &=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
-    &=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon e^{i\theta}}+C_{-1}\right)d\theta
-\end{aligned}</script><ol>
-<li>如果是single pole, i.e. $\displaystyle f(z)=\frac{C_{-1}}{z-z_0}+h(z)$</li>
+    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
+    &amp;=\frac{1}{2\pi
+i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
++\frac{C_{-1}}{z-z_0}\right)dz\\
+    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
+e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
+    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
+e^{i\theta}}+C_{-1}\right)d\theta
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
+f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
 </ol>
-<script type="math/tex; mode=display">
-z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)</script><p>因為</p>
-<script type="math/tex; mode=display">
-(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}</script><ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
+\]</span></p>
+<ol start="2" type="1">
 <li>如果是order of the pole m&gt;1</li>
 </ol>
-<script type="math/tex; mode=display">
-z_0留數=\lim_{z\rightarrow z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]</script><p>因為</p>
-<script type="math/tex; mode=display">
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)</script><script type="math/tex; mode=display">
-(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots +C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)</script><h1 id="infty-上的留數"><a href="#infty-上的留數" class="headerlink" title="$\infty$上的留數"></a>$\infty$上的留數</h1><p>如果在$\infty$處解析，則留數為0。若是singularity，則</p>
-<ol>
-<li>removable: $Res=0$</li>
-<li>pole: $Res=C_{-1}$</li>
-<li>essential: $Res=C_{-1}$</li>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow
+z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
++C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
+\]</span></p>
+<h1 id="infty上的留數"><span
+class="math inline">\(\infty\)</span>上的留數</h1>
+<p>如果在<span
+class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
+<ol type="1">
+<li>removable: <span class="math inline">\(Res=0\)</span></li>
+<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
+<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
 </ol>
-<h2 id="判斷-infty-是哪類奇異點"><a href="#判斷-infty-是哪類奇異點" class="headerlink" title="判斷$\infty$是哪類奇異點"></a>判斷$\infty$是哪類奇異點</h2><script type="math/tex; mode=display">
-f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0</script><script type="math/tex; mode=display">
-\frac{1}{2\pi i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)</script><p>where $z=\frac{1}{w}$, $dz=-\frac{1}{w^2}dw$</p>
+<h2 id="判斷infty是哪類奇異點">判斷<span
+class="math inline">\(\infty\)</span>是哪類奇異點</h2>
+<p><span class="math display">\[
+f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi
+i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
+i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
+\]</span></p>
+<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
+class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
 <p>因此</p>
-<script type="math/tex; mode=display">
-Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]</script><p>這裡$R$非常大，取倒數後$\frac{1}{R}$非常小，把原本的無窮遠點拉回到0</p>
-<p>denote $z=Re^{i\theta}$, then</p>
-<script type="math/tex; mode=display">
-w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}</script><p><img data-src="6D_1.jpg" width=650px></p>
+<p><span class="math display">\[
+Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
+\]</span></p>
+<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
+class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
+<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
+<p><span class="math display">\[
+w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
+\]</span></p>
+<p><img data-src="6D_1.jpg" width=650px></p>
 <p>所以無窮遠時是逆時針，取倒數後變順時針</p>
 <p>e.g.</p>
-<script type="math/tex; mode=display">
-f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}</script><p>左邊residue at $\infty$</p>
-<script type="math/tex; mode=display">
-\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0</script><p>右邊變成$-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}$, residue at 0</p>
-<script type="math/tex; mode=display">
-\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0</script><h2 id="mathbb-C-infty-上的留數"><a href="#mathbb-C-infty-上的留數" class="headerlink" title="$\mathbb{C}_{\infty}$上的留數"></a>$\mathbb{C}_{\infty}$上的留數</h2><p>$\mathbb{C}_{\infty}$上只有有限個isolated singularity，把它們的留數全部加起來一定等於0</p>
+<p><span class="math display">\[
+f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
+\]</span></p>
+<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
+\]</span></p>
+<p>右邊變成<span
+class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
+residue at 0</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
+\]</span></p>
+<h2 id="mathbbc_infty上的留數"><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
+<p><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
+singularity，把它們的留數全部加起來一定等於0</p>
 <p><img data-src="6D_2.jpg" width=700px></p>
-<p>若$\infty$是奇異點，如左圖，抵銷</p>
-<p>若$\infty$是解析的，想像成Riemann sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
+<p>若<span
+class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
+<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
+sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
 
     </div>
 
