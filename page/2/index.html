@@ -25,6 +25,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
+<script> 
+   (function(){
+          if(''){
+              if (prompt('快說快說') !== ''){
+                  alert('錯啦！');
+                  history.back();
+              }
+          }
+      })();
+</script>
+
     <meta property="og:type" content="website">
 <meta property="og:title" content="MyNotes">
 <meta property="og:url" content="https://markzdf.github.io/page/2/">
@@ -634,7 +645,7 @@ class="math inline">\(\blacklozenge\)</span></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-29 19:08:38" itemprop="dateModified" datetime="2023-08-29T19:08:38+08:00">2023-08-29</time>
+      <time title="修改時間：2023-08-29 23:27:38" itemprop="dateModified" datetime="2023-08-29T23:27:38+08:00">2023-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -728,7 +739,7 @@ target="_blank" rel="noopener" href="https://ocw.nthu.edu.tw/ocw/index.php?page=
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-21 06:52:37" itemprop="dateModified" datetime="2023-08-21T06:52:37+08:00">2023-08-21</time>
+      <time title="修改時間：2023-08-29 23:29:18" itemprop="dateModified" datetime="2023-08-29T23:29:18+08:00">2023-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -750,7 +761,7 @@ target="_blank" rel="noopener" href="https://ocw.nthu.edu.tw/ocw/index.php?page=
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="几何应用">几何应用</h1>
+          <h1 id="幾何應用">幾何應用</h1>
 <p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
 class="math inline">\(\beta\)</span>.</p>
           <!--noindex-->
@@ -1104,6 +1115,24 @@ points of the set.</p>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 強力驅動
   </div>
 
+
+
+<script>
+      var now = new Date(); 
+      function createtime() { 
+          var grt= new Date("07/29/2023 12:00:00");//此处修改你的建站时间或者网站上线时间 
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+          document.getElementById("timeDate").innerHTML = "佛腳已經抱了 "+dnum+" 天 "; 
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+      } 
+  setInterval("createtime()",250);
+  </script>
     </div>
   </footer>
 
