@@ -25,23 +25,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="MyNotes">
-<meta property="og:url" content="https://markzdf.github.io/tags/Cantor%E4%BA%A4%E9%9B%86%E5%AE%9A%E7%90%86/">
+    <meta name="description" content="Next主題更新後取消了 custom_.styl 文件，所以自定義側邊欄要新建 _data&#x2F;sidebar.njk（具體見上篇文章），記得在config文件裡把sidebar取消注釋喔～">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-Next側邊欄魔改">
+<meta property="og:url" content="https://markzdf.github.io/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/">
 <meta property="og:site_name" content="MyNotes">
+<meta property="og:description" content="Next主題更新後取消了 custom_.styl 文件，所以自定義側邊欄要新建 _data&#x2F;sidebar.njk（具體見上篇文章），記得在config文件裡把sidebar取消注釋喔～">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-08-31T12:07:52.000Z">
+<meta property="article:modified_time" content="2023-08-31T12:22:37.239Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://markzdf.github.io/tags/Cantor%E4%BA%A4%E9%9B%86%E5%AE%9A%E7%90%86/">
+<link rel="canonical" href="https://markzdf.github.io/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"tags/Cantor交集定理/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/","path":"2023/08/31/Hexo-Next側邊欄魔改/","title":"Hexo-Next側邊欄魔改"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>標籤: Cantor交集定理 | MyNotes</title>
+<title>Hexo-Next側邊欄魔改 | MyNotes</title>
   
 
 
@@ -126,7 +130,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -139,6 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E9%9F%B3%E6%A8%82"><span class="nav-number">1.</span> <span class="nav-text">添加背景音樂</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%B9%E5%81%B4%E9%82%8A%E6%AC%84%E8%83%8C%E6%99%AF%E9%A1%8F%E8%89%B2"><span class="nav-number">2.</span> <span class="nav-text">改側邊欄背景顏色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8B%99%E6%B8%85%E5%96%AE"><span class="nav-number">3.</span> <span class="nav-text">添加任務清單</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -254,51 +259,118 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Cantor交集定理
-          <small>標籤</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="佛說Naga">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo-Next側邊欄魔改 | MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo-Next側邊欄魔改
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="創建時間：2023-08-31 20:07:52 / 修改時間：20:22:37" itemprop="dateCreated datePublished" datetime="2023-08-31T20:07:52+08:00">2023-08-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Next主題更新後取消了 <code>custom_.styl</code>
+文件，所以自定義側邊欄要新建 <code>_data/sidebar.njk</code>（具體見<a
+href="https://markzdf.github.io/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/?highlight=hexo">上篇文章</a>），記得在config文件裡把sidebar取消注釋喔～</p>
+<span id="more"></span>
+<h1 id="添加背景音樂">添加背景音樂</h1>
+<p>打開網易雲音樂網頁版，點開某一首歌或歌單，找到
+<code>生成外連播放器</code>，複制代碼進 <code>sidebar.njk</code>
+裡即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=110 src=&quot;//music.163.com/outchain/player?type=0&amp;id=8699439163&amp;auto=1&amp;height=90&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="改側邊欄背景顏色">改側邊欄背景顏色</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    /* Define the sidebar styles */</span><br><span class="line">    .sidebar &#123;</span><br><span class="line">        background-color: #F3EFF9; /* Change this to your desired color */</span><br><span class="line">        float: left; /* Adjust positioning as needed */</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="添加任務清單">添加任務清單</h1>
+<p>每項todo前有個勾選框，勾選後即便刷新也不會消失，</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-08-17T13:05:57+08:00"
-              content="2023-08-17">
-          08-17
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-        <a class="post-title-link" href="/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/" itemprop="url">
-          <span itemprop="name">柯西積分公式</span>
-        </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/" rel="prev" title="留數例題">
+                  <i class="fa fa-angle-left"></i> 留數例題
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -385,11 +457,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/tags/Cantor%E4%BA%A4%E9%9B%86%E5%AE%9A%E7%90%86/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"7940678c650b9e172cb1b1af63f612f9"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"597b2e607183598a2cdcdd30651a1407"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo-Next側邊欄魔改</title>
+    <url>/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/</url>
+    <content><![CDATA[<p>Next主題更新後取消了 <code>custom_.styl</code>
+文件，所以自定義側邊欄要新建 <code>_data/sidebar.njk</code>（具體見<a
+href="https://markzdf.github.io/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/?highlight=hexo">上篇文章</a>），記得在config文件裡把sidebar取消注釋喔～</p>
+<span id="more"></span>
+<h1 id="添加背景音樂">添加背景音樂</h1>
+<p>打開網易雲音樂網頁版，點開某一首歌或歌單，找到
+<code>生成外連播放器</code>，複制代碼進 <code>sidebar.njk</code>
+裡即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=110 src=&quot;//music.163.com/outchain/player?type=0&amp;id=8699439163&amp;auto=1&amp;height=90&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="改側邊欄背景顏色">改側邊欄背景顏色</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    /* Define the sidebar styles */</span><br><span class="line">    .sidebar &#123;</span><br><span class="line">        background-color: #F3EFF9; /* Change this to your desired color */</span><br><span class="line">        float: left; /* Adjust positioning as needed */</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="添加任務清單">添加任務清單</h1>
+<p>每項todo前有個勾選框，勾選後即便刷新也不會消失，</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>留數例題</title>
     <url>/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/</url>
     <content><![CDATA[<p>Contour integral（路徑積分）</p>
@@ -377,6 +398,9 @@ href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義�
 <code>source/_data/styles.styl</code> 中（<a
 href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line">.post-body p a&#123; </span><br><span class="line">    color: #0593d3; </span><br><span class="line">    border-bottom: none; </span><br><span class="line">    border-bottom: 1px solid #0593d3; </span><br><span class="line">    &amp;:hover &#123; </span><br><span class="line">        color: #fc6423; </span><br><span class="line">        border-bottom: none; </span><br><span class="line">        border-bottom: 1px solid #fc6423; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line">/* webkit, opera, IE9 */</span><br><span class="line">::selection &#123; </span><br><span class="line">    background: #DAD5F4;</span><br><span class="line">    color: #4B0082; </span><br><span class="line">&#125;</span><br><span class="line">/* firefox */</span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    background: #DAD5F4;</span><br><span class="line">    color: #4B0082;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然後打開next的 <code>_config.yml</code>，把 <code>styles.styl</code>
+取消注釋</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  #head: source/_data/head.njk</span><br><span class="line">  #header: source/_data/header.njk</span><br><span class="line">  #sidebar: source/_data/sidebar.njk</span><br><span class="line">  #postMeta: source/_data/post-meta.njk</span><br><span class="line">  #postBodyStart: source/_data/post-body-start.njk</span><br><span class="line">  #postBodyEnd: source/_data/post-body-end.njk</span><br><span class="line">  #footer: source/_data/footer.njk</span><br><span class="line">  #bodyEnd: source/_data/body-end.njk</span><br><span class="line">  #variable: source/_data/variables.styl</span><br><span class="line">  #mixin: source/_data/mixins.styl</span><br><span class="line">  style: source/_data/styles.styl</span><br></pre></td></tr></table></figure>
 <p>另外，主題的文字顏色、上下框顏色等也可以調，在next根目錄中由
 <code>source/css/_schemes/Mist/index.styl</code>
 （我用的是mist），在最頂上加入下面的代碼即可</p>
