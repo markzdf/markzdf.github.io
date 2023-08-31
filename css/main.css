@@ -1115,7 +1115,7 @@ pre code {
   padding: 2px;
 }
 .site-author-name {
-  color: #f5f5f5;
+  color: #4f2956;
   font-weight: normal;
   margin: 5px 0 0;
 }
@@ -2552,12 +2552,12 @@ header.header {
   z-index: 20;
 }
 .sidebar a {
-  border-bottom-color: #555;
-  color: #999;
+  border-bottom-color: #4f2956;
+  color: #4f2956;
 }
 .sidebar a:hover {
-  border-bottom-color: #eee;
-  color: #eee;
+  border-bottom-color: #e289ea;
+  color: #e289ea;
 }
 .links-of-author:not(:first-child) {
   margin-top: 15px;
@@ -2570,7 +2570,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff6acf;
+  background: #ff4674;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2626,9 +2626,9 @@ header.header {
   border-bottom: 1px solid #4f2956;
 }
 .post-body p a:hover {
-  color: #a864b4;
+  color: #e289ea;
   border-bottom: none;
-  border-bottom: 1px solid #a864b4;
+  border-bottom: 1px solid #e289ea;
 }
 /* webkit, opera, IE9 */
 ::selection {
