@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/3B_1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/3B_2.png">
 <meta property="article:published_time" content="2023-08-18T03:33:59.000Z">
-<meta property="article:modified_time" content="2023-08-27T14:58:57.804Z">
+<meta property="article:modified_time" content="2023-09-01T14:27:36.477Z">
 <meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="Liouville定理">
 <meta property="article:tag" content="解析延拓">
@@ -430,7 +430,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-08-27 22:58:57" itemprop="dateModified" datetime="2023-08-27T22:58:57+08:00">2023-08-27</time>
+      <time title="修改時間：2023-09-01 22:27:36" itemprop="dateModified" datetime="2023-09-01T22:27:36+08:00">2023-09-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -524,7 +524,7 @@ f^{(k)}(z)=\frac{k!}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z)^{k+1}}dw
 <hr />
 <h2 id="解析延拓">解析延拓</h2>
 <p><span class="math inline">\(a_k\)</span>的值跟<span
-class="math inline">\(R\)</span>没关系，圆盘可以任意大小。有可能出现展开后超出domain：<a
+class="math inline">\(R\)</span>沒關系，圓盤可以任意大小。有可能出現展開後超出domain：<a
 href="/download/AnalyticContinuation.pdf"><strong>解析延拓</strong></a>（holomorphic
 continuation）</p>
 <p><img data-src="3A_2.png" width=300px></p>
@@ -532,14 +532,14 @@ continuation）</p>
 <p><span class="math display">\[
 f(z)=\sum_{k=0}^{\infty}z^k \Rightarrow \frac{1}{1-z}
 \]</span></p>
-<p><span class="math inline">\(z&lt;1\)</span>时收敛，<span
-class="math inline">\(z\geq 1\)</span>时发散</p>
+<p><span class="math inline">\(z&lt;1\)</span>時收斂，<span
+class="math inline">\(z\geq 1\)</span>時發散</p>
 <p>在<span class="math inline">\(z=-\frac 12\)</span>展开， <span
 class="math display">\[
 f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
 \]</span></p>
 <p>在<span class="math inline">\(|z+\frac 12|&lt;\frac
-32\)</span>上统统收敛</p>
+32\)</span>上統統收斂</p>
 <p><img data-src="3B_1.png" width=300px></p>
 <hr />
 <h2 id="cauchy-estimate">Cauchy Estimate</h2>
@@ -554,7 +554,7 @@ f(z)=\sum_{k=0}^{\infty}b_k(z+\frac{1}{2})^k
 |a_k|=|\frac{1}{2\pi i}\int_{\Gamma}\frac{f(w)}{(w-z_0)^{k+1}}dw
 |\leq\frac{1}{2\pi}\cdot M\cdot \frac{2\pi R}{R^{k+1}}=\frac{M}{R^k}
 \]</span></p>
-<p>控制了函数值就能控制系数<span class="math inline">\(a_k\)</span></p>
+<p>控制了函數值就能控制系數<span class="math inline">\(a_k\)</span></p>
 <hr />
 <h1 id="liouville定理">Liouville定理</h1>
 <p>f: entire function if <span class="math inline">\(f\in
@@ -604,7 +604,7 @@ i}\int_{|w|=R}\frac{f(w)}{w}dw\bigg|\\
 \end{aligned}
 \]</span></p>
 <p><span
-class="math inline">\((w-z)\)</span>边界到圆内一点的距离一定<span
+class="math inline">\((w-z)\)</span>邊界到圓內一點的距離一定<span
 class="math inline">\(\geqslant R-|z|\)</span></p>
 <p><img data-src="3B_2.png" width=300px></p>
 <hr />
@@ -632,7 +632,7 @@ p(w)=0\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
     &amp;\leqslant \frac{2}{|a_k|\cdot |z|^k}
 \end{aligned}
 \]</span></p>
-<p>最后一步是因为 <span class="math display">\[
+<p>最後一步是因為 <span class="math display">\[
 \frac{|a_k|}{2}\leqslant
 |a_k+\frac{a_{k-1}z^{k-1}+\cdots+a_1z+a_0}{z^k}|
 \]</span></p>
@@ -693,7 +693,7 @@ class="math inline">\(p(2\cos\theta)\)</span>也是个多项式，<span
 class="math inline">\(p(2\cos \theta)\neq 0\)</span>，所以<span
 class="math inline">\(Q(z)\neq 0\)</span></p>
 <p>既然<span
-class="math inline">\(Q(z)\)</span>总是不為0，把它放在分母上仍是解析函数</p>
+class="math inline">\(Q(z)\)</span>總是不為0，把它放在分母上仍是解析函數</p>
 <p><span class="math display">\[
 I=\int_{0}^{2\pi }\frac{d\theta}{p(2\cos\theta)}
 \xrightarrow[d\theta=\frac{dz}{iz}]{dz=ie^{i\theta}d\theta}\int_{|z|=1}\frac{z^k}{izQ(z)}dz

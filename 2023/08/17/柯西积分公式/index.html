@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/2D_3.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/6A_1.jpg">
 <meta property="article:published_time" content="2023-08-17T05:05:57.000Z">
-<meta property="article:modified_time" content="2023-09-01T13:41:53.503Z">
+<meta property="article:modified_time" content="2023-09-01T14:25:45.011Z">
 <meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="Cauchy定理">
 <meta property="article:tag" content="Cauchy Kernel">
@@ -434,7 +434,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-01 21:41:53" itemprop="dateModified" datetime="2023-09-01T21:41:53+08:00">2023-09-01</time>
+      <time title="修改時間：2023-09-01 22:25:45" itemprop="dateModified" datetime="2023-09-01T22:25:45+08:00">2023-09-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -508,7 +508,7 @@ e^{i\theta}}i\epsilon e^{i\theta}d\theta\\
     &amp;=2\pi if(w)
 \end{aligned}
 \]</span></p>
-<p>下面考虑这个积分</p>
+<p>下面考慮這個積分</p>
 <p><span class="math display">\[
 2i\iint_{D_{\epsilon}}\frac{\frac{\partial f}{\partial
 \bar{z}}(z)}{z-w}dxdy
@@ -523,7 +523,7 @@ Kernel</strong></a></p>
 \iint_K \bigg| \frac{1}{z-w} \bigg| dxdy&lt;\infty
 \]</span></p>
 <p>K: compact</p>
-<p>因为会收敛(用极坐标)</p>
+<p>因為會收斂(用極座標)</p>
 <p><span class="math display">\[
 \iint_B\frac{1}{|z|}dxdy=\int_{0}^{2\pi}\int_0^R\frac 1r rdrd\theta
 \]</span></p>
@@ -533,7 +533,7 @@ Kernel</strong></a></p>
 \bar{z}}(z)}{z-w}dxdy\rightarrow 2i\iint_{D}\frac{\frac{\partial
 f}{\partial \bar{z}}(z)}{z-w}dxdy
 \]</span></p>
-<p>所以<span class="math inline">\(\epsilon\rightarrow 0\)</span>时</p>
+<p>所以<span class="math inline">\(\epsilon\rightarrow 0\)</span>時</p>
 <p><span class="math display">\[
 \oint_{\partial D}\frac{f(z)}{z-w}dz-2\pi
 if(w)=2i\iint_{D}\frac{\frac{\partial f}{\partial \bar{z}}(z)}{z-w}dxdy
@@ -554,9 +554,9 @@ f(w)=\frac{1}{2\pi i}\oint_{\partial D}\frac{f(z)}{z-w}dw\quad w\in
 \]</span></p>
 <p><span class="math inline">\(\Omega\)</span>: region surrounded by the
 simple closed curve <span class="math inline">\(C\)</span></p>
-<p>simply connected 是为了保证<span
-class="math inline">\(C\)</span>围出来的还在<span
-class="math inline">\(D\)</span>里面，避免下面这种情况</p>
+<p>simply connected 是為了保證<span
+class="math inline">\(C\)</span>圍出來的還在<span
+class="math inline">\(D\)</span>裡面，避免下面這種情況</p>
 <p><img data-src="2A_2.png" width=300px></p>
 <hr />
 <p><u> <strong>Theo</strong></u> (Cauchy)</p>
@@ -569,19 +569,19 @@ class="math inline">\(D\)</span></p>
 \oint_C f(z)dz=0
 \]</span></p>
 <p>之前有<span
-class="math inline">\(C^1\)</span>是为了诉诸于格林定理，但证明这个定理不能用格林，要用完全不同的想法</p>
+class="math inline">\(C^1\)</span>是為了訴諸於格林定理，但證明這個定理不能用格林，要用完全不同的想法</p>
 <p><img data-src="2B_1.png" width=300px></p>
 <p><span class="math inline">\(R\)</span>: rectangle</p>
 <p><span class="math inline">\(L\)</span>: length of <span
 class="math inline">\(\partial R\)</span></p>
 <p><strong>Claim</strong>: <span class="math inline">\(\oint_{\partial
 R}f(z)dz=0\)</span></p>
-<p>反证法</p>
+<p>反證法</p>
 <p>Assume <span class="math inline">\(\exists R\)</span> s.t. <span
 class="math display">\[
 \oint_{\partial R}f(z)dz=A\neq 0
 \]</span></p>
-<p>切割，对大长方形积一次，相当于对四个小长方形各积一次</p>
+<p>切割，對大长方形積一次，相當於對四個小长方形各積一次</p>
 <p><img data-src="2B_2.png" width=300px></p>
 <p><span class="math display">\[
 \oint_Rf(z)dz=\sum_{k=1}^4\oint_{R^{(k)}}f(z)dz
@@ -608,14 +608,14 @@ f(z)=f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon (z)(z-P_0)
 \]</span></p>
 <p><span class="math inline">\(\epsilon\rightarrow 0\)</span> as <span
 class="math inline">\(z\rightarrow P_0\)</span></p>
-<p>n 很大时，<span class="math inline">\(f(z)\)</span>可以用<span
+<p>n 很大時，<span class="math inline">\(f(z)\)</span>可以用<span
 class="math inline">\(f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
-(z)(z-P_0)\)</span>替换</p>
+(z)(z-P_0)\)</span>替換</p>
 <p><span class="math display">\[
 \oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
 (z)(z-P_0)\right]dz
 \]</span></p>
-<p>多项式一定是某个函数的微分， <span class="math display">\[
+<p>多項式一定是某個函數的微分， <span class="math display">\[
 \therefore f(P_0)+f&#39;(P_0)(z-P_0)=Q&#39;(z)
 \]</span></p>
 <p><span class="math inline">\(Q(z)\)</span>: polynomial of degree at
@@ -631,15 +631,15 @@ most 2</p>
     =&amp; Q(\gamma(b))-Q(\gamma(a))=0\quad \text{首尾相连}
 \end{aligned}
 \]</span></p>
-<p>因为 <span class="math display">\[
+<p>因為 <span class="math display">\[
 |\oint_{\partial R_n}dz|=|\int_a^b\gamma&#39;(t)dt|\leq
 \int_a^b|\gamma&#39;(t)|dt=Ln
 \]</span> <span class="math inline">\((z-P_0)\)</span>小于等于<span
 class="math inline">\(Ln\)</span>（圓心到邊界的連線<span
 class="math inline">\(\leqslant\)</span>周長），<span
-class="math inline">\(dz\)</span>积分也小于<span
-class="math inline">\(Ln\)</span>，所以两次。<span
-class="math inline">\(\epsilon\)</span>用最大值提出来 <span
+class="math inline">\(dz\)</span>積分也小於<span
+class="math inline">\(Ln\)</span>，所以兩次。<span
+class="math inline">\(\epsilon\)</span>用最大值提出來 <span
 class="math display">\[
 \begin{aligned}
     &amp;|\oint_{\partial R_n}\left[f(P_0)+f&#39;(P_0)(z-P_0)+\epsilon
@@ -654,25 +654,25 @@ class="math inline">\(\displaystyle{L_n=\frac{L}{2^n}}\)</span></p>
 \max_{z\in \partial R_n}|\epsilon(z)|\cdot
 \left(\frac{L}{2^n}\right)^2\geq \frac{|A|}{4^n}
 \]</span></p>
-<p>当<span class="math inline">\(n\rightarrow \infty\)</span>时，<span
+<p>當<span class="math inline">\(n\rightarrow \infty\)</span>時，<span
 class="math inline">\(\max_{z\in \partial R_n}|\epsilon(z)|\rightarrow
 0\)</span></p>
 <p><span class="math display">\[
 \therefore \max_{z\in \partial R_n}|\epsilon(z)|\geq
 \frac{|A|}{L^2}\Rightarrow 0\geq \frac{|A|}{L^2}\quad \text{矛盾}.
 \]</span></p>
-<p>目前证得在所有的长方形上 <span class="math display">\[
+<p>目前證得在所有的長方形上 <span class="math display">\[
 \oint_{\partial R}f(z)dz=0 \ \square
 \]</span></p>
 <p><img data-src="cut.png"></p>
-<p>这个函数<span
-class="math inline">\(F(z)\)</span>必须well-defined：不管路径怎么选，积出来都一样</p>
-<p>要证明它well-defined</p>
+<p>這個函數<span
+class="math inline">\(F(z)\)</span>必須well-defined：不管路徑怎麼選，積出來都一樣</p>
+<p>要證明它well-defined</p>
 <p><span class="math display">\[
 \Leftrightarrow F(z)=\int_{\Gamma_1}f(z)dz=\int_{\Gamma_2}f(z)dz
 \]</span></p>
-<p>因为每段路径平行于<span class="math inline">\(x\)</span>或<span
-class="math inline">\(y\)</span>轴，可以视作长方形的一部分。借助刚才的准备工作，</p>
+<p>因為每段路徑平行於<span class="math inline">\(x\)</span>或<span
+class="math inline">\(y\)</span>轴，可以視作長方形的一部分。借助剛才的準備工作，</p>
 <p><span class="math display">\[
 \int_{\Gamma_1-\Gamma_2}f(z)dz=\int_{\Gamma_1}f(z)dz-\int_{\Gamma_2}f(z)dz=0\quad
 \square
@@ -692,8 +692,8 @@ w}\frac{\int_Cf(w)d\eta+[\int_Cf(\eta)d\eta-\int_Cf(w)d\eta]}{z-w}\\
     &amp;=f(w)\quad \square
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(f(w)\)</span>是常数，<span
-class="math inline">\(\int_Cf(w)d\eta=f(w)(z-w)\)</span>，后一项趋于0</p>
+<p><span class="math inline">\(f(w)\)</span>是常數，<span
+class="math inline">\(\int_Cf(w)d\eta=f(w)(z-w)\)</span>，後一項趨於0</p>
 <p><span class="math display">\[
 \begin{aligned}
     \oint_Cf(z)dz&amp;=\oint_CF&#39;(z)dz\\
@@ -715,7 +715,7 @@ class="math inline">\(C\)</span></p>
 f(z)=\frac{1}{2\pi i}\int\frac{f(w)}{w-z}dw\quad w\in \Omega
 \]</span></p>
 <p><img data-src="2D_2.png" width=400px></p>
-<p>区域内的点的函数值完完全全受边界点函数值的影响，可以又边界生成</p>
+<p>區域內的點的函數值完完全全受邊界點函數值的影響，可以又邊界生成</p>
 <blockquote>
 <p>卷积 convolution <span class="math display">\[
 f\rightarrow g(z)=\int f(w)g(z-w)dw
@@ -729,16 +729,17 @@ class="math inline">\(\Omega/\bar{B_{\epsilon}}=\Omega_{\epsilon}\)</span></p>
 <p><span class="math display">\[
 \int_{\partial \Omega_{\epsilon}}\frac{f(w)}{w-z}dw=0
 \]</span></p>
-<p>上一个定理证得：解析函数在它的边界积分等于0，因为<span
+<p>上一個定理證得：解析函數在它的邊界積分等於0，因為<span
 class="math inline">\(w=z\)</span>被挖掉了，而且<span
-class="math inline">\(\displaystyle \frac{1}{w-z}\)</span>有极限
-，所以<span class="math inline">\(\displaystyle
-\frac{f(w)}{w-z}\)</span>是解析函数</p>
+class="math inline">\(\displaystyle
+\frac{1}{w-z}\)</span>有極限，所以<span
+class="math inline">\(\displaystyle
+\frac{f(w)}{w-z}\)</span>是解析函數</p>
 <p><span class="math display">\[
 \int_{\partial \Omega=C}\frac{f(w)}{w-z}dw-\int_{\partial
 B_{\epsilon}}\frac{f(w)}{w-z}dw=0
 \]</span></p>
-<p>因为<span class="math inline">\(\epsilon\rightarrow 0\)</span>时，
+<p>因為<span class="math inline">\(\epsilon\rightarrow 0\)</span>時，
 <span class="math display">\[
 \int_{\partial B_{\epsilon}}\frac{f(w)}{w-z}dw\rightarrow 2\pi if(z)
 \]</span></p>
