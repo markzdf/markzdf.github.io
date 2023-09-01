@@ -298,9 +298,7 @@
 
     // Save elapsed time to localStorage before closing the window/tab
     window.addEventListener("beforeunload", () => {
-      if (running) {
         localStorage.setItem("elapsedTime", elapsedTime);
-      }
     });
   </script>
 </body>
