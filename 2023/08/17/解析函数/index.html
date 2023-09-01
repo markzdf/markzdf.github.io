@@ -25,24 +25,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Complex numbers $\mathbb{C}$  (a,b)\quad a,b\in \mathbb{R}">
+    <meta name="description" content="Complex numbers \(\mathbb{C}\) \[ (a,b)\quad a,b\in \mathbb{R} \]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析函數">
 <meta property="og:url" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="Complex numbers $\mathbb{C}$  (a,b)\quad a,b\in \mathbb{R}">
+<meta property="og:description" content="Complex numbers \(\mathbb{C}\) \[ (a,b)\quad a,b\in \mathbb{R} \]">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.1png">
+<meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.2.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.3.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/gamma.png">
 <meta property="article:published_time" content="2023-08-17T05:04:02.000Z">
-<meta property="article:modified_time" content="2023-09-01T12:55:21.923Z">
+<meta property="article:modified_time" content="2023-09-01T13:48:40.179Z">
 <meta property="article:author" content="佛說Naga">
 <meta property="article:tag" content="柯西黎曼方程">
 <meta property="article:tag" content="Green定理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.1png">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/1.1.png">
 
 
 <link rel="canonical" href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">
@@ -427,7 +427,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-01 20:55:21" itemprop="dateModified" datetime="2023-09-01T20:55:21+08:00">2023-09-01</time>
+      <time title="修改時間：2023-09-01 21:48:40" itemprop="dateModified" datetime="2023-09-01T21:48:40+08:00">2023-09-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -455,130 +455,258 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Complex numbers $\mathbb{C}$</p>
-<script type="math/tex; mode=display">
-(a,b)\quad a,b\in \mathbb{R}</script><span id="more"></span>
-<p>Define operations $+,\cdot$</p>
-<ol>
-<li>$(a,b)+(c,d)=(a+c,b+d)$</li>
-<li>$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$</li>
+    <div class="post-body" itemprop="articleBody"><p>Complex numbers <span class="math inline">\(\mathbb{C}\)</span></p>
+<p><span class="math display">\[
+(a,b)\quad a,b\in \mathbb{R}
+\]</span></p>
+<span id="more"></span>
+<p>Define operations <span class="math inline">\(+,\cdot\)</span></p>
+<ol type="1">
+<li><span class="math inline">\((a,b)+(c,d)=(a+c,b+d)\)</span></li>
+<li><span class="math inline">\((a,b)\cdot
+(c,d)=(ac-bd,ad+bc)\)</span></li>
 </ol>
-<p>$\therefore \mathbb{C}$形成一個 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B0%E5%AD%A6">field</a>)</p>
-<hr>
-<script type="math/tex; mode=display">
-\mathbb{R}\quad a\in \mathbb{R}</script><script type="math/tex; mode=display">
-a\mapsto (a,0)</script><script type="math/tex; mode=display">
-(a,0)\cdot (c,d)=(ac,ad)</script><script type="math/tex; mode=display">
-a(c,d)=(ac,ad)</script><script type="math/tex; mode=display">
-(0,1)\cdot (0,1)=(0-1,0)=(-1,0)</script><p>denote $(0,1)=i$, $i^2=-1$, $x^2+1=0$.</p>
-<hr>
-<script type="math/tex; mode=display">
-z\in \mathbb{C}\rightarrow z=a+ib</script><script type="math/tex; mode=display">
+<p><span class="math inline">\(\therefore \mathbb{C}\)</span>形成一個 <a
+target="_blank" rel="noopener" href="https://www.math.toronto.edu/fiona/courses/mat240/field.pdf">field</a></p>
+<p><span class="math display">\[
+\mathbb{R}\quad a\in \mathbb{R}
+\]</span></p>
+<p><span class="math display">\[
+a\mapsto (a,0)
+\]</span></p>
+<p><span class="math display">\[
+(a,0)\cdot (c,d)=(ac,ad)
+\]</span></p>
+<p><span class="math display">\[
+a(c,d)=(ac,ad)
+\]</span></p>
+<p><span class="math display">\[
+(0,1)\cdot (0,1)=(0-1,0)=(-1,0)
+\]</span></p>
+<p>Denote <span class="math inline">\((0,1)=i\)</span>, <span
+class="math inline">\(i^2=-1\)</span>, <span
+class="math inline">\(x^2+1=0\)</span>.</p>
+<p><span class="math display">\[
+z\in \mathbb{C}\rightarrow z=a+ib
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-z&=(a,b)\\
-&=(a,0)+(0,b)\\
-&=a+b(0,1)\\
-&=a+ib
-\end{aligned}</script><p>$a=\Re z$, real part</p>
-<p>$b=\Im z$, imaginary part</p>
-<p>$|z|=\sqrt{a^2+b^2}$, modulus</p>
-<p>$\bar{z}=a-ib$, complex conjugate</p>
-<hr>
-<script type="math/tex; mode=display">
-z,w\in \mathbb{C}</script><p>Define</p>
-<script type="math/tex; mode=display">
-d(z,w)=|z-w|</script><p>Thus: $z,w\in \mathbb{C}$</p>
-<script type="math/tex; mode=display">
-|z+w|\leqslant |z|+|w|</script><p>$(\mathbb{C},d)$: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Metric_space">metric space</a></p>
-<p>open ball centered at $z$ with radius $r$</p>
-<script type="math/tex; mode=display">
-B(z;r)=\{w\in \mathbb{C}\big | |w-z|<r\}</script><hr>
-<script type="math/tex; mode=display">
-f: \Omega\rightarrow \mathbb{C}\quad \Omega\subset \mathbb{C}</script><p>$\Omega$ 是 $\mathbb{C}$ 的一個(connected open) domain，現在在$\Omega$上選一個點</p>
-<script type="math/tex; mode=display">
-z_0\in \Omega</script><p>$f$ is said to be differentiable at $z<em>0$, if $\displaystyle{\lim</em>{z\rightarrow z_0}\frac{f(z)-f(z_0)}{z-z_0}}$ exists, denoted by $f’(z_0)$</p>
-<p><img data-src="1.1png" title="任何方式逼近" width=300px></p>
-<hr>
-<p>If $f$ is diff. at every point of $\Omega$, then we say $f$ is a holomorphic function （解析函數/全純函數） on $\Omega$.</p>
-<script type="math/tex; mode=display">
-O(\Omega)=\{\text{all of the holomorphic functions on }\Omega \}</script><p>有$S\subset \mathbb{C}$ set, $f\in O(S)$ means, $f$ is holomorphic on some open neighborhood of $S$.</p>
-<hr>
-<p><img data-src="1.2.png" alt="x"></p>
-<p><img data-src="1.3.png" alt="y"></p>
-<script type="math/tex; mode=display">
-\frac{\partial u}{\partial x}(z_0)=\frac{\partial v}{\partial y}(z_0)</script><script type="math/tex; mode=display">
-\frac{\partial u}{\partial y}(z_0)=-\frac{\partial v}{\partial x}(z_0)</script><p><code>Cauchy-Riemann eq.</code></p>
-<hr>
-<p>可導 $\Rightarrow$ 柯西黎曼方程，但柯西黎曼方程 $\nRightarrow$ 可導</p>
-<p>例. </p>
-<script type="math/tex; mode=display">
+z&amp;=(a,b)\\
+&amp;=(a,0)+(0,b)\\
+&amp;=a+b(0,1)\\
+&amp;=a+ib
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(a=\Re z\)</span>, real part</p>
+<p><span class="math inline">\(b=\Im z\)</span>, imaginary part</p>
+<p><span class="math inline">\(|z|=\sqrt{a^2+b^2}\)</span>, modulus</p>
+<p><span class="math inline">\(\bar{z}=a-ib\)</span>, complex
+conjugate</p>
+<hr />
+<p><span class="math display">\[
+z,w\in \mathbb{C}
+\]</span></p>
+<p>Define <span class="math display">\[
+d(z,w)=|z-w|
+\]</span></p>
+<p>Thus: <span class="math inline">\(z,w\in \mathbb{C}\)</span></p>
+<p><span class="math display">\[
+|z+w|\leqslant |z|+|w|
+\]</span></p>
+<p><span class="math inline">\((\mathbb{C},d)\)</span>: <a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Metric_space">metric space</a></p>
+<p>open ball centered at <span class="math inline">\(z\)</span> with
+radius <span class="math inline">\(r\)</span></p>
+<p><span class="math display">\[
+B(z;r)=\{w\in \mathbb{C}\big | |w-z|&lt;r\}
+\]</span></p>
+<hr />
+<p><span class="math display">\[
+f: \Omega\rightarrow \mathbb{C}\quad \Omega\subset \mathbb{C}
+\]</span></p>
+<p><span class="math inline">\(\Omega\)</span> 是 <span
+class="math inline">\(\mathbb{C}\)</span> 的一個(connected open)
+domain，現在在<span class="math inline">\(\Omega\)</span>上選一個點</p>
+<p><span class="math display">\[
+z_0\in \Omega
+\]</span></p>
+<p><span class="math inline">\(f\)</span> is said to be differentiable
+at <span class="math inline">\(z_0\)</span>, if <span
+class="math inline">\(\displaystyle{\lim_{z\rightarrow
+z_0}\frac{f(z)-f(z_0)}{z-z_0}}\)</span> exists, denoted by <span
+class="math inline">\(f&#39;(z_0)\)</span></p>
+<p><img data-src="1.1.png" title="任何方式逼近" width=300px></p>
+<hr />
+<p>If <span class="math inline">\(f\)</span> is diff. at every point of
+<span class="math inline">\(\Omega\)</span>, then we say <span
+class="math inline">\(f\)</span> is a holomorphic function
+（解析函數/全純函數） on <span
+class="math inline">\(\Omega\)</span>.</p>
+<p><span class="math display">\[
+O(\Omega)=\{\text{all of the holomorphic functions on }\Omega \}
+\]</span></p>
+<p>有<span class="math inline">\(S\subset \mathbb{C}\)</span> set, <span
+class="math inline">\(f\in O(S)\)</span> means, <span
+class="math inline">\(f\)</span> is holomorphic on some open
+neighborhood of <span class="math inline">\(S\)</span>.</p>
+<hr />
+<figure>
+<img data-src="1.2.png" alt="x" />
+<figcaption aria-hidden="true">x</figcaption>
+</figure>
+<figure>
+<img data-src="1.3.png" alt="y" />
+<figcaption aria-hidden="true">y</figcaption>
+</figure>
+<p><span class="math display">\[
+\frac{\partial u}{\partial x}(z_0)=\frac{\partial v}{\partial y}(z_0)
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial u}{\partial y}(z_0)=-\frac{\partial v}{\partial x}(z_0)
+\]</span></p>
+<p><code>Cauchy-Riemann eq.</code></p>
+<hr />
+<p>可導 <span class="math inline">\(\Rightarrow\)</span>
+柯西黎曼方程，但柯西黎曼方程 <span
+class="math inline">\(\nRightarrow\)</span> 可導</p>
+<p>例.</p>
+<p><span class="math display">\[
 u(x,y)=\begin{cases}
-\displaystyle{\frac{x^3-y^3}{x^2+y^2}} & (x,y)\neq (0,0)\\
-0 & (x,y)= (0,0)
-\end{cases}</script><script type="math/tex; mode=display">
+\displaystyle{\frac{x^3-y^3}{x^2+y^2}} &amp; (x,y)\neq (0,0)\\
+0 &amp; (x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
 v(x,y)=\begin{cases}
-\displaystyle{\frac{x^3+y^3}{x^2+y^2}} & (x,y)\neq (0,0)\\
-0 & (x,y)= (0,0)
-\end{cases}</script><script type="math/tex; mode=display">
-\frac{\partial u}{\partial x}(0,0)=1, \frac{\partial u}{\partial y}(0,0)=-1</script><script type="math/tex; mode=display">
-\frac{\partial v}{\partial x}(0,0)=1, \frac{\partial v}{\partial y}(0,0)=1</script><p>滿足柯西黎曼方程</p>
-<p>along $x$-axis</p>
-<script type="math/tex; mode=display">
-\lim \frac{f(x,0)-f(0,0)}{x}=\frac{x+ix-0}{x}=1+i</script><p>along $x=y$</p>
-<script type="math/tex; mode=display">
-\lim \frac{f(x,x)-f(0,0)}{x+ix}=\frac{ix}{x+ix}=\frac{i}{1+i}=\frac{1+i}{2}</script><hr>
-<p>If $f\in C^1(\Omega)$</p>
+\displaystyle{\frac{x^3+y^3}{x^2+y^2}} &amp; (x,y)\neq (0,0)\\
+0 &amp; (x,y)= (0,0)
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial u}{\partial x}(0,0)=1, \frac{\partial u}{\partial
+y}(0,0)=-1
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial v}{\partial x}(0,0)=1, \frac{\partial v}{\partial
+y}(0,0)=1
+\]</span></p>
+<p>滿足柯西黎曼方程</p>
+<p>along <span class="math inline">\(x\)</span>-axis <span
+class="math display">\[
+\lim \frac{f(x,0)-f(0,0)}{x}=\frac{x+ix-0}{x}=1+i
+\]</span></p>
+<p>along <span class="math inline">\(x=y\)</span> <span
+class="math display">\[
+\lim
+\frac{f(x,x)-f(0,0)}{x+ix}=\frac{ix}{x+ix}=\frac{i}{1+i}=\frac{1+i}{2}
+\]</span></p>
+<hr />
+<p>If <span class="math inline">\(f\in C^1(\Omega)\)</span></p>
 <p>Set <a href="dbar.pdf">Cauchy-Riemann operator</a></p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial \bar{z}}=\frac 12\left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y} \right)</script><script type="math/tex; mode=display">
+<p><span class="math display">\[
+\frac{\partial}{\partial \bar{z}}=\frac 12\left(\frac{\partial}{\partial
+x}+i\frac{\partial}{\partial y} \right)
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-\frac{\partial f}{\partial \bar{z}} & = \frac 12  \left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y} \right)(u+iv)  \\
-&= \frac 12\left (\left (\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}\right)+i\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
-&=0
-\end{aligned}</script><p>在滿足柯西黎曼方程的情况下</p>
-<script type="math/tex; mode=display">
-\Leftrightarrow f\in O(\Omega)</script><p>複變這門學問就是在研究這個方程式：</p>
-<script type="math/tex; mode=display">
-\frac{\partial u}{\partial \bar{z}}=g</script><p>$g=0$时，是解析函數</p>
-<hr>
+\frac{\partial f}{\partial \bar{z}} &amp; = \frac
+12  \left(\frac{\partial}{\partial x}+i\frac{\partial}{\partial y}
+\right)(u+iv)  \\
+&amp;= \frac 12\left (\left (\frac{\partial u}{\partial
+x}-\frac{\partial v}{\partial y}\right)+i\left(\frac{\partial
+u}{\partial y}+\frac{\partial v}{\partial x}\right) \right)\\
+&amp;=0
+\end{aligned}
+\]</span></p>
+<p>在滿足柯西黎曼方程的情况下</p>
+<p><span class="math display">\[
+\Leftrightarrow f\in O(\Omega)
+\]</span></p>
+<p>複變這門學問就是在研究這個方程式： <span class="math display">\[
+\frac{\partial u}{\partial \bar{z}}=g
+\]</span></p>
+<p><span class="math inline">\(g=0\)</span>时，是解析函數</p>
+<hr />
 <p>講点微積分。</p>
 <p><strong>Curve</strong></p>
-<script type="math/tex; mode=display">
-\gamma: [a,b]\rightarrow \mathbb{C}</script><script type="math/tex; mode=display">
-t\mapsto \gamma(t)=(x(t),y(t))</script><p>應該是 $t\in [a,b],\ \gamma(t)\in \mathbb{C}$</p>
-<p><strong>Smooth curve</strong></p>
-<script type="math/tex; mode=display">
-\gamma \in C^1([a,b]), \ and \ \ \gamma'(t)\neq 0\ \ on\ \ (a,b)</script><p><strong>Piecewise smooth</strong></p>
-<script type="math/tex; mode=display">
-\gamma: [a,b]\rightarrow \mathbb{C}</script><script type="math/tex; mode=display">
-\exists P=\{a=t_0<t_1<\cdots <t_{n-1}<t_n=b\}</script><script type="math/tex; mode=display">
-s.t. \quad \gamma \text{ is smooth on each }[t_{j-1},t_j], 1\leqslant j\leqslant n</script><p><strong>Theo (Green)</strong></p>
-<p>$D$ is a bounded domain in $\mathbb{R}^2$ with piecewise smooth boundary $\partial D$, let $P,Q$ be two functions which is $C^1$ in some open neighborhood of $\bar{D}$. Assume $\partial D$ is positively oriented. (沿邊界走時domain在左邊)</p>
-<p>$\bar{D}=cl (D)$, closure of $D$</p>
+<p><span class="math display">\[
+\gamma: [a,b]\rightarrow \mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+t\mapsto \gamma(t)=(x(t),y(t))
+\]</span></p>
+<p>應該是 <span class="math inline">\(t\in [a,b],\ \gamma(t)\in
+\mathbb{C}\)</span></p>
+<p><strong>Smooth curve</strong> <span class="math display">\[
+\gamma \in C^1([a,b]), \ and \ \ \gamma&#39;(t)\neq 0\ \ on\ \ (a,b)
+\]</span></p>
+<p><strong>Piecewise smooth</strong> <span class="math display">\[
+\gamma: [a,b]\rightarrow \mathbb{C}
+\]</span></p>
+<p><span class="math display">\[
+\exists P=\{a=t_0&lt;t_1&lt;\cdots &lt;t_{n-1}&lt;t_n=b\}
+\]</span></p>
+<p><span class="math display">\[
+s.t. \quad \gamma \text{ is smooth on each }[t_{j-1},t_j], 1\leqslant
+j\leqslant n
+\]</span></p>
+<p><strong>Theo (Green)</strong></p>
+<p><span class="math inline">\(D\)</span> is a bounded domain in <span
+class="math inline">\(\mathbb{R}^2\)</span> with piecewise smooth
+boundary <span class="math inline">\(\partial D\)</span>, let <span
+class="math inline">\(P,Q\)</span> be two functions which is <span
+class="math inline">\(C^1\)</span> in some open neighborhood of <span
+class="math inline">\(\bar{D}\)</span>. Assume <span
+class="math inline">\(\partial D\)</span> is positively oriented.
+(沿邊界走時domain在左邊)</p>
+<p><span class="math inline">\(\bar{D}=cl (D)\)</span>, closure of <span
+class="math inline">\(D\)</span></p>
 <p>Then</p>
-<script type="math/tex; mode=display">
-\oint_C Pdx+Qdy=\iint_D \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right)dxdy</script><hr>
-<p><u> <strong>Theo</strong></u>. Let $D$ be a <em>simply connected</em> domain in $\mathbb{C}$</p>
-<p>Suppose $f\in C^1(D)$, then</p>
-<script type="math/tex; mode=display">
-f\in O(D)\Leftrightarrow \oint_{\tau} f(z)dz=0</script><p>for every piecewise smooth <code>simple</code> <code>closed</code> curve $\tau$ in $D$</p>
+<p><span class="math display">\[
+\oint_C Pdx+Qdy=\iint_D \left(\frac{\partial Q}{\partial
+x}-\frac{\partial P}{\partial y} \right)dxdy
+\]</span></p>
+<hr />
+<p><u> <strong>Theo</strong></u>. Let <span
+class="math inline">\(D\)</span> be a <em>simply connected</em> domain
+in <span class="math inline">\(\mathbb{C}\)</span></p>
+<p>Suppose <span class="math inline">\(f\in C^1(D)\)</span>, then <span
+class="math display">\[
+f\in O(D)\Leftrightarrow \oint_{\Gamma} f(z)dz=0
+\]</span></p>
+<p>for every piecewise smooth <code>simple</code> <code>closed</code>
+curve <span class="math inline">\(\Gamma\)</span> in <span
+class="math inline">\(D\)</span></p>
 <p><code>simply connected</code> 說明兩件事</p>
-<ol>
+<ol type="1">
 <li>arcwise connected： 任何兩個點都能用arc連起來</li>
-<li>$\pi_1(D)=0$： domain内每個封閉曲線都能縮成一個點（没有洞）</li>
+<li><span class="math inline">\(\pi_1(D)=0\)</span>：
+domain内每個封閉曲線都能縮成一個點（没有洞）</li>
 </ol>
 <p><code>simple</code>：曲線除了起點和終點都不會自我相交</p>
 <p><code>closed</code>：起點和終點是同一個點</p>
-<p><img data-src="gamma.png" alt="gamma"></p>
-<p>$\Omega$: region surrounded by $\Gamma$.</p>
-<script type="math/tex; mode=display">
+<figure>
+<img data-src="gamma.png" alt="\Gamma" />
+<figcaption aria-hidden="true"><span
+class="math inline">\(\Gamma\)</span></figcaption>
+</figure>
+<p><span class="math inline">\(\Omega\)</span>: region surrounded by
+<span class="math inline">\(\Gamma\)</span>.</p>
+<p><span class="math display">\[
 \begin{aligned}
-\oint_{\Gamma} f(z)dz & = \oint_{\Gamma}f(z)(dx+idy)  \\
-& = \iint_{\Omega}\left(i\frac{\partial f}{\partial x}-\frac{\partial f}{\partial y}\right)dxdy  \\
-& = i\iint_{\Omega}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
-& = 2i\iint_{\Omega}\frac{\partial f}{\partial \bar{z}}dxdy  
-\end{aligned}</script><script type="math/tex; mode=display">
-\oint_{\Gamma} f(z)dz=0\Leftrightarrow \frac{\partial f}{\partial \bar{z}}=0\  on\  D.\  \blacksquare</script>
+\oint_{\Gamma} f(z)dz &amp; = \oint_{\Gamma}f(z)(dx+idy)  \\
+&amp; = \iint_{\Omega}\left(i\frac{\partial f}{\partial
+x}-\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = i\iint_{\Omega}\left(\frac{\partial f}{\partial
+x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
+&amp; = 2i\iint_{\Omega}\frac{\partial f}{\partial \bar{z}}dxdy  
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\oint_{\Gamma} f(z)dz=0\Leftrightarrow \frac{\partial f}{\partial
+\bar{z}}=0\  on\  D.\  \blacksquare
+\]</span></p>
+
     </div>
 
     
