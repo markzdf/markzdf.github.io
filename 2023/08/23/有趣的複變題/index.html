@@ -186,9 +186,6 @@
         <a href="mailto:cabbagedafu@gmail.com" title="E-Mail → mailto:cabbagedafu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
-
-
 <style>
     /* Define the sidebar styles */
     .sidebar {
@@ -196,6 +193,127 @@
         float: left; /* Adjust positioning as needed */
     }
 </style>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>計時器</title>
+  <style>
+    body {
+      color: #4F2956;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #4F2956;
+      margin-bottom: 2px;
+    }
+
+    #counter {
+      font-size: 18px;
+      color: #4F2956; 
+      margin-bottom: 0px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: #DAD5F4;
+      color: #4F2956;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .btn:hover {
+      background-color: #BEB6E9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="startStopBtn" class="btn">Start</button>
+    <button id="resetBtn" class="btn">Reset</button>
+    <p><span id="counter">00:00:00</span></p>
+  </div>
+
+  <script>
+    let startTime = 0;
+    let running = false;
+    let elapsedTime = 0;
+
+    const counterElement = document.getElementById("counter");
+    const startStopBtn = document.getElementById("startStopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function updateTime() {
+      const now = Date.now();
+      elapsedTime = running ? now - startTime : elapsedTime;
+      const formattedTime = formatTime(elapsedTime);
+      counterElement.textContent = formattedTime;
+    }
+
+    function formatTime(milliseconds) {
+      const totalSeconds = Math.floor(milliseconds / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
+    }
+
+    function padNumber(number) {
+      return number.toString().padStart(2, "0");
+    }
+
+    function toggleTimer() {
+      if (running) {
+        running = false;
+      } else {
+        running = true;
+        startTime = Date.now() - elapsedTime;
+      }
+      startStopBtn.textContent = running ? "Stop" : "Start";
+    }
+
+    function resetTimer() {
+      running = false;
+      elapsedTime = 0;
+      updateTime();
+    }
+
+    startStopBtn.addEventListener("click", toggleTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    // Load previous state from localStorage if available
+    const storedElapsedTime = localStorage.getItem("elapsedTime");
+    if (storedElapsedTime !== null) {
+      elapsedTime = parseInt(storedElapsedTime);
+      updateTime();
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Save elapsed time to localStorage before closing the window/tab
+    window.addEventListener("beforeunload", () => {
+      if (running) {
+        localStorage.setItem("elapsedTime", elapsedTime);
+      }
+    });
+  </script>
+</body>
+</html>
 
 
 <!DOCTYPE html>
@@ -260,7 +378,6 @@
     </div>
 </body>
 </html>
-
         </div>
       </div>
     </div>
