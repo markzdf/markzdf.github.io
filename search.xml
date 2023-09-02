@@ -270,7 +270,8 @@ class="math inline">\(\checkmark\)</span></label></p>
 <li><p><label><input type="checkbox" />圖論</label></p></li>
 <li><p><label><input type="checkbox" checked="" />分類模型</label></p>
 <pre><code>  Logistic回歸，K折交叉驗證*，Fisher判別分析*，多分類</code></pre></li>
-<li><p><label><input type="checkbox" />聚類算法</label></p></li>
+<li><p><label><input type="checkbox" checked="" />聚類算法</label></p>
+<pre><code>  K均值算法，系統聚類，聚合係數圖，DBSCAN算法*</code></pre></li>
 <li><p><label><input type="checkbox" />時間序列分析</label></p></li>
 <li><p><label><input type="checkbox" />灰色預測</label></p></li>
 <li><p><label><input type="checkbox" />SVD和圖形處理</label></p></li>
