@@ -100,7 +100,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>主線</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>主線</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網點</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -365,12 +365,158 @@
 </body>
 </html>
 
-<img src="/download/課表.png">
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+	.no-wrap {
+    		white-space: nowrap;
+	}
+
+	.inbox {
+            max-width: 1000px; /* Adjust as needed */
+            margin: 0 auto; /* Center horizontally */
+            padding: 0px; /* Add padding for spacing */
+            word-wrap: break-word; /* Allow word wrapping */
+            overflow: auto; /* Add scrollbars if necessary */
+            border: 1px solid #ddd; /* Add a border for visual separation */
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #F3EFF9;
+            color: #4F2956;
+        }
+	td {
+            color: #4F2956;
+        }
+    </style>
+</head>
+<body>
+    <table class="no-wrap">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Time slots from 1 to 11 -->
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td rowspan="3">NLA<br>海韻301</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+		<td rowspan="2">計量<br>嘉庚四201</td>
+                <td rowspan="2">公司金融<br>嘉庚四101</td>
+                <td></td>
+                <td rowspan="2">公司金融<br>嘉庚四101</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td rowspan="2">金工<br>南強二409</td>
+                <td></td>
+                <td rowspan="2">計量<br>嘉庚四201</td>
+                <td></td>
+                <td rowspan="2">高等概率論<br>南強二203</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td rowspan="2">形策<br>學公301</td>
+                <td></td>
+                <td rowspan="2">金工<br>南強二409</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td rowspan="2">ML<br>海韻107</td>
+                <td></td>
+                <td rowspan="2">高等概率論<br>南強二310</td>
+                <td rowspan="2">計算機史<br>南強二502</td>
+                <td rowspan="3">現代照明<br>群賢二105</td>
+            </tr>
+            <tr>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
         </div>
       </div>
     </div>
 
     
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.math.pku.edu.cn/teachers/lidf/course/fts/ftsnotes/html/_ftsnotes/index.html" title="https:&#x2F;&#x2F;www.math.pku.edu.cn&#x2F;teachers&#x2F;lidf&#x2F;course&#x2F;fts&#x2F;ftsnotes&#x2F;html&#x2F;_ftsnotes&#x2F;index.html" rel="noopener" target="_blank">北大時間序列分析</a>
+            </li>
+        </ul>
+      </div>
+    </div>
   </aside>
 
 
