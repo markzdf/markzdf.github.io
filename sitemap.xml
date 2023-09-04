@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://markzdf.github.io/smooth/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/</loc>
     
     <lastmod>2023-09-04</lastmod>
@@ -392,20 +401,6 @@
   </url>
   
   <url>
-    <loc>https://markzdf.github.io/tags/%E6%81%86%E7%AD%89%E5%AE%9A%E7%90%86/</loc>
-    <lastmod>2023-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://markzdf.github.io/tags/Weierstrass%E5%AE%9A%E7%90%86/</loc>
-    <lastmod>2023-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://markzdf.github.io/tags/Cauchy-estimate/</loc>
     <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -419,7 +414,28 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://markzdf.github.io/tags/%E6%81%86%E7%AD%89%E5%AE%9A%E7%90%86/</loc>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://markzdf.github.io/tags/Weierstrass%E5%AE%9A%E7%90%86/</loc>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://markzdf.github.io/categories/%E8%A4%87%E8%AE%8A/</loc>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://markzdf.github.io/categories/Hexo/</loc>
@@ -437,13 +453,6 @@
   
   <url>
     <loc>https://markzdf.github.io/categories/%E8%AA%B2%E7%A8%8B/</loc>
-    <lastmod>2023-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://markzdf.github.io/categories/%E8%A4%87%E8%AE%8A/</loc>
     <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
