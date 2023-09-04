@@ -34,8 +34,9 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://markzdf.github.io/download/smooth.png">
 <meta property="og:image" content="https://markzdf.github.io/download/dampedtrend.png">
-<meta property="article:published_time" content="2023-09-04T12:20:22.965Z">
-<meta property="article:modified_time" content="2023-09-04T12:20:22.965Z">
+<meta property="og:image" content="https://markzdf.github.io/download/winters.png">
+<meta property="article:published_time" content="2023-09-04T12:33:40.358Z">
+<meta property="article:modified_time" content="2023-09-04T12:33:40.358Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/download/smooth.png">
@@ -439,7 +440,7 @@ class="math inline">\(SARIMA(0,1,0)\times (0,1,1)\)</span></td>
 </tr>
 </tbody>
 </table>
-<h1 id="simple-模型">Simple 模型</h1>
+<h2 id="simple-模型">Simple 模型</h2>
 <p><span class="math display">\[
 S_t=\hat{x}_{t+1}且\hat{x}_{t+1}=\hat{x}_t+\alpha(x_t-\hat{x}_t)
 \]</span></p>
@@ -465,51 +466,73 @@ class="math inline">\(t\rightarrow t+1\)</span>。可見</p>
 class="math inline">\(\alpha=0.3\)</span>，得到平滑值<span
 class="math inline">\([10 12.4 17.4 16.7 20.7 18.1
 17.4]\)</span>，錯位一期。</p>
-<p><img data-src="/download/smooth.png" width=500px title="這就叫平滑"></p>
+<p><img data-src="/download/smooth.png" width=450px title="這就叫平滑"></p>
 <p><span class="math display">\[
 \hat{x}_{t+1}=\alpha x_t+\alpha
 (1-\alpha)x_{t-1}+\alpha(1-\alpha)^2x_{t-2}+\cdots+\alpha(1-\alpha)^{t-1}x_1+(1-\alpha)^tl_0
 \]</span></p>
 <p>其中<span class="math inline">\(l_0=\hat{x}_1\)</span>視為初值</p>
-<h1 id="linear-trend">Linear trend</h1>
-<h2 id="holt模型">Holt模型</h2>
+<h2 id="linear-trend">Linear trend</h2>
+<h1 id="holt模型">Holt模型</h1>
 <p><span class="math display">\[
 \begin{cases}
-    l_t=\overbrace{l_{t-1}+b_{t-1}}^{預期水平}+\alpha[\overbrace{x_t}^{真實水平}-(l_{t-1}+b_{t-1})]
-（水平平滑方程）\\
+    l_t=\underbrace{l_{t-1}+b_{t-1}}_{預期水平}+\alpha[\underbrace{x_t}_{真實水平}-(l_{t-1}+b_{t-1})]
+水平平滑方程\\
     b_t=\underbrace{b_{t-1}}_{預期趨勢}+\beta
-[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-b_{t-1}] （趨勢平滑方程）\\
-    \hat{x}_{t+h}=l_t+hb_t, h=1,2,\cdots （預測方程）
+[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-b_{t-1}] 趨勢平滑方程\\
+    \hat{x}_{t+h}=l_t+hb_t, h=1,2,\cdots 預測方程
 \end{cases}
 \]</span></p>
 <p><span class="math inline">\(h\)</span>：預測步長</p>
 <p><span class="math inline">\(\alpha\)</span>：水平的平滑參數</p>
 <p><span class="math inline">\(\beta\)</span>：趨勢的平滑參數</p>
-<h2 id="brown模型">Brown模型</h2>
+<h1 id="brown模型">Brown模型</h1>
 <p>Brown模型是<span
 class="math inline">\(\alpha=\beta\)</span>時的Holt模型</p>
-<h1 id="damped-trend">Damped trend</h1>
+<h2 id="damped-trend">Damped trend</h2>
 <p><span class="math display">\[
 \begin{cases}
-    l_t=\overbrace{l_{t-1}+\phi
-b_{t-1}}^{預期水平}+\alpha[\overbrace{x_t}^{真實水平}-(l_{t-1}+\phi
-b_{t-1})] （水平平滑方程）\\
+    l_t=\underbrace{l_{t-1}+\phi
+b_{t-1}}_{預期水平}+\alpha[\underbrace{x_t}_{真實水平}-(l_{t-1}+\phi
+b_{t-1})] 水平平滑方程\\
     b_t=\underbrace{\phi b_{t-1}}_{預期趨勢}+\beta
-[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-\phi b_{t-1}] （趨勢平滑方程）\\
+[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-\phi b_{t-1}] 趨勢平滑方程\\
     \hat{x}_{t+h}=l_t+(\phi+\phi^2+\cdots +\phi^h)b_t, h=1,2,\cdots
-（預測方程）
+預測方程
 \end{cases}
 \]</span></p>
 <p><span class="math inline">\(\phi\)</span>：阻尼係數，<span
 class="math inline">\(\phi \in (0,1]\)</span>。當<span
 class="math inline">\(\phi=1\)</span>時就是Holt模型</p>
 <p><img data-src="/download/dampedtrend.png" width=600px></p>
-<h1 id="simple-seasonal">Simple seasonal</h1>
+<h2 id="simple-seasonal">Simple seasonal</h2>
 <p><span class="math display">\[
 \begin{cases}
-    l_t=
+    l_t=l_{t-1}+\alpha[x_t-s_{t-m}-l_{t-1}] 水平平滑\\
+    s_t=s_{t-m}+\gamma[(x_t-l_{t-1})-s_{t-m}] 季節平滑\\
+    \hat{x}_{t+h}=l_t+s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
 \end{cases}
 \]</span></p>
+<p><span class="math inline">\(m\)</span>：週期長度（月度12，季度4）</p>
+<h2 id="winters-additive">Winters' additive</h2>
+<p><span class="math display">\[
+\begin{cases}
+    l_t=l_{t-1}+\alpha[x_t-s_{t-m}-l_{t-1}] 水平平滑\\
+    b_t=b_{t-1}+\beta [(l_t-l_{t-1})-b_{t-1}] 趨勢平滑\\
+    s_t=s_{t-m}+\gamma[(x_t-l_{t-1}-b_{t-1})-s_{t-m}] 季節平滑\\
+    \hat{x}_{t+h}=l_t+hb_t+s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
+\end{cases}
+\]</span></p>
+<h2 id="winters-multiplicative">Winters' multiplicative</h2>
+<p><span class="math display">\[
+\begin{cases}
+    l_t=l_{t-1}+\alpha[\frac{x_t}{s_{t-m}}-l_{t-1}] 水平平滑\\
+    b_t=b_{t-1}+\beta [(l_t-l_{t-1})-b_{t-1}] 趨勢平滑\\
+    s_t=s_{t-m}+\gamma[\frac{x_t}{l_{t-1}+b_{t-1}}-s_{t-m}] 季節平滑\\
+    \hat{x}_{t+h}=(l_t+hb_t)s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
+\end{cases}
+\]</span></p>
+<p><img data-src="/download/winters.png" width=550px></p>
 
       </div>
       
