@@ -32,13 +32,13 @@
 <meta property="og:site_name" content="MyNotes">
 <meta property="og:description" content="名稱 使用條件 相應的ARIMA模型     Simple模型 不含趨勢、季節 ARIMA(0,1,1)   Linear trend 線性趨勢、不含季節 ARIMA(0,2,2)   Damped trend 線性趨勢減弱、不含季節 ARIMA(1,1,2)   Simple seasonal 穩定季節、不含趨勢 \(SARIMA(0,1,1)\times (0,1,1)\)   Wint">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://markzdf.github.io/smooth/download/smooth.png">
-<meta property="og:image" content="https://markzdf.github.io/smooth/dampedtrend.png">
-<meta property="article:published_time" content="2023-09-04T12:09:41.113Z">
-<meta property="article:modified_time" content="2023-09-04T12:09:41.113Z">
+<meta property="og:image" content="https://markzdf.github.io/download/smooth.png">
+<meta property="og:image" content="https://markzdf.github.io/download/dampedtrend.png">
+<meta property="article:published_time" content="2023-09-04T12:20:22.965Z">
+<meta property="article:modified_time" content="2023-09-04T12:20:22.965Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://markzdf.github.io/smooth/download/smooth.png">
+<meta name="twitter:image" content="https://markzdf.github.io/download/smooth.png">
 
 
 <link rel="canonical" href="https://markzdf.github.io/smooth/">
@@ -465,7 +465,7 @@ class="math inline">\(t\rightarrow t+1\)</span>。可見</p>
 class="math inline">\(\alpha=0.3\)</span>，得到平滑值<span
 class="math inline">\([10 12.4 17.4 16.7 20.7 18.1
 17.4]\)</span>，錯位一期。</p>
-<p><img data-src="download/smooth.png" width=500px title="這就叫平滑"></p>
+<p><img data-src="/download/smooth.png" width=500px title="這就叫平滑"></p>
 <p><span class="math display">\[
 \hat{x}_{t+1}=\alpha x_t+\alpha
 (1-\alpha)x_{t-1}+\alpha(1-\alpha)^2x_{t-2}+\cdots+\alpha(1-\alpha)^{t-1}x_1+(1-\alpha)^tl_0
@@ -503,7 +503,13 @@ b_{t-1})] （水平平滑方程）\\
 <p><span class="math inline">\(\phi\)</span>：阻尼係數，<span
 class="math inline">\(\phi \in (0,1]\)</span>。當<span
 class="math inline">\(\phi=1\)</span>時就是Holt模型</p>
-<p><img data-src="dampedtrend.png" width=600px></p>
+<p><img data-src="/download/dampedtrend.png" width=600px></p>
+<h1 id="simple-seasonal">Simple seasonal</h1>
+<p><span class="math display">\[
+\begin{cases}
+    l_t=
+\end{cases}
+\]</span></p>
 
       </div>
       
