@@ -181,61 +181,150 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tick Box Example</title>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // Retrieve the checkbox state from local storage and update the checkbox
-        const checkbox = document.getElementById('checkbox');
-        const savedValue = localStorage.getItem('checkboxState');
-        if (savedValue !== null) {
-            checkbox.checked = savedValue === 'true';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add this CSS rule to change the text color */
+        #todo-list li {
+            color: #4F2956;
+            text-align: left;
         }
 
-        // Update local storage when checkbox is clicked
-        checkbox.addEventListener('change', () => {
-            localStorage.setItem('checkboxState', checkbox.checked);
-        });
-    });
-</script>
-<style>
-    .checkbox-container {
-        display: flex;
-	color: #4F2956;
-        align-items: center;
-	margin-left: 20px;
-    }
+	ul {
+            list-style: none;
+            padding-left: 10px;
+        }
 
-    .text {
-        margin-left: 10px;
-        font-size: 16px;
-    }
-</style>
+	input[type="checkbox"] {
+            margin-right: 8px; /* Add space between checkbox and text */
+        }
+
+	/* Style the container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+	button {
+      		display: inline-block;
+      		padding: 6px 8px;
+      		background-color: #DAD5F4;
+      		color: #4F2956;
+      		border: none;
+      		border-radius: 5px;
+      		cursor: pointer;
+      		font-size: 14px;
+		margin-right: 5px;
+    	}
+
+	
+
+    	button:hover {
+      		background-color: #BEB6E9;
+    	}
+
+	/* Customize the input box styles */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #4F2956;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox1" class="checkbox">
-        <div class="text">
-            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
-        </div>
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <!-- Existing tasks will be added here -->
+    </ul>
+    <input type="text" id="task-input" placeholder="一起去冒險吧">
+    <div class="button-container">
+        <button id="add-button" onclick="addTask()">Add</button>
+        <button id="clear-button" onclick="clearLastTask()">Delete</button>
     </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox2" class="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox3">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
-        </div>
-    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const taskList = document.getElementById("todo-list");
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(taskText));
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+                saveTasks();
+            }
+        }
+
+        // Function to clear the last task
+        function clearLastTask() {
+            const taskList = document.getElementById("todo-list");
+            const lastTask = taskList.lastElementChild;
+
+            if (lastTask) {
+                taskList.removeChild(lastTask);
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to localStorage
+        function saveTasks() {
+            const tasks = [];
+            const taskList = document.getElementById("todo-list").querySelectorAll("li");
+
+            taskList.forEach((taskItem) => {
+                const checkbox = taskItem.querySelector("input[type=checkbox]");
+                const taskText = taskItem.textContent.trim();
+
+                tasks.push({
+                    text: taskText,
+                    completed: checkbox.checked
+                });
+            });
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from localStorage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            const taskList = document.getElementById("todo-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+                checkbox.checked = task.completed;
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(task.text));
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Load tasks when the page loads
+        loadTasks();
+    </script>
 </body>
 </html>
+
 
 
 
@@ -286,9 +375,9 @@
 </head>
 <body>
   <div class="container">
+    <p><span id="counter">00:00:00</span></p>
     <button id="startStopBtn" class="btn">Start</button>
     <button id="resetBtn" class="btn">Reset</button>
-    <p><span id="counter">00:00:00</span></p>
   </div>
 
   <script>
@@ -646,7 +735,7 @@ target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLRb3
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-05 16:48:16" itemprop="dateModified" datetime="2023-09-05T16:48:16+08:00">2023-09-05</time>
+      <time title="修改時間：2023-09-05 17:56:07" itemprop="dateModified" datetime="2023-09-05T17:56:07+08:00">2023-09-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

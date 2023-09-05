@@ -33,7 +33,7 @@
 <meta property="og:description" content="Next主題更新後取消了 custom_.styl 文件，所以自定義側邊欄要新建 _data&#x2F;sidebar.njk（具體見上篇文章），記得在config文件裡把sidebar取消注釋喔～">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-08-31T12:07:52.000Z">
-<meta property="article:modified_time" content="2023-09-05T08:48:16.681Z">
+<meta property="article:modified_time" content="2023-09-05T09:56:07.448Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 
@@ -185,61 +185,150 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tick Box Example</title>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // Retrieve the checkbox state from local storage and update the checkbox
-        const checkbox = document.getElementById('checkbox');
-        const savedValue = localStorage.getItem('checkboxState');
-        if (savedValue !== null) {
-            checkbox.checked = savedValue === 'true';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add this CSS rule to change the text color */
+        #todo-list li {
+            color: #4F2956;
+            text-align: left;
         }
 
-        // Update local storage when checkbox is clicked
-        checkbox.addEventListener('change', () => {
-            localStorage.setItem('checkboxState', checkbox.checked);
-        });
-    });
-</script>
-<style>
-    .checkbox-container {
-        display: flex;
-	color: #4F2956;
-        align-items: center;
-	margin-left: 20px;
-    }
+	ul {
+            list-style: none;
+            padding-left: 10px;
+        }
 
-    .text {
-        margin-left: 10px;
-        font-size: 16px;
-    }
-</style>
+	input[type="checkbox"] {
+            margin-right: 8px; /* Add space between checkbox and text */
+        }
+
+	/* Style the container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+	button {
+      		display: inline-block;
+      		padding: 6px 8px;
+      		background-color: #DAD5F4;
+      		color: #4F2956;
+      		border: none;
+      		border-radius: 5px;
+      		cursor: pointer;
+      		font-size: 14px;
+		margin-right: 5px;
+    	}
+
+	
+
+    	button:hover {
+      		background-color: #BEB6E9;
+    	}
+
+	/* Customize the input box styles */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #4F2956;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox1" class="checkbox">
-        <div class="text">
-            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
-        </div>
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <!-- Existing tasks will be added here -->
+    </ul>
+    <input type="text" id="task-input" placeholder="一起去冒險吧">
+    <div class="button-container">
+        <button id="add-button" onclick="addTask()">Add</button>
+        <button id="clear-button" onclick="clearLastTask()">Delete</button>
     </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox2" class="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox3">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
-        </div>
-    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const taskList = document.getElementById("todo-list");
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(taskText));
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+                saveTasks();
+            }
+        }
+
+        // Function to clear the last task
+        function clearLastTask() {
+            const taskList = document.getElementById("todo-list");
+            const lastTask = taskList.lastElementChild;
+
+            if (lastTask) {
+                taskList.removeChild(lastTask);
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to localStorage
+        function saveTasks() {
+            const tasks = [];
+            const taskList = document.getElementById("todo-list").querySelectorAll("li");
+
+            taskList.forEach((taskItem) => {
+                const checkbox = taskItem.querySelector("input[type=checkbox]");
+                const taskText = taskItem.textContent.trim();
+
+                tasks.push({
+                    text: taskText,
+                    completed: checkbox.checked
+                });
+            });
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from localStorage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            const taskList = document.getElementById("todo-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+                checkbox.checked = task.completed;
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(task.text));
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Load tasks when the page loads
+        loadTasks();
+    </script>
 </body>
 </html>
+
 
 
 
@@ -290,9 +379,9 @@
 </head>
 <body>
   <div class="container">
+    <p><span id="counter">00:00:00</span></p>
     <button id="startStopBtn" class="btn">Start</button>
     <button id="resetBtn" class="btn">Reset</button>
-    <p><span id="counter">00:00:00</span></p>
   </div>
 
   <script>
@@ -564,7 +653,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-05 16:48:16" itemprop="dateModified" datetime="2023-09-05T16:48:16+08:00">2023-09-05</time>
+      <time title="修改時間：2023-09-05 17:56:07" itemprop="dateModified" datetime="2023-09-05T17:56:07+08:00">2023-09-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -608,8 +697,8 @@ href="https://markzdf.github.io/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%
 <p>參考：<a
 target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44543463/article/details/119749738">Hexo+next的侧边栏背景与字体颜色设置方法</a></p>
 <h1 id="添加任務清單">添加任務清單</h1>
-<p>每項todo前有個勾選框，勾選後即便刷新標記也不會消失</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Tick Box Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Retrieve the checkbox state from local storage and update the checkbox</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> checkbox = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;checkbox&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> savedValue = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;checkboxState&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">if</span> (savedValue !== <span class="literal">null</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            checkbox.<span class="property">checked</span> = savedValue === <span class="string">&#x27;true&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Update local storage when checkbox is clicked</span></span></span><br><span class="line"><span class="language-javascript">        checkbox.<span class="title function_">addEventListener</span>(<span class="string">&#x27;change&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="string">&#x27;checkboxState&#x27;</span>, checkbox.<span class="property">checked</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.checkbox-container</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">	    <span class="attribute">color</span>: <span class="number">#4F2956</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">	    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.text</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">margin-left</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>: <span class="number">16px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;checkbox-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.coursera.org/specializations/machine-learning-introduction#courses&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener noreferrer&quot;</span>&gt;</span>機器學習<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;checkbox-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://markzdf.github.io/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener noreferrer&quot;</span>&gt;</span>複變函數<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;checkbox-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener noreferrer&quot;</span>&gt;</span>數模：清風<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;checkbox-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kuidu.github.io/nla.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener noreferrer&quot;</span>&gt;</span>數值線性代數<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>每項todo前有個勾選框，勾選後即便刷新標記也不會消失。自己隨意添加和清空todos。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>To-Do List<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="comment">/* Add this CSS rule to change the text color */</span></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#todo-list</span> <span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: <span class="number">#4F2956</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">text-align</span>: left;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">ul</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding-left</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;checkbox&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-right</span>: <span class="number">8px</span>; <span class="comment">/* Add space between checkbox and text */</span></span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">button</span> &#123;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">padding</span>: <span class="number">4px</span> <span class="number">8px</span>;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">background-color</span>: <span class="number">#DAD5F4</span>;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">color</span>: <span class="number">#4F2956</span>;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">border</span>: none;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">cursor</span>: pointer;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">font-size</span>: <span class="number">12px</span>;</span></span><br><span class="line"><span class="language-css">    	&#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">    	<span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="language-css">      		<span class="attribute">background-color</span>: <span class="number">#BEB6E9</span>;</span></span><br><span class="line"><span class="language-css">    	&#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="comment">/* Customize the input box styles */</span></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;text&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#4F2956</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">16px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>To-Do List<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;todo-list&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- Existing tasks will be added here --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;task-input&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;一起去冒險吧&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;addTask()&quot;</span>&gt;</span>Add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;clearTasks()&quot;</span>&gt;</span>Clear All<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Function to add a new task</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">addTask</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> taskInput = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;task-input&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> taskText = taskInput.<span class="property">value</span>.<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">if</span> (taskText !== <span class="string">&quot;&quot;</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> taskList = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;todo-list&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> taskItem = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;li&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> checkbox = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;input&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                checkbox.<span class="property">type</span> = <span class="string">&quot;checkbox&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">                checkbox.<span class="title function_">addEventListener</span>(<span class="string">&quot;change&quot;</span>, saveTasks);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">                taskItem.<span class="title function_">appendChild</span>(checkbox);</span></span><br><span class="line"><span class="language-javascript">                taskItem.<span class="title function_">appendChild</span>(<span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(taskText));</span></span><br><span class="line"><span class="language-javascript">                taskList.<span class="title function_">appendChild</span>(taskItem);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">                taskInput.<span class="property">value</span> = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">                <span class="title function_">saveTasks</span>();</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Function to clear all tasks</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">clearTasks</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> taskList = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;todo-list&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">            taskList.<span class="property">innerHTML</span> = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">saveTasks</span>();</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Function to save tasks to localStorage</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">saveTasks</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> tasks = [];</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> taskList = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;todo-list&quot;</span>).<span class="title function_">querySelectorAll</span>(<span class="string">&quot;li&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            taskList.<span class="title function_">forEach</span>(<span class="function">(<span class="params">taskItem</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> checkbox = taskItem.<span class="title function_">querySelector</span>(<span class="string">&quot;input[type=checkbox]&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> taskText = taskItem.<span class="property">textContent</span>.<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">                tasks.<span class="title function_">push</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">                    <span class="attr">text</span>: taskText,</span></span><br><span class="line"><span class="language-javascript">                    <span class="attr">completed</span>: checkbox.<span class="property">checked</span></span></span><br><span class="line"><span class="language-javascript">                &#125;);</span></span><br><span class="line"><span class="language-javascript">            &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="string">&quot;tasks&quot;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(tasks));</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Function to load tasks from localStorage</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">loadTasks</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> tasks = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;tasks&quot;</span>)) || [];</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">const</span> taskList = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;todo-list&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">            taskList.<span class="property">innerHTML</span> = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">            tasks.<span class="title function_">forEach</span>(<span class="function">(<span class="params">task</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> taskItem = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;li&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">const</span> checkbox = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;input&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">                checkbox.<span class="property">type</span> = <span class="string">&quot;checkbox&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">                checkbox.<span class="title function_">addEventListener</span>(<span class="string">&quot;change&quot;</span>, saveTasks);</span></span><br><span class="line"><span class="language-javascript">                checkbox.<span class="property">checked</span> = task.<span class="property">completed</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">                taskItem.<span class="title function_">appendChild</span>(checkbox);</span></span><br><span class="line"><span class="language-javascript">                taskItem.<span class="title function_">appendChild</span>(<span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(task.<span class="property">text</span>));</span></span><br><span class="line"><span class="language-javascript">                taskList.<span class="title function_">appendChild</span>(taskItem);</span></span><br><span class="line"><span class="language-javascript">            &#125;);</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// Load tasks when the page loads</span></span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">loadTasks</span>();</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>其中 <code>.checkbox-container</code> 下的 <code>margin-left</code>
 可以調整勾選框和左邊界的距離，<code>color</code> 可調整文本顏色。</p>
 <p>值得一提的是若想向文字加入連結，需加前後綴</p>
