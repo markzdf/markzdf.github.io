@@ -197,6 +197,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tick Box Example</title>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Retrieve the checkbox state from local storage and update the checkbox
+        const checkbox = document.getElementById('checkbox');
+        const savedValue = localStorage.getItem('checkboxState');
+        if (savedValue !== null) {
+            checkbox.checked = savedValue === 'true';
+        }
+
+        // Update local storage when checkbox is clicked
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem('checkboxState', checkbox.checked);
+        });
+    });
+</script>
+<style>
+    .checkbox-container {
+        display: flex;
+	color: #4F2956;
+        align-items: center;
+	margin-left: 20px;
+    }
+
+    .text {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox1" class="checkbox">
+        <div class="text">
+            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
+        </div>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox2" class="checkbox">
+        <div class="text">
+            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
+        </div>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox3">
+        <div class="text">
+            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>計時器</title>
@@ -311,64 +371,6 @@
 </html>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tick Box Example</title>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // Retrieve the checkbox state from local storage and update the checkbox
-        const checkbox = document.getElementById('checkbox');
-        const savedValue = localStorage.getItem('checkboxState');
-        if (savedValue !== null) {
-            checkbox.checked = savedValue === 'true';
-        }
-
-        // Update local storage when checkbox is clicked
-        checkbox.addEventListener('change', () => {
-            localStorage.setItem('checkboxState', checkbox.checked);
-        });
-    });
-</script>
-<style>
-    .checkbox-container {
-        display: flex;
-	color: #4F2956;
-        align-items: center;
-	margin-left: 20px;
-    }
-
-    .text {
-        margin-left: 10px;
-        font-size: 16px;
-    }
-</style>
-</head>
-<body>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
-        </div>
-    </div>
-</body>
-</html>
-
-
 
 
 
@@ -401,7 +403,7 @@
         }
         th, td {
             border: 1px solid #dddddd;
-            text-align: center;
+            text-align: left;
             padding: 8px;
         }
         th {

@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/1.png">
 <meta property="og:image" content="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/2.png">
 <meta property="article:published_time" content="2023-08-28T07:51:14.000Z">
-<meta property="article:modified_time" content="2023-09-04T17:45:15.154Z">
+<meta property="article:modified_time" content="2023-09-05T06:16:17.541Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/1.png">
@@ -190,6 +190,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tick Box Example</title>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Retrieve the checkbox state from local storage and update the checkbox
+        const checkbox = document.getElementById('checkbox');
+        const savedValue = localStorage.getItem('checkboxState');
+        if (savedValue !== null) {
+            checkbox.checked = savedValue === 'true';
+        }
+
+        // Update local storage when checkbox is clicked
+        checkbox.addEventListener('change', () => {
+            localStorage.setItem('checkboxState', checkbox.checked);
+        });
+    });
+</script>
+<style>
+    .checkbox-container {
+        display: flex;
+	color: #4F2956;
+        align-items: center;
+	margin-left: 20px;
+    }
+
+    .text {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox1" class="checkbox">
+        <div class="text">
+            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
+        </div>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox2" class="checkbox">
+        <div class="text">
+            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
+        </div>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox3">
+        <div class="text">
+            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>計時器</title>
@@ -304,64 +364,6 @@
 </html>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tick Box Example</title>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // Retrieve the checkbox state from local storage and update the checkbox
-        const checkbox = document.getElementById('checkbox');
-        const savedValue = localStorage.getItem('checkboxState');
-        if (savedValue !== null) {
-            checkbox.checked = savedValue === 'true';
-        }
-
-        // Update local storage when checkbox is clicked
-        checkbox.addEventListener('change', () => {
-            localStorage.setItem('checkboxState', checkbox.checked);
-        });
-    });
-</script>
-<style>
-    .checkbox-container {
-        display: flex;
-	color: #4F2956;
-        align-items: center;
-	margin-left: 20px;
-    }
-
-    .text {
-        margin-left: 10px;
-        font-size: 16px;
-    }
-</style>
-</head>
-<body>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://www.coursera.org/specializations/machine-learning-introduction#courses" target="_self" rel="noopener noreferrer">機器學習</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/" target="_self" rel="noopener noreferrer">數值線性代數</a>
-        </div>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="checkbox">
-        <div class="text">
-            <a href="https://markzdf.github.io/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/" target="_self" rel="noopener noreferrer">數模：清風</a>
-        </div>
-    </div>
-</body>
-</html>
-
-
 
 
 
@@ -394,7 +396,7 @@
         }
         th, td {
             border: 1px solid #dddddd;
-            text-align: center;
+            text-align: left;
             padding: 8px;
         }
         th {
@@ -565,7 +567,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-05 01:45:15" itemprop="dateModified" datetime="2023-09-05T01:45:15+08:00">2023-09-05</time>
+      <time title="修改時間：2023-09-05 14:16:17" itemprop="dateModified" datetime="2023-09-05T14:16:17+08:00">2023-09-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -597,56 +599,66 @@
 <span id="more"></span>
 <p><img align="left" data-src="1.png" width=55.5px></p>
 <pre><code>    MATLAB揭秘
-    入門級</code></pre>
-<p><img align="left" data-src="2.png" width=57.5px></p>
+    入門級
+</code></pre><p><img align="left" data-src="2.png" width=57.5px></p>
 <pre><code>    高等應用數學問題的MATLAB求解
-    高手級</code></pre>
-<p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a
-href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
-<h1 id="正課">正課</h1>
-<ul class="task-list">
-<li><p><label><input type="checkbox" checked="" />層次分析法 <span
-class="math inline">\(\checkmark\)</span></label></p></li>
-<li><p><label><input type="checkbox" checked="" />TOPSIS <span
-class="math inline">\(\checkmark\)</span></label></p></li>
-<li><p><label><input type="checkbox" checked="" />插值算法 <span
-class="math inline">\(\checkmark\)</span></label></p></li>
-<li><p><label><input type="checkbox" checked="" />擬和算法 <span
-class="math inline">\(\checkmark\)</span></label></p></li>
-<li><p><label><input type="checkbox" checked="" />相關性分析</label></p>
-<pre><code>  Spearman相關係數檢驗*</code></pre></li>
-<li><p><label><input type="checkbox" checked="" />典型相關分析 <span
-class="math inline">\(\checkmark\)</span></label></p></li>
-<li><p><label><input type="checkbox" checked="" />迴歸分析 <span
-class="math inline">\(\checkmark\)</span></label></p>
-<pre><code>  異方差檢驗（BP，懷特）</code></pre></li>
-<li><p><label><input type="checkbox" />圖論</label></p></li>
-<li><p><label><input type="checkbox" checked="" />分類模型</label></p>
-<pre><code>  Logistic回歸，K折交叉驗證*，Fisher判別分析*，多分類</code></pre></li>
-<li><p><label><input type="checkbox" checked="" />聚類算法</label></p>
-<pre><code>  K均值算法，系統聚類，聚合係數圖，DBSCAN算法*</code></pre></li>
-<li><p><label><input type="checkbox" />時間序列分析 <span
-class="math inline">\(\Leftarrow\)</span> <a
-href="/smooth">平滑模型</a></label></p>
-<pre><code>  週期性分解*，指數平滑模型，差分方程，滯後算子，ARIMA模型，ACF自相關係數，PACF</code></pre></li>
-<li><p><label><input type="checkbox" />灰色預測</label></p></li>
-<li><p><label><input type="checkbox" />SVD和圖形處理</label></p></li>
-<li><p><label><input type="checkbox" />主成分分析</label></p></li>
+    高手級
+</code></pre><p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
+<h1 id="正課"><a href="#正課" class="headerlink" title="正課"></a>正課</h1><ul>
+<li>[x] 層次分析法 $\checkmark$</li>
+<li>[x] TOPSIS $\checkmark$</li>
+<li>[x] 插值算法 $\checkmark$</li>
+<li>[x] 擬和算法 $\checkmark$</li>
+<li><p>[x] 相關性分析</p>
+<pre><code>  Spearman相關係數檢驗*
+</code></pre></li>
+<li><p>[x] 典型相關分析 $\checkmark$</p>
+</li>
+<li><p>[x] 迴歸分析 $\checkmark$</p>
+<pre><code>  異方差檢驗（BP，懷特）
+</code></pre></li>
+<li><p>[ ] 圖論</p>
+</li>
+<li><p>[x] 分類模型</p>
+<pre><code>  Logistic回歸，K折交叉驗證*，Fisher判別分析*，多分類
+</code></pre></li>
+<li><p>[x] 聚類算法</p>
+<pre><code>  K均值算法，系統聚類，聚合係數圖，DBSCAN算法*
+</code></pre></li>
+<li><p>[x] 時間序列分析 $\Leftarrow$ <a href="/smooth">平滑模型</a>，<a href="/arima">ARIMA</a></p>
+<pre><code>  處理缺失值：
+    1. 序列平均值
+    2. 鄰近點平均值
+    3. 鄰近點中位數
+    4. 線性插值（2的特殊情況）
+    5. 鄰近點線型趨勢（回歸）
+  週期性分解*
+  兩類模型：
+    1. 指數平滑模型
+    2. ARIMA模型
+       a. Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARMA(p,q)模型
+       b. 選模型，怎樣判斷p和q？
+          - ACF，PACF：拖尾？截尾？不準確！
+          - AIC，BIC準則：選小
+       c. 判斷殘差是不是白噪聲：Q檢驗
+</code></pre></li>
+<li>[ ] 灰色預測</li>
+<li>[ ] SVD和圖形處理</li>
+<li>[ ] 主成分分析</li>
 </ul>
-<h1 id="更新">更新</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" />因子分析</label></li>
-<li><label><input type="checkbox" />岭回歸和Lasso回歸</label></li>
-<li><label><input type="checkbox" />灰色關聯分析</label></li>
-<li><label><input type="checkbox" />弗洛伊德算法</label></li>
-<li><label><input type="checkbox" />ARCH模型和GARCH模型</label></li>
-<li><label><input type="checkbox" />正態分佈均值假設檢驗</label></li>
-<li><label><input type="checkbox" />蒙特卡洛模型</label></li>
-<li><label><input type="checkbox" />數學規劃</label></li>
-<li><label><input type="checkbox" />Matlab繪圖</label></li>
-<li><label><input type="checkbox" />Matlab求解</label></li>
-<li><label><input type="checkbox" />微分方程</label></li>
-<li><label><input type="checkbox" />粒子群算法</label></li>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><ul>
+<li>[ ] 因子分析</li>
+<li>[ ] 岭回歸和Lasso回歸</li>
+<li>[ ] 灰色關聯分析</li>
+<li>[ ] 弗洛伊德算法</li>
+<li>[ ] ARCH模型和GARCH模型</li>
+<li>[ ] 正態分佈均值假設檢驗</li>
+<li>[ ] 蒙特卡洛模型</li>
+<li>[ ] 數學規劃</li>
+<li>[ ] Matlab繪圖</li>
+<li>[ ] Matlab求解</li>
+<li>[ ] 微分方程</li>
+<li>[ ] 粒子群算法</li>
 </ul>
 
     </div>

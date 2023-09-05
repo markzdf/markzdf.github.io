@@ -25,31 +25,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="名稱 使用條件 相應的ARIMA模型     Simple模型 不含趨勢、季節 ARIMA(0,1,1)   Linear trend 線性趨勢、不含季節 ARIMA(0,2,2)   Damped trend 線性趨勢減弱、不含季節 ARIMA(1,1,2)   Simple seasonal 穩定季節、不含趨勢 \(SARIMA(0,1,1)\times (0,1,1)\)   Wint">
+    <meta name="description" content="$ARIMA(p,d,q)$ y_t&#39;&#x3D;\alpha_0+\sum_{i&#x3D;1}^p\alpha_iy_{t-i}&#39;+\varepsilon_t+\sum_{i&#x3D;1}^q\beta_i\varepsilon_{t-i}其中$y’t&#x3D;\Delta^dy_t&#x3D;(1-L)^dy_t$，$y{t-i}’&#x3D;\Delta^dy{t-i}&#x3D;(1-L)^dy{t-i}$ 由於  (1-L)^dy_{t-i}&#x3D;(1-">
 <meta property="og:type" content="website">
-<meta property="og:title" content="七種指數平滑模型">
-<meta property="og:url" content="https://markzdf.github.io/smooth/">
+<meta property="og:title" content="ARIMA模型">
+<meta property="og:url" content="https://markzdf.github.io/arima/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="名稱 使用條件 相應的ARIMA模型     Simple模型 不含趨勢、季節 ARIMA(0,1,1)   Linear trend 線性趨勢、不含季節 ARIMA(0,2,2)   Damped trend 線性趨勢減弱、不含季節 ARIMA(1,1,2)   Simple seasonal 穩定季節、不含趨勢 \(SARIMA(0,1,1)\times (0,1,1)\)   Wint">
+<meta property="og:description" content="$ARIMA(p,d,q)$ y_t&#39;&#x3D;\alpha_0+\sum_{i&#x3D;1}^p\alpha_iy_{t-i}&#39;+\varepsilon_t+\sum_{i&#x3D;1}^q\beta_i\varepsilon_{t-i}其中$y’t&#x3D;\Delta^dy_t&#x3D;(1-L)^dy_t$，$y{t-i}’&#x3D;\Delta^dy{t-i}&#x3D;(1-L)^dy{t-i}$ 由於  (1-L)^dy_{t-i}&#x3D;(1-">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://markzdf.github.io/download/smooth.png">
-<meta property="og:image" content="https://markzdf.github.io/download/dampedtrend.png">
-<meta property="og:image" content="https://markzdf.github.io/download/winters.png">
-<meta property="article:published_time" content="2023-09-04T12:33:40.358Z">
-<meta property="article:modified_time" content="2023-09-04T12:33:40.358Z">
+<meta property="og:image" content="https://markzdf.github.io/download/arima.png">
+<meta property="og:image" content="https://markzdf.github.io/download/sarima.png">
+<meta property="article:published_time" content="2023-09-05T05:07:16.958Z">
+<meta property="article:modified_time" content="2023-09-05T05:07:16.958Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://markzdf.github.io/download/smooth.png">
+<meta name="twitter:image" content="https://markzdf.github.io/download/arima.png">
 
 
-<link rel="canonical" href="https://markzdf.github.io/smooth/">
+<link rel="canonical" href="https://markzdf.github.io/arima/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/smooth/","path":"/smooth/index.html","title":"七種指數平滑模型"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/arima/","path":"/arima/index.html","title":"ARIMA模型"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>七種指數平滑模型 | MyNotes
+<title>ARIMA模型 | MyNotes
 </title>
   
 
@@ -530,13 +529,13 @@
     
     <div class="post-block" lang="zh-TW"><header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">七種指數平滑模型
+<h1 class="post-title" itemprop="name headline">ARIMA模型
 </h1>
 
 <div class="post-meta-container">
   <ul class="breadcrumb">
             <li><a href="//"></a></li>
-          <li>SMOOTH</li>
+          <li>ARIMA</li>
   </ul>
 </div>
 
@@ -545,142 +544,16 @@
       
       
       <div class="post-body">
-          <table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">名稱</th>
-<th style="text-align: center;">使用條件</th>
-<th style="text-align: center;">相應的ARIMA模型</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Simple模型</td>
-<td style="text-align: center;">不含趨勢、季節</td>
-<td style="text-align: center;"><code>ARIMA(0,1,1)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Linear trend</td>
-<td style="text-align: center;">線性趨勢、不含季節</td>
-<td style="text-align: center;"><code>ARIMA(0,2,2)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Damped trend</td>
-<td style="text-align: center;">線性趨勢減弱、不含季節</td>
-<td style="text-align: center;"><code>ARIMA(1,1,2)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Simple seasonal</td>
-<td style="text-align: center;">穩定季節、不含趨勢</td>
-<td style="text-align: center;"><span
-class="math inline">\(SARIMA(0,1,1)\times (0,1,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Winters' additive</td>
-<td style="text-align: center;">線性趨勢、穩定季節</td>
-<td style="text-align: center;"><span
-class="math inline">\(SARIMA(0,1,0)\times (0,1,1)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Winters' multiplicative</td>
-<td style="text-align: center;">線性趨勢、不穩定季節</td>
-<td style="text-align: center;">不存在</td>
-</tr>
-</tbody>
-</table>
-<h2 id="simple-模型">Simple 模型</h2>
-<p><span class="math display">\[
-S_t=\hat{x}_{t+1}且\hat{x}_{t+1}=\hat{x}_t+\alpha(x_t-\hat{x}_t)
-\]</span></p>
-<p><span class="math inline">\(S_t\)</span>是第<span
-class="math inline">\(t\)</span>期平滑值，<span
-class="math inline">\(x_t\)</span>是<span
-class="math inline">\(t\)</span>時刻觀測數據，<span
-class="math inline">\(\hat{x}_t\)</span>表示預測值。對下一期的預測，一部分是基於對本期的預測（<span
-class="math inline">\(\hat{x}_t\)</span>），另一部分是本期實際情況對預測的修正（<span
-class="math inline">\(x_t-\hat{x}_t\)</span>）。而預測的初始值就是第0期的真實情況，即<span
-class="math inline">\(\hat{x}_1=x_0\)</span>。係數<span
-class="math inline">\(\alpha\)</span>決定這個模型是更偏重歷史數據還是實際情況，<span
-class="math inline">\(\alpha=0\)</span>說明完全不管真實值，拿著初值幹到底，所有預測值都是初值<span
-class="math inline">\(\hat{x}_t=x_0, \forall
-t\)</span>，這時是條水平直線。<span
-class="math inline">\(\alpha=1\)</span>說明完全不管過去的預測值（平滑值），拿著真實數據幹到底，所以其實就是把真實數據的散點圖往右平移一個時間單位，<span
-class="math inline">\(t\rightarrow t+1\)</span>。可見</p>
-<p><span class="math display">\[
-\alpha = 0\rightarrow 1 \Leftrightarrow 完全平滑\rightarrow 完全不平滑
-\]</span></p>
-<p>由真實數據<span class="math inline">\([10 18 29 15 30 12
-16]\)</span>預測下一期，取<span
-class="math inline">\(\alpha=0.3\)</span>，得到平滑值<span
-class="math inline">\([10 12.4 17.4 16.7 20.7 18.1
-17.4]\)</span>，錯位一期。</p>
-<p><img data-src="/download/smooth.png" width=450px title="這就叫平滑"></p>
-<p><span class="math display">\[
-\hat{x}_{t+1}=\alpha x_t+\alpha
-(1-\alpha)x_{t-1}+\alpha(1-\alpha)^2x_{t-2}+\cdots+\alpha(1-\alpha)^{t-1}x_1+(1-\alpha)^tl_0
-\]</span></p>
-<p>其中<span class="math inline">\(l_0=\hat{x}_1\)</span>視為初值</p>
-<h2 id="linear-trend">Linear trend</h2>
-<h1 id="holt模型">Holt模型</h1>
-<p><span class="math display">\[
-\begin{cases}
-    l_t=\underbrace{l_{t-1}+b_{t-1}}_{預期水平}+\alpha[\underbrace{x_t}_{真實水平}-(l_{t-1}+b_{t-1})]
-水平平滑方程\\
-    b_t=\underbrace{b_{t-1}}_{預期趨勢}+\beta
-[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-b_{t-1}] 趨勢平滑方程\\
-    \hat{x}_{t+h}=l_t+hb_t, h=1,2,\cdots 預測方程
-\end{cases}
-\]</span></p>
-<p><span class="math inline">\(h\)</span>：預測步長</p>
-<p><span class="math inline">\(\alpha\)</span>：水平的平滑參數</p>
-<p><span class="math inline">\(\beta\)</span>：趨勢的平滑參數</p>
-<h1 id="brown模型">Brown模型</h1>
-<p>Brown模型是<span
-class="math inline">\(\alpha=\beta\)</span>時的Holt模型</p>
-<h2 id="damped-trend">Damped trend</h2>
-<p><span class="math display">\[
-\begin{cases}
-    l_t=\underbrace{l_{t-1}+\phi
-b_{t-1}}_{預期水平}+\alpha[\underbrace{x_t}_{真實水平}-(l_{t-1}+\phi
-b_{t-1})] 水平平滑方程\\
-    b_t=\underbrace{\phi b_{t-1}}_{預期趨勢}+\beta
-[(\underbrace{l_t-l_{t-1}}_{真實趨勢})-\phi b_{t-1}] 趨勢平滑方程\\
-    \hat{x}_{t+h}=l_t+(\phi+\phi^2+\cdots +\phi^h)b_t, h=1,2,\cdots
-預測方程
-\end{cases}
-\]</span></p>
-<p><span class="math inline">\(\phi\)</span>：阻尼係數，<span
-class="math inline">\(\phi \in (0,1]\)</span>。當<span
-class="math inline">\(\phi=1\)</span>時就是Holt模型</p>
-<p><img data-src="/download/dampedtrend.png" width=600px></p>
-<h2 id="simple-seasonal">Simple seasonal</h2>
-<p><span class="math display">\[
-\begin{cases}
-    l_t=l_{t-1}+\alpha[x_t-s_{t-m}-l_{t-1}] 水平平滑\\
-    s_t=s_{t-m}+\gamma[(x_t-l_{t-1})-s_{t-m}] 季節平滑\\
-    \hat{x}_{t+h}=l_t+s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
-\end{cases}
-\]</span></p>
-<p><span class="math inline">\(m\)</span>：週期長度（月度12，季度4）</p>
-<h2 id="winters-additive">Winters' additive</h2>
-<p><span class="math display">\[
-\begin{cases}
-    l_t=l_{t-1}+\alpha[x_t-s_{t-m}-l_{t-1}] 水平平滑\\
-    b_t=b_{t-1}+\beta [(l_t-l_{t-1})-b_{t-1}] 趨勢平滑\\
-    s_t=s_{t-m}+\gamma[(x_t-l_{t-1}-b_{t-1})-s_{t-m}] 季節平滑\\
-    \hat{x}_{t+h}=l_t+hb_t+s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
-\end{cases}
-\]</span></p>
-<h2 id="winters-multiplicative">Winters' multiplicative</h2>
-<p><span class="math display">\[
-\begin{cases}
-    l_t=l_{t-1}+\alpha[\frac{x_t}{s_{t-m}}-l_{t-1}] 水平平滑\\
-    b_t=b_{t-1}+\beta [(l_t-l_{t-1})-b_{t-1}] 趨勢平滑\\
-    s_t=s_{t-m}+\gamma[\frac{x_t}{l_{t-1}+b_{t-1}}-s_{t-m}] 季節平滑\\
-    \hat{x}_{t+h}=(l_t+hb_t)s_{t+h-m(k+1)},k=[\frac{h-1}{m}] 預測方程
-\end{cases}
-\]</span></p>
-<p><img data-src="/download/winters.png" width=550px></p>
+          <h1 id="ARIMA-p-d-q"><a href="#ARIMA-p-d-q" class="headerlink" title="$ARIMA(p,d,q)$"></a>$ARIMA(p,d,q)$</h1><script type="math/tex; mode=display">
+y_t'=\alpha_0+\sum_{i=1}^p\alpha_iy_{t-i}'+\varepsilon_t+\sum_{i=1}^q\beta_i\varepsilon_{t-i}</script><p>其中$y’<em>t=\Delta^dy_t=(1-L)^dy_t$，$y</em>{t-i}’=\Delta^dy<em>{t-i}=(1-L)^dy</em>{t-i}$</p>
+<p>由於</p>
+<script type="math/tex; mode=display">
+(1-L)^dy_{t-i}=(1-L)^dL^iy_t=L^i(1-L)^dy_t</script><p>整理後</p>
+<script type="math/tex; mode=display">
+(\underbrace{1-\sum_{i=1}^p \alpha_iL^i}_{AR(p)})\overbrace{(1-L)^dy_t}^{d階差分}=\alpha_0+(\underbrace{1+\sum_{i=1}^q\beta_iL^i}_{MA(q)})\varepsilon_t</script><p>$ARIMA(p,d,q)$中的$d$是差分的次數，integrated的次數。下面這個例子差分兩次後平穩</p>
+<p><img data-src="/download/arima.png" width=550px></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x <span class="operator">&lt;-</span> arima.sim<span class="punctuation">(</span><span class="built_in">list</span><span class="punctuation">(</span>order<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span>ar<span class="operator">=</span><span class="number">0.6</span><span class="punctuation">,</span>ma<span class="operator">=</span><span class="operator">-</span><span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">,</span>n<span class="operator">=</span><span class="number">100</span><span class="punctuation">)</span></span><br><span class="line">y <span class="operator">&lt;-</span> arima.sim<span class="punctuation">(</span><span class="built_in">list</span><span class="punctuation">(</span>order<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">,</span>ar<span class="operator">=</span><span class="number">0.6</span><span class="punctuation">,</span>ma<span class="operator">=</span><span class="operator">-</span><span class="number">0.5</span><span class="punctuation">)</span><span class="punctuation">,</span>n<span class="operator">=</span><span class="number">100</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line">par<span class="punctuation">(</span>mfrow<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>x<span class="punctuation">,</span>main<span class="operator">=</span><span class="string">&quot;ARIMA(1,1,1)&quot;</span><span class="punctuation">)</span></span><br><span class="line">plot<span class="punctuation">(</span>y<span class="punctuation">,</span>main<span class="operator">=</span><span class="string">&quot;ARIMA(1,2,1)&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+<h1 id="拓展：SARIMA"><a href="#拓展：SARIMA" class="headerlink" title="拓展：SARIMA"></a>拓展：SARIMA</h1><p><img data-src="/download/sarima.png"></p>
 
       </div>
       
@@ -689,7 +562,7 @@ class="math inline">\(\phi=1\)</span>時就是Holt模型</p>
     </div>
   <ul class="breadcrumb">
             <li><a href="//"></a></li>
-          <li>SMOOTH</li>
+          <li>ARIMA</li>
   </ul>
 
     
@@ -783,11 +656,11 @@ class="math inline">\(\phi=1\)</span>時就是Holt模型</p>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/smooth/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/arima/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e60ad7a2b5462ce1088c73a4e82a38ad"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"197517dd0c5e364242d2e20aec9f329d"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
