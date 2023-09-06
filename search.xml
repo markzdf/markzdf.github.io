@@ -290,8 +290,8 @@ class="math inline">\(\checkmark\)</span></label></li>
 <li><label><input type="checkbox" />弗洛伊德算法</label></li>
 <li><label><input type="checkbox" />ARCH模型和GARCH模型</label></li>
 <li><label><input type="checkbox" />正態分佈均值假設檢驗</label></li>
-<li><label><input type="checkbox" />蒙特卡洛模型</label></li>
-<li><label><input type="checkbox" />數學規劃</label></li>
+<li><label><input type="checkbox" checked="" />蒙特卡洛模擬</label></li>
+<li><label><input type="checkbox" checked="" />數學規劃</label></li>
 <li><label><input type="checkbox" />Matlab繪圖</label></li>
 <li><label><input type="checkbox" />Matlab求解</label></li>
 <li><label><input type="checkbox" />微分方程</label></li>
@@ -345,8 +345,8 @@ Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARM
 <tr class="even">
 <td style="text-align: center;">灰色預測</td>
 <td style="text-align: left;"><span
-class="math inline">\(OLS\)</span>矩陣版，完全多重共線性再解釋<br><span
-class="math inline">\(GM(1,1)\)</span>：<a
+class="math inline">\(OLS\)</span>矩陣版，完全多重共線性再解釋<br><a
+href="/gm"><span class="math inline">\(GM(1,1)\)</span></a>：<a
 href="/download/gm.jpg">白化方程</a>，准指數規律<br><span
 class="math inline">\(GM(1,1)\)</span>評價：殘差檢驗，級比偏差檢驗<br>拓展：新信息<span
 class="math inline">\(GM(1,1)\)</span>，新陳代謝<span
@@ -356,6 +356,18 @@ class="math inline">\(GM(1,1)\)</span></td>
 <td style="text-align: center;">神經網路</td>
 <td style="text-align: left;">Matlab app，<a
 href="https://pan.baidu.com/share/init?surl=hu7x_LC65Ez382725sqU4g">論文；提取碼dwla</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">數學規劃</td>
+<td style="text-align: left;">分類：（1.線性規劃：單純形法 2.非線性規劃
+3.整數規劃：非線性的整數規劃用蒙特卡洛模擬 4.0-1規劃）<br>求解：<a
+href="/prog/">Matlab內置函數</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">蒙特卡洛模擬</td>
+<td style="text-align: left;"><a
+href="/queue/">排隊論</a>，求非線性規劃初始值：<a
+href="/nlp_mc/">改良版代碼</a></td>
 </tr>
 </tbody>
 </table>
