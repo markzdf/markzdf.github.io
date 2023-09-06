@@ -250,67 +250,107 @@ href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a>
 <span id="more"></span>
 <p><img align="left" data-src="1.png" width=55.5px></p>
 <pre><code>    MATLAB揭秘
-    入門級
-</code></pre><p><img align="left" data-src="2.png" width=57.5px></p>
+    入門級</code></pre>
+<p><img align="left" data-src="2.png" width=57.5px></p>
 <pre><code>    高等應用數學問題的MATLAB求解
-    高手級
-</code></pre><p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
-<h1 id="正課"><a href="#正課" class="headerlink" title="正課"></a>正課</h1><ul>
-<li>[x] 層次分析法 $\checkmark$</li>
-<li>[x] TOPSIS $\checkmark$</li>
-<li>[x] 插值算法 $\checkmark$</li>
-<li>[x] 擬和算法 $\checkmark$</li>
-<li><p>[x] 相關性分析</p>
-<pre><code>  Spearman相關係數檢驗*
-</code></pre></li>
-<li><p>[x] 典型相關分析 $\checkmark$</p>
-</li>
-<li><p>[x] 迴歸分析 $\checkmark$</p>
-<pre><code>  異方差檢驗（BP，懷特）
-</code></pre></li>
-<li><p>[ ] 圖論</p>
-</li>
-<li><p>[x] 分類模型</p>
-<pre><code>  Logistic回歸，K折交叉驗證*，Fisher判別分析*，多分類
-</code></pre></li>
-<li><p>[x] 聚類算法</p>
-<pre><code>  K均值算法，系統聚類，聚合係數圖，DBSCAN算法*
-</code></pre></li>
-<li><p>[x] 時間序列分析 $\Leftarrow$ <a href="/smooth">平滑模型</a>，<a href="/arima">ARIMA</a></p>
-<pre><code>  處理缺失值：
-    1. 序列平均值
-    2. 鄰近點平均值
-    3. 鄰近點中位數
-    4. 線性插值（2的特殊情況）
-    5. 鄰近點線型趨勢（回歸）
-  週期性分解*
-  兩類模型：
-    1. 指數平滑模型
-    2. ARIMA模型
-       a. Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARMA(p,q)模型
-       b. 選模型，怎樣判斷p和q？
-          - ACF，PACF：拖尾？截尾？不準確！
-          - AIC，BIC準則：選小
-       c. 判斷殘差是不是白噪聲：Q檢驗
-</code></pre></li>
-<li>[ ] 灰色預測</li>
-<li>[ ] SVD和圖形處理</li>
-<li>[ ] 主成分分析</li>
+    高手級</code></pre>
+<p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a
+href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
+<h1 id="正課">正課</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />層次分析法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />TOPSIS <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />插值算法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />擬和算法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />相關性分析</label></li>
+<li><label><input type="checkbox" checked="" />典型相關分析 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />迴歸分析 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" />圖論</label></li>
+<li><label><input type="checkbox" checked="" />分類模型</label></li>
+<li><label><input type="checkbox" checked="" />聚類算法</label></li>
+<li><label><input type="checkbox" checked="" />時間序列分析</label></li>
+<li><label><input type="checkbox" checked="" />灰色預測</label></li>
+<li><label><input type="checkbox" />神經網路</label></li>
+<li><label><input type="checkbox" />SVD和圖形處理</label></li>
+<li><label><input type="checkbox" />主成分分析</label></li>
 </ul>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><ul>
-<li>[ ] 因子分析</li>
-<li>[ ] 岭回歸和Lasso回歸</li>
-<li>[ ] 灰色關聯分析</li>
-<li>[ ] 弗洛伊德算法</li>
-<li>[ ] ARCH模型和GARCH模型</li>
-<li>[ ] 正態分佈均值假設檢驗</li>
-<li>[ ] 蒙特卡洛模型</li>
-<li>[ ] 數學規劃</li>
-<li>[ ] Matlab繪圖</li>
-<li>[ ] Matlab求解</li>
-<li>[ ] 微分方程</li>
-<li>[ ] 粒子群算法</li>
+<h1 id="更新">更新</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" />因子分析</label></li>
+<li><label><input type="checkbox" />岭回歸和Lasso回歸</label></li>
+<li><label><input type="checkbox" />灰色關聯分析</label></li>
+<li><label><input type="checkbox" />弗洛伊德算法</label></li>
+<li><label><input type="checkbox" />ARCH模型和GARCH模型</label></li>
+<li><label><input type="checkbox" />正態分佈均值假設檢驗</label></li>
+<li><label><input type="checkbox" />蒙特卡洛模型</label></li>
+<li><label><input type="checkbox" />數學規劃</label></li>
+<li><label><input type="checkbox" />Matlab繪圖</label></li>
+<li><label><input type="checkbox" />Matlab求解</label></li>
+<li><label><input type="checkbox" />微分方程</label></li>
+<li><label><input type="checkbox" />粒子群算法</label></li>
 </ul>
+<table>
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">章節</th>
+<th style="text-align: left;">重點</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">相關性分析</td>
+<td style="text-align: left;">Spearman相關係數檢驗<span
+class="math inline">\(\ast\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">迴歸分析</td>
+<td style="text-align: left;">異方差檢驗（BP，懷特）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">分類模型</td>
+<td style="text-align: left;">Logistic回歸，K折交叉驗證<span
+class="math inline">\(\ast\)</span>，Fisher判別分析<span
+class="math inline">\(\ast\)</span>，多分類</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">聚類算法</td>
+<td
+style="text-align: left;">K均值算法，系統聚類，聚合係數圖，DBSCAN算法<span
+class="math inline">\(\ast\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">時間序列分析</td>
+<td
+style="text-align: left;">處理缺失值：序列平均值，鄰近點平均值，鄰近點中位數，線性插值（2的特殊情況），鄰近點線型趨勢（回歸）<br>週期性分解<span
+class="math inline">\(\ast\)</span><br>兩類模型：1. <a
+href="/smooth">指數平滑模型</a> 2. <a href="/arima">ARIMA模型</a><br>
+2a.
+Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARMA(p,q)模型<br>2b.
+選模型，怎樣判斷p和q？<strong>ACF，PACF</strong>：拖尾？截尾？不準確！<strong>AIC，BIC準則</strong>：選小<br>2c.
+判斷殘差是不是白噪聲：Q檢驗</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">灰色預測</td>
+<td style="text-align: left;"><span
+class="math inline">\(OLS\)</span>矩陣版，完全多重共線性再解釋<br><span
+class="math inline">\(GM(1,1)\)</span>：<a
+href="/download/gm.jpg">白化方程</a>，准指數規律<br><span
+class="math inline">\(GM(1,1)\)</span>評價：殘差檢驗，級比偏差檢驗<br>拓展：新信息<span
+class="math inline">\(GM(1,1)\)</span>，新陳代謝<span
+class="math inline">\(GM(1,1)\)</span></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       <categories>
         <category>課程</category>
