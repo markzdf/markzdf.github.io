@@ -25,24 +25,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="求解 \[ \max f(x) &#x3D; x_1x_2x_3 \] \[ s.t. \begin{cases}     -x_1+2x_2+2x_3\geqslant0\\     x_1+2x_2+2x_3\leqslant 72\\     10\leqslant x_2\leqslant 20\\     x1-x2 &#x3D; 10 \end{cases} \] 由約束條件，得到三個變量的取值範圍 \[">
+    <meta name="description" content="求解  \max f(x) &#x3D; x_1x_2x_3 s.t. \begin{cases}     -x_1+2x_2+2x_3\geqslant0\\     x_1+2x_2+2x_3\leqslant 72\\     10\leqslant x_2\leqslant 20\\     x1-x2 &#x3D; 10 \end{cases}由約束條件，得到三個變量的取值範圍  \begin{aligne">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MyNotes">
-<meta property="og:url" content="https://markzdf.github.io/nlp_mc">
+<meta property="og:url" content="https://markzdf.github.io/nlp_mc/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="求解 \[ \max f(x) &#x3D; x_1x_2x_3 \] \[ s.t. \begin{cases}     -x_1+2x_2+2x_3\geqslant0\\     x_1+2x_2+2x_3\leqslant 72\\     10\leqslant x_2\leqslant 20\\     x1-x2 &#x3D; 10 \end{cases} \] 由約束條件，得到三個變量的取值範圍 \[">
+<meta property="og:description" content="求解  \max f(x) &#x3D; x_1x_2x_3 s.t. \begin{cases}     -x_1+2x_2+2x_3\geqslant0\\     x_1+2x_2+2x_3\leqslant 72\\     10\leqslant x_2\leqslant 20\\     x1-x2 &#x3D; 10 \end{cases}由約束條件，得到三個變量的取值範圍  \begin{aligne">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-09-06T17:52:12.290Z">
-<meta property="article:modified_time" content="2023-09-06T17:52:12.290Z">
+<meta property="article:published_time" content="2023-09-07T00:43:14.199Z">
+<meta property="article:modified_time" content="2023-09-07T00:43:14.199Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://markzdf.github.io/nlp_mc">
+<link rel="canonical" href="https://markzdf.github.io/nlp_mc/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/nlp_mc","path":"nlp_mc.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/nlp_mc/","path":"/nlp_mc/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title> | MyNotes
@@ -622,6 +622,10 @@
 </h1>
 
 <div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="//"></a></li>
+          <li>NLP_MC</li>
+  </ul>
 </div>
 
 </header>
@@ -630,36 +634,32 @@
       
       <div class="post-body">
           <p>求解</p>
-<p><span class="math display">\[
-\max f(x) = x_1x_2x_3
-\]</span> <span class="math display">\[
+<script type="math/tex; mode=display">
+\max f(x) = x_1x_2x_3</script><script type="math/tex; mode=display">
 s.t. \begin{cases}
     -x_1+2x_2+2x_3\geqslant0\\
     x_1+2x_2+2x_3\leqslant 72\\
     10\leqslant x_2\leqslant 20\\
     x1-x2 = 10
-\end{cases}
-\]</span></p>
-<p>由約束條件，得到三個變量的取值範圍</p>
-<p><span class="math display">\[
+\end{cases}</script><p>由約束條件，得到三個變量的取值範圍</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
     10\leqslant x_2\leqslant 20\\
     20\leqslant x_1\leqslant 30\\
     -10\leqslant x_3\leqslant 16
-\end{aligned}
-\]</span></p>
-<h1 id="循環">循環</h1>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">tic</span><br><span class="line">n=10000000; </span><br><span class="line">x1=unifrnd(20,30,n,1); </span><br><span class="line">x2=x1 - 10;</span><br><span class="line">x3=unifrnd(-10,16,n,1); </span><br><span class="line">fmax=-inf;</span><br><span class="line">for i=1:n</span><br><span class="line">    x = [x1(i), x2(i), x3(i)]; </span><br><span class="line">    if (-x(1)+2*x(2)+2*x(3)&gt;=0)  &amp;  (x(1)+2*x(2)+2*x(3)&lt;=72)</span><br><span class="line">        result = x(1)*x(2)*x(3);</span><br><span class="line">        if  result  &gt; fmax</span><br><span class="line">            fmax = result;</span><br><span class="line">            X = x;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line">disp(strcat(&#x27;蒙特卡罗模拟得到的最大值为&#x27;,num2str(fmax)))</span><br><span class="line">disp(&#x27;最大值处x1 x2 x3的取值为：&#x27;)</span><br><span class="line">disp(X)</span><br><span class="line">toc</span><br></pre></td></tr></table></figure>
-<h1 id="向量化">向量化</h1>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">tic</span><br><span class="line">n = 10000000;</span><br><span class="line">x1 = unifrnd(20,30,n,1);</span><br><span class="line">x2 = x1 - 10;</span><br><span class="line">x3 = unifrnd(-10,16,n,1);</span><br><span class="line">% 約束條件</span><br><span class="line">% -x(1)+2*x(2)+2*x(3)&gt;=0</span><br><span class="line">% x(1)+2*x(2)+2*x(3)&lt;=72</span><br><span class="line">c1 = -x1+2*x2+2*x3;</span><br><span class="line">c2 = x1+2*x2+2*x3-72;</span><br><span class="line">I = find(c1&gt;=0 &amp; c2&lt;=0);</span><br><span class="line">[Max, arg] = max(x1(I).*x2(I).*x3(I));</span><br><span class="line">disp([&#x27;最大值是&#x27;, num2str(Max)])</span><br><span class="line">disp([&#x27;對應的x1: &#x27;,num2str(x1(arg)),&#x27; ;x2: &#x27;,num2str(x2(arg)),&#x27; ;x3: &#x27;,num2str(x3(arg))])</span><br><span class="line">toc</span><br></pre></td></tr></table></figure>
-<p>不僅代碼更簡潔，同樣跑 <span
-class="math inline">\(n=1000000\)</span>，用循環耗時2.7s，用向量僅需0.7s，突出Matlab中向量化編程的優越性。</p>
+\end{aligned}</script><h1 id="循環"><a href="#循環" class="headerlink" title="循環"></a>循環</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">tic</span><br><span class="line">n=10000000; </span><br><span class="line">x1=unifrnd(20,30,n,1); </span><br><span class="line">x2=x1 - 10;</span><br><span class="line">x3=unifrnd(-10,16,n,1); </span><br><span class="line">fmax=-inf;</span><br><span class="line">for i=1:n</span><br><span class="line">    x = [x1(i), x2(i), x3(i)]; </span><br><span class="line">    if (-x(1)+2*x(2)+2*x(3)&gt;=0)  &amp;  (x(1)+2*x(2)+2*x(3)&lt;=72)</span><br><span class="line">        result = x(1)*x(2)*x(3);</span><br><span class="line">        if  result  &gt; fmax</span><br><span class="line">            fmax = result;</span><br><span class="line">            X = x;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line">disp(strcat(&#x27;蒙特卡罗模拟得到的最大值为&#x27;,num2str(fmax)))</span><br><span class="line">disp(&#x27;最大值处x1 x2 x3的取值为：&#x27;)</span><br><span class="line">disp(X)</span><br><span class="line">toc</span><br></pre></td></tr></table></figure>
+<h1 id="向量化"><a href="#向量化" class="headerlink" title="向量化"></a>向量化</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">tic</span><br><span class="line">n = 10000000;</span><br><span class="line">x1 = unifrnd(20,30,n,1);</span><br><span class="line">x2 = x1 - 10;</span><br><span class="line">x3 = unifrnd(-10,16,n,1);</span><br><span class="line">% 約束條件</span><br><span class="line">% -x(1)+2*x(2)+2*x(3)&gt;=0</span><br><span class="line">% x(1)+2*x(2)+2*x(3)&lt;=72</span><br><span class="line">c1 = -x1+2*x2+2*x3;</span><br><span class="line">c2 = x1+2*x2+2*x3-72;</span><br><span class="line">I = find(c1&gt;=0 &amp; c2&lt;=0);</span><br><span class="line">[Max, arg] = max(x1(I).*x2(I).*x3(I));</span><br><span class="line">disp([&#x27;最大值是&#x27;, num2str(Max)])</span><br><span class="line">disp([&#x27;對應的x1: &#x27;,num2str(x1(arg)),&#x27; ;x2: &#x27;,num2str(x2(arg)),&#x27; ;x3: &#x27;,num2str(x3(arg))])</span><br><span class="line">toc</span><br></pre></td></tr></table></figure>
+<p>不僅代碼更簡潔，同樣跑 $n=1000000$，用循環耗時2.7s，用向量僅需0.7s，突出Matlab中向量化編程的優越性。</p>
 
       </div>
       
       
       
     </div>
+  <ul class="breadcrumb">
+            <li><a href="//"></a></li>
+          <li>NLP_MC</li>
+  </ul>
 
     
     
@@ -752,11 +752,11 @@ class="math inline">\(n=1000000\)</span>，用循環耗時2.7s，用向量僅需
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/nlp_mc.html"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/nlp_mc/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1b96a5b7499442bbe1fe14dd3581c2d5"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"23745a9d961bdf642502eb96fb4ce79d"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
