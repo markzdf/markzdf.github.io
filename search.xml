@@ -3702,6 +3702,8 @@ w=[0.15,0.5,0.06,0.29]
     <url>/2023/09/11/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/</url>
     <content><![CDATA[<p>課程網站：<a
 href="http://121.192.177.201/course/machine_learning/guide_2021">指南</a></p>
+<p>網課：<a
+href="https://www.coursera.org/specializations/machine-learning-introduction#courses">吳恩達</a></p>
 ]]></content>
       <categories>
         <category>課程</category>
@@ -3711,6 +3713,7 @@ href="http://121.192.177.201/course/machine_learning/guide_2021">指南</a></p>
     <title>數值線性代數</title>
     <url>/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/</url>
     <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
+<span id="more"></span>
 <p>網課：</p>
 <ul>
 <li><a
@@ -3718,16 +3721,9 @@ href="https://www.youtube.com/playlist?list=PLRb3xghOQGNKbUt8zIRpwrQ-SZ6aIZNvt">
 <li><a
 href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></li>
 </ul>
-<span id="more"></span>
 ]]></content>
       <categories>
         <category>課程</category>
       </categories>
-  </entry>
-  <entry>
-    <title>計量經濟學</title>
-    <url>/2023/09/12/%E8%A8%88%E9%87%8F%E7%B6%93%E6%BF%9F%E5%AD%B8/</url>
-    <content><![CDATA[
-]]></content>
   </entry>
 </search>
