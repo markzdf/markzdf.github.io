@@ -944,24 +944,6 @@ https://www.guruin.com/articles/855</p>
       </categories>
   </entry>
   <entry>
-    <title>2023Fall遠程實習</title>
-    <url>/2023/08/21/%E6%89%BE%E5%AE%9E%E4%B9%A0/</url>
-    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
-<h1 id="任務一-9.14">任務一 9.14</h1>
-<blockquote>
-<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
-</blockquote>
-<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
-href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
-<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
-]]></content>
-      <categories>
-        <category>實習</category>
-      </categories>
-  </entry>
-  <entry>
     <title>奇異點</title>
     <url>/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/</url>
     <content><![CDATA[<p>Singular point 奇異點</p>
@@ -3639,9 +3621,37 @@ interests and experience</li>
     <content><![CDATA[<blockquote>
 <p>當閒話不再多說時我卻開始打退堂鼓，別人耳熟能詳的概念我是一頭霧水。一方面夢醒時分，原來我的大學才過去50%；另一方面下定決心，我絕不被年輕打倒</p>
 </blockquote>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>課程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2023Fall遠程實習</title>
+    <url>/2023/08/21/2023Fall%E9%81%A0%E7%A8%8B%E5%AF%A6%E7%BF%92/</url>
+    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
+<h1 id="任務一-9.14">任務一 9.14</h1>
+<blockquote>
+<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
+</blockquote>
+<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
+href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
+<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
+<h1 id="任務二-9.16">任務二 9.16</h1>
+<blockquote>
+<p>整理下諾貝爾基金會的情況，寫一篇文章，重點是： 1.
+諾貝爾基金基本介紹（包括緣由、理念） 2. 諾貝爾基金歷年管理規模 3.
+諾貝爾基金資產配置方法論 4.
+諾貝爾基金資產配置實際情況（可以詳細一點）</p>
+</blockquote>
+<p>附件：<a
+href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
+]]></content>
+      <categories>
+        <category>實習</category>
       </categories>
   </entry>
 </search>
