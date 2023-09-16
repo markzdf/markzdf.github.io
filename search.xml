@@ -1,91 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Morera定理</title>
-    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<p>柯西定理的逆敘述</p>
+    <title>2023Fall遠程實習</title>
+    <url>/2023/08/21/2023Fall%E9%81%A0%E7%A8%8B%E5%AF%A6%E7%BF%92/</url>
+    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
 <span id="more"></span>
-<p><u><strong>Theo</strong></u> (Morera)</p>
-<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
-simply-connected domain. Let <span class="math inline">\(f\in
-C(D)\)</span>, if <span class="math inline">\(\int_{\partial
-\triangle}f(z)dz=0\)</span>, for any triangle <span
-class="math inline">\(\triangle\)</span> in <span
-class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
-O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
-<p><span class="math display">\[
-連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
-\]</span></p>
-<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
-curve</p>
-<p>pf.</p>
-<p>Define <span class="math display">\[
-F(z)=\int_{\Gamma} f(z)dz
-\]</span></p>
-<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
-\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
-<p><img data-src="4C_1.png" width=400px></p>
-<p><span class="math display">\[
-F&#39;(z)=f(z), \therefore F\in O(D)
-\]</span></p>
-<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
-<p><span class="math display">\[
-\therefore f\in O(D) \ \blacksquare.
-\]</span></p>
-<hr />
-<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
-class="math inline">\(I\subset D\)</span> (closed interval). <span
-class="math inline">\(f\in C(D)\)</span></p>
-<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
-挖掉I後D還是開集</p>
-<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
-<p>手上只有Morera</p>
-<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
-<hr />
-<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
-<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
-half space), s.t. <span class="math inline">\(\partial D\cap
-\{x-axis\}=I\)</span> closed interval.</p>
-<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
-<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
-D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
-的interior</p>
-<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
-\mathring{I})\)</span>, and <span
-class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
-<p>set <span class="math inline">\(g=\Omega\rightarrow
-\mathbb{C}\)</span></p>
-<p><img data-src="4D_1.png" width=400px></p>
-<p><span class="math display">\[
-g(z)=\begin{cases}
-    f(z) &amp;z\in D\\
-    f(z) &amp;z\in \mathring{I}\\
-    \bar{f}(\bar{z})&amp; z\in D^*
-\end{cases}
-\]</span></p>
-<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
-class="math inline">\(\blacklozenge\)</span></p>
-<ol type="1">
-<li>考慮連續性</li>
-</ol>
-<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
-class="math inline">\(I\)</span>上</p>
-<p><span class="math display">\[
-f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
-\]</span></p>
-<p><span class="math display">\[
-f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
-\Rightarrow f(x)=u(x)
-\]</span></p>
-<p><img data-src="4D_2.jpeg"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
+<h1 id="任務一-9.14">任務一 9.14</h1>
+<blockquote>
+<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
+</blockquote>
+<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
+href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
+<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
+<h1 id="任務二-9.16">任務二 9.16</h1>
+<blockquote>
+<p>整理下諾貝爾基金會的情況，寫一篇文章，重點是： 1.
+諾貝爾基金基本介紹（包括緣由、理念） 2. 諾貝爾基金歷年管理規模 3.
+諾貝爾基金資產配置方法論 4.
+諾貝爾基金資產配置實際情況（可以詳細一點）</p>
+</blockquote>
+<p>附件：<a
+href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>實習</category>
       </categories>
-      <tags>
-        <tag>Morera定理</tag>
-        <tag>Schwarz反射定理</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hexo-Next側邊欄魔改</title>
@@ -126,6 +66,103 @@ href="https://blog.csdn.net/weixin_44543463/article/details/119749738">Hexo+next
 ]]></content>
       <categories>
         <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ODE應用</title>
+    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
+<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
+class="math inline">\(\beta\)</span>.</p>
+<span id="more"></span>
+<p><img data-src="1331.png" width=300px></p>
+<p><span class="math display">\[
+\tan \beta=r\frac{d\theta}{dr}
+\]</span></p>
+<p><em>Proof</em>: <a
+href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
+here</a></p>
+<h2 id="trajectories">Trajectories</h2>
+<p>原则：<span class="math inline">\(末-初\)</span></p>
+<p><img data-src="/download/141.jpg" width=300px></p>
+<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
+\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
+\beta=\frac{m_1-m_2}{1+m_1m_2}
+\]</span></p>
+<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
+<span class="math display">\[
+y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+\]</span></p>
+<ol start="2" type="1">
+<li>Polar coordinates</li>
+</ol>
+<p><img data-src="/download/143.jpg" width=300px></p>
+<p><span class="math display">\[
+\phi_1=\phi_2+\frac{\pi}{2}
+\]</span> <span class="math display">\[
+\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
+\]</span> <span class="math display">\[
+\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+\]</span></p>
+<h1 id="實際問題">實際問題</h1>
+<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
+<p><strong>1. Dilution and Accretion</strong></p>
+<p>稀释和浓缩盐水，关键是设<span
+class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
+class="math inline">\(\Delta x\)</span></p>
+<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
+<p><span class="math display">\[
+\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
+x}{\Delta t}\approx 6-0.03x
+\]</span></p>
+<p>当流入流出速度不一致时，溶液体积变成<span
+class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
+<p><strong>2. Interest</strong></p>
+<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
+P=Ae^{rt}
+\]</span>
+跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
+<span class="math display">\[
+\frac{dP}{dt}=rAe^{rt}=rP
+\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
+\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
+\]</span></p>
+<p><strong>3. Temperature</strong> <span class="math display">\[
+\frac{dT_B}{dt}=-k(T_B-T_M)
+\]</span></p>
+<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
+class="math display">\[
+\frac{dx}{dt}=kx
+\]</span></p>
+]]></content>
+      <categories>
+        <category>ODE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mitacs申請</title>
+    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
+    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
+href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
+<span id="more"></span>
+<p><a
+href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
+<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
+<h1 id="三件事-9.14">三件事 9.14</h1>
+<ol type="1">
+<li>打印成績單</li>
+<li>寫推薦信，找倪簽字</li>
+<li>寫三個小作文
+<ul>
+<li>General description of skills, background knowledge, research
+interests and experience</li>
+<li>Notable Achievements</li>
+<li>Briefly describe the research work you have completed</li>
+</ul></li>
+</ol>
+]]></content>
+      <categories>
+        <category>實習</category>
       </categories>
   </entry>
   <entry>
@@ -309,75 +346,91 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
       </categories>
   </entry>
   <entry>
-    <title>ODE應用</title>
-    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
-<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
-class="math inline">\(\beta\)</span>.</p>
+    <title>Morera定理</title>
+    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>柯西定理的逆敘述</p>
 <span id="more"></span>
-<p><img data-src="1331.png" width=300px></p>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
 <p><span class="math display">\[
-\tan \beta=r\frac{d\theta}{dr}
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
 \]</span></p>
-<p><em>Proof</em>: <a
-href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
-here</a></p>
-<h2 id="trajectories">Trajectories</h2>
-<p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><img data-src="/download/141.jpg" width=300px></p>
-<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
-\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
-\beta=\frac{m_1-m_2}{1+m_1m_2}
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
 \]</span></p>
-<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
-<span class="math display">\[
-y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img data-src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
 \]</span></p>
-<ol start="2" type="1">
-<li>Polar coordinates</li>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<hr />
+<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
+class="math inline">\(I\subset D\)</span> (closed interval). <span
+class="math inline">\(f\in C(D)\)</span></p>
+<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
+挖掉I後D還是開集</p>
+<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
+<p>手上只有Morera</p>
+<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
+<hr />
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img data-src="4D_1.png" width=400px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\blacklozenge\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
 </ol>
-<p><img data-src="/download/143.jpg" width=300px></p>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
 <p><span class="math display">\[
-\phi_1=\phi_2+\frac{\pi}{2}
-\]</span> <span class="math display">\[
-\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
-\]</span> <span class="math display">\[
-\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
 \]</span></p>
-<h1 id="實際問題">實際問題</h1>
-<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
-<p><strong>1. Dilution and Accretion</strong></p>
-<p>稀释和浓缩盐水，关键是设<span
-class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
-class="math inline">\(\Delta x\)</span></p>
-<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
 <p><span class="math display">\[
-\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
-x}{\Delta t}\approx 6-0.03x
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
 \]</span></p>
-<p>当流入流出速度不一致时，溶液体积变成<span
-class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
-<p><strong>2. Interest</strong></p>
-<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
-P=Ae^{rt}
-\]</span>
-跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
-<span class="math display">\[
-\frac{dP}{dt}=rAe^{rt}=rP
-\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
-\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
-\]</span></p>
-<p><strong>3. Temperature</strong> <span class="math display">\[
-\frac{dT_B}{dt}=-k(T_B-T_M)
-\]</span></p>
-<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
-class="math display">\[
-\frac{dx}{dt}=kx
-\]</span></p>
+<p><img data-src="4D_2.jpeg"></p>
 ]]></content>
       <categories>
-        <category>ODE</category>
+        <category>複變</category>
       </categories>
+      <tags>
+        <tag>Morera定理</tag>
+        <tag>Schwarz反射定理</tag>
+      </tags>
   </entry>
   <entry>
     <title>ODE自學</title>
@@ -422,94 +475,6 @@ href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
 （我用的是mist），在最頂上加入下面的代碼即可</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--menu-item-bg-color</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">  <span class="attr">--btn-default-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--btn-default-hover-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--content-bg-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--brand-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--badge-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何在macOS環境下配置hexo</title>
-    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
-    <content><![CDATA[<p>原先用typecho搭建的<a
-href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
-href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
-<span id="more"></span>
-<h1 id="准备工作">准备工作</h1>
-<p>官方文档给出的前置应用程序是 1. <a
-href="https://nodejs.org/en">Node.js</a> 2. Git</p>
-<p>第一个直接点进去下载即可，第二个需要先安装<a
-href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
-href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
-终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<h2 id="测试是否安装成功">测试是否安装成功</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h1 id="安装hexo">安装Hexo</h1>
-<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>初始化博客</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
-<code>blog</code>
-的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
-<p>此时已经能生成并在本地预览你的博客雏形啦</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="hexo指令">Hexo指令</h2>
-<p>这里介绍几种常用的Hexo指令，</p>
-<ol type="1">
-<li><code>hexo generate</code> 网站生成</li>
-<li><code>hexo server</code>
-启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
-<li><code>hexo deploy</code> 部署网站，在生成之后</li>
-</ol>
-<p>以上三种都可以用首字母简写为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1 id="部署网站到github">部署网站到Github</h1>
-<p>首先登陆Github，</p>
-<h2 id="添加ssh-key">添加SSH Key</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>其中 <code>username</code> 是你的用户名，
-<code>example@example.com</code>
-是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
-，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
-<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
-<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
-<code>id_rsa.pub</code> ，复制所有文字。</p>
-<p>接着打开<a href="https://github.com/settings/keys">SSH
-keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
-不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
-<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
-but Github does not procide shell access.</p>
-<p>则说明配置成功</p>
-<h2 id="上传本地文件">上传本地文件</h2>
-<p>在Github上新建一个仓库，Repository Name
-填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
-Repository 创建新的网站仓库。</p>
-<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
-缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
-bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
-1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
-3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
-等命令执行完后，运行<code>npm install</code></p>
-<p>可以解决 EACCES 的问题，亲测有效</p>
-<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<p>修改后保存，在终端上输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
-<p><strong>参考资料</strong> 1. <a
-href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
-OS环境下使用Hexo搭建个人博客</a></p>
-<ol start="2" type="1">
-<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
-</ol>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -618,39 +583,91 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
       </categories>
   </entry>
   <entry>
-    <title>不必再等</title>
-    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
-    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+    <title>如何在macOS環境下配置hexo</title>
+    <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
+    <content><![CDATA[<p>原先用typecho搭建的<a
+href="https://github.com/BigCoke233/matcha">matcha</a>主题，风格很好看，但点进文章后必须刷新一次才能正常显示公式。查阅此问题时我注意到这个漂亮的<a
+href="https://memset0.cn/">diaspora</a>主题，萌生了转站hexo的想法。</p>
 <span id="more"></span>
-<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
-<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
-idiots说的</p>
-<blockquote>
-<p>不要追求成功，成功会在不经意间追上你</p>
-</blockquote>
-<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
-<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
-<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
+<h1 id="准备工作">准备工作</h1>
+<p>官方文档给出的前置应用程序是 1. <a
+href="https://nodejs.org/en">Node.js</a> 2. Git</p>
+<p>第一个直接点进去下载即可，第二个需要先安装<a
+href="https://brew.sh/">homebrew</a>。homebrew是macOS系统缺失的包管理器，本来也很好安装（就一行代码扔进terminal的事），但443端口被墙了，所以变得很麻烦，服了。好在魔高一尺道高一丈，有个牛人用<a
+href="https://www.cnblogs.com/liyihua/p/12753163.html">一行代码搞定</a>，在macOS终端直接复制粘贴这行代码即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
+<p>接下来可以安装<a href="https://git-scm.com/download/mac">Git</a>,
+终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h2 id="测试是否安装成功">测试是否安装成功</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo">安装Hexo</h1>
+<p>用<code>npm</code>命令安装，为避免因权限问题报错，建议使用<code>sudo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>初始化博客</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>这条指令在目前的目录下（默认为打开终端时光标前的地址），创建一个名为
+<code>blog</code>
+的文件夹，也可替换成任意你喜欢的名字。之后所有关于博客的操作都在这个文件夹内进行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>此时已经能生成并在本地预览你的博客雏形啦</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="hexo指令">Hexo指令</h2>
+<p>这里介绍几种常用的Hexo指令，</p>
+<ol type="1">
+<li><code>hexo generate</code> 网站生成</li>
+<li><code>hexo server</code>
+启动服务器，用于发布博客前的本地预览，默认情况下访问网址是<code>http://localhost:4000/</code></li>
+<li><code>hexo deploy</code> 部署网站，在生成之后</li>
+</ol>
+<p>以上三种都可以用首字母简写为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="部署网站到github">部署网站到Github</h1>
+<p>首先登陆Github，</p>
+<h2 id="添加ssh-key">添加SSH Key</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>username</code> 是你的用户名，
+<code>example@example.com</code>
+是你的Github登录邮箱。然后通过终端命令生成 SSH Key： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>创建时它会问你储存到哪，后面跟着个 <code>(~/.ssh/id_rsa.pub)</code>
+，这时不要输入，按回车即可，它会默认存到括号内的地址。然后它会让你设置passphrase。</p>
+<p>退出终端再重新打开（这时回到默认目录），输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">open .ssh</span><br></pre></td></tr></table></figure></p>
+<p>可以看到访达打开了隐藏文件夹 <code>.ssh</code> ，我们用文字编辑打开
+<code>id_rsa.pub</code> ，复制所有文字。</p>
+<p>接着打开<a href="https://github.com/settings/keys">SSH
+keys</a>界面，点击右上角 New SSH key，Title 随便填，Key type
+不用管他，将刚才复制的文字粘贴到Key栏，点击 Add SSH key。</p>
+<p>完成后用以下命令测试是否配置成功 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果出现 &gt; Hi {Github用户名}! You've successfully suthenticated,
+but Github does not procide shell access.</p>
+<p>则说明配置成功</p>
+<h2 id="上传本地文件">上传本地文件</h2>
+<p>在Github上新建一个仓库，Repository Name
+填<code>&#123;你的用户名&#125;.github.io</code>，仓库状态设为 Public，点击 Create
+Repository 创建新的网站仓库。</p>
+<p>安装Hexo的扩展 hexo-deployer-git，注意在博客文件夹下进行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>如在安装过程中报错显示 EACCES，这个错误可能是由于 npm
+缓存文件中存在以 root 所有的文件，这可能是之前 npm 版本中的一个
+bug。解决方法是通过运行<code>sudo chown</code>命令将这些文件的所有权更改为当前用户。步骤如下：
+1. 打开终端 2. 运行以下命令，假设用户名为<code>ABC</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo chown -R ABC:20 &quot;/Users/ABC/.npm&quot;</span><br></pre></td></tr></table></figure>
+3. 输入密码（在终端中不会显示密码，输入完按回车） 4.
+等命令执行完后，运行<code>npm install</code></p>
+<p>可以解决 EACCES 的问题，亲测有效</p>
+<p>接下来编辑博客文件夹下的<code>_config.yml</code>文件，翻到最底部，修改deploy部分为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>修改后保存，在终端上输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>输入密码，执行完毕后，就可以访问<code>你的用户名.github.io</code>查看网站了。</p>
+<p><strong>参考资料</strong> 1. <a
+href="https://l3zc.com/2022/05/mac%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac
+OS环境下使用Hexo搭建个人博客</a></p>
+<ol start="2" type="1">
+<li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
+</ol>
 ]]></content>
       <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>六月總結</title>
-    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>早上八点，太平洋上空</p>
-<span id="more"></span>
-<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
-<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
-<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
-<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
-<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
-<p>考试周的总结已另成一篇，不再重复。<span
-class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
-]]></content>
-      <categories>
-        <category>隨記</category>
+        <category>Hexo</category>
       </categories>
   </entry>
   <entry>
@@ -679,87 +696,6 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
 ]]></content>
       <categories>
         <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>半夜的AI焦慮</title>
-    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
-    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
-<span id="more"></span>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="1.jpg" width="260" alt="x1">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="2.jpg" width="260" alt="x2">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="3.jpg" width="260" alt="x3">
-</div>
-<div style="float:none;clear:both;">
-<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
-</div>
-<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
-<img data-src="4.jpg" width=650px">
-<center>
-我的話，會選右邊囉
-</center>
-]]></content>
-      <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>複變數函數論</title>
-    <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p>網課：<a
-href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a>；官網：<a
-href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
-<span id="more"></span>
-<p><img align="left" data-src="ICA.jpg" width=71.5px></p>
-<pre><code>    Invitation to complex analysis
-    Ralph P. Boas
-    Advanced undergraduates and beginning graduate level</code></pre>
-<p><a
-href="/download/Invitation%20to%20Complex%20Analysis.pdf">鏈接🔗</a></p>
-<h1 id="作業">作業</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" />6/29 <a
-href="/download/作業1.pdf">作業1</a></label></li>
-<li><label><input type="checkbox" />9/29 <a
-href="/download/作業2.pdf">作業2</a></label></li>
-<li><label><input type="checkbox" />14/29 <a
-href="/download/作業3.pdf">作業3</a></label></li>
-<li><label><input type="checkbox" />19/29 <a
-href="/download/作業4.pdf">作業4</a></label></li>
-<li><label><input type="checkbox" />24/30 <a
-href="/download/作業5.pdf">作業5</a></label></li>
-<li><label><input type="checkbox" />28/30 <a
-href="/download/作業6.pdf">作業6</a></label></li>
-</ul>
-<h1 id="刷題">刷題</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" />ICA-Chap 8</label></li>
-<li><label><input type="checkbox" />ICA-Chap 9</label></li>
-</ul>
-<h1 id="課程大綱">課程大綱</h1>
-<p>第1講：<a
-href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函數</a></p>
-<p>第2講：<a
-href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西積分公式</a></p>
-<p>第3講：<a
-href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
-<p>第4講：<a
-href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a>、<a
-href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">Morera定理</a></p>
-<p>第5講：<a
-href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異點</a></p>
-<p>第6講：<a
-href="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">留數</a></p>
-<p>第7講：<a
-href="https://markzdf.github.io/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/">留數例題</a></p>
-]]></content>
-      <categories>
-        <category>課程</category>
       </categories>
   </entry>
   <entry>
@@ -941,6 +877,106 @@ https://www.guruin.com/articles/855</p>
 ]]></content>
       <categories>
         <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>半夜的AI焦慮</title>
+    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
+    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
+<span id="more"></span>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="1.jpg" width="260" alt="x1">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="2.jpg" width="260" alt="x2">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="3.jpg" width="260" alt="x3">
+</div>
+<div style="float:none;clear:both;">
+<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
+</div>
+<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
+<img data-src="4.jpg" width=650px">
+<center>
+我的話，會選右邊囉
+</center>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>不必再等</title>
+    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
+    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+<span id="more"></span>
+<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
+<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
+idiots说的</p>
+<blockquote>
+<p>不要追求成功，成功会在不经意间追上你</p>
+</blockquote>
+<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
+<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
+<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>複變數函數論</title>
+    <url>/2023/08/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>網課：<a
+href="https://www.bilibili.com/video/BV1gA411T7ar?p=3&amp;vd_source=0747a479964faef65dc22d966c973b66">國立清華大學-程守慶</a>；官網：<a
+href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=289">10902</a></p>
+<span id="more"></span>
+<p><img align="left" data-src="ICA.jpg" width=71.5px></p>
+<pre><code>    Invitation to complex analysis
+    Ralph P. Boas
+    Advanced undergraduates and beginning graduate level</code></pre>
+<p><a
+href="/download/Invitation%20to%20Complex%20Analysis.pdf">鏈接🔗</a></p>
+<h1 id="作業">作業</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" />6/29 <a
+href="/download/作業1.pdf">作業1</a></label></li>
+<li><label><input type="checkbox" />9/29 <a
+href="/download/作業2.pdf">作業2</a></label></li>
+<li><label><input type="checkbox" />14/29 <a
+href="/download/作業3.pdf">作業3</a></label></li>
+<li><label><input type="checkbox" />19/29 <a
+href="/download/作業4.pdf">作業4</a></label></li>
+<li><label><input type="checkbox" />24/30 <a
+href="/download/作業5.pdf">作業5</a></label></li>
+<li><label><input type="checkbox" />28/30 <a
+href="/download/作業6.pdf">作業6</a></label></li>
+</ul>
+<h1 id="刷題">刷題</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" />ICA-Chap 8</label></li>
+<li><label><input type="checkbox" />ICA-Chap 9</label></li>
+</ul>
+<h1 id="課程大綱">課程大綱</h1>
+<p>第1講：<a
+href="https://markzdf.github.io/2023/08/17/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">解析函數</a></p>
+<p>第2講：<a
+href="https://markzdf.github.io/2023/08/17/%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/">柯西積分公式</a></p>
+<p>第3講：<a
+href="https://markzdf.github.io/2023/08/18/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%B9%82%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80/">解析函數的冪級數展開</a></p>
+<p>第4講：<a
+href="https://markzdf.github.io/2023/08/19/%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/">解析函數的零點</a>、<a
+href="https://markzdf.github.io/2023/08/22/Morera%E5%AE%9A%E7%90%86/">Morera定理</a></p>
+<p>第5講：<a
+href="https://markzdf.github.io/2023/08/22/%E5%A5%87%E7%95%B0%E9%BB%9E/">奇異點</a></p>
+<p>第6講：<a
+href="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">留數</a></p>
+<p>第7講：<a
+href="https://markzdf.github.io/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/">留數例題</a></p>
+]]></content>
+      <categories>
+        <category>課程</category>
       </categories>
   </entry>
   <entry>
@@ -1246,6 +1282,40 @@ function是常數函數。皮卡小定理則證明出只要整函數miss兩個�
         <tag>Liouville定理</tag>
         <tag>Casorati-Weierstrass定理</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>六月總結</title>
+    <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>早上八点，太平洋上空</p>
+<span id="more"></span>
+<p>六月初，想到再过两周就考试周，这学期弄得很忙很忙最后还是到两周速成的境地，很不是滋味。谈判学小组最后一次讨论，学长学姐们人真的很好，很照顾我帮我拿高分。泽凯说我逻辑没什么问题，但不能快速抓住关键点。第一周过后压力大起来了，这时反骨属性显露出来，一个周五晚上一直在刷漫画。去洗手间洗杯子的路上，吹着芙蓉湖过来的热浪，有点羞愧。想到让人幸福的不是未来的展望、过去的回忆，而是当下所做是所愿之事。为了待会学习现在使劲玩，并不比现在就学更快乐。</p>
+<p>我这学期共做过三四次计划，全都在第一天破产。积极地消灭todo是个陷阱，当把快感放在划掉todo的那一刻时就已经掉进去了。要让完成任务可持续，就要享受任务本身。否则效率会特别低，就像五月中旬时一样。快进考试周前的周末看了场辩论，北大打暨大，也很有收获。</p>
+<p>进入考试周了，状态一下子变得紧张，想不想学只在一念之间。6.12周一把投资学过了一遍，攒了些问题去问mxl。老师真的很好，问完之后又聊了一会，跟美女老师聊天真的会开心。被夸“你可以的”“这样挺好”变得很安心。心想说有时候要唯心一点，我觉得是就是，我觉得会了就会了，我觉得自信就是自信，我觉得成熟就是成熟。不要太纠结找证据。</p>
+<p>过去习惯了隐藏实力，是因为游刃有余，现在不用隐藏了，要不然真成蠢蛋。在大学利益冲突太激烈，很难说真心话。</p>
+<p>老爸之前说“对印度人，不要瞧不起他们，也不要把他们太当回事”，笑死。不只是对印度人，对很多人和事都可以这样，比如上海人，比如21世纪杯。</p>
+<p>考试周的总结已另成一篇，不再重复。<span
+class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>數值線性代數</title>
+    <url>/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/</url>
+    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
+<span id="more"></span>
+<p>自學：</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>課程</category>
+      </categories>
   </entry>
   <entry>
     <title>有趣的複變題</title>
@@ -1779,353 +1849,6 @@ class="math inline">\(f/(w-z)\)</span></p>
       </tags>
   </entry>
   <entry>
-    <title>清風數模</title>
-    <url>/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/</url>
-    <content><![CDATA[<p>系統自學數模</p>
-<span id="more"></span>
-<p><img align="left" data-src="1.png" width=55.5px></p>
-<pre><code>    MATLAB揭秘
-    入門級</code></pre>
-<p><img align="left" data-src="2.png" width=57.5px></p>
-<pre><code>    高等應用數學問題的MATLAB求解
-    高手級</code></pre>
-<p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a
-href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
-<h1 id="正課">正課</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="" />層次分析法 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />TOPSIS <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />插值算法 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />擬和算法 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />相關性分析</label></li>
-<li><label><input type="checkbox" checked="" />典型相關分析 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />迴歸分析 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" />圖論</label></li>
-<li><label><input type="checkbox" checked="" />分類模型</label></li>
-<li><label><input type="checkbox" checked="" />聚類算法</label></li>
-<li><label><input type="checkbox" checked="" />時間序列分析</label></li>
-<li><label><input type="checkbox" checked="" />灰色預測 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" checked="" />神經網路 <span
-class="math inline">\(\checkmark\)</span></label></li>
-<li><label><input type="checkbox" />SVD和圖形處理</label></li>
-<li><label><input type="checkbox" />主成分分析</label></li>
-</ul>
-<h1 id="更新">更新</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" />因子分析</label></li>
-<li><label><input type="checkbox" />岭回歸和Lasso回歸</label></li>
-<li><label><input type="checkbox" />灰色關聯分析</label></li>
-<li><label><input type="checkbox" />弗洛伊德算法</label></li>
-<li><label><input type="checkbox" />ARCH模型和GARCH模型</label></li>
-<li><label><input type="checkbox" />正態分佈均值假設檢驗</label></li>
-<li><label><input type="checkbox" checked="" />蒙特卡洛模擬</label></li>
-<li><label><input type="checkbox" checked="" />數學規劃</label></li>
-<li><label><input type="checkbox" />Matlab繪圖</label></li>
-<li><label><input type="checkbox" />Matlab求解</label></li>
-<li><label><input type="checkbox" />微分方程</label></li>
-<li><label><input type="checkbox" />粒子群算法</label></li>
-</ul>
-<table>
-<colgroup>
-<col style="width: 55%" />
-<col style="width: 44%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">章節</th>
-<th style="text-align: left;">重點</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">相關性分析</td>
-<td style="text-align: left;">Spearman相關係數檢驗<span
-class="math inline">\(\ast\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">迴歸分析</td>
-<td
-style="text-align: left;">異方差檢驗（BP，懷特），（向前、向後）逐步回歸</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">分類模型</td>
-<td style="text-align: left;">Logistic回歸，K折交叉驗證<span
-class="math inline">\(\ast\)</span>，Fisher判別分析<span
-class="math inline">\(\ast\)</span>，多分類</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">聚類算法</td>
-<td
-style="text-align: left;">K均值算法，系統聚類，聚合係數圖，DBSCAN算法<span
-class="math inline">\(\ast\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">時間序列分析</td>
-<td
-style="text-align: left;">處理缺失值：序列平均值，鄰近點平均值，鄰近點中位數，線性插值（2的特殊情況），鄰近點線型趨勢（回歸）<br>週期性分解<span
-class="math inline">\(\ast\)</span><br>兩類模型：1. <a
-href="/smooth">指數平滑模型</a> 2. <a href="/arima">ARIMA模型</a><br>
-2a.
-Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARMA(p,q)模型<br>2b.
-選模型，怎樣判斷p和q？<strong>ACF，PACF</strong>：拖尾？截尾？不準確！<strong>AIC，BIC準則</strong>：選小<br>2c.
-判斷殘差是不是白噪聲：Q檢驗</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">灰色預測</td>
-<td style="text-align: left;"><span
-class="math inline">\(OLS\)</span>矩陣版，完全多重共線性再解釋<br><a
-href="/gm"><span class="math inline">\(GM(1,1)\)</span></a>：<a
-href="/download/gm.jpg">白化方程</a>，准指數規律<br><span
-class="math inline">\(GM(1,1)\)</span>評價：殘差檢驗，級比偏差檢驗<br>拓展：新信息<span
-class="math inline">\(GM(1,1)\)</span>，新陳代謝<span
-class="math inline">\(GM(1,1)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">神經網路</td>
-<td style="text-align: left;">Matlab app，<a
-href="https://pan.baidu.com/share/init?surl=hu7x_LC65Ez382725sqU4g">論文；提取碼dwla</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">數學規劃</td>
-<td style="text-align: left;">分類：（1.線性規劃：單純形法 2.非線性規劃
-3.整數規劃：非線性的整數規劃用蒙特卡洛模擬 4.0-1規劃）<br>求解：<a
-href="/prog/">Matlab內置函數</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">蒙特卡洛模擬</td>
-<td style="text-align: left;"><a
-href="/queue/">排隊論</a>，求非線性規劃初始值：<a
-href="/nlp_mc/">改良版代碼</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">粒子群算法</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>課程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>留數例題</title>
-    <url>/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/</url>
-    <content><![CDATA[<p>Contour integral（路徑積分）</p>
-<span id="more"></span>
-<h1 id="例題1">例題1</h1>
-<p>計算 <span class="math display">\[
-\int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos \theta}
-\]</span></p>
-<p><a
-href="https://socratic.org/questions/594cf2bfb72cff192abb7f86">微積分做法</a>：let
-<span class="math inline">\(u=\tan \frac{\theta}{2}\cdots\)</span></p>
-<p>留數做法</p>
-<p><span class="math display">\[
-z=e^{i\theta}=\cos\theta+i\sin\theta
-\]</span></p>
-<p><span class="math display">\[
-\bar{z}=e^{-i\theta}=\cos\theta-i\sin\theta
-\]</span></p>
-<p><span class="math inline">\(|z|=1\)</span>, <span
-class="math inline">\(\bar{z}=\frac{1}{z}\)</span></p>
-<p><span class="math display">\[
-\cos\theta=\frac{1}{2}(z+\bar{z})=\frac{1}{2}(z+\frac{1}{z})
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos \theta}&amp;=\int_C
-\frac{dz}{iz(5+\frac{3}{2}(z+\frac{1}{z}))}\\
-    &amp;=\frac{1}{i}\int_C\frac{dz}{\frac{3}{2}z^2+5z+\frac{3}{2}}\\
-    &amp;=\frac{2}{i}\int_C \frac{dz}{3z^2+10z+3}\\
-    &amp;=\frac{2}{i}\int_C\frac{dz}{(3z+1)(z+3)}\\
-    &amp;=4\pi \cdot \underbrace{\frac{1}{2\pi
-i}\int_C\frac{dz}{(3z+1)(z+3)}}_{Res\left(\frac{1}{(3z+1)(z+3)};-\frac{1}{3}\right)}
-\end{aligned}
-\]</span></p>
-<p><span
-class="math inline">\(\frac{1}{(3z+1)(z+3)}\)</span>有兩個simple
-pole，分別在<span
-class="math inline">\(z=-3,-\frac{1}{3}\)</span>，因為單位圓半徑是1，<span
-class="math inline">\(z=-3\)</span>在積分範圍外，只剩下<span
-class="math inline">\(-\frac{1}{3}\)</span></p>
-<p><span class="math display">\[
-Res=\lim_{z\rightarrow
--\frac{1}{3}}(z+\frac{1}{3})\frac{1}{(3z+1)(z+3)}=\lim_{z\rightarrow
--\frac{1}{3}}\frac{1}{3z+9}=\frac{1}{8}
-\]</span></p>
-<p><span class="math display">\[
-\therefore \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos
-\theta}=\frac{4\pi}{8}=\frac{\pi}{2}
-\]</span></p>
-<h1 id="例題2">例題2</h1>
-<p>計算 <span class="math display">\[
-\int_{-\infty}^{\infty}\frac{P(x)}{Q(x)}dx
-\]</span></p>
-<p>條件：<span class="math inline">\(P,Q\)</span> real-valued
-polynomials, s.t.</p>
-<ol type="1">
-<li><span class="math inline">\(Q(x)\neq 0, x\in
-\mathbb{R}\)</span></li>
-<li><span class="math inline">\(\deg Q\geqslant 2+\deg P\)</span></li>
-</ol>
-<h2 id="例題2.1">例題2.1</h2>
-<p><span class="math display">\[
-\int_{-\infty}^{\infty}\frac{dx}{1+x^4}
-\]</span></p>
-<p><a
-href="https://math.stackexchange.com/questions/333611/evaluating-int-frac1x41-dx">微積分方法</a>：</p>
-<p><span class="math display">\[
-x^4+1=x^4+2x^2+1-2x^2=(x^2+1)^2-2x^2=(x^2+\sqrt{2}x+1)(x^2-\sqrt{2}x+1)
-\]</span></p>
-<p>留數方法：</p>
-<h3 id="方法一">方法一</h3>
-<p>畫半圓</p>
-<p>先算奇異點<span class="math inline">\(z^4+1=0\Rightarrow
-z^4=-1=e^{\pi i}\)</span></p>
-<p><span class="math display">\[
-z=e^{\frac{\pi}{4}i}, e^{\frac{3}{4}\pi i}, e^{\frac{5}{4}\pi i},
-e^{\frac{7}{4}\pi i}
-\]</span></p>
-<p><img data-src="1.jpg" width=500px></p>
-<p><span class="math display">\[
-\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i
-Res\left(\frac{1}{1+z^4};e^{\frac{\pi}{4}i},e^{\frac{3}{4}\pi i}\right)
-\]</span></p>
-<p><span class="math display">\[
-Res\ at\ e^{\frac{\pi}{4}i}
-=\lim_{z\rightarrow
-e^{\frac{\pi}{4}i}}(z-e^{\frac{\pi}{4}i})\frac{1}{z^4+1}
-=\lim_{z\rightarrow
-e^{\frac{\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{\pi}{4}i}}}
-=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{\pi}{4}i}}}
-=\frac{1}{4e^{\frac{3}{4}\pi i}}
-=\frac{1}{4}e^{-\frac{3}{4}\pi i}
-=\frac{1}{4}(\cos \frac{3}{4}\pi-i\sin \frac{3}{4}\pi)
-\]</span></p>
-<p><span class="math display">\[
-Res\ at\ e^{\frac{3\pi}{4}i}
-=\lim_{z\rightarrow
-e^{\frac{3\pi}{4}i}}(z-e^{\frac{3\pi}{4}i})\frac{1}{z^4+1}
-=\lim_{z\rightarrow
-e^{\frac{3\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{3\pi}{4}i}}}
-=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{3\pi}{4}i}}}
-=\frac{1}{4e^{\frac{9}{4}\pi i}}
-=\frac{1}{4}e^{-\frac{9}{4}\pi i}
-=\frac{1}{4}e^{-\frac{\pi}{4} i}
-=\frac{1}{4}(\cos \frac{1}{4}\pi-i\sin \frac{1}{4}\pi)
-\]</span></p>
-<p><span class="math inline">\(e^{-\frac{9}{4}\pi i}=e^{-\frac{\pi}{4}
-i}\)</span>是因為<span class="math inline">\(e^{2\pi
-i}=1\)</span>，把兩個點的留數相加</p>
-<p><span class="math display">\[
-\therefore \int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\times
-\frac{1}{4}(-2i\frac{\sqrt{2}}{2})=\frac{\sqrt{2}}{2}\pi
-\]</span></p>
-<p><span class="math display">\[
-\int_{-R}^R\frac{dx}{1+x^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}=\frac{\sqrt{2}}{2}\pi
-\]</span></p>
-<p>下面證明<span class="math inline">\(R\rightarrow
-\infty\)</span>時，第二項趨近於0</p>
-<p><span class="math display">\[
-\lim_{R\rightarrow\infty}\left|\int_{\Gamma_R}\frac{dz}{1+z^4}\right|\leqslant
-\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{Rd\theta}{|1+z^4|}\leqslant
-\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{2Rd\theta}{R^4}=\lim_{R\rightarrow\infty}\frac{2\pi
-}{R}=0
-\]</span></p>
-<p>where <span class="math inline">\(|1+z^4|\geqslant
-\frac{|z^4|}{2}=\frac{R^4}{2}\)</span></p>
-<h3 id="方法二">方法二</h3>
-<p>畫四分之一圓</p>
-<p><img align="left" data-src="2.jpg" width=180px></p>
-<p><span class="math display">\[
-\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\cdot
-Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
-\frac{1}{4}e^{-\frac{3}{4}\pi i}=\frac{2\pi i}{4}(\cos
-\frac{3}{4}\pi-i\sin \frac{3}{4}\pi)=\frac{\sqrt{2}}{4}\pi (1-i)
-\]</span></p>
-<p><span class="math display">\[
-\int_{\Gamma}\frac{dz}{1+z^4}=\int_{\Gamma_1}\frac{dz}{1+z^4}+\int_{\Gamma_3}\frac{dz}{1+z^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}
-\]</span></p>
-<p><span class="math display">\[
-\Downarrow
-\]</span></p>
-<p><span class="math display">\[
-\int_0^R\frac{dx}{1+x^4}+\int_R^0\frac{idy}{1+y^4}+\underbrace{\int_{\Gamma_R}\frac{dz}{1+z^4}}_{\xrightarrow{R\rightarrow
-\infty}0}=(1-i)\int_0^R\frac{dx}{1+x^4}\xrightarrow{R\rightarrow
-\infty}(1-i)\int_0^{\infty}\frac{dx}{1+x^4}
-\]</span></p>
-<p><span class="math display">\[
-\because (1-i)\int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
-(1-i)
-\]</span></p>
-<p><span class="math display">\[
-\therefore \int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
-\]</span></p>
-<h2 id="例2.2">例2.2</h2>
-<p><span class="math display">\[
-\int_{\Gamma}\frac{dz}{z^2+2z+2}
-\]</span></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解決hexo本地和部署不一致問題</title>
-    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
-<span id="more"></span>
-<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img data-src="branch.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
-<figure>
-<img data-src="new.png" alt="new" />
-<figcaption aria-hidden="true">new</figcaption>
-</figure>
-<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
-<code>main</code>。</p>
-<figure>
-<img data-src="default.png" alt="default" />
-<figcaption aria-hidden="true">default</figcaption>
-</figure>
-<p>接着在 Settings 的 Default branch 一栏点击<span
-class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
-<code>main</code>，点击 Update ，点击红色的 I understand。</p>
-<figure>
-<img data-src="pages.png" alt="pages" />
-<figcaption aria-hidden="true">pages</figcaption>
-</figure>
-<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
-main，保存。</p>
-<p>最后记得在博客文件夹的 <code>_config.yml</code>
-内将deploy部分的branch改为<code>main</code>。</p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可实现部署和本地一致。</p>
-<p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
     <title>特殊微分方程的解</title>
     <url>/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="separable-variables">Separable Variables</h1>
@@ -2564,6 +2287,143 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
       </categories>
   </entry>
   <entry>
+    <title>清風數模</title>
+    <url>/2023/08/28/%E6%B8%85%E9%A2%A8%E6%95%B8%E6%A8%A1/</url>
+    <content><![CDATA[<p>系統自學數模</p>
+<span id="more"></span>
+<p><img align="left" data-src="1.png" width=55.5px></p>
+<pre><code>    MATLAB揭秘
+    入門級</code></pre>
+<p><img align="left" data-src="2.png" width=57.5px></p>
+<pre><code>    高等應用數學問題的MATLAB求解
+    高手級</code></pre>
+<p>連結🔗：<a href="/download/MATLAB揭秘.pdf">MATLAB揭秘</a>、<a
+href="/download/高等应用数学问题的MATLAB求解.pdf">高等應用數學問題的MATLAB求解</a></p>
+<h1 id="正課">正課</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />層次分析法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />TOPSIS <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />插值算法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />擬和算法 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />相關性分析</label></li>
+<li><label><input type="checkbox" checked="" />典型相關分析 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />迴歸分析 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" />圖論</label></li>
+<li><label><input type="checkbox" checked="" />分類模型</label></li>
+<li><label><input type="checkbox" checked="" />聚類算法</label></li>
+<li><label><input type="checkbox" checked="" />時間序列分析</label></li>
+<li><label><input type="checkbox" checked="" />灰色預測 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" checked="" />神經網路 <span
+class="math inline">\(\checkmark\)</span></label></li>
+<li><label><input type="checkbox" />SVD和圖形處理</label></li>
+<li><label><input type="checkbox" />主成分分析</label></li>
+</ul>
+<h1 id="更新">更新</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" />因子分析</label></li>
+<li><label><input type="checkbox" />岭回歸和Lasso回歸</label></li>
+<li><label><input type="checkbox" />灰色關聯分析</label></li>
+<li><label><input type="checkbox" />弗洛伊德算法</label></li>
+<li><label><input type="checkbox" />ARCH模型和GARCH模型</label></li>
+<li><label><input type="checkbox" />正態分佈均值假設檢驗</label></li>
+<li><label><input type="checkbox" checked="" />蒙特卡洛模擬</label></li>
+<li><label><input type="checkbox" checked="" />數學規劃</label></li>
+<li><label><input type="checkbox" />Matlab繪圖</label></li>
+<li><label><input type="checkbox" />Matlab求解</label></li>
+<li><label><input type="checkbox" />微分方程</label></li>
+<li><label><input type="checkbox" />粒子群算法</label></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">章節</th>
+<th style="text-align: left;">重點</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">相關性分析</td>
+<td style="text-align: left;">Spearman相關係數檢驗<span
+class="math inline">\(\ast\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">迴歸分析</td>
+<td
+style="text-align: left;">異方差檢驗（BP，懷特），（向前、向後）逐步回歸</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">分類模型</td>
+<td style="text-align: left;">Logistic回歸，K折交叉驗證<span
+class="math inline">\(\ast\)</span>，Fisher判別分析<span
+class="math inline">\(\ast\)</span>，多分類</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">聚類算法</td>
+<td
+style="text-align: left;">K均值算法，系統聚類，聚合係數圖，DBSCAN算法<span
+class="math inline">\(\ast\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">時間序列分析</td>
+<td
+style="text-align: left;">處理缺失值：序列平均值，鄰近點平均值，鄰近點中位數，線性插值（2的特殊情況），鄰近點線型趨勢（回歸）<br>週期性分解<span
+class="math inline">\(\ast\)</span><br>兩類模型：1. <a
+href="/smooth">指數平滑模型</a> 2. <a href="/arima">ARIMA模型</a><br>
+2a.
+Foundation：平穩性，差分方程，滯後算子，AR(p)和MA(q)模型，ARMA(p,q)模型<br>2b.
+選模型，怎樣判斷p和q？<strong>ACF，PACF</strong>：拖尾？截尾？不準確！<strong>AIC，BIC準則</strong>：選小<br>2c.
+判斷殘差是不是白噪聲：Q檢驗</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">灰色預測</td>
+<td style="text-align: left;"><span
+class="math inline">\(OLS\)</span>矩陣版，完全多重共線性再解釋<br><a
+href="/gm"><span class="math inline">\(GM(1,1)\)</span></a>：<a
+href="/download/gm.jpg">白化方程</a>，准指數規律<br><span
+class="math inline">\(GM(1,1)\)</span>評價：殘差檢驗，級比偏差檢驗<br>拓展：新信息<span
+class="math inline">\(GM(1,1)\)</span>，新陳代謝<span
+class="math inline">\(GM(1,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">神經網路</td>
+<td style="text-align: left;">Matlab app，<a
+href="https://pan.baidu.com/share/init?surl=hu7x_LC65Ez382725sqU4g">論文；提取碼dwla</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">數學規劃</td>
+<td style="text-align: left;">分類：（1.線性規劃：單純形法 2.非線性規劃
+3.整數規劃：非線性的整數規劃用蒙特卡洛模擬 4.0-1規劃）<br>求解：<a
+href="/prog/">Matlab內置函數</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">蒙特卡洛模擬</td>
+<td style="text-align: left;"><a
+href="/queue/">排隊論</a>，求非線性規劃初始值：<a
+href="/nlp_mc/">改良版代碼</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">粒子群算法</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>課程</category>
+      </categories>
+  </entry>
+  <entry>
     <title>留數</title>
     <url>/2023/08/27/%E7%95%99%E6%95%B8/</url>
     <content><![CDATA[<p>Residue（留數）</p>
@@ -2685,6 +2545,169 @@ singularity，把它們的留數全部加起來一定等於0</p>
 class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
 <p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
 sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>留數例題</title>
+    <url>/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/</url>
+    <content><![CDATA[<p>Contour integral（路徑積分）</p>
+<span id="more"></span>
+<h1 id="例題1">例題1</h1>
+<p>計算 <span class="math display">\[
+\int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos \theta}
+\]</span></p>
+<p><a
+href="https://socratic.org/questions/594cf2bfb72cff192abb7f86">微積分做法</a>：let
+<span class="math inline">\(u=\tan \frac{\theta}{2}\cdots\)</span></p>
+<p>留數做法</p>
+<p><span class="math display">\[
+z=e^{i\theta}=\cos\theta+i\sin\theta
+\]</span></p>
+<p><span class="math display">\[
+\bar{z}=e^{-i\theta}=\cos\theta-i\sin\theta
+\]</span></p>
+<p><span class="math inline">\(|z|=1\)</span>, <span
+class="math inline">\(\bar{z}=\frac{1}{z}\)</span></p>
+<p><span class="math display">\[
+\cos\theta=\frac{1}{2}(z+\bar{z})=\frac{1}{2}(z+\frac{1}{z})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos \theta}&amp;=\int_C
+\frac{dz}{iz(5+\frac{3}{2}(z+\frac{1}{z}))}\\
+    &amp;=\frac{1}{i}\int_C\frac{dz}{\frac{3}{2}z^2+5z+\frac{3}{2}}\\
+    &amp;=\frac{2}{i}\int_C \frac{dz}{3z^2+10z+3}\\
+    &amp;=\frac{2}{i}\int_C\frac{dz}{(3z+1)(z+3)}\\
+    &amp;=4\pi \cdot \underbrace{\frac{1}{2\pi
+i}\int_C\frac{dz}{(3z+1)(z+3)}}_{Res\left(\frac{1}{(3z+1)(z+3)};-\frac{1}{3}\right)}
+\end{aligned}
+\]</span></p>
+<p><span
+class="math inline">\(\frac{1}{(3z+1)(z+3)}\)</span>有兩個simple
+pole，分別在<span
+class="math inline">\(z=-3,-\frac{1}{3}\)</span>，因為單位圓半徑是1，<span
+class="math inline">\(z=-3\)</span>在積分範圍外，只剩下<span
+class="math inline">\(-\frac{1}{3}\)</span></p>
+<p><span class="math display">\[
+Res=\lim_{z\rightarrow
+-\frac{1}{3}}(z+\frac{1}{3})\frac{1}{(3z+1)(z+3)}=\lim_{z\rightarrow
+-\frac{1}{3}}\frac{1}{3z+9}=\frac{1}{8}
+\]</span></p>
+<p><span class="math display">\[
+\therefore \int_{-\pi}^{\pi}\frac{d\theta}{5+3\cos
+\theta}=\frac{4\pi}{8}=\frac{\pi}{2}
+\]</span></p>
+<h1 id="例題2">例題2</h1>
+<p>計算 <span class="math display">\[
+\int_{-\infty}^{\infty}\frac{P(x)}{Q(x)}dx
+\]</span></p>
+<p>條件：<span class="math inline">\(P,Q\)</span> real-valued
+polynomials, s.t.</p>
+<ol type="1">
+<li><span class="math inline">\(Q(x)\neq 0, x\in
+\mathbb{R}\)</span></li>
+<li><span class="math inline">\(\deg Q\geqslant 2+\deg P\)</span></li>
+</ol>
+<h2 id="例題2.1">例題2.1</h2>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}\frac{dx}{1+x^4}
+\]</span></p>
+<p><a
+href="https://math.stackexchange.com/questions/333611/evaluating-int-frac1x41-dx">微積分方法</a>：</p>
+<p><span class="math display">\[
+x^4+1=x^4+2x^2+1-2x^2=(x^2+1)^2-2x^2=(x^2+\sqrt{2}x+1)(x^2-\sqrt{2}x+1)
+\]</span></p>
+<p>留數方法：</p>
+<h3 id="方法一">方法一</h3>
+<p>畫半圓</p>
+<p>先算奇異點<span class="math inline">\(z^4+1=0\Rightarrow
+z^4=-1=e^{\pi i}\)</span></p>
+<p><span class="math display">\[
+z=e^{\frac{\pi}{4}i}, e^{\frac{3}{4}\pi i}, e^{\frac{5}{4}\pi i},
+e^{\frac{7}{4}\pi i}
+\]</span></p>
+<p><img data-src="1.jpg" width=500px></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i
+Res\left(\frac{1}{1+z^4};e^{\frac{\pi}{4}i},e^{\frac{3}{4}\pi i}\right)
+\]</span></p>
+<p><span class="math display">\[
+Res\ at\ e^{\frac{\pi}{4}i}
+=\lim_{z\rightarrow
+e^{\frac{\pi}{4}i}}(z-e^{\frac{\pi}{4}i})\frac{1}{z^4+1}
+=\lim_{z\rightarrow
+e^{\frac{\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{\pi}{4}i}}}
+=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{\pi}{4}i}}}
+=\frac{1}{4e^{\frac{3}{4}\pi i}}
+=\frac{1}{4}e^{-\frac{3}{4}\pi i}
+=\frac{1}{4}(\cos \frac{3}{4}\pi-i\sin \frac{3}{4}\pi)
+\]</span></p>
+<p><span class="math display">\[
+Res\ at\ e^{\frac{3\pi}{4}i}
+=\lim_{z\rightarrow
+e^{\frac{3\pi}{4}i}}(z-e^{\frac{3\pi}{4}i})\frac{1}{z^4+1}
+=\lim_{z\rightarrow
+e^{\frac{3\pi}{4}i}}\frac{1}{\frac{z^4+1-0}{z-e^{\frac{3\pi}{4}i}}}
+=\frac{1}{(z^4+1)&#39;\vert_{z=e^{\frac{3\pi}{4}i}}}
+=\frac{1}{4e^{\frac{9}{4}\pi i}}
+=\frac{1}{4}e^{-\frac{9}{4}\pi i}
+=\frac{1}{4}e^{-\frac{\pi}{4} i}
+=\frac{1}{4}(\cos \frac{1}{4}\pi-i\sin \frac{1}{4}\pi)
+\]</span></p>
+<p><span class="math inline">\(e^{-\frac{9}{4}\pi i}=e^{-\frac{\pi}{4}
+i}\)</span>是因為<span class="math inline">\(e^{2\pi
+i}=1\)</span>，把兩個點的留數相加</p>
+<p><span class="math display">\[
+\therefore \int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\times
+\frac{1}{4}(-2i\frac{\sqrt{2}}{2})=\frac{\sqrt{2}}{2}\pi
+\]</span></p>
+<p><span class="math display">\[
+\int_{-R}^R\frac{dx}{1+x^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}=\frac{\sqrt{2}}{2}\pi
+\]</span></p>
+<p>下面證明<span class="math inline">\(R\rightarrow
+\infty\)</span>時，第二項趨近於0</p>
+<p><span class="math display">\[
+\lim_{R\rightarrow\infty}\left|\int_{\Gamma_R}\frac{dz}{1+z^4}\right|\leqslant
+\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{Rd\theta}{|1+z^4|}\leqslant
+\lim_{R\rightarrow\infty}\int_0^{\pi}\frac{2Rd\theta}{R^4}=\lim_{R\rightarrow\infty}\frac{2\pi
+}{R}=0
+\]</span></p>
+<p>where <span class="math inline">\(|1+z^4|\geqslant
+\frac{|z^4|}{2}=\frac{R^4}{2}\)</span></p>
+<h3 id="方法二">方法二</h3>
+<p>畫四分之一圓</p>
+<p><img align="left" data-src="2.jpg" width=180px></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=2\pi i\cdot
+Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
+\frac{1}{4}e^{-\frac{3}{4}\pi i}=\frac{2\pi i}{4}(\cos
+\frac{3}{4}\pi-i\sin \frac{3}{4}\pi)=\frac{\sqrt{2}}{4}\pi (1-i)
+\]</span></p>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{1+z^4}=\int_{\Gamma_1}\frac{dz}{1+z^4}+\int_{\Gamma_3}\frac{dz}{1+z^4}+\int_{\Gamma_R}\frac{dz}{1+z^4}
+\]</span></p>
+<p><span class="math display">\[
+\Downarrow
+\]</span></p>
+<p><span class="math display">\[
+\int_0^R\frac{dx}{1+x^4}+\int_R^0\frac{idy}{1+y^4}+\underbrace{\int_{\Gamma_R}\frac{dz}{1+z^4}}_{\xrightarrow{R\rightarrow
+\infty}0}=(1-i)\int_0^R\frac{dx}{1+x^4}\xrightarrow{R\rightarrow
+\infty}(1-i)\int_0^{\infty}\frac{dx}{1+x^4}
+\]</span></p>
+<p><span class="math display">\[
+\because (1-i)\int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
+(1-i)
+\]</span></p>
+<p><span class="math display">\[
+\therefore \int_0^{\infty}\frac{dx}{1+x^4}=\frac{\sqrt{2}}{4}\pi
+\]</span></p>
+<h2 id="例2.2">例2.2</h2>
+<p><span class="math display">\[
+\int_{\Gamma}\frac{dz}{z^2+2z+2}
+\]</span></p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -2952,6 +2975,53 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
         <tag>柯西黎曼方程</tag>
         <tag>Green定理</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>解決hexo本地和部署不一致問題</title>
+    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<span id="more"></span>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<figure>
+<img data-src="branch.png" alt="branch" />
+<figcaption aria-hidden="true">branch</figcaption>
+</figure>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<figure>
+<img data-src="new.png" alt="new" />
+<figcaption aria-hidden="true">new</figcaption>
+</figure>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
+<code>main</code>。</p>
+<figure>
+<img data-src="default.png" alt="default" />
+<figcaption aria-hidden="true">default</figcaption>
+</figure>
+<p>接着在 Settings 的 Default branch 一栏点击<span
+class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
+<code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<figure>
+<img data-src="pages.png" alt="pages" />
+<figcaption aria-hidden="true">pages</figcaption>
+</figure>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
+main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code>
+内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
+<ol type="1">
+<li><p><a
+href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
+<li><p><a
+href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>解析函數的冪級數展開</title>
@@ -3573,49 +3643,6 @@ w=[0.15,0.5,0.06,0.29]
 ]]></content>
   </entry>
   <entry>
-    <title>數值線性代數</title>
-    <url>/2023/09/02/%E6%95%B8%E5%80%BC%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/</url>
-    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
-<span id="more"></span>
-<p>自學：</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>課程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Mitacs申請</title>
-    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
-    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
-href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
-<span id="more"></span>
-<p><a
-href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
-<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
-<h1 id="三件事-9.14">三件事 9.14</h1>
-<ol type="1">
-<li>打印成績單</li>
-<li>寫推薦信，找倪簽字</li>
-<li>寫三個小作文
-<ul>
-<li>General description of skills, background knowledge, research
-interests and experience</li>
-<li>Notable Achievements</li>
-<li>Briefly describe the research work you have completed</li>
-</ul></li>
-</ol>
-]]></content>
-      <categories>
-        <category>實習</category>
-      </categories>
-  </entry>
-  <entry>
     <title>高等概率論</title>
     <url>/2023/09/16/%E9%AB%98%E7%AD%89%E6%A6%82%E7%8E%87%E8%AB%96/</url>
     <content><![CDATA[<blockquote>
@@ -3625,33 +3652,6 @@ interests and experience</li>
 ]]></content>
       <categories>
         <category>課程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2023Fall遠程實習</title>
-    <url>/2023/08/21/2023Fall%E9%81%A0%E7%A8%8B%E5%AF%A6%E7%BF%92/</url>
-    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
-<h1 id="任務一-9.14">任務一 9.14</h1>
-<blockquote>
-<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
-</blockquote>
-<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
-href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
-<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
-<h1 id="任務二-9.16">任務二 9.16</h1>
-<blockquote>
-<p>整理下諾貝爾基金會的情況，寫一篇文章，重點是： 1.
-諾貝爾基金基本介紹（包括緣由、理念） 2. 諾貝爾基金歷年管理規模 3.
-諾貝爾基金資產配置方法論 4.
-諾貝爾基金資產配置實際情況（可以詳細一點）</p>
-</blockquote>
-<p>附件：<a
-href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
-]]></content>
-      <categories>
-        <category>實習</category>
       </categories>
   </entry>
 </search>

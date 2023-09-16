@@ -2580,7 +2580,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff6b8a;
+  background: #ffa7e2;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2636,17 +2636,17 @@ header.header {
   border-bottom: 1px solid #4f2956;
 }
 .post-body p a:hover {
-  color: #e289ea;
+  color: #ffc0cb;
   border-bottom: none;
-  border-bottom: 1px solid #e289ea;
+  border-bottom: 1px solid #ffc0cb;
 }
 /* webkit, opera, IE9 */
 ::selection {
-  background: #dad5f4;
+  background: #ffc0cb;
   color: #4f2956;
 }
 /* firefox */
 ::-moz-selection {
-  background: #dad5f4;
+  background: #ffc0cb;
   color: #4f2956;
 }
