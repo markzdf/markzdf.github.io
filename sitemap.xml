@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://markzdf.github.io/23fallw1/</loc>
+    
+    <lastmod>2023-09-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://markzdf.github.io/2023/09/16/%E9%AB%98%E7%AD%89%E6%A6%82%E7%8E%87%E8%AB%96/</loc>
     
     <lastmod>2023-09-17</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://markzdf.github.io/hw/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://markzdf.github.io/23fallw1</loc>
     
     <lastmod>2023-09-15</lastmod>
     
