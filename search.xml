@@ -2177,6 +2177,34 @@ x_{n+1}\alpha=\frac{1}{L&#39;&#39;(x)}
       </categories>
   </entry>
   <entry>
+    <title>Mitacs申請</title>
+    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
+    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
+href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
+<span id="more"></span>
+<p><a
+href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
+<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
+<h1 id="三件事-9.14">三件事 9.14</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />打印成績單</label></li>
+<li><label><input type="checkbox"
+checked="" />寫推薦信，找倪簽字</label></li>
+<li><label><input type="checkbox" checked="" />寫三個小作文</label>
+<ul>
+<li>General description of skills, background knowledge, research
+interests and experience</li>
+<li>Notable Achievements</li>
+<li>Briefly describe the research work you have completed</li>
+</ul></li>
+</ul>
+<h1 id="選項目-9.18">選項目 9.18</h1>
+]]></content>
+      <categories>
+        <category>實習</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Morera定理</title>
     <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
     <content><![CDATA[<p>柯西定理的逆敘述</p>
@@ -2264,31 +2292,91 @@ f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
       </tags>
   </entry>
   <entry>
-    <title>Mitacs申請</title>
-    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
-    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
-href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
+    <title>數值線性代數</title>
+    <url>/2023/09/02/NLA/</url>
+    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
 <span id="more"></span>
-<p><a
-href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
-<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
-<h1 id="三件事-9.14">三件事 9.14</h1>
+<p>自學：</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="" />打印成績單</label></li>
-<li><label><input type="checkbox"
-checked="" />寫推薦信，找倪簽字</label></li>
-<li><label><input type="checkbox" checked="" />寫三個小作文</label>
-<ul>
-<li>General description of skills, background knowledge, research
-interests and experience</li>
-<li>Notable Achievements</li>
-<li>Briefly describe the research work you have completed</li>
-</ul></li>
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
 </ul>
-<h1 id="選項目-9.18">選項目 9.18</h1>
 ]]></content>
       <categories>
-        <category>實習</category>
+        <category>課程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ODE應用</title>
+    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
+<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
+class="math inline">\(\beta\)</span>.</p>
+<span id="more"></span>
+<p><img data-src="1331.png" width=300px></p>
+<p><span class="math display">\[
+\tan \beta=r\frac{d\theta}{dr}
+\]</span></p>
+<p><em>Proof</em>: <a
+href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
+here</a></p>
+<h2 id="trajectories">Trajectories</h2>
+<p>原则：<span class="math inline">\(末-初\)</span></p>
+<p><img data-src="/download/141.jpg" width=300px></p>
+<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
+\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
+\beta=\frac{m_1-m_2}{1+m_1m_2}
+\]</span></p>
+<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
+<span class="math display">\[
+y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+\]</span></p>
+<ol start="2" type="1">
+<li>Polar coordinates</li>
+</ol>
+<p><img data-src="/download/143.jpg" width=300px></p>
+<p><span class="math display">\[
+\phi_1=\phi_2+\frac{\pi}{2}
+\]</span> <span class="math display">\[
+\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
+\]</span> <span class="math display">\[
+\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+\]</span></p>
+<h1 id="實際問題">實際問題</h1>
+<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
+<p><strong>1. Dilution and Accretion</strong></p>
+<p>稀释和浓缩盐水，关键是设<span
+class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
+class="math inline">\(\Delta x\)</span></p>
+<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
+<p><span class="math display">\[
+\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
+x}{\Delta t}\approx 6-0.03x
+\]</span></p>
+<p>当流入流出速度不一致时，溶液体积变成<span
+class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
+<p><strong>2. Interest</strong></p>
+<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
+P=Ae^{rt}
+\]</span>
+跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
+<span class="math display">\[
+\frac{dP}{dt}=rAe^{rt}=rP
+\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
+\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
+\]</span></p>
+<p><strong>3. Temperature</strong> <span class="math display">\[
+\frac{dT_B}{dt}=-k(T_B-T_M)
+\]</span></p>
+<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
+class="math display">\[
+\frac{dx}{dt}=kx
+\]</span></p>
+]]></content>
+      <categories>
+        <category>ODE</category>
       </categories>
   </entry>
   <entry>
@@ -2472,91 +2560,25 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
       </categories>
   </entry>
   <entry>
-    <title>數值線性代數</title>
-    <url>/2023/09/02/NLA/</url>
-    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
+    <title>ODE自學</title>
+    <url>/2023/08/28/ODE%E8%87%AA%E5%AD%B8/</url>
+    <content><![CDATA[<p>數院常微分跟數值線性代數衝突，下學期跟統計國際班一起修</p>
 <span id="more"></span>
-<p>自學：</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
+<p><img align="left" data-src="Morris.png" width=67px></p>
+<pre><code>    教材:
+    Ordinary Differential Equations
+    Morris Tenenbaum, Harry Pollard</code></pre>
+<ul>
+<li><a
+href="https://markzdf.github.io/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">ODE基本概念</a></li>
+<li><a
+href="https://markzdf.github.io/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">特殊微分方程的解</a></li>
+<li><a
+href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a></li>
 </ul>
 ]]></content>
       <categories>
         <category>課程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ODE應用</title>
-    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
-<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
-class="math inline">\(\beta\)</span>.</p>
-<span id="more"></span>
-<p><img data-src="1331.png" width=300px></p>
-<p><span class="math display">\[
-\tan \beta=r\frac{d\theta}{dr}
-\]</span></p>
-<p><em>Proof</em>: <a
-href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
-here</a></p>
-<h2 id="trajectories">Trajectories</h2>
-<p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><img data-src="/download/141.jpg" width=300px></p>
-<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
-\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
-\beta=\frac{m_1-m_2}{1+m_1m_2}
-\]</span></p>
-<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
-<span class="math display">\[
-y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
-\]</span></p>
-<ol start="2" type="1">
-<li>Polar coordinates</li>
-</ol>
-<p><img data-src="/download/143.jpg" width=300px></p>
-<p><span class="math display">\[
-\phi_1=\phi_2+\frac{\pi}{2}
-\]</span> <span class="math display">\[
-\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
-\]</span> <span class="math display">\[
-\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
-\]</span></p>
-<h1 id="實際問題">實際問題</h1>
-<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
-<p><strong>1. Dilution and Accretion</strong></p>
-<p>稀释和浓缩盐水，关键是设<span
-class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
-class="math inline">\(\Delta x\)</span></p>
-<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
-<p><span class="math display">\[
-\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
-x}{\Delta t}\approx 6-0.03x
-\]</span></p>
-<p>当流入流出速度不一致时，溶液体积变成<span
-class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
-<p><strong>2. Interest</strong></p>
-<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
-P=Ae^{rt}
-\]</span>
-跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
-<span class="math display">\[
-\frac{dP}{dt}=rAe^{rt}=rP
-\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
-\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
-\]</span></p>
-<p><strong>3. Temperature</strong> <span class="math display">\[
-\frac{dT_B}{dt}=-k(T_B-T_M)
-\]</span></p>
-<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
-class="math display">\[
-\frac{dx}{dt}=kx
-\]</span></p>
-]]></content>
-      <categories>
-        <category>ODE</category>
       </categories>
   </entry>
   <entry>
@@ -2998,28 +3020,6 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
       </categories>
   </entry>
   <entry>
-    <title>ODE自學</title>
-    <url>/2023/08/28/ODE%E8%87%AA%E5%AD%B8/</url>
-    <content><![CDATA[<p>數院常微分跟數值線性代數衝突，下學期跟統計國際班一起修</p>
-<span id="more"></span>
-<p><img align="left" data-src="Morris.png" width=67px></p>
-<pre><code>    教材:
-    Ordinary Differential Equations
-    Morris Tenenbaum, Harry Pollard</code></pre>
-<ul>
-<li><a
-href="https://markzdf.github.io/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">ODE基本概念</a></li>
-<li><a
-href="https://markzdf.github.io/2023/07/31/%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">特殊微分方程的解</a></li>
-<li><a
-href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>課程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>回家前</title>
     <url>/2023/07/29/TripCA/</url>
     <content><![CDATA[<p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。</p>
@@ -3336,6 +3336,32 @@ w=[0.15,0.5,0.06,0.29]
 ]]></content>
   </entry>
   <entry>
+    <title>hexo-next修改文字選中顏色</title>
+    <url>/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/</url>
+    <content><![CDATA[<p>最新的hexo取消了 <code>source/_custom/_custom.styl</code>
+文件，但在next主題的 <code>_config.yml</code> 裡保留了<a
+href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義功能</a>。</p>
+<span id="more"></span>
+<p>首先在hexo的根目錄下（注意不是next主題的根目錄）打開
+<code>source</code> 文件夾，新建 <code>_data</code> 文件夾並放入
+<code>styles.styl</code> 文件。複制下面這段代碼粘貼到
+<code>source/_data/styles.styl</code> 中（<a
+href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123; </span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0593d3</span>; </span><br><span class="line">    <span class="attribute">border-bottom</span>: none; </span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>; </span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123; </span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fc6423</span>; </span><br><span class="line">        <span class="attribute">border-bottom</span>: none; </span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然後打開next的 <code>_config.yml</code>，把 <code>styles.styl</code>
+取消注釋</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<p>另外，主題的文字顏色、上下框顏色等也可以調，在next根目錄中由
+<code>source/css/_schemes/Mist/index.styl</code>
+（我用的是mist），在最頂上加入下面的代碼即可</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--menu-item-bg-color</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">  <span class="attr">--btn-default-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--btn-default-hover-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--content-bg-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--brand-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--badge-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何在macOS環境下配置hexo</title>
     <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a
@@ -3418,32 +3444,6 @@ OS环境下使用Hexo搭建个人博客</a></p>
 <ol start="2" type="1">
 <li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo-next修改文字選中顏色</title>
-    <url>/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/</url>
-    <content><![CDATA[<p>最新的hexo取消了 <code>source/_custom/_custom.styl</code>
-文件，但在next主題的 <code>_config.yml</code> 裡保留了<a
-href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義功能</a>。</p>
-<span id="more"></span>
-<p>首先在hexo的根目錄下（注意不是next主題的根目錄）打開
-<code>source</code> 文件夾，新建 <code>_data</code> 文件夾並放入
-<code>styles.styl</code> 文件。複制下面這段代碼粘貼到
-<code>source/_data/styles.styl</code> 中（<a
-href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123; </span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0593d3</span>; </span><br><span class="line">    <span class="attribute">border-bottom</span>: none; </span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>; </span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123; </span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fc6423</span>; </span><br><span class="line">        <span class="attribute">border-bottom</span>: none; </span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然後打開next的 <code>_config.yml</code>，把 <code>styles.styl</code>
-取消注釋</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-<p>另外，主題的文字顏色、上下框顏色等也可以調，在next根目錄中由
-<code>source/css/_schemes/Mist/index.styl</code>
-（我用的是mist），在最頂上加入下面的代碼即可</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--menu-item-bg-color</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">  <span class="attr">--btn-default-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--btn-default-hover-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--content-bg-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--brand-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--badge-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -3580,6 +3580,25 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
       </categories>
   </entry>
   <entry>
+    <title>不必再等</title>
+    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
+    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+<span id="more"></span>
+<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
+<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
+idiots说的</p>
+<blockquote>
+<p>不要追求成功，成功会在不经意间追上你</p>
+</blockquote>
+<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
+<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
+<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
     <title>六月總結</title>
     <url>/2023/07/29/%E5%85%AD%E6%9C%88%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>早上八点，太平洋上空</p>
@@ -3597,19 +3616,27 @@ class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
       </categories>
   </entry>
   <entry>
-    <title>不必再等</title>
-    <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
-    <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
+    <title>半夜的AI焦慮</title>
+    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
+    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
 <span id="more"></span>
-<p>平时学的少，总想着，还有明天，离考试还远。从时间价值来讲，现在拿到一块钱总比未来拿到要好。同样的，现在努力去学总比未来再学要好。考前能爆发这么大潜力，为什么平时不能？我猜是心太杂了。考试周我不看消息，不做计划，所有在心中一闪而过的待办都会立马忘记，只有眼下看的书做的题是真实的。平时要顾及很多事，这个活动、那个社交，都让人“没心思学”。回想起来，上学期我说，“多参加点活动就好了”，这学期确实有做到，但真的“好”了吗？似乎是把软实力放在硬实力之前了。而反观BEC的另一个落榜者，他真的有努力在提升硬实力也就是绩点，（统计期中90+已经说明了一切）。而我只收获了焦虑、放弃了努力的坚持。</p>
-<p>这一向，想清楚了两层关系。一是绩点和能力。虽然绩点高不能推到能力强，但能力强一定能推到绩点高。这就回到一个问题，学习是为什么？高绩点吗？答案并非“一部分是”，而是“完全不是”。绩点是附带，就像3
-idiots说的</p>
-<blockquote>
-<p>不要追求成功，成功会在不经意间追上你</p>
-</blockquote>
-<p>二是硬实力和软实力。过去认为两者独立。实则，软实力依赖于硬实力。自己足够强，才能认识到一样强的人，才能收获尊重。大学在很大程度上靠向社会，这不是好事。大学生还远远不到奉献自己的时候，但提升自己的硬实力一刻也不能耽搁。当我想学什么东西时，总会说，先做个计划吧。别，不要浪费时间计划，想学的就立刻去学，不必再等。这学期做过四五次计划，每次计划好近半个月，但全部流产在第一天。</p>
-<p>逐渐明朗，我越来越反对高中这类做计划的习惯，但越来越赞同延续高中的学习状态。过去觉得翘课好酷，乖乖上课写作业好蠢，现在看来蠢的是我自己。什么叫大智若愚。</p>
-<p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="1.jpg" width="260" alt="x1">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="2.jpg" width="260" alt="x2">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="3.jpg" width="260" alt="x3">
+</div>
+<div style="float:none;clear:both;">
+<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
+</div>
+<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
+<img data-src="4.jpg" width=650px">
+<center>
+我的話，會選右邊囉
+</center>
 ]]></content>
       <categories>
         <category>隨記</category>
@@ -3660,33 +3687,6 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
 ]]></content>
       <categories>
         <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>半夜的AI焦慮</title>
-    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
-    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
-<span id="more"></span>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="1.jpg" width="260" alt="x1">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="2.jpg" width="260" alt="x2">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="3.jpg" width="260" alt="x3">
-</div>
-<div style="float:none;clear:both;">
-<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
-</div>
-<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
-<img data-src="4.jpg" width=650px">
-<center>
-我的話，會選右邊囉
-</center>
-]]></content>
-      <categories>
-        <category>隨記</category>
       </categories>
   </entry>
   <entry>
