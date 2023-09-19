@@ -2319,7 +2319,7 @@ mjx-container[display='true'] + br {
   animation-fill-mode: both;
 }
 :root {
-  --menu-item-bg-color: #dad5f4;
+  --menu-item-bg-color: #fff;
   --btn-default-border-color: #fff;
   --btn-default-hover-border-color: #fff;
   --content-bg-color: #fff;
@@ -2580,7 +2580,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #16ffb1;
+  background: #fff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2649,4 +2649,27 @@ header.header {
 ::-moz-selection {
   background: #ffc0cb;
   color: #4f2956;
+}
+body {
+  opacity: 0.8;
+  background: url("/images/cover_16.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.footer {
+  opacity: 0;
+}
+.header-inner {
+  opacity: 0;
+}
+.posts-expand .post-title-link {
+  color: #4f2956;
+}
+.post-block {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 40px;
 }

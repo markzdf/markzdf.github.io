@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#990099">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg">
+  <link rel="mask-icon" href="/images/favicon.jpg" color="#990099">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="[object Object]">
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.20/fancybox/fancybox.css" integrity="sha256-RvRHGSuWAxZpXKV9lLDt2e+rZ+btzn48Wp4ueS3NZKs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/purple/pace-theme-loading-bar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Separable Variables 当\(x,y\)可分离时， \[ Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} \] \[ P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="特殊微分方程的解">
+<meta property="og:url" content="https://markzdf.github.io/2023/07/31/ODE%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">
+<meta property="og:site_name" content="MyNotes">
+<meta property="og:description" content="Separable Variables 当\(x,y\)可分离时， \[ Q(x,y)\frac{dy}{dx}+P(x,y)&#x3D;0\tag{6.6} \] \[ P(x,y)dx+Q(x,y)dy&#x3D;0\tag{6.61} \]">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-07-30T17:03:16.000Z">
+<meta property="article:modified_time" content="2023-08-20T22:51:39.402Z">
+<meta property="article:author" content="佛說Naga">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://markzdf.github.io/2023/07/31/ODE%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/07/31/ODE%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/","path":"2023/07/31/ODE特殊微分方程的解/","title":"特殊微分方程的解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>特殊微分方程的解 | MyNotes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MyNotes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-route fa-fw"></i>主線</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-booklist"><a href="/booklist/" rel="section"><i class="fa fa-book fa-fw"></i>書單</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">佛說Naga</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/markzdf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;markzdf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cabbagedafu@gmail.com" title="E-Mail → mailto:cabbagedafu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+<style>
+    /* Define the sidebar styles */
+    .sidebar {
+        background-color: #FFFFFF; /* Change this to your desired color */
+        float: left; /* Adjust positioning as needed */
+    }
+</style>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add this CSS rule to change the text color */
+        #todo-list li {
+            color: #4F2956;
+            text-align: left;
+        }
+
+	ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+	input[type="checkbox"] {
+            margin-right: 8px; /* Add space between checkbox and text */
+        }
+
+	/* Style the container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+	button {
+      		display: inline-block;
+      		padding: 6px 8px;
+      		background-color: #DAD5F4;
+      		color: #4F2956;
+      		border: none;
+      		border-radius: 5px;
+      		cursor: pointer;
+      		font-size: 14px;
+		margin-right: 5px;
+    	}
+
+	
+
+    	button:hover {
+      		background-color: #FFC0CB;
+    	}
+
+	/* Customize the input box styles */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #DAD5F4;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <!-- Existing tasks will be added here -->
+    </ul>
+    <input type="text" id="task-input" placeholder="一起去冒險吧">
+    <div class="button-container">
+        <button id="add-button" onclick="addTask()">Add</button>
+        <button id="clear-button" onclick="clearLastTask()">Delete</button>
+    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const taskList = document.getElementById("todo-list");
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(taskText));
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+                saveTasks();
+            }
+        }
+
+        // Function to clear the last task
+        function clearLastTask() {
+            const taskList = document.getElementById("todo-list");
+            const lastTask = taskList.lastElementChild;
+
+            if (lastTask) {
+                taskList.removeChild(lastTask);
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to localStorage
+        function saveTasks() {
+            const tasks = [];
+            const taskList = document.getElementById("todo-list").querySelectorAll("li");
+
+            taskList.forEach((taskItem) => {
+                const checkbox = taskItem.querySelector("input[type=checkbox]");
+                const taskText = taskItem.textContent.trim();
+
+                tasks.push({
+                    text: taskText,
+                    completed: checkbox.checked
+                });
+            });
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from localStorage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            const taskList = document.getElementById("todo-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+                checkbox.checked = task.completed;
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(task.text));
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Load tasks when the page loads
+        loadTasks();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>計時器</title>
+  <style>
+    body {
+      color: #4F2956;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #4F2956;
+      margin-bottom: 2px;
+    }
+
+    #counter {
+      font-size: 18px;
+      color: #4F2956; 
+      margin-bottom: 0px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: #DAD5F4;
+      color: #4F2956;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><span id="counter">00:00:00</span></p>
+    <button id="startStopBtn" class="btn">Start</button>
+    <button id="resetBtn" class="btn">Reset</button>
+  </div>
+
+  <script>
+    let startTime = 0;
+    let running = false;
+    let elapsedTime = 0;
+
+    const counterElement = document.getElementById("counter");
+    const startStopBtn = document.getElementById("startStopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function updateTime() {
+      const now = Date.now();
+      elapsedTime = running ? now - startTime : elapsedTime;
+      const formattedTime = formatTime(elapsedTime);
+      counterElement.textContent = formattedTime;
+    }
+
+    function formatTime(milliseconds) {
+      const totalSeconds = Math.floor(milliseconds / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
+    }
+
+    function padNumber(number) {
+      return number.toString().padStart(2, "0");
+    }
+
+    function toggleTimer() {
+      if (running) {
+        running = false;
+      } else {
+        running = true;
+        startTime = Date.now() - elapsedTime;
+      }
+      startStopBtn.textContent = running ? "Stop" : "Start";
+    }
+
+    function resetTimer() {
+      running = false;
+      elapsedTime = 0;
+      updateTime();
+    }
+
+    startStopBtn.addEventListener("click", toggleTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    // Load previous state from localStorage if available
+    const storedElapsedTime = localStorage.getItem("elapsedTime");
+    if (storedElapsedTime !== null) {
+      elapsedTime = parseInt(storedElapsedTime);
+      updateTime();
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Save elapsed time to localStorage before closing the window/tab
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem("elapsedTime", elapsedTime);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+	.no-wrap {
+    		white-space: nowrap;
+	}
+
+	.inbox {
+            max-width: 1000px; /* Adjust as needed */
+            margin: 0 auto; /* Center horizontally */
+            padding: 0px; /* Add padding for spacing */
+            word-wrap: break-word; /* Allow word wrapping */
+            overflow: auto; /* Add scrollbars if necessary */
+            border: 1px solid #ddd; /* Add a border for visual separation */
+        }
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #F3EFF9;
+            color: #4F2956;
+        }
+	td {
+            color: #4F2956;
+        }
+    </style>
+</head>
+<body>
+    <table class="no-wrap">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Time slots from 1 to 11 -->
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+		<td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td rowspan="3">NLA<br>海韻301</td>
+                <td></td>
+                <td></td>
+		<td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+		<td rowspan="2">計量<br>嘉庚四201</td>
+                <td rowspan="2">公司金融<br>嘉庚四101</td>
+		<td></td>
+                <td rowspan="2">公司金融<br>嘉庚四101</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td rowspan="2">金工<br>南強二409</td>
+                <td></td>
+                <td rowspan="2">計量<br>嘉庚四201</td>
+                <td></td>
+                <td rowspan="2">高等概率論<br>南強二203</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td rowspan="2">形策<br>學公301</td>
+                <td></td>
+                <td rowspan="2">金工<br>南強二409</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td rowspan="2">ML<br>海韻107</td>
+                <td></td>
+                <td rowspan="2">高等概率論<br>南強二310</td>
+                <td rowspan="2">計算機史<br>南強二502</td>
+                <td rowspan="3">現代照明<br>群賢二105</td>
+            </tr>
+            <tr>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.math.pku.edu.cn/teachers/lidf/course/fts/ftsnotes/html/_ftsnotes/index.html" title="https:&#x2F;&#x2F;www.math.pku.edu.cn&#x2F;teachers&#x2F;lidf&#x2F;course&#x2F;fts&#x2F;ftsnotes&#x2F;html&#x2F;_ftsnotes&#x2F;index.html" rel="noopener" target="_blank">北大時間序列分析</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.educative.io/" title="https:&#x2F;&#x2F;www.educative.io&#x2F;" rel="noopener" target="_blank">Educative</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.aies.cn/" title="https:&#x2F;&#x2F;www.aies.cn&#x2F;" rel="noopener" target="_blank">繁簡轉換</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.coursera.org/" title="https:&#x2F;&#x2F;www.coursera.org&#x2F;" rel="noopener" target="_blank">Coursera</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/07/31/ODE%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="佛說Naga">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="特殊微分方程的解 | MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          特殊微分方程的解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-07-31 01:03:16" itemprop="dateCreated datePublished" datetime="2023-07-31T01:03:16+08:00">2023-07-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-08-21 06:51:39" itemprop="dateModified" datetime="2023-08-21T06:51:39+08:00">2023-08-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ODE/" itemprop="url" rel="index"><span itemprop="name">ODE</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="separable-variables">Separable Variables</h1>
+<p>当<span class="math inline">\(x,y\)</span>可分离时， <span
+class="math display">\[
+Q(x,y)\frac{dy}{dx}+P(x,y)=0\tag{6.6}
+\]</span> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy=0\tag{6.61}
+\]</span></p>
+<span id="more"></span>
+<p><span class="math display">\[
+\Rightarrow f(x)dx+g(y)dy=0\tag{6.62}
+\]</span> <span class="math display">\[
+\Rightarrow \int f(x)dx+\int g(y)dy=C\tag{6.63}
+\]</span></p>
+<p><strong><em>Def 7.1</em></strong> Let <span
+class="math inline">\(z=f(x,y)\)</span> define <span
+class="math inline">\(z\)</span> as a function of <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> in a region <span
+class="math inline">\(R\)</span>. The function <span
+class="math inline">\(f(x,y)\)</span> is said to be <strong>homogeneous
+of order n</strong> if it can be written as</p>
+<p><span class="math display">\[
+f(x,y)=x^ng(u)\tag{7.11}
+\]</span></p>
+<p>where <span class="math inline">\(u=\dfrac yx\)</span> and <span
+class="math inline">\(g(u)\)</span> is a function of <span
+class="math inline">\(u\)</span>; or alternately if it can be written
+as</p>
+<p><span class="math display">\[
+f(x,y)=y^nh(u)\tag{7.11}
+\]</span></p>
+<p>where <span class="math inline">\(u=\dfrac xy\)</span> and <span
+class="math inline">\(h(u)\)</span> is a function of <span
+class="math inline">\(u\)</span></p>
+<p>也可定义为：A function <span class="math inline">\(f(x,y)\)</span> is
+said to be homogeneous of order n if <span
+class="math display">\[f(tx,ty)=t^nf(x,y)\tag{7.16}\]</span></p>
+<h1 id="homogeneous-coefficients">Homogeneous Coefficients</h1>
+<p><em>Definition 7.2.</em> The differential equation <span
+class="math display">\[P(x,y)dx+Q(x,y)dy=0\tag{7.3}\]</span> where <span
+class="math inline">\(P(x,y)\)</span> and <span
+class="math inline">\(Q(x,y)\)</span> are each homogeneous functions of
+order <span class="math inline">\(n\)</span> is called a <strong>first
+order differential equation with homogeneous coefficients</strong>.</p>
+<p><strong><em>Theorem 7.32.</em></strong> If the coefficients in <span
+class="math inline">\((7.3)\)</span> are each homogeneous function of
+order <span class="math inline">\(n\)</span>, then the substitution in
+it of <span class="math inline">\((7.31),(7.33)\)</span> will lead to an
+equation in which the variables are separable.</p>
+<p><span class="math display">\[y=ux\  \Leftarrow \
+\left(u=\frac{y}{x}\right),\quad dy=udx+xdu,\quad
+\tag{7.31}\]</span></p>
+<p><span class="math display">\[x=uy\  \Leftarrow \
+\left(u=\frac{x}{y}\right),\quad dx=udy+ydu,\quad
+\tag{7.33}\]</span></p>
+<h1 id="linear-coefficients">Linear Coefficients</h1>
+<p><span class="math display">\[
+x=\bar{x}+h,\quad y=\bar{y}+k\tag{8.11}
+\]</span> <span class="math display">\[
+\Rightarrow \bar{x}=x-h,\quad \bar{y}=y-k\tag{8.12}
+\]</span> 解线性系数的微分方程， <span class="math display">\[
+(a_1x+b_1y+c_1)dx+(a_2x+b_2y+c_2)dy=0\tag{8.2}
+\]</span></p>
+<h2 id="两条直线不平行">两条直线不平行</h2>
+<h3 id="method-1">Method 1</h3>
+<p>两条直线不平行，因而相交，设交点为<span
+class="math inline">\((h,k)\)</span>，是新的原点<span
+class="math inline">\((h,k)=(\bar{0},\bar{0})\)</span>。把<span
+class="math inline">\((8.11)\)</span>替换进<span
+class="math inline">\((8.2)\)</span>，由交点的性质，常数项可忽略。 <span
+class="math display">\[
+a_1h+b_1k+c_1=0
+\]</span> <span class="math display">\[
+a_2h+b_2k+c_2=0
+\]</span></p>
+<p>转换成homogenous的形式 <span class="math display">\[
+(a_1\bar{x}+b_1\bar{y})d\bar{x}+(a_2\bar{x}+b_2\bar{y})d\bar{y}=0\tag{8.24}
+\]</span></p>
+<h3 id="method-2">Method 2</h3>
+<p>换元 <span class="math display">\[
+u=a_1x+b_1y+c_1\tag{8.3}
+\]</span> <span class="math display">\[
+v=a_2x+b_2y+c_2
+\]</span> 微分 <span class="math display">\[
+du=a_1dx+b_1dy\tag{8.31}
+\]</span> <span class="math display">\[
+dv=a_2dx+b_2dy
+\]</span> 解方程，用<span class="math inline">\(du,dv\)</span>表示<span
+class="math inline">\(dx,dy\)</span>，代入<span
+class="math inline">\((8.2)\)</span>式，再用homogenous的方法。</p>
+<h2 id="两条直线平行">两条直线平行</h2>
+<p>Method 1失效。只能换元，都用<span
+class="math inline">\(u\)</span>表示 <span class="math display">\[
+(2x+3y-1)dx+(4x+6y+2)dy=0
+\]</span> <span class="math display">\[
+u=2x+3y-1, \quad \Rightarrow\quad 4x+6y+2=2u+4
+\]</span> 然后就回到<span class="math inline">\(u\)</span>和<span
+class="math inline">\(x\)</span>或<span
+class="math inline">\(y\)</span>组成的homogenous形式。</p>
+<h1 id="exact-de">Exact DE</h1>
+<ol type="1">
+<li><p>Riemann integral <span class="math display">\[
+\lim_{n\rightarrow \infty}\sum_{k=1}^nf(x_k)\Delta x_k=\int_a^bf(x)dx
+\]</span></p></li>
+<li><p>微积分基本定理 <span class="math display">\[
+F(x)=\int_{x_0}^xf(u)du
+\tag{9.13}
+\]</span></p></li>
+</ol>
+<p><span class="math display">\[
+\rightarrow F&#39;(x)=f(x), \quad a&lt;x&lt;b\tag{9.14}
+\]</span></p>
+<ol start="3" type="1">
+<li>要让 <span
+class="math display">\[\int_{x_0}^xP(x,y)dx+\int_{y_0}^yQ(x,y)dy\tag{9.16}\]</span>
+有定义，必须<span class="math inline">\([x_0,x]\times [y_0,y]\subset
+D\)</span></li>
+</ol>
+<p><strong><em>Definition 9.19.</em></strong> A region is called a
+<strong>simply connected region</strong> if every simple closed curve
+lying entirely in the region encloses only points of the region.</p>
+<blockquote>
+<p><em>shrink</em> closed curve to a point without non-domain points
+getting on the way</p>
+</blockquote>
+<blockquote>
+<p>其实就是<strong>单连通域</strong>，对应的是<em>多连通域</em></p>
+</blockquote>
+<p>要让<span class="math inline">\((9.16)\)</span>有定义</p>
+<ol type="1">
+<li>共同定义域是S.C. region <span class="math inline">\(R\)</span></li>
+<li><span class="math inline">\((x_0,y_0)\in R\)</span></li>
+<li>长方形<span class="math inline">\([x_0,x]\times [y_0,y]\subset
+R\)</span></li>
+</ol>
+<p><strong><em>Def 9.23</em></strong> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.24}
+\]</span> is called an <strong>exact differential</strong> if it is the
+total differential of a function <span
+class="math inline">\(f(x,y)\)</span>. <span class="math display">\[
+P(x,y)=\frac{\partial}{\partial x}f(x,y)\quad
+Q(x,y)=\frac{\partial}{\partial y}f(x,y)\tag{9.241}
+\]</span></p>
+<p><strong><em>Def 9.27</em></strong> <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.28}=0
+\]</span> is called <strong>exact differential equation</strong> if
+follows <span class="math inline">\((9.241)\)</span>.</p>
+<p><strong><em>Theorem 9.3.</em></strong> A necessary and sufficient
+condition that the differential equation <span class="math display">\[
+P(x,y)dx+Q(x,y)dy\tag{9.31}=0
+\]</span> be exact is that <span class="math display">\[
+\frac{\partial}{\partial y}P(x,y)=\frac{\partial}{\partial
+x}Q(x,y\tag{9.32})
+\]</span></p>
+<p>解法一：</p>
+<p>套公式 <span class="math inline">\(\displaystyle{f(x,y)=\int_{x_0}^x
+P(x,y)dx+\int_{y_0}^y Q(x_0,y)dy}=c\)</span></p>
+<p>或<span
+class="math inline">\(\displaystyle{f(x,y)=\int_{y_0}^yQ(x,y)dy+\int_{x_0}^xP(x,y_0)dx}=c\)</span></p>
+<p>解法二： <span class="math display">\[
+P(x,y)dx+Q(x,y)dy=0
+\]</span> By <span
+class="math inline">\(\displaystyle{\frac{\partial}{\partial
+x}f(x,y)=P(x,y)}\)</span>, <span class="math display">\[
+f(x,y)=\int P(x,y)dx+R(y)\tag{$\star$}
+\]</span> 再由 <span class="math display">\[
+\frac{\partial}{\partial y}f(x,y)=Q(x,y)
+\]</span> <span class="math display">\[
+\underbrace{\frac{\partial}{\partial y} \int
+P(x,y)dx}_{\displaystyle{\int \frac{\partial}{\partial
+y}P(x,y)dx}}+R&#39;(y)=Q(x,y)
+\]</span> 解出<span class="math inline">\(R(y)\)</span>再代回<span
+class="math inline">\((\star)\)</span>式.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number</th>
+<th style="text-align: center;">Exact Diff Eq</th>
+<th style="text-align: center;">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.2)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(ydx+xdy\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.21)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2xydx+x^2dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.22)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y^2dx+2xydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(xy^2=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.23)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2xy^2dx+2x^2ydy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y^2=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.24)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3x^2y^3dx+3x^3y^2dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^2y^2=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.25)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(3x^2ydx+x^3dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x^3y=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.26)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\cos
+xdx+\sin xdy=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\sin
+x=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.27)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin
+ydx+x\cos ydy=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x\sin
+y=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.28)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(ye^{xy}dx+xe^{xy}dy=0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(e^{xy}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.29)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{dx}{x}+\frac{dy}{y}=0}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\log
+(xy)=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.3)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{ydx-xdy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac xy}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.31)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{ydx-xdy}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac yx}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.32)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydy-y^2dx}{x^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {y^2}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.33)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{2xydx-x^2dy}{y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac {x^2}{y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.34)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdy-ydx}{x^2+y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \frac
+{y}{x}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.35)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{2\frac{xdy-ydx}{x^2-y^2}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{x+y}{x-y}}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.39)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{-\frac{y^3dx-xy^2dy}{x^4}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\arctan \log \frac
+{y^3}{3x^3}}=c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((10.391)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle{\frac{xdx+ydy}{\sqrt{x^2+y^2}}=0}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\sqrt{x^2+y^2}=c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((10.392)\)</span></td>
+<td style="text-align: center;">$e<sup>{3x}dy+3e</sup>{3x}ydx=0 <span
+class="math inline">\(|\)</span>e^{3x}y=c$</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="integrating-factor">Integrating Factor</h2>
+<p><strong><em>Def 10.5</em></strong> A multiplying factor which
+converts an inexact diff eq into an exact one is called
+<strong>integrating factor</strong>.</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial y}[hP(x,y)]=\frac{\partial}{\partial
+x}[hQ(x,y)]\tag{10.62 $\star$}
+\]</span></p>
+<ol type="1">
+<li><span class="math inline">\(h=h(x)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(x)}{h(x)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}dx\tag{10.64}
+\]</span></p>
+<p>更特殊地，<span
+class="math inline">\(F(x)=\displaystyle{\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial x}Q(x,y)}{Q(x,y)}}\)</span>，所以<span
+class="math inline">\(\displaystyle{h(x)=e^{\int F(x)dx}}\)</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\(h=h(y)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(y)}{h(y)}=\frac{\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial y}P(x,y)}{P(x,y)}dy\tag{10.68}
+\]</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">\(h=h(u), u=xy\)</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)}{yQ(x,y)-xP(x,y)}du\tag{10.72}
+\]</span></p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(h=h(u),u=\frac xy\)</span> <span
+class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{y^2\left[\frac{\partial}{\partial
+y}P(x,y)-\frac{\partial}{\partial
+x}Q(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p></li>
+<li><p><span class="math inline">\(h=h(u),u=\frac yx\)</span></p></li>
+</ol>
+<p><span class="math display">\[
+\frac{dh(u)}{h(u)}=\frac{x^2\left[\frac{\partial}{\partial
+x}Q(x,y)-\frac{\partial}{\partial
+y}P(x,y)\right]}{xP(x,y)+yQ(x,y)}du\tag{10.76}
+\]</span></p>
+<h1 id="linear-de">Linear DE</h1>
+<p><strong><em>Def 11.1</em></strong> A linear diff eq of the first
+order is <span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)\tag{11.11}
+\]</span></p>
+<p>Integrating factor is in the form <span
+class="math inline">\(\displaystyle{e^{\int P(x)dx}}\)</span>, by <span
+class="math inline">\((9.32)\)</span>.</p>
+<p><span class="math display">\[
+\left[P(x)e^{\int P(x)dx}y-Q(x)e^{\int P(x)dx}\right]dx+e^{\int
+P(x)dx}dy=0\tag{11.13}
+\]</span></p>
+<p><span class="math display">\[
+\underbrace{e^{\int P(x)dx}dy+P(x)e^{\int P(x)dx}ydx}_{d(e^{\int
+P(x)dx}y)}=Q(x)e^{\int P(x)dx}dx\tag{11.16}
+\]</span></p>
+<p><span class="math display">\[
+e^{\int P(x)dx}dy=\int Q(x)e^{\int P(x)dx}dx+C\tag{11.19}
+\]</span></p>
+<p>This is a true general solution of <span
+class="math inline">\((11.11)\)</span>. <span class="math display">\[
+y=e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx+Ce^{-\int
+P(x)dx}\tag{11.191}
+\]</span></p>
+<h2 id="bernoulli-equation">Bernoulli Equation</h2>
+<p><span class="math display">\[
+\frac{dy}{dx}+P(x)y=Q(x)y^n\tag{11.5}
+\]</span></p>
+<p>两边同时乘以<span class="math inline">\((1-n)y^{-n}\)</span> <span
+class="math display">\[
+(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)\tag{11.52}
+\]</span> <span class="math display">\[
+\frac{d}{dx}(\underbrace{y^{1-n}}_{u})+(1-n)P(x) \cdot
+\underbrace{y^{1-n}}_{u}=(1-n)Q(x)\tag{11.53}
+\]</span> <span
+class="math inline">\(u=y^{1-n}\)</span>，转化为线性DE的形式 <span
+class="math display">\[
+u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
+\]</span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/31/ODE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="prev" title="ODE基本概念">
+                  <i class="fa fa-angle-left"></i> ODE基本概念
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/02/%E4%B8%83%E6%9C%88%E5%8A%A0%E5%B7%9E/" rel="next" title="七月加州">
+                  七月加州 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">佛說Naga</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.20/fancybox/fancybox.umd.js" integrity="sha256-q8XkJ6dj5VwSvzI8+nATCHHQG+Xv/dAZBCgqmu93zOY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/07/31/ODE%E7%89%B9%E6%AE%8A%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"30b0a60ff44013156fb0dc14a55a7e0d"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

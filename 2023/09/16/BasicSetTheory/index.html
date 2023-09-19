@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://markzdf.github.io/download/limsup.png">
 <meta property="og:image" content="https://markzdf.github.io/download/span.png">
 <meta property="article:published_time" content="2023-09-16T15:34:53.000Z">
-<meta property="article:modified_time" content="2023-09-18T16:35:28.675Z">
+<meta property="article:modified_time" content="2023-09-19T13:08:54.118Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://markzdf.github.io/download/limsup.png">
@@ -180,14 +180,12 @@
 <style>
     /* Define the sidebar styles */
     .sidebar {
-        background-color: #F3EFF9; /* Change this to your desired color */
+        background-color: #FFFFFF; /* Change this to your desired color */
         float: left; /* Adjust positioning as needed */
     }
 </style>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
-
-
 
 
 
@@ -381,7 +379,7 @@
     }
 
     .btn:hover {
-      background-color: #FFC0CB;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -665,7 +663,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-19 00:35:28" itemprop="dateModified" datetime="2023-09-19T00:35:28+08:00">2023-09-19</time>
+      <time title="修改時間：2023-09-19 21:08:54" itemprop="dateModified" datetime="2023-09-19T21:08:54+08:00">2023-09-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -695,6 +693,7 @@
     
     <div class="post-body" itemprop="articleBody"><p>def. 定義，prop. 性質，con. 概念，ex. 例子</p>
 <span id="more"></span>
+<h1 id="sets">Sets</h1>
 <p>def. Let <span class="math inline">\(\Omega\)</span> be a set, then
 <span class="math inline">\(\mathcal{P}(\Omega)\)</span> is the
 collection of <strong>all</strong> subsets of <span
@@ -767,6 +766,7 @@ k\geqslant n_0\}
 \limsup_{n\rightarrow\infty}A_n=\{\omega:\omega \in A_{k_n} \ \exists
 k_n\geqslant n\ \forall n\}
 \]</span></p>
+<h1 id="algebra">Algebra</h1>
 <p>def.</p>
 <p>Let <span class="math inline">\(\mathcal{A}\)</span> be collection of
 subsets of <span class="math inline">\(\Omega\)</span>, <span
@@ -808,6 +808,40 @@ class="math inline">\(\bigcup_{n=1}^{\infty}A_n\in
 \mathcal{B}=\{\varnothing,\Omega\}\)</span></p>
 <p>類比有限維線性空間</p>
 <p><img data-src="/download/span.png"></p>
+<p>def.</p>
+<p><span class="math inline">\(\mathcal{A}\)</span> is a collection of
+subsets of <span class="math inline">\(\Omega\)</span>, <span
+class="math inline">\(\sigma(\mathcal{A})\)</span> is a <span
+class="math inline">\(\sigma\)</span>-algebra <strong>generated
+by</strong> <span class="math inline">\(\mathcal{A}\)</span>,
+satisfying</p>
+<ol type="1">
+<li><span class="math inline">\(\mathcal{A}\subset
+\sigma(\mathcal{A})\)</span></li>
+<li><span class="math inline">\(\mathcal{B}\)</span> is another <span
+class="math inline">\(\sigma\)</span>-algebra containing <span
+class="math inline">\(\mathcal{A}\)</span>, we have <span
+class="math inline">\(\sigma(\mathcal{A})\subset
+\mathcal{B}\)</span></li>
+</ol>
+<p>def.</p>
+<p>Borel <span class="math inline">\(\sigma\)</span>-algebra</p>
+<p><span class="math display">\[
+\mathcal{B}_{\mathbb{R}}=\sigma(\text{open subsets of } \mathbb{R})
+\]</span></p>
+<p>實變結論：任何 <span class="math inline">\(\mathbb{R}\)</span> 上的
+open set 都是 countable、disjoint 個開區間的 <span
+class="math inline">\(\bigcup\)</span></p>
+<p>直觀的說，subsets <span class="math inline">\(\Rightarrow\)</span>
+<span class="math inline">\(\bigcup_i (a_i,b_i)\)</span>。實際上有</p>
+<p><span class="math display">\[
+H_1=\{(a,b):-\infty\leqslant a\leqslant b\leqslant \infty\}
+\]</span></p>
+<p><span class="math display">\[
+則 \ \sigma(H_1)=\mathcal{B}_{\mathbb{R}}
+\]</span></p>
+<p>Borel <span class="math inline">\(\sigma\)</span>-algebra 中的集合叫
+Borel sets</p>
 
     </div>
 
@@ -821,13 +855,13 @@ class="math inline">\(\bigcup_{n=1}^{\infty}A_n\in
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/09/16/%E9%AB%98%E7%AD%89%E6%A6%82%E7%8E%87%E8%AB%96/" rel="prev" title="高等概率論">
+                <a href="/2023/09/16/AdvancedProb/" rel="prev" title="高等概率論">
                   <i class="fa fa-angle-left"></i> 高等概率論
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/09/17/%E9%96%92%E4%BE%86Guitar/" rel="next" title="閒來Guitar">
-                  閒來Guitar <i class="fa fa-angle-right"></i>
+                <a href="/2023/09/17/Guitar/" rel="next" title="沒事談談吉他">
+                  沒事談談吉他 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
