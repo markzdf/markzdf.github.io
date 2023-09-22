@@ -2175,15 +2175,42 @@ href="https://blog.csdn.net/weixin_44543463/article/details/119749738">Hexo+next
     <content><![CDATA[<p><a
 href="http://121.192.177.201/course/machine_learning/guide_2021">課程指南</a>（校園網登錄）</p>
 <span id="more"></span>
-<p>吳恩達：<a
-href="https://www.bilibili.com/video/BV1Pa411X76s?p=27">網課</a>，<a
-href="https://github.com/kaieye/2022-Machine-Learning-Specialization">資料</a></p>
-<p>西瓜書：<a
-href="https://www.bilibili.com/video/BV1Mh411e7VU/?p=2">網課</a>，<a
-href="https://datawhalechina.github.io/pumpkin-book/#/">南瓜書</a></p>
-<p>白板推導：<a
-href="https://www.bilibili.com/video/BV1aE411o7qd?p=1">網課</a>，<a
-href="https://github.com/ws13685555932/machine_learning_derivation">板書</a></p>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">吳恩達</th>
+<th style="text-align: center;">西瓜書</th>
+<th style="text-align: center;">白板推導</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">網課</td>
+<td style="text-align: center;"><a
+href="https://www.bilibili.com/video/BV1Pa411X76s?p=27">coursera</a></td>
+<td style="text-align: center;"><a
+href="https://www.bilibili.com/video/BV1Mh411e7VU/?p=2">Datawhale</a></td>
+<td style="text-align: center;"><a
+href="https://www.bilibili.com/video/BV1aE411o7qd?p=1">shuhuai</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">資料</td>
+<td style="text-align: center;"><a
+href="https://github.com/kaieye/2022-Machine-Learning-Specialization">lab</a></td>
+<td style="text-align: center;"><a
+href="https://datawhalechina.github.io/pumpkin-book/#/">南瓜書</a></td>
+<td style="text-align: center;"><a
+href="https://github.com/ws13685555932/machine_learning_derivation">板書</a></td>
+</tr>
+</tbody>
+</table>
 <p>Week 1：<a href="/download/1_优化.ipynb">梯度下降</a></p>
 <p>Week 2：[線性規劃]</p>
 ]]></content>
