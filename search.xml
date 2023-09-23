@@ -1080,133 +1080,6 @@ class="math inline">\(f/(w-z)\)</span></p>
       </tags>
   </entry>
   <entry>
-    <title>留數</title>
-    <url>/2023/08/27/C%E7%95%99%E6%95%B8/</url>
-    <content><![CDATA[<p>Residue（留數）</p>
-<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
-<span class="math inline">\(f\)</span>, let <span
-class="math inline">\(C\)</span> be a simple closed curve (positively
-oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
-by <span class="math inline">\(C\)</span> and <span
-class="math inline">\(f\)</span> is holomorphic on <span
-class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
-class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
-<span id="more"></span>
-<p><img data-src="6C_1.jpg" width=290px></p>
-<h1 id="theo-residue">Theo (residue)</h1>
-<p><span class="math inline">\(C\)</span> surrounds <span
-class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
-i}\int_{C_j}f(z)dz
-\]</span></p>
-<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
-<p><span class="math display">\[
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
-    &amp;=\frac{1}{2\pi
-i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
-+\frac{C_{-1}}{z-z_0}\right)dz\\
-    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
-e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
-e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
-    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
-e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
-e^{i\theta}}+C_{-1}\right)d\theta
-\end{aligned}
-\]</span></p>
-<ol type="1">
-<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
-f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
-</ol>
-<p><span class="math display">\[
-z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
-\]</span></p>
-<p>因為</p>
-<p><span class="math display">\[
-(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
-\]</span></p>
-<ol start="2" type="1">
-<li>如果是order of the pole m&gt;1</li>
-</ol>
-<p><span class="math display">\[
-z_0留數=\lim_{z\rightarrow
-z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
-\]</span></p>
-<p>因為</p>
-<p><span class="math display">\[
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
-\]</span></p>
-<p><span class="math display">\[
-(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
-+C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
-\]</span></p>
-<h1 id="infty上的留數"><span
-class="math inline">\(\infty\)</span>上的留數</h1>
-<p>如果在<span
-class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
-<ol type="1">
-<li>removable: <span class="math inline">\(Res=0\)</span></li>
-<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
-<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
-</ol>
-<h2 id="判斷infty是哪類奇異點">判斷<span
-class="math inline">\(\infty\)</span>是哪類奇異點</h2>
-<p><span class="math display">\[
-f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
-\]</span></p>
-<p><span class="math display">\[
-\frac{1}{2\pi
-i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
-i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
-\]</span></p>
-<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
-class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
-<p>因此</p>
-<p><span class="math display">\[
-Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
-\]</span></p>
-<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
-class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
-<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
-<p><span class="math display">\[
-w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
-\]</span></p>
-<p><img data-src="6D_1.jpg" width=650px></p>
-<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
-<p>e.g.</p>
-<p><span class="math display">\[
-f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
-\]</span></p>
-<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
-\]</span></p>
-<p>右邊變成<span
-class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
-residue at 0</p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
-\]</span></p>
-<h2 id="mathbbc_infty上的留數"><span
-class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
-<p><span
-class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
-singularity，把它們的留數全部加起來一定等於0</p>
-<p><img data-src="6D_2.jpg" width=700px></p>
-<p>若<span
-class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
-<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
-sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-  </entry>
-  <entry>
     <title>留數例題</title>
     <url>/2023/08/29/C%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/</url>
     <content><![CDATA[<p>Contour integral（路徑積分）</p>
@@ -1364,6 +1237,133 @@ Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
 <p><span class="math display">\[
 \int_{\Gamma}\frac{dz}{z^2+2z+2}
 \]</span></p>
+]]></content>
+      <categories>
+        <category>複變</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>留數</title>
+    <url>/2023/08/27/C%E7%95%99%E6%95%B8/</url>
+    <content><![CDATA[<p>Residue（留數）</p>
+<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
+<span class="math inline">\(f\)</span>, let <span
+class="math inline">\(C\)</span> be a simple closed curve (positively
+oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
+by <span class="math inline">\(C\)</span> and <span
+class="math inline">\(f\)</span> is holomorphic on <span
+class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
+<span id="more"></span>
+<p><img data-src="6C_1.jpg" width=290px></p>
+<h1 id="theo-residue">Theo (residue)</h1>
+<p><span class="math inline">\(C\)</span> surrounds <span
+class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
+i}\int_{C_j}f(z)dz
+\]</span></p>
+<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
+    &amp;=\frac{1}{2\pi
+i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
++\frac{C_{-1}}{z-z_0}\right)dz\\
+    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
+e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
+    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
+e^{i\theta}}+C_{-1}\right)d\theta
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
+f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
+\]</span></p>
+<ol start="2" type="1">
+<li>如果是order of the pole m&gt;1</li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow
+z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
++C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
+\]</span></p>
+<h1 id="infty上的留數"><span
+class="math inline">\(\infty\)</span>上的留數</h1>
+<p>如果在<span
+class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
+<ol type="1">
+<li>removable: <span class="math inline">\(Res=0\)</span></li>
+<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
+<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
+</ol>
+<h2 id="判斷infty是哪類奇異點">判斷<span
+class="math inline">\(\infty\)</span>是哪類奇異點</h2>
+<p><span class="math display">\[
+f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi
+i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
+i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
+\]</span></p>
+<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
+class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
+<p>因此</p>
+<p><span class="math display">\[
+Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
+\]</span></p>
+<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
+class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
+<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
+<p><span class="math display">\[
+w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
+\]</span></p>
+<p><img data-src="6D_1.jpg" width=650px></p>
+<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
+<p>e.g.</p>
+<p><span class="math display">\[
+f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
+\]</span></p>
+<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
+\]</span></p>
+<p>右邊變成<span
+class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
+residue at 0</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
+\]</span></p>
+<h2 id="mathbbc_infty上的留數"><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
+<p><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
+singularity，把它們的留數全部加起來一定等於0</p>
+<p><img data-src="6D_2.jpg" width=700px></p>
+<p>若<span
+class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
+<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
+sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
 ]]></content>
       <categories>
         <category>複變</category>
@@ -1891,6 +1891,15 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
       </tags>
   </entry>
   <entry>
+    <title>沒事談談吉他</title>
+    <url>/2023/09/17/Guitar/</url>
+    <content><![CDATA[<p>Carcassi Etude No.1 Op.60：<a
+href="/download/Carcassi-Etude-No1-Op60.pdf">五線譜</a> <span
+class="math inline">\(\Rightarrow\)</span> <a
+href="https://www.youtube.com/watch?v=t6omhdEbeAE">視頻</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>解析函數的零點</title>
     <url>/2023/08/19/C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%9B%B6%E7%82%B9/</url>
     <content><![CDATA[<p>實函數的零点存在聚點（limit point）</p>
@@ -2093,15 +2102,6 @@ holomorphy</a></p>
       </tags>
   </entry>
   <entry>
-    <title>沒事談談吉他</title>
-    <url>/2023/09/17/Guitar/</url>
-    <content><![CDATA[<p>Carcassi Etude No.1 Op.60：<a
-href="/download/Carcassi-Etude-No1-Op60.pdf">五線譜</a> <span
-class="math inline">\(\Rightarrow\)</span> <a
-href="https://www.youtube.com/watch?v=t6omhdEbeAE">視頻</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo-Next側邊欄魔改</title>
     <url>/2023/08/31/Hexo-Next%E5%81%B4%E9%82%8A%E6%AC%84%E9%AD%94%E6%94%B9/</url>
     <content><![CDATA[<p>Next主題更新後取消了 <code>custom_.styl</code>
@@ -2140,6 +2140,38 @@ href="https://blog.csdn.net/weixin_44543463/article/details/119749738">Hexo+next
 ]]></content>
       <categories>
         <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>2023Fall遠程實習</title>
+    <url>/2023/08/21/Intern2023/</url>
+    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
+<h1 id="任務一-9.14">任務一 9.14</h1>
+<blockquote>
+<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
+</blockquote>
+<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
+href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
+<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
+<h1 id="任務二-9.16">任務二 9.16</h1>
+<blockquote>
+<p>整理下諾貝爾基金會的情況，寫一篇文章，重點是： 1.
+諾貝爾基金基本介紹（包括緣由、理念） 2. 諾貝爾基金歷年管理規模 3.
+諾貝爾基金資產配置方法論 4.
+諾貝爾基金資產配置實際情況（可以詳細一點）</p>
+</blockquote>
+<p>附件：<a
+href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
+<h1 id="任務三-9.22">任務三 9.22</h1>
+<blockquote>
+<p>你找一下 公募基金 / 外文文献是mutual fund，对于日历效应 /
+年内效应的研究，比如一季度或者上半年做得不好的基金，后面或者下半年是否加大风险暴露、会尝试风格漂移；再比如前三个季度表现差的基金，在四季度可能集中赌一个板块，同样也是风险暴露加大</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>實習</category>
       </categories>
   </entry>
   <entry>
@@ -2278,23 +2310,6 @@ f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
         <tag>Morera定理</tag>
         <tag>Schwarz反射定理</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>數值線性代數</title>
-    <url>/2023/09/02/NLA/</url>
-    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
-<span id="more"></span>
-<p>自學：</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>課程</category>
-      </categories>
   </entry>
   <entry>
     <title>Mitacs申請</title>
@@ -2502,6 +2517,23 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
 ]]></content>
       <categories>
         <category>ODE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>數值線性代數</title>
+    <url>/2023/09/02/NLA/</url>
+    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
+<span id="more"></span>
+<p>自學：</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
+<li><p><label><input type="checkbox" /><a
+href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>課程</category>
       </categories>
   </entry>
   <entry>
@@ -3352,6 +3384,50 @@ w=[0.15,0.5,0.06,0.29]
 ]]></content>
   </entry>
   <entry>
+    <title>Wiserclub面試準備</title>
+    <url>/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/</url>
+    <content><![CDATA[<p><strong>Educative: Machine learning mastery 打到 Week9</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Week 1</label></li>
+<li><label><input type="checkbox" />Week 2</label></li>
+<li><label><input type="checkbox" />Week 3</label></li>
+<li><label><input type="checkbox" />Week 4</label></li>
+<li><label><input type="checkbox" />Week 5</label></li>
+<li><label><input type="checkbox" />Week 6</label></li>
+<li><label><input type="checkbox" />Week 7</label></li>
+<li><label><input type="checkbox" />Week 8</label></li>
+<li><label><input type="checkbox" />Week 9</label></li>
+</ul>
+<p><strong>機器學習作業</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" /><a
+href="/hw/">傳送門</a></label></li>
+</ul>
+<p><strong>Andrew's ML</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Supervised: Week 2</label></li>
+<li><label><input type="checkbox" />Supervised: Week 3</label></li>
+<li><label><input type="checkbox" />Algorithm: Week 1</label></li>
+<li><label><input type="checkbox" />Algorithm: Week 2</label></li>
+<li><label><input type="checkbox" />Algorithm: Week 3</label></li>
+<li><label><input type="checkbox" />Unsupervised: Week 1</label></li>
+<li><label><input type="checkbox" />Unsupervised: Week 2</label></li>
+<li><label><input type="checkbox" />Unsupervised: Week 3</label></li>
+</ul>
+<p><strong>Datawhale 西瓜書</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />P7 決策樹</label></li>
+<li><label><input type="checkbox" />P8 神經網路</label></li>
+</ul>
+<p><strong>自我介紹</strong></p>
+<p><strong>過一遍簡歷 0.5h</strong></p>
+<p><strong>看python組數據集</strong></p>
+]]></content>
+      <categories>
+        <category>機器學習</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何在macOS環境下配置hexo</title>
     <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a
@@ -3596,6 +3672,33 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
       </categories>
   </entry>
   <entry>
+    <title>半夜的AI焦慮</title>
+    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
+    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
+<span id="more"></span>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="1.jpg" width="260" alt="x1">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="2.jpg" width="260" alt="x2">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="3.jpg" width="260" alt="x3">
+</div>
+<div style="float:none;clear:both;">
+<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
+</div>
+<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
+<img data-src="4.jpg" width=650px">
+<center>
+我的話，會選右邊囉
+</center>
+]]></content>
+      <categories>
+        <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
     <title>不必再等</title>
     <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
     <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
@@ -3629,6 +3732,53 @@ class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
 ]]></content>
       <categories>
         <category>隨記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>解決hexo本地和部署不一致問題</title>
+    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+<span id="more"></span>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<figure>
+<img data-src="branch.png" alt="branch" />
+<figcaption aria-hidden="true">branch</figcaption>
+</figure>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<figure>
+<img data-src="new.png" alt="new" />
+<figcaption aria-hidden="true">new</figcaption>
+</figure>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
+<code>main</code>。</p>
+<figure>
+<img data-src="default.png" alt="default" />
+<figcaption aria-hidden="true">default</figcaption>
+</figure>
+<p>接着在 Settings 的 Default branch 一栏点击<span
+class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
+<code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<figure>
+<img data-src="pages.png" alt="pages" />
+<figcaption aria-hidden="true">pages</figcaption>
+</figure>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
+main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code>
+内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
+<ol type="1">
+<li><p><a
+href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
+<li><p><a
+href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
       </categories>
   </entry>
   <entry>
@@ -3769,80 +3919,6 @@ href="/nlp_mc/">改良版代碼</a></td>
       </categories>
   </entry>
   <entry>
-    <title>半夜的AI焦慮</title>
-    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
-    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
-<span id="more"></span>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="1.jpg" width="260" alt="x1">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="2.jpg" width="260" alt="x2">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="3.jpg" width="260" alt="x3">
-</div>
-<div style="float:none;clear:both;">
-<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
-</div>
-<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
-<img data-src="4.jpg" width=650px">
-<center>
-我的話，會選右邊囉
-</center>
-]]></content>
-      <categories>
-        <category>隨記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解決hexo本地和部署不一致問題</title>
-    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
-<span id="more"></span>
-<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img data-src="branch.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
-<figure>
-<img data-src="new.png" alt="new" />
-<figcaption aria-hidden="true">new</figcaption>
-</figure>
-<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
-<code>main</code>。</p>
-<figure>
-<img data-src="default.png" alt="default" />
-<figcaption aria-hidden="true">default</figcaption>
-</figure>
-<p>接着在 Settings 的 Default branch 一栏点击<span
-class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
-<code>main</code>，点击 Update ，点击红色的 I understand。</p>
-<figure>
-<img data-src="pages.png" alt="pages" />
-<figcaption aria-hidden="true">pages</figcaption>
-</figure>
-<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
-main，保存。</p>
-<p>最后记得在博客文件夹的 <code>_config.yml</code>
-内将deploy部分的branch改为<code>main</code>。</p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可实现部署和本地一致。</p>
-<p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
     <title>解決macOS運行Matlab卡頓</title>
     <url>/2023/07/31/%E8%A7%A3%E6%B1%BAmacOS%E9%81%8B%E8%A1%8CMatlab%E5%8D%A1%E9%A0%93/</url>
     <content><![CDATA[<ol type="1">
@@ -3865,81 +3941,5 @@ href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡�
 href="https://www.mathworks.com/matlabcentral/answers/866895-matlab-is-very-slow-on-macos-big-sure">Hang
 Yin</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>2023Fall遠程實習</title>
-    <url>/2023/08/21/Intern2023/</url>
-    <content><![CDATA[<p>第一次海投簡歷，沒抱什麼希望，居然被錄了</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">興業證券	</span><br><span class="line"></span><br><span class="line">上海、遠程	金融工程團隊實習生	</span><br><span class="line"></span><br><span class="line">【上海or遠程】興業證券金融工程團隊-實習生招聘（FOF與基金研究方向）</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line"></span><br><span class="line">1 大三大四 或者 在讀碩士及以上學歷，本/碩/博士院校均為重點高校</span><br><span class="line">2 2025年及以後畢業</span><br><span class="line">3 硬性要求：熟練使用Python </span><br><span class="line">4 具有較強的英文文獻閱讀能力</span><br><span class="line">5 溝通、學習能力強，邏輯性強，踏實負責</span><br><span class="line">6 實習至少3個月以上，每周至少3天 </span><br><span class="line"></span><br><span class="line">【簡歷投遞】</span><br><span class="line">簡歷發送至：quantintern2021@163.com</span><br></pre></td></tr></table></figure>
-<h1 id="任務一-9.14">任務一 9.14</h1>
-<blockquote>
-<p>寫個代碼，這是885001相對中證800的日度超額，將它對Barra純因子收益率回歸（不加截距項）。日度回歸。2010年開始。每個月末，回看一年進行回歸。</p>
-</blockquote>
-<p>附件：<a href="/download/超额数据.xlsx">超額數據</a>，<a
-href="/download/全市场纯因子收益-仅风格因子-日频-230831.xlsx">全市場風格因子收益</a></p>
-<p><a href="/download/风格因子回归.html">風格因子回歸</a></p>
-<h1 id="任務二-9.16">任務二 9.16</h1>
-<blockquote>
-<p>整理下諾貝爾基金會的情況，寫一篇文章，重點是： 1.
-諾貝爾基金基本介紹（包括緣由、理念） 2. 諾貝爾基金歷年管理規模 3.
-諾貝爾基金資產配置方法論 4.
-諾貝爾基金資產配置實際情況（可以詳細一點）</p>
-</blockquote>
-<p>附件：<a
-href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
-<h1 id="任務三-9.22">任務三 9.22</h1>
-<blockquote>
-<p>你找一下 公募基金 / 外文文献是mutual fund，对于日历效应 /
-年内效应的研究，比如一季度或者上半年做得不好的基金，后面或者下半年是否加大风险暴露、会尝试风格漂移；再比如前三个季度表现差的基金，在四季度可能集中赌一个板块，同样也是风险暴露加大</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>實習</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Wiserclub面試準備</title>
-    <url>/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/</url>
-    <content><![CDATA[<p><strong>Educative: Machine learning mastery 打到 Week9</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Week 1</label></li>
-<li><label><input type="checkbox" />Week 2</label></li>
-<li><label><input type="checkbox" />Week 3</label></li>
-<li><label><input type="checkbox" />Week 4</label></li>
-<li><label><input type="checkbox" />Week 5</label></li>
-<li><label><input type="checkbox" />Week 6</label></li>
-<li><label><input type="checkbox" />Week 7</label></li>
-<li><label><input type="checkbox" />Week 8</label></li>
-<li><label><input type="checkbox" />Week 9</label></li>
-</ul>
-<p><strong>機器學習作業</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" /><a
-href="/hw/">傳送門</a></label></li>
-</ul>
-<p><strong>Andrew's ML</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Supervised: Week 2</label></li>
-<li><label><input type="checkbox" />Supervised: Week 3</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 1</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 2</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 3</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 1</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 2</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 3</label></li>
-</ul>
-<p><strong>Datawhale 西瓜書</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />P7 決策樹</label></li>
-<li><label><input type="checkbox" />P8 神經網路</label></li>
-</ul>
-<p><strong>自我介紹</strong></p>
-<p><strong>過一遍簡歷 0.5h</strong></p>
-<p><strong>看python組數據集</strong></p>
-]]></content>
-      <categories>
-        <category>機器學習</category>
-      </categories>
   </entry>
 </search>
