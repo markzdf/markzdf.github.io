@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/</loc>
+    <loc>https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/</loc>
+    
+    <lastmod>2023-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://markzdf.github.io/hw/</loc>
     
     <lastmod>2023-09-23</lastmod>
     
@@ -41,15 +50,6 @@
     <loc>https://markzdf.github.io/2023/09/16/AdvancedProb/</loc>
     
     <lastmod>2023-09-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://markzdf.github.io/hw/</loc>
-    
-    <lastmod>2023-09-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

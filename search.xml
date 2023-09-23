@@ -3384,50 +3384,6 @@ w=[0.15,0.5,0.06,0.29]
 ]]></content>
   </entry>
   <entry>
-    <title>Wiserclub面試準備</title>
-    <url>/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/</url>
-    <content><![CDATA[<p><strong>Educative: Machine learning mastery 打到 Week9</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Week 1</label></li>
-<li><label><input type="checkbox" />Week 2</label></li>
-<li><label><input type="checkbox" />Week 3</label></li>
-<li><label><input type="checkbox" />Week 4</label></li>
-<li><label><input type="checkbox" />Week 5</label></li>
-<li><label><input type="checkbox" />Week 6</label></li>
-<li><label><input type="checkbox" />Week 7</label></li>
-<li><label><input type="checkbox" />Week 8</label></li>
-<li><label><input type="checkbox" />Week 9</label></li>
-</ul>
-<p><strong>機器學習作業</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" /><a
-href="/hw/">傳送門</a></label></li>
-</ul>
-<p><strong>Andrew's ML</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Supervised: Week 2</label></li>
-<li><label><input type="checkbox" />Supervised: Week 3</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 1</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 2</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 3</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 1</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 2</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 3</label></li>
-</ul>
-<p><strong>Datawhale 西瓜書</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />P7 決策樹</label></li>
-<li><label><input type="checkbox" />P8 神經網路</label></li>
-</ul>
-<p><strong>自我介紹</strong></p>
-<p><strong>過一遍簡歷 0.5h</strong></p>
-<p><strong>看python組數據集</strong></p>
-]]></content>
-      <categories>
-        <category>機器學習</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何在macOS環境下配置hexo</title>
     <url>/2023/07/30/macOS%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%85%8D%E7%BD%AEhexo/</url>
     <content><![CDATA[<p>原先用typecho搭建的<a
@@ -3941,5 +3897,60 @@ href="/nlp_mc/">改良版代碼</a></td>
 href="https://www.mathworks.com/matlabcentral/answers/866895-matlab-is-very-slow-on-macos-big-sure">Hang
 Yin</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>ML速成</title>
+    <url>/2023/09/24/ML%E9%80%9F%E6%88%90/</url>
+    <content><![CDATA[<p>不關注細節，重在理解；不在深，在廣</p>
+<span id="more"></span>
+<h1 id="決策樹">決策樹</h1>
+<h2 id="分類">分類</h2>
+<p>用Entropy或Gini index衡量不確定性（impurity）</p>
+<ol type="1">
+<li>信息增益適合分類多，每類少 <span
+class="math inline">\(\Rightarrow\)</span> <strong>ID3</strong></li>
+</ol>
+<p><span class="math display">\[
+\text{Entropy}=\sum_i-p_i\log(p_i)
+\]</span></p>
+<p><span class="math display">\[
+\max IG = E(parent)-\sum_i w_iE(child_i)
+\]</span></p>
+<p>越大越好</p>
+<ol start="2" type="1">
+<li>信息增益比 <span class="math inline">\(\Rightarrow\)</span>
+<strong>C4.5</strong></li>
+</ol>
+<p>有時候雖然split沒什麼用，因為他多分出好多小分支，purity雖然上去了，但如果每個值都不同然後你把每個值分成一類，不也沒什麼用</p>
+<p><span class="math display">\[
+II = -\sum_iw_i\log(w_i)
+\]</span></p>
+<p><span class="math display">\[
+GR = \frac{IG}{II}
+\]</span></p>
+<p>越大越好</p>
+<ol start="3" type="1">
+<li>Gini index適合分類少，每類數量多，優點是計算快 <span
+class="math inline">\(\Rightarrow\)</span> <strong>CART</strong></li>
+</ol>
+<p><span class="math display">\[
+Gini(D)=1-\sum_{i=1}^Cp_i^2
+\]</span></p>
+<p>越小越好</p>
+<h2 id="回歸">回歸</h2>
+<p>用Variance衡量不確定性</p>
+<p><span class="math display">\[
+\text{Var Reduction} = Var(parent)-\sum_i w_iVar(child_i)
+\]</span></p>
+<h1 id="隨即森林">隨即森林</h1>
+<p>決策樹對數據太敏感了</p>
+<p><img data-src="randomforest.png"></p>
+<p>Bootstrap: 穩健，受原始數據集影響小</p>
+<p>Feature selection: 減弱樹之間的關聯性（數量最好<span
+class="math inline">\(\sqrt n / \log n\)</span></p>
+]]></content>
+      <categories>
+        <category>機器學習</category>
+      </categories>
   </entry>
 </search>

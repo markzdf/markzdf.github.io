@@ -25,27 +25,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Educative: Machine learning mastery 打到 Week9  Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 Week 8 Week 9  機器學習作業  傳送門  Andrew&#39;s ML  Supervised: Week 2 Supervised: Week 3 Algorithm: Week 1 Algorith">
+    <meta name="description" content="不關注細節，重在理解；不在深，在廣">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wiserclub面試準備">
-<meta property="og:url" content="https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/">
+<meta property="og:title" content="ML速成">
+<meta property="og:url" content="https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="Educative: Machine learning mastery 打到 Week9  Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 Week 8 Week 9  機器學習作業  傳送門  Andrew&#39;s ML  Supervised: Week 2 Supervised: Week 3 Algorithm: Week 1 Algorith">
+<meta property="og:description" content="不關注細節，重在理解；不在深，在廣">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2023-09-22T17:10:27.000Z">
-<meta property="article:modified_time" content="2023-09-23T03:56:19.337Z">
+<meta property="og:image" content="https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/randomforest.png">
+<meta property="article:published_time" content="2023-09-23T17:41:13.000Z">
+<meta property="article:modified_time" content="2023-09-23T18:17:47.587Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/randomforest.png">
 
 
-<link rel="canonical" href="https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/">
+<link rel="canonical" href="https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/","path":"2023/09/23/Wiserclub面試準備/","title":"Wiserclub面試準備"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/","path":"2023/09/24/ML速成/","title":"ML速成"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Wiserclub面試準備 | MyNotes</title>
+<title>ML速成 | MyNotes</title>
   
 
 
@@ -130,7 +132,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -143,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B1%BA%E7%AD%96%E6%A8%B9"><span class="nav-number">1.</span> <span class="nav-text">決策樹</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A1%9E"><span class="nav-number">1.1.</span> <span class="nav-text">分類</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%AD%B8"><span class="nav-number">1.2.</span> <span class="nav-text">回歸</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%A8%E5%8D%B3%E6%A3%AE%E6%9E%97"><span class="nav-number">2.</span> <span class="nav-text">隨即森林</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -602,7 +605,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -615,12 +618,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Wiserclub面試準備 | MyNotes">
+      <meta itemprop="name" content="ML速成 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Wiserclub面試準備
+          ML速成
         </h1>
 
         <div class="post-meta-container">
@@ -632,7 +635,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-09-23 01:10:27 / 修改時間：11:56:19" itemprop="dateCreated datePublished" datetime="2023-09-23T01:10:27+08:00">2023-09-23</time>
+      <time title="創建時間：2023-09-24 01:41:13 / 修改時間：02:17:47" itemprop="dateCreated datePublished" datetime="2023-09-24T01:41:13+08:00">2023-09-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -660,42 +663,53 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><strong>Educative: Machine learning mastery 打到 Week9</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Week 1</label></li>
-<li><label><input type="checkbox" />Week 2</label></li>
-<li><label><input type="checkbox" />Week 3</label></li>
-<li><label><input type="checkbox" />Week 4</label></li>
-<li><label><input type="checkbox" />Week 5</label></li>
-<li><label><input type="checkbox" />Week 6</label></li>
-<li><label><input type="checkbox" />Week 7</label></li>
-<li><label><input type="checkbox" />Week 8</label></li>
-<li><label><input type="checkbox" />Week 9</label></li>
-</ul>
-<p><strong>機器學習作業</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" /><a
-href="/hw/">傳送門</a></label></li>
-</ul>
-<p><strong>Andrew's ML</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Supervised: Week 2</label></li>
-<li><label><input type="checkbox" />Supervised: Week 3</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 1</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 2</label></li>
-<li><label><input type="checkbox" />Algorithm: Week 3</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 1</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 2</label></li>
-<li><label><input type="checkbox" />Unsupervised: Week 3</label></li>
-</ul>
-<p><strong>Datawhale 西瓜書</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox" />P7 決策樹</label></li>
-<li><label><input type="checkbox" />P8 神經網路</label></li>
-</ul>
-<p><strong>自我介紹</strong></p>
-<p><strong>過一遍簡歷 0.5h</strong></p>
-<p><strong>看python組數據集</strong></p>
+    <div class="post-body" itemprop="articleBody"><p>不關注細節，重在理解；不在深，在廣</p>
+<span id="more"></span>
+<h1 id="決策樹">決策樹</h1>
+<h2 id="分類">分類</h2>
+<p>用Entropy或Gini index衡量不確定性（impurity）</p>
+<ol type="1">
+<li>信息增益適合分類多，每類少 <span
+class="math inline">\(\Rightarrow\)</span> <strong>ID3</strong></li>
+</ol>
+<p><span class="math display">\[
+\text{Entropy}=\sum_i-p_i\log(p_i)
+\]</span></p>
+<p><span class="math display">\[
+\max IG = E(parent)-\sum_i w_iE(child_i)
+\]</span></p>
+<p>越大越好</p>
+<ol start="2" type="1">
+<li>信息增益比 <span class="math inline">\(\Rightarrow\)</span>
+<strong>C4.5</strong></li>
+</ol>
+<p>有時候雖然split沒什麼用，因為他多分出好多小分支，purity雖然上去了，但如果每個值都不同然後你把每個值分成一類，不也沒什麼用</p>
+<p><span class="math display">\[
+II = -\sum_iw_i\log(w_i)
+\]</span></p>
+<p><span class="math display">\[
+GR = \frac{IG}{II}
+\]</span></p>
+<p>越大越好</p>
+<ol start="3" type="1">
+<li>Gini index適合分類少，每類數量多，優點是計算快 <span
+class="math inline">\(\Rightarrow\)</span> <strong>CART</strong></li>
+</ol>
+<p><span class="math display">\[
+Gini(D)=1-\sum_{i=1}^Cp_i^2
+\]</span></p>
+<p>越小越好</p>
+<h2 id="回歸">回歸</h2>
+<p>用Variance衡量不確定性</p>
+<p><span class="math display">\[
+\text{Var Reduction} = Var(parent)-\sum_i w_iVar(child_i)
+\]</span></p>
+<h1 id="隨即森林">隨即森林</h1>
+<p>決策樹對數據太敏感了</p>
+<p><img data-src="randomforest.png"></p>
+<p>Bootstrap: 穩健，受原始數據集影響小</p>
+<p>Feature selection: 減弱樹之間的關聯性（數量最好<span
+class="math inline">\(\sqrt n / \log n\)</span></p>
 
     </div>
 
@@ -812,11 +826,11 @@ href="/hw/">傳送門</a></label></li>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/09/23/Wiserclub%E9%9D%A2%E8%A9%A6%E6%BA%96%E5%82%99/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/09/24/ML%E9%80%9F%E6%88%90/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"6536beebde084ed1e53d298043d20f21"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"832c8d0384f45ebd52b3ab20afcc7f82"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
