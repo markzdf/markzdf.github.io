@@ -62,31 +62,70 @@ F=L(\text{Loss
 function})+\overbrace{\Omega(\text{Regularizer正則項})}^{懲罰葉節點過多}
 \]</span></p>
 <h1 id="神經網路">神經網路</h1>
-<h2 id="cnn">CNN</h2>
+<h2 id="卷積-cnn">卷積 CNN</h2>
 <ol type="1">
 <li>卷積層：提取features</li>
 <li>池化層：降維（max pooling，average pooling）</li>
 <li>全連接層</li>
 </ol>
-<p>Alexnet(2012)第一次用ReLU函數, Resnet(2015)引入殘差學習機制</p>
-<h2 id="rnn">RNN</h2>
+<p><strong>Resnet(2015)</strong>引入殘差學習機制</p>
+<h2 id="循環-rnn">循環 RNN</h2>
 <p>處理序列，短期记忆</p>
 <p>問題：梯度消失</p>
 <p>解決梯度消失的方法</p>
-<ol type="1">
-<li>用ReLU函數</li>
-</ol>
+<p>用ReLU函數</p>
 <p><span class="math display">\[
 f(x)=\max (0,x)
 \]</span></p>
+<p><strong>Alexnet(2012)</strong>第一次用ReLU函數</p>
 <p>缺點：死亡ReLU <span class="math inline">\(\Rightarrow\)</span>
-改進：Leaky ReLU，PReLU，Swish</p>
+改進：Leaky ReLU，PReLU，Swish（谷歌弄的）</p>
 <h2 id="lstm">LSTM</h2>
 <p>解決梯度消失，引入門控單元（遺忘、輸入、輸出），GRU（Gated Recurrent
 Unit）則用重置和更新兩個門</p>
 <blockquote>
-<p>有很多统计模型可以做出预测，但预测效果比较差强人意。而机器学习通常会牺牲可解释性以获得强大的预测能力。例如，从线性回归到神经网络，尽管解释性变差，但是预测能力却大幅提高。</p>
+<p>有很多統計模型可以做出預測，但預測效果比較差強人意。而機器學習通常會犧牲可解釋性以獲得強大的預測能力。例如，從線性回歸到神經網絡，盡管解釋性變差，但是預測能力卻大幅提高。</p>
 </blockquote>
+<h2 id="圖-gnn">圖 GNN</h2>
+<p>有圖就可以用GNN</p>
+<h2 id="transformer">Transformer</h2>
+<p>RNN <span class="math inline">\(\rightarrow\)</span> Seq2Seq <span
+class="math inline">\(\xrightarrow{意義存儲有限}\)</span> attention
+<span class="math inline">\(\xrightarrow{太慢了}\)</span>
+self-attention</p>
+<p>Seq2Seq: encoder <span class="math inline">\(\Rightarrow\)</span>
+意義 <span class="math inline">\(\Rightarrow\)</span> decoder</p>
+<p>self-attention: 提取每個詞的意義再拼起來</p>
+<h2 id="bert">BERT</h2>
+<p>脫胎於Transformer的encoder，把詞語標示為向量</p>
+<p>訓練好後，只需要根據任務進行微調，省事</p>
+<h2 id="gpt">GPT</h2>
+<p>脫胎於Transformer的decoder</p>
+<p>zero shot learning 零樣本學習</p>
+<p>每一步輸出都基於上一步輸出的內容，“生成”很厲害</p>
+<h2 id="生成對抗-gan">生成對抗 GAN</h2>
+<p>生成、判別、對抗</p>
+<p>互相打架升級</p>
+<h2 id="bp算法">BP算法</h2>
+<p>back propagation</p>
+<p>網絡生成的結果和真實值對比，低了就提高權重，高了就降低權重</p>
+<p>很容易過擬合，解決辦法是分出一部分樣本作驗證集，如果訓練集的誤差在<span
+class="math inline">\(\downarrow\)</span>，而驗證集的誤差在<span
+class="math inline">\(\uparrow\)</span>，說明開始過擬合，及時停止訓練</p>
+<h1 id="分類算法">分類算法</h1>
+<h2 id="knn">KNN</h2>
+<p>K-nearest neighbors</p>
+<p>分類算法，物以類聚人以群分</p>
+<p>選擇K很重要，畫個圈，算歐式距離或曼哈頓距離</p>
+<h2 id="支持向量機-svm">支持向量機 SVM</h2>
+<p>classification margin，support vector</p>
+<p>怎麼找中間那條線，就是盡量讓支持向量離margin的距離遠</p>
+<p>有交叉：最小化距離</p>
+<p>Deep learning出現前最好用的分類算法是隨機森林和SVM</p>
+<h2 id="k-means">K-means</h2>
+<p>聚類算法</p>
+<p>不需要標籤信息，無監督學習</p>
+<p>解釋性好，但準確率不如監督學習，對K值（分成幾類）選擇也敏感</p>
 ]]></content>
       <categories>
         <category>機器學習</category>
