@@ -3,7 +3,7 @@
     display: inline-block;
     margin: 20px;
     position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.5s, box-shadow 0.5s;
   }
   
   .book:hover {
@@ -15,9 +15,10 @@
     max-width: 100%;
     height: auto;
   }
-  
+/*
   .book-description {
     background-color: #fff;
     padding: 10px;
     text-align: center;
-  }
+}
+*/

@@ -17,7 +17,8 @@ Set Theory</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>課程</category>
+        <category>课程</category>
+        <category>概率论</category>
       </categories>
   </entry>
   <entry>
@@ -187,7 +188,8 @@ Borel sets</p>
 (A\bigcap B)\)</span></p>
 ]]></content>
       <categories>
-        <category>概率論</category>
+        <category>课程</category>
+        <category>概率论</category>
       </categories>
   </entry>
   <entry>
@@ -373,7 +375,8 @@ test，因為是要求R，而不是判斷是否收斂，條件更嚴格。從(2)
 series無論求導多少次，也有相同的radius of convergence</p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
   </entry>
   <entry>
@@ -427,7 +430,8 @@ href="https://markzdf.github.io/2023/08/27/%E7%95%99%E6%95%B8/">留數</a></p>
 href="https://markzdf.github.io/2023/08/29/%E7%95%99%E6%95%B8%E4%BE%8B%E9%A1%8C/">留數例題</a></p>
 ]]></content>
       <categories>
-        <category>課程</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
   </entry>
   <entry>
@@ -725,7 +729,8 @@ class="math inline">\(f(\mathbb{C})\)</span> misses two points then
 function是常數函數。皮卡小定理則證明出只要整函數miss兩個點就變成常數函數，厲害很多</p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
       <tags>
         <tag>平均值定理</tag>
@@ -1071,7 +1076,8 @@ f&#39;(z)=\frac{1}{2\pi i}\int_{\Gamma_{\delta}}\frac{f(w)}{(w-z)^2}dw
 class="math inline">\(f/(w-z)\)</span></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
       <tags>
         <tag>Cauchy定理</tag>
@@ -1239,7 +1245,8 @@ Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
 \]</span></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
   </entry>
   <entry>
@@ -1366,7 +1373,8 @@ class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
 sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
   </entry>
   <entry>
@@ -1625,7 +1633,8 @@ x}+i\frac{\partial f}{\partial y}\right)dxdy  \\
 \]</span></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
       <tags>
         <tag>柯西黎曼方程</tag>
@@ -1881,7 +1890,8 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
 <p>矛盾. <span class="math inline">\(\blacksquare\)</span></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
       <tags>
         <tag>Liouville定理</tag>
@@ -1889,15 +1899,6 @@ I=\int_{|z|=1}\frac{z^{k-1}}{iQ(z)}dz=0
         <tag>Cauchy estimate</tag>
         <tag>代數基本定理</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>沒事談談吉他</title>
-    <url>/2023/09/17/Guitar/</url>
-    <content><![CDATA[<p>Carcassi Etude No.1 Op.60：<a
-href="/download/Carcassi-Etude-No1-Op60.pdf">五線譜</a> <span
-class="math inline">\(\Rightarrow\)</span> <a
-href="https://www.youtube.com/watch?v=t6omhdEbeAE">視頻</a></p>
-]]></content>
   </entry>
   <entry>
     <title>解析函數的零點</title>
@@ -2093,7 +2094,8 @@ href="https://en.wikipedia.org/wiki/Domain_of_holomorphy">domain of
 holomorphy</a></p>
 ]]></content>
       <categories>
-        <category>複變</category>
+        <category>课程</category>
+        <category>复变函数</category>
       </categories>
       <tags>
         <tag>解析延拓</tag>
@@ -2171,7 +2173,7 @@ href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>實習</category>
+        <category>实习</category>
       </categories>
   </entry>
   <entry>
@@ -2220,96 +2222,8 @@ href="https://github.com/ws13685555932/machine_learning_derivation">板書</a></
 <p>Week 2：[線性規劃]</p>
 ]]></content>
       <categories>
-        <category>課程</category>
-        <category>機器學習</category>
+        <category>机器学习</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Morera定理</title>
-    <url>/2023/08/22/Morera%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<p>柯西定理的逆敘述</p>
-<span id="more"></span>
-<p><u><strong>Theo</strong></u> (Morera)</p>
-<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
-simply-connected domain. Let <span class="math inline">\(f\in
-C(D)\)</span>, if <span class="math inline">\(\int_{\partial
-\triangle}f(z)dz=0\)</span>, for any triangle <span
-class="math inline">\(\triangle\)</span> in <span
-class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
-O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
-<p><span class="math display">\[
-連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
-\]</span></p>
-<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
-curve</p>
-<p>pf.</p>
-<p>Define <span class="math display">\[
-F(z)=\int_{\Gamma} f(z)dz
-\]</span></p>
-<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
-\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
-<p><img data-src="4C_1.png" width=400px></p>
-<p><span class="math display">\[
-F&#39;(z)=f(z), \therefore F\in O(D)
-\]</span></p>
-<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
-<p><span class="math display">\[
-\therefore f\in O(D) \ \blacksquare.
-\]</span></p>
-<hr />
-<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
-class="math inline">\(I\subset D\)</span> (closed interval). <span
-class="math inline">\(f\in C(D)\)</span></p>
-<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
-挖掉I後D還是開集</p>
-<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
-<p>手上只有Morera</p>
-<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
-<hr />
-<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
-<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
-half space), s.t. <span class="math inline">\(\partial D\cap
-\{x-axis\}=I\)</span> closed interval.</p>
-<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
-<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
-D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
-的interior</p>
-<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
-\mathring{I})\)</span>, and <span
-class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
-<p>set <span class="math inline">\(g=\Omega\rightarrow
-\mathbb{C}\)</span></p>
-<p><img data-src="4D_1.png" width=400px></p>
-<p><span class="math display">\[
-g(z)=\begin{cases}
-    f(z) &amp;z\in D\\
-    f(z) &amp;z\in \mathring{I}\\
-    \bar{f}(\bar{z})&amp; z\in D^*
-\end{cases}
-\]</span></p>
-<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
-class="math inline">\(\blacklozenge\)</span></p>
-<ol type="1">
-<li>考慮連續性</li>
-</ol>
-<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
-class="math inline">\(I\)</span>上</p>
-<p><span class="math display">\[
-f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
-\]</span></p>
-<p><span class="math display">\[
-f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
-\Rightarrow f(x)=u(x)
-\]</span></p>
-<p><img data-src="4D_2.jpeg"></p>
-]]></content>
-      <categories>
-        <category>複變</category>
-      </categories>
-      <tags>
-        <tag>Morera定理</tag>
-        <tag>Schwarz反射定理</tag>
-      </tags>
   </entry>
   <entry>
     <title>Mitacs申請</title>
@@ -2336,7 +2250,7 @@ interests and experience</li>
 <h1 id="選項目-9.18">選項目 9.18</h1>
 ]]></content>
       <categories>
-        <category>實習</category>
+        <category>实习</category>
       </categories>
   </entry>
   <entry>
@@ -2516,24 +2430,8 @@ class="math display">\[dz=\frac{\partial f(x,y)}{\partial x}\Delta
 x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
 ]]></content>
       <categories>
+        <category>课程</category>
         <category>ODE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>數值線性代數</title>
-    <url>/2023/09/02/NLA/</url>
-    <content><![CDATA[<p>網頁：<a href="https://kuidu.github.io/nla.html">杜魁</a></p>
-<span id="more"></span>
-<p>自學：</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV11b4y1d7cc/?spm_id_from=333.337.search-card.all.click">b站</a></label></p></li>
-<li><p><label><input type="checkbox" /><a
-href="https://www.bilibili.com/video/BV1K54y187dt/?spm_id_from=333.788.top_right_bar_window_default_collection.content.click">數值分析</a></label></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>課程</category>
       </categories>
   </entry>
   <entry>
@@ -2604,6 +2502,7 @@ class="math display">\[
 \]</span></p>
 ]]></content>
       <categories>
+        <category>课程</category>
         <category>ODE</category>
       </categories>
   </entry>
@@ -3042,6 +2941,7 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
 \]</span></p>
 ]]></content>
       <categories>
+        <category>课程</category>
         <category>ODE</category>
       </categories>
   </entry>
@@ -3064,11 +2964,12 @@ href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a>
 </ul>
 ]]></content>
       <categories>
-        <category>課程</category>
+        <category>课程</category>
+        <category>ODE</category>
       </categories>
   </entry>
   <entry>
-    <title>回家前</title>
+    <title>周游LA、SD</title>
     <url>/2023/07/29/TripCA/</url>
     <content><![CDATA[<p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。</p>
 <span id="more"></span>
@@ -3245,7 +3146,7 @@ https://www.guruin.com/articles/855</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3596,7 +3497,7 @@ lounge学，再晚点去打打台球。我社交的两个主要地点就是球�
 <p>在宿舍大堂看别人弹琴，就想起高二的那个学期，吃完晚饭去练电子琴，琴声还没从脑海散去就迎来晚自习的铃声，在凤凰花树下甩着饮料瓶回教室，走到B栋回头看，钥匙妹还在举着双手，但天已经渐渐暗了。往自己座位一钻，沉浸在必刷题、王后雄中间，多么满足。</p>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3624,7 +3525,7 @@ experience。平均绩点在3.8。每年收到600多份，录80多人，最后50
 experience。之前因为知道了中介的套路所以没怎么焦虑，现在又有点了。尤其我转统计硕，还要学很多课，不容易呢。</p>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3651,7 +3552,7 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
 </center>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3670,7 +3571,7 @@ idiots说的</p>
 <p>再回想这学期做的事，总体上并不让自己快乐。回顾这二十年，站在现在的立场各个时期都有精彩。但唯独在当时最快乐的体验，是高二一个酷热的中午，在深中新建好的图书馆里吹着空调，耳机里在放轻音乐，写物理必刷题。</p>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3687,7 +3588,7 @@ idiots说的</p>
 class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
 ]]></content>
       <categories>
-        <category>隨記</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3871,7 +3772,7 @@ href="/nlp_mc/">改良版代碼</a></td>
 </table>
 ]]></content>
       <categories>
-        <category>課程</category>
+        <category>数模</category>
       </categories>
   </entry>
   <entry>
@@ -3899,9 +3800,97 @@ Yin</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>ML速成</title>
-    <url>/2023/09/24/ML%E9%80%9F%E6%88%90/</url>
-    <content><![CDATA[<p>不關注細節</p>
+    <title>Morera定理</title>
+    <url>/2023/08/22/C_Morera%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>柯西定理的逆敘述</p>
+<span id="more"></span>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
+<p><span class="math display">\[
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
+\]</span></p>
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
+\]</span></p>
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img data-src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
+\]</span></p>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<hr />
+<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
+class="math inline">\(I\subset D\)</span> (closed interval). <span
+class="math inline">\(f\in C(D)\)</span></p>
+<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
+挖掉I後D還是開集</p>
+<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
+<p>手上只有Morera</p>
+<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
+<hr />
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img data-src="4D_1.png" width=400px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\blacklozenge\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
+</ol>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
+<p><span class="math display">\[
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
+\]</span></p>
+<p><span class="math display">\[
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
+\]</span></p>
+<p><img data-src="4D_2.jpeg"></p>
+]]></content>
+      <categories>
+        <category>课程</category>
+        <category>复变函数</category>
+      </categories>
+      <tags>
+        <tag>Morera定理</tag>
+        <tag>Schwarz反射定理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ML面试速成</title>
+    <url>/2023/09/24/ML%E9%9D%A2%E8%AF%95%E9%80%9F%E6%88%90/</url>
+    <content><![CDATA[<p>准备Wiserclub机器学习组的面试，绰绰有余</p>
 <span id="more"></span>
 <h1 id="決策樹">決策樹</h1>
 <h2 id="分類">分類</h2>
@@ -4026,7 +4015,7 @@ class="math inline">\(\uparrow\)</span>，說明開始過擬合，及時停止�
 <p>解釋性好，但準確率不如監督學習，對K值（分成幾類）選擇也敏感</p>
 ]]></content>
       <categories>
-        <category>機器學習</category>
+        <category>机器学习</category>
       </categories>
   </entry>
 </search>
