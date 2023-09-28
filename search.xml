@@ -22,6 +22,94 @@ Set Theory</a></li>
       </categories>
   </entry>
   <entry>
+    <title>Morera定理</title>
+    <url>/2023/08/22/C_Morera%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>柯西定理的逆敘述</p>
+<span id="more"></span>
+<p><u><strong>Theo</strong></u> (Morera)</p>
+<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
+simply-connected domain. Let <span class="math inline">\(f\in
+C(D)\)</span>, if <span class="math inline">\(\int_{\partial
+\triangle}f(z)dz=0\)</span>, for any triangle <span
+class="math inline">\(\triangle\)</span> in <span
+class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
+O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
+<p><span class="math display">\[
+連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
+\]</span></p>
+<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
+curve</p>
+<p>pf.</p>
+<p>Define <span class="math display">\[
+F(z)=\int_{\Gamma} f(z)dz
+\]</span></p>
+<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
+\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
+<p><img data-src="4C_1.png" width=400px></p>
+<p><span class="math display">\[
+F&#39;(z)=f(z), \therefore F\in O(D)
+\]</span></p>
+<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
+<p><span class="math display">\[
+\therefore f\in O(D) \ \blacksquare.
+\]</span></p>
+<hr />
+<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
+class="math inline">\(I\subset D\)</span> (closed interval). <span
+class="math inline">\(f\in C(D)\)</span></p>
+<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
+挖掉I後D還是開集</p>
+<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
+<p>手上只有Morera</p>
+<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
+<hr />
+<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
+<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
+half space), s.t. <span class="math inline">\(\partial D\cap
+\{x-axis\}=I\)</span> closed interval.</p>
+<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
+<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
+D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
+的interior</p>
+<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
+\mathring{I})\)</span>, and <span
+class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
+<p>set <span class="math inline">\(g=\Omega\rightarrow
+\mathbb{C}\)</span></p>
+<p><img data-src="4D_1.png" width=400px></p>
+<p><span class="math display">\[
+g(z)=\begin{cases}
+    f(z) &amp;z\in D\\
+    f(z) &amp;z\in \mathring{I}\\
+    \bar{f}(\bar{z})&amp; z\in D^*
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
+class="math inline">\(\blacklozenge\)</span></p>
+<ol type="1">
+<li>考慮連續性</li>
+</ol>
+<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
+class="math inline">\(I\)</span>上</p>
+<p><span class="math display">\[
+f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
+\]</span></p>
+<p><span class="math display">\[
+f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
+\Rightarrow f(x)=u(x)
+\]</span></p>
+<p><img data-src="4D_2.jpeg"></p>
+]]></content>
+      <categories>
+        <category>课程</category>
+        <category>复变函数</category>
+      </categories>
+      <tags>
+        <tag>Morera定理</tag>
+        <tag>Schwarz反射定理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BasicSetTheory</title>
     <url>/2023/09/16/BasicSetTheory/</url>
     <content><![CDATA[<p>def. 定義，prop. 性質，con. 概念，ex. 例子</p>
@@ -740,6 +828,134 @@ function是常數函數。皮卡小定理則證明出只要整函數miss兩個�
       </tags>
   </entry>
   <entry>
+    <title>留數</title>
+    <url>/2023/08/27/C%E7%95%99%E6%95%B8/</url>
+    <content><![CDATA[<p>Residue（留數）</p>
+<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
+<span class="math inline">\(f\)</span>, let <span
+class="math inline">\(C\)</span> be a simple closed curve (positively
+oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
+by <span class="math inline">\(C\)</span> and <span
+class="math inline">\(f\)</span> is holomorphic on <span
+class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
+class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
+<span id="more"></span>
+<p><img data-src="6C_1.jpg" width=290px></p>
+<h1 id="theo-residue">Theo (residue)</h1>
+<p><span class="math inline">\(C\)</span> surrounds <span
+class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
+i}\int_{C_j}f(z)dz
+\]</span></p>
+<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
+    &amp;=\frac{1}{2\pi
+i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
++\frac{C_{-1}}{z-z_0}\right)dz\\
+    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
+e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
+    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
+e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
+e^{i\theta}}+C_{-1}\right)d\theta
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
+f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
+\]</span></p>
+<ol start="2" type="1">
+<li>如果是order of the pole m&gt;1</li>
+</ol>
+<p><span class="math display">\[
+z_0留數=\lim_{z\rightarrow
+z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
+\]</span></p>
+<p>因為</p>
+<p><span class="math display">\[
+f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
+\]</span></p>
+<p><span class="math display">\[
+(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
++C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
+\]</span></p>
+<h1 id="infty上的留數"><span
+class="math inline">\(\infty\)</span>上的留數</h1>
+<p>如果在<span
+class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
+<ol type="1">
+<li>removable: <span class="math inline">\(Res=0\)</span></li>
+<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
+<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
+</ol>
+<h2 id="判斷infty是哪類奇異點">判斷<span
+class="math inline">\(\infty\)</span>是哪類奇異點</h2>
+<p><span class="math display">\[
+f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi
+i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
+i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
+\]</span></p>
+<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
+class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
+<p>因此</p>
+<p><span class="math display">\[
+Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
+\]</span></p>
+<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
+class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
+<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
+<p><span class="math display">\[
+w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
+\]</span></p>
+<p><img data-src="6D_1.jpg" width=650px></p>
+<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
+<p>e.g.</p>
+<p><span class="math display">\[
+f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
+\]</span></p>
+<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
+\]</span></p>
+<p>右邊變成<span
+class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
+residue at 0</p>
+<p><span class="math display">\[
+\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
+\]</span></p>
+<h2 id="mathbbc_infty上的留數"><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
+<p><span
+class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
+singularity，把它們的留數全部加起來一定等於0</p>
+<p><img data-src="6D_2.jpg" width=700px></p>
+<p>若<span
+class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
+<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
+sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
+]]></content>
+      <categories>
+        <category>课程</category>
+        <category>复变函数</category>
+      </categories>
+  </entry>
+  <entry>
     <title>柯西積分公式</title>
     <url>/2023/08/17/C%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<p>複變最重要的兩個定理！</p>
@@ -1243,134 +1459,6 @@ Res\left(\frac{1}{1+z^4};e^{\frac{1}{4}\pi i}\right)=2\pi i\cdot
 <p><span class="math display">\[
 \int_{\Gamma}\frac{dz}{z^2+2z+2}
 \]</span></p>
-]]></content>
-      <categories>
-        <category>课程</category>
-        <category>复变函数</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>留數</title>
-    <url>/2023/08/27/C%E7%95%99%E6%95%B8/</url>
-    <content><![CDATA[<p>Residue（留數）</p>
-<p>Let <span class="math inline">\(z_0\)</span> be a singularity of
-<span class="math inline">\(f\)</span>, let <span
-class="math inline">\(C\)</span> be a simple closed curve (positively
-oriented), s.t. <span class="math inline">\(z_0\)</span> is surrounded
-by <span class="math inline">\(C\)</span> and <span
-class="math inline">\(f\)</span> is holomorphic on <span
-class="math inline">\(U\verb|\|\{z_0\}\)</span> and <span
-class="math inline">\(C\subset U\verb|\|\{z_0\}\)</span></p>
-<span id="more"></span>
-<p><img data-src="6C_1.jpg" width=290px></p>
-<h1 id="theo-residue">Theo (residue)</h1>
-<p><span class="math inline">\(C\)</span> surrounds <span
-class="math inline">\(z_1,\cdots,z_k\)</span>, Then</p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_Cf(z)dz=\sum_{j=1}^k\frac{1}{2\pi
-i}\int_{C_j}f(z)dz
-\]</span></p>
-<p><span class="math inline">\(z_0\)</span>: pole, 則</p>
-<p><span class="math display">\[
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-    residue&amp;=\frac{1}{2\pi i}\int_{C_{\varepsilon}}f(z)dz\\
-    &amp;=\frac{1}{2\pi
-i}\int_{C_{\varepsilon}}\left(\frac{C_{-m}}{(z-z_0)^m}+\cdots
-+\frac{C_{-1}}{z-z_0}\right)dz\\
-    &amp;=\frac{1}{2\pi i}\int_0^{2\pi} \left(\frac{C_{-m}}{(\varepsilon
-e^{i\theta})^m}+\cdots +\frac{C_{-1}}{\varepsilon
-e^{i\theta}}\right)i\varepsilon e^{i\theta}d\theta\\
-    &amp;=\frac{1}{2\pi }\int_0^{2\pi }\left(\frac{C_{-m}}{(\varepsilon
-e^{i\theta})^{m-1}}+\cdots +\frac{C_{-2}}{\varepsilon
-e^{i\theta}}+C_{-1}\right)d\theta
-\end{aligned}
-\]</span></p>
-<ol type="1">
-<li>如果是single pole, i.e. <span class="math inline">\(\displaystyle
-f(z)=\frac{C_{-1}}{z-z_0}+h(z)\)</span></li>
-</ol>
-<p><span class="math display">\[
-z_0留數=\lim_{z\rightarrow z_0}(z-z_0)f(z)
-\]</span></p>
-<p>因為</p>
-<p><span class="math display">\[
-(z-z_0)f(z)=C_{-1}+(z-z_0)h(z)\rightarrow C_{-1}
-\]</span></p>
-<ol start="2" type="1">
-<li>如果是order of the pole m&gt;1</li>
-</ol>
-<p><span class="math display">\[
-z_0留數=\lim_{z\rightarrow
-z_0}\frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^mf(z)]
-\]</span></p>
-<p>因為</p>
-<p><span class="math display">\[
-f(z)=\frac{C_{-m}}{(z-z_0)^m}+\cdots+\frac{C_{-1}}{z-z_0}+h(z)
-\]</span></p>
-<p><span class="math display">\[
-(z-z_0)^mf(z)=C_{-m}+C_{-m+1}(z-z_0)+\cdots
-+C_{-1}(z-z_0)^{m-1}+(z-z_0)^mh(z)
-\]</span></p>
-<h1 id="infty上的留數"><span
-class="math inline">\(\infty\)</span>上的留數</h1>
-<p>如果在<span
-class="math inline">\(\infty\)</span>處解析，則留數為0。若是singularity，則</p>
-<ol type="1">
-<li>removable: <span class="math inline">\(Res=0\)</span></li>
-<li>pole: <span class="math inline">\(Res=C_{-1}\)</span></li>
-<li>essential: <span class="math inline">\(Res=C_{-1}\)</span></li>
-</ol>
-<h2 id="判斷infty是哪類奇異點">判斷<span
-class="math inline">\(\infty\)</span>是哪類奇異點</h2>
-<p><span class="math display">\[
-f \text{ at } \infty\Leftrightarrow f(\frac{1}{z})\text{ at }0
-\]</span></p>
-<p><span class="math display">\[
-\frac{1}{2\pi
-i}\int_{|z|=R,\circlearrowright}f(z)dz\overset{w=\frac{1}{z}}{=\!=\!=}\frac{1}{2\pi
-i}\int_{|w|=\frac{1}{R},\circlearrowleft}f(\frac{1}{w})(-\frac{1}{w^2}dw)
-\]</span></p>
-<p>where <span class="math inline">\(z=\frac{1}{w}\)</span>, <span
-class="math inline">\(dz=-\frac{1}{w^2}dw\)</span></p>
-<p>因此</p>
-<p><span class="math display">\[
-Res[f(z),\infty]=Res[-\frac{1}{w^2}f(\frac{1}{w}),0]
-\]</span></p>
-<p>這裡<span class="math inline">\(R\)</span>非常大，取倒數後<span
-class="math inline">\(\frac{1}{R}\)</span>非常小，把原本的無窮遠點拉回到0</p>
-<p>denote <span class="math inline">\(z=Re^{i\theta}\)</span>, then</p>
-<p><span class="math display">\[
-w=\frac{1}{Re^{i\theta}}=\frac{1}{R}e^{-i\theta}=\frac{1}{R}e^{i(-\theta)}
-\]</span></p>
-<p><img data-src="6D_1.jpg" width=650px></p>
-<p>所以無窮遠時是逆時針，取倒數後變順時針</p>
-<p>e.g.</p>
-<p><span class="math display">\[
-f(z)=z\Leftrightarrow f(\frac{1}{z})=\frac{1}{z}
-\]</span></p>
-<p>左邊residue at <span class="math inline">\(\infty\)</span></p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_{\circlearrowright}zdz=0
-\]</span></p>
-<p>右邊變成<span
-class="math inline">\(-\frac{1}{w^2}f(\frac{1}{w})=(-\frac{1}{z^2})\frac{1}{z}=-\frac{1}{z^3}\)</span>,
-residue at 0</p>
-<p><span class="math display">\[
-\frac{1}{2\pi i}\int_{\circlearrowleft}-\frac{1}{z^3}dz=0
-\]</span></p>
-<h2 id="mathbbc_infty上的留數"><span
-class="math inline">\(\mathbb{C}_{\infty}\)</span>上的留數</h2>
-<p><span
-class="math inline">\(\mathbb{C}_{\infty}\)</span>上只有有限個isolated
-singularity，把它們的留數全部加起來一定等於0</p>
-<p><img data-src="6D_2.jpg" width=700px></p>
-<p>若<span
-class="math inline">\(\infty\)</span>是奇異點，如左圖，抵銷</p>
-<p>若<span class="math inline">\(\infty\)</span>是解析的，想像成Riemann
-sphere（右圖）。在一個解析的地方在封閉的曲線上積分，所以由柯西定理，等於0</p>
 ]]></content>
       <categories>
         <category>课程</category>
@@ -2177,6 +2265,165 @@ href="/download/annual-report-2022-2.pdf">諾貝爾基金會2022年報</a></p>
       </categories>
   </entry>
   <entry>
+    <title>ML面试速成</title>
+    <url>/2023/09/24/ML%E9%9D%A2%E8%AF%95%E9%80%9F%E6%88%90/</url>
+    <content><![CDATA[<p>准备Wiserclub机器学习组的面试，绰绰有余</p>
+<span id="more"></span>
+<h1 id="決策樹">決策樹</h1>
+<h2 id="分類">分類</h2>
+<p>用Entropy或Gini index衡量不確定性（impurity）</p>
+<ol type="1">
+<li>信息增益適合分類多，每類少 <span
+class="math inline">\(\Rightarrow\)</span> <strong>ID3</strong></li>
+</ol>
+<p><span class="math display">\[
+\text{Entropy}=\sum_i-p_i\log(p_i)
+\]</span></p>
+<p><span class="math display">\[
+\max IG = E(parent)-\sum_i w_iE(child_i)
+\]</span></p>
+<p>越大越好</p>
+<ol start="2" type="1">
+<li>信息增益比 <span class="math inline">\(\Rightarrow\)</span>
+<strong>C4.5</strong></li>
+</ol>
+<p>有時候雖然split沒什麼用，因為他多分出好多小分支，purity雖然上去了，但如果每個值都不同然後你把每個值分成一類，不也沒什麼用</p>
+<p><span class="math display">\[
+II = -\sum_iw_i\log(w_i)
+\]</span></p>
+<p><span class="math display">\[
+GR = \frac{IG}{II}
+\]</span></p>
+<p>越大越好</p>
+<ol start="3" type="1">
+<li>Gini index適合分類少，每類數量多，優點是計算快 <span
+class="math inline">\(\Rightarrow\)</span> <strong>CART</strong></li>
+</ol>
+<p><span class="math display">\[
+Gini(D)=1-\sum_{i=1}^Cp_i^2
+\]</span></p>
+<p>越小越好</p>
+<h2 id="回歸">回歸</h2>
+<p>用Variance衡量不確定性</p>
+<p><span class="math display">\[
+\text{Var Reduction} = Var(parent)-\sum_i w_iVar(child_i)
+\]</span></p>
+<h1 id="隨機森林">隨機森林</h1>
+<p>決策樹對數據太敏感了</p>
+<p><img data-src="randomforest.png"></p>
+<p>Bootstrap: 穩健，受原始數據集影響小</p>
+<p>Feature selection: 減弱樹之間的關聯性（數量最好<span
+class="math inline">\(\sqrt n / \log n\)</span>）</p>
+<h2 id="gbdt">GBDT</h2>
+<p>Gradient Boosting Decision Tree</p>
+<p>Boosting: <span class="math inline">\(A\Rightarrow B\Rightarrow
+C\Rightarrow \cdots\)</span></p>
+<p>Bagging, Stacking</p>
+<p><img data-src="gbdt.png"></p>
+<h2 id="xgboost">XGBoost</h2>
+<p><span class="math display">\[
+F=L(\text{Loss
+function})+\overbrace{\Omega(\text{Regularizer正則項})}^{懲罰葉節點過多}
+\]</span></p>
+<h1 id="神經網路">神經網路</h1>
+<h2 id="卷積-cnn">卷積 CNN</h2>
+<ol type="1">
+<li>卷積層：提取features</li>
+<li>池化層：降維（max pooling，average pooling）</li>
+<li>全連接層</li>
+</ol>
+<p><strong>Resnet(2015)</strong>引入殘差學習機制</p>
+<h2 id="循環-rnn">循環 RNN</h2>
+<p>處理序列，短期记忆</p>
+<p>問題：梯度消失</p>
+<p>解決梯度消失的方法</p>
+<p>用ReLU函數</p>
+<p><span class="math display">\[
+f(x)=\max (0,x)
+\]</span></p>
+<p><strong>Alexnet(2012)</strong>第一次用ReLU函數</p>
+<p>缺點：死亡ReLU <span class="math inline">\(\Rightarrow\)</span>
+改進：Leaky ReLU，PReLU，Swish（谷歌弄的）</p>
+<h2 id="lstm">LSTM</h2>
+<p>解決梯度消失，引入門控單元（遺忘、輸入、輸出），GRU（Gated Recurrent
+Unit）則用重置和更新兩個門</p>
+<blockquote>
+<p>有很多統計模型可以做出預測，但預測效果比較差強人意。而機器學習通常會犧牲可解釋性以獲得強大的預測能力。例如，從線性回歸到神經網絡，盡管解釋性變差，但是預測能力卻大幅提高。</p>
+</blockquote>
+<h2 id="圖-gnn">圖 GNN</h2>
+<p>有圖就可以用GNN</p>
+<h2 id="transformer">Transformer</h2>
+<p>RNN <span class="math inline">\(\rightarrow\)</span> Seq2Seq <span
+class="math inline">\(\xrightarrow{意義存儲有限}\)</span> attention
+<span class="math inline">\(\xrightarrow{太慢了}\)</span>
+self-attention</p>
+<p>Seq2Seq: encoder <span class="math inline">\(\Rightarrow\)</span>
+意義 <span class="math inline">\(\Rightarrow\)</span> decoder</p>
+<p>self-attention: 提取每個詞的意義再拼起來</p>
+<h2 id="bert">BERT</h2>
+<p>脫胎於Transformer的encoder，把詞語標示為向量</p>
+<p>訓練好後，只需要根據任務進行微調，省事</p>
+<h2 id="gpt">GPT</h2>
+<p>脫胎於Transformer的decoder</p>
+<p>zero shot learning 零樣本學習</p>
+<p>每一步輸出都基於上一步輸出的內容，“生成”很厲害</p>
+<h2 id="生成對抗-gan">生成對抗 GAN</h2>
+<p>生成、判別、對抗</p>
+<p>互相打架升級</p>
+<h2 id="bp算法">BP算法</h2>
+<p>back propagation</p>
+<p>網絡生成的結果和真實值對比，低了就提高權重，高了就降低權重</p>
+<p>很容易過擬合，解決辦法是分出一部分樣本作驗證集，如果訓練集的誤差在<span
+class="math inline">\(\downarrow\)</span>，而驗證集的誤差在<span
+class="math inline">\(\uparrow\)</span>，說明開始過擬合，及時停止訓練</p>
+<h1 id="分類算法">分類算法</h1>
+<h2 id="knn">KNN</h2>
+<p>K-nearest neighbors</p>
+<p>分類算法，物以類聚人以群分</p>
+<p>選擇K很重要，畫個圈，算歐式距離或曼哈頓距離</p>
+<h2 id="支持向量機-svm">支持向量機 SVM</h2>
+<p>classification margin，support vector</p>
+<p>怎麼找中間那條線，就是盡量讓支持向量離margin的距離遠</p>
+<p>有交叉：最小化距離</p>
+<p>Deep learning出現前最好用的分類算法是隨機森林和SVM</p>
+<h2 id="k-means">K-means</h2>
+<p>聚類算法</p>
+<p>不需要標籤信息，無監督學習</p>
+<p>解釋性好，但準確率不如監督學習，對K值（分成幾類）選擇也敏感</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mitacs申請</title>
+    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
+    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
+href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
+<span id="more"></span>
+<p><a
+href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
+<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
+<h1 id="三件事-9.14">三件事 9.14</h1>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />打印成績單</label></li>
+<li><label><input type="checkbox"
+checked="" />寫推薦信，找倪簽字</label></li>
+<li><label><input type="checkbox" checked="" />寫三個小作文</label>
+<ul>
+<li>General description of skills, background knowledge, research
+interests and experience</li>
+<li>Notable Achievements</li>
+<li>Briefly describe the research work you have completed</li>
+</ul></li>
+</ul>
+<h1 id="選項目-9.18">選項目 9.18</h1>
+]]></content>
+      <categories>
+        <category>实习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>MachineLearning</title>
     <url>/2023/09/17/MachineLearning/</url>
     <content><![CDATA[<p><a
@@ -2226,31 +2473,75 @@ href="https://github.com/ws13685555932/machine_learning_derivation">板書</a></
       </categories>
   </entry>
   <entry>
-    <title>Mitacs申請</title>
-    <url>/2023/09/14/Mitacs%E7%94%B3%E8%AF%B7/</url>
-    <content><![CDATA[<p>2024年加拿大Mitacs本科生實習合作獎學金遴選<a
-href="https://www.csc.edu.cn/chuguo/s/2669">通知</a></p>
+    <title>ODE應用</title>
+    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
+<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
+class="math inline">\(\beta\)</span>.</p>
 <span id="more"></span>
-<p><a
-href="https://www.mitacs.ca/en/programs/globalink/globalink-research-internship">加方申請portal</a></p>
-<p><a href="http://apply.csc.edu.cn">國家公派留學信息管理平台</a></p>
-<h1 id="三件事-9.14">三件事 9.14</h1>
-<ul class="task-list">
-<li><label><input type="checkbox" checked="" />打印成績單</label></li>
-<li><label><input type="checkbox"
-checked="" />寫推薦信，找倪簽字</label></li>
-<li><label><input type="checkbox" checked="" />寫三個小作文</label>
-<ul>
-<li>General description of skills, background knowledge, research
-interests and experience</li>
-<li>Notable Achievements</li>
-<li>Briefly describe the research work you have completed</li>
-</ul></li>
-</ul>
-<h1 id="選項目-9.18">選項目 9.18</h1>
+<p><img data-src="1331.png" width=300px></p>
+<p><span class="math display">\[
+\tan \beta=r\frac{d\theta}{dr}
+\]</span></p>
+<p><em>Proof</em>: <a
+href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
+here</a></p>
+<h2 id="trajectories">Trajectories</h2>
+<p>原则：<span class="math inline">\(末-初\)</span></p>
+<p><img data-src="/download/141.jpg" width=300px></p>
+<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
+\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
+\beta=\frac{m_1-m_2}{1+m_1m_2}
+\]</span></p>
+<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
+<span class="math display">\[
+y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
+\]</span></p>
+<ol start="2" type="1">
+<li>Polar coordinates</li>
+</ol>
+<p><img data-src="/download/143.jpg" width=300px></p>
+<p><span class="math display">\[
+\phi_1=\phi_2+\frac{\pi}{2}
+\]</span> <span class="math display">\[
+\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
+\]</span> <span class="math display">\[
+\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
+\]</span></p>
+<h1 id="實際問題">實際問題</h1>
+<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
+<p><strong>1. Dilution and Accretion</strong></p>
+<p>稀释和浓缩盐水，关键是设<span
+class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
+class="math inline">\(\Delta x\)</span></p>
+<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
+<p><span class="math display">\[
+\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
+x}{\Delta t}\approx 6-0.03x
+\]</span></p>
+<p>当流入流出速度不一致时，溶液体积变成<span
+class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
+<p><strong>2. Interest</strong></p>
+<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
+P=Ae^{rt}
+\]</span>
+跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
+<span class="math display">\[
+\frac{dP}{dt}=rAe^{rt}=rP
+\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
+\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
+\]</span></p>
+<p><strong>3. Temperature</strong> <span class="math display">\[
+\frac{dT_B}{dt}=-k(T_B-T_M)
+\]</span></p>
+<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
+class="math display">\[
+\frac{dx}{dt}=kx
+\]</span></p>
 ]]></content>
       <categories>
-        <category>实习</category>
+        <category>课程</category>
+        <category>ODE</category>
       </categories>
   </entry>
   <entry>
@@ -2428,78 +2719,6 @@ class="math inline">\(x=x(r,s,\cdots)\)</span>,<span
 class="math inline">\(y=y(r,s,\cdots)\)</span> <span
 class="math display">\[dz=\frac{\partial f(x,y)}{\partial x}\Delta
 x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
-]]></content>
-      <categories>
-        <category>课程</category>
-        <category>ODE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ODE應用</title>
-    <url>/2023/08/08/ODE%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="幾何應用">幾何應用</h1>
-<p>极坐标下<code>tangent line</code>和<code>radius line</code>的夹角<span
-class="math inline">\(\beta\)</span>.</p>
-<span id="more"></span>
-<p><img data-src="1331.png" width=300px></p>
-<p><span class="math display">\[
-\tan \beta=r\frac{d\theta}{dr}
-\]</span></p>
-<p><em>Proof</em>: <a
-href="https://www.math.usm.edu/lambers/cos702/cos702_files/docs/annote_figs/midsolve11.pdf">click
-here</a></p>
-<h2 id="trajectories">Trajectories</h2>
-<p>原则：<span class="math inline">\(末-初\)</span></p>
-<p><img data-src="/download/141.jpg" width=300px></p>
-<p><strong>Isogonal Trajectories</strong> <span class="math display">\[
-\tan \alpha=\frac{m_2-m_1}{1+m_1m_2},\quad \tan
-\beta=\frac{m_1-m_2}{1+m_1m_2}
-\]</span></p>
-<p><strong>Orthogonal Trajectories</strong> 1. Rectangular coordinates
-<span class="math display">\[
-y_1&#39;y&#39;=-1,\quad y&#39;=-\frac{1}{y_1&#39;}
-\]</span></p>
-<ol start="2" type="1">
-<li>Polar coordinates</li>
-</ol>
-<p><img data-src="/download/143.jpg" width=300px></p>
-<p><span class="math display">\[
-\phi_1=\phi_2+\frac{\pi}{2}
-\]</span> <span class="math display">\[
-\tan \phi_1=\tan(\phi_2+\frac{\pi}{2})=-\frac{1}{\tan \phi_2}
-\]</span> <span class="math display">\[
-\tan \phi_2=r\frac{d\theta}{dr},\quad \tan\phi_1=-\frac{dr}{rd\theta}
-\]</span></p>
-<h1 id="實際問題">實際問題</h1>
-<p>原则：两边同时定积分，下面是初值，上面是自变量</p>
-<p><strong>1. Dilution and Accretion</strong></p>
-<p>稀释和浓缩盐水，关键是设<span
-class="math inline">\(x=\text{溶液中盐在时刻t的质量}\)</span>，表示出<span
-class="math inline">\(\Delta x\)</span></p>
-<p>比如每单位时间流入浓度为6单位盐的盐水，流出3单位盐水</p>
-<p><span class="math display">\[
-\Delta x\approx 6\Delta t-\frac{x}{100}3\Delta t,\quad \frac{\Delta
-x}{\Delta t}\approx 6-0.03x
-\]</span></p>
-<p>当流入流出速度不一致时，溶液体积变成<span
-class="math inline">\(100\pm 2t\)</span>（差值为2的情况）</p>
-<p><strong>2. Interest</strong></p>
-<p>连续型的永续年金公式已经很熟悉了 <span class="math display">\[
-P=Ae^{rt}
-\]</span>
-跟以往不同，这次不是求解微分方程，而是倒过来把公式转化成微分方程（当然，更简单了）
-<span class="math display">\[
-\frac{dP}{dt}=rAe^{rt}=rP
-\]</span> 例. ¥1多久才能翻倍？ <span class="math display">\[
-\int_{P=1}^2\frac{dP}{P}=r\int_{t=0}^tdt
-\]</span></p>
-<p><strong>3. Temperature</strong> <span class="math display">\[
-\frac{dT_B}{dt}=-k(T_B-T_M)
-\]</span></p>
-<p><strong>4. Decomposition</strong> 像放射性元素的分解 <span
-class="math display">\[
-\frac{dx}{dt}=kx
-\]</span></p>
 ]]></content>
       <categories>
         <category>课程</category>
@@ -2969,6 +3188,141 @@ href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a>
       </categories>
   </entry>
   <entry>
+    <title>談談我對王者榮耀的理解</title>
+    <url>/2023/08/24/Wangzhe/</url>
+    <content><![CDATA[<p>王者榮耀玩到今天，也算是有些成熟的理解了。然而，不說它商業模式怎樣，騰訊多會賺錢，但從玩家角度，大部分人就沒理解。</p>
+<span id="more"></span>
+<p>首先，這不是一款團隊遊戲。雖然是5v5moba，實際上是1v9。沒錯，這是個人賽，隊友都是你的對手。從經濟學的角度，資源是有限的。推廣到任何場合都是這樣：在學校裡老師只有那麼些，老師不照顧你就照顧他；職場上晉升名額就這麼些，你不上位就是他上位。王者裡也是一樣，你不拿人頭就是隊友拿，你不死隊友就死，這種情況經常出現。</p>
+<p>但是隊友比名義上的對手更可惡：你殺不死他們。想讓他們死往往費盡周折，要麼剛開完團立馬往回跑，要麼關鍵時候不開技能把他們賣了，但畢竟是借刀殺人，不容易也不爽快。再有一點，眾所周知國人的素質之差令人髮指，素質差的往往是底部工薪階層，這些人沒錢出去玩，所以通常的娛樂項目就是宅在家裡看劇玩手機。他們有時也會花大筆錢買英雄買皮膚，但這點錢可能普通人出去玩一天就花完了還不夠，這是後話。我身邊的朋友都開始卸載王者，基本上沒什麼人玩了，因此能推斷大部分玩王者的人都素質差。從博弈論的角度來說，匹配到的人大概率只遇見一次，是單次博弈，那我一定要最大化自己的utility，管別人死活。</p>
+<p>那我們先定義下玩王者的utility function，即<span
+class="math inline">\(u(x)\)</span>。為了簡化，假設<span
+class="math inline">\(u&#39;(x)&gt;0\)</span>，那麼<span
+class="math inline">\(x\)</span>是什麼？我分析了下自己的體驗，有一下幾個指標</p>
+<ul>
+<li><span class="math inline">\(z_1:\)</span> 個人擊殺（殺人）</li>
+<li><span class="math inline">\(z_2:\)</span> 個人死亡（保命）</li>
+<li><span class="math inline">\(z_3:\)</span> 個人輔助（混數據）</li>
+<li><span class="math inline">\(z_4:\)</span> 隊友<span
+class="math inline">\(k\)</span>擊殺 <span
+class="math inline">\((k=1,2,3,4)\)</span>（噁心隊友）</li>
+</ul>
+<p><span class="math display">\[
+u(x)=u(x_1,\cdots,x_4)
+\]</span></p>
+<p>其中<span class="math inline">\(x_i=x_i(z_i)\quad
+i=1,\cdots,5\)</span></p>
+<p>大致設計了下函數，表達式和圖像如下</p>
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;x_1=\log(x+1)\\
+    &amp;x_2=1-e^{z_2}\\
+    &amp;x_3=\log_2(x+2.5)-1.3\\
+    &amp;x_4=\begin{cases}
+        1 &amp; z_1\geqslant \bar{z}_k\\
+        0 &amp; z_1&lt; \bar{z}_k
+    \end{cases}
+\end{aligned}
+\]</span></p>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="x1.png" width="260" alt="x1">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="x2.png" width="260" alt="x2">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="x3.png" width="260" alt="x3">
+</div>
+<div style="float:none;clear:both;">
+<p>自己給五個指標的重要性打分</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span
+class="math inline">\(z_1\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(z_2\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(z_3\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(z_4\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(w^a\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(w^g\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(w^e\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(w^c\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(z_1\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1/3</td>
+<td style="text-align: center;">0.1603</td>
+<td style="text-align: center;">0.1489</td>
+<td style="text-align: center;">0.1553</td>
+<td style="text-align: center;">0.1548</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(z_2\)</span></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.4965</td>
+<td style="text-align: center;">0.5071</td>
+<td style="text-align: center;">0.4976</td>
+<td style="text-align: center;">0.5004</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(z_3\)</span></td>
+<td style="text-align: center;">1/5</td>
+<td style="text-align: center;">1/6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1/4</td>
+<td style="text-align: center;">0.0571</td>
+<td style="text-align: center;">0.0539</td>
+<td style="text-align: center;">0.0548</td>
+<td style="text-align: center;">0.0553</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(z_4\)</span></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.2861</td>
+<td style="text-align: center;">0.2901</td>
+<td style="text-align: center;">0.2923</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(CR=0.073&lt;0.1\)</span>
+通過一致性檢驗</p>
+</div>
+<p><span class="math inline">\(w^a, w^g,
+w^e\)</span>分別表示用算數平均，幾何平均，特徵值法算權重的結果，<span
+class="math inline">\(w^c\)</span>為三者綜合。四捨五入，權重為</p>
+<p><span class="math display">\[
+w=[0.15,0.5,0.06,0.29]
+\]</span></p>
+<p>保命比較重要，莊周最合適，因為場上最怕被控，一旦被控就可能被秒。莊周被動和大招都是解控，保命能力一流。為了照顧同樣比較重要的“噁心隊友”，我必須多k頭或把對面放跑。如果對面被殺了，必須是我殺的，否則寧願讓對面逃掉，所以帶斬殺。</p>
+<p><img data-src="1.jpg" width=700px></p>
+<p><img data-src="2.jpg" width=700px></p>
+<p>我對王者最本質的理解就是：它是款遊戲。不管再怎麼刺激，僅僅是個遊戲，手機一關，跟現實生活一點關聯也沒有。再問一句，為什麼玩遊戲？就是放鬆、開心呀。如果為了贏而贏，為了上分把自己弄的精疲力盡、氣急敗壞，何必玩呢？所以輸贏無所謂，自己開心最重要。即便隊伍輸了，我也可以贏了。而且這個遊戲上我見太多白痴，就龐大的基數和小樣本抽樣可以近似估計和我一起玩的都是白痴。那就不用客氣了，反正我不噁心他們就會被他們噁心，這也是個博弈。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>周游LA、SD</title>
     <url>/2023/07/29/TripCA/</url>
     <content><![CDATA[<p>飞机和住宿不贵，但在LA叫uber应该会花很多钱，预算100刀。在SD时间会比较充裕，多走走路。</p>
@@ -3150,139 +3504,30 @@ https://www.guruin.com/articles/855</p>
       </categories>
   </entry>
   <entry>
-    <title>談談我對王者榮耀的理解</title>
-    <url>/2023/08/24/Wangzhe/</url>
-    <content><![CDATA[<p>王者榮耀玩到今天，也算是有些成熟的理解了。然而，不說它商業模式怎樣，騰訊多會賺錢，但從玩家角度，大部分人就沒理解。</p>
+    <title>hexo-next修改文字選中顏色</title>
+    <url>/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/</url>
+    <content><![CDATA[<p>最新的hexo取消了 <code>source/_custom/_custom.styl</code>
+文件，但在next主題的 <code>_config.yml</code> 裡保留了<a
+href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義功能</a>。</p>
 <span id="more"></span>
-<p>首先，這不是一款團隊遊戲。雖然是5v5moba，實際上是1v9。沒錯，這是個人賽，隊友都是你的對手。從經濟學的角度，資源是有限的。推廣到任何場合都是這樣：在學校裡老師只有那麼些，老師不照顧你就照顧他；職場上晉升名額就這麼些，你不上位就是他上位。王者裡也是一樣，你不拿人頭就是隊友拿，你不死隊友就死，這種情況經常出現。</p>
-<p>但是隊友比名義上的對手更可惡：你殺不死他們。想讓他們死往往費盡周折，要麼剛開完團立馬往回跑，要麼關鍵時候不開技能把他們賣了，但畢竟是借刀殺人，不容易也不爽快。再有一點，眾所周知國人的素質之差令人髮指，素質差的往往是底部工薪階層，這些人沒錢出去玩，所以通常的娛樂項目就是宅在家裡看劇玩手機。他們有時也會花大筆錢買英雄買皮膚，但這點錢可能普通人出去玩一天就花完了還不夠，這是後話。我身邊的朋友都開始卸載王者，基本上沒什麼人玩了，因此能推斷大部分玩王者的人都素質差。從博弈論的角度來說，匹配到的人大概率只遇見一次，是單次博弈，那我一定要最大化自己的utility，管別人死活。</p>
-<p>那我們先定義下玩王者的utility function，即<span
-class="math inline">\(u(x)\)</span>。為了簡化，假設<span
-class="math inline">\(u&#39;(x)&gt;0\)</span>，那麼<span
-class="math inline">\(x\)</span>是什麼？我分析了下自己的體驗，有一下幾個指標</p>
-<ul>
-<li><span class="math inline">\(z_1:\)</span> 個人擊殺（殺人）</li>
-<li><span class="math inline">\(z_2:\)</span> 個人死亡（保命）</li>
-<li><span class="math inline">\(z_3:\)</span> 個人輔助（混數據）</li>
-<li><span class="math inline">\(z_4:\)</span> 隊友<span
-class="math inline">\(k\)</span>擊殺 <span
-class="math inline">\((k=1,2,3,4)\)</span>（噁心隊友）</li>
-</ul>
-<p><span class="math display">\[
-u(x)=u(x_1,\cdots,x_4)
-\]</span></p>
-<p>其中<span class="math inline">\(x_i=x_i(z_i)\quad
-i=1,\cdots,5\)</span></p>
-<p>大致設計了下函數，表達式和圖像如下</p>
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;x_1=\log(x+1)\\
-    &amp;x_2=1-e^{z_2}\\
-    &amp;x_3=\log_2(x+2.5)-1.3\\
-    &amp;x_4=\begin{cases}
-        1 &amp; z_1\geqslant \bar{z}_k\\
-        0 &amp; z_1&lt; \bar{z}_k
-    \end{cases}
-\end{aligned}
-\]</span></p>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="x1.png" width="260" alt="x1">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="x2.png" width="260" alt="x2">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="x3.png" width="260" alt="x3">
-</div>
-<div style="float:none;clear:both;">
-<p>自己給五個指標的重要性打分</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span
-class="math inline">\(z_1\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(z_2\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(z_3\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(z_4\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(w^a\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(w^g\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(w^e\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(w^c\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(z_1\)</span></td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1/4</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">1/3</td>
-<td style="text-align: center;">0.1603</td>
-<td style="text-align: center;">0.1489</td>
-<td style="text-align: center;">0.1553</td>
-<td style="text-align: center;">0.1548</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(z_2\)</span></td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0.4965</td>
-<td style="text-align: center;">0.5071</td>
-<td style="text-align: center;">0.4976</td>
-<td style="text-align: center;">0.5004</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(z_3\)</span></td>
-<td style="text-align: center;">1/5</td>
-<td style="text-align: center;">1/6</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1/4</td>
-<td style="text-align: center;">0.0571</td>
-<td style="text-align: center;">0.0539</td>
-<td style="text-align: center;">0.0548</td>
-<td style="text-align: center;">0.0553</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(z_4\)</span></td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1/4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">0.2861</td>
-<td style="text-align: center;">0.2901</td>
-<td style="text-align: center;">0.2923</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(CR=0.073&lt;0.1\)</span>
-通過一致性檢驗</p>
-</div>
-<p><span class="math inline">\(w^a, w^g,
-w^e\)</span>分別表示用算數平均，幾何平均，特徵值法算權重的結果，<span
-class="math inline">\(w^c\)</span>為三者綜合。四捨五入，權重為</p>
-<p><span class="math display">\[
-w=[0.15,0.5,0.06,0.29]
-\]</span></p>
-<p>保命比較重要，莊周最合適，因為場上最怕被控，一旦被控就可能被秒。莊周被動和大招都是解控，保命能力一流。為了照顧同樣比較重要的“噁心隊友”，我必須多k頭或把對面放跑。如果對面被殺了，必須是我殺的，否則寧願讓對面逃掉，所以帶斬殺。</p>
-<p><img data-src="1.jpg" width=700px></p>
-<p><img data-src="2.jpg" width=700px></p>
-<p>我對王者最本質的理解就是：它是款遊戲。不管再怎麼刺激，僅僅是個遊戲，手機一關，跟現實生活一點關聯也沒有。再問一句，為什麼玩遊戲？就是放鬆、開心呀。如果為了贏而贏，為了上分把自己弄的精疲力盡、氣急敗壞，何必玩呢？所以輸贏無所謂，自己開心最重要。即便隊伍輸了，我也可以贏了。而且這個遊戲上我見太多白痴，就龐大的基數和小樣本抽樣可以近似估計和我一起玩的都是白痴。那就不用客氣了，反正我不噁心他們就會被他們噁心，這也是個博弈。</p>
+<p>首先在hexo的根目錄下（注意不是next主題的根目錄）打開
+<code>source</code> 文件夾，新建 <code>_data</code> 文件夾並放入
+<code>styles.styl</code> 文件。複制下面這段代碼粘貼到
+<code>source/_data/styles.styl</code> 中（<a
+href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123; </span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0593d3</span>; </span><br><span class="line">    <span class="attribute">border-bottom</span>: none; </span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>; </span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123; </span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fc6423</span>; </span><br><span class="line">        <span class="attribute">border-bottom</span>: none; </span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然後打開next的 <code>_config.yml</code>，把 <code>styles.styl</code>
+取消注釋</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+<p>另外，主題的文字顏色、上下框顏色等也可以調，在next根目錄中由
+<code>source/css/_schemes/Mist/index.styl</code>
+（我用的是mist），在最頂上加入下面的代碼即可</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--menu-item-bg-color</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">  <span class="attr">--btn-default-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--btn-default-hover-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--content-bg-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--brand-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--badge-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
 ]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>如何在macOS環境下配置hexo</title>
@@ -3367,32 +3612,6 @@ OS环境下使用Hexo搭建个人博客</a></p>
 <ol start="2" type="1">
 <li><a href="https://hexo.io/zh-cn/docs/index.html">Hexo文档</a></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo-next修改文字選中顏色</title>
-    <url>/2023/08/27/hexo-next%E4%BF%AE%E6%94%B9%E6%96%87%E5%AD%97%E9%81%B8%E4%B8%AD%E9%A1%8F%E8%89%B2/</url>
-    <content><![CDATA[<p>最新的hexo取消了 <code>source/_custom/_custom.styl</code>
-文件，但在next主題的 <code>_config.yml</code> 裡保留了<a
-href="https://theme-next.js.org/docs/advanced-settings/custom-files">自定義功能</a>。</p>
-<span id="more"></span>
-<p>首先在hexo的根目錄下（注意不是next主題的根目錄）打開
-<code>source</code> 文件夾，新建 <code>_data</code> 文件夾並放入
-<code>styles.styl</code> 文件。複制下面這段代碼粘貼到
-<code>source/_data/styles.styl</code> 中（<a
-href="https://www.jianshu.com/p/2a8d399f1266">代碼來源</a>）</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章内链接文本样式 </span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> <span class="selector-tag">a</span>&#123; </span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0593d3</span>; </span><br><span class="line">    <span class="attribute">border-bottom</span>: none; </span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>; </span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123; </span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fc6423</span>; </span><br><span class="line">        <span class="attribute">border-bottom</span>: none; </span><br><span class="line">        <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line">::-moz-selection &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4B0082</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然後打開next的 <code>_config.yml</code>，把 <code>styles.styl</code>
-取消注釋</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyStart: source/_data/post-body-start.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-<p>另外，主題的文字顏色、上下框顏色等也可以調，在next根目錄中由
-<code>source/css/_schemes/Mist/index.styl</code>
-（我用的是mist），在最頂上加入下面的代碼即可</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--menu-item-bg-color</span>: <span class="number">#DAD5F4</span>;</span><br><span class="line">  <span class="attr">--btn-default-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--btn-default-hover-border-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--content-bg-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--brand-color</span>: <span class="number">#4B0082</span>;</span><br><span class="line">  <span class="attr">--badge-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>今天終於把我的blog調教的非常滿意，雖然自定義主頁還是沒法實現（index_generator不起作用），但無傷大雅。取消掉motion之後頁面切換快了很多，省了不少時間，index沒法自定義也不影響。</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -3529,33 +3748,6 @@ experience。之前因为知道了中介的套路所以没怎么焦虑，现在�
       </categories>
   </entry>
   <entry>
-    <title>半夜的AI焦慮</title>
-    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
-    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
-<span id="more"></span>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="1.jpg" width="260" alt="x1">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="2.jpg" width="260" alt="x2">
-</div>
-<div style="float:left;border:solid 1px 000;margin:2px;">
-<img data-src="3.jpg" width="260" alt="x3">
-</div>
-<div style="float:none;clear:both;">
-<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
-</div>
-<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
-<img data-src="4.jpg" width=650px">
-<center>
-我的話，會選右邊囉
-</center>
-]]></content>
-      <categories>
-        <category>生活随笔</category>
-      </categories>
-  </entry>
-  <entry>
     <title>不必再等</title>
     <url>/2023/07/29/%E4%B8%8D%E5%BF%85%E5%86%8D%E7%AD%89/</url>
     <content><![CDATA[<p>考试周这四天，一天速成一门，有顺利的有不顺的，但是，以完成这门考试为最低目标，确实能激发出很大潜力。</p>
@@ -3592,50 +3784,30 @@ class="math inline">\(\Rightarrow\)</span> <a href="">不必再等</a></p>
       </categories>
   </entry>
   <entry>
-    <title>解決hexo本地和部署不一致問題</title>
-    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
+    <title>半夜的AI焦慮</title>
+    <url>/2023/08/26/%E5%8D%8A%E5%A4%9C%E7%9A%84AI%E7%84%A6%E6%85%AE/</url>
+    <content><![CDATA[<p>剛剛在擔心統計會不會被AI取代的事，就上知乎搜了下</p>
 <span id="more"></span>
-<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
-<figure>
-<img data-src="branch.png" alt="branch" />
-<figcaption aria-hidden="true">branch</figcaption>
-</figure>
-<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
-<figure>
-<img data-src="new.png" alt="new" />
-<figcaption aria-hidden="true">new</figcaption>
-</figure>
-<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
-<code>main</code>。</p>
-<figure>
-<img data-src="default.png" alt="default" />
-<figcaption aria-hidden="true">default</figcaption>
-</figure>
-<p>接着在 Settings 的 Default branch 一栏点击<span
-class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
-<code>main</code>，点击 Update ，点击红色的 I understand。</p>
-<figure>
-<img data-src="pages.png" alt="pages" />
-<figcaption aria-hidden="true">pages</figcaption>
-</figure>
-<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
-main，保存。</p>
-<p>最后记得在博客文件夹的 <code>_config.yml</code>
-内将deploy部分的branch改为<code>main</code>。</p>
-<p>终端输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可实现部署和本地一致。</p>
-<p><strong>参考资料</strong></p>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
-<li><p><a
-href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
-</ol>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="1.jpg" width="260" alt="x1">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="2.jpg" width="260" alt="x2">
+</div>
+<div style="float:left;border:solid 1px 000;margin:2px;">
+<img data-src="3.jpg" width="260" alt="x3">
+</div>
+<div style="float:none;clear:both;">
+<p>在我看到這些提問後，反而不太關心答案了。為什麼要這麼多“一定”？還記得我小學的時候看老師的紅筆總是滿墨水的，我就問這筆是永遠可以的嘛。滄元圖裡的原初之石，有不受環境影響、始終如一的性質。電影Elemental裡的vivisteria花，可以在任何環境生存。每個人都想找“一定”、“絕對”。但是拜託，經典力學都被推翻了，還有什麼是不能被變的。</p>
+</div>
+<p>回到這個問題上來。首先，沒有人知道未來是什麼樣，都在猜，這個問題沒有意義。再來，聽別人的安排走完一生豈不是很沒意思。高考完聽別人說這個專業怎樣那個怎樣，到處打聽，然後上大學，一待就是四年。出來接著讀研，可能看看知乎回答，選一些“不會被取代”的方向。人們把自己困在信息茧房裡，一直接收別人的觀點，釘死一個方向努力，其實就是巨嬰式思維，不會時不時停下來看看四周，思考自己在哪。這就好比旅遊，有的人只是直達某個打卡點，就走了；有的人隨機漫步，會見到更多有趣的事。人生不就是場旅行，如果走成折線該多沒意思，充滿不確定性，何嘗不是種刺激？</p>
+<img data-src="4.jpg" width=650px">
+<center>
+我的話，會選右邊囉
+</center>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -3800,222 +3972,50 @@ Yin</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>Morera定理</title>
-    <url>/2023/08/22/C_Morera%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<p>柯西定理的逆敘述</p>
+    <title>解決hexo本地和部署不一致問題</title>
+    <url>/2023/07/31/%E8%A7%A3%E5%86%B3hexo%E6%9C%AC%E5%9C%B0%E5%92%8C%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这个问题困扰我很久，为什么<code>hexo s</code>跟<code>hexo d</code>结果不一样？起初我以为是deploy要慢一点，但第二天早上醒来还是原样。</p>
 <span id="more"></span>
-<p><u><strong>Theo</strong></u> (Morera)</p>
-<p><span class="math inline">\(D\subset \mathbb{C}\)</span>
-simply-connected domain. Let <span class="math inline">\(f\in
-C(D)\)</span>, if <span class="math inline">\(\int_{\partial
-\triangle}f(z)dz=0\)</span>, for any triangle <span
-class="math inline">\(\triangle\)</span> in <span
-class="math inline">\(D\)</span>, then <span class="math inline">\(f\in
-O(D)\)</span> <span class="math inline">\(\blacklozenge\)</span></p>
-<p><span class="math display">\[
-連續 + \int_{\partial \triangle}f(z)dz=0 \Rightarrow 解析函數
-\]</span></p>
-<p><span class="math inline">\(\triangle\)</span>: 對應simple closed
-curve</p>
-<p>pf.</p>
-<p>Define <span class="math display">\[
-F(z)=\int_{\Gamma} f(z)dz
-\]</span></p>
-<p>well-defined: <span class="math inline">\(\Gamma-\Gamma_1=0
-\Rightarrow \Gamma=\Gamma_1\)</span>（轉一圈為0）</p>
-<p><img data-src="4C_1.png" width=400px></p>
-<p><span class="math display">\[
-F&#39;(z)=f(z), \therefore F\in O(D)
-\]</span></p>
-<p>解析函數在每個點附近都能展開成冪級數，就能微分無窮多次</p>
-<p><span class="math display">\[
-\therefore f\in O(D) \ \blacksquare.
-\]</span></p>
-<hr />
-<p>例題 <span class="math inline">\(D\subset \mathbb{C}\)</span>, <span
-class="math inline">\(I\subset D\)</span> (closed interval). <span
-class="math inline">\(f\in C(D)\)</span></p>
-<p>Assume <span class="math inline">\(f\in O(D/I)\)</span>,
-挖掉I後D還是開集</p>
-<p>Is <span class="math inline">\(f\in O(D)\)</span>?</p>
-<p>手上只有Morera</p>
-<p><img data-src="4C_2.png" alt="逼近" width=500px></p>
-<hr />
-<p><u><strong>Theo</strong></u> (Schwarz reflection principle)</p>
-<p>Let <span class="math inline">\(D\subset \Pi_+\)</span> (open upper
-half space), s.t. <span class="math inline">\(\partial D\cap
-\{x-axis\}=I\)</span> closed interval.</p>
-<p>Let <span class="math inline">\(D^*=\{\bar{z}|z\in D\}\)</span></p>
-<p>let <span class="math inline">\(\Omega=D\cup \mathring{I}\cup
-D^*\)</span>, <span class="math inline">\(\mathring{I}\)</span> 是 I
-的interior</p>
-<p>If <span class="math inline">\(f\in O(D)\cap C(D\cup
-\mathring{I})\)</span>, and <span
-class="math inline">\(f|_{\mathring{I}}\)</span> is real</p>
-<p>set <span class="math inline">\(g=\Omega\rightarrow
-\mathbb{C}\)</span></p>
-<p><img data-src="4D_1.png" width=400px></p>
-<p><span class="math display">\[
-g(z)=\begin{cases}
-    f(z) &amp;z\in D\\
-    f(z) &amp;z\in \mathring{I}\\
-    \bar{f}(\bar{z})&amp; z\in D^*
-\end{cases}
-\]</span></p>
-<p>Then <span class="math inline">\(g\in O(\Omega)\)</span>. <span
-class="math inline">\(\blacklozenge\)</span></p>
+<p>后来找到原因。点进网站对应的Github界面，可以看到默认的branch是master。改成别的分支就能解决问题。</p>
+<figure>
+<img data-src="branch.png" alt="branch" />
+<figcaption aria-hidden="true">branch</figcaption>
+</figure>
+<p>点击分支，点击 View all branches，点击右上角的 New branch。</p>
+<figure>
+<img data-src="new.png" alt="new" />
+<figcaption aria-hidden="true">new</figcaption>
+</figure>
+<p>新建之后返回刚才的界面，并将 <code>master</code> 改成刚建的分支
+<code>main</code>。</p>
+<figure>
+<img data-src="default.png" alt="default" />
+<figcaption aria-hidden="true">default</figcaption>
+</figure>
+<p>接着在 Settings 的 Default branch 一栏点击<span
+class="math inline">\(\rightleftarrows\)</span>，把默认分支改为
+<code>main</code>，点击 Update ，点击红色的 I understand。</p>
+<figure>
+<img data-src="pages.png" alt="pages" />
+<figcaption aria-hidden="true">pages</figcaption>
+</figure>
+<p>最后再找到左边的导航栏点击Pages，在Branch栏下，同样把 master 改为
+main，保存。</p>
+<p>最后记得在博客文件夹的 <code>_config.yml</code>
+内将deploy部分的branch改为<code>main</code>。</p>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>即可实现部署和本地一致。</p>
+<p><strong>参考资料</strong></p>
 <ol type="1">
-<li>考慮連續性</li>
+<li><p><a
+href="https://blog.csdn.net/GAI159/article/details/105128186">解决hexo本地与部署不一致问题</a></p></li>
+<li><p><a
+href="https://www.zhihu.com/question/319817323/answer/649343660">知乎-嗜睡狂魔</a></p></li>
 </ol>
-<p><span class="math inline">\(D,D^*\)</span>上都連續，在<span
-class="math inline">\(I\)</span>上</p>
-<p><span class="math display">\[
-f(z)=u(z)+iv(z)\quad z\rightarrow x \Rightarrow f(x)=u(x)
-\]</span></p>
-<p><span class="math display">\[
-f(w)=u(\bar{w})-iv(\bar{w})\quad w\rightarrow x, \bar{w}\rightarrow x
-\Rightarrow f(x)=u(x)
-\]</span></p>
-<p><img data-src="4D_2.jpeg"></p>
 ]]></content>
       <categories>
-        <category>课程</category>
-        <category>复变函数</category>
-      </categories>
-      <tags>
-        <tag>Morera定理</tag>
-        <tag>Schwarz反射定理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ML面试速成</title>
-    <url>/2023/09/24/ML%E9%9D%A2%E8%AF%95%E9%80%9F%E6%88%90/</url>
-    <content><![CDATA[<p>准备Wiserclub机器学习组的面试，绰绰有余</p>
-<span id="more"></span>
-<h1 id="決策樹">決策樹</h1>
-<h2 id="分類">分類</h2>
-<p>用Entropy或Gini index衡量不確定性（impurity）</p>
-<ol type="1">
-<li>信息增益適合分類多，每類少 <span
-class="math inline">\(\Rightarrow\)</span> <strong>ID3</strong></li>
-</ol>
-<p><span class="math display">\[
-\text{Entropy}=\sum_i-p_i\log(p_i)
-\]</span></p>
-<p><span class="math display">\[
-\max IG = E(parent)-\sum_i w_iE(child_i)
-\]</span></p>
-<p>越大越好</p>
-<ol start="2" type="1">
-<li>信息增益比 <span class="math inline">\(\Rightarrow\)</span>
-<strong>C4.5</strong></li>
-</ol>
-<p>有時候雖然split沒什麼用，因為他多分出好多小分支，purity雖然上去了，但如果每個值都不同然後你把每個值分成一類，不也沒什麼用</p>
-<p><span class="math display">\[
-II = -\sum_iw_i\log(w_i)
-\]</span></p>
-<p><span class="math display">\[
-GR = \frac{IG}{II}
-\]</span></p>
-<p>越大越好</p>
-<ol start="3" type="1">
-<li>Gini index適合分類少，每類數量多，優點是計算快 <span
-class="math inline">\(\Rightarrow\)</span> <strong>CART</strong></li>
-</ol>
-<p><span class="math display">\[
-Gini(D)=1-\sum_{i=1}^Cp_i^2
-\]</span></p>
-<p>越小越好</p>
-<h2 id="回歸">回歸</h2>
-<p>用Variance衡量不確定性</p>
-<p><span class="math display">\[
-\text{Var Reduction} = Var(parent)-\sum_i w_iVar(child_i)
-\]</span></p>
-<h1 id="隨機森林">隨機森林</h1>
-<p>決策樹對數據太敏感了</p>
-<p><img data-src="randomforest.png"></p>
-<p>Bootstrap: 穩健，受原始數據集影響小</p>
-<p>Feature selection: 減弱樹之間的關聯性（數量最好<span
-class="math inline">\(\sqrt n / \log n\)</span>）</p>
-<h2 id="gbdt">GBDT</h2>
-<p>Gradient Boosting Decision Tree</p>
-<p>Boosting: <span class="math inline">\(A\Rightarrow B\Rightarrow
-C\Rightarrow \cdots\)</span></p>
-<p>Bagging, Stacking</p>
-<p><img data-src="gbdt.png"></p>
-<h2 id="xgboost">XGBoost</h2>
-<p><span class="math display">\[
-F=L(\text{Loss
-function})+\overbrace{\Omega(\text{Regularizer正則項})}^{懲罰葉節點過多}
-\]</span></p>
-<h1 id="神經網路">神經網路</h1>
-<h2 id="卷積-cnn">卷積 CNN</h2>
-<ol type="1">
-<li>卷積層：提取features</li>
-<li>池化層：降維（max pooling，average pooling）</li>
-<li>全連接層</li>
-</ol>
-<p><strong>Resnet(2015)</strong>引入殘差學習機制</p>
-<h2 id="循環-rnn">循環 RNN</h2>
-<p>處理序列，短期记忆</p>
-<p>問題：梯度消失</p>
-<p>解決梯度消失的方法</p>
-<p>用ReLU函數</p>
-<p><span class="math display">\[
-f(x)=\max (0,x)
-\]</span></p>
-<p><strong>Alexnet(2012)</strong>第一次用ReLU函數</p>
-<p>缺點：死亡ReLU <span class="math inline">\(\Rightarrow\)</span>
-改進：Leaky ReLU，PReLU，Swish（谷歌弄的）</p>
-<h2 id="lstm">LSTM</h2>
-<p>解決梯度消失，引入門控單元（遺忘、輸入、輸出），GRU（Gated Recurrent
-Unit）則用重置和更新兩個門</p>
-<blockquote>
-<p>有很多統計模型可以做出預測，但預測效果比較差強人意。而機器學習通常會犧牲可解釋性以獲得強大的預測能力。例如，從線性回歸到神經網絡，盡管解釋性變差，但是預測能力卻大幅提高。</p>
-</blockquote>
-<h2 id="圖-gnn">圖 GNN</h2>
-<p>有圖就可以用GNN</p>
-<h2 id="transformer">Transformer</h2>
-<p>RNN <span class="math inline">\(\rightarrow\)</span> Seq2Seq <span
-class="math inline">\(\xrightarrow{意義存儲有限}\)</span> attention
-<span class="math inline">\(\xrightarrow{太慢了}\)</span>
-self-attention</p>
-<p>Seq2Seq: encoder <span class="math inline">\(\Rightarrow\)</span>
-意義 <span class="math inline">\(\Rightarrow\)</span> decoder</p>
-<p>self-attention: 提取每個詞的意義再拼起來</p>
-<h2 id="bert">BERT</h2>
-<p>脫胎於Transformer的encoder，把詞語標示為向量</p>
-<p>訓練好後，只需要根據任務進行微調，省事</p>
-<h2 id="gpt">GPT</h2>
-<p>脫胎於Transformer的decoder</p>
-<p>zero shot learning 零樣本學習</p>
-<p>每一步輸出都基於上一步輸出的內容，“生成”很厲害</p>
-<h2 id="生成對抗-gan">生成對抗 GAN</h2>
-<p>生成、判別、對抗</p>
-<p>互相打架升級</p>
-<h2 id="bp算法">BP算法</h2>
-<p>back propagation</p>
-<p>網絡生成的結果和真實值對比，低了就提高權重，高了就降低權重</p>
-<p>很容易過擬合，解決辦法是分出一部分樣本作驗證集，如果訓練集的誤差在<span
-class="math inline">\(\downarrow\)</span>，而驗證集的誤差在<span
-class="math inline">\(\uparrow\)</span>，說明開始過擬合，及時停止訓練</p>
-<h1 id="分類算法">分類算法</h1>
-<h2 id="knn">KNN</h2>
-<p>K-nearest neighbors</p>
-<p>分類算法，物以類聚人以群分</p>
-<p>選擇K很重要，畫個圈，算歐式距離或曼哈頓距離</p>
-<h2 id="支持向量機-svm">支持向量機 SVM</h2>
-<p>classification margin，support vector</p>
-<p>怎麼找中間那條線，就是盡量讓支持向量離margin的距離遠</p>
-<p>有交叉：最小化距離</p>
-<p>Deep learning出現前最好用的分類算法是隨機森林和SVM</p>
-<h2 id="k-means">K-means</h2>
-<p>聚類算法</p>
-<p>不需要標籤信息，無監督學習</p>
-<p>解釋性好，但準確率不如監督學習，對K值（分成幾類）選擇也敏感</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
+        <category>Hexo</category>
       </categories>
   </entry>
 </search>
