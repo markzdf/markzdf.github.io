@@ -1,24 +1,37 @@
-
 .book {
-    display: inline-block;
-    margin: 20px;
-    position: relative;
-    transition: transform 0.5s, box-shadow 0.5s;
-  }
-  
-  .book:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .book img {
-    max-width: 100%;
-    height: auto;
-  }
-/*
-  .book-description {
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
 }
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.download-button {
+  display: block;
+  margin-top: 10px;
+  font-family: 'Menlo', sans-serif;  /* Match the font with the page */
+  background-color: rgb(63, 84, 111);
+  color: #ffffff;  
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: medium;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: rgb(24, 36, 77);  /* A slightly darker shade for hover */
+  color: #fff;  /* Turning the text white on hover for contrast */
+}
+
+
+/* 加按钮（html） */
+
+/* 
+<a href="/download/鲁切拉宫的秘密2023_9.pdf" class="download-button" style="color: #fff;">Download PDF</a>
 */
