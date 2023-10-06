@@ -4079,7 +4079,16 @@ Yin</a></p>
   <entry>
     <title>矩阵论</title>
     <url>/2023/10/05/23-10-5/</url>
-    <content><![CDATA[<table>
+    <content><![CDATA[<p>课程网址：<a
+href="https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/">MIT18.065</a></p>
+<p><font face="Courier New">Linear algebra concepts are key for
+understanding and creating machine learning algorithms, especially as
+applied to deep learning and neural networks. This course reviews linear
+algebra with applications to probability and statistics and
+optimization–and above all a full explanation of deep
+learning.</font></p>
+<span id="more"></span>
+<table>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -4104,6 +4113,28 @@ manual</a></p>
 ]]></content>
       <categories>
         <category>课程</category>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>公司金融</title>
+    <url>/2023/10/06/23-10-6/</url>
+    <content><![CDATA[<p>这里我想弄一个公司金融cheatsheet，整理一些公式，它们都很简单但很琐碎，很容易忘。不过这仅仅是辅助中的辅助，用途有限，平时还是要在平板上做笔记，也要适当做题</p>
+<span id="more"></span>
+<div style="text-align: left">
+<p><font face="Courier New"></p>
+<ol type="1">
+<li>Revenue - Expense = Income (2.2)</li>
+<li>Net working capital (NWC) = Current assets - Current liabilities
+(2.4)</li>
+<li></li>
+</ol>
+<p></font></p>
+</div>
+]]></content>
+      <categories>
+        <category>课程</category>
+        <category>其他</category>
       </categories>
   </entry>
 </search>
