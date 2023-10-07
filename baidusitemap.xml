@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://markzdf.github.io/2023/09/17/MachineLearning/</loc>
+    <lastmod>2023-10-07</lastmod>
+  </url>
+  <url>
     <loc>https://markzdf.github.io/2023/10/06/23-10-6/</loc>
     <lastmod>2023-10-06</lastmod>
   </url>
@@ -54,10 +58,6 @@
   </url>
   <url>
     <loc>https://markzdf.github.io/2023/09/24/ML%E9%9D%A2%E8%AF%95%E9%80%9F%E6%88%90/</loc>
-    <lastmod>2023-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://markzdf.github.io/2023/09/17/MachineLearning/</loc>
     <lastmod>2023-09-27</lastmod>
   </url>
   <url>
