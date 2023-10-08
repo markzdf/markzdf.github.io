@@ -2523,6 +2523,93 @@ interests and experience</li>
 </ul></li>
 </ul>
 <h1 id="選項目-9.18">選項目 9.18</h1>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 16%" />
+<col style="width: 21%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rank</th>
+<th>Province</th>
+<th>Professor Name</th>
+<th>Project Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Ontario</td>
+<td>Justin Wan</td>
+<td>Computational Finance using Machine Learning Techniques</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>British Columbia</td>
+<td>Christoph Ortner</td>
+<td>Mathematics of Scientific Machine Learning</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Ontario</td>
+<td>Apurva Narayan</td>
+<td>Quantum Machine Learning</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Nova Scotia</td>
+<td>Mohamed Drira</td>
+<td>Corporate Reporting Analytics: A Machine Learning Approach</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Ontario</td>
+<td>Apurva Narayan</td>
+<td>Empowering Machine Learning using Quantum Computing</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>British Columbia</td>
+<td>Xuekui Zhang</td>
+<td>Statistical methods for big data analysis and its application in
+medical research</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>British Columbia</td>
+<td>Xuekui Zhang</td>
+<td>Statistical methods and its application in diagnostic of virus
+infection</td>
+</tr>
+</tbody>
+</table>
+<h1 id="时间节点">时间节点</h1>
+<div style="text-align: left">
+<p><font face="Courier New"></p>
+<p>November 2023:</p>
+<p>Mitacs notifies each applicant of their eligibility and next
+steps</p>
+<p>--</p>
+<p>November 2023 to January 2024:</p>
+<p>Mitacs provides professors with a shortlist of student candidates for
+their project. Applicants may be interviewed by professors at any time
+of the matching process. Mitacs collects student and professor
+rankings.</p>
+<p>--</p>
+<p>Mid-February 2024:</p>
+<p>Selected applicants receive an internship offer by mid-February 2024
+and results are finalized</p>
+<p></font></p>
+</div>
+<p>注意：</p>
+<blockquote>
+<p><strong>Due to the high volume of applicants, Mitacs cannot offer
+direct feedback on your application. Please be aware that eligibility
+and interviews do not guarantee an internship offer.</strong></p>
+</blockquote>
+<p>因此面试通过确实不保证能进项目组，mitacs机制玄学</p>
 ]]></content>
       <categories>
         <category>申请</category>
@@ -4122,14 +4209,135 @@ manual</a></p>
 <span id="more"></span>
 <div style="text-align: left">
 <p><font face="Courier New"></p>
+<p>Chapter 2</p>
 <ol type="1">
 <li>Revenue - Expense = Income (2.2)</li>
 <li>Net working capital (NWC) = Current assets - Current liabilities
 (2.4)</li>
-<li></li>
+<li>Operating cash flow (OCF) = EBIT + Depreciation - Taxes (2.5)</li>
+<li>Capital spending 1 = Purchase of fixed assets - Sales of fixed
+assets</li>
+<li>Capital spending 2 = (End_fix - Beg_fix) + Depreciation</li>
+<li>CF of the firm = OCF - Capital spending - Additions to NWC</li>
 </ol>
+<p>Chapter 3</p>
 <p></font></p>
 </div>
+<ol type="1">
+<li>流动性ratio</li>
+</ol>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Current ratio}} = \frac{\text{Current
+assets}}{\text{Current liabilities}}\tag{3.2}
+\]</span></p>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Quick ratio}} = \frac{\text{Current
+assets}-\color{red}{\text{Inventory}}}{\text{Current liabilities}}
+\]</span></p>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Cash ratio}} =
+\frac{\color{red}{\text{Cash}}}{\text{Current liabilities}}
+\]</span></p>
+<ol start="2" type="1">
+<li>杠杆ratio</li>
+</ol>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Total debt ratio}} = \frac{\text{Total assets}-
+\text{Total equity}}{\text{Total assets}}\tag{3.2}
+\]</span></p>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Debt/Equity ratio}} = \frac{\text{Total
+debt}}{\text{Total equity}}
+\]</span></p>
+<p><span class="math display">\[
+\colorbox{yellow}{\text{Equity multiplier}} = \frac{\text{Total
+assets}}{\text{Total equity}}=1+\colorbox{pink}{\text{Debt/Equity
+ratio}}
+\]</span></p>
+<ol start="3" type="1">
+<li>偿债ratio</li>
+</ol>
+<p><span class="math display">\[
+\text{Times interest earned}=\frac{EBIT}{\text{Interest}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Cash
+coverage}=\frac{EBIT+\text{Depreciation}+\text{Amortiztion}}{\text{Interest}}
+\]</span></p>
+<ol start="4" type="1">
+<li>存货ratio</li>
+</ol>
+<p><span class="math display">\[
+\text{Inventory turnover}=\frac{\color{red}{COGS}}{\text{Inventory}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Days&#39; sales in inventory}=\frac{365}{\text{Inventory
+turnover}}
+\]</span></p>
+<ol start="5" type="1">
+<li>应收ratio</li>
+</ol>
+<p><span class="math display">\[
+\text{Receivables
+turnover}=\frac{\color{red}{\text{Sales}}}{\text{Accounts receivables}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Days&#39; sales in receivables}=\frac{365}{\text{Receivables
+turnover}}
+\]</span></p>
+<ol start="6" type="1">
+<li>总资产turnover</li>
+</ol>
+<p><span class="math display">\[
+\text{Total asset turnover}=\frac{\text{Sales}}{\text{Total assets}}
+\]</span></p>
+<ol start="7" type="1">
+<li>盈利能力measures</li>
+</ol>
+<p><span class="math display">\[
+\text{Profit margin}=\frac{\text{Net income}}{\text{Sales}}
+\]</span></p>
+<p><span class="math display">\[
+ROA=\frac{\text{Net income}}{\text{Total assets}}
+\]</span></p>
+<p><span class="math display">\[
+ROE=\frac{\text{Net income}}{\text{Total equity}}
+\]</span></p>
+<p><span class="math display">\[
+EBITDA \text{ margin} = \frac{EBITDA}{\text{Sales}}
+\]</span></p>
+<ol start="8" type="1">
+<li>市值measure</li>
+</ol>
+<p><span class="math display">\[
+\text{Market capitalization}=\$\text{price}\times \#\text{share}
+\]</span> <span class="math display">\[
+PE \text{ ratio}=\frac{\text{price/s}}{\text{earnings/s}}
+\]</span></p>
+<p><span class="math display">\[
+\text{mkt-to-book ratio}=\frac{\text{mkt value/s}}{\text{book value/s}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Enterprise value (EV)}=\text{Market capitalization} + \text{Mkt
+value of interest bearing debt}-\text{Cash}
+\]</span></p>
+<p><span class="math display">\[
+\text{EV multiple} = \frac{\text{EV}}{\text{EBITDA}}
+\]</span></p>
+<p>杜邦分析</p>
+<p><span class="math display">\[
+\text{ROE}=\frac{\text{Net income}}{\text{Total
+equity}}=\frac{\text{NI}}{\text{TA}}\times
+\frac{\text{TA}}{\text{TE}}=\text{ROA}\times\text{EM}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \text{ROE}&amp;=\frac{\text{NI}}{\text{Sales}}\times
+\frac{\text{Sales}}{\text{TA}}\times \frac{\text{TA}}{\text{TE}}\\
+    &amp;=\text{Profit margin}\times \text{Total asset
+turnover}\times\text{Equity multiple}
+\end{aligned}
+\]</span></p>
 ]]></content>
       <categories>
         <category>课程</category>
