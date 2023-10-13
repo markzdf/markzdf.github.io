@@ -1,6 +1,5 @@
-/* Terminal style font */
 ul.terminal-tree {
-  font-family: "Courier New", "Kai", Courier, monospace;
+  font-family: "Courier New", "STSongti-SC-Regular", Courier, monospace;
   color: #073642;  /* Classic terminal green */
   list-style: none;
   padding-left: 1rem;

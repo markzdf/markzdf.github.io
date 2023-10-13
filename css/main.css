@@ -2627,7 +2627,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #038378;
+  background: #b5322e;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2698,7 +2698,7 @@ header.header {
   color: #4f2956;
 }
 body {
-  opacity: 0.7;
+  opacity: 0.8;
   background: url("/images/cover_13.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
