@@ -25,141 +25,86 @@
     <url>/2023/10/10/23-10-10/</url>
     <content><![CDATA[<p>OK所以我先整理个宝藏课程清单，看起来还挺多的，值得买一年PLUS会员，每上完一整套课做个回顾</p>
 <span id="more"></span>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">课程名</th>
-<th style="text-align: center;">机构</th>
-<th style="text-align: center;">课程数</th>
-<th style="text-align: center;">是否包含在PLUS</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/study-in-usa">Applying to U.S.
-Universities</a></td>
-<td style="text-align: center;">Upenn</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Machine Learning Specialization</td>
-<td style="text-align: center;">DeepLearning.AI</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">n</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/advanced-statistics-data-science">Advanced
-Statistics for Data Science</a></td>
-<td style="text-align: center;">Johns Hopkins</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/data-science-statistics-machine-learning">Data
-Science: Statistics and Machine Learning</a></td>
-<td style="text-align: center;">Johns Hopkins</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">Machine
-Learning: Theory and Hands-on Practice with Python</a></td>
-<td style="text-align: center;">Colorado</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/data-mining">Data
-Mining</a></td>
-<td style="text-align: center;">Illinois</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/boulder-data-structures-algorithms">Foundations
-of Data Structures and Algorithms</a></td>
-<td style="text-align: center;">Colorado</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/data-science-python">Applied
-Data Science with Python</a></td>
-<td style="text-align: center;">UMich</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/complex-analysis">Introduction to
-Complex Analysis</a></td>
-<td style="text-align: center;">Wesleyan</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/dmathgen">离散数学概论</a></td>
-<td style="text-align: center;">北大</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/information-theory">Information
-Theory</a></td>
-<td style="text-align: center;">港中文</td>
-<td style="text-align: center;">21</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/mcmc-bayesian-statistics">Bayesian
-Statistics: Techniques and Models</a></td>
-<td style="text-align: center;">UC Santa Cruz</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/learn/wharton-quantitative-modeling">Fundamentals
-of Quantitative Modeling</a></td>
-<td style="text-align: center;">Upenn</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/finance-quantitative-modeling-analysts">Finance
-&amp; Quantitative Modeling for Analysts</a></td>
-<td style="text-align: center;">Upenn</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">y</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a
-href="https://www.coursera.org/specializations/probabilistic-graphical-models">Probabilistic
-Graphical Models</a></td>
-<td style="text-align: center;">Stanford</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">y</td>
-</tr>
-</tbody>
-</table>
+<p><link rel="stylesheet" href="/css/folder.css"></p>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Select the <ul> element with class "terminal-tree".
+        var $tree = $(".terminal-tree");
+
+        // Count the total number of files in the tree.
+        var fileCount = $tree.find("a").length;
+
+        // Update the data-file-count attribute of the root <ul>.
+        $tree.attr("data-file-count", fileCount);
+
+        // Display the file count on the page.
+        var fileCountText = "包含证书 " + fileCount + " 个";
+        var $fileCountElement = $("<p>" + fileCountText + "</p>");
+        $tree.prepend($fileCountElement);
+    });
+</script>
+<ul class="terminal-tree">
+<li data-file-count="1">
+Coursera
+<ul>
+<li>
+<a href="https://www.coursera.org/learn/study-in-usa">Applying to U.S.
+Universities</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/advanced-statistics-data-science">Advanced
+Statistics for Data Science</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/data-science-statistics-machine-learning">Data
+Science: Statistics and Machine Learning</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">Machine
+Learning: Theory and Hands-on Practice with Python</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/data-mining">Data
+Mining</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/boulder-data-structures-algorithms">Foundations
+of Data Structures and Algorithms</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/data-science-python">Applied
+Data Science with Python</a>
+</li>
+<li>
+<a href="https://www.coursera.org/learn/complex-analysis">Introduction
+to Complex Analysis</a>
+</li>
+<li>
+<a href="https://www.coursera.org/learn/dmathgen">离散数学概论</a>
+</li>
+<li>
+<a href="https://www.coursera.org/learn/information-theory">Information
+Theory</a>
+</li>
+<li>
+<a href="https://www.coursera.org/learn/mcmc-bayesian-statistics">Bayesian
+Statistics: Techniques and Models</a>
+</li>
+<li>
+<a href="https://www.coursera.org/learn/wharton-quantitative-modeling">Fundamentals
+of Quantitative Modeling</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/finance-quantitative-modeling-analysts">Finance
+&amp; Quantitative Modeling for Analysts</a>
+</li>
+<li>
+<a href="https://www.coursera.org/specializations/probabilistic-graphical-models">Probabilistic
+Graphical Models</a>
+</li>
+</ul>
+</ul>
 ]]></content>
       <categories>
         <category>课程</category>

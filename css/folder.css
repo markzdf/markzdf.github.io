@@ -31,3 +31,11 @@ ul.terminal-tree ul > li:before {
 ul.terminal-tree ul > li:last-child:before {
   content: '└─ ';
 }
+
+/* Count the number of files in each folder and display it */
+ul.terminal-tree > li:before:after {
+  content: attr(data-file-count);
+  color: #859900;  /* Yellow color for the file count */
+  font-weight: normal;
+  margin-left: 0.5rem;
+}
