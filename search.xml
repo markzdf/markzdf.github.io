@@ -164,48 +164,7 @@ Probabilistic Graphical Models</a>
 </ul>
 ]]></content>
       <categories>
-        <category>课程</category>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>矩阵论</title>
-    <url>/2023/10/05/23-10-5/</url>
-    <content><![CDATA[<p>课程网址：<a
-href="https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/">MIT18.065</a></p>
-<p><font face="Courier New">Linear algebra concepts are key for
-understanding and creating machine learning algorithms, especially as
-applied to deep learning and neural networks. This course reviews linear
-algebra with applications to probability and statistics and
-optimization–and above all a full explanation of deep
-learning.</font></p>
-<span id="more"></span>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img data-src="LALD.png" /></th>
-<th style="text-align: center;"><img data-src="LA&amp;O.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><a href="/download/LALD.pdf">Linear
-Algebra and Learning from Data</a></td>
-<td style="text-align: center;"><a href="LA&amp;O.pdf">Linear Algebra
-and Optimization for ML</a></td>
-</tr>
-</tbody>
-</table>
-<p>【Gil解答】：<a href="/download/LALD_solution.pdf">solution
-manual</a></p>
-]]></content>
-      <categories>
-        <category>课程</category>
-        <category>其他</category>
+        <category>随便学点啥</category>
       </categories>
   </entry>
   <entry>
@@ -347,7 +306,6 @@ turnover}\times\text{Equity multiple}
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>其他</category>
       </categories>
   </entry>
   <entry>
@@ -377,7 +335,6 @@ Set Theory</a></li>
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>概率论</category>
       </categories>
   </entry>
   <entry>
@@ -415,7 +372,7 @@ tree），学长给我竖大拇指，然后就再没问我问题了</p>
 <p>有趣的是，有个化院的去年进了BEC，wiserclub一志愿python面试没过。不过他确实大佬啦，跨保了清华公共管理学的医院管理，复杂的背景，有趣</p>
 ]]></content>
       <categories>
-        <category>申请</category>
+        <category>值得吹嘘的</category>
       </categories>
   </entry>
   <entry>
@@ -586,7 +543,6 @@ Borel sets</p>
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>概率论</category>
       </categories>
   </entry>
   <entry>
@@ -2632,9 +2588,34 @@ href="/download/格式模板.docx">格式模版</a></p>
 </blockquote>
 <p>成果：<a
 href="/download/价值风格基金列表-定性标签.xlsx">价值风格基金列表-定性标签</a></p>
+<h1 id="任务五-10.12">任务五 10.12</h1>
+<p>基金经理分析</p>
+<p>主要涉及</p>
+<ul>
+<li>波动、夏普排名和收益锐度</li>
+<li>行业/个股分散程度</li>
+<li>冷门股和抱团股</li>
+<li>右侧程度</li>
+<li>交易能力</li>
+<li>Brinson因子归因</li>
+<li>Barra因子暴露和归因</li>
+</ul>
+<p>样例：<a
+href="/download/【张靖】分析明细.pdf">【张靖】分析明细</a>，<a
+href="/download/张靖-分析底稿.xlsx">张靖-分析底稿</a></p>
+<p>模仿成果：<a
+href="/download/苏秉毅分析明细.pdf">苏秉毅分析明细</a>，<a
+href="/download/大成苏秉毅.xlsx">大成苏秉毅</a></p>
+<h1 id="任务六-10.13">任务六 10.13</h1>
+<blockquote>
+<p>你帮我增加一列数据，是这两个sheet里的8位基金经理，样例可以参考【图表区
+第一类 补充数据】里的杨冬</p>
+</blockquote>
+<p>成果：<a
+href="/download/分析表格【汇总】.xlsx">分析表格【汇总】</a></p>
 ]]></content>
       <categories>
-        <category>申请</category>
+        <category>值得吹嘘的</category>
       </categories>
   </entry>
   <entry>
@@ -2968,7 +2949,7 @@ and interviews do not guarantee an internship offer.</strong></p>
 <p>因此面试通过确实不保证能进项目组，mitacs机制玄学</p>
 ]]></content>
       <categories>
-        <category>申请</category>
+        <category>值得吹嘘的</category>
       </categories>
   </entry>
   <entry>
@@ -3149,8 +3130,10 @@ x+\frac{\partial f(x,y)}{\partial y}\Delta y\tag{6.52}\]</span></p>
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>ODE</category>
       </categories>
+      <tags>
+        <tag>ODE</tag>
+      </tags>
   </entry>
   <entry>
     <title>ODE自學</title>
@@ -3172,8 +3155,10 @@ href="https://markzdf.github.io/2023/08/08/ODE%E5%BA%94%E7%94%A8/">ODE應用</a>
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>ODE</category>
       </categories>
+      <tags>
+        <tag>ODE</tag>
+      </tags>
   </entry>
   <entry>
     <title>ODE應用</title>
@@ -3244,8 +3229,10 @@ class="math display">\[
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>ODE</category>
       </categories>
+      <tags>
+        <tag>ODE</tag>
+      </tags>
   </entry>
   <entry>
     <title>周游LA、SD</title>
@@ -3999,8 +3986,10 @@ u&#39;+(1-n)P(x) \cdot u=(1-n)Q(x)\tag{11.53}
 ]]></content>
       <categories>
         <category>课程</category>
-        <category>ODE</category>
       </categories>
+      <tags>
+        <tag>ODE</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何在macOS環境下配置hexo</title>
@@ -4342,7 +4331,7 @@ href="/nlp_mc/">改良版代碼</a></td>
 </table>
 ]]></content>
       <categories>
-        <category>数模</category>
+        <category>课程</category>
       </categories>
   </entry>
   <entry>
