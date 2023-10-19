@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://markzdf.github.io/2023/10/10/23-10-10/</loc>
+    
+    <lastmod>2023-10-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://markzdf.github.io/2023/10/19/py2/</loc>
     
     <lastmod>2023-10-19</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://markzdf.github.io/repository/</loc>
-    
-    <lastmod>2023-10-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://markzdf.github.io/2023/10/10/23-10-10/</loc>
     
     <lastmod>2023-10-18</lastmod>
     
