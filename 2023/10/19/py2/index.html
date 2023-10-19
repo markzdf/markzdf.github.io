@@ -25,29 +25,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="EDA and simple linear regression">
+    <meta name="description" content="Data modeling with scikit-learn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习 Day 1">
-<meta property="og:url" content="https://markzdf.github.io/2023/10/19/py1/">
+<meta property="og:title" content="Python学习 Day 2">
+<meta property="og:url" content="https://markzdf.github.io/2023/10/19/py2/">
 <meta property="og:site_name" content="MyNotes">
-<meta property="og:description" content="EDA and simple linear regression">
+<meta property="og:description" content="Data modeling with scikit-learn">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://markzdf.github.io/2023/10/19/py1/pairplot.png">
-<meta property="article:published_time" content="2023-10-18T17:06:32.000Z">
-<meta property="article:modified_time" content="2023-10-18T19:19:46.768Z">
+<meta property="og:image" content="https://markzdf.github.io/2023/10/19/py2/ridge.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/10/19/py2/solver.png">
+<meta property="article:published_time" content="2023-10-19T01:51:21.000Z">
+<meta property="article:modified_time" content="2023-10-19T15:43:52.122Z">
 <meta property="article:author" content="佛說Naga">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://markzdf.github.io/2023/10/19/py1/pairplot.png">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/10/19/py2/ridge.png">
 
 
-<link rel="canonical" href="https://markzdf.github.io/2023/10/19/py1/">
+<link rel="canonical" href="https://markzdf.github.io/2023/10/19/py2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/10/19/py1/","path":"2023/10/19/py1/","title":"Python学习 Day 1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/10/19/py2/","path":"2023/10/19/py2/","title":"Python学习 Day 2"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Python学习 Day 1 | MyNotes</title>
+<title>Python学习 Day 2 | MyNotes</title>
   
 
 
@@ -141,7 +142,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/10/19/py1/">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/10/19/py2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -154,12 +155,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Python学习 Day 1 | MyNotes">
+      <meta itemprop="name" content="Python学习 Day 2 | MyNotes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python学习 Day 1
+          Python学习 Day 2
         </h1>
 
         <div class="post-meta-container">
@@ -171,16 +172,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2023-10-19 01:06:32 / 修改時間：03:19:46" itemprop="dateCreated datePublished" datetime="2023-10-19T01:06:32+08:00">2023-10-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
+      <time title="創建時間：2023-10-19 09:51:21 / 修改時間：23:43:52" itemprop="dateCreated datePublished" datetime="2023-10-19T09:51:21+08:00">2023-10-19</time>
     </span>
 
   
@@ -199,22 +191,41 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>EDA and simple linear regression</p>
+    <div class="post-body" itemprop="articleBody"><p>Data modeling with scikit-learn</p>
 <span id="more"></span>
-<p>Question 1a-2. Which months has the least number of sales?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(df.groupby(<span class="string">&#x27;sales_month&#x27;</span>)[<span class="string">&#x27;id&#x27;</span>].count().idxmin())</span><br></pre></td></tr></table></figure>
-<p>Which feature may be the best predictor of price based on the
-correlation?</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()[<span class="string">&#x27;price&#x27;</span>].<span class="built_in">abs</span>().sort_values(ascending=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set up the figure and axes</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define custom settings for the heatmap</span></span><br><span class="line">heatmap_kwargs = &#123;</span><br><span class="line">    <span class="string">&quot;annot&quot;</span>: <span class="literal">True</span>,           <span class="comment"># Display values in cells</span></span><br><span class="line">    <span class="string">&quot;fmt&quot;</span>: <span class="string">&quot;.2f&quot;</span>,            <span class="comment"># Format values to two decimal places</span></span><br><span class="line">    <span class="string">&quot;cmap&quot;</span>: <span class="string">&quot;coolwarm&quot;</span>,      <span class="comment"># Color map</span></span><br><span class="line">    <span class="string">&quot;linewidths&quot;</span>: <span class="number">0.5</span>,       <span class="comment"># Line width between cells</span></span><br><span class="line">    <span class="string">&quot;annot_kws&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;size&quot;</span>: <span class="number">10</span>,           <span class="comment"># Font size for annotations</span></span><br><span class="line">        <span class="string">&quot;rotation&quot;</span>: <span class="number">45</span>         <span class="comment"># Text orientation</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a heatmap using seaborn with custom settings</span></span><br><span class="line">sns.heatmap(correlation_matrix, **heatmap_kwargs)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add a title</span></span><br><span class="line">plt.title(<span class="string">&quot;Correlation Matrix Heatmap&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show the plot</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>&lt;img src="heatmap.png&gt;</p>
-<p>Pair plot is a fast way to inspect relationships between features.
-Use seaborn's <code>.pairplot()</code> function to draw a pairplot if
-the first 10 columns (including price) and inspect their relationships.
-Set the diagonal elements to be KDE plot.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">selected_columns = <span class="built_in">list</span>(df.columns[:<span class="number">10</span>])</span><br><span class="line">sns.pairplot(df[selected_columns], diag_kind=<span class="string">&#x27;kde&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img data-src="pairplot.png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">predictor_r2 = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Iterate through each predictor and fit a linear regression model</span></span><br><span class="line"><span class="keyword">for</span> column <span class="keyword">in</span> df.columns:</span><br><span class="line">    <span class="keyword">if</span> column != <span class="string">&#x27;price&#x27;</span>:  <span class="comment"># Exclude the target variable</span></span><br><span class="line">        formula = <span class="string">f&#x27;price ~ <span class="subst">&#123;column&#125;</span>&#x27;</span></span><br><span class="line">        model = smf.ols(formula=formula, data=df)</span><br><span class="line">        results = model.fit()</span><br><span class="line">        predictor_r2[column] = results.rsquared_adj</span><br><span class="line">        </span><br><span class="line"><span class="comment"># Rank the predictors by adjusted R-squared in descending order</span></span><br><span class="line">ranked_predictors = <span class="built_in">sorted</span>(predictor_r2.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select and print the top three predictors</span></span><br><span class="line">top_predictors = ranked_predictors[:<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从list中取值</span></span><br><span class="line">top_three = [row[<span class="number">0</span>] <span class="keyword">for</span> row <span class="keyword">in</span> top_predictors]</span><br></pre></td></tr></table></figure>
+<h1 id="linear-regression">Linear regression</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn.linear_model <span class="keyword">as</span> lm</span><br><span class="line">reg = lm.LinearRegression()</span><br><span class="line">reg.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(reg.coef_)</span><br><span class="line"><span class="built_in">print</span>(reg.intercept_)</span><br><span class="line">r2 = reg.score(X,y)</span><br><span class="line"></span><br><span class="line">reg.predict(X_new)</span><br></pre></td></tr></table></figure>
+<p>基础的线性回归要求完美的环境：自变量互相uncorrelated。当它们相关时，噪声对模型的干扰会很大。当系数很大时，过拟合的嫌疑最重（被噪声干扰），因此加入惩罚机制<span
+class="math inline">\(\alpha \lVert w
+\rVert_2^2\)</span>，现在目标函数改变</p>
+<p><span class="math display">\[
+\min \alpha \lVert w \rVert_2^2 + \sum_{i=1}^n(x_i\cdot w-y_i)^2
+\]</span></p>
+<p><img data-src="ridge.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Single alpha</span></span><br><span class="line">reg = lm.Ridge(alpha=<span class="number">0.1</span>)</span><br><span class="line">reg.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(reg.alpha)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Find optimal alpha</span></span><br><span class="line">alphas = [<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>]</span><br><span class="line">reg = lm.RidgeCV(alphas=alphas)</span><br><span class="line">reg.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(reg.alpha_) <span class="comment"># Optimal alpha</span></span><br></pre></td></tr></table></figure>
+<p>在<code>Ridge</code>中<span
+class="math inline">\(\alpha\)</span>属性名叫<span
+class="math inline">\(\texttt{alpha}\)</span>，但在<code>RidgeCV</code>中叫<span
+class="math inline">\(\texttt{alpha\_}\)</span>，在后面的<code>BayesianRidge</code>也是有下划线的</p>
+<p>类似的还有lasso回归，用的是L1-norm，大概是曼哈顿距离的概念，目标函数变成</p>
+<p><span class="math display">\[
+\min \alpha \lVert w \rVert_1 + \sum_{i=1}^n(x_i\cdot w-y_i)^2
+\]</span></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg = lm.Lasso(alpha=<span class="number">0.1</span>)</span><br><span class="line"><span class="comment"># 其他的一模一样</span></span><br></pre></td></tr></table></figure>
+<p>目前我们学会用交叉验证（CV）来最优化超参数，现在介绍另一种方法，叫贝叶斯方法（Bayesian
+techniques）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">reg = lm.BayesianRidge()</span><br><span class="line">reg.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(reg.alpha_)</span><br><span class="line"><span class="built_in">print</span>(reg.lambda_)</span><br></pre></td></tr></table></figure>
+<p>我不知道贝叶斯统计里的<span
+class="math inline">\(\alpha\)</span>和<span
+class="math inline">\(\lambda\)</span>是啥意思，学这个得花点力气</p>
+<p>下一个是Logistic regression</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">reg = lm.LogisticRegression(</span><br><span class="line">    solver = <span class="string">&#x27;lbfgs&#x27;</span>,</span><br><span class="line">    max_iter = <span class="number">1000</span>,</span><br><span class="line">    multi_class = <span class="string">&#x27;multinomial&#x27;</span></span><br><span class="line">)</span><br><span class="line">reg.fit(X,y)</span><br></pre></td></tr></table></figure>
+<p><img data-src="solver.png"></p>
+<p>待会研究下这五个是什么玩意</p>
+<hr />
+<p>发现好玩的，<code>print</code>怎样控制小数点位数？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;Duration D = <span class="subst">&#123;duration:<span class="number">.3</span>f&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># Output</span></span><br><span class="line"><span class="comment"># Duration D = 2.653</span></span><br></pre></td></tr></table></figure>
+<p>形式为：在大括号内，变量名后面加<code>:.3f</code>，带f表示保留3位小数，不带f表示保留三位数字</p>
 
     </div>
 
@@ -228,14 +239,11 @@ Set the diagonal elements to be KDE plot.</p>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/10/14/23-10-14/" rel="prev" title="Java速成">
-                  <i class="fa fa-angle-left"></i> Java速成
+                <a href="/2023/10/19/py1/" rel="prev" title="Python学习 Day 1">
+                  <i class="fa fa-angle-left"></i> Python学习 Day 1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/19/py2/" rel="next" title="Python学习 Day 2">
-                  Python学习 Day 2 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -328,11 +336,11 @@ Set the diagonal elements to be KDE plot.</p>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/10/19/py1/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/10/19/py2/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"5412e8af6e21d3627cbd3b7916c4aadf"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0155190f3c5e736137b5a53a0de4de2c"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
