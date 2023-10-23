@@ -157,16 +157,20 @@ type）只有<code>short,int,long</code>，<code>float,double</code>，<code>cha
         // Select the <ul> element with class "terminal-tree".
         var $tree = $(".terminal-tree");
 
-        // Count the total number of files under the "待完成" section.
-        var fileCount = $tree.find("li[data-file-count='1'] a").length;
-
-        // Update the data-file-count attribute of the root <ul>.
-        $tree.attr("data-file-count", fileCount);
-
-        // Display the file count on the page above the tree.
-        var fileCountText = "待完成：" + fileCount;
-        var $fileCountElement = $("<p>" + fileCountText + "</p>");
-        $tree.before($fileCountElement);
+        // Initialize courseCount and specializationCount variables.
+        var courseCount = 0;
+        var specializationCount = 0;
+        $tree.find("li[data-file-count='1'] ul li a").each(function () {
+              var href = $(this).attr("href");
+              if (href.includes("specializations")) {
+              specializationCount++;
+            } else {
+              courseCount++;
+            }
+        });
+        var total = courseCount + specializationCount;
+        // Display the counts using alert
+        alert("未完成统计🔮\n⚜️课程：" + courseCount + "\n🔅专项：" + specializationCount + "\n共" + total + "门课");
     });
 </script>
 <details>
@@ -181,82 +185,63 @@ Coursera
 已完成
 </li>
 <li data-file-count="1">
-待完成
+未完成
 <ul>
 <li>
-<a href="https://www.coursera.org/specializations/boulder-data-structures-algorithms">
-Foundations of Data Structures and Algorithms</a>
+<a href="https://www.coursera.org/learn/cs-programming-java"> Computer
+Science: Programming with a Purpose (Princeton)</a>
 </li>
 <li>
 <a href="https://www.coursera.org/specializations/data-science-python">
-Applied Data Science with Python </a>
+Applied Data Science with Python (UMich) </a>
 </li>
 <li>
-<a href="https://www.coursera.org/learn/c-plus-plus-a?skipBrowseRedirect=true">
-C++ For C Programmers, Part A </a>
-</li>
-<li>
-<a href="https://www.coursera.org/specializations/biancheng-suanfa">
-程序设计与算法 Specialization </a>
-</li>
-<li>
-<a href="https://www.coursera.org/learn/cs-fundamentals-1">
-Object-Oriented Data Structures in C++ </a>
+<a href="https://www.coursera.org/specializations/cs-fundamentals">
+Accelerated Computer Science Fundamentals (Illinois) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/specializations/mathematics-engineers">
-Mathematics for Engineers Specialization </a>
+Mathematics for Engineers (港科) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/study-in-usa"> Applying to U.S.
-Universities</a>
+Universities (Upenn) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/introduction-git-github">
-Introduction to Git and GitHub </a>
+Introduction to Git and GitHub (Google) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/algorithms-part1/"> Algorithm,
-Part I</a>
-</li>
-<li>
-<a href="https://www.coursera.org/learn/study-in-usa"> Applying to U.S.
-Universities</a>
-</li>
-<li>
-<a href="https://www.coursera.org/specializations/data-science-statistics-machine-learning">
-Data Science: Statistics and Machine Learning</a>
+Part I (Princeton) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/specializations/data-mining"> Data
-Mining</a>
+Mining (Illinois) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/complex-analysis"> Introduction
-to Complex Analysis</a>
+to Complex Analysis (Wesleyan) </a>
 </li>
 <li>
-<a href="https://www.coursera.org/learn/dmathgen"> 离散数学概论</a>
+<a href="https://www.coursera.org/learn/dmathgen"> 离散数学概论 (北大)
+</a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/information-theory"> Information
-Theory</a>
+Theory (港中文) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/learn/mcmc-bayesian-statistics">
-Bayesian Statistics: Techniques and Models</a>
-</li>
-<li>
-<a href="https://www.coursera.org/learn/wharton-quantitative-modeling">
-Fundamentals of Quantitative Modeling</a>
+Bayesian Statistics: Techniques and Models (UCSC) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/specializations/finance-quantitative-modeling-analysts">
-Finance &amp; Quantitative Modeling for Analysts</a>
+Fin &amp; Quant Modeling for Analysts (Warton) </a>
 </li>
 <li>
 <a href="https://www.coursera.org/specializations/probabilistic-graphical-models">
-Probabilistic Graphical Models</a>
+Probabilistic Graphical Models (Stanford) </a>
 </li>
 </ul>
 </li>
