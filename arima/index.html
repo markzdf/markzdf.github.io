@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/purple/pace-theme-loading-bar.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"remove","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="基本形式 三個參數：\(ARIMA(p,d,q)\) \[ y_t&#39;&#x3D;\alpha_0+\sum_{i&#x3D;1}^p\alpha_iy_{t-i}&#39;+\varepsilon_t+\sum_{i&#x3D;1}^q\beta_i\varepsilon_{t-i} \] 其中\(y&#39;_t&#x3D;\Delta^dy_t&#x3D;(1-L)^dy_t\)，\(y_{t-i}&#39;&#x3D;\Delta^dy_{t">
 <meta property="og:type" content="website">
@@ -130,6 +130,339 @@
   </div>
 
 </header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%93%E5%B1%95sarima"><span class="nav-number">2.</span> <span class="nav-text">拓展：SARIMA</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">佛說Naga</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/markzdf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;markzdf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cabbagedafu@gmail.com" title="E-Mail → mailto:cabbagedafu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+<style>
+    /* Define the sidebar styles */
+    .sidebar {
+        background-color: #FFFFFF; /* Change this to your desired color */
+        float: left; /* Adjust positioning as needed */
+    }
+</style>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add this CSS rule to change the text color */
+        #todo-list li {
+            color: #4F2956;
+            text-align: left;
+        }
+
+	ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+	input[type="checkbox"] {
+            margin-right: 8px; /* Add space between checkbox and text */
+        }
+
+	/* Style the container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+	button {
+      		display: inline-block;
+      		padding: 6px 8px;
+      		background-color: #DAD5F4;
+      		color: #4F2956;
+      		border: none;
+      		border-radius: 5px;
+      		cursor: pointer;
+      		font-size: 14px;
+		margin-right: 5px;
+    	}
+
+	
+
+    	button:hover {
+      		background-color: #FFC0CB;
+    	}
+
+	/* Customize the input box styles */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #DAD5F4;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <!-- Existing tasks will be added here -->
+    </ul>
+    <input type="text" id="task-input" placeholder="一起去冒險吧">
+    <div class="button-container">
+        <button id="add-button" onclick="addTask()">Add</button>
+        <button id="clear-button" onclick="clearLastTask()">Delete</button>
+    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const taskList = document.getElementById("todo-list");
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(taskText));
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+                saveTasks();
+            }
+        }
+
+        // Function to clear the last task
+        function clearLastTask() {
+            const taskList = document.getElementById("todo-list");
+            const lastTask = taskList.lastElementChild;
+
+            if (lastTask) {
+                taskList.removeChild(lastTask);
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to localStorage
+        function saveTasks() {
+            const tasks = [];
+            const taskList = document.getElementById("todo-list").querySelectorAll("li");
+
+            taskList.forEach((taskItem) => {
+                const checkbox = taskItem.querySelector("input[type=checkbox]");
+                const taskText = taskItem.textContent.trim();
+
+                tasks.push({
+                    text: taskText,
+                    completed: checkbox.checked
+                });
+            });
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from localStorage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            const taskList = document.getElementById("todo-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+                checkbox.checked = task.completed;
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(task.text));
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Load tasks when the page loads
+        loadTasks();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>計時器</title>
+  <style>
+    body {
+      color: #4F2956;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #4F2956;
+      margin-bottom: 2px;
+    }
+
+    #counter {
+      font-size: 18px;
+      color: #4F2956; 
+      margin-bottom: 0px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: #DAD5F4;
+      color: #4F2956;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><span id="counter">00:00:00</span></p>
+    <button id="startStopBtn" class="btn">Start</button>
+    <button id="resetBtn" class="btn">Reset</button>
+  </div>
+
+  <script>
+    let startTime = 0;
+    let running = false;
+    let elapsedTime = 0;
+
+    const counterElement = document.getElementById("counter");
+    const startStopBtn = document.getElementById("startStopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function updateTime() {
+      const now = Date.now();
+      elapsedTime = running ? now - startTime : elapsedTime;
+      const formattedTime = formatTime(elapsedTime);
+      counterElement.textContent = formattedTime;
+    }
+
+    function formatTime(milliseconds) {
+      const totalSeconds = Math.floor(milliseconds / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
+    }
+
+    function padNumber(number) {
+      return number.toString().padStart(2, "0");
+    }
+
+    function toggleTimer() {
+      if (running) {
+        running = false;
+      } else {
+        running = true;
+        startTime = Date.now() - elapsedTime;
+      }
+      startStopBtn.textContent = running ? "Stop" : "Start";
+    }
+
+    function resetTimer() {
+      running = false;
+      elapsedTime = 0;
+      updateTime();
+    }
+
+    startStopBtn.addEventListener("click", toggleTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    // Load previous state from localStorage if available
+    const storedElapsedTime = localStorage.getItem("elapsedTime");
+    if (storedElapsedTime !== null) {
+      elapsedTime = parseInt(storedElapsedTime);
+      updateTime();
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Save elapsed time to localStorage before closing the window/tab
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem("elapsedTime", elapsedTime);
+    });
+  </script>
+</body>
+</html>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
     </div>
 
     <div class="main-inner page posts-expand">
@@ -233,6 +566,12 @@ class="math inline">\(d\)</span>是差分的次數，integrated的次數。下�
   </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="回到頂端">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>

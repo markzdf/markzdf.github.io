@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#990099">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg">
+  <link rel="mask-icon" href="/images/favicon.jpg" color="#990099">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.google.com/css?family=NotoSerifSC-Light:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="[object Object]">
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.20/fancybox/fancybox.css" integrity="sha256-RvRHGSuWAxZpXKV9lLDt2e+rZ+btzn48Wp4ueS3NZKs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/purple/pace-theme-loading-bar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"markzdf.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#990099","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="刘二大人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DL入门笔记">
+<meta property="og:url" content="https://markzdf.github.io/2023/11/04/23-11-4/">
+<meta property="og:site_name" content="MyNotes">
+<meta property="og:description" content="刘二大人">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://markzdf.github.io/2023/11/04/23-11-4/dl_linear_model.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/11/04/23-11-4/dl_gd.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/11/04/23-11-4/dl_sgd.png">
+<meta property="og:image" content="https://markzdf.github.io/2023/11/04/23-11-4/dl_nn.png">
+<meta property="article:published_time" content="2023-11-04T11:31:42.000Z">
+<meta property="article:modified_time" content="2023-11-04T21:26:54.916Z">
+<meta property="article:author" content="佛說Naga">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://markzdf.github.io/2023/11/04/23-11-4/dl_linear_model.png">
+
+
+<link rel="canonical" href="https://markzdf.github.io/2023/11/04/23-11-4/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://markzdf.github.io/2023/11/04/23-11-4/","path":"2023/11/04/23-11-4/","title":"DL入门笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>DL入门笔记 | MyNotes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MyNotes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-route fa-fw"></i>主線</a></li><li class="menu-item menu-item-repository"><a href="/repository/" rel="section"><i class="fa fa-folder fa-fw"></i>倉庫</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-booklist"><a href="/booklist/" rel="section"><i class="fa fa-book fa-fw"></i>書單</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">线性模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#back-propagation"><span class="nav-number">3.</span> <span class="nav-text">Back Propagation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytorch%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">Pytorch实现线性模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">5.</span> <span class="nav-text">神经网络</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">佛說Naga</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/markzdf" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;markzdf" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:cabbagedafu@gmail.com" title="E-Mail → mailto:cabbagedafu@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+<style>
+    /* Define the sidebar styles */
+    .sidebar {
+        background-color: #FFFFFF; /* Change this to your desired color */
+        float: left; /* Adjust positioning as needed */
+    }
+</style>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=8699439163&auto=1&height=90"></iframe>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Add this CSS rule to change the text color */
+        #todo-list li {
+            color: #4F2956;
+            text-align: left;
+        }
+
+	ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+	input[type="checkbox"] {
+            margin-right: 8px; /* Add space between checkbox and text */
+        }
+
+	/* Style the container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+	button {
+      		display: inline-block;
+      		padding: 6px 8px;
+      		background-color: #DAD5F4;
+      		color: #4F2956;
+      		border: none;
+      		border-radius: 5px;
+      		cursor: pointer;
+      		font-size: 14px;
+		margin-right: 5px;
+    	}
+
+	
+
+    	button:hover {
+      		background-color: #FFC0CB;
+    	}
+
+	/* Customize the input box styles */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #DAD5F4;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <!-- Existing tasks will be added here -->
+    </ul>
+    <input type="text" id="task-input" placeholder="一起去冒險吧">
+    <div class="button-container">
+        <button id="add-button" onclick="addTask()">Add</button>
+        <button id="clear-button" onclick="clearLastTask()">Delete</button>
+    </div>
+
+    <script>
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const taskList = document.getElementById("todo-list");
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(taskText));
+                taskList.appendChild(taskItem);
+
+                taskInput.value = "";
+                saveTasks();
+            }
+        }
+
+        // Function to clear the last task
+        function clearLastTask() {
+            const taskList = document.getElementById("todo-list");
+            const lastTask = taskList.lastElementChild;
+
+            if (lastTask) {
+                taskList.removeChild(lastTask);
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to localStorage
+        function saveTasks() {
+            const tasks = [];
+            const taskList = document.getElementById("todo-list").querySelectorAll("li");
+
+            taskList.forEach((taskItem) => {
+                const checkbox = taskItem.querySelector("input[type=checkbox]");
+                const taskText = taskItem.textContent.trim();
+
+                tasks.push({
+                    text: taskText,
+                    completed: checkbox.checked
+                });
+            });
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from localStorage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            const taskList = document.getElementById("todo-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.addEventListener("change", saveTasks);
+                checkbox.checked = task.completed;
+
+                taskItem.appendChild(checkbox);
+                taskItem.appendChild(document.createTextNode(task.text));
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Load tasks when the page loads
+        loadTasks();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>計時器</title>
+  <style>
+    body {
+      color: #4F2956;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #4F2956;
+      margin-bottom: 2px;
+    }
+
+    #counter {
+      font-size: 18px;
+      color: #4F2956; 
+      margin-bottom: 0px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: #DAD5F4;
+      color: #4F2956;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><span id="counter">00:00:00</span></p>
+    <button id="startStopBtn" class="btn">Start</button>
+    <button id="resetBtn" class="btn">Reset</button>
+  </div>
+
+  <script>
+    let startTime = 0;
+    let running = false;
+    let elapsedTime = 0;
+
+    const counterElement = document.getElementById("counter");
+    const startStopBtn = document.getElementById("startStopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function updateTime() {
+      const now = Date.now();
+      elapsedTime = running ? now - startTime : elapsedTime;
+      const formattedTime = formatTime(elapsedTime);
+      counterElement.textContent = formattedTime;
+    }
+
+    function formatTime(milliseconds) {
+      const totalSeconds = Math.floor(milliseconds / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      return `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
+    }
+
+    function padNumber(number) {
+      return number.toString().padStart(2, "0");
+    }
+
+    function toggleTimer() {
+      if (running) {
+        running = false;
+      } else {
+        running = true;
+        startTime = Date.now() - elapsedTime;
+      }
+      startStopBtn.textContent = running ? "Stop" : "Start";
+    }
+
+    function resetTimer() {
+      running = false;
+      elapsedTime = 0;
+      updateTime();
+    }
+
+    startStopBtn.addEventListener("click", toggleTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    // Load previous state from localStorage if available
+    const storedElapsedTime = localStorage.getItem("elapsedTime");
+    if (storedElapsedTime !== null) {
+      elapsedTime = parseInt(storedElapsedTime);
+      updateTime();
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+
+    // Save elapsed time to localStorage before closing the window/tab
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem("elapsedTime", elapsedTime);
+    });
+  </script>
+</body>
+</html>
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://markzdf.github.io/2023/11/04/23-11-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="佛說Naga">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="DL入门笔记 | MyNotes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DL入门笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-11-04 19:31:42" itemprop="dateCreated datePublished" datetime="2023-11-04T19:31:42+08:00">2023-11-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-11-05 05:26:54" itemprop="dateModified" datetime="2023-11-05T05:26:54+08:00">2023-11-05</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y7411d7Ys?p=3&amp;spm_id_from=pageDriver&amp;vd_source=0747a479964faef65dc22d966c973b66">刘二大人</a></p>
+<span id="more"></span>
+<h2 id="线性模型">线性模型</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"> </span><br><span class="line">x_data = [<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]</span><br><span class="line">y_data = [<span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">6.0</span>]</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x*w</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss</span>(<span class="params">x, y</span>):</span><br><span class="line">    y_pred = forward(x)</span><br><span class="line">    <span class="keyword">return</span> (y_pred - y)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">w_list = []</span><br><span class="line">mse_list = []</span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> np.arange(<span class="number">0.0</span>, <span class="number">4.1</span>, <span class="number">0.1</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;w=&quot;</span>, w)</span><br><span class="line">    l_sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> x_val, y_val <span class="keyword">in</span> <span class="built_in">zip</span>(x_data, y_data):</span><br><span class="line">        y_pred_val = forward(x_val)</span><br><span class="line">        loss_val = loss(x_val, y_val)</span><br><span class="line">        l_sum += loss_val</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\t&#x27;</span>, x_val, y_val, y_pred_val, loss_val)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;MSE=&#x27;</span>, l_sum/<span class="number">3</span>)</span><br><span class="line">    w_list.append(w)</span><br><span class="line">    mse_list.append(l_sum/<span class="number">3</span>)</span><br><span class="line">    </span><br><span class="line">plt.plot(w_list,mse_list)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Loss&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">plt.show()    </span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<p><img data-src="dl_linear_model.png" width=500px></p>
+<h2 id="梯度下降算法">梯度下降算法</h2>
+<p>1.梯度下降</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># prepare the training set</span></span><br><span class="line">x_data = [<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]</span><br><span class="line">y_data = [<span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">6.0</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># initial guess of weight </span></span><br><span class="line">w = <span class="number">1.0</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># define the model linear model y = w*x</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x*w</span><br><span class="line"> </span><br><span class="line"><span class="comment">#define the cost function MSE </span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cost</span>(<span class="params">xs, ys</span>):</span><br><span class="line">    cost = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(xs,ys):</span><br><span class="line">        y_pred = forward(x)</span><br><span class="line">        cost += (y_pred - y)**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> cost / <span class="built_in">len</span>(xs)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># define the gradient function  gd</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient</span>(<span class="params">xs,ys</span>):</span><br><span class="line">    grad = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(xs,ys):</span><br><span class="line">        grad += <span class="number">2</span>*x*(x*w - y)</span><br><span class="line">    <span class="keyword">return</span> grad / <span class="built_in">len</span>(xs)</span><br><span class="line"> </span><br><span class="line">epoch_list = []</span><br><span class="line">cost_list = []</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;predict (before training)&#x27;</span>, <span class="number">4</span>, forward(<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    cost_val = cost(x_data, y_data)</span><br><span class="line">    grad_val = gradient(x_data, y_data)</span><br><span class="line">    w-= <span class="number">0.01</span> * grad_val  <span class="comment"># 0.01 learning rate</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;epoch:&#x27;</span>, epoch, <span class="string">&#x27;w=&#x27;</span>, w, <span class="string">&#x27;loss=&#x27;</span>, cost_val)</span><br><span class="line">    epoch_list.append(epoch)</span><br><span class="line">    cost_list.append(cost_val)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;predict (after training)&#x27;</span>, <span class="number">4</span>, forward(<span class="number">4</span>))</span><br><span class="line">plt.plot(epoch_list,cost_list)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;cost&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;epoch&#x27;</span>)</span><br><span class="line">plt.show() </span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<p><img data-src="dl_gd.png" width=500px></p>
+<p>2.随机梯度下降（SGD）</p>
+<p><span class="math display">\[
+w=w-\alpha\frac{\partial cost}{\partial w}\Rightarrow
+w=w-\alpha\frac{\partial loss}{\partial w}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial cost}{\partial w}=\frac{1}{n}\sum_{i=1}^n 2x_i(x_i\cdot
+w-y_i)
+\]</span></p>
+<p><span class="math display">\[
+\Downarrow
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial loss_i}{\partial w}=2x_i(x_i\cdot w-y_i)
+\]</span></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"> </span><br><span class="line">x_data = [<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]</span><br><span class="line">y_data = [<span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">6.0</span>]</span><br><span class="line"> </span><br><span class="line">w = <span class="number">1.0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x*w</span><br><span class="line"> </span><br><span class="line"><span class="comment"># calculate loss function</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss</span>(<span class="params">x, y</span>):</span><br><span class="line">    y_pred = forward(x)</span><br><span class="line">    <span class="keyword">return</span> (y_pred - y)**<span class="number">2</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># define the gradient function  sgd</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradient</span>(<span class="params">x, y</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*x*(x*w - y)</span><br><span class="line"> </span><br><span class="line">epoch_list = []</span><br><span class="line">loss_list = []</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;predict (before training)&#x27;</span>, <span class="number">4</span>, forward(<span class="number">4</span>))</span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    <span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(x_data, y_data):</span><br><span class="line">        grad = gradient(x,y)</span><br><span class="line">        w = w - <span class="number">0.01</span>*grad    <span class="comment"># update weight by every grad of sample of training set</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;\tgrad:&quot;</span>, x, y,grad)</span><br><span class="line">        l = loss(x,y)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;progress:&quot;</span>,epoch,<span class="string">&quot;w=&quot;</span>,w,<span class="string">&quot;loss=&quot;</span>,l)</span><br><span class="line">    epoch_list.append(epoch)</span><br><span class="line">    loss_list.append(l)</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;predict (after training)&#x27;</span>, <span class="number">4</span>, forward(<span class="number">4</span>))</span><br><span class="line">plt.plot(epoch_list,loss_list)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;loss&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;epoch&#x27;</span>)</span><br><span class="line">plt.show() </span><br></pre></td></tr></table></figure>
+<p><img data-src="dl_sgd.png" width=500px></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">GD</th>
+<th style="text-align: center;">SGD</th>
+<th style="text-align: center;">Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">性能</td>
+<td style="text-align: center;"><span
+class="math inline">\(\downarrow\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\uparrow\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(---\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">时间复杂度</td>
+<td style="text-align: center;"><span
+class="math inline">\(\downarrow\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\uparrow\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(---\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="back-propagation">Back Propagation</h2>
+<p><span class="math inline">\(w\)</span>是 Tensor（张量类型），Tensor
+中包含 <code>data</code> 和 <code>grad</code> ，它们也是
+Tensor。<code>grad</code> 初始为 None，调用 <code>l.backward()</code>
+方法后 <code>w.grad</code> 为 Tensor，故更新 <code>w.data</code>
+时需使用 <code>w.grad.data</code>。如果<span
+class="math inline">\(w\)</span>需要计算梯度，那构建的计算图中，跟<span
+class="math inline">\(w\)</span>相关的 Tensor 都默认需要计算梯度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">a = torch.tensor([<span class="number">1.0</span>])</span><br><span class="line">a.requires_grad = <span class="literal">True</span> <span class="comment"># 或者 a.requires_grad_()</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(a.data)</span><br><span class="line"><span class="built_in">print</span>(a.<span class="built_in">type</span>())             <span class="comment"># a的类型是tensor</span></span><br><span class="line"><span class="built_in">print</span>(a.data.<span class="built_in">type</span>())        <span class="comment"># a.data的类型是tensor</span></span><br><span class="line"><span class="built_in">print</span>(a.grad)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a.grad))</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(w\)</span>是Tensor，
+forward函数的返回值也是Tensor，loss函数的返回值也是Tensor</p>
+<p>本算法中反向传播主要体现在，<code>l.backward()</code>。调用该方法后
+<code>w.grad</code> 由 None 更新为 Tensor 类型，且
+<code>w.grad.data</code> 的值用于后续 <code>w.data</code> 的更新。</p>
+<p><code>l.backward()</code>
+会把计算图中所有需要梯度(grad)的地方都会求出来，然后把梯度都存在对应的待求的参数中，最终计算图被释放。取tensor中的data是不会构建计算图的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">x_data = [<span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]</span><br><span class="line">y_data = [<span class="number">2.0</span>, <span class="number">4.0</span>, <span class="number">6.0</span>]</span><br><span class="line"> </span><br><span class="line">w = torch.tensor([<span class="number">1.0</span>]) <span class="comment"># w的初值为1.0</span></span><br><span class="line">w.requires_grad = <span class="literal">True</span> <span class="comment"># 需要计算梯度</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x*w  <span class="comment"># w是一个Tensor</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss</span>(<span class="params">x, y</span>):</span><br><span class="line">    y_pred = forward(x)</span><br><span class="line">    <span class="keyword">return</span> (y_pred - y)**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">losses = []</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;predict (before training)&quot;</span>, <span class="number">4</span>, forward(<span class="number">4</span>).item())</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(x_data, y_data):</span><br><span class="line">        l =loss(x,y) <span class="comment"># l是一个张量，tensor主要是在建立计算图 forward, compute the loss</span></span><br><span class="line">        l.backward() <span class="comment">#  backward,compute grad for Tensor whose requires_grad set to True</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\tgrad:&#x27;</span>, x, y, w.grad.item())</span><br><span class="line">        w.data = w.data - <span class="number">0.01</span> * w.grad.data   <span class="comment"># 权重更新时，注意grad也是一个tensor</span></span><br><span class="line"> </span><br><span class="line">        w.grad.data.zero_() <span class="comment"># after update, remember set the grad to zero</span></span><br><span class="line"></span><br><span class="line">    losses.append(l.item())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;progress:, <span class="subst">&#123;epoch&#125;</span>, <span class="subst">&#123;l.item():<span class="number">.4</span>f&#125;</span>&#x27;</span>) <span class="comment"># 取出loss使用l.item，不要直接使用l（l是tensor会构建计算图）</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;predict (after training), 4, <span class="subst">&#123;forward(<span class="number">4</span>).item():<span class="number">.4</span>f&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(losses)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Epoch&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Loss&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Loss over Epochs&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h2 id="pytorch实现线性模型">Pytorch实现线性模型</h2>
+<p>补一点python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="built_in">print</span>(kwargs)</span><br><span class="line"></span><br><span class="line">func(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">3</span>, x=<span class="number">1</span>, y=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1, 2, 4, 3)</span><br><span class="line">&#123;&#x27;x&#x27;: 1, &#x27;y&#x27;: 5&#125;</span><br></pre></td></tr></table></figure>
+<p>一颗星表示元组，两颗星表示字典</p>
+<p>创建 class 时要保证 callable：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foorbar</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self, *args, **kwargs</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello &quot;</span> + <span class="built_in">str</span>(args[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">footbar = Foobar() <span class="comment"># 实例化</span></span><br><span class="line">footbar(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) <span class="comment"># 是callable的：可直接输入</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输出：</span></span><br><span class="line"><span class="string">Hello 1</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="comment"># prepare dataset</span></span><br><span class="line"><span class="comment"># x,y是矩阵，3行1列 也就是说总共有3个数据，每个数据只有1个特征</span></span><br><span class="line">x_data = torch.tensor([[<span class="number">1.0</span>], [<span class="number">2.0</span>], [<span class="number">3.0</span>]])</span><br><span class="line">y_data = torch.tensor([[<span class="number">2.0</span>], [<span class="number">4.0</span>], [<span class="number">6.0</span>]])</span><br><span class="line"> </span><br><span class="line"><span class="comment">#design model using class</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">our model class should be inherit from nn.Module, which is base class for all neural network modules.</span></span><br><span class="line"><span class="string">member methods __init__() and forward() have to be implemented</span></span><br><span class="line"><span class="string">class nn.linear contain two member Tensors: weight and bias</span></span><br><span class="line"><span class="string">class nn.Linear has implemented the magic method __call__(),which enable the instance of the class can</span></span><br><span class="line"><span class="string">be called just like a function.Normally the forward() will be called </span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinearModel</span>(torch.nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(LinearModel, self).__init__()</span><br><span class="line">        <span class="comment"># (1,1)是指输入x和输出y的特征维度，这里数据集中的x和y的特征都是1维的</span></span><br><span class="line">        <span class="comment"># 该线性层需要学习的参数是w和b  获取w/b的方式分别是~linear.weight/linear.bias</span></span><br><span class="line">        self.linear = torch.nn.Linear(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        y_pred = self.linear(x)</span><br><span class="line">        <span class="keyword">return</span> y_pred</span><br><span class="line"> </span><br><span class="line">model = LinearModel()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># construct loss and optimizer</span></span><br><span class="line">criterion = torch.nn.MSELoss(size_average = <span class="literal">False</span>)</span><br><span class="line">optimizer = torch.optim.SGD(model.parameters(), lr = <span class="number">0.01</span>) <span class="comment"># model.parameters()自动找到所有要优化的参数</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># training cycle forward, backward, update</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    y_pred = model(x_data) <span class="comment"># forward:predict</span></span><br><span class="line">    loss = criterion(y_pred, y_data) <span class="comment"># forward: loss</span></span><br><span class="line">    <span class="built_in">print</span>(epoch, loss.item())</span><br><span class="line"></span><br><span class="line">    optimizer.zero_grad() <span class="comment"># the grad computer by .backward() will be accumulated. so before backward, remember set the grad to zero</span></span><br><span class="line">    loss.backward() <span class="comment"># backward: autograd，自动计算梯度</span></span><br><span class="line">    optimizer.step() <span class="comment"># update 参数，即更新w和b的值</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w = &#x27;</span>, model.linear.weight.item())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;b = &#x27;</span>, model.linear.bias.item())</span><br><span class="line"> </span><br><span class="line">x_test = torch.tensor([[<span class="number">4.0</span>]])</span><br><span class="line">y_test = model(x_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;y_pred = &#x27;</span>, y_test.data)</span><br></pre></td></tr></table></figure>
+<h2 id="神经网络">神经网络</h2>
+<p>处理多特征问题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 数据集</span></span><br><span class="line">xy = np.loadtxt(<span class="string">&#x27;diabetes.csv&#x27;</span>, delimiter=<span class="string">&#x27;,&#x27;</span>, dtype=np.float32)</span><br><span class="line">x_data = torch.from_numpy(xy[:, :-<span class="number">1</span>]) <span class="comment"># 第一个‘：’是指读取所有行，第二个‘：’是指从第一列开始，最后一列不要</span></span><br><span class="line">y_data = torch.from_numpy(xy[:, [-<span class="number">1</span>]]) <span class="comment"># [-1] 最后得到的是个矩阵</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 搭建神经网络</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Model</span>(torch.nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Model, self).__init__()</span><br><span class="line">        self.linear1 = torch.nn.Linear(<span class="number">8</span>, <span class="number">6</span>) <span class="comment"># 输入数据x的特征是8维，x有8个特征</span></span><br><span class="line">        self.linear2 = torch.nn.Linear(<span class="number">6</span>, <span class="number">4</span>)</span><br><span class="line">        self.linear3 = torch.nn.Linear(<span class="number">4</span>, <span class="number">1</span>)</span><br><span class="line">        self.sigmoid = torch.nn.Sigmoid() <span class="comment"># 将其看作是网络的一层，而不是简单的函数使用</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        x = self.sigmoid(self.linear1(x))</span><br><span class="line">        x = self.sigmoid(self.linear2(x))</span><br><span class="line">        x = self.sigmoid(self.linear3(x)) <span class="comment"># y hat</span></span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">model = Model()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># construct loss and optimizer</span></span><br><span class="line"><span class="comment"># criterion = torch.nn.BCELoss(size_average = True)</span></span><br><span class="line">criterion = torch.nn.BCELoss(reduction=<span class="string">&#x27;mean&#x27;</span>)  </span><br><span class="line">optimizer = torch.optim.SGD(model.parameters(), lr=<span class="number">0.1</span>)</span><br><span class="line"> </span><br><span class="line">epoch_list = []</span><br><span class="line">loss_list = []</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    <span class="comment"># 1. Forward</span></span><br><span class="line">    y_pred = model(x_data)</span><br><span class="line">    loss = criterion(y_pred, y_data)</span><br><span class="line">    <span class="built_in">print</span>(epoch, loss.item())</span><br><span class="line">    epoch_list.append(epoch)</span><br><span class="line">    loss_list.append(loss.item())</span><br><span class="line">    <span class="comment"># 2. Backward</span></span><br><span class="line">    optimizer.zero_grad()</span><br><span class="line">    loss.backward()</span><br><span class="line">    <span class="comment"># 3. Update</span></span><br><span class="line">    optimizer.step()</span><br><span class="line"></span><br><span class="line">plt.plot(epoch_list, loss_list)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;loss&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;epoch&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Three layers network&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img data-src="dl_nn.png" width=500px></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 参数说明</span></span><br><span class="line"><span class="comment"># 第一层的参数：</span></span><br><span class="line">layer1_weight = model.linear1.weight.data</span><br><span class="line">layer1_bias = model.linear1.bias.data</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;layer1_weight&quot;</span>, layer1_weight)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;layer1_weight.shape&quot;</span>, layer1_weight.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;layer1_bias&quot;</span>, layer1_bias)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;layer1_bias.shape&quot;</span>, layer1_bias.shape)</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">layer1_weight tensor([[-0.1711,  0.3217,  0.2965, -0.2408, -0.0990,  0.2816, -0.0683, -0.3214],</span><br><span class="line">        [-0.1937,  0.0804, -0.1119, -0.3582, -0.0830,  0.2247,  0.2204, -0.2108],</span><br><span class="line">        [-0.0997,  0.1189, -0.1204,  0.2862,  0.1068,  0.3086, -0.2670,  0.1224],</span><br><span class="line">        [ 0.2046, -0.1167,  0.2837,  0.1073,  0.2029, -0.1562, -0.1707,  0.0992],</span><br><span class="line">        [ 0.1022, -0.0145, -0.3527,  0.1616,  0.1671,  0.0489, -0.3154, -0.3372],</span><br><span class="line">        [ 0.2514,  0.2018, -0.3195, -0.2812,  0.2747, -0.1370,  0.3533,  0.0439]])</span><br><span class="line">layer1_weight.shape torch.Size([6, 8])</span><br><span class="line">layer1_bias tensor([-0.3211,  0.1232,  0.0032, -0.2471,  0.3114,  0.2557])</span><br><span class="line">layer1_bias.shape torch.Size([6])</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/03/23-11-3/" rel="prev" title="Pytorch安装">
+                  <i class="fa fa-angle-left"></i> Pytorch安装
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">佛說Naga</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.20/fancybox/fancybox.umd.js" integrity="sha256-q8XkJ6dj5VwSvzI8+nATCHHQG+Xv/dAZBCgqmu93zOY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://markzdf.github.io/2023/11/04/23-11-4/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"markzdf","repo":"markzdf.github.io","client_id":"b28125d8b427030a1c61","client_secret":"23d585488542ff39b94c5b1a4c6618cc1cbf3d5d","admin_user":"markzdf","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4c676213678a9412c74c147ed3f8180e"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
